@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-04T09:38:03+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.10</span><span class="period">.</span>
+</h3>
+<p id="p-747"><em class="emphasis">Challenge</em>: Plot the Mandelbrot set.</p>
+<p id="p-748">The Mandelbrot set is a subset of the complex plane (or the xy-plane) determined as follows: To check whether a point (x,y) (corresponding to the complex number <span class="process-math">\(c = x+iy\)</span>) belongs to the Mandelbrot set, one carries out the following calculation repeatedly (this is called iteration), starting with <span class="process-math">\(z=0\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+z_{new} = z^2 + c
+\end{equation*}
+</div>
+<p id="p-749">Thus, the following calculations are performed:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+z_1 = c; \;\; z_2 = z_1^2 +c = c^2 + c; \;\; z_3 = z_2^2 + c = (c^2 + c)^2 + c; ...
+\end{equation*}
+</div>
+<p id="p-750">To find out whether the point c belongs to the Mandelbrot set one checks whether the sequence of z-values generated above stays inside the circle of radius 2 or not. Of course we’d have to look at all (infinitely many) z-values to be sure, but performing the first 100 iterations gives us a pretty good idea. After having calculated <span class="process-math">\(z_{100}\)</span> we thus ask the following:</p>
+<p id="p-751">Is <span class="process-math">\(z_{100}\)</span> inside the circle of radius 2, i.e. is its absolute value less than 2? If the answer is:</p>
+<ul class="disc">
+<li id="li-148"><p id="p-derived-li-148">yes, then color the point c black (these are the points c that belong to the Mandelbrot set)</p></li>
+<li id="li-149"><p id="p-derived-li-149">no, then color the point c white (or another color of your choice)</p></li>
+</ul>
+<p id="p-752">A good rectangle of c-values to look at is the one with real parts between -2.25 and 1.75 and imaginary parts between -1.5 and 1.5. You want to divide this viewing rectangle up into individual “pixels”, something like 800 by 600. The best way to do so is to have two 800x600 arrays - one for the x-values and one for the y-values. You can then simply create all c-values that you are interested in via <span class="process-math">\(c = x+i*y\)</span> (Matlab knows complex numbers!). You can ‘fill’ these arrays by hand (using a loop), or by using the Matlab <code class="code-inline tex2jax_ignore">meshgrid</code> command.</p>
+<p id="p-753">Next you carry out the iteration: You can initialize z as an array of zeros of the same size as your array of c-values, then use a for loop to update <span class="process-math">\(z = z^2 + c\)</span> 100 times.</p>
+<p id="p-754">Now assign the value 1 to those points that have escaped the circle of radius 2, and the value 2 to those that have remained within (these are the points in the Mandelbrot set). You can display this image using the Matlab <code class="code-inline tex2jax_ignore">image</code> command. You’ll have to define a colormap (one with exactly two colors in it), for example via</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-matlab">blackwhite = [1 1 1;0 0 0];
+colormap(blackwhite)
+</code></pre></div>
+<p id="p-755">if you do want to use the two colors white (rgb 1 1 1) and black (rgb 0 0 0).</p>
+<p id="p-756"><em class="emphasis">Please enter your solution (ONE per group - please identify group number) into the textbox.</em></p></article><span class="incontext"><a href="functions-practice2.html#activity-45" class="internal">in-context</a></span>
+</body>
+</html>

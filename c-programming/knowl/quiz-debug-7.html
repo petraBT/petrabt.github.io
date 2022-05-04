@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-04T09:41:37+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+</h4>
+<p>What is the output of the following code?</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define DEBUG 1
+#include &lt;stdio.h&gt;
+int main(void)
+{
+  int N, i, sum;
+  i = 1;
+  #if (DEBUG &gt;=2)
+    printf("It's a beautiful day! ");
+  #elif (DEBUG &gt;=1)
+    printf("It's sunny! ");
+  #elif (DEBUG &gt;=0)
+    printf("Not too bad! ");
+  #else
+    printf("Huh...! ");
+  #endif
+}
+</code></pre></div>
+<ol class="lower-alpha">
+<li><p>Huh...!</p></li>
+<li><p>Not too bad! huh...!</p></li>
+<li><p>Not too bad!</p></li>
+<li><p>It's sunny! Not too bad!</p></li>
+<li><p>It's a beautiful day!</p></li>
+<li><p>It's a beautiful day! It's sunny!</p></li>
+<li><p>It's sunny!</p></li>
+</ol>
+<p><em class="emphasis">Enter your choice (a/b/c/d/e/f/g):</em></p></article><span class="incontext"><a href="debug-conditional.html#quiz-debug-7" class="internal">in-context</a></span>
+</body>
+</html>

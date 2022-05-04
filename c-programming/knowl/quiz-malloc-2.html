@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-04T09:41:39+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+</h4>
+<p>Given the following code:</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int main(void) {
+  int *a, *b;
+  float *c;
+  a = (int *) malloc(sizeof(int));
+  *a = 1;
+  b = (int *) malloc(sizeof(int));
+  *b = 2;
+  free(a);
+  free(b);
+  c = (float *) malloc(sizeof(float));
+  *c = 3.5;
+  free(c);
+  return 0;
+}
+</code></pre></div>
+<p>What would the line</p>
+<pre class="code-block tex2jax_ignore">printf("a = %d, b = %d, c = %f\n", *a, *b, *c);
+</pre>
+<p>print to the screen if placed right before the <code class="code-inline tex2jax_ignore">return 0;</code> line?</p>
+<ol class="lower-alpha">
+<li><p>a = 2, b = 3, c = 0.5</p></li>
+<li><p>a = 1, b = 2, c = 3.5</p></li>
+<li><p>a = 2, b = 2, c = 3.5</p></li>
+<li><p>a = 2, b = 3, c = 3.5</p></li>
+<li><p>The result is unpredictable and may be different from one system to the next.</p></li>
+</ol>
+<p><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><span class="incontext"><a href="malloc-free.html#quiz-malloc-2" class="internal">in-context</a></span>
+</body>
+</html>

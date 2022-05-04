@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-04T09:41:30+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Summary</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to C-Programming">
+<meta property="book:author" content="Petra Bonfert-Taylor">
+<link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/runestone.d062db89aaf1dddd.css">
+</head>
+<body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
+<p class="byline">Petra Bonfert-Taylor</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sortsearch-implementing.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sortsearch.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="la2.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sortsearch-implementing.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sortsearch.html" title="Up">Up</a><a class="next-button button toolbar-item" href="la2.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Introduction</a></li>
+<li><a href="meta_frontmatter-toc.html" data-scroll="meta_frontmatter-toc" class="internal">Table of Contents</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-firststeps.html" data-scroll="part-firststeps" class="internal"><span class="codenumber">I</span> <span class="title">First Steps in C</span></a></li>
+<li class="link">
+<a href="gettingstarted.html" data-scroll="gettingstarted" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a><ul>
+<li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
+<li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
+<li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="computers.html" data-scroll="computers" class="internal"><span class="codenumber">2</span> <span class="title">Computers, Hardware, and Software</span></a><ul><li><a href="computers-vocabulary.html" data-scroll="computers-vocabulary" class="internal">Introductory Vocabulary</a></li></ul>
+</li>
+<li class="link">
+<a href="firstprogram.html" data-scroll="firstprogram" class="internal"><span class="codenumber">3</span> <span class="title">A First C-Program: Structure, Printing, Repetition</span></a><ul>
+<li><a href="firstprogram-hello-world.html" data-scroll="firstprogram-hello-world" class="internal"><code class="code-inline tex2jax_ignore">Hello, World!</code></a></li>
+<li><a href="firstprogram-practice.html" data-scroll="firstprogram-practice" class="internal">First Practice</a></li>
+<li><a href="firstprogram-special-characters.html" data-scroll="firstprogram-special-characters" class="internal">Printing Special Characters</a></li>
+<li><a href="firstprogram-repetition.html" data-scroll="firstprogram-repetition" class="internal">Repetition: A Simple <code class="code-inline tex2jax_ignore">for</code>-Loop</a></li>
+<li><a href="firstprogram-multiple-repetitions.html" data-scroll="firstprogram-multiple-repetitions" class="internal">Multiple Repetitions</a></li>
+<li><a href="firstprogram-comments.html" data-scroll="firstprogram-comments" class="internal">Putting Comments in your Code</a></li>
+<li><a href="firstprogram-summary.html" data-scroll="firstprogram-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="variables.html" data-scroll="variables" class="internal"><span class="codenumber">4</span> <span class="title">Variables in C</span></a><ul>
+<li><a href="variables-printing-numbers.html" data-scroll="variables-printing-numbers" class="internal">Printing Numbers</a></li>
+<li><a href="variables-calculations.html" data-scroll="variables-calculations" class="internal">Simple Calculations</a></li>
+<li><a href="variables-intro.html" data-scroll="variables-intro" class="internal">Introduction to Variables</a></li>
+<li><a href="variables-changing.html" data-scroll="variables-changing" class="internal">Modifying Variables</a></li>
+<li><a href="variables-initializing.html" data-scroll="variables-initializing" class="internal">Initializing Variables</a></li>
+<li><a href="variables-errors.html" data-scroll="variables-errors" class="internal">Common Variable Errors</a></li>
+<li><a href="variables-loop-practice.html" data-scroll="variables-loop-practice" class="internal">Using Variables in Loops: Practice!</a></li>
+<li><a href="variables-user-input.html" data-scroll="variables-user-input" class="internal">User Input Using <code class="code-inline tex2jax_ignore">scanf()</code></a></li>
+<li><a href="variables-char-datatype.html" data-scroll="variables-char-datatype" class="internal">The <code class="code-inline tex2jax_ignore">char</code> Datatype</a></li>
+<li><a href="variables-float-datatype.html" data-scroll="variables-float-datatype" class="internal">The <code class="code-inline tex2jax_ignore">float</code> Datatype</a></li>
+<li><a href="variables-division.html" data-scroll="variables-division" class="internal">Division</a></li>
+<li><a href="variables-summary.html" data-scroll="variables-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-digitalrep.html" data-scroll="part-digitalrep" class="internal"><span class="codenumber">II</span> <span class="title">Digital Representation of Data</span></a></li>
+<li class="link">
+<a href="integers.html" data-scroll="integers" class="internal"><span class="codenumber">5</span> <span class="title">Integers and Binary</span></a><ul>
+<li><a href="integers-intro.html" data-scroll="integers-intro" class="internal">Digital Representation of Integers</a></li>
+<li><a href="integers-positive.html" data-scroll="integers-positive" class="internal">Storing Positive Integers</a></li>
+<li><a href="integers-negative.html" data-scroll="integers-negative" class="internal">Storing Negative Integers</a></li>
+<li><a href="integers-hex.html" data-scroll="integers-hex" class="internal">Hexadecimal Numbers</a></li>
+<li><a href="integers-summary.html" data-scroll="integers-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="floats.html" data-scroll="floats" class="internal"><span class="codenumber">6</span> <span class="title">Floats and Converting</span></a><ul>
+<li><a href="floats-intro.html" data-scroll="floats-intro" class="internal">Digital Representation of Floats</a></li>
+<li><a href="floats-int-to-float.html" data-scroll="floats-int-to-float" class="internal">Converting Integers to Floats</a></li>
+<li><a href="floats-float-to-int.html" data-scroll="floats-float-to-int" class="internal">Converting Floats to Integers</a></li>
+<li><a href="floats-average.html" data-scroll="floats-average" class="internal">Averages</a></li>
+<li><a href="floats-remainder.html" data-scroll="floats-remainder" class="internal">Remainders</a></li>
+<li><a href="floats-summary.html" data-scroll="floats-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chars.html" data-scroll="chars" class="internal"><span class="codenumber">7</span> <span class="title">Characters and ASCII Codes</span></a><ul>
+<li><a href="chars-intro.html" data-scroll="chars-intro" class="internal">Digital Representation of Characters</a></li>
+<li><a href="chars-ascii.html" data-scroll="chars-ascii" class="internal">Characters and the ASCII code</a></li>
+<li><a href="chars-cases.html" data-scroll="chars-cases" class="internal">Upper- and Lower-Case Chars</a></li>
+<li><a href="chars-summary.html" data-scroll="chars-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="prefixes.html" data-scroll="prefixes" class="internal"><span class="codenumber">8</span> <span class="title">Prefixes</span></a><ul>
+<li><a href="prefixes-intro.html" data-scroll="prefixes-intro" class="internal">Prefixes</a></li>
+<li><a href="prefixes-summary.html" data-scroll="prefixes-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-fundamentals.html" data-scroll="part-fundamentals" class="internal"><span class="codenumber">III</span> <span class="title">Fundamentals</span></a></li>
+<li class="link">
+<a href="branching.html" data-scroll="branching" class="internal"><span class="codenumber">9</span> <span class="title">Branching</span></a><ul>
+<li><a href="branching-if.html" data-scroll="branching-if" class="internal"><code class="code-inline tex2jax_ignore">if</code> Statements</a></li>
+<li><a href="branching-if-else.html" data-scroll="branching-if-else" class="internal"><code class="code-inline tex2jax_ignore">if - else</code> Statements</a></li>
+<li><a href="branching-operators.html" data-scroll="branching-operators" class="internal">Relational and Equality Operators</a></li>
+<li><a href="branching-if-else-practice.html" data-scroll="branching-if-else-practice" class="internal"><code class="code-inline tex2jax_ignore">if - else</code> Statement Practice</a></li>
+<li><a href="branching-advanced.html" data-scroll="branching-advanced" class="internal"><code class="code-inline tex2jax_ignore">if - else-if - else</code> Statements</a></li>
+<li><a href="branching-multiple.html" data-scroll="branching-multiple" class="internal">Combining Multiple Logic Statements</a></li>
+<li><a href="branching-practice.html" data-scroll="branching-practice" class="internal">Practice Your Logic Statements!</a></li>
+<li><a href="branching-evaluating.html" data-scroll="branching-evaluating" class="internal">Evaluating Logic Statements</a></li>
+<li><a href="branching-operator.html" data-scroll="branching-operator" class="internal">Operator Precedence</a></li>
+<li><a href="branching-flag.html" data-scroll="branching-flag" class="internal">The Idea of a Flag</a></li>
+<li><a href="branching-logic.html" data-scroll="branching-logic" class="internal">Logical Expressions in English</a></li>
+<li><a href="branching-negate.html" data-scroll="branching-negate" class="internal">Negating Logical Expressions</a></li>
+<li><a href="branching-summary.html" data-scroll="branching-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="adv-branching.html" data-scroll="adv-branching" class="internal"><span class="codenumber">10</span> <span class="title">Advanced Branching</span></a><ul>
+<li><a href="adv-branching-switch.html" data-scroll="adv-branching-switch" class="internal">The <code class="code-inline tex2jax_ignore">switch()</code> Statement</a></li>
+<li><a href="adv-branching-for-if.html" data-scroll="adv-branching-for-if" class="internal"><code class="code-inline tex2jax_ignore">for</code> and <code class="code-inline tex2jax_ignore">if</code> together</a></li>
+<li><a href="adv-branching-nested.html" data-scroll="adv-branching-nested" class="internal">Nested Loops</a></li>
+<li><a href="adv-branching-practice.html" data-scroll="adv-branching-practice" class="internal">Practice Your Advanced Branching!</a></li>
+<li><a href="adv-branching-practice2.html" data-scroll="adv-branching-practice2" class="internal">Continue to Practice Your Advanced Branching!</a></li>
+<li><a href="adv-branching-errors.html" data-scroll="adv-branching-errors" class="internal">Common Errors With Branching</a></li>
+<li><a href="adv-branching-summary.html" data-scroll="adv-branching-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="format.html" data-scroll="format" class="internal"><span class="codenumber">11</span> <span class="title">Formatted Input/Output and Program Style</span></a><ul>
+<li><a href="format-io.html" data-scroll="format-io" class="internal">Formatted Input and Output</a></li>
+<li><a href="format-scanf.html" data-scroll="format-scanf" class="internal">Understanding <code class="code-inline tex2jax_ignore">scanf()</code></a></li>
+<li><a href="format-style.html" data-scroll="format-style" class="internal">Program Style</a></li>
+<li><a href="format-summary.html" data-scroll="format-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">12</span> <span class="title">Functions and Recursion</span></a><ul>
+<li><a href="functions-single.html" data-scroll="functions-single" class="internal">Single Functions</a></li>
+<li><a href="functions-multiple.html" data-scroll="functions-multiple" class="internal">Multiple Functions</a></li>
+<li><a href="functions-practice.html" data-scroll="functions-practice" class="internal">Practice Your Functions!</a></li>
+<li><a href="functions-recursion.html" data-scroll="functions-recursion" class="internal">Recursion</a></li>
+<li><a href="function-recursion-practice.html" data-scroll="function-recursion-practice" class="internal">Practice Your Recursion!</a></li>
+<li><a href="functions-summary.html" data-scroll="functions-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="loops.html" data-scroll="loops" class="internal"><span class="codenumber">13</span> <span class="title">Loops</span></a><ul>
+<li><a href="loops-while.html" data-scroll="loops-while" class="internal">The <code class="code-inline tex2jax_ignore">while</code> Loop</a></li>
+<li><a href="loops-for-while.html" data-scroll="loops-for-while" class="internal"><code class="code-inline tex2jax_ignore">for</code> vs. <code class="code-inline tex2jax_ignore">while</code> Loops</a></li>
+<li><a href="loops-do-while.html" data-scroll="loops-do-while" class="internal">The <code class="code-inline tex2jax_ignore">do-while</code>-Loop</a></li>
+<li><a href="loops-compound.html" data-scroll="loops-compound" class="internal">Compound Assignment Operators</a></li>
+<li><a href="loops-operators.html" data-scroll="loops-operators" class="internal">Increment / Decrement Operators</a></li>
+<li><a href="loops-operators-practice.html" data-scroll="loops-operators-practice" class="internal">Increment / Decrement Practice</a></li>
+<li><a href="loops-fun.html" data-scroll="loops-fun" class="internal">Fun With Loops!</a></li>
+<li><a href="loops-summary.html" data-scroll="loops-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-server.html" data-scroll="part-server" class="internal"><span class="codenumber">IV</span> <span class="title">Server-Based Coding</span></a></li>
+<li class="link">
+<a href="linux.html" data-scroll="linux" class="internal"><span class="codenumber">14</span> <span class="title">Linux</span></a><ul>
+<li><a href="linux-editor.html" data-scroll="linux-editor" class="internal">Install Software On Your Computer</a></li>
+<li><a href="linux-intro.html" data-scroll="linux-intro" class="internal">Introduction to Linux</a></li>
+<li><a href="linux-terminal.html" data-scroll="linux-terminal" class="internal">Connect to Server via Terminal Window</a></li>
+<li><a href="linux-files.html" data-scroll="linux-files" class="internal">Linux File System</a></li>
+<li><a href="linux-directories.html" data-scroll="linux-directories" class="internal">Making and Using Directories</a></li>
+<li><a href="linux-remove-file.html" data-scroll="linux-remove-file" class="internal">Remove a File</a></li>
+<li><a href="linux_display-file.html" data-scroll="linux_display-file" class="internal">Display File Contents</a></li>
+<li><a href="linux-move-file.html" data-scroll="linux-move-file" class="internal">Move a File</a></li>
+<li><a href="linux-copy-file.html" data-scroll="linux-copy-file" class="internal">Copy a File</a></li>
+<li><a href="linux-compile.html" data-scroll="linux-compile" class="internal">Compiling Code</a></li>
+<li><a href="linux-languages.html" data-scroll="linux-languages" class="internal">Computer Languages</a></li>
+<li><a href="linux-cheat-sheet.html" data-scroll="linux-cheat-sheet" class="internal">List of Linux Commands</a></li>
+<li><a href="linux-summary.html" data-scroll="linux-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="files.html" data-scroll="files" class="internal"><span class="codenumber">15</span> <span class="title">File I/O</span></a><ul>
+<li><a href="files-intro.html" data-scroll="files-intro" class="internal">File I/O Overview</a></li>
+<li><a href="files-read.html" data-scroll="files-read" class="internal">Reading from a File</a></li>
+<li><a href="files-read-practice.html" data-scroll="files-read-practice" class="internal">Practice Reading from Files</a></li>
+<li><a href="files-read-efficient.html" data-scroll="files-read-efficient" class="internal">More Efficient File Reading</a></li>
+<li><a href="files-exist.html" data-scroll="files-exist" class="internal">Check Whether a File Exists</a></li>
+<li><a href="files-read-server.html" data-scroll="files-read-server" class="internal">Reading from a File on the Server</a></li>
+<li><a href="files-write.html" data-scroll="files-write" class="internal">Writing to a File</a></li>
+<li><a href="files-summary.html" data-scroll="files-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="debug.html" data-scroll="debug" class="internal"><span class="codenumber">16</span> <span class="title">Software and Debugging</span></a><ul>
+<li><a href="debug-software.html" data-scroll="debug-software" class="internal">Software Development</a></li>
+<li><a href="debug-code.html" data-scroll="debug-code" class="internal">Debugging Code</a></li>
+<li><a href="debug-conditional.html" data-scroll="debug-conditional" class="internal">Conditional Compilation</a></li>
+<li><a href="debug-practice.html" data-scroll="debug-practice" class="internal">Debugging Practice</a></li>
+<li><a href="debug-test.html" data-scroll="debug-test" class="internal">Test Your Knowledge!</a></li>
+<li><a href="debug-barcode.html" data-scroll="debug-barcode" class="internal">Back to File I/O</a></li>
+<li><a href="debug-summary.html" data-scroll="debug-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-advanced.html" data-scroll="part-advanced" class="internal"><span class="codenumber">V</span> <span class="title">Advanced Concepts</span></a></li>
+<li class="link">
+<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">17</span> <span class="title">Arrays</span></a><ul>
+<li><a href="array-integer.html" data-scroll="array-integer" class="internal">Arrays of Integers</a></li>
+<li><a href="array-other.html" data-scroll="array-other" class="internal">Arrays of Other Data Types</a></li>
+<li><a href="array-initialize.html" data-scroll="array-initialize" class="internal">Initializing Arrays</a></li>
+<li><a href="array-practice.html" data-scroll="array-practice" class="internal">Array Practice</a></li>
+<li><a href="array-advanced.html" data-scroll="array-advanced" class="internal">Advanced Array Practice</a></li>
+<li><a href="array-summary.html" data-scroll="array-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="memory.html" data-scroll="memory" class="internal"><span class="codenumber">18</span> <span class="title">Memory</span></a><ul>
+<li><a href="memory-space.html" data-scroll="memory-space" class="internal">Space Needed to Store Variables</a></li>
+<li><a href="memory-stack.html" data-scroll="memory-stack" class="internal">The Stack</a></li>
+<li><a href="memory-functions.html" data-scroll="memory-functions" class="internal">Functions And The Stack</a></li>
+<li><a href="memory-scope.html" data-scroll="memory-scope" class="internal">The Scope of a Variable</a></li>
+<li><a href="memory-bad-variables.html" data-scroll="memory-bad-variables" class="internal">Bad Variable Names</a></li>
+<li><a href="memory-update.html" data-scroll="memory-update" class="internal">First Look at Modifying Arrays with Functions</a></li>
+<li><a href="memory-arrays.html" data-scroll="memory-arrays" class="internal">Practice Modifying Arrays with Functions</a></li>
+<li><a href="memory-roundoff.html" data-scroll="memory-roundoff" class="internal">Roundoff Error</a></li>
+<li><a href="memory-rounding.html" data-scroll="memory-rounding" class="internal">Rounding in C</a></li>
+<li><a href="memory-rounding-practice.html" data-scroll="memory-rounding-practice" class="internal">Practice Your Rounding!</a></li>
+<li><a href="memory-overflow.html" data-scroll="memory-overflow" class="internal">Overflow</a></li>
+<li><a href="memory-summary.html" data-scroll="memory-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="pointers.html" data-scroll="pointers" class="internal"><span class="codenumber">19</span> <span class="title">Pointers</span></a><ul>
+<li><a href="pointers-address.html" data-scroll="pointers-address" class="internal">The Address of a Variable</a></li>
+<li><a href="pointers-dereference.html" data-scroll="pointers-dereference" class="internal">Dereferencing a Pointer</a></li>
+<li><a href="pointers-example.html" data-scroll="pointers-example" class="internal">Pointer Example</a></li>
+<li><a href="pointers-intro-frac-calc.html" data-scroll="pointers-intro-frac-calc" class="internal">Intro to the Fraction Calculator</a></li>
+<li><a href="pointers-design.html" data-scroll="pointers-design" class="internal">Top-Down Design</a></li>
+<li><a href="pointers-bottom-up-testing.html" data-scroll="pointers-bottom-up-testing" class="internal">Bottom-Up Testing</a></li>
+<li><a href="pointers-top-down-testing.html" data-scroll="pointers-top-down-testing" class="internal">Top-Down Testing</a></li>
+<li><a href="pointers-frac-calc.html" data-scroll="pointers-frac-calc" class="internal">The Fraction Calculator</a></li>
+<li><a href="pointers-arrays.html" data-scroll="pointers-arrays" class="internal">Arrays and Pointers</a></li>
+<li><a href="pointers-functions.html" data-scroll="pointers-functions" class="internal">Passing Arrays to Functions</a></li>
+<li><a href="pointers-functions-practice.html" data-scroll="pointers-functions-practice" class="internal">Practice Passing Arrays to Functions</a></li>
+<li><a href="pointers-arithmetic.html" data-scroll="pointers-arithmetic" class="internal">Arrays, Functions, and Pointer Arithmetic</a></li>
+<li><a href="pointers-summary.html" data-scroll="pointers-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="strings.html" data-scroll="strings" class="internal"><span class="codenumber">20</span> <span class="title">Strings</span></a><ul>
+<li><a href="strings-intro.html" data-scroll="strings-intro" class="internal">Declaring and Initializing Strings</a></li>
+<li><a href="strings-assign.html" data-scroll="strings-assign" class="internal">Assign a New Value</a></li>
+<li><a href="strings-library.html" data-scroll="strings-library" class="internal">The String Library</a></li>
+<li><a href="strings-practice.html" data-scroll="strings-practice" class="internal">Practice Your Strings!</a></li>
+<li><a href="strings-length.html" data-scroll="strings-length" class="internal">String Length</a></li>
+<li><a href="strings-input.html" data-scroll="strings-input" class="internal">Reading Strings from Input</a></li>
+<li><a href="strings-print.html" data-scroll="strings-print" class="internal">Printing to Strings</a></li>
+<li><a href="strings-alphabetize.html" data-scroll="strings-alphabetize" class="internal">Alphabetize Strings</a></li>
+<li><a href="strings-summary.html" data-scroll="strings-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="malloc.html" data-scroll="malloc" class="internal"><span class="codenumber">21</span> <span class="title">Computer Memory Management</span></a><ul>
+<li><a href="malloc-intro.html" data-scroll="malloc-intro" class="internal"><code class="code-inline tex2jax_ignore">malloc()</code> - Dynamically Allocating Memory</a></li>
+<li><a href="malloc-free.html" data-scroll="malloc-free" class="internal"><code class="code-inline tex2jax_ignore">free()</code> - Releasing Dynamically Allocated Memory</a></li>
+<li><a href="malloc-array.html" data-scroll="malloc-array" class="internal">Allocate Memory for Arrays</a></li>
+<li><a href="malloc-practice.html" data-scroll="malloc-practice" class="internal">Malloc and Free Practice</a></li>
+<li><a href="malloc-strings.html" data-scroll="malloc-strings" class="internal">String Practice</a></li>
+<li><a href="malloc-array-strings.html" data-scroll="malloc-array-strings" class="internal">Arrays of Strings</a></li>
+<li><a href="malloc-summary.html" data-scroll="malloc-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sortsearch.html" data-scroll="sortsearch" class="internal"><span class="codenumber">22</span> <span class="title">Sorting and Searching</span></a><ul>
+<li><a href="sortsearch-linear.html" data-scroll="sortsearch-linear" class="internal">Linear Search</a></li>
+<li><a href="sortsearch-bisection.html" data-scroll="sortsearch-bisection" class="internal">Bisection Search</a></li>
+<li><a href="sortsearch-linear-practice.html" data-scroll="sortsearch-linear-practice" class="internal">Linear Search Practice</a></li>
+<li><a href="sortsearch-bubble.html" data-scroll="sortsearch-bubble" class="internal">Bubble Sort</a></li>
+<li><a href="sortsearch-selection.html" data-scroll="sortsearch-selection" class="internal">Selection Sort</a></li>
+<li><a href="sortsearch-insertiion.html" data-scroll="sortsearch-insertiion" class="internal">Insertion Sort</a></li>
+<li><a href="sortsearch-sort-practice.html" data-scroll="sortsearch-sort-practice" class="internal">Sorting Practice</a></li>
+<li><a href="sortsearch-parallel-arrays.html" data-scroll="sortsearch-parallel-arrays" class="internal">Sorting Parallel Arrays</a></li>
+<li><a href="sortsearch-arrays.html" data-scroll="sortsearch-arrays" class="internal">Sort Arrays</a></li>
+<li><a href="sortsearch-implementing.html" data-scroll="sortsearch-implementing" class="internal">Implementing Sort Arrays</a></li>
+<li><a href="sortsearch-summary.html" data-scroll="sortsearch-summary" class="active">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="la2.html" data-scroll="la2" class="internal"><span class="codenumber">23</span> <span class="title">Long Assignment 2</span></a><ul><li><a href="la2-menu.html" data-scroll="la2-menu" class="internal">LA2: Menu Selection</a></li></ul>
+</li>
+<li class="link">
+<a href="multiarray.html" data-scroll="multiarray" class="internal"><span class="codenumber">24</span> <span class="title">Multidimensional Arrays</span></a><ul>
+<li><a href="multiarray-strings.html" data-scroll="multiarray-strings" class="internal">Arrays of Strings</a></li>
+<li><a href="multiarray-matrices.html" data-scroll="multiarray-matrices" class="internal">Matrices</a></li>
+<li><a href="multiarray-initialize.html" data-scroll="multiarray-initialize" class="internal">Initializing Multidimensional Arrays</a></li>
+<li><a href="multiarray-functions.html" data-scroll="multiarray-functions" class="internal">Passing Multidimensional Arrays to Functions</a></li>
+<li><a href="multiarray-practice.html" data-scroll="multiarray-practice" class="internal">Practice Your Multidimensional Arrays!</a></li>
+<li><a href="multiarray-summary.html" data-scroll="multiarray-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-enriched.html" data-scroll="part-enriched" class="internal"><span class="codenumber">VI</span> <span class="title">Enriched Concepts</span></a></li>
+<li class="link">
+<a href="structures.html" data-scroll="structures" class="internal"><span class="codenumber">25</span> <span class="title">Structures</span></a><ul>
+<li><a href="structures-intro.html" data-scroll="structures-intro" class="internal">Intro to Structures</a></li>
+<li><a href="structures-typedef.html" data-scroll="structures-typedef" class="internal"><code class="code-inline tex2jax_ignore">typedef</code></a></li>
+<li><a href="structures-frac-calc.html" data-scroll="structures-frac-calc" class="internal">The Fraction Calculator Using Structures</a></li>
+<li><a href="structures-functions.html" data-scroll="structures-functions" class="internal">Passing Structures to Functions</a></li>
+<li><a href="structures-pointers.html" data-scroll="structures-pointers" class="internal">Structures and Pointers</a></li>
+<li><a href="structures-summary.html" data-scroll="structures-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="arraystruct.html" data-scroll="arraystruct" class="internal"><span class="codenumber">26</span> <span class="title">Arrays of Structures</span></a><ul>
+<li><a href="arraystruct-operators.html" data-scroll="arraystruct-operators" class="internal">Operator Precedence</a></li>
+<li><a href="arraystruct-structures.html" data-scroll="arraystruct-structures" class="internal">Arrays of Structures</a></li>
+<li><a href="arraystruct-triangle.html" data-scroll="arraystruct-triangle" class="internal">Arrays of Structures: Triangle</a></li>
+<li><a href="arraystruct-dynamic.html" data-scroll="arraystruct-dynamic" class="internal">Dynamic Arrays of Structures</a></li>
+<li><a href="arraystruct-pentagon.html" data-scroll="arraystruct-pentagon" class="internal">Dynamic Arrays of Structures: Pentagon</a></li>
+<li><a href="arraystruct-summary.html" data-scroll="arraystruct-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="linkedlists.html" data-scroll="linkedlists" class="internal"><span class="codenumber">27</span> <span class="title">Linked Lists</span></a><ul>
+<li><a href="linkedlists-intro.html" data-scroll="linkedlists-intro" class="internal">Intro to Linked Lists</a></li>
+<li><a href="linkedlists-functions.html" data-scroll="linkedlists-functions" class="internal">Pass Linked Lists to Functions</a></li>
+<li><a href="linkedlists-autolink.html" data-scroll="linkedlists-autolink" class="internal">Automate the Linking Process</a></li>
+<li><a href="linkedlists-create.html" data-scroll="linkedlists-create" class="internal">Create Linked Lists "On The Fly"</a></li>
+<li><a href="linkedlists-large-ints.html" data-scroll="linkedlists-large-ints" class="internal">Arbitrarily Large Integers</a></li>
+<li><a href="linkedlists-digits.html" data-scroll="linkedlists-digits" class="internal">Create Digits in Memory</a></li>
+<li><a href="linkedlists-append.html" data-scroll="linkedlists-append" class="internal">Append Digits to List</a></li>
+<li><a href="linkedlists-print.html" data-scroll="linkedlists-print" class="internal">Function to Print a Number</a></li>
+<li><a href="linkedlists-free.html" data-scroll="linkedlists-free" class="internal">Function to Free a Number</a></li>
+<li><a href="linkedlists-input.html" data-scroll="linkedlists-input" class="internal">Read a Number from Input</a></li>
+<li><a href="linkedlists-search.html" data-scroll="linkedlists-search" class="internal">Search a Number for a Digit</a></li>
+<li><a href="linkedlists-reverse.html" data-scroll="linkedlists-reverse" class="internal">Reverse a Linked List</a></li>
+<li><a href="linkedlists-sort.html" data-scroll="linkedlists-sort" class="internal">Sort Linked Lists</a></li>
+<li><a href="linkedlists-summary.html" data-scroll="linkedlists-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="libraries.html" data-scroll="libraries" class="internal"><span class="codenumber">28</span> <span class="title">Libraries</span></a><ul>
+<li><a href="libraries-intro.html" data-scroll="libraries-intro" class="internal">Intro to Libraries</a></li>
+<li><a href="libraries-components.html" data-scroll="libraries-components" class="internal">Library Components</a></li>
+<li><a href="libraries-header.html" data-scroll="libraries-header" class="internal">Making Our Own Library - Header File</a></li>
+<li><a href="libraries-source.html" data-scroll="libraries-source" class="internal">Making Our Own Library - Source File</a></li>
+<li><a href="libraries-object.html" data-scroll="libraries-object" class="internal">Making Our Own Library - Object File</a></li>
+<li><a href="libraries-complex.html" data-scroll="libraries-complex" class="internal">Create A Complex Number Library</a></li>
+<li><a href="libraries-complex-source.html" data-scroll="libraries-complex-source" class="internal">Complex Number Library Source File</a></li>
+<li><a href="libraries-complex-header.html" data-scroll="libraries-complex-header" class="internal">Complex Number Library Header File</a></li>
+<li><a href="libraries-complex-assemble.html" data-scroll="libraries-complex-assemble" class="internal">Assembling the Complex Number Library</a></li>
+<li><a href="libraries-complex-test.html" data-scroll="libraries-complex-test" class="internal">Testing Our Complex Number Library</a></li>
+<li><a href="libraries-compile-library.html" data-scroll="libraries-compile-library" class="internal">Compile the Library to an Object File</a></li>
+<li><a href="libraries-compile-object.html" data-scroll="libraries-compile-object" class="internal">Compile to an Object File</a></li>
+<li><a href="libraries-executable.html" data-scroll="libraries-executable" class="internal">Make an Executable Program</a></li>
+<li><a href="libraries-summary.html" data-scroll="libraries-summary" class="internal">Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-page.html" data-scroll="index-page" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdHJlbWz2sc8DrOMYa81E5mRqDKIgulXXfqEq-d48TcuzL9mw/viewform?usp=sf_link" target="_blank">Report Errors</a><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sortsearch-summary"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">22.11</span> <span class="title">Summary</span>
+</h2>
+<p id="p-1410">In this chapter, we covered the following topics:</p>
+<ul class="disc">
+<li id="li-795"><p id="p-derived-li-795">Linear and bisection search methods</p></li>
+<li id="li-796"><p id="p-derived-li-796">Bubble, selection, and insertion sort methods</p></li>
+<li id="li-797"><p id="p-derived-li-797">Sorting records of data (parallel arrays)</p></li>
+<li id="li-798"><p id="p-derived-li-798">Sort arrays</p></li>
+</ul></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

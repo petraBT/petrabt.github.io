@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-04T09:38:00+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Plotting Multiple Curves</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to MATLAB">
+<meta property="book:author" content="Petra Bonfert-Taylor">
+<link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/MatlabProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="engs20-book-matlab.html"><span class="title">Introduction to MATLAB:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
+<p class="byline">Petra Bonfert-Taylor</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="plots-functions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="plots.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="plots-style.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="plots-functions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="plots.html" title="Up">Up</a><a class="next-button button toolbar-item" href="plots-style.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Introduction</a></li>
+<li><a href="meta_frontmatter-toc.html" data-scroll="meta_frontmatter-toc" class="internal">Table of Contents</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-firststeps.html" data-scroll="part-firststeps" class="internal"><span class="codenumber">I</span> <span class="title">First Steps in MATLAB®</span></a></li>
+<li class="link">
+<a href="gettingstarted.html" data-scroll="gettingstarted" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a><ul>
+<li><a href="gettingstarted-complanguages.html" data-scroll="gettingstarted-complanguages" class="internal">Computer Languages</a></li>
+<li><a href="gettingstarted-what.html" data-scroll="gettingstarted-what" class="internal">What is MATLAB</a></li>
+<li><a href="gettingstarted-windows.html" data-scroll="gettingstarted-windows" class="internal">The MATLAB Windows</a></li>
+<li><a href="gettingstarted-arithmetic.html" data-scroll="gettingstarted-arithmetic" class="internal">Arithmetic Operators with Scalars</a></li>
+<li><a href="gettingstarted-displayformats.html" data-scroll="gettingstarted-displayformats" class="internal">Display Formats</a></li>
+<li><a href="gettingstarted-functions.html" data-scroll="gettingstarted-functions" class="internal">Elementary Built-In Math Functions</a></li>
+<li><a href="gettingstarted-scalarvars.html" data-scroll="gettingstarted-scalarvars" class="internal">Scalar Variables</a></li>
+<li><a href="gettingstarted-practice.html" data-scroll="gettingstarted-practice" class="internal">Practice Your Arithmetic</a></li>
+<li><a href="gettingstarted-practice-solution.html" data-scroll="gettingstarted-practice-solution" class="internal">Worked Problem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-fundamentals.html" data-scroll="part-fundamentals" class="internal"><span class="codenumber">II</span> <span class="title">Fundamentals</span></a></li>
+<li class="link">
+<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">2</span> <span class="title">Arrays</span></a><ul>
+<li><a href="array-vector.html" data-scroll="array-vector" class="internal">Introduction to Vectors</a></li>
+<li><a href="array-matrix.html" data-scroll="array-matrix" class="internal">Introduction to Matrices</a></li>
+<li><a href="array-transpose.html" data-scroll="array-transpose" class="internal">Transposing Arrays</a></li>
+<li><a href="array-practice.html" data-scroll="array-practice" class="internal">Practice Your Arrays</a></li>
+<li><a href="array-address.html" data-scroll="array-address" class="internal">Addressing Arrays</a></li>
+<li><a href="array-resize.html" data-scroll="array-resize" class="internal">Adding Elements to Arrays</a></li>
+<li><a href="array-delete.html" data-scroll="array-delete" class="internal">Deleting Elements from Arrays</a></li>
+<li><a href="array-function.html" data-scroll="array-function" class="internal">Array Functions</a></li>
+<li><a href="array-practice-more.html" data-scroll="array-practice-more" class="internal">Practice Your Matrices</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="string.html" data-scroll="string" class="internal"><span class="codenumber">3</span> <span class="title">Strings</span></a><ul>
+<li><a href="string-intro.html" data-scroll="string-intro" class="internal">Strings as Arrays of Characters</a></li>
+<li><a href="string-array.html" data-scroll="string-array" class="internal">Arrays of Strings</a></li>
+<li><a href="string-array-of-strings.html" data-scroll="string-array-of-strings" class="internal">Strings as String Arrays</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="math.html" data-scroll="math" class="internal"><span class="codenumber">4</span> <span class="title">Mathematical Operations with Arrays</span></a><ul>
+<li><a href="math-add-sub.html" data-scroll="math-add-sub" class="internal">Addition and Subtraction</a></li>
+<li><a href="math-multiply.html" data-scroll="math-multiply" class="internal">Multiplication</a></li>
+<li><a href="math-scalar.html" data-scroll="math-scalar" class="internal">Scalar Multiplication</a></li>
+<li><a href="math-solve.html" data-scroll="math-solve" class="internal">Matrix Inversion - First Steps</a></li>
+<li><a href="math-identity.html" data-scroll="math-identity" class="internal">Inverse of a Matrix, Identity Matrix</a></li>
+<li><a href="math-det.html" data-scroll="math-det" class="internal">Determinant of a Matrix</a></li>
+<li><a href="math-system.html" data-scroll="math-system" class="internal">Solving System of Equations</a></li>
+<li><a href="math-element.html" data-scroll="math-element" class="internal">Element-by-Element Operators</a></li>
+<li><a href="math-function.html" data-scroll="math-function" class="internal">Built-In Functions</a></li>
+<li><a href="math-practice.html" data-scroll="math-practice" class="internal">Practice Your Functions</a></li>
+<li><a href="math-worked-problem.html" data-scroll="math-worked-problem" class="internal">Practice Solving System of Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="script.html" data-scroll="script" class="internal"><span class="codenumber">5</span> <span class="title">Script Files</span></a><ul>
+<li><a href="script-create.html" data-scroll="script-create" class="internal">Creating Script Files</a></li>
+<li><a href="script-fscanf.html" data-scroll="script-fscanf" class="internal">The <code class="code-inline tex2jax_ignore">fscanf()</code> Command</a></li>
+<li><a href="script-import.html" data-scroll="script-import" class="internal">Import Data</a></li>
+<li><a href="script-input.html" data-scroll="script-input" class="internal">Input to Script File</a></li>
+<li><a href="script-output.html" data-scroll="script-output" class="internal">Output Commands</a></li>
+<li><a href="script-format.html" data-scroll="script-format" class="internal">Formatted Output</a></li>
+<li><a href="script-directory.html" data-scroll="script-directory" class="internal">Current Directory</a></li>
+<li><a href="script-search.html" data-scroll="script-search" class="internal">Search Path</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="plots.html" data-scroll="plots" class="internal"><span class="codenumber">6</span> <span class="title">Two-Dimensional Plots</span></a><ul>
+<li><a href="plots-intro.html" data-scroll="plots-intro" class="internal">Introduction to 2D Plots</a></li>
+<li><a href="plots-create.html" data-scroll="plots-create" class="internal">Creating Plots</a></li>
+<li><a href="plots-specifiers.html" data-scroll="plots-specifiers" class="internal">Line Specifiers</a></li>
+<li><a href="plots-properties.html" data-scroll="plots-properties" class="internal">Plot Properties</a></li>
+<li><a href="plots-functions.html" data-scroll="plots-functions" class="internal">Plotting Functions</a></li>
+<li><a href="plots-multiple.html" data-scroll="plots-multiple" class="active">Plotting Multiple Curves</a></li>
+<li><a href="plots-style.html" data-scroll="plots-style" class="internal">Plot Formatting and Style</a></li>
+<li><a href="plots-practice.html" data-scroll="plots-practice" class="internal">Practice Your Plots</a></li>
+<li><a href="plots-subplot.html" data-scroll="plots-subplot" class="internal">Creating Subplots</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-programming.html" data-scroll="part-programming" class="internal"><span class="codenumber">III</span> <span class="title">Programming in MATLAB®</span></a></li>
+<li class="link">
+<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">7</span> <span class="title">Logic</span></a><ul>
+<li><a href="logic-operators.html" data-scroll="logic-operators" class="internal">Relational and Equality Operators</a></li>
+<li><a href="logic-functions.html" data-scroll="logic-functions" class="internal">Built-In Logical Operator Functions</a></li>
+<li><a href="logic-if.html" data-scroll="logic-if" class="internal">The <code class="code-inline tex2jax_ignore">if-end</code> command</a></li>
+<li><a href="logic-if-else.html" data-scroll="logic-if-else" class="internal">The <code class="code-inline tex2jax_ignore">if-else-end</code> command</a></li>
+<li><a href="logic-if-elseif.html" data-scroll="logic-if-elseif" class="internal">The <code class="code-inline tex2jax_ignore">if-elseif-else-end</code> command</a></li>
+<li><a href="logic-switch.html" data-scroll="logic-switch" class="internal">The <code class="code-inline tex2jax_ignore">switch-case</code> command</a></li>
+<li><a href="logic-for.html" data-scroll="logic-for" class="internal">The <code class="code-inline tex2jax_ignore">for</code> loop</a></li>
+<li><a href="logic-while.html" data-scroll="logic-while" class="internal">The <code class="code-inline tex2jax_ignore">while</code> loop</a></li>
+<li><a href="logic-break.html" data-scroll="logic-break" class="internal">The <code class="code-inline tex2jax_ignore">break</code> statement</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">8</span> <span class="title">Functions and Function Files</span></a><ul>
+<li><a href="functions-intro.html" data-scroll="functions-intro" class="internal">Introduction to Functions</a></li>
+<li><a href="functions-files.html" data-scroll="functions-files" class="internal">Introduction to Function Files</a></li>
+<li><a href="functions-calling.html" data-scroll="functions-calling" class="internal">Calling a Function</a></li>
+<li><a href="functions-globals.html" data-scroll="functions-globals" class="internal">Global Variables</a></li>
+<li><a href="functions-script.html" data-scroll="functions-script" class="internal">Script Files Versus Function Files</a></li>
+<li><a href="functions-anonymous.html" data-scroll="functions-anonymous" class="internal">Anonymous Functions with Single Variable</a></li>
+<li><a href="functions-anonymous-multiple.html" data-scroll="functions-anonymous-multiple" class="internal">Anonymous Functions with Multiple Arguments</a></li>
+<li><a href="functions-example.html" data-scroll="functions-example" class="internal">Function Example: Projectile Motion</a></li>
+<li><a href="functions-additional.html" data-scroll="functions-additional" class="internal">External Language Interface</a></li>
+<li><a href="functions-practice1.html" data-scroll="functions-practice1" class="internal">Practice Your Functions</a></li>
+<li><a href="functions-practice2.html" data-scroll="functions-practice2" class="internal">Practice Your Programming</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-data.html" data-scroll="part-data" class="internal"><span class="codenumber">IV</span> <span class="title">Polynomials, Curve Fitting, and Interpolation</span></a></li>
+<li class="link">
+<a href="polynomials.html" data-scroll="polynomials" class="internal"><span class="codenumber">9</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="polynomials-intro.html" data-scroll="polynomials-intro" class="internal">Introduction to Polynomials</a></li>
+<li><a href="polynomials-evaluate.html" data-scroll="polynomials-evaluate" class="internal">Evaluating Polynomials</a></li>
+<li><a href="polynomials-plot.html" data-scroll="polynomials-plot" class="internal">Plotting Polynomials</a></li>
+<li><a href="polynomials-roots.html" data-scroll="polynomials-roots" class="internal">Root Finding</a></li>
+<li><a href="polynomials-add.html" data-scroll="polynomials-add" class="internal">Adding Polynomials</a></li>
+<li><a href="polynomials-multiply.html" data-scroll="polynomials-multiply" class="internal">Multiplying Polynomials</a></li>
+<li><a href="polynomials-divide.html" data-scroll="polynomials-divide" class="internal">Dividing Polynomials</a></li>
+<li><a href="polynomials-derivatives.html" data-scroll="polynomials-derivatives" class="internal">Derivatives</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="interpolation.html" data-scroll="interpolation" class="internal"><span class="codenumber">10</span> <span class="title">Interpolation</span></a><ul>
+<li><a href="interpolation-intro.html" data-scroll="interpolation-intro" class="internal">Introduction to Interpolation</a></li>
+<li><a href="interpolation-fit.html" data-scroll="interpolation-fit" class="internal">Curve Fitting</a></li>
+<li><a href="interpolation-examples.html" data-scroll="interpolation-examples" class="internal">Curve Fitting Examples</a></li>
+<li><a href="interpolation-practice.html" data-scroll="interpolation-practice" class="internal">Practice Your Curve Fitting</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-threeD.html" data-scroll="part-threeD" class="internal"><span class="codenumber">V</span> <span class="title">Three Dimensional Plotting</span></a></li>
+<li class="link">
+<a href="plots3d.html" data-scroll="plots3d" class="internal"><span class="codenumber">11</span> <span class="title">Three-Dimensional Plots</span></a><ul>
+<li><a href="plots3d-introduction.html" data-scroll="plots3d-introduction" class="internal">Introduction to 3D Plots</a></li>
+<li><a href="plots3d-line.html" data-scroll="plots3d-line" class="internal">Simple Line Plots</a></li>
+<li><a href="plots3d-view.html" data-scroll="plots3d-view" class="internal">Viewing Plots</a></li>
+<li><a href="plots3d-surface.html" data-scroll="plots3d-surface" class="internal">Plotting Surfaces</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-page.html" data-scroll="index-page" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf-iN7M5DVZHmne8wnKOm_3QAKKDVopIFLtJbnKX5Sq1-gF0w/viewform?usp=sf_link" target="_blank">Report Errors</a><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="plots-multiple"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.6</span> <span class="title">Plotting Multiple Curves</span>
+</h2>
+<p id="p-559">Frequently it is desirable to display more than one curve in a single plot. There are several ways in MATLAB to create such a figure. We will discuss three methods in this section:</p>
+<section class="subsection" id="subsection-25"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.6.1</span> <span class="title">Method 1: Plotting Pairs of Vectors</span>
+</h3>
+<p id="p-560">The plot command accepts more than one pair of vectors.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><pre class="console"><span class="prompt unselectable">&gt;&gt; </span><b>x = -2:0.01:4;
+</b><span class="prompt unselectable">&gt;&gt; </span><b>y = 3.5.^(-0.5*x).*cos(6*x);
+</b><span class="prompt unselectable">&gt;&gt; </span><b>u = x;
+</b><span class="prompt unselectable">&gt;&gt; </span><b>v = y+0.5;
+</b><span class="prompt unselectable">&gt;&gt; </span><b>t = x;
+</b><span class="prompt unselectable">&gt;&gt; </span><b>h = y-0.5;
+</b><span class="prompt unselectable">&gt;&gt; </span><b>plot(x,y, u,v, t,h)
+</b></pre></div></div></div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/PlotMultipleDefault.png" class="contained"></div>
+<p id="p-561">This creates a single plot with curves of y vs. x, v vs. u, and h vs. t. Each curve is given a separate color to distinguish it.</p>
+<p id="p-562">Additionally, line specifiers for each curve are possible:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><pre class="console"><span class="prompt unselectable">&gt;&gt; </span><b>plot(x,y,'b', u,v,'--r', t,h,'m:', 'linewidth',1.5)
+</b></pre></div></div></div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/PlotMultiple.png" class="contained"></div></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.6.2</span> <span class="title">Method 2: Using the <code class="code-inline tex2jax_ignore">hold on</code> Command</span>
+</h3>
+<p id="p-563">The <code class="code-inline tex2jax_ignore">hold on</code> and <code class="code-inline tex2jax_ignore">hold off</code> commands allow control over whether the Figure Window is erased or not.</p>
+<p id="p-564">The standard usage is to first issue a plot command, then the <code class="code-inline tex2jax_ignore">hold on</code> command, several more plot commands, and finally the <code class="code-inline tex2jax_ignore">hold off</code> command.</p>
+<p id="p-565">The effect is that the first plot command sets up the axes and displays the first curve, the hold on command ensures that the rest of the plot commands go to the current figure until the hold off command is issued.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><pre class="console"><span class="prompt unselectable">&gt;&gt; </span><b>x = 0:pi/24:3*pi;
+</b><span class="prompt unselectable">&gt;&gt; </span><b>y1 = cos(x);
+</b><span class="prompt unselectable">&gt;&gt; </span><b>y2 = sin(x);
+</b><span class="prompt unselectable">&gt;&gt; </span><b>y3 = sin(x).*cos(x);
+</b><span class="prompt unselectable">&gt;&gt; </span><b>plot(x,y1)
+</b><span class="prompt unselectable">&gt;&gt; </span><b>hold on
+</b><span class="prompt unselectable">&gt;&gt; </span><b>plot(x,y2, 'r')
+</b><span class="prompt unselectable">&gt;&gt; </span><b>plot(x,y3, '-go')
+</b><span class="prompt unselectable">&gt;&gt; </span><b>hold off
+</b></pre></div></div></div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/PlotWithHold.png" class="contained"></div></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.6.3</span> <span class="title">Method 3: Using the <code class="code-inline tex2jax_ignore">line()</code> Command</span>
+</h3>
+<p id="p-566">You can also use the <code class="code-inline tex2jax_ignore">line()</code> command, which adds a curve to the existing plot.</p>
+<p id="p-567">The difference between <code class="code-inline tex2jax_ignore">line()</code> and <code class="code-inline tex2jax_ignore">plot()</code> is that plot starts a new figure while line does not.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><pre class="console"><span class="prompt unselectable">&gt;&gt; </span><b>x = 0:pi/24:3*pi;
+</b><span class="prompt unselectable">&gt;&gt; </span><b>y1 = cos(x);
+</b><span class="prompt unselectable">&gt;&gt; </span><b>y2 = sin(x);
+</b><span class="prompt unselectable">&gt;&gt; </span><b>y3 = sin(x).*cos(x);
+</b><span class="prompt unselectable">&gt;&gt; </span><b>plot(x,y1)
+</b><span class="prompt unselectable">&gt;&gt; </span><b>line(x,y2,'color','r')
+</b><span class="prompt unselectable">&gt;&gt; </span><b>line(x,y3,'color','g', 'linestyle','-', 'marker','o')
+</b></pre></div></div></div>
+<p id="p-568">Must use <em class="alert">PropertyName</em> and <em class="alert">PropertyValue</em></p>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/PlotWithHold.png" class="contained"></div></section><article class="activity project-like" id="activity-34"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span>
+</h3>
+<p id="p-569">Plot the function</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) = \frac{5\,\sin{(x)}}{x + e^{-0.75x}} - \frac{3}{5}x
+\end{equation*}
+</div>
+<p id="p-570">for x between -5 and 10 using a red solid line of linewidth 2. Can you find the coordinates of the maximum that occurs around x = 1? If so, mark this maximum on your plot with a green filled-in diamond. Be sure to make this diamond large enough to be easily seen.</p>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/PlotLocalMax.png" class="contained"></div>
+<p id="p-571">Please paste your code into the textbox.</p></article></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

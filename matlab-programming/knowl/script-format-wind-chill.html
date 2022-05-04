@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-04T09:38:02+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span>
+</h3>
+<p id="p-517">Modify your script from last class so that it displays the following chart:</p>
+<pre class="code-block tex2jax_ignore">                     Temperature (F)
+Speed (mi/h)   40  30  20  10   0  -10  -20  -30  -40
+    10         34  21   9  -4 -16  -28  -41  -53  -66 
+    20         30  17   4  -9 ...
+    30         28  15   ...
+    40          .
+    50          .
+    60          .
+</pre>
+<p id="p-518">Here is our script from last class:</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-matlab">T = input('Enter a temperature (F): ');
+v = input('Enter the wind speed (mph): ');
+TWC = 35.74 + .6215*T - 35.75*v^(.16) + .4275*T*v^(.16);
+
+disp('The wind chill temperature is ...');
+disp(TWC);
+</code></pre></div>
+<p id="p-519">Please paste your code into the submission box.</p></article><span class="incontext"><a href="script-format.html#script-format-wind-chill" class="internal">in-context</a></span>
+</body>
+</html>

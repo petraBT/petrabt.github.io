@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-04T09:38:03+02:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.8</span><span class="period">.</span>
+</h3>
+<p id="p-735">Write a Matlab program that finds the solution of the equation <span class="process-math">\(8-4.5(x-\sin{(x)}) = 0\)</span> using the bisection method.</p>
+<p id="p-736">To do so, plot the function <span class="process-math">\(f(x) = 8-4.5(x-\sin{(x)})\)</span> first to determine an interval <span class="process-math">\([a,b]\)</span> within which the solution is located. You thus need to choose <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\)</span> have different signs (this can be done outside of your program).</p>
+<p id="p-737">Your program should now calculate a first estimate of a numerical solutions via <span class="process-math">\(x_1 = \frac{a+b}{2}\text{.}\)</span> Determine whether the true solution is between <span class="process-math">\(a\)</span> and <span class="process-math">\(x_1\)</span> or between <span class="process-math">\(x_1\)</span> and <span class="process-math">\(b\)</span> by looking at <span class="process-math">\(f(a)\text{,}\)</span> <span class="process-math">\(f(x1)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> then replace <span class="process-math">\(a\)</span> or <span class="process-math">\(b\)</span> with <span class="process-math">\(x_1\)</span> to obtain a new (shorter) interval that contains the true solution and start over. Come up with a reasonable way to stop this process once your approximation is “good enough” and display the solution.</p>
+<p id="p-738">Note: The Matlab command</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-matlab">f = @(x) 8 - 4.5*(x-sin(x));
+</code></pre></div>
+<p id="p-739">defines the function <span class="process-math">\(f\)</span> so that you can easily evaluate <span class="process-math">\(f(x)\)</span> for different values of <span class="process-math">\(x\text{.}\)</span></p>
+<p id="p-740"><em class="emphasis">Please enter your solution (ONE per group - please identify group number) into the textbox.</em></p></article><span class="incontext"><a href="functions-practice2.html#activity-43" class="internal">in-context</a></span>
+</body>
+</html>
