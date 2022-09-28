@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-04T09:41:23+02:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -20,7 +17,8 @@
 <meta property="book:author" content="Petra Bonfert-Taylor">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -40,6 +38,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -53,8 +59,6 @@
 <link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -63,8 +67,8 @@
 eBookConfig = {};
 eBookConfig.useRunestoneServices = false;
 eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
 eBookConfig.isLoggedIn = false;
 eBookConfig.email = '';
 eBookConfig.isInstructor = false;
@@ -77,7 +81,6 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.runestone_version = '5.0.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
@@ -85,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/runestone.d062db89aaf1dddd.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runtime.980858fa0f34fd96.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runestone.dca7462213311157.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/runestone.e4d5592da655219f.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -96,6 +99,8 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -128,6 +133,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -458,28 +464,28 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="branching-if-else"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title"><code class="code-inline tex2jax_ignore">if - else</code> Statements</span>
 </h2>
-<p id="p-607"> Next, we'll see how to perform another action in case the condition is not met.</p>
+<p id="p-623"> Next, we'll see how to perform another action in case the condition is not met.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1512409742275" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1512409742275" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-18"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-608" class="disc">
-<li id="li-257"><p id="p-derived-li-257">The <code class="code-inline tex2jax_ignore">if-else</code> statement is introduced</p></li>
-<li id="li-258"><p id="p-derived-li-258">If the condition for the <code class="code-inline tex2jax_ignore">if</code> statement is not met, then the code in the <code class="code-inline tex2jax_ignore">else</code> statement will be executed instead</p></li>
-<li id="li-259"><p id="p-derived-li-259">NEW SYNTAX: <code class="code-inline tex2jax_ignore">if (something is true)</code><code class="code-inline tex2jax_ignore">{do this};</code> <code class="code-inline tex2jax_ignore">else {do this};</code></p></li>
+<ul id="p-624" class="disc">
+<li id="li-252"><p id="p-derived-li-252">The <code class="code-inline tex2jax_ignore">if-else</code> statement is introduced</p></li>
+<li id="li-253"><p id="p-derived-li-253">If the condition for the <code class="code-inline tex2jax_ignore">if</code> statement is not met, then the code in the <code class="code-inline tex2jax_ignore">else</code> statement will be executed instead</p></li>
+<li id="li-254"><p id="p-derived-li-254">NEW SYNTAX: <code class="code-inline tex2jax_ignore">if (something is true)</code><code class="code-inline tex2jax_ignore">{do this};</code> <code class="code-inline tex2jax_ignore">else {do this};</code></p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-19"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-branching-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-609">What is the output of the following piece of code, assuming that n is a variable of type int that has the value 1:</p>
+<p id="p-625">What is the output of the following piece of code, assuming that n is a variable of type int that has the value 1:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (n) printf("You win!");
 else printf("Ooops!");
 </code></pre></div>
 <ol class="lower-alpha">
-<li id="li-260"><p id="p-derived-li-260">You win!</p></li>
-<li id="li-261"><p id="p-derived-li-261">Ooops!</p></li>
-<li id="li-262"><p id="p-derived-li-262">You win! Ooops!</p></li>
-<li id="li-263"><p id="p-derived-li-263">This does not generate any output.</p></li>
+<li id="li-255"><p id="p-derived-li-255">You win!</p></li>
+<li id="li-256"><p id="p-derived-li-256">Ooops!</p></li>
+<li id="li-257"><p id="p-derived-li-257">You win! Ooops!</p></li>
+<li id="li-258"><p id="p-derived-li-258">This does not generate any output.</p></li>
 </ol>
-<p id="p-610"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+<p id="p-626"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

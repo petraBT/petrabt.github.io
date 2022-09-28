@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-04T09:41:22+02:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -19,7 +16,8 @@
 <meta property="book:author" content="Petra Bonfert-Taylor">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -39,6 +37,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -52,8 +58,6 @@
 <link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -62,8 +66,8 @@
 eBookConfig = {};
 eBookConfig.useRunestoneServices = false;
 eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
 eBookConfig.isLoggedIn = false;
 eBookConfig.email = '';
 eBookConfig.isInstructor = false;
@@ -76,7 +80,6 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.runestone_version = '5.0.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
@@ -84,8 +87,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/runestone.d062db89aaf1dddd.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runtime.980858fa0f34fd96.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runestone.dca7462213311157.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/runestone.e4d5592da655219f.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -95,6 +98,8 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -127,6 +132,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -457,66 +463,66 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="floats-intro"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Digital Representation of Floats</span>
 </h2>
-<p id="p-519">Recall the funny division behavior we notice in the C programming language when using integers. Feel free to play around in this code window to refresh your memory and experiment in order to analyze this behavior.</p>
+<p id="p-535">Recall the funny division behavior we notice in the C programming language when using integers. Feel free to play around in this code window to refresh your memory and experiment in order to analyze this behavior.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Ndivision1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><section class="reading-questions" id="reading-questions-13"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-floatchar-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-520">Here is a quick review question: Using integer arithmetic, what is the result of 15/4?</p>
+<p id="p-536">Here is a quick review question: Using integer arithmetic, what is the result of 15/4?</p>
 <ol class="lower-alpha">
-<li id="li-193"><p id="p-derived-li-193">3.75</p></li>
-<li id="li-194"><p id="p-derived-li-194">3</p></li>
-<li id="li-195"><p id="p-derived-li-195">0.75</p></li>
-<li id="li-196"><p id="p-derived-li-196">4</p></li>
+<li id="li-188"><p id="p-derived-li-188">3.75</p></li>
+<li id="li-189"><p id="p-derived-li-189">3</p></li>
+<li id="li-190"><p id="p-derived-li-190">0.75</p></li>
+<li id="li-191"><p id="p-derived-li-191">4</p></li>
 </ol>
-<p id="p-521"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-floatchar-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-522">Another quick review question: In the C programming language, what is the result of 19/2.0?</p>
+<p id="p-537"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-floatchar-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-538">Another quick review question: In the C programming language, what is the result of 19/2.0?</p>
 <ol class="lower-alpha">
-<li id="li-197"><p id="p-derived-li-197">9</p></li>
-<li id="li-198"><p id="p-derived-li-198">10</p></li>
-<li id="li-199"><p id="p-derived-li-199">9R1</p></li>
-<li id="li-200"><p id="p-derived-li-200">9.5</p></li>
+<li id="li-192"><p id="p-derived-li-192">9</p></li>
+<li id="li-193"><p id="p-derived-li-193">10</p></li>
+<li id="li-194"><p id="p-derived-li-194">9R1</p></li>
+<li id="li-195"><p id="p-derived-li-195">9.5</p></li>
 </ol>
-<p id="p-523"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-floatchar-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-524">And another review question: Suppose that a and b are variables of type <code class="code-inline tex2jax_ignore">int</code>, a has the value 8, b has the value 6. In the C programming language, what is the value of <code class="code-inline tex2jax_ignore">(a+b)/3</code>?</p></article></section><p id="p-525">So far we have learned how integers (positive and negative) are stored in the computer's memory. How about decimal numbers, also known as floats?</p>
-<p id="p-526">In this next video you'll find out how floats are stored in memory!</p>
+<p id="p-539"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-floatchar-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-540">And another review question: Suppose that a and b are variables of type <code class="code-inline tex2jax_ignore">int</code>, a has the value 8, b has the value 6. In the C programming language, what is the value of <code class="code-inline tex2jax_ignore">(a+b)/3</code>?</p></article></section><p id="p-541">So far we have learned how integers (positive and negative) are stored in the computer's memory. How about decimal numbers, also known as floats?</p>
+<p id="p-542">In this next video you'll find out how floats are stored in memory!</p>
 <aside class="aside aside-like" id="aside-14"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-527" class="disc">
-<li id="li-201"><p id="p-derived-li-201">Storing floats in memory</p></li>
-<li id="li-202"><p id="p-derived-li-202">Floats take up 4 bytes of memory</p></li>
-<li id="li-203"><p id="p-derived-li-203">Double (more precise) take up 8 bytes</p></li>
+<ul id="p-543" class="disc">
+<li id="li-196"><p id="p-derived-li-196">Storing floats in memory</p></li>
+<li id="li-197"><p id="p-derived-li-197">Floats take up 4 bytes of memory</p></li>
+<li id="li-198"><p id="p-derived-li-198">Double (more precise) take up 8 bytes</p></li>
 </ul></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="Gw2Nh9umWnQ" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Gw2Nh9umWnQ?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<p id="p-528">How are real numbers (floats) represented/stored in the computer?</p>
-<p id="p-529">Example: -5,032.4235</p>
-<p id="p-530">Write in scientific notation (decimal):</p>
+<p id="p-544">How are real numbers (floats) represented/stored in the computer?</p>
+<p id="p-545">Example: -5,032.4235</p>
+<p id="p-546">Write in scientific notation (decimal):</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 -5.0324235\times 10^3
 \end{equation*}
 </div>
-<p id="p-531">where <code class="code-inline tex2jax_ignore">-</code> is the sign, <code class="code-inline tex2jax_ignore">5.0324235</code> is the "mantissa", and <code class="code-inline tex2jax_ignore">10^3</code> is the exponent.</p>
-<p id="p-532">In binary, this representation takes on the following form:</p>
+<p id="p-547">where <code class="code-inline tex2jax_ignore">-</code> is the sign, <code class="code-inline tex2jax_ignore">5.0324235</code> is the "mantissa", and <code class="code-inline tex2jax_ignore">10^3</code> is the exponent.</p>
+<p id="p-548">In binary, this representation takes on the following form:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 -1.mantissa\times 2^{exp}
 \end{equation*}
 </div>
-<p id="p-533">where <code class="code-inline tex2jax_ignore">number</code> = <code class="code-inline tex2jax_ignore">sign</code>*<code class="code-inline tex2jax_ignore">1.mantissa</code>*<code class="code-inline tex2jax_ignore">2^exponent</code></p>
+<p id="p-549">where <code class="code-inline tex2jax_ignore">number</code> = <code class="code-inline tex2jax_ignore">sign</code>*<code class="code-inline tex2jax_ignore">1.mantissa</code>*<code class="code-inline tex2jax_ignore">2^exponent</code></p>
 <div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/FloatingPoint.png" class="contained"></div>
-<p id="p-534">Special cases:</p>
+<p id="p-550">Special cases:</p>
 <ul class="disc">
-<li id="li-204"><p id="p-derived-li-204">Smallest possible exponent --&gt; number = 0</p></li>
-<li id="li-205"><p id="p-derived-li-205">Largest possible exponent  --&gt; number = NaN (infinity)</p></li>
+<li id="li-199"><p id="p-derived-li-199">Smallest possible exponent --&gt; number = 0</p></li>
+<li id="li-200"><p id="p-derived-li-200">Largest possible exponent  --&gt; number = NaN (infinity)</p></li>
 </ul>
-<p id="p-535"><code class="code-inline tex2jax_ignore">Float</code>: range of numbers varies, but ANSI minimum is <span class="process-math">\(10^{-37}\)</span> to <span class="process-math">\(10^{37}\)</span></p>
-<p id="p-536"><code class="code-inline tex2jax_ignore">Double</code>: often 8 bytes</p>
-<p id="p-537"><em class="emphasis">Note: can declare</em> <code class="code-inline tex2jax_ignore">long double</code> --- <em class="emphasis">not necessarily different from</em> <code class="code-inline tex2jax_ignore">double</code></p>
+<p id="p-551"><code class="code-inline tex2jax_ignore">Float</code>: range of numbers varies, but ANSI minimum is <span class="process-math">\(10^{-37}\)</span> to <span class="process-math">\(10^{37}\)</span></p>
+<p id="p-552"><code class="code-inline tex2jax_ignore">Double</code>: often 8 bytes</p>
+<p id="p-553"><em class="emphasis">Note: can declare</em> <code class="code-inline tex2jax_ignore">long double</code> --- <em class="emphasis">not necessarily different from</em> <code class="code-inline tex2jax_ignore">double</code></p>
 <section class="reading-questions" id="reading-questions-14"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-floatchar-5"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-538">The binary representation of the decimal number 0.75 is 0.11 (which basically stands for <span class="process-math">\(2^{-1} + 2^{-2} = \frac{1}{2} + \frac{1}{4} = 0.75\)</span>). In scientific notation, this binary number would be written as:</p>
+<p id="p-554">The binary representation of the decimal number 0.75 is 0.11 (which basically stands for <span class="process-math">\(2^{-1} + 2^{-2} = \frac{1}{2} + \frac{1}{4} = 0.75\)</span>). In scientific notation, this binary number would be written as:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 1.1 * 2^{-1}
@@ -524,14 +530,14 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <p class="continuation">Suppose now that 0.75 is stored (in the binary representation) as a float. In this representation, choose the correct option for the following components of the float:</p>
 <ul class="disc">
-<li id="li-206"><p id="p-derived-li-206">sign: positive / negative / zero</p></li>
-<li id="li-207"><p id="p-derived-li-207">mantissa: 11 / 1 / -1 / -11</p></li>
-<li id="li-208"><p id="p-derived-li-208">exponent: 11 / 1 / -1 / -11</p></li>
+<li id="li-201"><p id="p-derived-li-201">sign: positive / negative / zero</p></li>
+<li id="li-202"><p id="p-derived-li-202">mantissa: 11 / 1 / -1 / -11</p></li>
+<li id="li-203"><p id="p-derived-li-203">exponent: 11 / 1 / -1 / -11</p></li>
 </ul>
-<p id="p-539"><em class="alert">Enter your answers on separate lines, in the following format:</em></p>
-<p id="p-540"><em class="emphasis">sign: answer</em></p>
-<p id="p-541"><em class="emphasis">mantissa: answer</em></p>
-<p id="p-542"><em class="emphasis">exponent: answer</em></p></article></section></section></div></main>
+<p id="p-555"><em class="alert">Enter your answers on separate lines, in the following format:</em></p>
+<p id="p-556"><em class="emphasis">sign: answer</em></p>
+<p id="p-557"><em class="emphasis">mantissa: answer</em></p>
+<p id="p-558"><em class="emphasis">exponent: answer</em></p></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

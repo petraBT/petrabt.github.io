@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-04T09:41:22+02:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -19,7 +16,8 @@
 <meta property="book:author" content="Petra Bonfert-Taylor">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -39,6 +37,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -52,8 +58,6 @@
 <link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -62,8 +66,8 @@
 eBookConfig = {};
 eBookConfig.useRunestoneServices = false;
 eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
 eBookConfig.isLoggedIn = false;
 eBookConfig.email = '';
 eBookConfig.isInstructor = false;
@@ -76,7 +80,6 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.runestone_version = '5.0.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
@@ -84,8 +87,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/runestone.d062db89aaf1dddd.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runtime.980858fa0f34fd96.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runestone.dca7462213311157.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/runestone.e4d5592da655219f.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -95,6 +98,8 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -127,6 +132,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -457,22 +463,22 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="integers-positive"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Storing Positive Integers</span>
 </h2>
-<p id="p-392">Computers speak in binary, which is how integers are stored in memory.</p>
-<p id="p-393">Let's start by reviewing binary numbers:</p>
+<p id="p-408">Computers speak in binary, which is how integers are stored in memory.</p>
+<p id="p-409">Let's start by reviewing binary numbers:</p>
 <aside class="aside aside-like" id="aside-8"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-394" class="disc">
-<li id="li-132"><p id="p-derived-li-132">Computers only speak in binary</p></li>
-<li id="li-133"><p id="p-derived-li-133">Binary can only include 0s and 1s</p></li>
-<li id="li-134"><p id="p-derived-li-134">8 bits = 1 byte</p></li>
-<li id="li-135"><p id="p-derived-li-135">Binary is a base-2 system</p></li>
+<ul id="p-410" class="disc">
+<li id="li-127"><p id="p-derived-li-127">Computers only speak in binary</p></li>
+<li id="li-128"><p id="p-derived-li-128">Binary can only include 0s and 1s</p></li>
+<li id="li-129"><p id="p-derived-li-129">8 bits = 1 byte</p></li>
+<li id="li-130"><p id="p-derived-li-130">Binary is a base-2 system</p></li>
 </ul></aside><figure class="figure figure-like" id="figure-3"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="rWcrLz4sfPs" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/rWcrLz4sfPs?&amp;modestbranding=1&amp;rel=0"></iframe></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="example example-like" id="example-5"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-5"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-395">What is the decimal value of <code class="code-inline tex2jax_ignore">01000001</code>?</p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-5"><article class="example example-like"><p id="p-411">What is the decimal value of <code class="code-inline tex2jax_ignore">01000001</code>?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-396">65</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-412">65</p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-397">Remember from the video above that binary is base-2, with the least significant bit as the right-most digit, which has a place value of <span class="process-math">\(2^0\text{.}\)</span> Moving left, the the place values are <span class="process-math">\(2^1\text{,}\)</span> <span class="process-math">\(2^2\text{,}\)</span> <span class="process-math">\(2^3\text{,}\)</span> etc. Only those digits that are “1” contribute their place value to the number, so for this binary number, we interpret it as</p>
+<p id="p-413">Remember from the video above that binary is base-2, with the least significant bit as the right-most digit, which has a place value of <span class="process-math">\(2^0\text{.}\)</span> Moving left, the the place values are <span class="process-math">\(2^1\text{,}\)</span> <span class="process-math">\(2^2\text{,}\)</span> <span class="process-math">\(2^3\text{,}\)</span> etc. Only those digits that are “1” contribute their place value to the number, so for this binary number, we interpret it as</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (0 × 2^7) + (1 × 2^6) + (0 × 2^5) + (0 × 2^4) + (0 × 2^3) + (0 × 2^2) + (0 × 2^1) + (1 × 2^0) = 64 + 1 = 65
@@ -480,72 +486,72 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div></div>
 </div></article></div>
-<p id="p-398">Computers "speak" in binary (base-2) only, which includes only 1s and 0s.</p>
+<p id="p-414">Computers "speak" in binary (base-2) only, which includes only 1s and 0s.</p>
 <ul class="disc">
-<li id="li-136"><p id="p-derived-li-136"><em class="alert">Bit</em>: one <em class="alert">b</em>inary dig<em class="alert">it</em> (0 or 1)</p></li>
-<li id="li-137"><p id="p-derived-li-137"><em class="alert">Byte</em>: number of bits used to represent a character, almost always 8 bits</p></li>
-<li id="li-138"><p id="p-derived-li-138"><em class="alert">Word</em>: natural unit of memory for a given computer design; unit of data that can pass across the bus to or from main memory at one time</p></li>
+<li id="li-131"><p id="p-derived-li-131"><em class="alert">Bit</em>: one <em class="alert">b</em>inary dig<em class="alert">it</em> (0 or 1)</p></li>
+<li id="li-132"><p id="p-derived-li-132"><em class="alert">Byte</em>: number of bits used to represent a character, almost always 8 bits</p></li>
+<li id="li-133"><p id="p-derived-li-133"><em class="alert">Word</em>: natural unit of memory for a given computer design; unit of data that can pass across the bus to or from main memory at one time</p></li>
 </ul>
-<p id="p-399">For example, in the 8-digit binary number <code class="code-inline tex2jax_ignore">01100110</code>, the left-most bit is the <em class="alert">M</em>ost <em class="alert">S</em>ignificant <em class="alert">B</em>it, and the right-most bit is the <em class="alert">L</em>east <em class="alert">S</em>ignificant <em class="alert">B</em>it.</p>
-<p id="p-400">In decimal (base-10), the number <code class="code-inline tex2jax_ignore">135</code> can be represented as:</p>
+<p id="p-415">For example, in the 8-digit binary number <code class="code-inline tex2jax_ignore">01100110</code>, the left-most bit is the <em class="alert">M</em>ost <em class="alert">S</em>ignificant <em class="alert">B</em>it, and the right-most bit is the <em class="alert">L</em>east <em class="alert">S</em>ignificant <em class="alert">B</em>it.</p>
+<p id="p-416">In decimal (base-10), the number <code class="code-inline tex2jax_ignore">135</code> can be represented as:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 135 = 1\cdot 10^2 \; + \; 3\cdot 10^1 \; + \; 5\cdot 10^0
 \end{equation*}
 </div>
-<p id="p-401">where <span class="process-math">\(10^2\)</span> is the "hundreds" place, <span class="process-math">\(10^1\)</span> is the "tens" place, and <span class="process-math">\(10^0\)</span> is the "ones" place.</p>
-<p id="p-402">Instead of base-10, what if we have base-<em class="alert">b</em>?</p>
+<p id="p-417">where <span class="process-math">\(10^2\)</span> is the "hundreds" place, <span class="process-math">\(10^1\)</span> is the "tens" place, and <span class="process-math">\(10^0\)</span> is the "ones" place.</p>
+<p id="p-418">Instead of base-10, what if we have base-<em class="alert">b</em>?</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (number)_b = a_nb^n + a_{n-1}b^{n-1} + ... + a_0b^0
 \end{equation*}
 </div>
 <ul class="disc">
-<li id="li-139"><p id="p-derived-li-139"><span class="process-math">\(b\text{:}\)</span> base (binary: 2, decimal: 10, ...)</p></li>
-<li id="li-140"><p id="p-derived-li-140"><span class="process-math">\(a_k\text{:}\)</span> digits (binary: 0-1, decimal: 0-9, in general 0-(b-1))</p></li>
-<li id="li-141"><p id="p-derived-li-141"><span class="process-math">\(n\text{:}\)</span> position of "most significant digit" (MSD)</p></li>
+<li id="li-134"><p id="p-derived-li-134"><span class="process-math">\(b\text{:}\)</span> base (binary: 2, decimal: 10, ...)</p></li>
+<li id="li-135"><p id="p-derived-li-135"><span class="process-math">\(a_k\text{:}\)</span> digits (binary: 0-1, decimal: 0-9, in general 0-(b-1))</p></li>
+<li id="li-136"><p id="p-derived-li-136"><span class="process-math">\(n\text{:}\)</span> position of "most significant digit" (MSD)</p></li>
 </ul>
-<p id="p-403">Special case: base <span class="process-math">\(b = 2\)</span> (binary) -- note: in binary there are only two different digits: 0 and 1</p>
+<p id="p-419">Special case: base <span class="process-math">\(b = 2\)</span> (binary) -- note: in binary there are only two different digits: 0 and 1</p>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/Binary.png" class="contained"></div>
-<p id="p-404">Note: Digits have different weights (place values)</p>
+<p id="p-420">Note: Digits have different weights (place values)</p>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/PlaceValues.png" class="contained"></div>
 <section class="reading-questions" id="reading-questions-8"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Quiz</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-integers-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-405">What are the decimal values of <em class="alert">each</em> of the following binary numbers?</p>
+<p id="p-421">What are the decimal values of <em class="alert">each</em> of the following binary numbers?</p>
 <ol class="lower-alpha">
-<li id="li-142"><p id="p-derived-li-142"><code class="code-inline tex2jax_ignore">00110001</code></p></li>
-<li id="li-143"><p id="p-derived-li-143"><code class="code-inline tex2jax_ignore">11111110</code></p></li>
-<li id="li-144"><p id="p-derived-li-144"><code class="code-inline tex2jax_ignore">10011001</code></p></li>
+<li id="li-137"><p id="p-derived-li-137"><code class="code-inline tex2jax_ignore">00110001</code></p></li>
+<li id="li-138"><p id="p-derived-li-138"><code class="code-inline tex2jax_ignore">11111110</code></p></li>
+<li id="li-139"><p id="p-derived-li-139"><code class="code-inline tex2jax_ignore">10011001</code></p></li>
 </ol>
-<p id="p-406"><em class="emphasis">Enter your <em class="alert">three answers</em>, separated by commas, i.e. "1, 2, 3"</em></p></article><article class="exercise exercise-like" id="quiz-integers-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-407">How many bits are there in one byte?</p>
+<p id="p-422"><em class="emphasis">Enter your <em class="alert">three answers</em>, separated by commas, i.e. "1, 2, 3"</em></p></article><article class="exercise exercise-like" id="quiz-integers-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-423">How many bits are there in one byte?</p>
 <ol class="lower-alpha">
-<li id="li-145"><p id="p-derived-li-145">2</p></li>
-<li id="li-146"><p id="p-derived-li-146">4</p></li>
-<li id="li-147"><p id="p-derived-li-147">8</p></li>
-<li id="li-148"><p id="p-derived-li-148">16</p></li>
+<li id="li-140"><p id="p-derived-li-140">2</p></li>
+<li id="li-141"><p id="p-derived-li-141">4</p></li>
+<li id="li-142"><p id="p-derived-li-142">8</p></li>
+<li id="li-143"><p id="p-derived-li-143">16</p></li>
 </ol>
-<p id="p-408"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section><p id="p-409">Next, we'll learn how to convert between different binary and decimal representations:</p>
+<p id="p-424"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section><p id="p-425">Next, we'll learn how to convert between different binary and decimal representations:</p>
 <aside class="aside aside-like" id="aside-9"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-410" class="disc">
-<li id="li-149"><p id="p-derived-li-149">How to convert from decimal to binary</p></li>
-<li id="li-150"><p id="p-derived-li-150">By repeatedly dividing by 2, the remainder (0 or 1) represents digits of the binary number</p></li>
-<li id="li-151"><p id="p-derived-li-151">The remainders are written from right-to-left</p></li>
-<li id="li-152"><p id="p-derived-li-152">The same method works for any other base as well</p></li>
+<ul id="p-426" class="disc">
+<li id="li-144"><p id="p-derived-li-144">How to convert from decimal to binary</p></li>
+<li id="li-145"><p id="p-derived-li-145">By repeatedly dividing by 2, the remainder (0 or 1) represents digits of the binary number</p></li>
+<li id="li-146"><p id="p-derived-li-146">The remainders are written from right-to-left</p></li>
+<li id="li-147"><p id="p-derived-li-147">The same method works for any other base as well</p></li>
 </ul></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="PTUCVHbSYQY" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/PTUCVHbSYQY?&amp;modestbranding=1&amp;rel=0"></iframe></div>
 <article class="example example-like" id="example-6"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-6"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-411">What is the remainder when dividing 50 by 3?</p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-6"><article class="example example-like"><p id="p-427">What is the remainder when dividing 50 by 3?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-412">2</p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-413">3x16 = 48, meaning that 3 can go into 50 sixteen times. The remainder, or leftover amount, is then 50-48=2.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-428">2</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-429">3x16 = 48, meaning that 3 can go into 50 sixteen times. The remainder, or leftover amount, is then 50-48=2.</p></div></div>
 </div></article></div>
-<p id="p-414">How do we convert from one base to another?</p>
-<p id="p-415">In particular, how do we find the binary representation (base-2) of a decimal number (base-10)?</p>
-<p id="p-416">Example: What is <em class="alert">135 decimal</em> in binary or <em class="alert">base-2</em>?</p>
-<p id="p-417"><em class="emphasis">Hint: The easiest way to do this is to divide the number by 2 repeatedly and keep track of the remainder.</em></p>
+<p id="p-430">How do we convert from one base to another?</p>
+<p id="p-431">In particular, how do we find the binary representation (base-2) of a decimal number (base-10)?</p>
+<p id="p-432">Example: What is <em class="alert">135 decimal</em> in binary or <em class="alert">base-2</em>?</p>
+<p id="p-433"><em class="emphasis">Hint: The easiest way to do this is to divide the number by 2 repeatedly and keep track of the remainder.</em></p>
 <pre class="code-block tex2jax_ignore">135    /2       = 67 R1     * 2^0
  67    /2       = 33 R1     * 2^1
  33    /2       = 16 R1     * 2^2
@@ -557,33 +563,33 @@ eBookConfig.enable_chatcodes =  false;
 
  135              -&gt; 1000 0111
 </pre>
-<p id="p-418">Does it work?          128 + 4 + 2 + 1 =   135</p>
-<p id="p-419">and... does this work for any base?</p>
-<p id="p-420">Example: what does the algorithm say <em class="alert">135</em> is in... base-10?</p>
+<p id="p-434">Does it work?          128 + 4 + 2 + 1 =   135</p>
+<p id="p-435">and... does this work for any base?</p>
+<p id="p-436">Example: what does the algorithm say <em class="alert">135</em> is in... base-10?</p>
 <pre class="code-block tex2jax_ignore">135    /10      = 13 R5     * 10^0    LSD
  13    /10      =  1 R3     * 10^1    
   1    /10      =  0 R1     * 10^2    MSD
 
  135              -&gt; 135
 </pre>
-<p id="p-421">Not very surprising...</p>
-<p id="p-422">There are other ways to find the binary representation of a number.</p>
-<p id="p-423">Recall the binary place values:</p>
+<p id="p-437">Not very surprising...</p>
+<p id="p-438">There are other ways to find the binary representation of a number.</p>
+<p id="p-439">Recall the binary place values:</p>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/BinaryPlaceValues.png" class="contained"></div>
-<p id="p-424">So...</p>
+<p id="p-440">So...</p>
 <pre class="code-block tex2jax_ignore">135 = 1 * 128 + 7
   7 = 0 * 64 + 0 * 32 + 0 * 16 + 0 * 8 + 1 * 4 + 3
   3 = 1 * 2 + 1
   1 = 1 * 1
 135 = 1 * 128 + 0 * 64 + 0 * 32 + 0 * 16 + 0 * 8 + 1 * 4 + 1 * 2 + 1 * 1
 </pre>
-<p id="p-425">Thus <em class="alert">135</em> is 10000111 in binary.</p>
+<p id="p-441">Thus <em class="alert">135</em> is 10000111 in binary.</p>
 <section class="reading-questions" id="reading-questions-9"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Quiz</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-integers-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-426">What is the remainder when dividing 36 by 15?</p></article><article class="exercise exercise-like" id="quiz-integers-4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-427">Convert the decimal number 222 to 8-bit binary.</p></article></section></section></div></main>
+<p id="p-442">What is the remainder when dividing 36 by 15?</p></article><article class="exercise exercise-like" id="quiz-integers-4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-443">Convert the decimal number 222 to 8-bit binary.</p></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

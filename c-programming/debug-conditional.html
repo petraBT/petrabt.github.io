@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-04T09:41:27+02:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -19,7 +16,8 @@
 <meta property="book:author" content="Petra Bonfert-Taylor">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -39,6 +37,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -52,8 +58,6 @@
 <link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -62,8 +66,8 @@
 eBookConfig = {};
 eBookConfig.useRunestoneServices = false;
 eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
 eBookConfig.isLoggedIn = false;
 eBookConfig.email = '';
 eBookConfig.isInstructor = false;
@@ -76,7 +80,6 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.runestone_version = '5.0.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
@@ -84,8 +87,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/runestone.d062db89aaf1dddd.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runtime.980858fa0f34fd96.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runestone.dca7462213311157.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/runestone.e4d5592da655219f.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -95,6 +98,8 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -127,6 +132,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -457,30 +463,30 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="debug-conditional"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">16.3</span> <span class="title">Conditional Compilation</span>
 </h2>
-<p id="p-998"><code class="code-inline tex2jax_ignore">printf()</code> statements are a <em class="alert">quick and easy</em> way to trace the path of execution of a program.</p>
-<p id="p-999">But...</p>
-<p id="p-1000">It <em class="alert">can be tedious</em> to insert and delete <code class="code-inline tex2jax_ignore">printf</code> statements when code is being debugged. (After all, we don't want debug statements flashing by all the time.)</p>
-<p id="p-1001">Of course you can <em class="alert">comment out</em> <code class="code-inline tex2jax_ignore">(/*   */)</code> the <code class="code-inline tex2jax_ignore">printf()</code> statements after code is debugged. But it can still be a bit tedious (yet, it's my preferred method...).</p>
-<p id="p-1002">There is another way however:</p>
-<p id="p-1003">You can <em class="alert">conditionally include</em> debugging lines (such as <code class="code-inline tex2jax_ignore">printf()</code> statements) by instructing the preprocessor to either include them or to not do so. Any line that starts with a hash mark (<code class="code-inline tex2jax_ignore">#</code>) is meant for and interpreted by the preprocessor. In fact, we have already seen the preprocessor at work with our <code class="code-inline tex2jax_ignore">#include</code> statements! Therefore, when using preprocessor directives to conditionally include debug statements then it is the preprocessor that does the work!</p>
+<p id="p-1014"><code class="code-inline tex2jax_ignore">printf()</code> statements are a <em class="alert">quick and easy</em> way to trace the path of execution of a program.</p>
+<p id="p-1015">But...</p>
+<p id="p-1016">It <em class="alert">can be tedious</em> to insert and delete <code class="code-inline tex2jax_ignore">printf</code> statements when code is being debugged. (After all, we don't want debug statements flashing by all the time.)</p>
+<p id="p-1017">Of course you can <em class="alert">comment out</em> <code class="code-inline tex2jax_ignore">(/*   */)</code> the <code class="code-inline tex2jax_ignore">printf()</code> statements after code is debugged. But it can still be a bit tedious (yet, it's my preferred method...).</p>
+<p id="p-1018">There is another way however:</p>
+<p id="p-1019">You can <em class="alert">conditionally include</em> debugging lines (such as <code class="code-inline tex2jax_ignore">printf()</code> statements) by instructing the preprocessor to either include them or to not do so. Any line that starts with a hash mark (<code class="code-inline tex2jax_ignore">#</code>) is meant for and interpreted by the preprocessor. In fact, we have already seen the preprocessor at work with our <code class="code-inline tex2jax_ignore">#include</code> statements! Therefore, when using preprocessor directives to conditionally include debug statements then it is the preprocessor that does the work!</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513627597624" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513627597624" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-36"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1004" class="disc">
-<li id="li-548"><p id="p-derived-li-548">Using preprocessor directives, determine whether your debugging <code class="code-inline tex2jax_ignore">printf()</code> statements will be included in your compiled code or not</p></li>
-<li id="li-549"><p id="p-derived-li-549">For example, <code class="code-inline tex2jax_ignore">#ifdef DEBUG</code> followed by a <code class="code-inline tex2jax_ignore">printf()</code> will include that <code class="code-inline tex2jax_ignore">printf()</code> statement only if you <code class="code-inline tex2jax_ignore">#define DEBUG</code> at the top of the code</p></li>
-</ul></aside><p id="p-1005"> </p>
+<ul id="p-1020" class="disc">
+<li id="li-543"><p id="p-derived-li-543">Using preprocessor directives, determine whether your debugging <code class="code-inline tex2jax_ignore">printf()</code> statements will be included in your compiled code or not</p></li>
+<li id="li-544"><p id="p-derived-li-544">For example, <code class="code-inline tex2jax_ignore">#ifdef DEBUG</code> followed by a <code class="code-inline tex2jax_ignore">printf()</code> will include that <code class="code-inline tex2jax_ignore">printf()</code> statement only if you <code class="code-inline tex2jax_ignore">#define DEBUG</code> at the top of the code</p></li>
+</ul></aside><p id="p-1021"> </p>
 <ul class="disc">
-<li id="li-550"><p id="p-derived-li-550"><code class="code-inline tex2jax_ignore">#if</code> (condition)</p></li>
-<li id="li-551"><p id="p-derived-li-551"><code class="code-inline tex2jax_ignore">#ifdef</code> or <code class="code-inline tex2jax_ignore">#if defined</code></p></li>
-<li id="li-552"><p id="p-derived-li-552"><code class="code-inline tex2jax_ignore">#elif</code> (condition)</p></li>
-<li id="li-553"><p id="p-derived-li-553"><code class="code-inline tex2jax_ignore">#else</code> (branch statement for preprocessor!)</p></li>
-<li id="li-554"><p id="p-derived-li-554"><code class="code-inline tex2jax_ignore">#endif</code></p></li>
+<li id="li-545"><p id="p-derived-li-545"><code class="code-inline tex2jax_ignore">#if</code> (condition)</p></li>
+<li id="li-546"><p id="p-derived-li-546"><code class="code-inline tex2jax_ignore">#ifdef</code> or <code class="code-inline tex2jax_ignore">#if defined</code></p></li>
+<li id="li-547"><p id="p-derived-li-547"><code class="code-inline tex2jax_ignore">#elif</code> (condition)</p></li>
+<li id="li-548"><p id="p-derived-li-548"><code class="code-inline tex2jax_ignore">#else</code> (branch statement for preprocessor!)</p></li>
+<li id="li-549"><p id="p-derived-li-549"><code class="code-inline tex2jax_ignore">#endif</code></p></li>
 </ul>
 <section class="reading-questions" id="reading-questions-38"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-debug-6"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1006">What is the output of the following code, once it has been compiled and run:</p>
+<p id="p-1022">What is the output of the following code, once it has been compiled and run:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define DEBUG
 . . . 
 #ifdef DEBUG printf("No idea what's wrong.");
@@ -488,22 +494,22 @@ eBookConfig.enable_chatcodes =  false;
 #endif
 </code></pre></div>
 <ol class="lower-alpha">
-<li id="li-555"><p id="p-derived-li-555">All good!</p></li>
-<li id="li-556"><p id="p-derived-li-556">No idea what's wrong. All good!</p></li>
-<li id="li-557"><p id="p-derived-li-557">No idea what's wrong.</p></li>
+<li id="li-550"><p id="p-derived-li-550">All good!</p></li>
+<li id="li-551"><p id="p-derived-li-551">No idea what's wrong. All good!</p></li>
+<li id="li-552"><p id="p-derived-li-552">No idea what's wrong.</p></li>
 </ol>
-<p id="p-1007"><em class="emphasis">Enter your choice (a/b/c):</em></p></article></section><p id="p-1008">You could even be fancier and allow for different levels of debugging:</p>
+<p id="p-1023"><em class="emphasis">Enter your choice (a/b/c):</em></p></article></section><p id="p-1024">You could even be fancier and allow for different levels of debugging:</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513628036113" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513628036113" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-37"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1009" class="disc">
-<li id="li-558"><p id="p-derived-li-558">Using preprocessor directives such as <code class="code-inline tex2jax_ignore">#define</code> to conditionally include <code class="code-inline tex2jax_ignore">printf()</code> debug statements in your compiled code</p></li>
-<li id="li-559"><p id="p-derived-li-559">Defining different levels of debugging to conditionally choose what aspects of the code to debug</p></li>
-<li id="li-560"><p id="p-derived-li-560">For example, <code class="code-inline tex2jax_ignore">#if (DEBUG &gt; 1)</code> will include the following statement only if you <code class="code-inline tex2jax_ignore">#define DEBUG</code> as a value greater than 1</p></li>
+<ul id="p-1025" class="disc">
+<li id="li-553"><p id="p-derived-li-553">Using preprocessor directives such as <code class="code-inline tex2jax_ignore">#define</code> to conditionally include <code class="code-inline tex2jax_ignore">printf()</code> debug statements in your compiled code</p></li>
+<li id="li-554"><p id="p-derived-li-554">Defining different levels of debugging to conditionally choose what aspects of the code to debug</p></li>
+<li id="li-555"><p id="p-derived-li-555">For example, <code class="code-inline tex2jax_ignore">#if (DEBUG &gt; 1)</code> will include the following statement only if you <code class="code-inline tex2jax_ignore">#define DEBUG</code> as a value greater than 1</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-39"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-debug-7"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1010">What is the output of the following code?</p>
+<p id="p-1026">What is the output of the following code?</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define DEBUG 1
 #include &lt;stdio.h&gt;
 int main(void)
@@ -522,21 +528,21 @@ int main(void)
 }
 </code></pre></div>
 <ol class="lower-alpha">
-<li id="li-561"><p id="p-derived-li-561">Huh...!</p></li>
-<li id="li-562"><p id="p-derived-li-562">Not too bad! huh...!</p></li>
-<li id="li-563"><p id="p-derived-li-563">Not too bad!</p></li>
-<li id="li-564"><p id="p-derived-li-564">It's sunny! Not too bad!</p></li>
-<li id="li-565"><p id="p-derived-li-565">It's a beautiful day!</p></li>
-<li id="li-566"><p id="p-derived-li-566">It's a beautiful day! It's sunny!</p></li>
-<li id="li-567"><p id="p-derived-li-567">It's sunny!</p></li>
+<li id="li-556"><p id="p-derived-li-556">Huh...!</p></li>
+<li id="li-557"><p id="p-derived-li-557">Not too bad! huh...!</p></li>
+<li id="li-558"><p id="p-derived-li-558">Not too bad!</p></li>
+<li id="li-559"><p id="p-derived-li-559">It's sunny! Not too bad!</p></li>
+<li id="li-560"><p id="p-derived-li-560">It's a beautiful day!</p></li>
+<li id="li-561"><p id="p-derived-li-561">It's a beautiful day! It's sunny!</p></li>
+<li id="li-562"><p id="p-derived-li-562">It's sunny!</p></li>
 </ol>
-<p id="p-1011"><em class="emphasis">Enter your choice (a/b/c/d/e/f/g):</em></p></article><article class="exercise exercise-like" id="quiz-debug-8"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1012">Please correct the following loop, which is supposed to add up the numbers from 1 to n:</p>
+<p id="p-1027"><em class="emphasis">Enter your choice (a/b/c/d/e/f/g):</em></p></article><article class="exercise exercise-like" id="quiz-debug-8"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1028">Please correct the following loop, which is supposed to add up the numbers from 1 to n:</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGdebug4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug4.c" frameborder="0" width="100%" height="400"></iframe><p id="p-1013"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></p></article><article class="exercise exercise-like" id="quiz-debug-9"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-1014">Please correct the following loop, which is supposed to add up the numbers from 1 to n:</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug4.c" frameborder="0" width="100%" height="400"></iframe><p id="p-1029"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></p></article><article class="exercise exercise-like" id="quiz-debug-9"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-1030">Please correct the following loop, which is supposed to add up the numbers from 1 to n:</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGdebug5.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug5.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug5.c" frameborder="0" width="100%" height="400"></iframe><p id="p-1015"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></p></article></section></section></div></main>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug5.c" frameborder="0" width="100%" height="400"></iframe><p id="p-1031"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></p></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

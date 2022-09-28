@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-04T09:41:21+02:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -19,7 +16,8 @@
 <meta property="book:author" content="Petra Bonfert-Taylor">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -39,6 +37,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -52,8 +58,6 @@
 <link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -62,8 +66,8 @@
 eBookConfig = {};
 eBookConfig.useRunestoneServices = false;
 eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
 eBookConfig.isLoggedIn = false;
 eBookConfig.email = '';
 eBookConfig.isInstructor = false;
@@ -76,7 +80,6 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.runestone_version = '5.0.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
@@ -84,8 +87,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/runestone.d062db89aaf1dddd.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runtime.980858fa0f34fd96.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runestone.dca7462213311157.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/runestone.e4d5592da655219f.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -95,6 +98,8 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -127,6 +132,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -457,42 +463,42 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="variables-errors"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.6</span> <span class="title">Common Variable Errors</span>
 </h2>
-<p id="p-330">We all make mistakes. In coding there are several types of errors we are all prone to. Some are akin to spelling or grammar errors (we call them syntax errors) and some are of logical nature, for example. It can be helpful to think about potential errors before getting started so that you can be on the lookout. Let's look at some common errors in working with variables.</p>
-<p id="p-331">The following three activities present erroneous code. Can you spot the error and fix it? Don't be afraid to play around and try out multiple solutions. You cannot break anything! Remember that you can always go back to the original problem by clicking on the “Start fresh” button.</p>
-<section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<p id="p-342">We all make mistakes. In coding there are several types of errors we are all prone to. Some are akin to spelling or grammar errors (we call them syntax errors) and some are of logical nature, for example. It can be helpful to think about potential errors before getting started so that you can be on the lookout. Let's look at some common errors in working with variables.</p>
+<p id="p-343">The following three activities present erroneous code. Can you spot the error and fix it? Don't be afraid to play around and try out multiple solutions. You cannot break anything! Remember that you can always go back to the original problem by clicking on the “Start fresh” button.</p>
+<section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.6.1</span> <span class="title">Fix Me!</span>
 </h3>
-<article class="activity project-like" id="activity-10"><h4 class="heading">
+<article class="activity project-like" id="activity-11"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h4>
-<p id="p-332">You'd like to print your age to the screen. What is wrong with the following code? Can you fix it?</p>
-<p id="p-333">If you'd like our autograder to check your program for correctness, please do not change the <code class="code-inline tex2jax_ignore">printf()</code> statement.</p>
+<p id="p-344">You'd like to print your age to the screen. What is wrong with the following code? Can you fix it?</p>
+<p id="p-345">If you'd like our autograder to check your program for correctness, please do not change the <code class="code-inline tex2jax_ignore">printf()</code> statement.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NvariablesErrors1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors1.c" frameborder="0" width="100%" height="300"></iframe><p id="p-334">What was wrong with the given code?</p>
-<p id="p-335"><em class="emphasis">Please paste your text submission into the box below, then select <code class="code-inline tex2jax_ignore">Run</code> to submit it:</em></p></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors1.c" frameborder="0" width="100%" height="300"></iframe><p id="p-346">What was wrong with the given code?</p>
+<p id="p-347"><em class="emphasis">Please paste your text submission into the box below, then select <code class="code-inline tex2jax_ignore">Run</code> to submit it:</em></p></article></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.6.2</span> <span class="title">Fix me too...!</span>
 </h3>
-<article class="activity project-like" id="activity-11"><h4 class="heading">
+<article class="activity project-like" id="activity-12"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
 </h4>
-<p id="p-336">Again, you'd like to print your age to the screen. And again, something is wrong with the following code. Can you fix it?</p>
-<p id="p-337">If you'd like our autograder to check your program for correctness, please do not change the <code class="code-inline tex2jax_ignore">printf()</code> statement.</p>
+<p id="p-348">Again, you'd like to print your age to the screen. And again, something is wrong with the following code. Can you fix it?</p>
+<p id="p-349">If you'd like our autograder to check your program for correctness, please do not change the <code class="code-inline tex2jax_ignore">printf()</code> statement.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NvariablesErrors2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors2.c" frameborder="0" width="100%" height="300"></iframe><p id="p-338">What was wrong with the given code?</p>
-<p id="p-339"><em class="emphasis">Please paste your text submission into the box below, then select <code class="code-inline tex2jax_ignore">Run</code> to submit it:</em></p></article></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors2.c" frameborder="0" width="100%" height="300"></iframe><p id="p-350">What was wrong with the given code?</p>
+<p id="p-351"><em class="emphasis">Please paste your text submission into the box below, then select <code class="code-inline tex2jax_ignore">Run</code> to submit it:</em></p></article></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.6.3</span> <span class="title">Fix me three...!</span>
 </h3>
-<article class="activity project-like" id="activity-12"><h4 class="heading">
+<article class="activity project-like" id="activity-13"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
 </h4>
-<p id="p-340">Another error! You'd like to print your age to the screen. And again, something is wrong with the following code. Can you fix it?</p>
-<p id="p-341">If you'd like our autograder to check your program for correctness, please do not change the printf statement.</p>
+<p id="p-352">Another error! You'd like to print your age to the screen. And again, something is wrong with the following code. Can you fix it?</p>
+<p id="p-353">If you'd like our autograder to check your program for correctness, please do not change the printf statement.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NvariablesErrors3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors3.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors3.c" frameborder="0" width="100%" height="300"></iframe><p id="p-342">What was wrong with the given code?</p>
-<p id="p-343"><em class="emphasis">Please paste your text submission into the box below, then select <code class="code-inline tex2jax_ignore">Run</code> to submit it:</em></p></article></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NvariablesErrors3.c" frameborder="0" width="100%" height="300"></iframe><p id="p-354">What was wrong with the given code?</p>
+<p id="p-355"><em class="emphasis">Please paste your text submission into the box below, then select <code class="code-inline tex2jax_ignore">Run</code> to submit it:</em></p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.6.4</span> <span class="title">Summary</span>
 </h3>
-<p id="p-344">Here is what we have learned:</p>
+<p id="p-356">Here is what we have learned:</p>
 <ul class="disc">
 <li id="li-112"><p id="p-derived-li-112">Variable names can only contain letters, numbers and the underscore character “_”.</p></li>
 <li id="li-113"><p id="p-derived-li-113">Variable names must start with a letter or an underscore “_”.</p></li>

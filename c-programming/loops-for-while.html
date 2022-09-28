@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-04T09:41:25+02:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -20,7 +17,8 @@
 <meta property="book:author" content="Petra Bonfert-Taylor">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -40,6 +38,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -53,8 +59,6 @@
 <link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -63,8 +67,8 @@
 eBookConfig = {};
 eBookConfig.useRunestoneServices = false;
 eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
 eBookConfig.isLoggedIn = false;
 eBookConfig.email = '';
 eBookConfig.isInstructor = false;
@@ -77,7 +81,6 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.runestone_version = '5.0.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
@@ -85,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.0.8/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.0.8/runestone.d062db89aaf1dddd.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runtime.980858fa0f34fd96.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.7/runestone.dca7462213311157.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.7/runestone.e4d5592da655219f.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -96,6 +99,8 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -128,6 +133,7 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -458,59 +464,59 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="loops-for-while"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">13.2</span> <span class="title"><code class="code-inline tex2jax_ignore">for</code> vs. <code class="code-inline tex2jax_ignore">while</code> Loops</span>
 </h2>
-<p id="p-785">Though <code class="code-inline tex2jax_ignore">for</code>- and <code class="code-inline tex2jax_ignore">while</code>-loops can accomplish the same tasks, both have certain benefits and drawbacks. Here, we compare the syntaxes of both loops and discuss situations and scenarios in which one loop is preferable over the other.</p>
-<p id="p-786"><code class="code-inline tex2jax_ignore">for</code>-loop syntax:</p>
+<p id="p-801">Though <code class="code-inline tex2jax_ignore">for</code>- and <code class="code-inline tex2jax_ignore">while</code>-loops can accomplish the same tasks, both have certain benefits and drawbacks. Here, we compare the syntaxes of both loops and discuss situations and scenarios in which one loop is preferable over the other.</p>
+<p id="p-802"><code class="code-inline tex2jax_ignore">for</code>-loop syntax:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">for (initialization; loop run condition; update) {
     statements...;
 }
 </code></pre></div>
-<p id="p-787">At the very start of the loop (before any kind of repetition is entered) the initialization statement is executed. This happens exactly once. At the start of every repetition the loop condition is checked. If it evaluates to <code class="code-inline tex2jax_ignore">true</code> then the actual loop statements are executed once. Afterwards, the update statement is executed and next, the loop run condition is checked again. If still true, the loop statements are executed again, etc.</p>
-<p id="p-788">Example:</p>
+<p id="p-803">At the very start of the loop (before any kind of repetition is entered) the initialization statement is executed. This happens exactly once. At the start of every repetition the loop condition is checked. If it evaluates to <code class="code-inline tex2jax_ignore">true</code> then the actual loop statements are executed once. Afterwards, the update statement is executed and next, the loop run condition is checked again. If still true, the loop statements are executed again, etc.</p>
+<p id="p-804">Example:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">for (i=10; i&gt;5; i--) {
     printf("i = %d\n", i); 
 }
 </code></pre></div>
-<p id="p-789">In this example, <code class="code-inline tex2jax_ignore">i</code> is initialized with the value 10 right before the start of the loop. Next, the logic statement <code class="code-inline tex2jax_ignore">i&gt;5</code> is evaluated, and since 10 is indeed greater than 5, the loop is entered. The <code class="code-inline tex2jax_ignore">printf()</code> statement prints<pre class="code-block tex2jax_ignore">i = 10
+<p id="p-805">In this example, <code class="code-inline tex2jax_ignore">i</code> is initialized with the value 10 right before the start of the loop. Next, the logic statement <code class="code-inline tex2jax_ignore">i&gt;5</code> is evaluated, and since 10 is indeed greater than 5, the loop is entered. The <code class="code-inline tex2jax_ignore">printf()</code> statement prints<pre class="code-block tex2jax_ignore">i = 10
 </pre>to the screen. Next, the update statement <code class="code-inline tex2jax_ignore">i--</code> is executed, decreasing the value of <code class="code-inline tex2jax_ignore">i</code> to 9. The loop condition is checked (9 is still greater than 5) and so<pre class="code-block tex2jax_ignore">i = 9
 </pre>is printed to the screen. <code class="code-inline tex2jax_ignore">i</code> is next decreased to 8, loop condition checked, etc. This continues on until<pre class="code-block tex2jax_ignore">i = 6
 </pre>is printed to the screen. When <code class="code-inline tex2jax_ignore">i</code> is next decreased to 5, the check of the loop condition evaluates to false since 5 is not greater than 5. The loop terminates with the loop counter having the value 5.</p>
-<p id="p-790"><code class="code-inline tex2jax_ignore">while</code>-loop syntax:</p>
+<p id="p-806"><code class="code-inline tex2jax_ignore">while</code>-loop syntax:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">while (condition) { 
     statements...; 
 }
 </code></pre></div>
-<p id="p-791">At the start of every run through the loop, the condition is checked and only if it evaluates to true are the statements in the loop body executed. It is the programmer's job to build in an update condition into these statements so that eventually the loop condition will evaluate to false, causing the loop to terminate. It is really easy to forget to do this, leading to a never-ending loop...</p>
-<p id="p-792">Example:</p>
+<p id="p-807">At the start of every run through the loop, the condition is checked and only if it evaluates to true are the statements in the loop body executed. It is the programmer's job to build in an update condition into these statements so that eventually the loop condition will evaluate to false, causing the loop to terminate. It is really easy to forget to do this, leading to a never-ending loop...</p>
+<p id="p-808">Example:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">i=10; 
 while (i&gt;5) {
     printf("i = %d\n", i);
     i--; 
 }
 </code></pre></div>
-<p id="p-793">This loop generates the exact same output as the above <code class="code-inline tex2jax_ignore">for</code> loop. Notice that you have to explicitly initialize <code class="code-inline tex2jax_ignore">i</code> on your own before the loop and program the update condition <code class="code-inline tex2jax_ignore">i--;</code> as part of the loop body.</p>
-<p id="p-794">In general:</p>
+<p id="p-809">This loop generates the exact same output as the above <code class="code-inline tex2jax_ignore">for</code> loop. Notice that you have to explicitly initialize <code class="code-inline tex2jax_ignore">i</code> on your own before the loop and program the update condition <code class="code-inline tex2jax_ignore">i--;</code> as part of the loop body.</p>
+<p id="p-810">In general:</p>
 <ul class="disc">
-<li id="li-409"><p id="p-derived-li-409">Use a <code class="code-inline tex2jax_ignore">for</code>-loop when you have a known number of iterations.</p></li>
-<li id="li-410"><p id="p-derived-li-410">Use a <code class="code-inline tex2jax_ignore">while</code>-loop when you have an unspecified number of iterations.</p></li>
+<li id="li-404"><p id="p-derived-li-404">Use a <code class="code-inline tex2jax_ignore">for</code>-loop when you have a known number of iterations.</p></li>
+<li id="li-405"><p id="p-derived-li-405">Use a <code class="code-inline tex2jax_ignore">while</code>-loop when you have an unspecified number of iterations.</p></li>
 </ul>
 <article class="example example-like" id="example-16"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-16"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-795">Would a <code class="code-inline tex2jax_ignore">for</code>- or <code class="code-inline tex2jax_ignore">while</code>-loop be more efficient to implement in the following scenario?</p>
-<p id="p-796"><em class="emphasis">In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.</em></p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-811">Would a <code class="code-inline tex2jax_ignore">for</code>- or <code class="code-inline tex2jax_ignore">while</code>-loop be more efficient to implement in the following scenario?</p>
+<p id="p-812"><em class="emphasis">In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.</em></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-797">A <code class="code-inline tex2jax_ignore">while</code>-loop</p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><p id="p-798">Though this task could technically be accomplished with either type of loop, a <code class="code-inline tex2jax_ignore">while</code>-loop would be more efficient to use, since you don't know how many times the user will input information before that certain "stop" integer is entered. With a <code class="code-inline tex2jax_ignore">for</code>-loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A <code class="code-inline tex2jax_ignore">while</code>-loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain "stop" integer being entered.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-813">A <code class="code-inline tex2jax_ignore">while</code>-loop</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><p id="p-814">Though this task could technically be accomplished with either type of loop, a <code class="code-inline tex2jax_ignore">while</code>-loop would be more efficient to use, since you don't know how many times the user will input information before that certain "stop" integer is entered. With a <code class="code-inline tex2jax_ignore">for</code>-loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A <code class="code-inline tex2jax_ignore">while</code>-loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain "stop" integer being entered.</p></div></div>
 </div></article></div>
-<p id="p-799">Clearly, the following would be difficult to accomplish with a <code class="code-inline tex2jax_ignore">for</code>-loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.</p>
+<p id="p-815">Clearly, the following would be difficult to accomplish with a <code class="code-inline tex2jax_ignore">for</code>-loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nloop9.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop9.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop9.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-800">In the previous example, we had to type the <code class="code-inline tex2jax_ignore">scanf()</code> statement twice: once to read the user input and then one more time in case they entered something negative by accident. This is not the most elegant code (though perfectly acceptable). So there is a third kind of loop that helps in such a case, the <code class="code-inline tex2jax_ignore">do-while</code>-loop:</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop9.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-816">In the previous example, we had to type the <code class="code-inline tex2jax_ignore">scanf()</code> statement twice: once to read the user input and then one more time in case they entered something negative by accident. This is not the most elegant code (though perfectly acceptable). So there is a third kind of loop that helps in such a case, the <code class="code-inline tex2jax_ignore">do-while</code>-loop:</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nloop10.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop10.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop10.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-801">Unlike our previous two types of loops, a <code class="code-inline tex2jax_ignore">do-while</code> loop is guaranteed to execute its loop body at least once since it doesn't get around to checking the loop condition until after execution of the loop body.</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop10.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-817">Unlike our previous two types of loops, a <code class="code-inline tex2jax_ignore">do-while</code> loop is guaranteed to execute its loop body at least once since it doesn't get around to checking the loop condition until after execution of the loop body.</p>
 <article class="example example-like" id="example-17"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-17"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-802">What differences between <code class="code-inline tex2jax_ignore">while</code>-loops and <code class="code-inline tex2jax_ignore">do-while</code>-loops do you notice? Are there any similarities in their syntaxes?</p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-818">What differences between <code class="code-inline tex2jax_ignore">while</code>-loops and <code class="code-inline tex2jax_ignore">do-while</code>-loops do you notice? Are there any similarities in their syntaxes?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-803">We'll look into the <code class="code-inline tex2jax_ignore">do-while</code>-loop in the next section!</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-819">We'll look into the <code class="code-inline tex2jax_ignore">do-while</code>-loop in the next section!</p></div></div>
 </div></article></div></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>

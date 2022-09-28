@@ -2,9 +2,6 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-04T09:41:35+02:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -15,20 +12,28 @@
 </head>
 <body class="ignore-math">
 <article class="activity project-like"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Adding User Input.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
 </h3>
-<p id="p-355">Please write a program that adds integers, entered by the user.</p>
-<p id="p-356">First, ask the user to enter the number of integers they wish to add. Next, use a <code class="code-inline tex2jax_ignore">for</code>-loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.</p>
-<p id="p-357">When the loop terminates, print the result to the screen.</p>
-<p id="p-358">Here is a sample session, with simulated user input in bold:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><span class="prompt unselectable">How many numbers do you wish to add? </span><b>5
-</b><span class="prompt unselectable">Please enter number 1: </span><b>7
-</b><span class="prompt unselectable">Please enter number 2: </span><b>13
-</b><span class="prompt unselectable">Please enter number 3: </span><b>4
-</b><span class="prompt unselectable">Please enter number 4: </span><b>-3
-</b><span class="prompt unselectable">Please enter number 5: </span><b>9
-</b></pre></div>
-<p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NuserInput4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput4.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput4.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe><p id="p-359"><em class="emphasis">When you are done, please copy the code you</em> <em class="alert">added</em> <em class="emphasis">into the code submission box below:</em></p></article><span class="incontext"><a href="variables-user-input.html#activity-14" class="internal">in-context</a></span>
+<p>Please print a multiplication table (for multiplication by 7) to the screen, in the following form:</p>
+<pre class="code-display tex2jax_ignore">
+        1 x 7 = 7
+        2 x 7 = 14
+        3 x 7 = 21
+        4 x 7 = 28
+        5 x 7 = 35
+        6 x 7 = 42
+        7 x 7 = 49
+        8 x 7 = 56
+        9 x 7 = 63
+        10 x 7 = 70
+      </pre>
+<p>Be sure to use a loop here, do not write 10 <code class="code-inline tex2jax_ignore">printf()</code> statements...</p>
+<p>As a reminder, here is the format of a <code class="code-inline tex2jax_ignore">for</code>-loop that runs 10 times:</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i; /* a variable, for example by the name of i, is needed */
+for (i=1; i&lt;=10; i++) {
+   /* code that needs to be repeated goes here */
+}
+</code></pre></div> Through this loop, the variable <code class="code-inline tex2jax_ignore">i</code> successively gets assigned values from 1 to 10. In the first run through the loop <code class="code-inline tex2jax_ignore">i</code> has the value 1, in the next run-through that value is increased to 2, then to 3, all the way up to and including 10. <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NmultiplicationTable1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NmultiplicationTable1.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NmultiplicationTable1.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p><em class="emphasis">When you are done, please put your code into the code submission box below:</em></p></article><span class="incontext"><a href="variables-loop-practice.html#activity-14" class="internal">in-context</a></span>
 </body>
 </html>
