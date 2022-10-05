@@ -50,7 +50,7 @@ window.MathJax = {
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -100,6 +100,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -110,7 +111,21 @@ eBookConfig.enable_chatcodes =  false;
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<span class="mininav">Jump to:</span><span class="indexnav"><a href="#indexletter-a">A </a><a href="#indexletter-b">B </a><a href="#indexletter-c">C </a><a href="#indexletter-d">D </a><a href="#indexletter-e">E </a><a href="#indexletter-f">F </a><a href="#indexletter-g">G </a><a href="#indexletter-h">H </a><a href="#indexletter-i">I </a><a href="#indexletter-j">J </a><a href="#indexletter-k">K </a><a href="#indexletter-l">L </a><a href="#indexletter-m">M </a><br><a href="#indexletter-n">N </a><a href="#indexletter-o">O </a><a href="#indexletter-p">P </a><a href="#indexletter-q">Q </a><a href="#indexletter-r">R </a><a href="#indexletter-s">S </a><a href="#indexletter-t">T </a><a href="#indexletter-u">U </a><a href="#indexletter-v">V </a><a href="#indexletter-w">W </a><a href="#indexletter-x">X </a><a href="#indexletter-y">Y </a><a href="#indexletter-z">Z </a></span><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="appendix-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="meta_backmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="colophon-2.html" title="Next">Next</a></span>
+<span class="mininav">Jump to:</span><span class="indexnav"><a href="#indexletter-a">A </a><a href="#indexletter-b">B </a><a href="#indexletter-c">C </a><a href="#indexletter-d">D </a><a href="#indexletter-e">E </a><a href="#indexletter-f">F </a><a href="#indexletter-g">G </a><a href="#indexletter-h">H </a><a href="#indexletter-i">I </a><a href="#indexletter-j">J </a><a href="#indexletter-k">K </a><a href="#indexletter-l">L </a><a href="#indexletter-m">M </a><br><a href="#indexletter-n">N </a><a href="#indexletter-o">O </a><a href="#indexletter-p">P </a><a href="#indexletter-q">Q </a><a href="#indexletter-r">R </a><a href="#indexletter-s">S </a><a href="#indexletter-t">T </a><a href="#indexletter-u">U </a><a href="#indexletter-v">V </a><a href="#indexletter-w">W </a><a href="#indexletter-x">X </a><a href="#indexletter-y">Y </a><a href="#indexletter-z">Z </a></span><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="appendix-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="meta_backmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="colophon-2.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -121,7 +136,7 @@ eBookConfig.enable_chatcodes =  false;
 <nav id="toc"><ul>
 <li class="link frontmatter">
 <a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
 <li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Introduction</a></li>
 <li><a href="meta_frontmatter-toc.html" data-scroll="meta_frontmatter-toc" class="internal">Table of Contents</a></li>
 </ul>
@@ -132,7 +147,6 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
-<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -165,9 +179,15 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="variables-summary.html" data-scroll="variables-summary" class="internal">Summary</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="featuretesting.html" data-scroll="featuretesting" class="internal"><span class="codenumber">5</span> <span class="title">Interactive Feature Testing</span></a><ul>
+<li><a href="section-24.html" data-scroll="section-24" class="internal">Interactive Stuff Testing</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
+</ul>
+</li>
 <li class="link part"><a href="part-digitalrep.html" data-scroll="part-digitalrep" class="internal"><span class="codenumber">II</span> <span class="title">Digital Representation of Data</span></a></li>
 <li class="link">
-<a href="integers.html" data-scroll="integers" class="internal"><span class="codenumber">5</span> <span class="title">Integers and Binary</span></a><ul>
+<a href="integers.html" data-scroll="integers" class="internal"><span class="codenumber">6</span> <span class="title">Integers and Binary</span></a><ul>
 <li><a href="integers-intro.html" data-scroll="integers-intro" class="internal">Digital Representation of Integers</a></li>
 <li><a href="integers-positive.html" data-scroll="integers-positive" class="internal">Storing Positive Integers</a></li>
 <li><a href="integers-negative.html" data-scroll="integers-negative" class="internal">Storing Negative Integers</a></li>
@@ -176,7 +196,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="floats.html" data-scroll="floats" class="internal"><span class="codenumber">6</span> <span class="title">Floats and Converting</span></a><ul>
+<a href="floats.html" data-scroll="floats" class="internal"><span class="codenumber">7</span> <span class="title">Floats and Converting</span></a><ul>
 <li><a href="floats-intro.html" data-scroll="floats-intro" class="internal">Digital Representation of Floats</a></li>
 <li><a href="floats-int-to-float.html" data-scroll="floats-int-to-float" class="internal">Converting Integers to Floats</a></li>
 <li><a href="floats-float-to-int.html" data-scroll="floats-float-to-int" class="internal">Converting Floats to Integers</a></li>
@@ -186,7 +206,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="chars.html" data-scroll="chars" class="internal"><span class="codenumber">7</span> <span class="title">Characters and ASCII Codes</span></a><ul>
+<a href="chars.html" data-scroll="chars" class="internal"><span class="codenumber">8</span> <span class="title">Characters and ASCII Codes</span></a><ul>
 <li><a href="chars-intro.html" data-scroll="chars-intro" class="internal">Digital Representation of Characters</a></li>
 <li><a href="chars-ascii.html" data-scroll="chars-ascii" class="internal">Characters and the ASCII code</a></li>
 <li><a href="chars-cases.html" data-scroll="chars-cases" class="internal">Upper- and Lower-Case Chars</a></li>
@@ -194,14 +214,14 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="prefixes.html" data-scroll="prefixes" class="internal"><span class="codenumber">8</span> <span class="title">Prefixes</span></a><ul>
+<a href="prefixes.html" data-scroll="prefixes" class="internal"><span class="codenumber">9</span> <span class="title">Prefixes</span></a><ul>
 <li><a href="prefixes-intro.html" data-scroll="prefixes-intro" class="internal">Prefixes</a></li>
 <li><a href="prefixes-summary.html" data-scroll="prefixes-summary" class="internal">Summary</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-fundamentals.html" data-scroll="part-fundamentals" class="internal"><span class="codenumber">III</span> <span class="title">Fundamentals</span></a></li>
 <li class="link">
-<a href="branching.html" data-scroll="branching" class="internal"><span class="codenumber">9</span> <span class="title">Branching</span></a><ul>
+<a href="branching.html" data-scroll="branching" class="internal"><span class="codenumber">10</span> <span class="title">Branching</span></a><ul>
 <li><a href="branching-if.html" data-scroll="branching-if" class="internal"><code class="code-inline tex2jax_ignore">if</code> Statements</a></li>
 <li><a href="branching-if-else.html" data-scroll="branching-if-else" class="internal"><code class="code-inline tex2jax_ignore">if - else</code> Statements</a></li>
 <li><a href="branching-operators.html" data-scroll="branching-operators" class="internal">Relational and Equality Operators</a></li>
@@ -218,7 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="adv-branching.html" data-scroll="adv-branching" class="internal"><span class="codenumber">10</span> <span class="title">Advanced Branching</span></a><ul>
+<a href="adv-branching.html" data-scroll="adv-branching" class="internal"><span class="codenumber">11</span> <span class="title">Advanced Branching</span></a><ul>
 <li><a href="adv-branching-switch.html" data-scroll="adv-branching-switch" class="internal">The <code class="code-inline tex2jax_ignore">switch()</code> Statement</a></li>
 <li><a href="adv-branching-for-if.html" data-scroll="adv-branching-for-if" class="internal"><code class="code-inline tex2jax_ignore">for</code> and <code class="code-inline tex2jax_ignore">if</code> together</a></li>
 <li><a href="adv-branching-nested.html" data-scroll="adv-branching-nested" class="internal">Nested Loops</a></li>
@@ -229,7 +249,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="format.html" data-scroll="format" class="internal"><span class="codenumber">11</span> <span class="title">Formatted Input/Output and Program Style</span></a><ul>
+<a href="format.html" data-scroll="format" class="internal"><span class="codenumber">12</span> <span class="title">Formatted Input/Output and Program Style</span></a><ul>
 <li><a href="format-io.html" data-scroll="format-io" class="internal">Formatted Input and Output</a></li>
 <li><a href="format-scanf.html" data-scroll="format-scanf" class="internal">Understanding <code class="code-inline tex2jax_ignore">scanf()</code></a></li>
 <li><a href="format-style.html" data-scroll="format-style" class="internal">Program Style</a></li>
@@ -237,7 +257,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">12</span> <span class="title">Functions and Recursion</span></a><ul>
+<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">13</span> <span class="title">Functions and Recursion</span></a><ul>
 <li><a href="functions-single.html" data-scroll="functions-single" class="internal">Single Functions</a></li>
 <li><a href="functions-multiple.html" data-scroll="functions-multiple" class="internal">Multiple Functions</a></li>
 <li><a href="functions-practice.html" data-scroll="functions-practice" class="internal">Practice Your Functions!</a></li>
@@ -247,7 +267,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="loops.html" data-scroll="loops" class="internal"><span class="codenumber">13</span> <span class="title">Loops</span></a><ul>
+<a href="loops.html" data-scroll="loops" class="internal"><span class="codenumber">14</span> <span class="title">Loops</span></a><ul>
 <li><a href="loops-while.html" data-scroll="loops-while" class="internal">The <code class="code-inline tex2jax_ignore">while</code> Loop</a></li>
 <li><a href="loops-for-while.html" data-scroll="loops-for-while" class="internal"><code class="code-inline tex2jax_ignore">for</code> vs. <code class="code-inline tex2jax_ignore">while</code> Loops</a></li>
 <li><a href="loops-do-while.html" data-scroll="loops-do-while" class="internal">The <code class="code-inline tex2jax_ignore">do-while</code>-Loop</a></li>
@@ -260,7 +280,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-server.html" data-scroll="part-server" class="internal"><span class="codenumber">IV</span> <span class="title">Server-Based Coding</span></a></li>
 <li class="link">
-<a href="linux.html" data-scroll="linux" class="internal"><span class="codenumber">14</span> <span class="title">Linux</span></a><ul>
+<a href="linux.html" data-scroll="linux" class="internal"><span class="codenumber">15</span> <span class="title">Linux</span></a><ul>
 <li><a href="linux-editor.html" data-scroll="linux-editor" class="internal">Install Software On Your Computer</a></li>
 <li><a href="linux-intro.html" data-scroll="linux-intro" class="internal">Introduction to Linux</a></li>
 <li><a href="linux-terminal.html" data-scroll="linux-terminal" class="internal">Connect to Server via Terminal Window</a></li>
@@ -277,7 +297,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="files.html" data-scroll="files" class="internal"><span class="codenumber">15</span> <span class="title">File I/O</span></a><ul>
+<a href="files.html" data-scroll="files" class="internal"><span class="codenumber">16</span> <span class="title">File I/O</span></a><ul>
 <li><a href="files-intro.html" data-scroll="files-intro" class="internal">File I/O Overview</a></li>
 <li><a href="files-read.html" data-scroll="files-read" class="internal">Reading from a File</a></li>
 <li><a href="files-read-practice.html" data-scroll="files-read-practice" class="internal">Practice Reading from Files</a></li>
@@ -289,7 +309,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="debug.html" data-scroll="debug" class="internal"><span class="codenumber">16</span> <span class="title">Software and Debugging</span></a><ul>
+<a href="debug.html" data-scroll="debug" class="internal"><span class="codenumber">17</span> <span class="title">Software and Debugging</span></a><ul>
 <li><a href="debug-software.html" data-scroll="debug-software" class="internal">Software Development</a></li>
 <li><a href="debug-code.html" data-scroll="debug-code" class="internal">Debugging Code</a></li>
 <li><a href="debug-conditional.html" data-scroll="debug-conditional" class="internal">Conditional Compilation</a></li>
@@ -301,7 +321,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-advanced.html" data-scroll="part-advanced" class="internal"><span class="codenumber">V</span> <span class="title">Advanced Concepts</span></a></li>
 <li class="link">
-<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">17</span> <span class="title">Arrays</span></a><ul>
+<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">18</span> <span class="title">Arrays</span></a><ul>
 <li><a href="array-integer.html" data-scroll="array-integer" class="internal">Arrays of Integers</a></li>
 <li><a href="array-other.html" data-scroll="array-other" class="internal">Arrays of Other Data Types</a></li>
 <li><a href="array-initialize.html" data-scroll="array-initialize" class="internal">Initializing Arrays</a></li>
@@ -311,7 +331,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="memory.html" data-scroll="memory" class="internal"><span class="codenumber">18</span> <span class="title">Memory</span></a><ul>
+<a href="memory.html" data-scroll="memory" class="internal"><span class="codenumber">19</span> <span class="title">Memory</span></a><ul>
 <li><a href="memory-space.html" data-scroll="memory-space" class="internal">Space Needed to Store Variables</a></li>
 <li><a href="memory-stack.html" data-scroll="memory-stack" class="internal">The Stack</a></li>
 <li><a href="memory-functions.html" data-scroll="memory-functions" class="internal">Functions And The Stack</a></li>
@@ -327,7 +347,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="pointers.html" data-scroll="pointers" class="internal"><span class="codenumber">19</span> <span class="title">Pointers</span></a><ul>
+<a href="pointers.html" data-scroll="pointers" class="internal"><span class="codenumber">20</span> <span class="title">Pointers</span></a><ul>
 <li><a href="pointers-address.html" data-scroll="pointers-address" class="internal">The Address of a Variable</a></li>
 <li><a href="pointers-dereference.html" data-scroll="pointers-dereference" class="internal">Dereferencing a Pointer</a></li>
 <li><a href="pointers-example.html" data-scroll="pointers-example" class="internal">Pointer Example</a></li>
@@ -344,7 +364,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="strings.html" data-scroll="strings" class="internal"><span class="codenumber">20</span> <span class="title">Strings</span></a><ul>
+<a href="strings.html" data-scroll="strings" class="internal"><span class="codenumber">21</span> <span class="title">Strings</span></a><ul>
 <li><a href="strings-intro.html" data-scroll="strings-intro" class="internal">Declaring and Initializing Strings</a></li>
 <li><a href="strings-assign.html" data-scroll="strings-assign" class="internal">Assign a New Value</a></li>
 <li><a href="strings-library.html" data-scroll="strings-library" class="internal">The String Library</a></li>
@@ -357,7 +377,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="malloc.html" data-scroll="malloc" class="internal"><span class="codenumber">21</span> <span class="title">Computer Memory Management</span></a><ul>
+<a href="malloc.html" data-scroll="malloc" class="internal"><span class="codenumber">22</span> <span class="title">Computer Memory Management</span></a><ul>
 <li><a href="malloc-intro.html" data-scroll="malloc-intro" class="internal"><code class="code-inline tex2jax_ignore">malloc()</code> - Dynamically Allocating Memory</a></li>
 <li><a href="malloc-free.html" data-scroll="malloc-free" class="internal"><code class="code-inline tex2jax_ignore">free()</code> - Releasing Dynamically Allocated Memory</a></li>
 <li><a href="malloc-array.html" data-scroll="malloc-array" class="internal">Allocate Memory for Arrays</a></li>
@@ -368,7 +388,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="sortsearch.html" data-scroll="sortsearch" class="internal"><span class="codenumber">22</span> <span class="title">Sorting and Searching</span></a><ul>
+<a href="sortsearch.html" data-scroll="sortsearch" class="internal"><span class="codenumber">23</span> <span class="title">Sorting and Searching</span></a><ul>
 <li><a href="sortsearch-linear.html" data-scroll="sortsearch-linear" class="internal">Linear Search</a></li>
 <li><a href="sortsearch-bisection.html" data-scroll="sortsearch-bisection" class="internal">Bisection Search</a></li>
 <li><a href="sortsearch-linear-practice.html" data-scroll="sortsearch-linear-practice" class="internal">Linear Search Practice</a></li>
@@ -383,10 +403,10 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="la2.html" data-scroll="la2" class="internal"><span class="codenumber">23</span> <span class="title">Long Assignment 2</span></a><ul><li><a href="la2-menu.html" data-scroll="la2-menu" class="internal">LA2: Menu Selection</a></li></ul>
+<a href="la2.html" data-scroll="la2" class="internal"><span class="codenumber">24</span> <span class="title">Long Assignment 2</span></a><ul><li><a href="la2-menu.html" data-scroll="la2-menu" class="internal">LA2: Menu Selection</a></li></ul>
 </li>
 <li class="link">
-<a href="multiarray.html" data-scroll="multiarray" class="internal"><span class="codenumber">24</span> <span class="title">Multidimensional Arrays</span></a><ul>
+<a href="multiarray.html" data-scroll="multiarray" class="internal"><span class="codenumber">25</span> <span class="title">Multidimensional Arrays</span></a><ul>
 <li><a href="multiarray-strings.html" data-scroll="multiarray-strings" class="internal">Arrays of Strings</a></li>
 <li><a href="multiarray-matrices.html" data-scroll="multiarray-matrices" class="internal">Matrices</a></li>
 <li><a href="multiarray-initialize.html" data-scroll="multiarray-initialize" class="internal">Initializing Multidimensional Arrays</a></li>
@@ -397,7 +417,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-enriched.html" data-scroll="part-enriched" class="internal"><span class="codenumber">VI</span> <span class="title">Enriched Concepts</span></a></li>
 <li class="link">
-<a href="structures.html" data-scroll="structures" class="internal"><span class="codenumber">25</span> <span class="title">Structures</span></a><ul>
+<a href="structures.html" data-scroll="structures" class="internal"><span class="codenumber">26</span> <span class="title">Structures</span></a><ul>
 <li><a href="structures-intro.html" data-scroll="structures-intro" class="internal">Intro to Structures</a></li>
 <li><a href="structures-typedef.html" data-scroll="structures-typedef" class="internal"><code class="code-inline tex2jax_ignore">typedef</code></a></li>
 <li><a href="structures-frac-calc.html" data-scroll="structures-frac-calc" class="internal">The Fraction Calculator Using Structures</a></li>
@@ -407,7 +427,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="arraystruct.html" data-scroll="arraystruct" class="internal"><span class="codenumber">26</span> <span class="title">Arrays of Structures</span></a><ul>
+<a href="arraystruct.html" data-scroll="arraystruct" class="internal"><span class="codenumber">27</span> <span class="title">Arrays of Structures</span></a><ul>
 <li><a href="arraystruct-operators.html" data-scroll="arraystruct-operators" class="internal">Operator Precedence</a></li>
 <li><a href="arraystruct-structures.html" data-scroll="arraystruct-structures" class="internal">Arrays of Structures</a></li>
 <li><a href="arraystruct-triangle.html" data-scroll="arraystruct-triangle" class="internal">Arrays of Structures: Triangle</a></li>
@@ -417,7 +437,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="linkedlists.html" data-scroll="linkedlists" class="internal"><span class="codenumber">27</span> <span class="title">Linked Lists</span></a><ul>
+<a href="linkedlists.html" data-scroll="linkedlists" class="internal"><span class="codenumber">28</span> <span class="title">Linked Lists</span></a><ul>
 <li><a href="linkedlists-intro.html" data-scroll="linkedlists-intro" class="internal">Intro to Linked Lists</a></li>
 <li><a href="linkedlists-functions.html" data-scroll="linkedlists-functions" class="internal">Pass Linked Lists to Functions</a></li>
 <li><a href="linkedlists-autolink.html" data-scroll="linkedlists-autolink" class="internal">Automate the Linking Process</a></li>
@@ -435,7 +455,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="libraries.html" data-scroll="libraries" class="internal"><span class="codenumber">28</span> <span class="title">Libraries</span></a><ul>
+<a href="libraries.html" data-scroll="libraries" class="internal"><span class="codenumber">29</span> <span class="title">Libraries</span></a><ul>
 <li><a href="libraries-intro.html" data-scroll="libraries-intro" class="internal">Intro to Libraries</a></li>
 <li><a href="libraries-components.html" data-scroll="libraries-components" class="internal">Library Components</a></li>
 <li><a href="libraries-header.html" data-scroll="libraries-header" class="internal">Making Our Own Library - Header File</a></li>
@@ -469,119 +489,119 @@ eBookConfig.enable_chatcodes =  false;
 <div class="indexitem">arithmetic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-259.html" title="Item">Item</a></span>
 </div>
 <div class="indexitem">array</div>
-<div class="subindexitem">address<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1204.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">address<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1221.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">declare<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-582.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">initialize<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-583.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/p-1067.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">initialize<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-583.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/p-1084.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">integer<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1052.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">integer<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1069.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">other data types<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1063.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">other data types<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1080.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">pass-to-functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1229.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">pass-to-functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1246.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">structures<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1559.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">structures<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1576.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">array of strings<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/table-4.html" title="Table 24.1: An Array of Strings">Table</a></span>
+<div class="indexitem">array of strings<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/table-4.html" title="Table 25.1: An Array of Strings">Table</a></span>
 </div>
-<div class="indexitem">ASCII code<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-594.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">ASCII code<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-611.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">average<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-567.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">average<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-584.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-b">
-<div class="indexitem">binary<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/figure-3.html" title="Figure 5.1">Figure</a></span>
+<div class="indexitem">binary<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/figure-3.html" title="Figure 6.1">Figure</a></span>
 </div>
 <div class="subindexitem">signed magnitude<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-148.html" title="Item">Item</a></span>
 </div>
 <div class="subindexitem">two's complement<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-153.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">boolean behavior (true/false)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-676.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">boolean behavior (true/false)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-693.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">branching</div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">if</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-619.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">if</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-636.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">if - else</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-623.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">if - else</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-640.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">if - else-if - else</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/figure-5.html" title="Figure 9.3">Figure</a></span>
+<code class="code-inline tex2jax_ignore">if - else-if - else</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/figure-5.html" title="Figure 10.3">Figure</a></span>
 </div>
-<div class="indexitem">byte<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-605.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">byte<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-622.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-c">
-<div class="indexitem">calculations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-316.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">calculations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-302.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">equality operators<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-265.html" title="Item">Item</a></span>
 </div>
 <div class="subindexitem">relational operators<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-262.html" title="Item">Item</a></span>
 </div>
 <div class="indexitem">casting</div>
-<div class="subindexitem">float-to-int<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-564.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">float-to-int<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-581.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">int-to-float<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-559.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">int-to-float<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-576.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">code windows<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-230.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Codecast<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-232.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">comments<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-299.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">comments<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-285.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">complex numbers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1688.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">complex numbers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1705.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-d">
 <div class="indexitem">data type</div>
-<div class="subindexitem">characters<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-373.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">characters<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-359.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">floats<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-384.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">floats<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-370.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">integers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-311.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">integers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-297.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">debug<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1007.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">debug<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1024.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">conditional<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1019.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">conditional<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1036.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">layered<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-555.html" title="Item">Item</a></span>
 </div>
 <div class="indexitem">design</div>
-<div class="subindexitem">top-down<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1182.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">top-down<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1199.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">digital representation</div>
 <div class="subindexitem">characters<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-219.html" title="Item">Item</a></span>
 </div>
 <div class="subindexitem">floats<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-197.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">integers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-408.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">integers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-425.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">division<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-403.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">division<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-420.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-e"><div class="indexitem">escape sequences<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-337.html" title="Item">Item</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-f">
 <div class="indexitem">file</div>
-<div class="subindexitem">check if exists<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-980.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">check if exists<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-997.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">EOF<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-972.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">EOF<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-989.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">fopen()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-958.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">fopen()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-975.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">
 <code class="code-inline tex2jax_ignore">fprintf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-506.html" title="Item">Item</a></span>
 </div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">fscanf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-972.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">fscanf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-989.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">read<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-958.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">read<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-975.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">write<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-505.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">flag<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-676.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">flag<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-693.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">format</div>
 <div class="subindexitem">flag<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-348.html" title="Item">Item</a></span>
@@ -590,100 +610,100 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">specifiers</div>
 <div class="subsubindexitem">
-<code class="code-inline tex2jax_ignore">%c</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-374.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">%c</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-360.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subsubindexitem">
-<code class="code-inline tex2jax_ignore">%d</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-312.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">%d</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-298.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subsubindexitem">
-<code class="code-inline tex2jax_ignore">%f</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-386.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">%f</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-372.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subsubindexitem">
-<code class="code-inline tex2jax_ignore">%s</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1296.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">%s</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1313.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subsubindexitem">other<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/figure-6.html" title="Figure 11.1">Figure</a></span>
+<div class="subsubindexitem">other<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/figure-6.html" title="Figure 12.1">Figure</a></span>
 </div>
 <div class="subindexitem">width<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-350.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">fraction calculator<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1176.html" title="Paragraph">Paragraph</a> <a href="pointers-frac-calc.html" class="internal" title="Section 19.8: The Fraction Calculator">Section</a></span>
+<div class="indexitem">fraction calculator<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1193.html" title="Paragraph">Paragraph</a> <a href="pointers-frac-calc.html" class="internal" title="Section 20.8: The Fraction Calculator">Section</a></span>
 </div>
-<div class="subindexitem">using structures<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1476.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">using structures<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1493.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">
-<code class="code-inline tex2jax_ignore">free()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1323.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">free()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1340.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-753.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-770.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">multiple<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-761.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">multiple<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-778.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">pointers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-645.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">recursion<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-772.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">recursion<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-789.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-h">
 <div class="indexitem">hardware<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-43.html" title="Item">Item</a></span>
 </div>
-<div class="indexitem">header file<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1669.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">header file<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1686.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">hexadecimal<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-168.html" title="Item">Item</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-l">
-<div class="indexitem">languages<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-922.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">languages<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-939.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">libraries<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1662.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">libraries<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1679.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">components<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1669.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">components<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1686.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">string<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1287.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">string<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1304.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">linked lists<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1594.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">linked lists<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1611.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">automate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1611.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">automate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1628.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">digits<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1626.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">digits<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1643.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1605.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1622.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">on-the-fly<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1616.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">on-the-fly<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1633.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">reverse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1646.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">reverse<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1663.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">sort<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1654.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">sort<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1671.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">Linux</div>
-<div class="subindexitem">commands<span class="indexknowl">, <a href="linux-cheat-sheet.html" class="internal" title="Section 14.12: List of Linux Commands">Section</a></span>
+<div class="subindexitem">commands<span class="indexknowl">, <a href="linux-cheat-sheet.html" class="internal" title="Section 15.12: List of Linux Commands">Section</a></span>
 </div>
-<div class="subindexitem">install<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-863.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">install<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-880.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">VPN<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-862.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">VPN<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-879.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">logic</div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">AND</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-652.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">AND</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-669.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">De Morgan's laws<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-684.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">De Morgan's laws<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-701.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">evaluate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-666.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">evaluate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-683.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">expressions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-680.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">expressions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-697.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">negate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-684.html" title="Paragraph">Paragraph</a></span>
-</div>
-<div class="subindexitem">
-<code class="code-inline tex2jax_ignore">NOT</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-654.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">negate<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-701.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">OR</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-653.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">NOT</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-671.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="subindexitem">
+<code class="code-inline tex2jax_ignore">OR</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-670.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">precedence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-282.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">truth tables<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-684.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">truth tables<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-701.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">loops</div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">do-while</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-820.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/figure-8.html" title="Figure 13.3">Figure</a></span>
+<code class="code-inline tex2jax_ignore">do-while</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-837.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/figure-8.html" title="Figure 14.3">Figure</a></span>
 </div>
 <div class="subindexitem">
 <code class="code-inline tex2jax_ignore">for</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-72.html" title="Item">Item</a></span>
@@ -692,73 +712,73 @@ eBookConfig.enable_chatcodes =  false;
 <code class="code-inline tex2jax_ignore">for</code> vs. <code class="code-inline tex2jax_ignore">while</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-404.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/li-405.html" title="Item">Item</a></span>
 </div>
 <div class="subindexitem">operators</div>
-<div class="subsubindexitem">compound assignment (<code class="code-inline tex2jax_ignore">i=i+1</code>)<span class="indexknowl">, <a href="loops-compound.html" class="internal" title="Section 13.4: Compound Assignment Operators">Section</a></span>
+<div class="subsubindexitem">compound assignment (<code class="code-inline tex2jax_ignore">i=i+1</code>)<span class="indexknowl">, <a href="loops-compound.html" class="internal" title="Section 14.4: Compound Assignment Operators">Section</a></span>
 </div>
-<div class="subsubindexitem">shorthand<span class="indexknowl">, <a href="loops-operators.html" class="internal" title="Section 13.5: Increment / Decrement Operators">Section</a></span>
+<div class="subsubindexitem">shorthand<span class="indexknowl">, <a href="loops-operators.html" class="internal" title="Section 14.5: Increment / Decrement Operators">Section</a></span>
 </div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">while</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-787.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">while</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-804.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">lowercase<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-598.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">lowercase<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-615.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-m">
 <div class="indexitem">
-<code class="code-inline tex2jax_ignore">malloc()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1313.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">malloc()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1330.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">arrays<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1332.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">arrays<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1349.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">matching derivatives<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/matching-derivatives.html" title="Exercise 1.3.5.1: Matching Problem, Derivatives">Exercise</a></span>
+<div class="indexitem">matching derivatives<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/matching-derivatives.html" title="Exercise 5.1.1: Matching Problem, Derivatives">Exercise</a></span>
 </div>
-<div class="indexitem">matrices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1444.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">matrices<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1461.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">memory<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-617.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">address<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1158.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">address<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1175.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-629.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">the stack<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1102.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">the stack<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1119.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">multidimensional array<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1432.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">multidimensional array<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1449.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1457.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">functions<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1474.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">initialize<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1452.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">initialize<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1469.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-n">
 <div class="indexitem">nesting</div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">for</code> and <code class="code-inline tex2jax_ignore">if</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-698.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">for</code> and <code class="code-inline tex2jax_ignore">if</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-715.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">loops<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-704.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">loops<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-721.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-o">
-<div class="indexitem">object file<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1669.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">object file<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1686.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">operator precedence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-282.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/table-5.html" title="Table 26.1: Operator Precedence">Table</a></span>
+<div class="indexitem">operator precedence<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-282.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/table-5.html" title="Table 27.1: Operator Precedence">Table</a></span>
 </div>
-<div class="indexitem">overflow<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1151.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">overflow<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1168.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-p">
-<div class="indexitem">parallel arrays<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1412.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">parallel arrays<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1429.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">pointer</div>
 <div class="subindexitem">address<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-640.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">arithmetic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1205.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">arithmetic<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1222.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">array<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1204.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">array<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1221.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">dereference<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1165.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">dereference<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1182.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">prefixes<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-605.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">prefixes<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-622.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">
-<code class="code-inline tex2jax_ignore">printf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-69.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/p-312.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">printf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-69.html" title="Item">Item</a> <a href="" class="xref" data-knowl="./knowl/p-298.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">program<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-46.html" title="Item">Item</a></span>
 </div>
@@ -766,7 +786,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="subindexitem">output<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-48.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">style<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-743.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">style<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-760.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-q">
@@ -777,21 +797,21 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="indexletter" id="indexletter-r">
-<div class="indexitem">remainder<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-572.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">remainder<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-589.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">Repl<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-259.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">Repl<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-413.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">rounding<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/table-3.html" title="Table 18.1: Rounding Functions in C">Table</a></span>
+<div class="indexitem">rounding<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/table-3.html" title="Table 19.1: Rounding Functions in C">Table</a></span>
 </div>
-<div class="indexitem">roundoff error<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1133.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">roundoff error<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1150.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-s">
 <div class="indexitem">
-<code class="code-inline tex2jax_ignore">scanf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-362.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/figure-7.html" title="Figure 11.2">Figure</a></span>
+<code class="code-inline tex2jax_ignore">scanf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-348.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/figure-7.html" title="Figure 12.2">Figure</a></span>
 </div>
 <div class="indexitem">search</div>
-<div class="subindexitem">bisection<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1375.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">bisection<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1392.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">linear<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-754.html" title="Item">Item</a></span>
 </div>
@@ -800,80 +820,80 @@ eBookConfig.enable_chatcodes =  false;
 <div class="subindexitem">development<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-514.html" title="Item">Item</a></span>
 </div>
 <div class="indexitem">sort</div>
-<div class="subindexitem">bubble<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1383.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">bubble<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1400.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">insertion<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1402.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">insertion<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1419.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">parallel arrays<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1416.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">parallel arrays<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1433.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">selection<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1397.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">selection<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1414.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">sort array<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1416.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">sort array<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1433.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">print<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1420.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">print<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1437.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">sorting<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1423.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">sorting<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1440.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">strings<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1270.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">strings<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1287.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">alphabetize<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1305.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">alphabetize<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1322.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">length<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1292.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">length<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1309.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">library<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1287.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">library<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1304.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">read from input<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1296.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">read from input<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1313.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">
-<code class="code-inline tex2jax_ignore">sprintf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1301.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">sprintf()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1318.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">update<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1279.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">update<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1296.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">structures<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1469.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">structures<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1486.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">arrays<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1559.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">arrays<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1576.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">pass-to-function by reference<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1513.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">pass-to-function by reference<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1530.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">pass-to-function by value<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1499.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">pass-to-function by value<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1516.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">pointers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-828.html" title="Item">Item</a></span>
 </div>
 <div class="indexitem">
-<code class="code-inline tex2jax_ignore">switch()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-693.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">switch()</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-710.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
 <div class="indexletter" id="indexletter-t">
 <div class="indexitem">testing</div>
-<div class="subindexitem">bottom-up<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1187.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">bottom-up<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1204.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">top-down<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1195.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">top-down<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1212.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">
-<code class="code-inline tex2jax_ignore">typedef</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1473.html" title="Paragraph">Paragraph</a></span>
+<code class="code-inline tex2jax_ignore">typedef</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1490.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div>
-<div class="indexletter" id="indexletter-u"><div class="indexitem">uppercase<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-598.html" title="Paragraph">Paragraph</a></span>
+<div class="indexletter" id="indexletter-u"><div class="indexitem">uppercase<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-615.html" title="Paragraph">Paragraph</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-v">
 <div class="indexitem">variables</div>
 <div class="subindexitem">address<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-640.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">declare<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-320.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">declare<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-306.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">errors<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-342.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">errors<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-328.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">initialize<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-320.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">initialize<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-306.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subsubindexitem">separately<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-99.html" title="Item">Item</a></span>
 </div>
 <div class="subsubindexitem">simultaneously<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/li-100.html" title="Item">Item</a></span>
 </div>
-<div class="subindexitem">naming convention<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1128.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">naming convention<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1145.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">scope<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1122.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">scope<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-1139.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">update<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-326.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">update<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-312.html" title="Paragraph">Paragraph</a></span>
 </div>
 </div></section></div></main>
 </div>

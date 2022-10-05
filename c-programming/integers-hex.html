@@ -50,7 +50,7 @@ window.MathJax = {
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -100,6 +100,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -110,7 +111,21 @@ eBookConfig.enable_chatcodes =  false;
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="integers-negative.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="integers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="integers-summary.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="integers-negative.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="integers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="integers-summary.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -121,7 +136,7 @@ eBookConfig.enable_chatcodes =  false;
 <nav id="toc"><ul>
 <li class="link frontmatter">
 <a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
 <li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Introduction</a></li>
 <li><a href="meta_frontmatter-toc.html" data-scroll="meta_frontmatter-toc" class="internal">Table of Contents</a></li>
 </ul>
@@ -132,7 +147,6 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
-<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -165,9 +179,15 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="variables-summary.html" data-scroll="variables-summary" class="internal">Summary</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="featuretesting.html" data-scroll="featuretesting" class="internal"><span class="codenumber">5</span> <span class="title">Interactive Feature Testing</span></a><ul>
+<li><a href="section-24.html" data-scroll="section-24" class="internal">Interactive Stuff Testing</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
+</ul>
+</li>
 <li class="link part"><a href="part-digitalrep.html" data-scroll="part-digitalrep" class="internal"><span class="codenumber">II</span> <span class="title">Digital Representation of Data</span></a></li>
 <li class="link">
-<a href="integers.html" data-scroll="integers" class="internal"><span class="codenumber">5</span> <span class="title">Integers and Binary</span></a><ul>
+<a href="integers.html" data-scroll="integers" class="internal"><span class="codenumber">6</span> <span class="title">Integers and Binary</span></a><ul>
 <li><a href="integers-intro.html" data-scroll="integers-intro" class="internal">Digital Representation of Integers</a></li>
 <li><a href="integers-positive.html" data-scroll="integers-positive" class="internal">Storing Positive Integers</a></li>
 <li><a href="integers-negative.html" data-scroll="integers-negative" class="internal">Storing Negative Integers</a></li>
@@ -176,7 +196,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="floats.html" data-scroll="floats" class="internal"><span class="codenumber">6</span> <span class="title">Floats and Converting</span></a><ul>
+<a href="floats.html" data-scroll="floats" class="internal"><span class="codenumber">7</span> <span class="title">Floats and Converting</span></a><ul>
 <li><a href="floats-intro.html" data-scroll="floats-intro" class="internal">Digital Representation of Floats</a></li>
 <li><a href="floats-int-to-float.html" data-scroll="floats-int-to-float" class="internal">Converting Integers to Floats</a></li>
 <li><a href="floats-float-to-int.html" data-scroll="floats-float-to-int" class="internal">Converting Floats to Integers</a></li>
@@ -186,7 +206,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="chars.html" data-scroll="chars" class="internal"><span class="codenumber">7</span> <span class="title">Characters and ASCII Codes</span></a><ul>
+<a href="chars.html" data-scroll="chars" class="internal"><span class="codenumber">8</span> <span class="title">Characters and ASCII Codes</span></a><ul>
 <li><a href="chars-intro.html" data-scroll="chars-intro" class="internal">Digital Representation of Characters</a></li>
 <li><a href="chars-ascii.html" data-scroll="chars-ascii" class="internal">Characters and the ASCII code</a></li>
 <li><a href="chars-cases.html" data-scroll="chars-cases" class="internal">Upper- and Lower-Case Chars</a></li>
@@ -194,14 +214,14 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="prefixes.html" data-scroll="prefixes" class="internal"><span class="codenumber">8</span> <span class="title">Prefixes</span></a><ul>
+<a href="prefixes.html" data-scroll="prefixes" class="internal"><span class="codenumber">9</span> <span class="title">Prefixes</span></a><ul>
 <li><a href="prefixes-intro.html" data-scroll="prefixes-intro" class="internal">Prefixes</a></li>
 <li><a href="prefixes-summary.html" data-scroll="prefixes-summary" class="internal">Summary</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-fundamentals.html" data-scroll="part-fundamentals" class="internal"><span class="codenumber">III</span> <span class="title">Fundamentals</span></a></li>
 <li class="link">
-<a href="branching.html" data-scroll="branching" class="internal"><span class="codenumber">9</span> <span class="title">Branching</span></a><ul>
+<a href="branching.html" data-scroll="branching" class="internal"><span class="codenumber">10</span> <span class="title">Branching</span></a><ul>
 <li><a href="branching-if.html" data-scroll="branching-if" class="internal"><code class="code-inline tex2jax_ignore">if</code> Statements</a></li>
 <li><a href="branching-if-else.html" data-scroll="branching-if-else" class="internal"><code class="code-inline tex2jax_ignore">if - else</code> Statements</a></li>
 <li><a href="branching-operators.html" data-scroll="branching-operators" class="internal">Relational and Equality Operators</a></li>
@@ -218,7 +238,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="adv-branching.html" data-scroll="adv-branching" class="internal"><span class="codenumber">10</span> <span class="title">Advanced Branching</span></a><ul>
+<a href="adv-branching.html" data-scroll="adv-branching" class="internal"><span class="codenumber">11</span> <span class="title">Advanced Branching</span></a><ul>
 <li><a href="adv-branching-switch.html" data-scroll="adv-branching-switch" class="internal">The <code class="code-inline tex2jax_ignore">switch()</code> Statement</a></li>
 <li><a href="adv-branching-for-if.html" data-scroll="adv-branching-for-if" class="internal"><code class="code-inline tex2jax_ignore">for</code> and <code class="code-inline tex2jax_ignore">if</code> together</a></li>
 <li><a href="adv-branching-nested.html" data-scroll="adv-branching-nested" class="internal">Nested Loops</a></li>
@@ -229,7 +249,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="format.html" data-scroll="format" class="internal"><span class="codenumber">11</span> <span class="title">Formatted Input/Output and Program Style</span></a><ul>
+<a href="format.html" data-scroll="format" class="internal"><span class="codenumber">12</span> <span class="title">Formatted Input/Output and Program Style</span></a><ul>
 <li><a href="format-io.html" data-scroll="format-io" class="internal">Formatted Input and Output</a></li>
 <li><a href="format-scanf.html" data-scroll="format-scanf" class="internal">Understanding <code class="code-inline tex2jax_ignore">scanf()</code></a></li>
 <li><a href="format-style.html" data-scroll="format-style" class="internal">Program Style</a></li>
@@ -237,7 +257,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">12</span> <span class="title">Functions and Recursion</span></a><ul>
+<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">13</span> <span class="title">Functions and Recursion</span></a><ul>
 <li><a href="functions-single.html" data-scroll="functions-single" class="internal">Single Functions</a></li>
 <li><a href="functions-multiple.html" data-scroll="functions-multiple" class="internal">Multiple Functions</a></li>
 <li><a href="functions-practice.html" data-scroll="functions-practice" class="internal">Practice Your Functions!</a></li>
@@ -247,7 +267,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="loops.html" data-scroll="loops" class="internal"><span class="codenumber">13</span> <span class="title">Loops</span></a><ul>
+<a href="loops.html" data-scroll="loops" class="internal"><span class="codenumber">14</span> <span class="title">Loops</span></a><ul>
 <li><a href="loops-while.html" data-scroll="loops-while" class="internal">The <code class="code-inline tex2jax_ignore">while</code> Loop</a></li>
 <li><a href="loops-for-while.html" data-scroll="loops-for-while" class="internal"><code class="code-inline tex2jax_ignore">for</code> vs. <code class="code-inline tex2jax_ignore">while</code> Loops</a></li>
 <li><a href="loops-do-while.html" data-scroll="loops-do-while" class="internal">The <code class="code-inline tex2jax_ignore">do-while</code>-Loop</a></li>
@@ -260,7 +280,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-server.html" data-scroll="part-server" class="internal"><span class="codenumber">IV</span> <span class="title">Server-Based Coding</span></a></li>
 <li class="link">
-<a href="linux.html" data-scroll="linux" class="internal"><span class="codenumber">14</span> <span class="title">Linux</span></a><ul>
+<a href="linux.html" data-scroll="linux" class="internal"><span class="codenumber">15</span> <span class="title">Linux</span></a><ul>
 <li><a href="linux-editor.html" data-scroll="linux-editor" class="internal">Install Software On Your Computer</a></li>
 <li><a href="linux-intro.html" data-scroll="linux-intro" class="internal">Introduction to Linux</a></li>
 <li><a href="linux-terminal.html" data-scroll="linux-terminal" class="internal">Connect to Server via Terminal Window</a></li>
@@ -277,7 +297,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="files.html" data-scroll="files" class="internal"><span class="codenumber">15</span> <span class="title">File I/O</span></a><ul>
+<a href="files.html" data-scroll="files" class="internal"><span class="codenumber">16</span> <span class="title">File I/O</span></a><ul>
 <li><a href="files-intro.html" data-scroll="files-intro" class="internal">File I/O Overview</a></li>
 <li><a href="files-read.html" data-scroll="files-read" class="internal">Reading from a File</a></li>
 <li><a href="files-read-practice.html" data-scroll="files-read-practice" class="internal">Practice Reading from Files</a></li>
@@ -289,7 +309,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="debug.html" data-scroll="debug" class="internal"><span class="codenumber">16</span> <span class="title">Software and Debugging</span></a><ul>
+<a href="debug.html" data-scroll="debug" class="internal"><span class="codenumber">17</span> <span class="title">Software and Debugging</span></a><ul>
 <li><a href="debug-software.html" data-scroll="debug-software" class="internal">Software Development</a></li>
 <li><a href="debug-code.html" data-scroll="debug-code" class="internal">Debugging Code</a></li>
 <li><a href="debug-conditional.html" data-scroll="debug-conditional" class="internal">Conditional Compilation</a></li>
@@ -301,7 +321,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-advanced.html" data-scroll="part-advanced" class="internal"><span class="codenumber">V</span> <span class="title">Advanced Concepts</span></a></li>
 <li class="link">
-<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">17</span> <span class="title">Arrays</span></a><ul>
+<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">18</span> <span class="title">Arrays</span></a><ul>
 <li><a href="array-integer.html" data-scroll="array-integer" class="internal">Arrays of Integers</a></li>
 <li><a href="array-other.html" data-scroll="array-other" class="internal">Arrays of Other Data Types</a></li>
 <li><a href="array-initialize.html" data-scroll="array-initialize" class="internal">Initializing Arrays</a></li>
@@ -311,7 +331,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="memory.html" data-scroll="memory" class="internal"><span class="codenumber">18</span> <span class="title">Memory</span></a><ul>
+<a href="memory.html" data-scroll="memory" class="internal"><span class="codenumber">19</span> <span class="title">Memory</span></a><ul>
 <li><a href="memory-space.html" data-scroll="memory-space" class="internal">Space Needed to Store Variables</a></li>
 <li><a href="memory-stack.html" data-scroll="memory-stack" class="internal">The Stack</a></li>
 <li><a href="memory-functions.html" data-scroll="memory-functions" class="internal">Functions And The Stack</a></li>
@@ -327,7 +347,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="pointers.html" data-scroll="pointers" class="internal"><span class="codenumber">19</span> <span class="title">Pointers</span></a><ul>
+<a href="pointers.html" data-scroll="pointers" class="internal"><span class="codenumber">20</span> <span class="title">Pointers</span></a><ul>
 <li><a href="pointers-address.html" data-scroll="pointers-address" class="internal">The Address of a Variable</a></li>
 <li><a href="pointers-dereference.html" data-scroll="pointers-dereference" class="internal">Dereferencing a Pointer</a></li>
 <li><a href="pointers-example.html" data-scroll="pointers-example" class="internal">Pointer Example</a></li>
@@ -344,7 +364,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="strings.html" data-scroll="strings" class="internal"><span class="codenumber">20</span> <span class="title">Strings</span></a><ul>
+<a href="strings.html" data-scroll="strings" class="internal"><span class="codenumber">21</span> <span class="title">Strings</span></a><ul>
 <li><a href="strings-intro.html" data-scroll="strings-intro" class="internal">Declaring and Initializing Strings</a></li>
 <li><a href="strings-assign.html" data-scroll="strings-assign" class="internal">Assign a New Value</a></li>
 <li><a href="strings-library.html" data-scroll="strings-library" class="internal">The String Library</a></li>
@@ -357,7 +377,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="malloc.html" data-scroll="malloc" class="internal"><span class="codenumber">21</span> <span class="title">Computer Memory Management</span></a><ul>
+<a href="malloc.html" data-scroll="malloc" class="internal"><span class="codenumber">22</span> <span class="title">Computer Memory Management</span></a><ul>
 <li><a href="malloc-intro.html" data-scroll="malloc-intro" class="internal"><code class="code-inline tex2jax_ignore">malloc()</code> - Dynamically Allocating Memory</a></li>
 <li><a href="malloc-free.html" data-scroll="malloc-free" class="internal"><code class="code-inline tex2jax_ignore">free()</code> - Releasing Dynamically Allocated Memory</a></li>
 <li><a href="malloc-array.html" data-scroll="malloc-array" class="internal">Allocate Memory for Arrays</a></li>
@@ -368,7 +388,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="sortsearch.html" data-scroll="sortsearch" class="internal"><span class="codenumber">22</span> <span class="title">Sorting and Searching</span></a><ul>
+<a href="sortsearch.html" data-scroll="sortsearch" class="internal"><span class="codenumber">23</span> <span class="title">Sorting and Searching</span></a><ul>
 <li><a href="sortsearch-linear.html" data-scroll="sortsearch-linear" class="internal">Linear Search</a></li>
 <li><a href="sortsearch-bisection.html" data-scroll="sortsearch-bisection" class="internal">Bisection Search</a></li>
 <li><a href="sortsearch-linear-practice.html" data-scroll="sortsearch-linear-practice" class="internal">Linear Search Practice</a></li>
@@ -383,10 +403,10 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="la2.html" data-scroll="la2" class="internal"><span class="codenumber">23</span> <span class="title">Long Assignment 2</span></a><ul><li><a href="la2-menu.html" data-scroll="la2-menu" class="internal">LA2: Menu Selection</a></li></ul>
+<a href="la2.html" data-scroll="la2" class="internal"><span class="codenumber">24</span> <span class="title">Long Assignment 2</span></a><ul><li><a href="la2-menu.html" data-scroll="la2-menu" class="internal">LA2: Menu Selection</a></li></ul>
 </li>
 <li class="link">
-<a href="multiarray.html" data-scroll="multiarray" class="internal"><span class="codenumber">24</span> <span class="title">Multidimensional Arrays</span></a><ul>
+<a href="multiarray.html" data-scroll="multiarray" class="internal"><span class="codenumber">25</span> <span class="title">Multidimensional Arrays</span></a><ul>
 <li><a href="multiarray-strings.html" data-scroll="multiarray-strings" class="internal">Arrays of Strings</a></li>
 <li><a href="multiarray-matrices.html" data-scroll="multiarray-matrices" class="internal">Matrices</a></li>
 <li><a href="multiarray-initialize.html" data-scroll="multiarray-initialize" class="internal">Initializing Multidimensional Arrays</a></li>
@@ -397,7 +417,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-enriched.html" data-scroll="part-enriched" class="internal"><span class="codenumber">VI</span> <span class="title">Enriched Concepts</span></a></li>
 <li class="link">
-<a href="structures.html" data-scroll="structures" class="internal"><span class="codenumber">25</span> <span class="title">Structures</span></a><ul>
+<a href="structures.html" data-scroll="structures" class="internal"><span class="codenumber">26</span> <span class="title">Structures</span></a><ul>
 <li><a href="structures-intro.html" data-scroll="structures-intro" class="internal">Intro to Structures</a></li>
 <li><a href="structures-typedef.html" data-scroll="structures-typedef" class="internal"><code class="code-inline tex2jax_ignore">typedef</code></a></li>
 <li><a href="structures-frac-calc.html" data-scroll="structures-frac-calc" class="internal">The Fraction Calculator Using Structures</a></li>
@@ -407,7 +427,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="arraystruct.html" data-scroll="arraystruct" class="internal"><span class="codenumber">26</span> <span class="title">Arrays of Structures</span></a><ul>
+<a href="arraystruct.html" data-scroll="arraystruct" class="internal"><span class="codenumber">27</span> <span class="title">Arrays of Structures</span></a><ul>
 <li><a href="arraystruct-operators.html" data-scroll="arraystruct-operators" class="internal">Operator Precedence</a></li>
 <li><a href="arraystruct-structures.html" data-scroll="arraystruct-structures" class="internal">Arrays of Structures</a></li>
 <li><a href="arraystruct-triangle.html" data-scroll="arraystruct-triangle" class="internal">Arrays of Structures: Triangle</a></li>
@@ -417,7 +437,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="linkedlists.html" data-scroll="linkedlists" class="internal"><span class="codenumber">27</span> <span class="title">Linked Lists</span></a><ul>
+<a href="linkedlists.html" data-scroll="linkedlists" class="internal"><span class="codenumber">28</span> <span class="title">Linked Lists</span></a><ul>
 <li><a href="linkedlists-intro.html" data-scroll="linkedlists-intro" class="internal">Intro to Linked Lists</a></li>
 <li><a href="linkedlists-functions.html" data-scroll="linkedlists-functions" class="internal">Pass Linked Lists to Functions</a></li>
 <li><a href="linkedlists-autolink.html" data-scroll="linkedlists-autolink" class="internal">Automate the Linking Process</a></li>
@@ -435,7 +455,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="libraries.html" data-scroll="libraries" class="internal"><span class="codenumber">28</span> <span class="title">Libraries</span></a><ul>
+<a href="libraries.html" data-scroll="libraries" class="internal"><span class="codenumber">29</span> <span class="title">Libraries</span></a><ul>
 <li><a href="libraries-intro.html" data-scroll="libraries-intro" class="internal">Intro to Libraries</a></li>
 <li><a href="libraries-components.html" data-scroll="libraries-components" class="internal">Library Components</a></li>
 <li><a href="libraries-header.html" data-scroll="libraries-header" class="internal">Making Our Own Library - Header File</a></li>
@@ -461,11 +481,11 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdHJlbWz2sc8DrOMYa81E5mRqDKIgulXXfqEq-d48TcuzL9mw/viewform?usp=sf_link" target="_blank">Report Errors</a><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="integers-hex"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">5.4</span> <span class="title">Hexadecimal Numbers</span>
+<span class="type">Section</span> <span class="codenumber">6.4</span> <span class="title">Hexadecimal Numbers</span>
 </h2>
-<p id="p-496">And finally, a brief excursion into hexadecimal numbers:</p>
+<p id="p-513">And finally, a brief excursion into hexadecimal numbers:</p>
 <aside class="aside aside-like" id="aside-13"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-497" class="disc">
+<ul id="p-514" class="disc">
 <li id="li-168"><p id="p-derived-li-168">Hexadecimal is base-16 and it is shorter to write in hexadecimal than binary</p></li>
 <li id="li-169"><p id="p-derived-li-169">It is very easy to convert between hexadecimal and binary</p></li>
 <li id="li-170"><p id="p-derived-li-170">Hexadecimal digits are 0-9, A-F (10-15)</p></li>
@@ -473,22 +493,22 @@ eBookConfig.enable_chatcodes =  false;
 <li id="li-172"><p id="p-derived-li-172">Converting between base-2, -10, and -16</p></li>
 </ul></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="zeXIB23dnCU" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/zeXIB23dnCU?&amp;modestbranding=1&amp;rel=0"></iframe></div>
 <article class="activity project-like" id="activity-20"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span>
 </h3>
-<p id="p-498">Please convert the decimal number 20,000 into hexadecimal.</p>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">0x4E20</code></div></div></article><p id="p-499"><em class="alert">Binary</em> is the native number system of the computer, but it is often convenient for us to talk in the <em class="alert">hexadecimal</em> number system (HEX), that is, in <em class="alert">base-16</em>.</p>
-<p id="p-500">HEX digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F (0-15)</p>
-<p id="p-501">Example: <code class="code-inline tex2jax_ignore">0xAC</code> means "A" * <span class="process-math">\(16^1\)</span> + "C" * <span class="process-math">\(16^0\)</span> = 10 * 16 + 12 * 1 = 172 in decimal</p>
-<p id="p-502"><em class="emphasis">The "0x" indicates that what follows is in hex</em></p>
-<p id="p-503">Another example: <code class="code-inline tex2jax_ignore">0x57</code> means 5 * <span class="process-math">\(16^1\)</span> + 7 * <span class="process-math">\(16^0\)</span> = 87 in decimal</p>
-<section class="subsection" id="subsection-15"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">5.4.1</span> <span class="title">Why Use Hexadecimal?</span>
+<p id="p-515">Please convert the decimal number 20,000 into hexadecimal.</p>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><code class="code-inline tex2jax_ignore">0x4E20</code></div></div></article><p id="p-516"><em class="alert">Binary</em> is the native number system of the computer, but it is often convenient for us to talk in the <em class="alert">hexadecimal</em> number system (HEX), that is, in <em class="alert">base-16</em>.</p>
+<p id="p-517">HEX digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F (0-15)</p>
+<p id="p-518">Example: <code class="code-inline tex2jax_ignore">0xAC</code> means "A" * <span class="process-math">\(16^1\)</span> + "C" * <span class="process-math">\(16^0\)</span> = 10 * 16 + 12 * 1 = 172 in decimal</p>
+<p id="p-519"><em class="emphasis">The "0x" indicates that what follows is in hex</em></p>
+<p id="p-520">Another example: <code class="code-inline tex2jax_ignore">0x57</code> means 5 * <span class="process-math">\(16^1\)</span> + 7 * <span class="process-math">\(16^0\)</span> = 87 in decimal</p>
+<section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.4.1</span> <span class="title">Why Use Hexadecimal?</span>
 </h3>
-<p id="p-504">Binary numbers can be REALLY long (used in memory location addressing for example.)</p>
+<p id="p-521">Binary numbers can be REALLY long (used in memory location addressing for example.)</p>
 <ul class="disc">
 <li id="li-173"><p id="p-derived-li-173">Need: easy shorthand for binary</p></li>
 <li id="li-174">
-<p id="p-505">Solution: HEX</p>
+<p id="p-522">Solution: HEX</p>
 <ul class="circle">
 <li id="li-175"><p id="p-derived-li-175">Condense 4 bits (binary digits) into 1 hexadecimal digit</p></li>
 <li id="li-176"><p id="p-derived-li-176">Example: 1011 binary = 11 decimal = B hexadecimal</p></li>
@@ -496,57 +516,57 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li id="li-177"><p id="p-derived-li-177">2-byte words (16 bits) can then be written as four HEX digits</p></li>
 </ul>
-<p id="p-506">We want powers of 2 (binary) for easy conversion.</p>
-<p id="p-507">Alternative?</p>
+<p id="p-523">We want powers of 2 (binary) for easy conversion.</p>
+<p id="p-524">Alternative?</p>
 <ul class="disc">
 <li id="li-178"><p id="p-derived-li-178">Octal (digits 0-7)</p></li>
 <li id="li-179"><p id="p-derived-li-179">Condenses 3 bits into one</p></li>
-</ul></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">5.4.2</span> <span class="title">Decimal to Hexadecimal</span>
+</ul></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.4.2</span> <span class="title">Decimal to Hexadecimal</span>
 </h3>
-<p id="p-508">We already know how this works: keep dividing by 16, record the remainders in reverse order!</p>
+<p id="p-525">We already know how this works: keep dividing by 16, record the remainders in reverse order!</p>
 <pre class="code-block tex2jax_ignore">23,597    /16       = 1,474  R13 (D)     * 16^0   LSD
  1,474    /16       = 92     R2          * 16^1    |
     92    /16       = 5      R12 (C)     * 16^2    V
      5    /16       = 0      R5          * 16^3   MSD
 
 23,597              -&gt;       0x5C2D
-</pre></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">5.4.3</span> <span class="title">Binary to Hexadecimal and Decimal</span>
+</pre></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.4.3</span> <span class="title">Binary to Hexadecimal and Decimal</span>
 </h3>
-<p id="p-509">We can go directly from binary to decimal, or via hex.</p>
-<p id="p-510">Example: 16-bit binary integer</p>
+<p id="p-526">We can go directly from binary to decimal, or via hex.</p>
+<p id="p-527">Example: 16-bit binary integer</p>
 <pre class="code-block tex2jax_ignore">0101   1100   0010   1101    = 23,597    Decimal
   5    C (12)   2    D (13)  = 0x5C2D    HEX
 16^3   16^2   16^1   16^0                (HEX place values)
 </pre>
-<p id="p-511"><span class="process-math">\(5 \times 16^3 + 12 \times 16^2 + 2 \times 16^1 + 13 \times 16^0\)</span></p>
-<p id="p-512"><span class="process-math">\(= 5 \times 4096 + 12 \times 256 + 2 \times 16 + 13 \times 1\)</span></p>
-<p id="p-513"><span class="process-math">\(= 20,480 + 3072 + 32 + 13\)</span></p>
-<p id="p-514"><span class="process-math">\(= 23,597\)</span> Decimal</p>
-<p id="p-515">Remember: precede hexadecimal number with <code class="code-inline tex2jax_ignore">0x</code> in order to avoid confusion with decimal number <code class="code-inline tex2jax_ignore">0x5C2D</code></p>
-<p id="p-516"> </p>
-<p id="p-517"><em class="alert">Hexadecimal to decimal: best done via binary!</em></p>
-<p id="p-518"><code class="code-inline tex2jax_ignore">0x15A9</code> 2-byte hexadecimal (base-16) number</p>
-<p id="p-519">Hex-to-binary: each hex digit is 4 binary digits</p>
+<p id="p-528"><span class="process-math">\(5 \times 16^3 + 12 \times 16^2 + 2 \times 16^1 + 13 \times 16^0\)</span></p>
+<p id="p-529"><span class="process-math">\(= 5 \times 4096 + 12 \times 256 + 2 \times 16 + 13 \times 1\)</span></p>
+<p id="p-530"><span class="process-math">\(= 20,480 + 3072 + 32 + 13\)</span></p>
+<p id="p-531"><span class="process-math">\(= 23,597\)</span> Decimal</p>
+<p id="p-532">Remember: precede hexadecimal number with <code class="code-inline tex2jax_ignore">0x</code> in order to avoid confusion with decimal number <code class="code-inline tex2jax_ignore">0x5C2D</code></p>
+<p id="p-533"> </p>
+<p id="p-534"><em class="alert">Hexadecimal to decimal: best done via binary!</em></p>
+<p id="p-535"><code class="code-inline tex2jax_ignore">0x15A9</code> 2-byte hexadecimal (base-16) number</p>
+<p id="p-536">Hex-to-binary: each hex digit is 4 binary digits</p>
 <pre class="code-block tex2jax_ignore">                1    5    10   9
 0x15A9        0001 0101 1010 1001
 </pre>
-<p id="p-520"><em class="emphasis">MSB is 0, so decimal value is the same for unsigned, signed-magnitude, and 2's complement representations</em></p>
-<p id="p-521">Binary-to-decimal:</p>
-<p id="p-522">=5545</p></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">5.4.4</span> <span class="title">Another Example</span>
+<p id="p-537"><em class="emphasis">MSB is 0, so decimal value is the same for unsigned, signed-magnitude, and 2's complement representations</em></p>
+<p id="p-538">Binary-to-decimal:</p>
+<p id="p-539">=5545</p></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.4.4</span> <span class="title">Another Example</span>
 </h3>
-<p id="p-523"><code class="code-inline tex2jax_ignore">0xB5A9</code> 2-byte hexadecimal (base-16) number</p>
-<p id="p-524">Hex-to-binary:</p>
+<p id="p-540"><code class="code-inline tex2jax_ignore">0xB5A9</code> 2-byte hexadecimal (base-16) number</p>
+<p id="p-541">Hex-to-binary:</p>
 <pre class="code-block tex2jax_ignore">            11    5   10    9
 0xB5A9     1011 0101 1010 1001
 </pre>
-<p id="p-525"><em class="emphasis">Now MSB is 1, so decimal value depends on which representation we use...</em></p>
-<p id="p-526">Binary-to-decimal:</p>
-<p id="p-527">Unsigned: <span class="process-math">\(2^{15} + 2^{13} + 2^{12} + 2^{10} + 2^8 + 2^7 + 2^5 + 2^3 + 2^0 = 46,505\)</span></p>
-<p id="p-528">Signed magnitude: <span class="process-math">\(-(2^{13} + 2^{12} + 2^{10} + 2^8 + 2^7 + 2^5 + 2^3 + 2^0) = -13,737\)</span></p>
-<p id="p-529">2's complement: <span class="process-math">\(-(2^{14} + 2^{11} + 2^9 + 2^6 + 2^4 + 2^2 + 2^1 + 1) = -19,031\)</span></p></section></section></div></main>
+<p id="p-542"><em class="emphasis">Now MSB is 1, so decimal value depends on which representation we use...</em></p>
+<p id="p-543">Binary-to-decimal:</p>
+<p id="p-544">Unsigned: <span class="process-math">\(2^{15} + 2^{13} + 2^{12} + 2^{10} + 2^8 + 2^7 + 2^5 + 2^3 + 2^0 = 46,505\)</span></p>
+<p id="p-545">Signed magnitude: <span class="process-math">\(-(2^{13} + 2^{12} + 2^{10} + 2^8 + 2^7 + 2^5 + 2^3 + 2^0) = -13,737\)</span></p>
+<p id="p-546">2's complement: <span class="process-math">\(-(2^{14} + 2^{11} + 2^9 + 2^6 + 2^4 + 2^2 + 2^1 + 1) = -19,031\)</span></p></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

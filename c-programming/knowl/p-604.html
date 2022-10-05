@@ -11,8 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<p>Now that we have learned how three common data types (int, float, and char) are stored in memory, we will take a look at the memory itself and learn about some associated vocabulary conventions such as the use of the prefixes kilo, mega, giga, etc.</p>
-<span class="incontext"><a href="prefixes.html#p-604" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<ul class="disc">
+<li><p>Each character is assigned in a unique number (its ASCII code)</p></li>
+<li><p>Instead of storing the character directly in memory, its ASCII code (an integer) is stored. We already know how integers are stored!</p></li>
+<li><p>The %c format specifier interprets the ASCII code and displays the corresponding character when used in a printf() statement</p></li>
+<li><p>For example, the ASCII code of "X" is the number "88", which is "01011000" in binary. So "X" is stored as 01011000 in the computer's memory</p></li>
+</ul>
+<span class="incontext"><a href="chars-intro.html#p-604" class="internal">in-context</a></span>
 </body>
 </html>

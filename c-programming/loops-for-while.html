@@ -51,7 +51,7 @@ window.MathJax = {
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -101,6 +101,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\amp}{&amp;}
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/CProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
@@ -111,7 +112,21 @@ eBookConfig.enable_chatcodes =  false;
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="loops-while.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="loops.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="loops-do-while.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="loops-while.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="loops.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="loops-do-while.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -122,7 +137,7 @@ eBookConfig.enable_chatcodes =  false;
 <nav id="toc"><ul>
 <li class="link frontmatter">
 <a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
 <li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Introduction</a></li>
 <li><a href="meta_frontmatter-toc.html" data-scroll="meta_frontmatter-toc" class="internal">Table of Contents</a></li>
 </ul>
@@ -133,7 +148,6 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="gettingstarted-codewindows.html" data-scroll="gettingstarted-codewindows" class="internal">Code Windows</a></li>
 <li><a href="gettingstarted-codecasts.html" data-scroll="gettingstarted-codecasts" class="internal">Codecasts</a></li>
 <li><a href="gettingstarted-submissions.html" data-scroll="gettingstarted-submissions" class="internal">Submissions</a></li>
-<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
 </ul>
 </li>
 <li class="link">
@@ -166,9 +180,15 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="variables-summary.html" data-scroll="variables-summary" class="internal">Summary</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="featuretesting.html" data-scroll="featuretesting" class="internal"><span class="codenumber">5</span> <span class="title">Interactive Feature Testing</span></a><ul>
+<li><a href="section-24.html" data-scroll="section-24" class="internal">Interactive Stuff Testing</a></li>
+<li><a href="gettingstarted-replit.html" data-scroll="gettingstarted-replit" class="internal">Repl.it Testing</a></li>
+</ul>
+</li>
 <li class="link part"><a href="part-digitalrep.html" data-scroll="part-digitalrep" class="internal"><span class="codenumber">II</span> <span class="title">Digital Representation of Data</span></a></li>
 <li class="link">
-<a href="integers.html" data-scroll="integers" class="internal"><span class="codenumber">5</span> <span class="title">Integers and Binary</span></a><ul>
+<a href="integers.html" data-scroll="integers" class="internal"><span class="codenumber">6</span> <span class="title">Integers and Binary</span></a><ul>
 <li><a href="integers-intro.html" data-scroll="integers-intro" class="internal">Digital Representation of Integers</a></li>
 <li><a href="integers-positive.html" data-scroll="integers-positive" class="internal">Storing Positive Integers</a></li>
 <li><a href="integers-negative.html" data-scroll="integers-negative" class="internal">Storing Negative Integers</a></li>
@@ -177,7 +197,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="floats.html" data-scroll="floats" class="internal"><span class="codenumber">6</span> <span class="title">Floats and Converting</span></a><ul>
+<a href="floats.html" data-scroll="floats" class="internal"><span class="codenumber">7</span> <span class="title">Floats and Converting</span></a><ul>
 <li><a href="floats-intro.html" data-scroll="floats-intro" class="internal">Digital Representation of Floats</a></li>
 <li><a href="floats-int-to-float.html" data-scroll="floats-int-to-float" class="internal">Converting Integers to Floats</a></li>
 <li><a href="floats-float-to-int.html" data-scroll="floats-float-to-int" class="internal">Converting Floats to Integers</a></li>
@@ -187,7 +207,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="chars.html" data-scroll="chars" class="internal"><span class="codenumber">7</span> <span class="title">Characters and ASCII Codes</span></a><ul>
+<a href="chars.html" data-scroll="chars" class="internal"><span class="codenumber">8</span> <span class="title">Characters and ASCII Codes</span></a><ul>
 <li><a href="chars-intro.html" data-scroll="chars-intro" class="internal">Digital Representation of Characters</a></li>
 <li><a href="chars-ascii.html" data-scroll="chars-ascii" class="internal">Characters and the ASCII code</a></li>
 <li><a href="chars-cases.html" data-scroll="chars-cases" class="internal">Upper- and Lower-Case Chars</a></li>
@@ -195,14 +215,14 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="prefixes.html" data-scroll="prefixes" class="internal"><span class="codenumber">8</span> <span class="title">Prefixes</span></a><ul>
+<a href="prefixes.html" data-scroll="prefixes" class="internal"><span class="codenumber">9</span> <span class="title">Prefixes</span></a><ul>
 <li><a href="prefixes-intro.html" data-scroll="prefixes-intro" class="internal">Prefixes</a></li>
 <li><a href="prefixes-summary.html" data-scroll="prefixes-summary" class="internal">Summary</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-fundamentals.html" data-scroll="part-fundamentals" class="internal"><span class="codenumber">III</span> <span class="title">Fundamentals</span></a></li>
 <li class="link">
-<a href="branching.html" data-scroll="branching" class="internal"><span class="codenumber">9</span> <span class="title">Branching</span></a><ul>
+<a href="branching.html" data-scroll="branching" class="internal"><span class="codenumber">10</span> <span class="title">Branching</span></a><ul>
 <li><a href="branching-if.html" data-scroll="branching-if" class="internal"><code class="code-inline tex2jax_ignore">if</code> Statements</a></li>
 <li><a href="branching-if-else.html" data-scroll="branching-if-else" class="internal"><code class="code-inline tex2jax_ignore">if - else</code> Statements</a></li>
 <li><a href="branching-operators.html" data-scroll="branching-operators" class="internal">Relational and Equality Operators</a></li>
@@ -219,7 +239,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="adv-branching.html" data-scroll="adv-branching" class="internal"><span class="codenumber">10</span> <span class="title">Advanced Branching</span></a><ul>
+<a href="adv-branching.html" data-scroll="adv-branching" class="internal"><span class="codenumber">11</span> <span class="title">Advanced Branching</span></a><ul>
 <li><a href="adv-branching-switch.html" data-scroll="adv-branching-switch" class="internal">The <code class="code-inline tex2jax_ignore">switch()</code> Statement</a></li>
 <li><a href="adv-branching-for-if.html" data-scroll="adv-branching-for-if" class="internal"><code class="code-inline tex2jax_ignore">for</code> and <code class="code-inline tex2jax_ignore">if</code> together</a></li>
 <li><a href="adv-branching-nested.html" data-scroll="adv-branching-nested" class="internal">Nested Loops</a></li>
@@ -230,7 +250,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="format.html" data-scroll="format" class="internal"><span class="codenumber">11</span> <span class="title">Formatted Input/Output and Program Style</span></a><ul>
+<a href="format.html" data-scroll="format" class="internal"><span class="codenumber">12</span> <span class="title">Formatted Input/Output and Program Style</span></a><ul>
 <li><a href="format-io.html" data-scroll="format-io" class="internal">Formatted Input and Output</a></li>
 <li><a href="format-scanf.html" data-scroll="format-scanf" class="internal">Understanding <code class="code-inline tex2jax_ignore">scanf()</code></a></li>
 <li><a href="format-style.html" data-scroll="format-style" class="internal">Program Style</a></li>
@@ -238,7 +258,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">12</span> <span class="title">Functions and Recursion</span></a><ul>
+<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">13</span> <span class="title">Functions and Recursion</span></a><ul>
 <li><a href="functions-single.html" data-scroll="functions-single" class="internal">Single Functions</a></li>
 <li><a href="functions-multiple.html" data-scroll="functions-multiple" class="internal">Multiple Functions</a></li>
 <li><a href="functions-practice.html" data-scroll="functions-practice" class="internal">Practice Your Functions!</a></li>
@@ -248,7 +268,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="loops.html" data-scroll="loops" class="internal"><span class="codenumber">13</span> <span class="title">Loops</span></a><ul>
+<a href="loops.html" data-scroll="loops" class="internal"><span class="codenumber">14</span> <span class="title">Loops</span></a><ul>
 <li><a href="loops-while.html" data-scroll="loops-while" class="internal">The <code class="code-inline tex2jax_ignore">while</code> Loop</a></li>
 <li><a href="loops-for-while.html" data-scroll="loops-for-while" class="active"><code class="code-inline tex2jax_ignore">for</code> vs. <code class="code-inline tex2jax_ignore">while</code> Loops</a></li>
 <li><a href="loops-do-while.html" data-scroll="loops-do-while" class="internal">The <code class="code-inline tex2jax_ignore">do-while</code>-Loop</a></li>
@@ -261,7 +281,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-server.html" data-scroll="part-server" class="internal"><span class="codenumber">IV</span> <span class="title">Server-Based Coding</span></a></li>
 <li class="link">
-<a href="linux.html" data-scroll="linux" class="internal"><span class="codenumber">14</span> <span class="title">Linux</span></a><ul>
+<a href="linux.html" data-scroll="linux" class="internal"><span class="codenumber">15</span> <span class="title">Linux</span></a><ul>
 <li><a href="linux-editor.html" data-scroll="linux-editor" class="internal">Install Software On Your Computer</a></li>
 <li><a href="linux-intro.html" data-scroll="linux-intro" class="internal">Introduction to Linux</a></li>
 <li><a href="linux-terminal.html" data-scroll="linux-terminal" class="internal">Connect to Server via Terminal Window</a></li>
@@ -278,7 +298,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="files.html" data-scroll="files" class="internal"><span class="codenumber">15</span> <span class="title">File I/O</span></a><ul>
+<a href="files.html" data-scroll="files" class="internal"><span class="codenumber">16</span> <span class="title">File I/O</span></a><ul>
 <li><a href="files-intro.html" data-scroll="files-intro" class="internal">File I/O Overview</a></li>
 <li><a href="files-read.html" data-scroll="files-read" class="internal">Reading from a File</a></li>
 <li><a href="files-read-practice.html" data-scroll="files-read-practice" class="internal">Practice Reading from Files</a></li>
@@ -290,7 +310,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="debug.html" data-scroll="debug" class="internal"><span class="codenumber">16</span> <span class="title">Software and Debugging</span></a><ul>
+<a href="debug.html" data-scroll="debug" class="internal"><span class="codenumber">17</span> <span class="title">Software and Debugging</span></a><ul>
 <li><a href="debug-software.html" data-scroll="debug-software" class="internal">Software Development</a></li>
 <li><a href="debug-code.html" data-scroll="debug-code" class="internal">Debugging Code</a></li>
 <li><a href="debug-conditional.html" data-scroll="debug-conditional" class="internal">Conditional Compilation</a></li>
@@ -302,7 +322,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-advanced.html" data-scroll="part-advanced" class="internal"><span class="codenumber">V</span> <span class="title">Advanced Concepts</span></a></li>
 <li class="link">
-<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">17</span> <span class="title">Arrays</span></a><ul>
+<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">18</span> <span class="title">Arrays</span></a><ul>
 <li><a href="array-integer.html" data-scroll="array-integer" class="internal">Arrays of Integers</a></li>
 <li><a href="array-other.html" data-scroll="array-other" class="internal">Arrays of Other Data Types</a></li>
 <li><a href="array-initialize.html" data-scroll="array-initialize" class="internal">Initializing Arrays</a></li>
@@ -312,7 +332,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="memory.html" data-scroll="memory" class="internal"><span class="codenumber">18</span> <span class="title">Memory</span></a><ul>
+<a href="memory.html" data-scroll="memory" class="internal"><span class="codenumber">19</span> <span class="title">Memory</span></a><ul>
 <li><a href="memory-space.html" data-scroll="memory-space" class="internal">Space Needed to Store Variables</a></li>
 <li><a href="memory-stack.html" data-scroll="memory-stack" class="internal">The Stack</a></li>
 <li><a href="memory-functions.html" data-scroll="memory-functions" class="internal">Functions And The Stack</a></li>
@@ -328,7 +348,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="pointers.html" data-scroll="pointers" class="internal"><span class="codenumber">19</span> <span class="title">Pointers</span></a><ul>
+<a href="pointers.html" data-scroll="pointers" class="internal"><span class="codenumber">20</span> <span class="title">Pointers</span></a><ul>
 <li><a href="pointers-address.html" data-scroll="pointers-address" class="internal">The Address of a Variable</a></li>
 <li><a href="pointers-dereference.html" data-scroll="pointers-dereference" class="internal">Dereferencing a Pointer</a></li>
 <li><a href="pointers-example.html" data-scroll="pointers-example" class="internal">Pointer Example</a></li>
@@ -345,7 +365,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="strings.html" data-scroll="strings" class="internal"><span class="codenumber">20</span> <span class="title">Strings</span></a><ul>
+<a href="strings.html" data-scroll="strings" class="internal"><span class="codenumber">21</span> <span class="title">Strings</span></a><ul>
 <li><a href="strings-intro.html" data-scroll="strings-intro" class="internal">Declaring and Initializing Strings</a></li>
 <li><a href="strings-assign.html" data-scroll="strings-assign" class="internal">Assign a New Value</a></li>
 <li><a href="strings-library.html" data-scroll="strings-library" class="internal">The String Library</a></li>
@@ -358,7 +378,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="malloc.html" data-scroll="malloc" class="internal"><span class="codenumber">21</span> <span class="title">Computer Memory Management</span></a><ul>
+<a href="malloc.html" data-scroll="malloc" class="internal"><span class="codenumber">22</span> <span class="title">Computer Memory Management</span></a><ul>
 <li><a href="malloc-intro.html" data-scroll="malloc-intro" class="internal"><code class="code-inline tex2jax_ignore">malloc()</code> - Dynamically Allocating Memory</a></li>
 <li><a href="malloc-free.html" data-scroll="malloc-free" class="internal"><code class="code-inline tex2jax_ignore">free()</code> - Releasing Dynamically Allocated Memory</a></li>
 <li><a href="malloc-array.html" data-scroll="malloc-array" class="internal">Allocate Memory for Arrays</a></li>
@@ -369,7 +389,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="sortsearch.html" data-scroll="sortsearch" class="internal"><span class="codenumber">22</span> <span class="title">Sorting and Searching</span></a><ul>
+<a href="sortsearch.html" data-scroll="sortsearch" class="internal"><span class="codenumber">23</span> <span class="title">Sorting and Searching</span></a><ul>
 <li><a href="sortsearch-linear.html" data-scroll="sortsearch-linear" class="internal">Linear Search</a></li>
 <li><a href="sortsearch-bisection.html" data-scroll="sortsearch-bisection" class="internal">Bisection Search</a></li>
 <li><a href="sortsearch-linear-practice.html" data-scroll="sortsearch-linear-practice" class="internal">Linear Search Practice</a></li>
@@ -384,10 +404,10 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="la2.html" data-scroll="la2" class="internal"><span class="codenumber">23</span> <span class="title">Long Assignment 2</span></a><ul><li><a href="la2-menu.html" data-scroll="la2-menu" class="internal">LA2: Menu Selection</a></li></ul>
+<a href="la2.html" data-scroll="la2" class="internal"><span class="codenumber">24</span> <span class="title">Long Assignment 2</span></a><ul><li><a href="la2-menu.html" data-scroll="la2-menu" class="internal">LA2: Menu Selection</a></li></ul>
 </li>
 <li class="link">
-<a href="multiarray.html" data-scroll="multiarray" class="internal"><span class="codenumber">24</span> <span class="title">Multidimensional Arrays</span></a><ul>
+<a href="multiarray.html" data-scroll="multiarray" class="internal"><span class="codenumber">25</span> <span class="title">Multidimensional Arrays</span></a><ul>
 <li><a href="multiarray-strings.html" data-scroll="multiarray-strings" class="internal">Arrays of Strings</a></li>
 <li><a href="multiarray-matrices.html" data-scroll="multiarray-matrices" class="internal">Matrices</a></li>
 <li><a href="multiarray-initialize.html" data-scroll="multiarray-initialize" class="internal">Initializing Multidimensional Arrays</a></li>
@@ -398,7 +418,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="link part"><a href="part-enriched.html" data-scroll="part-enriched" class="internal"><span class="codenumber">VI</span> <span class="title">Enriched Concepts</span></a></li>
 <li class="link">
-<a href="structures.html" data-scroll="structures" class="internal"><span class="codenumber">25</span> <span class="title">Structures</span></a><ul>
+<a href="structures.html" data-scroll="structures" class="internal"><span class="codenumber">26</span> <span class="title">Structures</span></a><ul>
 <li><a href="structures-intro.html" data-scroll="structures-intro" class="internal">Intro to Structures</a></li>
 <li><a href="structures-typedef.html" data-scroll="structures-typedef" class="internal"><code class="code-inline tex2jax_ignore">typedef</code></a></li>
 <li><a href="structures-frac-calc.html" data-scroll="structures-frac-calc" class="internal">The Fraction Calculator Using Structures</a></li>
@@ -408,7 +428,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="arraystruct.html" data-scroll="arraystruct" class="internal"><span class="codenumber">26</span> <span class="title">Arrays of Structures</span></a><ul>
+<a href="arraystruct.html" data-scroll="arraystruct" class="internal"><span class="codenumber">27</span> <span class="title">Arrays of Structures</span></a><ul>
 <li><a href="arraystruct-operators.html" data-scroll="arraystruct-operators" class="internal">Operator Precedence</a></li>
 <li><a href="arraystruct-structures.html" data-scroll="arraystruct-structures" class="internal">Arrays of Structures</a></li>
 <li><a href="arraystruct-triangle.html" data-scroll="arraystruct-triangle" class="internal">Arrays of Structures: Triangle</a></li>
@@ -418,7 +438,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="linkedlists.html" data-scroll="linkedlists" class="internal"><span class="codenumber">27</span> <span class="title">Linked Lists</span></a><ul>
+<a href="linkedlists.html" data-scroll="linkedlists" class="internal"><span class="codenumber">28</span> <span class="title">Linked Lists</span></a><ul>
 <li><a href="linkedlists-intro.html" data-scroll="linkedlists-intro" class="internal">Intro to Linked Lists</a></li>
 <li><a href="linkedlists-functions.html" data-scroll="linkedlists-functions" class="internal">Pass Linked Lists to Functions</a></li>
 <li><a href="linkedlists-autolink.html" data-scroll="linkedlists-autolink" class="internal">Automate the Linking Process</a></li>
@@ -436,7 +456,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="link">
-<a href="libraries.html" data-scroll="libraries" class="internal"><span class="codenumber">28</span> <span class="title">Libraries</span></a><ul>
+<a href="libraries.html" data-scroll="libraries" class="internal"><span class="codenumber">29</span> <span class="title">Libraries</span></a><ul>
 <li><a href="libraries-intro.html" data-scroll="libraries-intro" class="internal">Intro to Libraries</a></li>
 <li><a href="libraries-components.html" data-scroll="libraries-components" class="internal">Library Components</a></li>
 <li><a href="libraries-header.html" data-scroll="libraries-header" class="internal">Making Our Own Library - Header File</a></li>
@@ -462,61 +482,61 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdHJlbWz2sc8DrOMYa81E5mRqDKIgulXXfqEq-d48TcuzL9mw/viewform?usp=sf_link" target="_blank">Report Errors</a><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="loops-for-while"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">13.2</span> <span class="title"><code class="code-inline tex2jax_ignore">for</code> vs. <code class="code-inline tex2jax_ignore">while</code> Loops</span>
+<span class="type">Section</span> <span class="codenumber">14.2</span> <span class="title"><code class="code-inline tex2jax_ignore">for</code> vs. <code class="code-inline tex2jax_ignore">while</code> Loops</span>
 </h2>
-<p id="p-801">Though <code class="code-inline tex2jax_ignore">for</code>- and <code class="code-inline tex2jax_ignore">while</code>-loops can accomplish the same tasks, both have certain benefits and drawbacks. Here, we compare the syntaxes of both loops and discuss situations and scenarios in which one loop is preferable over the other.</p>
-<p id="p-802"><code class="code-inline tex2jax_ignore">for</code>-loop syntax:</p>
+<p id="p-818">Though <code class="code-inline tex2jax_ignore">for</code>- and <code class="code-inline tex2jax_ignore">while</code>-loops can accomplish the same tasks, both have certain benefits and drawbacks. Here, we compare the syntaxes of both loops and discuss situations and scenarios in which one loop is preferable over the other.</p>
+<p id="p-819"><code class="code-inline tex2jax_ignore">for</code>-loop syntax:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">for (initialization; loop run condition; update) {
     statements...;
 }
 </code></pre></div>
-<p id="p-803">At the very start of the loop (before any kind of repetition is entered) the initialization statement is executed. This happens exactly once. At the start of every repetition the loop condition is checked. If it evaluates to <code class="code-inline tex2jax_ignore">true</code> then the actual loop statements are executed once. Afterwards, the update statement is executed and next, the loop run condition is checked again. If still true, the loop statements are executed again, etc.</p>
-<p id="p-804">Example:</p>
+<p id="p-820">At the very start of the loop (before any kind of repetition is entered) the initialization statement is executed. This happens exactly once. At the start of every repetition the loop condition is checked. If it evaluates to <code class="code-inline tex2jax_ignore">true</code> then the actual loop statements are executed once. Afterwards, the update statement is executed and next, the loop run condition is checked again. If still true, the loop statements are executed again, etc.</p>
+<p id="p-821">Example:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">for (i=10; i&gt;5; i--) {
     printf("i = %d\n", i); 
 }
 </code></pre></div>
-<p id="p-805">In this example, <code class="code-inline tex2jax_ignore">i</code> is initialized with the value 10 right before the start of the loop. Next, the logic statement <code class="code-inline tex2jax_ignore">i&gt;5</code> is evaluated, and since 10 is indeed greater than 5, the loop is entered. The <code class="code-inline tex2jax_ignore">printf()</code> statement prints<pre class="code-block tex2jax_ignore">i = 10
+<p id="p-822">In this example, <code class="code-inline tex2jax_ignore">i</code> is initialized with the value 10 right before the start of the loop. Next, the logic statement <code class="code-inline tex2jax_ignore">i&gt;5</code> is evaluated, and since 10 is indeed greater than 5, the loop is entered. The <code class="code-inline tex2jax_ignore">printf()</code> statement prints<pre class="code-block tex2jax_ignore">i = 10
 </pre>to the screen. Next, the update statement <code class="code-inline tex2jax_ignore">i--</code> is executed, decreasing the value of <code class="code-inline tex2jax_ignore">i</code> to 9. The loop condition is checked (9 is still greater than 5) and so<pre class="code-block tex2jax_ignore">i = 9
 </pre>is printed to the screen. <code class="code-inline tex2jax_ignore">i</code> is next decreased to 8, loop condition checked, etc. This continues on until<pre class="code-block tex2jax_ignore">i = 6
 </pre>is printed to the screen. When <code class="code-inline tex2jax_ignore">i</code> is next decreased to 5, the check of the loop condition evaluates to false since 5 is not greater than 5. The loop terminates with the loop counter having the value 5.</p>
-<p id="p-806"><code class="code-inline tex2jax_ignore">while</code>-loop syntax:</p>
+<p id="p-823"><code class="code-inline tex2jax_ignore">while</code>-loop syntax:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">while (condition) { 
     statements...; 
 }
 </code></pre></div>
-<p id="p-807">At the start of every run through the loop, the condition is checked and only if it evaluates to true are the statements in the loop body executed. It is the programmer's job to build in an update condition into these statements so that eventually the loop condition will evaluate to false, causing the loop to terminate. It is really easy to forget to do this, leading to a never-ending loop...</p>
-<p id="p-808">Example:</p>
+<p id="p-824">At the start of every run through the loop, the condition is checked and only if it evaluates to true are the statements in the loop body executed. It is the programmer's job to build in an update condition into these statements so that eventually the loop condition will evaluate to false, causing the loop to terminate. It is really easy to forget to do this, leading to a never-ending loop...</p>
+<p id="p-825">Example:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">i=10; 
 while (i&gt;5) {
     printf("i = %d\n", i);
     i--; 
 }
 </code></pre></div>
-<p id="p-809">This loop generates the exact same output as the above <code class="code-inline tex2jax_ignore">for</code> loop. Notice that you have to explicitly initialize <code class="code-inline tex2jax_ignore">i</code> on your own before the loop and program the update condition <code class="code-inline tex2jax_ignore">i--;</code> as part of the loop body.</p>
-<p id="p-810">In general:</p>
+<p id="p-826">This loop generates the exact same output as the above <code class="code-inline tex2jax_ignore">for</code> loop. Notice that you have to explicitly initialize <code class="code-inline tex2jax_ignore">i</code> on your own before the loop and program the update condition <code class="code-inline tex2jax_ignore">i--;</code> as part of the loop body.</p>
+<p id="p-827">In general:</p>
 <ul class="disc">
 <li id="li-404"><p id="p-derived-li-404">Use a <code class="code-inline tex2jax_ignore">for</code>-loop when you have a known number of iterations.</p></li>
 <li id="li-405"><p id="p-derived-li-405">Use a <code class="code-inline tex2jax_ignore">while</code>-loop when you have an unspecified number of iterations.</p></li>
 </ul>
 <article class="example example-like" id="example-16"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-16"><h3 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-811">Would a <code class="code-inline tex2jax_ignore">for</code>- or <code class="code-inline tex2jax_ignore">while</code>-loop be more efficient to implement in the following scenario?</p>
-<p id="p-812"><em class="emphasis">In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.</em></p>
+<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">14.1</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like"><p id="p-828">Would a <code class="code-inline tex2jax_ignore">for</code>- or <code class="code-inline tex2jax_ignore">while</code>-loop be more efficient to implement in the following scenario?</p>
+<p id="p-829"><em class="emphasis">In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.</em></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-813">A <code class="code-inline tex2jax_ignore">while</code>-loop</p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><p id="p-814">Though this task could technically be accomplished with either type of loop, a <code class="code-inline tex2jax_ignore">while</code>-loop would be more efficient to use, since you don't know how many times the user will input information before that certain "stop" integer is entered. With a <code class="code-inline tex2jax_ignore">for</code>-loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A <code class="code-inline tex2jax_ignore">while</code>-loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain "stop" integer being entered.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-830">A <code class="code-inline tex2jax_ignore">while</code>-loop</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><p id="p-831">Though this task could technically be accomplished with either type of loop, a <code class="code-inline tex2jax_ignore">while</code>-loop would be more efficient to use, since you don't know how many times the user will input information before that certain "stop" integer is entered. With a <code class="code-inline tex2jax_ignore">for</code>-loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A <code class="code-inline tex2jax_ignore">while</code>-loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain "stop" integer being entered.</p></div></div>
 </div></article></div>
-<p id="p-815">Clearly, the following would be difficult to accomplish with a <code class="code-inline tex2jax_ignore">for</code>-loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.</p>
+<p id="p-832">Clearly, the following would be difficult to accomplish with a <code class="code-inline tex2jax_ignore">for</code>-loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nloop9.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop9.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop9.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-816">In the previous example, we had to type the <code class="code-inline tex2jax_ignore">scanf()</code> statement twice: once to read the user input and then one more time in case they entered something negative by accident. This is not the most elegant code (though perfectly acceptable). So there is a third kind of loop that helps in such a case, the <code class="code-inline tex2jax_ignore">do-while</code>-loop:</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop9.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-833">In the previous example, we had to type the <code class="code-inline tex2jax_ignore">scanf()</code> statement twice: once to read the user input and then one more time in case they entered something negative by accident. This is not the most elegant code (though perfectly acceptable). So there is a third kind of loop that helps in such a case, the <code class="code-inline tex2jax_ignore">do-while</code>-loop:</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nloop10.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop10.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop10.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-817">Unlike our previous two types of loops, a <code class="code-inline tex2jax_ignore">do-while</code> loop is guaranteed to execute its loop body at least once since it doesn't get around to checking the loop condition until after execution of the loop body.</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop10.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-834">Unlike our previous two types of loops, a <code class="code-inline tex2jax_ignore">do-while</code> loop is guaranteed to execute its loop body at least once since it doesn't get around to checking the loop condition until after execution of the loop body.</p>
 <article class="example example-like" id="example-17"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-17"><h3 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-818">What differences between <code class="code-inline tex2jax_ignore">while</code>-loops and <code class="code-inline tex2jax_ignore">do-while</code>-loops do you notice? Are there any similarities in their syntaxes?</p>
+<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">14.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-835">What differences between <code class="code-inline tex2jax_ignore">while</code>-loops and <code class="code-inline tex2jax_ignore">do-while</code>-loops do you notice? Are there any similarities in their syntaxes?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-819">We'll look into the <code class="code-inline tex2jax_ignore">do-while</code>-loop in the next section!</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-836">We'll look into the <code class="code-inline tex2jax_ignore">do-while</code>-loop in the next section!</p></div></div>
 </div></article></div></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
