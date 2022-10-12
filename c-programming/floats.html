@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="integers-summary.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-digitalrep.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="floats-intro.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="integers-summary.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-digitalrep.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="floats-intro.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,9 +478,9 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="floats"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">7</span> <span class="title">Floats and Converting</span>
 </h2>
-<section class="introduction" id="introduction-6"><p id="p-549">Previously, we learned how integers are stored in the computer's memory, but what happens if we want to store numbers with digits after the decimal point, such as floats? In this chapter, we will take a look at how these floating point numbers are stored in memory.</p>
-<p id="p-550">Next, we will investigate how to switch a number of one datatype to that of another. After all, the integer 5 for example could also be written as the float 5.0. In the computer's memory, the 5 would be stored in binary 2's complement whereas the 5.0 would be stored in a totally different fashion (which we'll learn about in this lesson). We have seen that a number's datatype affects how arithmetic is performed (recall the strange division behavior in C? 5/2 = 2 but 5.0/2.0 = 1.5?) That's why it's necessary to know how to convert the datatype for example from an <code class="code-inline tex2jax_ignore">int</code> to a <code class="code-inline tex2jax_ignore">float</code> in C. This process is called <em class="alert">casting</em>.</p>
-<p id="p-551">Using floats, we can take on some simple mathematical calculations such as averages, without fear of running into the strange division behavior, such as averages.</p></section><nav class="summary-links"><ul>
+<section class="introduction" id="introduction-6"><p id="p-558">Previously, we learned how integers are stored in the computer's memory, but what happens if we want to store numbers with digits after the decimal point, such as floats? In this chapter, we will take a look at how these floating point numbers are stored in memory.</p>
+<p id="p-559">Next, we will investigate how to switch a number of one datatype to that of another. After all, the integer 5 for example could also be written as the float 5.0. In the computer's memory, the 5 would be stored in binary 2's complement whereas the 5.0 would be stored in a totally different fashion (which we'll learn about in this lesson). We have seen that a number's datatype affects how arithmetic is performed (recall the strange division behavior in C? 5/2 = 2 but 5.0/2.0 = 1.5?) That's why it's necessary to know how to convert the datatype for example from an <code class="code-inline tex2jax_ignore">int</code> to a <code class="code-inline tex2jax_ignore">float</code> in C. This process is called <em class="alert">casting</em>.</p>
+<p id="p-560">Using floats, we can take on some simple mathematical calculations such as averages, without fear of running into the strange division behavior, such as averages.</p></section><nav class="summary-links"><ul>
 <li><a href="floats-intro.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Digital Representation of Floats</span></a></li>
 <li><a href="floats-int-to-float.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Converting Integers to Floats</span></a></li>
 <li><a href="floats-float-to-int.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Converting Floats to Integers</span></a></li>

@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="pointers-address.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="pointers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="pointers-example.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="pointers-address.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="pointers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="pointers-example.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,37 +478,37 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="pointers-dereference"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">20.2</span> <span class="title">Dereferencing a Pointer</span>
 </h2>
-<p id="p-1182">We will now explore how the concept of pointers (addresses) can be used to modify the value of a variable inside a function, despite the fact that the variable's scope does not extend to that function.</p>
+<p id="p-1191">We will now explore how the concept of pointers (addresses) can be used to modify the value of a variable inside a function, despite the fact that the variable's scope does not extend to that function.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519142414918" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519142414918" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-46"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1183" class="disc">
-<li id="li-643"><p id="p-derived-li-643">Passing variables to functions "by reference" (via their address)</p></li>
-<li id="li-644"><p id="p-derived-li-644">To change a variable's value whose address is stored in <code class="code-inline tex2jax_ignore">var</code>, use <code class="code-inline tex2jax_ignore">*var = *var + 10;</code>, which (for example) would add 10 to the value of original variable passed to the function by reference</p></li>
-<li id="li-645"><p id="p-derived-li-645">Passing a variable to a function by reference allows the variable to be used and updated in the function</p></li>
+<ul id="p-1192" class="disc">
+<li id="li-638"><p id="p-derived-li-638">Passing variables to functions "by reference" (via their address)</p></li>
+<li id="li-639"><p id="p-derived-li-639">To change a variable's value whose address is stored in <code class="code-inline tex2jax_ignore">var</code>, use <code class="code-inline tex2jax_ignore">*var = *var + 10;</code>, which (for example) would add 10 to the value of original variable passed to the function by reference</p></li>
+<li id="li-640"><p id="p-derived-li-640">Passing a variable to a function by reference allows the variable to be used and updated in the function</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-46"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-pointers-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1184">You want to write a function that increases the integer value stored in a variable num by one. Given the following function definition, what is the correct function call? Assume that a variable num of type int has been declared and initialized.</p>
+<p id="p-1193">You want to write a function that increases the integer value stored in a variable num by one. Given the following function definition, what is the correct function call? Assume that a variable num of type int has been declared and initialized.</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void increasebyone(int *a)
 {
   *a = *a + 1;
 }
 </code></pre></div>
-<p id="p-1185"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p>
+<p id="p-1194"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" frameborder="0" width="100%" height="400"></iframe><ol class="lower-alpha">
-<li id="li-646"><pre class="code-block tex2jax_ignore">increasebyone(*num);
+<li id="li-641"><pre class="code-block tex2jax_ignore">increasebyone(*num);
 </pre></li>
-<li id="li-647"><pre class="code-block tex2jax_ignore">increasebyone(&amp;num);
+<li id="li-642"><pre class="code-block tex2jax_ignore">increasebyone(&amp;num);
 </pre></li>
-<li id="li-648"><pre class="code-block tex2jax_ignore">increasebyone(num);
+<li id="li-643"><pre class="code-block tex2jax_ignore">increasebyone(num);
 </pre></li>
-<li id="li-649"><pre class="code-block tex2jax_ignore">num = increasebyone(&amp;num);
+<li id="li-644"><pre class="code-block tex2jax_ignore">num = increasebyone(&amp;num);
 </pre></li>
 </ol>
-<p id="p-1186"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-pointers-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1187">What does the following piece of code do?</p>
+<p id="p-1195"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-pointers-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1196">What does the following piece of code do?</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">float num = 5.0;
 float *pointer;
 
@@ -522,12 +517,12 @@ pointer = &amp;num;
 printf("%f", *pointer);
 </code></pre></div>
 <ol class="lower-alpha">
-<li id="li-650"><p id="p-derived-li-650">This code prints out the number 5.000000 to the default output.</p></li>
-<li id="li-651"><p id="p-derived-li-651">This code prints out the address of the variable pointer to the default output.</p></li>
-<li id="li-652"><p id="p-derived-li-652">This code prints out the number 6.000000 to the default output.</p></li>
-<li id="li-653"><p id="p-derived-li-653">This code prints the address of the variable num to the default output.</p></li>
+<li id="li-645"><p id="p-derived-li-645">This code prints out the number 5.000000 to the default output.</p></li>
+<li id="li-646"><p id="p-derived-li-646">This code prints out the address of the variable pointer to the default output.</p></li>
+<li id="li-647"><p id="p-derived-li-647">This code prints out the number 6.000000 to the default output.</p></li>
+<li id="li-648"><p id="p-derived-li-648">This code prints the address of the variable num to the default output.</p></li>
 </ol>
-<p id="p-1188"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+<p id="p-1197"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

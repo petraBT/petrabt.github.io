@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="libraries.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="libraries.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="libraries-components.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="libraries.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="libraries.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="libraries-components.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,25 +478,25 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="libraries-intro"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">29.1</span> <span class="title">Intro to Libraries</span>
 </h2>
-<p id="p-1678">Now that we have created our own data types and functions that allow us to manipulate instances of objects of these new types it is common to package such functions as a <em class="alert">library</em>. Take as an example our arbitrarily large integers. In order to allow others to use these numbers in their code it would make sense to “hide” and package up all the work and messiness that goes into creating such a number. You'd probably even want to provide some additional functionality such as adding, subtracting, multiplying, dividing two such number and then hand all that to a user who just wants to be able to work with really large numbers (but has no interest in how you implemented that functionality). That's where libraries come in.</p>
-<p id="p-1679">We have actually already encountered libraries in our work, for example the standard input/output library <code class="code-inline tex2jax_ignore">stdio</code>, the standard library <code class="code-inline tex2jax_ignore">stdlib</code> and the math library <code class="code-inline tex2jax_ignore">math</code>. Each such library actually comes with two files, one ending in <code class="code-inline tex2jax_ignore">.h</code> (the so-called <em class="emphasis">header file</em>) and one ending in <code class="code-inline tex2jax_ignore">.o</code> (the so-called <em class="emphasis">object file</em>.</p>
-<p id="p-1680">The <em class="alert">header file</em> contains all of the prototypes of functions from the library (remember, the compiler needs to know about these prototypes so that it can check whether you are using your functions correctly). That's why we need to <code class="code-inline tex2jax_ignore">#include ...</code> the header files of those libraries whose functions we wish to invoke in our code.</p>
-<p id="p-1681">The <em class="alert">object file</em> contains the actual library functions in machine language. It's already been translated by the compiler so that when you build your program you don't have to compile the entire library each time around. You can simply <em class="alert">link</em> the translated code contained in the library object file to your own code (that's what the <em class="alert">linker</em> does.)</p>
-<p id="p-1682">So here is an example. Suppose you are writing a C-program <code class="code-inline tex2jax_ignore">coolProgram.c</code> that uses functions from the two libraries <code class="code-inline tex2jax_ignore">stdio</code> and <code class="code-inline tex2jax_ignore">math</code>. In order for the compiler to have access to all of the function prototypes from these libraries, we need to:</p>
+<p id="p-1687">Now that we have created our own data types and functions that allow us to manipulate instances of objects of these new types it is common to package such functions as a <em class="alert">library</em>. Take as an example our arbitrarily large integers. In order to allow others to use these numbers in their code it would make sense to “hide” and package up all the work and messiness that goes into creating such a number. You'd probably even want to provide some additional functionality such as adding, subtracting, multiplying, dividing two such number and then hand all that to a user who just wants to be able to work with really large numbers (but has no interest in how you implemented that functionality). That's where libraries come in.</p>
+<p id="p-1688">We have actually already encountered libraries in our work, for example the standard input/output library <code class="code-inline tex2jax_ignore">stdio</code>, the standard library <code class="code-inline tex2jax_ignore">stdlib</code> and the math library <code class="code-inline tex2jax_ignore">math</code>. Each such library actually comes with two files, one ending in <code class="code-inline tex2jax_ignore">.h</code> (the so-called <em class="emphasis">header file</em>) and one ending in <code class="code-inline tex2jax_ignore">.o</code> (the so-called <em class="emphasis">object file</em>.</p>
+<p id="p-1689">The <em class="alert">header file</em> contains all of the prototypes of functions from the library (remember, the compiler needs to know about these prototypes so that it can check whether you are using your functions correctly). That's why we need to <code class="code-inline tex2jax_ignore">#include ...</code> the header files of those libraries whose functions we wish to invoke in our code.</p>
+<p id="p-1690">The <em class="alert">object file</em> contains the actual library functions in machine language. It's already been translated by the compiler so that when you build your program you don't have to compile the entire library each time around. You can simply <em class="alert">link</em> the translated code contained in the library object file to your own code (that's what the <em class="alert">linker</em> does.)</p>
+<p id="p-1691">So here is an example. Suppose you are writing a C-program <code class="code-inline tex2jax_ignore">coolProgram.c</code> that uses functions from the two libraries <code class="code-inline tex2jax_ignore">stdio</code> and <code class="code-inline tex2jax_ignore">math</code>. In order for the compiler to have access to all of the function prototypes from these libraries, we need to:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
 </code></pre></div>
-<p id="p-1683">Once your program compiles without any compiler errors, the compiler produces an object file <code class="code-inline tex2jax_ignore">coolProgram.o</code>, which is your code, translated into machine language. Next, the linker starts its job and finds the object files that contain the input/output functions and math functions used in your program, namely <code class="code-inline tex2jax_ignore">stdio.o</code> and <code class="code-inline tex2jax_ignore">math.o</code>. These object files contain all of these functions already compiled into machine language. The linker then links (packages) these object files together with the object file <code class="code-inline tex2jax_ignore">coolProgram.o</code> of the program you are writing, and if all goes well, an <em class="alert">executable file</em> results.</p>
+<p id="p-1692">Once your program compiles without any compiler errors, the compiler produces an object file <code class="code-inline tex2jax_ignore">coolProgram.o</code>, which is your code, translated into machine language. Next, the linker starts its job and finds the object files that contain the input/output functions and math functions used in your program, namely <code class="code-inline tex2jax_ignore">stdio.o</code> and <code class="code-inline tex2jax_ignore">math.o</code>. These object files contain all of these functions already compiled into machine language. The linker then links (packages) these object files together with the object file <code class="code-inline tex2jax_ignore">coolProgram.o</code> of the program you are writing, and if all goes well, an <em class="alert">executable file</em> results.</p>
 <article class="activity project-like" id="activity-134"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">29.1</span><span class="period">.</span>
 </h3>
-<p id="p-1684">Which of the following are part of a library?</p>
+<p id="p-1693">Which of the following are part of a library?</p>
 <ol class="decimal">
-<li id="li-937"><p id="p-derived-li-937">a header file</p></li>
-<li id="li-938"><p id="p-derived-li-938">an object file</p></li>
-<li id="li-939"><p id="p-derived-li-939">source code</p></li>
+<li id="li-932"><p id="p-derived-li-932">a header file</p></li>
+<li id="li-933"><p id="p-derived-li-933">an object file</p></li>
+<li id="li-934"><p id="p-derived-li-934">source code</p></li>
 </ol>
-<p id="p-1685"><em class="emphasis">Please paste your text submission into the box below, then select <code class="code-inline tex2jax_ignore">Run</code> to submit it:</em></p>
+<p id="p-1694"><em class="emphasis">Please paste your text submission into the box below, then select <code class="code-inline tex2jax_ignore">Run</code> to submit it:</em></p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div></article></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>

@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="arraystruct-operators.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="arraystruct.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="arraystruct-triangle.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="arraystruct-operators.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="arraystruct.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="arraystruct-triangle.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,19 +478,19 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="arraystruct-structures"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">27.2</span> <span class="title">Arrays of Structures</span>
 </h2>
-<p id="p-1576">We'll now look at storing  multiple structures in an array. As an example you might think of creating a record (structure) for each student in a class, consisting of the student's name, year of birth and GPA. You could then store the information for all students  in a class in an array with each array elements being a student structure. You'd thus have an array of structures.</p>
-<p id="p-1577">Let's practice! Rather than using student data, in today's class we'd like to store the vertices of a polygon in an array of structures. Each vertex consists of an x- and a y-coordinate. In order to efficiently store these coordinates for a point we'll define a new structure, called <code class="code-inline tex2jax_ignore">point_t</code>, that stores these coordinates for a given point. The code window below already has such a structure defined.</p>
+<p id="p-1585">We'll now look at storing  multiple structures in an array. As an example you might think of creating a record (structure) for each student in a class, consisting of the student's name, year of birth and GPA. You could then store the information for all students  in a class in an array with each array elements being a student structure. You'd thus have an array of structures.</p>
+<p id="p-1586">Let's practice! Rather than using student data, in today's class we'd like to store the vertices of a polygon in an array of structures. Each vertex consists of an x- and a y-coordinate. In order to efficiently store these coordinates for a point we'll define a new structure, called <code class="code-inline tex2jax_ignore">point_t</code>, that stores these coordinates for a given point. The code window below already has such a structure defined.</p>
 <article class="activity project-like" id="activity-118"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">27.1</span><span class="period">.</span>
 </h3>
-<p id="p-1578">Let's warm up by quickly writing some functions that serve to assign values to a variable of type <code class="code-inline tex2jax_ignore">point_t</code> and print the coordinates of a variable of type <code class="code-inline tex2jax_ignore">point_t</code>.</p>
-<p id="p-1579">More specifically:</p>
+<p id="p-1587">Let's warm up by quickly writing some functions that serve to assign values to a variable of type <code class="code-inline tex2jax_ignore">point_t</code> and print the coordinates of a variable of type <code class="code-inline tex2jax_ignore">point_t</code>.</p>
+<p id="p-1588">More specifically:</p>
 <ul class="disc">
-<li id="li-864"><p id="p-derived-li-864">write a function <code class="code-inline tex2jax_ignore">initializePoint()</code> to which you pass a variable of type <code class="code-inline tex2jax_ignore">point_t</code> (by reference) along with two floats, and that assigns the first float to the x-coordinate and the second float to the y-coordinate of the point.</p></li>
-<li id="li-865"><p id="p-derived-li-865">write a function <code class="code-inline tex2jax_ignore">printPoint()</code> to which you pass a variable of type <code class="code-inline tex2jax_ignore">point_t</code> (by value) and that prints out the coordinates of the variable in the form (x,y).</p></li>
+<li id="li-859"><p id="p-derived-li-859">write a function <code class="code-inline tex2jax_ignore">initializePoint()</code> to which you pass a variable of type <code class="code-inline tex2jax_ignore">point_t</code> (by reference) along with two floats, and that assigns the first float to the x-coordinate and the second float to the y-coordinate of the point.</p></li>
+<li id="li-860"><p id="p-derived-li-860">write a function <code class="code-inline tex2jax_ignore">printPoint()</code> to which you pass a variable of type <code class="code-inline tex2jax_ignore">point_t</code> (by value) and that prints out the coordinates of the variable in the form (x,y).</p></li>
 </ul>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NarraysOfStructures.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" frameborder="0" width="100%" height="700"></iframe><p id="p-1580"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></p></article></section></div></main>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" frameborder="0" width="100%" height="700"></iframe><p id="p-1589"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></p></article></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

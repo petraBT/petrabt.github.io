@@ -12,10 +12,17 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<p>Loops are used to repeat instructions multiple times. Example: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i;
-for (i=0; i&lt;3; i++) {  
-    printf("Hello! ");
-    printf("Hi!\n");
+<p>Comments are important throughout your code. Comments can be included in your code by enclosing them in <code class="code-inline tex2jax_ignore">/* ... */</code> or by using <code class="code-inline tex2jax_ignore">//</code>. Example: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int main(void) {
+    int i; /* This is a comment. */
+    /* This is also a comment. */
+    /* A comment
+       can go over
+       multiple lines.
+    */
+    for (i=0; i&lt;3; i++) {  
+        printf("Hello! "); // This comment ignores the remainder of the line.
+        printf("Hi!\n");
+    }
 }
 </code></pre></div></p>
 <span class="incontext"><a href="firstprogram-summary.html#p-291" class="internal">in-context</a></span>

@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="arraystruct-summary.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-enriched.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linkedlists-intro.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="arraystruct-summary.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-enriched.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linkedlists-intro.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,19 +478,19 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="linkedlists"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">28</span> <span class="title">Linked Lists</span>
 </h2>
-<section class="introduction" id="introduction-28"><p id="p-1601">So far we have used arrays to store multiple items of the same data type. There are several situations you can imagine in which this is not ideal. Here are two such scenarios:</p>
+<section class="introduction" id="introduction-28"><p id="p-1610">So far we have used arrays to store multiple items of the same data type. There are several situations you can imagine in which this is not ideal. Here are two such scenarios:</p>
 <ul class="disc">
-<li id="li-870"><p id="p-derived-li-870">One problem with this method is that you have to declare the array in question (in your code with a fixed size or at runtime using dynamic memory allocation) and whichever way you do so, by the time you first use the array its length is locked in. Then what are you options if your array is full and you wish to add in another record? The only choice would be to ask for space for a bigger array, copy all of the information over and then add the new record. This is not exactly efficient.</p></li>
-<li id="li-871"><p id="p-derived-li-871">Next, imagine that your array contains records that have been sorted by some criterion. Suppose you wanted to add a new record, and it would have to go somewhere in the middle of your array in order to maintain the sorting. You'd then have to move over all of the records that need to come after the new record in order to make room for the new record. Again, this is not a very efficient way to go about things.</p></li>
+<li id="li-865"><p id="p-derived-li-865">One problem with this method is that you have to declare the array in question (in your code with a fixed size or at runtime using dynamic memory allocation) and whichever way you do so, by the time you first use the array its length is locked in. Then what are you options if your array is full and you wish to add in another record? The only choice would be to ask for space for a bigger array, copy all of the information over and then add the new record. This is not exactly efficient.</p></li>
+<li id="li-866"><p id="p-derived-li-866">Next, imagine that your array contains records that have been sorted by some criterion. Suppose you wanted to add a new record, and it would have to go somewhere in the middle of your array in order to maintain the sorting. You'd then have to move over all of the records that need to come after the new record in order to make room for the new record. Again, this is not a very efficient way to go about things.</p></li>
 </ul>
-<p id="p-1602">This is where linked lists might present a better way to store your data. A linked list provides a linear ordering of records without them having to be physically arranged that way in memory. In other words, rather than using the records' arrangement in memory to determine their ordering, each record keeps track of the location of the record that is to follow it in the linear ordering. This will all become clear shortly.</p>
-<p id="p-1603">In this chapter, we will cover the following topics:</p>
+<p id="p-1611">This is where linked lists might present a better way to store your data. A linked list provides a linear ordering of records without them having to be physically arranged that way in memory. In other words, rather than using the records' arrangement in memory to determine their ordering, each record keeps track of the location of the record that is to follow it in the linear ordering. This will all become clear shortly.</p>
+<p id="p-1612">In this chapter, we will cover the following topics:</p>
 <ul class="disc">
-<li id="li-872"><p id="p-derived-li-872">Linked lists</p></li>
-<li id="li-873"><p id="p-derived-li-873">Passing linked lists to functions</p></li>
-<li id="li-874"><p id="p-derived-li-874">Simplifying and automating the creation of linked lists</p></li>
-<li id="li-875"><p id="p-derived-li-875">Using linked lists to store extremely large numbers</p></li>
-<li id="li-876"><p id="p-derived-li-876">Manipulating linked lists (i.e. search, sort, reverse)</p></li>
+<li id="li-867"><p id="p-derived-li-867">Linked lists</p></li>
+<li id="li-868"><p id="p-derived-li-868">Passing linked lists to functions</p></li>
+<li id="li-869"><p id="p-derived-li-869">Simplifying and automating the creation of linked lists</p></li>
+<li id="li-870"><p id="p-derived-li-870">Using linked lists to store extremely large numbers</p></li>
+<li id="li-871"><p id="p-derived-li-871">Manipulating linked lists (i.e. search, sort, reverse)</p></li>
 </ul></section><nav class="summary-links"><ul>
 <li><a href="linkedlists-intro.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Intro to Linked Lists</span></a></li>
 <li><a href="linkedlists-functions.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Pass Linked Lists to Functions</span></a></li>

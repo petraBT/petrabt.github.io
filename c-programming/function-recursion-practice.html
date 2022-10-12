@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="functions-recursion.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="functions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="functions-summary.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="functions-recursion.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="functions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="functions-summary.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,16 +478,16 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="function-recursion-practice"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">13.5</span> <span class="title">Practice Your Recursion!</span>
 </h2>
-<p id="p-791">Pick one of the three options below to try!</p>
+<p id="p-800">Pick one of the three options below to try!</p>
 <section class="subsection" id="subsection-30"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">13.5.1</span> <span class="title">Practice 1</span>
 </h3>
 <article class="activity project-like" id="activity-41"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
 </h4>
-<p id="p-792">Write a function <code class="code-inline tex2jax_ignore">sum()</code> that takes an integer <code class="code-inline tex2jax_ignore">n</code> as an argument and recursively finds the sum of the numbers from 1 through <code class="code-inline tex2jax_ignore">n</code>.</p>
-<p id="p-793">The function should return that sum. The function <code class="code-inline tex2jax_ignore">sum()</code> should not use any loops!</p>
-<p id="p-794">The main function is already given to you so that you can focus on the recursive function <code class="code-inline tex2jax_ignore">sum()</code>. Example output:</p>
+<p id="p-801">Write a function <code class="code-inline tex2jax_ignore">sum()</code> that takes an integer <code class="code-inline tex2jax_ignore">n</code> as an argument and recursively finds the sum of the numbers from 1 through <code class="code-inline tex2jax_ignore">n</code>.</p>
+<p id="p-802">The function should return that sum. The function <code class="code-inline tex2jax_ignore">sum()</code> should not use any loops!</p>
+<p id="p-803">The main function is already given to you so that you can focus on the recursive function <code class="code-inline tex2jax_ignore">sum()</code>. Example output:</p>
 <pre class="code-block tex2jax_ignore">"The sum of the numbers from 1 through 10 equals 55."
 </pre>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NRecursion1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NRecursion1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
@@ -502,8 +497,8 @@ true);
 <article class="activity project-like" id="activity-42"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span>
 </h4>
-<p id="p-795">Write a recursive function <code class="code-inline tex2jax_ignore">sumOfDigits()</code> that computes and returns the sum of the digits of an integer number that's been passed to the function. Your function should not use any loops!</p>
-<p id="p-796">The main function is already given to you so that you can focus on the recursive function <code class="code-inline tex2jax_ignore">sumOfDigits()</code>. Example output:</p>
+<p id="p-804">Write a recursive function <code class="code-inline tex2jax_ignore">sumOfDigits()</code> that computes and returns the sum of the digits of an integer number that's been passed to the function. Your function should not use any loops!</p>
+<p id="p-805">The main function is already given to you so that you can focus on the recursive function <code class="code-inline tex2jax_ignore">sumOfDigits()</code>. Example output:</p>
 <pre class="code-block tex2jax_ignore">"The sum of the digits of the number 132436 equals 19."
 </pre>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NRecursion2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NRecursion2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
@@ -513,11 +508,11 @@ true);
 <article class="activity project-like" id="activity-43"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
 </h4>
-<p id="p-797">Write a recursive function <code class="code-inline tex2jax_ignore">fib()</code> that takes an integer argument <code class="code-inline tex2jax_ignore">n</code> and returns the nth Fibonacci number. Your function should not use any loops! Recall that the first and second Fibonacci numbers are 0 and 1, whereas each subsequent Fibonacci number is the sum of the two previous ones. For example, here are the first 10 Fibonacci numbers:</p>
+<p id="p-806">Write a recursive function <code class="code-inline tex2jax_ignore">fib()</code> that takes an integer argument <code class="code-inline tex2jax_ignore">n</code> and returns the nth Fibonacci number. Your function should not use any loops! Recall that the first and second Fibonacci numbers are 0 and 1, whereas each subsequent Fibonacci number is the sum of the two previous ones. For example, here are the first 10 Fibonacci numbers:</p>
 <pre class="code-block tex2jax_ignore">0, 1, 1, 2, 3, 5, 8, 13, 21, 34.
 </pre>
-<p id="p-798">The main function is already given to you so that you can focus on the recursive function <code class="code-inline tex2jax_ignore">fib()</code>.</p>
-<p id="p-799">Example output:</p>
+<p id="p-807">The main function is already given to you so that you can focus on the recursive function <code class="code-inline tex2jax_ignore">fib()</code>.</p>
+<p id="p-808">Example output:</p>
 <pre class="code-block tex2jax_ignore">"The 9th Fibonacci number is 21."
 </pre>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NRecursion3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NRecursion3.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>

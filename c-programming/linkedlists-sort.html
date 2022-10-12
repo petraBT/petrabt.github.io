@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="linkedlists-reverse.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linkedlists.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linkedlists-summary.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="linkedlists-reverse.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linkedlists.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linkedlists-summary.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,25 +478,25 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="linkedlists-sort"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">28.13</span> <span class="title">Sort Linked Lists</span>
 </h2>
-<p id="p-1671">In this final video on linked lists we'll explore how to create a sorted copy of a linked list, using the <em class="alert">insertion sort</em> algorithm.</p>
+<p id="p-1680">In this final video on linked lists we'll explore how to create a sorted copy of a linked list, using the <em class="alert">insertion sort</em> algorithm.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521834640368" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521834640368" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-67"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1672" class="disc">
-<li id="li-926"><p id="p-derived-li-926">Sort a linked list by successively inserting digits into their new, sorted, locations using functions and <code class="code-inline tex2jax_ignore">while</code>-loops</p></li>
-<li id="li-927"><p id="p-derived-li-927">Check out either the Codecast or printed code for the full and lengthy example!</p></li>
+<ul id="p-1681" class="disc">
+<li id="li-921"><p id="p-derived-li-921">Sort a linked list by successively inserting digits into their new, sorted, locations using functions and <code class="code-inline tex2jax_ignore">while</code>-loops</p></li>
+<li id="li-922"><p id="p-derived-li-922">Check out either the Codecast or printed code for the full and lengthy example!</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-67"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist2-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1673">We'll learn about libraries next! You have already seen some libraries, amongst them the mathematics library <code class="code-inline tex2jax_ignore">math</code>.</p>
-<p id="p-1674">Please explore some of the functions in the standard C math library (you'll need to search the internet). In particular, what is the difference between the two functions <code class="code-inline tex2jax_ignore">atan()</code> and <code class="code-inline tex2jax_ignore">atan2()</code>?</p>
+<p id="p-1682">We'll learn about libraries next! You have already seen some libraries, amongst them the mathematics library <code class="code-inline tex2jax_ignore">math</code>.</p>
+<p id="p-1683">Please explore some of the functions in the standard C math library (you'll need to search the internet). In particular, what is the difference between the two functions <code class="code-inline tex2jax_ignore">atan()</code> and <code class="code-inline tex2jax_ignore">atan2()</code>?</p>
 <ol class="lower-alpha">
-<li id="li-928"><p id="p-derived-li-928">Both find the inverse tangent, but <code class="code-inline tex2jax_ignore">atan2()</code> squares the result.</p></li>
-<li id="li-929"><p id="p-derived-li-929">Both find the inverse tangent, but <code class="code-inline tex2jax_ignore">atan2()</code> is able to place it into the correct quadrant.</p></li>
-<li id="li-930"><p id="p-derived-li-930">Both find the inverse tangent, but one is in radians, the other in degrees.</p></li>
-<li id="li-931"><p id="p-derived-li-931">Both find the inverse tangent, but <code class="code-inline tex2jax_ignore">atan2()</code> first multiplies by 2.</p></li>
+<li id="li-923"><p id="p-derived-li-923">Both find the inverse tangent, but <code class="code-inline tex2jax_ignore">atan2()</code> squares the result.</p></li>
+<li id="li-924"><p id="p-derived-li-924">Both find the inverse tangent, but <code class="code-inline tex2jax_ignore">atan2()</code> is able to place it into the correct quadrant.</p></li>
+<li id="li-925"><p id="p-derived-li-925">Both find the inverse tangent, but one is in radians, the other in degrees.</p></li>
+<li id="li-926"><p id="p-derived-li-926">Both find the inverse tangent, but <code class="code-inline tex2jax_ignore">atan2()</code> first multiplies by 2.</p></li>
 </ol>
-<p id="p-1675"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+<p id="p-1684"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

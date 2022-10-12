@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="computers.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="computers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="firstprogram.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="computers.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="computers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="firstprogram.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,18 +478,18 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="computers-vocabulary"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Introductory Vocabulary</span>
 </h2>
-<p id="p-252">A computer is an object that is made up of hardware components as well as software to instruct the hardware what to do.</p>
+<p id="p-251">A computer is an object that is made up of hardware components as well as software to instruct the hardware what to do.</p>
 <ul class="disc">
-<li id="li-43"><p id="p-derived-li-43"><em class="alert">Hardware:</em> Computer hardware refers to the physical components that make up a computer system. Examples of hardware components are the motherboard, the Central Processing Unit (CPU), random access memory (RAM) to run programs, the computer's power supply, a video card, a hard drive to store information, peripherals (keyboard, mouse, screen, printer etc) so as to provide user interaction, and more.</p></li>
-<li id="li-44"><p id="p-derived-li-44"><em class="alert">Software:</em> The purpose of software is to instruct the hardware components what to do. Software is basically computer code that runs on the computer and includes the operating system as well as all the applications installed on the computer.</p></li>
-<li id="li-45"><p id="p-derived-li-45"><em class="alert">Algorithm:</em> An algorithm is a sequence of instructions that provides a set of steps to follow in order to achieve a desired result.</p></li>
-<li id="li-46"><p id="p-derived-li-46"><em class="alert">Program:</em> A program is an algorithm that is implemented (written) in a certain programming language, for example the C-programming language.</p></li>
-<li id="li-47"><p id="p-derived-li-47"><em class="alert">Program Input:</em> A program often needs input data that is supposed to be processed. Such data can be provided by the user or read from the hard disk for example.</p></li>
-<li id="li-48"><p id="p-derived-li-48"><em class="alert">Program Output:</em> Finally, a program often presents the results of its work back to the user in the form of output data.</p></li>
+<li id="li-43"><p id="p-derived-li-43"><dfn class="terminology">Hardware:</dfn> Computer hardware refers to the physical components that make up a computer system. Examples of hardware components are the motherboard, the Central Processing Unit (CPU), random access memory (RAM) to run programs, the computer's power supply, a video card, a hard drive to store information, peripherals (keyboard, mouse, screen, printer etc) so as to provide user interaction, and more.</p></li>
+<li id="li-44"><p id="p-derived-li-44"><dfn class="terminology">Software:</dfn> The purpose of software is to instruct the hardware components what to do. Software is basically computer code that runs on the computer and includes the operating system as well as all the applications installed on the computer.</p></li>
+<li id="li-45"><p id="p-derived-li-45"><dfn class="terminology">Algorithm:</dfn> An algorithm is a sequence of instructions that provides a set of steps to follow in order to achieve a desired result.</p></li>
+<li id="li-46"><p id="p-derived-li-46"><dfn class="terminology">Program:</dfn> A program is an algorithm that is implemented (written) in a certain programming language, for example the C-programming language.</p></li>
+<li id="li-47"><p id="p-derived-li-47"><dfn class="terminology">Program Input:</dfn> A program often needs input data that is supposed to be processed. Such data can be provided by the user or read from the hard disk for example.</p></li>
+<li id="li-48"><p id="p-derived-li-48"><dfn class="terminology">Program Output:</dfn> Finally, a program often presents the results of its work back to the user in the form of output data.</p></li>
 </ul>
-<p id="p-253">The following video explains these concepts:</p>
+<p id="p-252">The following video explains these concepts:</p>
 <aside class="aside aside-like" id="aside-2"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-254" class="disc">
+<ul id="p-253" class="disc">
 <li id="li-49"><p id="p-derived-li-49">Computer vocabulary is explained</p></li>
 <li id="li-50"><p id="p-derived-li-50">Examples of each term are given</p></li>
 </ul></aside><figure class="figure figure-like" id="figure-2"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="nF0gbyPfhj4" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/nF0gbyPfhj4?&amp;modestbranding=1&amp;rel=0"></iframe></div>
@@ -502,13 +497,13 @@ true);
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Check your understanding!</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-255">Can you think of any examples of software that you have used recently?</p>
+<p id="p-254">Can you think of any examples of software that you have used recently?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-256">Do you use word processing software? How about spreadsheets? Or graphics programs?</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-255">Do you use word processing software? How about spreadsheets? Or graphics programs?</p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-257">What are some examples of program input that you can think of? How are you currently controlling your computer?</p>
+<p id="p-256">What are some examples of program input that you can think of? How are you currently controlling your computer?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-258">Do you use a keyboard? A mouse? Other input devices?</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-257">Do you use a keyboard? A mouse? Other input devices?</p></div></div>
 </div></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>

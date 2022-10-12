@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="variables-float-datatype.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="variables.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="variables-summary.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="variables-float-datatype.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="variables.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="variables-summary.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,7 +478,7 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="variables-division"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.11</span> <span class="title">Division</span>
 </h2>
-<p id="p-377">Get ready to be surprised. But don't worry, we'll explain everything soon!</p>
+<p id="p-386">Get ready to be surprised. But don't worry, we'll explain everything soon!</p>
 <section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.11.1</span> <span class="title">Intro to Division in C</span>
 </h3>
@@ -491,37 +486,37 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span>
 </h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="" data-multipleanswers="false" data-random="">
-<p id="p-378">Try to predict what the output of the following program will be:</p>
+<p id="p-387">Try to predict what the output of the following program will be:</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Ndivision1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true&amp;hide_run=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true&amp;hide_run=true" frameborder="0" width="100%" height="300"></iframe><p id="p-379">Which of the following do you think will be printed to the screen?</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true&amp;hide_run=true" frameborder="0" width="100%" height="300"></iframe><p id="p-388">Which of the following do you think will be printed to the screen?</p>
 <li data-component="answer" id="_opt_a" data-correct=""><code class="code-inline tex2jax_ignore">5 / 3 = 1</code></li>
-<li data-component="feedback" id="_opt_a"><p id="p-380">Correct! Do you have any idea why this might be happening?</p></li>
+<li data-component="feedback" id="_opt_a"><p id="p-389">Correct! Do you have any idea why this might be happening?</p></li>
 <li data-component="answer" id="_opt_b"><code class="code-inline tex2jax_ignore">5 / 3 = 1.666667</code></li>
-<li data-component="feedback" id="_opt_b"><p id="p-381">Unfortunately, this is not what happens...</p></li>
+<li data-component="feedback" id="_opt_b"><p id="p-390">Unfortunately, this is not what happens...</p></li>
 <li data-component="answer" id="_opt_c"><code class="code-inline tex2jax_ignore">5 / 3 = 1.67</code></li>
-<li data-component="feedback" id="_opt_c"><p id="p-382">Unfortunately, this is not what happens...</p></li>
+<li data-component="feedback" id="_opt_c"><p id="p-391">Unfortunately, this is not what happens...</p></li>
 <li data-component="answer" id="_opt_d"><code class="code-inline tex2jax_ignore">5 / 3 = 2</code></li>
-<li data-component="feedback" id="_opt_d"><p id="p-383">Not quite - try again!</p></li>
+<li data-component="feedback" id="_opt_d"><p id="p-392">Not quite - try again!</p></li>
 <li data-component="answer" id="_opt_e"><code class="code-inline tex2jax_ignore">5 / 3 = 1.7</code></li>
-<li data-component="feedback" id="_opt_e"><p id="p-384">Not quite - try again!</p></li>
+<li data-component="feedback" id="_opt_e"><p id="p-393">Not quite - try again!</p></li>
 </ul></div></div></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.11.2</span> <span class="title">Your Turn!</span>
 </h3>
 <article class="activity project-like" id="activity-17"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
 </h4>
-<p id="p-385">Click on the <code class="code-inline tex2jax_ignore">Run</code> button in the window below to reveal the integer division behavior that C exhibits. Next, change the data types of some of the variables (use float instead of int) and observe the outcome. What do you notice?</p>
+<p id="p-394">Click on the <code class="code-inline tex2jax_ignore">Run</code> button in the window below to reveal the integer division behavior that C exhibits. Next, change the data types of some of the variables (use float instead of int) and observe the outcome. What do you notice?</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Ndivision1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe></article><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Summary of division behavior in C:.</span></h4>
-<p id="p-386">Following are the results of various examples of division in C. Notice the effect that the <em class="emphasis">types</em> of numbers being divided have on the quotient. Are there patterns? Why is this happening?</p>
+<p id="p-395">Following are the results of various examples of division in C. Notice the effect that the <em class="emphasis">types</em> of numbers being divided have on the quotient. Are there patterns? Why is this happening?</p>
 <ul class="disc">
-<li id="li-116"><pre class="code-block tex2jax_ignore">5/2 = 2
+<li id="li-111"><pre class="code-block tex2jax_ignore">5/2 = 2
 </pre></li>
-<li id="li-117"><pre class="code-block tex2jax_ignore">5.0/2 = 2.5
+<li id="li-112"><pre class="code-block tex2jax_ignore">5.0/2 = 2.5
 </pre></li>
-<li id="li-118"><pre class="code-block tex2jax_ignore">5/2.0 = 2.5
+<li id="li-113"><pre class="code-block tex2jax_ignore">5/2.0 = 2.5
 </pre></li>
-<li id="li-119"><pre class="code-block tex2jax_ignore">5.0/2.0 = 2.5
+<li id="li-114"><pre class="code-block tex2jax_ignore">5.0/2.0 = 2.5
 </pre></li>
 </ul></section></section></section></div></main>
 </div>

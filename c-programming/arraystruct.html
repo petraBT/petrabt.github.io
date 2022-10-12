@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="structures-summary.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-enriched.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="arraystruct-operators.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="structures-summary.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-enriched.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="arraystruct-operators.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,13 +478,13 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="arraystruct"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">27</span> <span class="title">Arrays of Structures</span>
 </h2>
-<section class="introduction" id="introduction-27"><p id="p-1571">Now that we can conveniently store together information about an object in a structure (such as saving student data in a <code class="code-inline tex2jax_ignore">student_t</code> type variable) we can go one step further and store information about multiple items of this type in an array of structures.</p>
-<p id="p-1572">First we need to clarify the order in which operations are executed in a line of code that contains multiple operations, especially now that we have just introduced some new operators such as the direct and indirect member selection operators <code class="code-inline tex2jax_ignore">.</code> and <code class="code-inline tex2jax_ignore">-&gt;</code>.</p>
-<p id="p-1573">In this chapter, we will cover the following topics:</p>
+<section class="introduction" id="introduction-27"><p id="p-1580">Now that we can conveniently store together information about an object in a structure (such as saving student data in a <code class="code-inline tex2jax_ignore">student_t</code> type variable) we can go one step further and store information about multiple items of this type in an array of structures.</p>
+<p id="p-1581">First we need to clarify the order in which operations are executed in a line of code that contains multiple operations, especially now that we have just introduced some new operators such as the direct and indirect member selection operators <code class="code-inline tex2jax_ignore">.</code> and <code class="code-inline tex2jax_ignore">-&gt;</code>.</p>
+<p id="p-1582">In this chapter, we will cover the following topics:</p>
 <ul class="disc">
-<li id="li-861"><p id="p-derived-li-861">Operator precedence</p></li>
-<li id="li-862"><p id="p-derived-li-862">Working with arrays of structures</p></li>
-<li id="li-863"><p id="p-derived-li-863">Dynamically allocating space for arrays of structures</p></li>
+<li id="li-856"><p id="p-derived-li-856">Operator precedence</p></li>
+<li id="li-857"><p id="p-derived-li-857">Working with arrays of structures</p></li>
+<li id="li-858"><p id="p-derived-li-858">Dynamically allocating space for arrays of structures</p></li>
 </ul></section><nav class="summary-links"><ul>
 <li><a href="arraystruct-operators.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Operator Precedence</span></a></li>
 <li><a href="arraystruct-structures.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Arrays of Structures</span></a></li>

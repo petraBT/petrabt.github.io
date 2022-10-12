@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="variables-changing.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="variables.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="variables-errors.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="variables-changing.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="variables.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="variables-errors.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,53 +478,53 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="variables-initializing"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.5</span> <span class="title">Initializing Variables</span>
 </h2>
-<p id="p-322">It is very important to always initialize your variables (that is, give initial values to your variables, even if you plan to change those values immediately). In the following video we discuss two ways to do so.</p>
+<p id="p-331">It is very important to always initialize your variables (that is, give initial values to your variables, even if you plan to change those values immediately). In the following video we discuss two ways to do so.</p>
 <ul class="disc">
-<li id="li-99">Separate declaration and initialization: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int cash; 
+<li id="li-94">Separate declaration and initialization: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int cash; 
 cash = 20;
 </code></pre></div>
 </li>
-<li id="li-100">Declaration and initialization in one statement: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int cash = 20;
+<li id="li-95">Declaration and initialization in one statement: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int cash = 20;
 </code></pre></div>
 </li>
 </ul>
-<p id="p-323"><iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1511896979139" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1511896979139" target="_blank"><font color="blue">here</font></a>.</p></p>
+<p id="p-332"><iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1511896979139" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1511896979139" target="_blank"><font color="blue">here</font></a>.</p></p>
 <aside class="aside aside-like" id="aside-7"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-324" class="disc">
-<li id="li-101"><p id="p-derived-li-101">Separate declaration and initialization for a variable</p></li>
-<li id="li-102"><p id="p-derived-li-102">Declaring and initializing a variable in one line</p></li>
-<li id="li-103"><p id="p-derived-li-103">NEW SYNTAX: <code class="code-inline tex2jax_ignore">int money = 30;</code> declares an integer variable named "money" and stores the value 30 in it</p></li>
+<ul id="p-333" class="disc">
+<li id="li-96"><p id="p-derived-li-96">Separate declaration and initialization for a variable</p></li>
+<li id="li-97"><p id="p-derived-li-97">Declaring and initializing a variable in one line</p></li>
+<li id="li-98"><p id="p-derived-li-98">NEW SYNTAX: <code class="code-inline tex2jax_ignore">int money = 30;</code> declares an integer variable named "money" and stores the value 30 in it</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-7"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-variables-5"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-325">Which of the following variable declaration and initialization statements is equivalent to:</p>
+<p id="p-334">Which of the following variable declaration and initialization statements is equivalent to:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int money;
 money = 20;
 </code></pre></div>
 <ol class="lower-alpha">
-<li id="li-104"><pre class="code-block tex2jax_ignore">money = int 20;
+<li id="li-99"><pre class="code-block tex2jax_ignore">money = int 20;
 </pre></li>
-<li id="li-105"><pre class="code-block tex2jax_ignore">int 20;
+<li id="li-100"><pre class="code-block tex2jax_ignore">int 20;
 </pre></li>
-<li id="li-106"><pre class="code-block tex2jax_ignore">int money = 20;
+<li id="li-101"><pre class="code-block tex2jax_ignore">int money = 20;
 </pre></li>
-<li id="li-107"><pre class="code-block tex2jax_ignore">int money 20;
+<li id="li-102"><pre class="code-block tex2jax_ignore">int money 20;
 </pre></li>
 </ol>
-<p id="p-326"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-variables-6"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-327">Find an equivalent variable declaration and initialization statement to:</p>
+<p id="p-335"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-variables-6"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-336">Find an equivalent variable declaration and initialization statement to:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int apples;
 apples = 4;
 </code></pre></div>
 <ol class="lower-alpha">
-<li id="li-108"><pre class="code-block tex2jax_ignore">apples = 4 int;
+<li id="li-103"><pre class="code-block tex2jax_ignore">apples = 4 int;
 </pre></li>
-<li id="li-109"><pre class="code-block tex2jax_ignore">int 4;
+<li id="li-104"><pre class="code-block tex2jax_ignore">int 4;
 </pre></li>
-<li id="li-110"><pre class="code-block tex2jax_ignore">int apples = 4;
+<li id="li-105"><pre class="code-block tex2jax_ignore">int apples = 4;
 </pre></li>
-<li id="li-111"><pre class="code-block tex2jax_ignore">int apples 20;
+<li id="li-106"><pre class="code-block tex2jax_ignore">int apples 20;
 </pre></li>
 </ol></article></section></section></div></main>
 </div>

@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="memory-roundoff.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="memory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="memory-rounding-practice.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="memory-roundoff.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="memory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="memory-rounding-practice.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,11 +478,11 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="memory-rounding"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.9</span> <span class="title">Rounding in C</span>
 </h2>
-<p id="p-1154">C supports several functions to help with rounding (such as rounding up, rounding down, just rounding, etc). You need to</p>
+<p id="p-1163">C supports several functions to help with rounding (such as rounding up, rounding down, just rounding, etc). You need to</p>
 <pre class="code-block tex2jax_ignore">#include &lt;math.h&gt;
 </pre>
-<p id="p-1155">in order to use them. Here are some of the functions at your disposal:</p>
-<p id="p-1156"> </p>
+<p id="p-1164">in order to use them. Here are some of the functions at your disposal:</p>
+<p id="p-1165"> </p>
 <figure class="table table-like" id="table-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">19.1<span class="period">.</span></span><span class="space"> </span>Rounding Functions in C</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l t b2 r0 l0 t3 lines"><em class="alert">Function</em></td>
@@ -497,28 +492,28 @@ true);
 <tr>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">floor()</code></td>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double floor(double x);</code></td>
-<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1157">Returns the nearest integer which is less than or equal to the argument passed to this function.</p></td>
+<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1166">Returns the nearest integer which is less than or equal to the argument passed to this function.</p></td>
 </tr>
 <tr>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">round()</code></td>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double round (double x);</code></td>
-<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1158">Returns the nearest integer value of the argument passed to this function.</p></td>
+<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1167">Returns the nearest integer value of the argument passed to this function.</p></td>
 </tr>
 <tr>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">lround()</code></td>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">long lround (double x);</code></td>
-<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1159">Returns the nearest integer value of the argument passed to this function.</p></td>
+<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1168">Returns the nearest integer value of the argument passed to this function.</p></td>
 </tr>
 <tr>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">ceil()</code></td>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double ceil (double x);</code></td>
-<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1160">Returns the nearest integer value which is greater than or equal to the argument passed to this function.</p></td>
+<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1169">Returns the nearest integer value which is greater than or equal to the argument passed to this function.</p></td>
 </tr>
-</table></div></figure><p id="p-1161"> </p>
+</table></div></figure><p id="p-1170"> </p>
 <article class="activity project-like" id="activity-83"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">19.4</span><span class="period">.</span>
 </h3>
-<p id="p-1162">Why might it be useful to have both a <code class="code-inline tex2jax_ignore">round()</code> and an <code class="code-inline tex2jax_ignore">lround()</code> function?</p></article></section></div></main>
+<p id="p-1171">Why might it be useful to have both a <code class="code-inline tex2jax_ignore">round()</code> and an <code class="code-inline tex2jax_ignore">lround()</code> function?</p></article></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

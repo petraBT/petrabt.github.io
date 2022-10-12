@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="libraries-complex-assemble.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="libraries.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="libraries-compile-library.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="libraries-complex-assemble.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="libraries.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="libraries-compile-library.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,16 +478,16 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="libraries-complex-test"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">29.10</span> <span class="title">Testing Our Complex Number Library</span>
 </h2>
-<p id="p-1716">Here is the source code for the complex number library we have just written:</p>
+<p id="p-1725">Here is the source code for the complex number library we have just written:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<p id="p-1717">I'll now walk you through all of the required steps to compile the library to an object file and to then use this library in a test program. To make things easier, this is all demonstrated on the next few pages via our Linux server coding windows. But you could just as easily follow all of the described steps by logging onto the server. You'd first have to save the files <code class="code-inline tex2jax_ignore">complexlib.c</code>, <code class="code-inline tex2jax_ignore">complexlib.h</code> and <code class="code-inline tex2jax_ignore">testComplex.c</code> in one directory on the server.</p>
+<p id="p-1726">I'll now walk you through all of the required steps to compile the library to an object file and to then use this library in a test program. To make things easier, this is all demonstrated on the next few pages via our Linux server coding windows. But you could just as easily follow all of the described steps by logging onto the server. You'd first have to save the files <code class="code-inline tex2jax_ignore">complexlib.c</code>, <code class="code-inline tex2jax_ignore">complexlib.h</code> and <code class="code-inline tex2jax_ignore">testComplex.c</code> in one directory on the server.</p>
 <section class="subsection" id="subsection-98"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">29.10.1</span> <span class="title">Test Programs</span>
 </h3>
 <article class="activity project-like" id="activity-138"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">29.5</span><span class="period">.</span>
 </h4>
-<p id="p-1718">Here is a quick program to test some functionality of our library. You'll have to work on the server in order to compile the library and link it to the test program. I'll walk you through this below. Add more tests here!</p>
+<p id="p-1727">Here is a quick program to test some functionality of our library. You'll have to work on the server in order to compile the library and link it to the test program. I'll walk you through this below. Add more tests here!</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">/* Program to test our complex number library
 * 
 *  testComplex.c

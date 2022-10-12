@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="gettingstarted.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="gettingstarted.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="gettingstarted-codecasts.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="gettingstarted.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="gettingstarted.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="gettingstarted-codecasts.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,7 +478,7 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="gettingstarted-codewindows"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Code Windows</span>
 </h2>
-<p id="p-230">Let's jump right on in. Take a look at the window below: we call this a <em class="alert">code window</em> since its purpose is for you to practice writing code. You'll soon see that these code windows come in all sorts of forms and shapes. Sometimes I'll give you some code to modify, sometimes I'll give you instructions on what code to write and sometimes I'll simply give you a blank code window in case you wish to try out some code on your own. Give it a try right now:</p>
+<p id="p-230">Let's jump right on in. Take a look at the window below: we call this a <dfn class="terminology">code window</dfn> since its purpose is for you to practice writing code. You'll soon see that these code windows come in all sorts of forms and shapes. Sometimes I'll give you some code to modify, sometimes I'll give you instructions on what code to write and sometimes I'll simply give you a blank code window in case you wish to try out some code on your own. Give it a try right now:</p>
 <p id="p-231">Feel free to press the <code class="code-inline tex2jax_ignore">Run</code> button, make any change you wish, start from scratch using the <code class="code-inline tex2jax_ignore">Start fresh</code> button, play around with the code in the window or anything else. Don't worry: you can't break anything! Just have fun.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" src="https://code.thayer.dartmouth.edu/?starting_point=%0A/*%20This%20is%20a%20Code%20Window.%0A%20%20%20You%20will%20practice%20a%20lot%20of%20coding%20in%20such%20windows.%0A%20%20%20If%20you%20press%20the%20%22Run%22%20button%20below%20the%20code%20will%0A%20%20%20be%20executed%20and%20a%20message%20to%20you%20displayed.%0A*/%0A%23include%20%3Cstdio.h%3E%0Aint%20main%28void%29%20%7B%0A%20%20%20%20printf%28%22Welcome%20to%20C-Programming%21%22%29%3B%0A%7D%0A%20%20%20%20%20%20%20%20" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #FFFFFF; padding-center: 10px; border:1px solid lightgrey;" frameborder="0" width="100%" height="300"></iframe></section></div></main>
 </div>

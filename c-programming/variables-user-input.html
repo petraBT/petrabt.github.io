@@ -48,10 +48,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -108,25 +109,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="variables-loop-practice.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="variables.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="variables-char-datatype.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="variables-loop-practice.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="variables.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="variables-char-datatype.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -484,21 +479,21 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="variables-user-input"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.8</span> <span class="title">User Input Using <code class="code-inline tex2jax_ignore">scanf()</code></span>
 </h2>
-<p id="p-348">It is possible to have the user (the person sitting in front of the computer screen) modify the value of a variable while the program is running! To do so the user needs to enter a value (this is typically done by typing on the keyboard) and your program needs to be ready to accept such an input value and store it in a variable. The C-command to accomplish this is <code class="code-inline tex2jax_ignore">scanf()</code>.</p>
-<p id="p-349">The following code asks the user for their age, has them enter it and then prints it out. <em class="emphasis">You'll notice the strange ampersand (&amp;) character in front of the variable in which we are storing the user input. We'll explain this a bit later - for now: don't worry.</em></p>
+<p id="p-357">It is possible to have the user (the person sitting in front of the computer screen) modify the value of a variable while the program is running! To do so the user needs to enter a value (this is typically done by typing on the keyboard) and your program needs to be ready to accept such an input value and store it in a variable. The C-command to accomplish this is <code class="code-inline tex2jax_ignore">scanf()</code>.</p>
+<p id="p-358">The following code asks the user for their age, has them enter it and then prints it out. <em class="emphasis">You'll notice the strange ampersand (&amp;) character in front of the variable in which we are storing the user input. We'll explain this a bit later - for now: don't worry.</em></p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NuserInput1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput1.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput1.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-350">Try it out by hitting the “Run” button! When prompted, enter your age.</p>
-<p id="p-351">You can read multiple entries with one <code class="code-inline tex2jax_ignore">scanf()</code> statement if you wish (or you can simply use multiple <code class="code-inline tex2jax_ignore">scanf()</code> statements in a row):</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput1.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-359">Try it out by hitting the “Run” button! When prompted, enter your age.</p>
+<p id="p-360">You can read multiple entries with one <code class="code-inline tex2jax_ignore">scanf()</code> statement if you wish (or you can simply use multiple <code class="code-inline tex2jax_ignore">scanf()</code> statements in a row):</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NuserInput2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput2.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput2.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-352">Let's get back to our multiplication table. Rather than printing the x7 table, in this next example, we'll have the user enter which multiplication table to print:</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput2.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><p id="p-361">Let's get back to our multiplication table. Rather than printing the x7 table, in this next example, we'll have the user enter which multiplication table to print:</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NuserInput3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput3.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput3.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><article class="activity project-like" id="activity-14"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Adding User Input.</span>
 </h3>
-<p id="p-353">Please write a program that adds integers, entered by the user.</p>
-<p id="p-354">First, ask the user to enter the number of integers they wish to add. Next, use a <code class="code-inline tex2jax_ignore">for</code>-loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.</p>
-<p id="p-355">When the loop terminates, print the result to the screen.</p>
-<p id="p-356">Here is a sample session, with simulated user input in bold:</p>
+<p id="p-362">Please write a program that adds integers, entered by the user.</p>
+<p id="p-363">First, ask the user to enter the number of integers they wish to add. Next, use a <code class="code-inline tex2jax_ignore">for</code>-loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.</p>
+<p id="p-364">When the loop terminates, print the result to the screen.</p>
+<p id="p-365">Here is a sample session, with simulated user input in bold:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><span class="prompt unselectable">How many numbers do you wish to add? </span><b>5
 </b><span class="prompt unselectable">Please enter number 1: </span><b>7
 </b><span class="prompt unselectable">Please enter number 2: </span><b>13
@@ -507,7 +502,7 @@ true);
 </b><span class="prompt unselectable">Please enter number 5: </span><b>9
 </b></pre></div>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NuserInput4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput4.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput4.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe><p id="p-357"><em class="emphasis">When you are done, please copy the code you</em> <em class="alert">added</em> <em class="emphasis">into the code submission box below:</em></p></article></section></div></main>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NuserInput4.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe><p id="p-366"><em class="emphasis">When you are done, please copy the code you</em> <em class="alert">added</em> <em class="emphasis">into the code submission box below:</em></p></article></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

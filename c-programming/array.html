@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="part-advanced.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-advanced.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="array-integer.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="part-advanced.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="part-advanced.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="array-integer.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,14 +478,14 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="array"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">18</span> <span class="title">Arrays</span>
 </h2>
-<section class="introduction" id="introduction-19"><p id="p-1066">With our current knowledge, if we wish to store someone's name in the computer's memory we'd have to create a variable for each character in the name in order to do so. For example, to store all of the letters in “Petra” we'd need five variables of type <code class="code-inline tex2jax_ignore">char</code> to store the individual letters, such as <code class="code-inline tex2jax_ignore">char letter1 = 'P'</code>, <code class="code-inline tex2jax_ignore">char letter2 = 'e'</code>, ... , <code class="code-inline tex2jax_ignore">char letter5 = 'a'</code>. This is not exactly convenient and there is a better way to do so, using a so-called <code class="code-inline tex2jax_ignore">array</code>. An array is a collection of items of the same datatype that you can access via one variable name. We'll start by learning about one-dimensional arrays which can also be thought of as lists. In this chapter, we'll focus on such one-dimensional arrays and practice working with them. Specifically, we'll learn about:</p>
+<section class="introduction" id="introduction-19"><p id="p-1075">With our current knowledge, if we wish to store someone's name in the computer's memory we'd have to create a variable for each character in the name in order to do so. For example, to store all of the letters in “Petra” we'd need five variables of type <code class="code-inline tex2jax_ignore">char</code> to store the individual letters, such as <code class="code-inline tex2jax_ignore">char letter1 = 'P'</code>, <code class="code-inline tex2jax_ignore">char letter2 = 'e'</code>, ... , <code class="code-inline tex2jax_ignore">char letter5 = 'a'</code>. This is not exactly convenient and there is a better way to do so, using a so-called <code class="code-inline tex2jax_ignore">array</code>. An array is a collection of items of the same datatype that you can access via one variable name. We'll start by learning about one-dimensional arrays which can also be thought of as lists. In this chapter, we'll focus on such one-dimensional arrays and practice working with them. Specifically, we'll learn about:</p>
 <ul class="disc">
-<li id="li-574"><p id="p-derived-li-574">Arrays of various data types</p></li>
-<li id="li-575"><p id="p-derived-li-575">Initializing arrays</p></li>
-<li id="li-576"><p id="p-derived-li-576">Computations involving arrays</p></li>
-<li id="li-577"><p id="p-derived-li-577">Arrays of ints, floats, chars</p></li>
-<li id="li-578"><p id="p-derived-li-578">Finding the largest number in an array</p></li>
-<li id="li-579"><p id="p-derived-li-579">Finding the average of numbers in an array</p></li>
+<li id="li-569"><p id="p-derived-li-569">Arrays of various data types</p></li>
+<li id="li-570"><p id="p-derived-li-570">Initializing arrays</p></li>
+<li id="li-571"><p id="p-derived-li-571">Computations involving arrays</p></li>
+<li id="li-572"><p id="p-derived-li-572">Arrays of ints, floats, chars</p></li>
+<li id="li-573"><p id="p-derived-li-573">Finding the largest number in an array</p></li>
+<li id="li-574"><p id="p-derived-li-574">Finding the average of numbers in an array</p></li>
 </ul></section><nav class="summary-links"><ul>
 <li><a href="array-integer.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Arrays of Integers</span></a></li>
 <li><a href="array-other.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Arrays of Other Data Types</span></a></li>

@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="linux-directories.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linux.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linux_display-file.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="linux-directories.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linux.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linux_display-file.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,13 +478,13 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="linux-remove-file"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">15.6</span> <span class="title">Remove a File</span>
 </h2>
-<p id="p-920">The command <code class="code-inline tex2jax_ignore">rm</code> removes (deletes) a file.</p>
-<p id="p-921"><em class="alert">CAUTION</em>: <code class="code-inline tex2jax_ignore">rm</code> does not check whether you actually mean to remove a file... It'll simply go ahead and do so.</p>
+<p id="p-929">The command <code class="code-inline tex2jax_ignore">rm</code> removes (deletes) a file.</p>
+<p id="p-930"><em class="alert">CAUTION</em>: <code class="code-inline tex2jax_ignore">rm</code> does not check whether you actually mean to remove a file... It'll simply go ahead and do so.</p>
 <article class="activity project-like" id="activity-58"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.7</span><span class="period">.</span>
 </h3>
-<p id="p-922">In the Linux window <em class="alert">below</em>, change into the directory <code class="code-inline tex2jax_ignore">~/engs20</code> (from your home directory, type <code class="code-inline tex2jax_ignore">cd engs20</code>). Then, type <code class="code-inline tex2jax_ignore">ls</code>. Now, delete the file "toBeDeleted.txt" by typing <code class="code-inline tex2jax_ignore">rm toBeDeleted.txt</code>. Type <code class="code-inline tex2jax_ignore">ls</code> and observe that the file is now gone.</p>
-<p id="p-923">There must be a waste basket somewhere? Where is the trash folder? Where did the file "toBeDeleted.txt" go?</p>
+<p id="p-931">In the Linux window <em class="alert">below</em>, change into the directory <code class="code-inline tex2jax_ignore">~/engs20</code> (from your home directory, type <code class="code-inline tex2jax_ignore">cd engs20</code>). Then, type <code class="code-inline tex2jax_ignore">ls</code>. Now, delete the file "toBeDeleted.txt" by typing <code class="code-inline tex2jax_ignore">rm toBeDeleted.txt</code>. Type <code class="code-inline tex2jax_ignore">ls</code> and observe that the file is now gone.</p>
+<p id="p-932">There must be a waste basket somewhere? Where is the trash folder? Where did the file "toBeDeleted.txt" go?</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Linux Practice Window" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/linux.php?starting_point=engs20p_rmPractice" width="105%" height="300" frameborder="0"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If the server window does not load, please click <a href="https://code.thayer.dartmouth.edu/linux.php?starting_point=engs20p_rmPractice" target="_blank"><font color="blue">here</font></a>.</p></article></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>

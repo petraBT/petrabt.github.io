@@ -11,12 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<ul class="disc">
-<li><p>Passing variables to functions "by reference" (via their address)</p></li>
-<li><p>To change a variable's value whose address is stored in <code class="code-inline tex2jax_ignore">var</code>, use <code class="code-inline tex2jax_ignore">*var = *var + 10;</code>, which (for example) would add 10 to the value of original variable passed to the function by reference</p></li>
-<li><p>Passing a variable to a function by reference allows the variable to be used and updated in the function</p></li>
-</ul>
-<span class="incontext"><a href="pointers-dereference.html#p-1183" class="internal">in-context</a></span>
+<h2 class="heading"><span class="type">Paragraph</span></h2>
+<p>In this chapter, we will look more closely at the way variables are stored in memory (and found by your code) and how to use this information to potentially simplify our code, especially with functions! This understanding will allow us to modify variables within functions whose scope does not seem to include the function (the trick will be to tell the function the variable's address, thereby enabling your code in the function to access the memory location that holds the variable's value). We will also look at design and testing methods to help outline our coding processes.</p>
+<span class="incontext"><a href="pointers.html#p-1183" class="internal">in-context</a></span>
 </body>
 </html>

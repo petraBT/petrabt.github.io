@@ -11,8 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<p>Remember, a two-dimensional array is stored row by row, so as long as we know how many elements are stored in each row (that is, the number of columns), we (and also the computer) can find the start of the second row, the start of the third row, etc. The computer can therefore find the element at location <code class="code-inline tex2jax_ignore">[i][j]</code> by going to row <code class="code-inline tex2jax_ignore">i</code> and then counting off to element <code class="code-inline tex2jax_ignore">j</code> of that row.</p>
-<span class="incontext"><a href="multiarray-functions.html#p-1475" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<ul class="disc">
+<li><p>A two-dimensional array of integers is a matrix!</p></li>
+<li><p>When using <code class="code-inline tex2jax_ignore">scanf()</code> to allow the user to enter values into your array, don't forget about the <code class="code-inline tex2jax_ignore">&amp;</code>!</p></li>
+<li><p>NEW SYNTAX: the following line reads an integer from the user entry and stores it into the matrix element at location <span class="process-math">\((row,col)\)</span></p></li>
+</ul>
+<p class="continuation">scanf("%d", &amp;matrix[row][col])</p>
+<span class="incontext"><a href="multiarray-matrices.html#p-1475" class="internal">in-context</a></span>
 </body>
 </html>

@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="files-read-practice.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="files.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="files-exist.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="files-read-practice.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="files.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="files-exist.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,14 +478,14 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="files-read-efficient"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">16.4</span> <span class="title">More Efficient File Reading</span>
 </h2>
-<p id="p-989">Normally, we won't know how many numbers are in a file before we open it, so how do we know when to stop reading from the file? It turns out, the <code class="code-inline tex2jax_ignore">fscanf()</code> function actually tells us when we reach the end of the file via a return value of EOF. This is so important that I'll say it again: It is the the <em class="alert">return value</em> of the <code class="code-inline tex2jax_ignore">fscanf()</code> function through which we'll know when the end of the file has been reached. It is <em class="alert">not the value</em> that was read. This is a super common cause for confusion so be sure to ask lots of questions and make sure you understand the difference. To sum up: Instead of using a <code class="code-inline tex2jax_ignore">for</code> loop to read from the file, from now on we'll simply keep reading until we reach the end of the file, indicated by the return value of <code class="code-inline tex2jax_ignore">EOF</code> of the <code class="code-inline tex2jax_ignore">fscanf()</code> function.</p>
-<p id="p-990">Let's look at how this is done. This time, the file simply contains the following numbers:</p>
-<p id="p-991">6  3  -55  4  67  299  -4  -7  -3</p>
-<p id="p-992">Pretend you don't know how many numbers there are in the file.</p>
+<p id="p-998">Normally, we won't know how many numbers are in a file before we open it, so how do we know when to stop reading from the file? It turns out, the <code class="code-inline tex2jax_ignore">fscanf()</code> function actually tells us when we reach the end of the file via a return value of EOF. This is so important that I'll say it again: It is the the <em class="alert">return value</em> of the <code class="code-inline tex2jax_ignore">fscanf()</code> function through which we'll know when the end of the file has been reached. It is <em class="alert">not the value</em> that was read. This is a super common cause for confusion so be sure to ask lots of questions and make sure you understand the difference. To sum up: Instead of using a <code class="code-inline tex2jax_ignore">for</code> loop to read from the file, from now on we'll simply keep reading until we reach the end of the file, indicated by the return value of <code class="code-inline tex2jax_ignore">EOF</code> of the <code class="code-inline tex2jax_ignore">fscanf()</code> function.</p>
+<p id="p-999">Let's look at how this is done. This time, the file simply contains the following numbers:</p>
+<p id="p-1000">6  3  -55  4  67  299  -4  -7  -3</p>
+<p id="p-1001">Pretend you don't know how many numbers there are in the file.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO5.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO5.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO5.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe><p id="p-993">Notice how the <code class="code-inline tex2jax_ignore">fscanf()</code> function communicates with us in two ways: Values read from the file are transmitted to us via the variables (with ampersands in front of them) that appear inside the parentheses (in this case we call the variable <code class="code-inline tex2jax_ignore">num</code>). On the other hand, the return value (which we store in the variable <code class="code-inline tex2jax_ignore">result</code> here) signifies whether the end of the file has been reached. When this is the case, the return value equals <code class="code-inline tex2jax_ignore">EOF</code>.</p>
-<p id="p-994">It is actually not even necessary to store the return value of the <code class="code-inline tex2jax_ignore">fscanf()</code> function in a separate variable as we see in the even more compact way of writing the code below. But if you are more comfortable in using the extra variable then by all means, please do!</p>
-<p id="p-995">Here is a very efficient way to accomplish file reading until the end of the file:</p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO5.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe><p id="p-1002">Notice how the <code class="code-inline tex2jax_ignore">fscanf()</code> function communicates with us in two ways: Values read from the file are transmitted to us via the variables (with ampersands in front of them) that appear inside the parentheses (in this case we call the variable <code class="code-inline tex2jax_ignore">num</code>). On the other hand, the return value (which we store in the variable <code class="code-inline tex2jax_ignore">result</code> here) signifies whether the end of the file has been reached. When this is the case, the return value equals <code class="code-inline tex2jax_ignore">EOF</code>.</p>
+<p id="p-1003">It is actually not even necessary to store the return value of the <code class="code-inline tex2jax_ignore">fscanf()</code> function in a separate variable as we see in the even more compact way of writing the code below. But if you are more comfortable in using the extra variable then by all means, please do!</p>
+<p id="p-1004">Here is a very efficient way to accomplish file reading until the end of the file:</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO6.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO6.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO6.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe></section></div></main>
 </div>

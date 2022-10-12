@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="memory-stack.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="memory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="memory-scope.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="memory-stack.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="memory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="memory-scope.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,19 +478,19 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="memory-functions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.3</span> <span class="title">Functions And The Stack</span>
 </h2>
-<p id="p-1129">Now that we have a basic understanding of how variables in the <code class="code-inline tex2jax_ignore">main()</code> function are stored in the stack, what happens if we introduce new variables in a <em class="emphasis">different</em> function? How do the variables in various functions interact with one another in the computer's memory?</p>
-<p id="p-1130">In the following video, we will explore how functions and their variables interact with memory:</p>
+<p id="p-1138">Now that we have a basic understanding of how variables in the <code class="code-inline tex2jax_ignore">main()</code> function are stored in the stack, what happens if we introduce new variables in a <em class="emphasis">different</em> function? How do the variables in various functions interact with one another in the computer's memory?</p>
+<p id="p-1139">In the following video, we will explore how functions and their variables interact with memory:</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519071601429" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519071601429" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-44"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1131" class="disc">
-<li id="li-628"><p id="p-derived-li-628">When passing a variable <em class="emphasis">by value</em> to a function, only the value (that is, what is stored in the variable) is known inside the function but not where the original variable is stored in memory.</p></li>
-<li id="li-629"><p id="p-derived-li-629">As a result, changing the value of a variable inside a function will not change the variable outside of the function, if it was passed by value</p></li>
-<li id="li-630"><p id="p-derived-li-630">Example of passing by value: Suppose you have variables <code class="code-inline tex2jax_ignore">a,b</code> with <code class="code-inline tex2jax_ignore">a=3</code> and <code class="code-inline tex2jax_ignore">b=5</code>. Then the call <code class="code-inline tex2jax_ignore">myFunction(a, b)</code> passes the numbers 3 and 5 to <code class="code-inline tex2jax_ignore">myFunction()</code> but not the locations where <code class="code-inline tex2jax_ignore">a</code> and <code class="code-inline tex2jax_ignore">b</code> are stored.</p></li>
+<ul id="p-1140" class="disc">
+<li id="li-623"><p id="p-derived-li-623">When passing a variable <em class="emphasis">by value</em> to a function, only the value (that is, what is stored in the variable) is known inside the function but not where the original variable is stored in memory.</p></li>
+<li id="li-624"><p id="p-derived-li-624">As a result, changing the value of a variable inside a function will not change the variable outside of the function, if it was passed by value</p></li>
+<li id="li-625"><p id="p-derived-li-625">Example of passing by value: Suppose you have variables <code class="code-inline tex2jax_ignore">a,b</code> with <code class="code-inline tex2jax_ignore">a=3</code> and <code class="code-inline tex2jax_ignore">b=5</code>. Then the call <code class="code-inline tex2jax_ignore">myFunction(a, b)</code> passes the numbers 3 and 5 to <code class="code-inline tex2jax_ignore">myFunction()</code> but not the locations where <code class="code-inline tex2jax_ignore">a</code> and <code class="code-inline tex2jax_ignore">b</code> are stored.</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-45"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-memory-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1132">Suppose you have defined a function “add” as follows:</p>
+<p id="p-1141">Suppose you have defined a function “add” as follows:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int add (int a, int b) {
   int sum;
   a = 2;
@@ -503,11 +498,11 @@ true);
   return(sum);
 }
 </code></pre></div>
-<p id="p-1133">In your main program, you have declared integer variables <em class="emphasis">a</em> and <em class="emphasis">b</em> and given them the values <em class="emphasis">a = 9</em> and <em class="emphasis">b = 3</em>. You then call the function <code class="code-inline tex2jax_ignore">add(a,b)</code>. <em class="alert">What is the value it returns?</em></p>
-<p id="p-1134"><em class="emphasis">I'll give you a window to try things out in, but you definitely should</em> <em class="alert">think this through first by hand before you use the computer to verify your answer</em><em class="emphasis">. I really want you to think about this first. That's why you'll need to write the entire program if you want to use the window below.</em></p>
+<p id="p-1142">In your main program, you have declared integer variables <em class="emphasis">a</em> and <em class="emphasis">b</em> and given them the values <em class="emphasis">a = 9</em> and <em class="emphasis">b = 3</em>. You then call the function <code class="code-inline tex2jax_ignore">add(a,b)</code>. <em class="alert">What is the value it returns?</em></p>
+<p id="p-1143"><em class="emphasis">I'll give you a window to try things out in, but you definitely should</em> <em class="alert">think this through first by hand before you use the computer to verify your answer</em><em class="emphasis">. I really want you to think about this first. That's why you'll need to write the entire program if you want to use the window below.</em></p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_scope1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_scope1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_scope1.c" frameborder="0" width="100%" height="300"></iframe></article><article class="exercise exercise-like" id="quiz-memory-3"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1135">Suppose you have defined a function “add” as follows (this is <em class="emphasis">almost</em> the same function as in the previous question):</p>
+<p id="p-1144">Suppose you have defined a function “add” as follows (this is <em class="emphasis">almost</em> the same function as in the previous question):</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int add (int a, int b) {
   int sum;
   a = 10;
@@ -515,8 +510,8 @@ true);
   return(sum);
 }
 </code></pre></div>
-<p id="p-1136">In your main program, you have declared integer variables <em class="emphasis">a</em> and <em class="emphasis">b</em> and given them the values <em class="emphasis">a = 2</em> and <em class="emphasis">b = 4</em>. You then call the function <code class="code-inline tex2jax_ignore">add(a,b)</code>. <em class="alert">What is the value of the variable <em class="emphasis">a</em> in your main program after execution of the function <code class="code-inline tex2jax_ignore">add()</code></em>?</p>
-<p id="p-1137"><em class="emphasis">Another window to try things out... As before, I really want you to think about this first. That's why you'll need to write the entire program if you want to use the window below.</em></p>
+<p id="p-1145">In your main program, you have declared integer variables <em class="emphasis">a</em> and <em class="emphasis">b</em> and given them the values <em class="emphasis">a = 2</em> and <em class="emphasis">b = 4</em>. You then call the function <code class="code-inline tex2jax_ignore">add(a,b)</code>. <em class="alert">What is the value of the variable <em class="emphasis">a</em> in your main program after execution of the function <code class="code-inline tex2jax_ignore">add()</code></em>?</p>
+<p id="p-1146"><em class="emphasis">Another window to try things out... As before, I really want you to think about this first. That's why you'll need to write the entire program if you want to use the window below.</em></p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_scope2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_scope2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_scope2.c" frameborder="0" width="100%" height="300"></iframe></article></section></section></div></main>
 </div>

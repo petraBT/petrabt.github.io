@@ -47,10 +47,11 @@ window.MathJax = {
 },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
@@ -107,25 +108,19 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="engs20-book.html"><span class="title">Introduction to C-Programming:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
 <p class="byline">Petra Bonfert-Taylor</p>
 </div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
+</div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
-<script>
-var ggbApp = new GGBApplet({"appName": "classic",
-    "width": 330,
-    "height": 600,
-    "showToolBar": true,
-    "showAlgebraInput": true,
-    "perspective": "G/A",
-    "algebraInputPosition": "bottom",
-    "scaleContainerClass": "calculator-container",
-    "allowUpscale": true,
-    "autoHeight": true,
-    "disableAutoScale": false},
-true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="linux-editor.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linux.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linux-terminal.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="linux-editor.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linux.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linux-terminal.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -483,46 +478,46 @@ true);
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="linux-intro"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">15.2</span> <span class="title">Introduction to Linux</span>
 </h2>
-<p id="p-888"><em class="alert">Linux</em> is an operating system. Here are some quick facts about Linux:</p>
+<p id="p-897"><em class="alert">Linux</em> is an operating system. Here are some quick facts about Linux:</p>
 <ul class="disc">
-<li id="li-433"><p id="p-derived-li-433">Linux was developed by Linus Torvalds who was at the time a student at the University of Helsinki in Finland. Torvalds' M.Sc. thesis was titled <em class="emphasis">Linux: A Portable Operating System</em>.</p></li>
-<li id="li-434"><p id="p-derived-li-434">The prototype for Linux was released in 1991, when Torvalds was 21 years old, with version 1.0 following in 1994. What Torvalds had in mind with this operating system is encapsulated well in his prototype announcement: <em class="emphasis">"Hello everybody out there using minix - I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones. (...) I'll get something practical within a few months, and I'd like to know what features most people would want. Any suggestions are welcome, but I won't promise I'll implement them :-) Linus (torvalds@kruuna.helsinki.fi)"</em></p></li>
-<li id="li-435"><p id="p-derived-li-435">While a server-based operating system (namely Unix) already existed at the time, Unix is expensive proprietary software that at the time only ran on special expensive hardware. Torwalds' goal was to create a free, Unix-like operating system that can run on PC hardware.</p></li>
-<li id="li-436"><p id="p-derived-li-436">To this day, Linux is distributed under a license prohibiting commercial distribution.</p></li>
-<li id="li-437"><p id="p-derived-li-437">By now, Linux has been ported to more computer hardware platforms than any other operating system (servers, mainframe computers, supercomputers, desktop computers, Chrome OS, also runs on embedded systems including smartphones and tablet computers running Android, DVR devices, network routers, TVs, video game consoles, smartwatches.)</p></li>
+<li id="li-428"><p id="p-derived-li-428">Linux was developed by Linus Torvalds who was at the time a student at the University of Helsinki in Finland. Torvalds' M.Sc. thesis was titled <em class="emphasis">Linux: A Portable Operating System</em>.</p></li>
+<li id="li-429"><p id="p-derived-li-429">The prototype for Linux was released in 1991, when Torvalds was 21 years old, with version 1.0 following in 1994. What Torvalds had in mind with this operating system is encapsulated well in his prototype announcement: <em class="emphasis">"Hello everybody out there using minix - I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones. (...) I'll get something practical within a few months, and I'd like to know what features most people would want. Any suggestions are welcome, but I won't promise I'll implement them :-) Linus (torvalds@kruuna.helsinki.fi)"</em></p></li>
+<li id="li-430"><p id="p-derived-li-430">While a server-based operating system (namely Unix) already existed at the time, Unix is expensive proprietary software that at the time only ran on special expensive hardware. Torwalds' goal was to create a free, Unix-like operating system that can run on PC hardware.</p></li>
+<li id="li-431"><p id="p-derived-li-431">To this day, Linux is distributed under a license prohibiting commercial distribution.</p></li>
+<li id="li-432"><p id="p-derived-li-432">By now, Linux has been ported to more computer hardware platforms than any other operating system (servers, mainframe computers, supercomputers, desktop computers, Chrome OS, also runs on embedded systems including smartphones and tablet computers running Android, DVR devices, network routers, TVs, video game consoles, smartwatches.)</p></li>
 </ul>
-<p id="p-889">One thing that will be a bit unfamiliar and take getting used to is the fact that graphical user interfaces did not yet exist when Linux was invented. A computer mouse was not a thing yet either. As such, rather than double clicking on a folder in order to advance into the folder, you'd issue a command with with your keyboard into a so-called <em class="alert">terminal window</em> whose purpose it is to interpret the commands you type.</p>
-<p id="p-890">Despite the fact that by now, graphical user interfaces do exist for Linux, it'll be beneficial for us to learn about the typed commands. To make things a bit easier we'll explore such commands both in the graphical user interface as well as in the terminal window.</p>
-<p id="p-891">Thus, to help you get acquainted with Linux we'll follow along some of the commands using a file browser. For this purpose, please navigate to your workspace folder inside your <code class="code-inline tex2jax_ignore">engs20</code> folder on <em class="alert">Thayer Shares</em>.</p>
-<p id="p-892">In case you don't know how to get there, the next two subsections include detailed instructions for how to do so on a <em class="emphasis">PC</em> or <em class="emphasis">Mac</em>:</p>
+<p id="p-898">One thing that will be a bit unfamiliar and take getting used to is the fact that graphical user interfaces did not yet exist when Linux was invented. A computer mouse was not a thing yet either. As such, rather than double clicking on a folder in order to advance into the folder, you'd issue a command with with your keyboard into a so-called <em class="alert">terminal window</em> whose purpose it is to interpret the commands you type.</p>
+<p id="p-899">Despite the fact that by now, graphical user interfaces do exist for Linux, it'll be beneficial for us to learn about the typed commands. To make things a bit easier we'll explore such commands both in the graphical user interface as well as in the terminal window.</p>
+<p id="p-900">Thus, to help you get acquainted with Linux we'll follow along some of the commands using a file browser. For this purpose, please navigate to your workspace folder inside your <code class="code-inline tex2jax_ignore">engs20</code> folder on <em class="alert">Thayer Shares</em>.</p>
+<p id="p-901">In case you don't know how to get there, the next two subsections include detailed instructions for how to do so on a <em class="emphasis">PC</em> or <em class="emphasis">Mac</em>:</p>
 <section class="subsection" id="subsection-43"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.2.1</span> <span class="title">Navigating to your Workspace Folder on a PC</span>
 </h3>
 <ol class="decimal">
-<li id="li-438">Connect to your Home folder on <em class="alert">Thayer Shares</em>: <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Linux_PC1.png" class="contained"></div>
+<li id="li-433">Connect to your Home folder on <em class="alert">Thayer Shares</em>: <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Linux_PC1.png" class="contained"></div>
 </li>
-<li id="li-439">Then, navigate to your workspace directory (engs20 <span class="process-math">\(\rightarrow\)</span> workspace): <div class="sidebyside"><div class="sbsrow" style="margin-left:2.25%;margin-right:2.25%;">
+<li id="li-434">Then, navigate to your workspace directory (engs20 <span class="process-math">\(\rightarrow\)</span> workspace): <div class="sidebyside"><div class="sbsrow" style="margin-left:2.25%;margin-right:2.25%;">
 <div class="sbspanel top" style="width:47.1204188481675%;"><img src="external/images/Linux_PC2.png" class="contained"></div>
 <div class="sbspanel top" style="width:48.1675392670157%;"><img src="external/images/Linux_PC3.png" class="contained"></div>
 </div></div>
 </li>
-<li id="li-440">You should now see the <code class="code-inline tex2jax_ignore">hello.c</code> program you created earlier: <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Linux_PC4.png" class="contained"></div>
+<li id="li-435">You should now see the <code class="code-inline tex2jax_ignore">hello.c</code> program you created earlier: <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Linux_PC4.png" class="contained"></div>
 </li>
 </ol></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.2.2</span> <span class="title">Navigating to your Workspace Folder on a Mac</span>
 </h3>
 <ol class="decimal">
-<li id="li-441">Connect to your Home folder on <em class="alert">Thayer Shares</em>: <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<li id="li-436">Connect to your Home folder on <em class="alert">Thayer Shares</em>: <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel top" style="width:21.0526315789474%;"><img src="external/images/Linux_Mac1.png" class="contained"></div>
 <div class="sbspanel top" style="width:73.6842105263158%;"><img src="external/images/Linux_Mac2.png" class="contained"></div>
 </div></div>
 </li>
-<li id="li-442">Then, navigate to your workspace directory (engs20 <span class="process-math">\(\rightarrow\)</span> workspace): <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<li id="li-437">Then, navigate to your workspace directory (engs20 <span class="process-math">\(\rightarrow\)</span> workspace): <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
 <div class="sbspanel top" style="width:37.5%;"><img src="external/images/Linux_Mac3.png" class="contained"></div>
 <div class="sbspanel top" style="width:37.5%;"><img src="external/images/Linux_Mac4.png" class="contained"></div>
 </div></div>
 </li>
-<li id="li-443">You should now see the <code class="code-inline tex2jax_ignore">hello.c</code> program you created earlier: <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/images/Linux_Mac5.png" class="contained"></div>
+<li id="li-438">You should now see the <code class="code-inline tex2jax_ignore">hello.c</code> program you created earlier: <div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/images/Linux_Mac5.png" class="contained"></div>
 </li>
 </ol></section></section></div></main>
 </div>
