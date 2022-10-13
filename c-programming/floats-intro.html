@@ -478,66 +478,66 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="floats-intro"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Digital Representation of Floats</span>
 </h2>
-<p id="p-561">Recall the funny division behavior we notice in the C programming language when using integers. Feel free to play around in this code window to refresh your memory and experiment in order to analyze this behavior.</p>
+<p id="p-567">Recall the funny division behavior we notice in the C programming language when using integers. Feel free to play around in this code window to refresh your memory and experiment in order to analyze this behavior.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Ndivision1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><section class="reading-questions" id="reading-questions-13"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-floatchar-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-562">Here is a quick review question: Using integer arithmetic, what is the result of 15/4?</p>
+<p id="p-568">Here is a quick review question: Using integer arithmetic, what is the result of 15/4?</p>
 <ol class="lower-alpha">
-<li id="li-183"><p id="p-derived-li-183">3.75</p></li>
-<li id="li-184"><p id="p-derived-li-184">3</p></li>
-<li id="li-185"><p id="p-derived-li-185">0.75</p></li>
-<li id="li-186"><p id="p-derived-li-186">4</p></li>
+<li id="li-179"><p id="p-derived-li-179">3.75</p></li>
+<li id="li-180"><p id="p-derived-li-180">3</p></li>
+<li id="li-181"><p id="p-derived-li-181">0.75</p></li>
+<li id="li-182"><p id="p-derived-li-182">4</p></li>
 </ol>
-<p id="p-563"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-floatchar-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-564">Another quick review question: In the C programming language, what is the result of 19/2.0?</p>
+<p id="p-569"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-floatchar-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-570">Another quick review question: In the C programming language, what is the result of 19/2.0?</p>
 <ol class="lower-alpha">
-<li id="li-187"><p id="p-derived-li-187">9</p></li>
-<li id="li-188"><p id="p-derived-li-188">10</p></li>
-<li id="li-189"><p id="p-derived-li-189">9R1</p></li>
-<li id="li-190"><p id="p-derived-li-190">9.5</p></li>
+<li id="li-183"><p id="p-derived-li-183">9</p></li>
+<li id="li-184"><p id="p-derived-li-184">10</p></li>
+<li id="li-185"><p id="p-derived-li-185">9R1</p></li>
+<li id="li-186"><p id="p-derived-li-186">9.5</p></li>
 </ol>
-<p id="p-565"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-floatchar-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-566">And another review question: Suppose that a and b are variables of type <code class="code-inline tex2jax_ignore">int</code>, a has the value 8, b has the value 6. In the C programming language, what is the value of <code class="code-inline tex2jax_ignore">(a+b)/3</code>?</p></article></section><p id="p-567">So far we have learned how integers (positive and negative) are stored in the computer's memory. How about decimal numbers, also known as floats?</p>
-<p id="p-568">In this next video you'll find out how floats are stored in memory!</p>
+<p id="p-571"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-floatchar-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-572">And another review question: Suppose that a and b are variables of type <code class="code-inline tex2jax_ignore">int</code>, a has the value 8, b has the value 6. In the C programming language, what is the value of <code class="code-inline tex2jax_ignore">(a+b)/3</code>?</p></article></section><p id="p-573">So far we have learned how integers (positive and negative) are stored in the computer's memory. How about decimal numbers, also known as floats?</p>
+<p id="p-574">In this next video you'll find out how floats are stored in memory!</p>
 <aside class="aside aside-like" id="aside-14"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-569" class="disc">
-<li id="li-191"><p id="p-derived-li-191">Storing floats in memory</p></li>
-<li id="li-192"><p id="p-derived-li-192">Floats take up 4 bytes of memory</p></li>
-<li id="li-193"><p id="p-derived-li-193">Double (more precise) take up 8 bytes</p></li>
+<ul id="p-575" class="disc">
+<li id="li-187"><p id="p-derived-li-187">Storing floats in memory</p></li>
+<li id="li-188"><p id="p-derived-li-188">Floats take up 4 bytes of memory</p></li>
+<li id="li-189"><p id="p-derived-li-189">Double (more precise) take up 8 bytes</p></li>
 </ul></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="Gw2Nh9umWnQ" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Gw2Nh9umWnQ?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<p id="p-570">How are real numbers (floats) represented/stored in the computer?</p>
-<p id="p-571">Example: -5,032.4235</p>
-<p id="p-572">Write in scientific notation (decimal):</p>
+<p id="p-576">How are real numbers (floats) represented/stored in the computer?</p>
+<p id="p-577">Example: -5,032.4235</p>
+<p id="p-578">Write in scientific notation (decimal):</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 -5.0324235\times 10^3
 \end{equation*}
 </div>
-<p id="p-573">where <code class="code-inline tex2jax_ignore">-</code> is the sign, <code class="code-inline tex2jax_ignore">5.0324235</code> is the "mantissa", and <code class="code-inline tex2jax_ignore">10^3</code> is the exponent.</p>
-<p id="p-574">In binary, this representation takes on the following form:</p>
+<p id="p-579">where <code class="code-inline tex2jax_ignore">-</code> is the sign, <code class="code-inline tex2jax_ignore">5.0324235</code> is the "mantissa", and <code class="code-inline tex2jax_ignore">10^3</code> is the exponent.</p>
+<p id="p-580">In binary, this representation takes on the following form:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 -1.mantissa\times 2^{exp}
 \end{equation*}
 </div>
-<p id="p-575">where <code class="code-inline tex2jax_ignore">number</code> = <code class="code-inline tex2jax_ignore">sign</code>*<code class="code-inline tex2jax_ignore">1.mantissa</code>*<code class="code-inline tex2jax_ignore">2^exponent</code></p>
+<p id="p-581">where <code class="code-inline tex2jax_ignore">number</code> = <code class="code-inline tex2jax_ignore">sign</code>*<code class="code-inline tex2jax_ignore">1.mantissa</code>*<code class="code-inline tex2jax_ignore">2^exponent</code></p>
 <div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/FloatingPoint.png" class="contained"></div>
-<p id="p-576">Special cases:</p>
+<p id="p-582">Special cases:</p>
 <ul class="disc">
-<li id="li-194"><p id="p-derived-li-194">Smallest possible exponent --&gt; number = 0</p></li>
-<li id="li-195"><p id="p-derived-li-195">Largest possible exponent  --&gt; number = NaN (infinity)</p></li>
+<li id="li-190"><p id="p-derived-li-190">Smallest possible exponent --&gt; number = 0</p></li>
+<li id="li-191"><p id="p-derived-li-191">Largest possible exponent  --&gt; number = NaN (infinity)</p></li>
 </ul>
-<p id="p-577"><code class="code-inline tex2jax_ignore">Float</code>: range of numbers varies, but ANSI minimum is <span class="process-math">\(10^{-37}\)</span> to <span class="process-math">\(10^{37}\)</span></p>
-<p id="p-578"><code class="code-inline tex2jax_ignore">Double</code>: often 8 bytes</p>
-<p id="p-579"><em class="emphasis">Note: can declare</em> <code class="code-inline tex2jax_ignore">long double</code> --- <em class="emphasis">not necessarily different from</em> <code class="code-inline tex2jax_ignore">double</code></p>
+<p id="p-583"><code class="code-inline tex2jax_ignore">Float</code>: range of numbers varies, but ANSI minimum is <span class="process-math">\(10^{-37}\)</span> to <span class="process-math">\(10^{37}\)</span></p>
+<p id="p-584"><code class="code-inline tex2jax_ignore">Double</code>: often 8 bytes</p>
+<p id="p-585"><em class="emphasis">Note: can declare</em> <code class="code-inline tex2jax_ignore">long double</code> --- <em class="emphasis">not necessarily different from</em> <code class="code-inline tex2jax_ignore">double</code></p>
 <section class="reading-questions" id="reading-questions-14"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-floatchar-5"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-580">The binary representation of the decimal number 0.75 is 0.11 (which basically stands for <span class="process-math">\(2^{-1} + 2^{-2} = \frac{1}{2} + \frac{1}{4} = 0.75\)</span>). In scientific notation, this binary number would be written as:</p>
+<p id="p-586">The binary representation of the decimal number 0.75 is 0.11 (which basically stands for <span class="process-math">\(2^{-1} + 2^{-2} = \frac{1}{2} + \frac{1}{4} = 0.75\)</span>). In scientific notation, this binary number would be written as:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 1.1 * 2^{-1}
@@ -545,14 +545,14 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <p class="continuation">Suppose now that 0.75 is stored (in the binary representation) as a float. In this representation, choose the correct option for the following components of the float:</p>
 <ul class="disc">
-<li id="li-196"><p id="p-derived-li-196">sign: positive / negative / zero</p></li>
-<li id="li-197"><p id="p-derived-li-197">mantissa: 11 / 1 / -1 / -11</p></li>
-<li id="li-198"><p id="p-derived-li-198">exponent: 11 / 1 / -1 / -11</p></li>
+<li id="li-192"><p id="p-derived-li-192">sign: positive / negative / zero</p></li>
+<li id="li-193"><p id="p-derived-li-193">mantissa: 11 / 1 / -1 / -11</p></li>
+<li id="li-194"><p id="p-derived-li-194">exponent: 11 / 1 / -1 / -11</p></li>
 </ul>
-<p id="p-581"><em class="alert">Enter your answers on separate lines, in the following format:</em></p>
-<p id="p-582"><em class="emphasis">sign: answer</em></p>
-<p id="p-583"><em class="emphasis">mantissa: answer</em></p>
-<p id="p-584"><em class="emphasis">exponent: answer</em></p></article></section></section></div></main>
+<p id="p-587"><em class="alert">Enter your answers on separate lines, in the following format:</em></p>
+<p id="p-588"><em class="emphasis">sign: answer</em></p>
+<p id="p-589"><em class="emphasis">mantissa: answer</em></p>
+<p id="p-590"><em class="emphasis">exponent: answer</em></p></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

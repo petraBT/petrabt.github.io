@@ -479,22 +479,23 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="adv-branching-for-if"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">11.2</span> <span class="title"><code class="code-inline tex2jax_ignore">for</code> and <code class="code-inline tex2jax_ignore">if</code> together</span>
 </h2>
-<p id="p-724">You can nest an <code class="code-inline tex2jax_ignore">if</code> statement inside a loop or a loop inside an <code class="code-inline tex2jax_ignore">if</code> statement.</p>
-<p id="p-725">Take a look at the following example which prints out those numbers between 0 and 29 that are divisible by 3. Make sure to try to understand how the code accomplishes this task.</p>
+<p id="p-730">You can nest an <code class="code-inline tex2jax_ignore">if</code> statement inside a loop or a loop inside an <code class="code-inline tex2jax_ignore">if</code> statement.</p>
+<p id="p-731">Take a look at the following example which prints out those numbers between 0 and 29 that are divisible by 3. Make sure to try to understand how the code accomplishes this task.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nbranching11.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching11.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching11.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><article class="example example-like" id="example-14"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-14"><h3 class="heading">
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching11.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><article class="example example-like" id="example-14"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">11.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-14"><article class="example example-like"><p id="p-726">Is there a difference between the two following scenarios, if the same statements are used within each element?</p>
+</h3>
+<p id="p-732">Is there a difference between the two following scenarios, if the same statements are used within each element?</p>
 <ul class="disc">
-<li id="li-321"><p id="p-derived-li-321">Nesting an <code class="code-inline tex2jax_ignore">if</code> statement within a loop</p></li>
-<li id="li-322"><p id="p-derived-li-322">Nesting a loop within an <code class="code-inline tex2jax_ignore">if</code> statement</p></li>
+<li id="li-317"><p id="p-derived-li-317">Nesting an <code class="code-inline tex2jax_ignore">if</code> statement within a loop</p></li>
+<li id="li-318"><p id="p-derived-li-318">Nesting a loop within an <code class="code-inline tex2jax_ignore">if</code> statement</p></li>
 </ul>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-727">Yes! They can produce quite different results!</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-733">Yes! They can produce quite different results!</p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<p id="p-728">Here is just one example of how the same statements placed in different orders can produce vastly different results:</p>
+<p id="p-734">Here is just one example of how the same statements placed in different orders can produce vastly different results:</p>
 <ol class="decimal">
-<li id="li-323"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
+<li id="li-319"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
 int a = 5;
 for (i=0; i&lt;11; i++){
   if (a&lt;i){
@@ -502,7 +503,7 @@ for (i=0; i&lt;11; i++){
   }
 }
 </code></pre></div></li>
-<li id="li-324"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
+<li id="li-320"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
 int a = 5;
 if (a&lt;i){
   for (i=0; i&lt;11; i++){
@@ -511,9 +512,9 @@ if (a&lt;i){
 }
 </code></pre></div></li>
 </ol>
-<p id="p-729">The first example program will output "6 7 8 9 10", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!</p>
+<p id="p-735">The first example program will output "6 7 8 9 10", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!</p>
 </div></div>
-</div></article></div></section></div></main>
+</div></article></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

@@ -478,19 +478,19 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="linkedlists"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">28</span> <span class="title">Linked Lists</span>
 </h2>
-<section class="introduction" id="introduction-28"><p id="p-1610">So far we have used arrays to store multiple items of the same data type. There are several situations you can imagine in which this is not ideal. Here are two such scenarios:</p>
+<section class="introduction" id="introduction-28"><p id="p-1616">So far we have used arrays to store multiple items of the same data type. There are several situations you can imagine in which this is not ideal. Here are two such scenarios:</p>
 <ul class="disc">
-<li id="li-865"><p id="p-derived-li-865">One problem with this method is that you have to declare the array in question (in your code with a fixed size or at runtime using dynamic memory allocation) and whichever way you do so, by the time you first use the array its length is locked in. Then what are you options if your array is full and you wish to add in another record? The only choice would be to ask for space for a bigger array, copy all of the information over and then add the new record. This is not exactly efficient.</p></li>
-<li id="li-866"><p id="p-derived-li-866">Next, imagine that your array contains records that have been sorted by some criterion. Suppose you wanted to add a new record, and it would have to go somewhere in the middle of your array in order to maintain the sorting. You'd then have to move over all of the records that need to come after the new record in order to make room for the new record. Again, this is not a very efficient way to go about things.</p></li>
+<li id="li-861"><p id="p-derived-li-861">One problem with this method is that you have to declare the array in question (in your code with a fixed size or at runtime using dynamic memory allocation) and whichever way you do so, by the time you first use the array its length is locked in. Then what are you options if your array is full and you wish to add in another record? The only choice would be to ask for space for a bigger array, copy all of the information over and then add the new record. This is not exactly efficient.</p></li>
+<li id="li-862"><p id="p-derived-li-862">Next, imagine that your array contains records that have been sorted by some criterion. Suppose you wanted to add a new record, and it would have to go somewhere in the middle of your array in order to maintain the sorting. You'd then have to move over all of the records that need to come after the new record in order to make room for the new record. Again, this is not a very efficient way to go about things.</p></li>
 </ul>
-<p id="p-1611">This is where linked lists might present a better way to store your data. A linked list provides a linear ordering of records without them having to be physically arranged that way in memory. In other words, rather than using the records' arrangement in memory to determine their ordering, each record keeps track of the location of the record that is to follow it in the linear ordering. This will all become clear shortly.</p>
-<p id="p-1612">In this chapter, we will cover the following topics:</p>
+<p id="p-1617">This is where linked lists might present a better way to store your data. A linked list provides a linear ordering of records without them having to be physically arranged that way in memory. In other words, rather than using the records' arrangement in memory to determine their ordering, each record keeps track of the location of the record that is to follow it in the linear ordering. This will all become clear shortly.</p>
+<p id="p-1618">In this chapter, we will cover the following topics:</p>
 <ul class="disc">
-<li id="li-867"><p id="p-derived-li-867">Linked lists</p></li>
-<li id="li-868"><p id="p-derived-li-868">Passing linked lists to functions</p></li>
-<li id="li-869"><p id="p-derived-li-869">Simplifying and automating the creation of linked lists</p></li>
-<li id="li-870"><p id="p-derived-li-870">Using linked lists to store extremely large numbers</p></li>
-<li id="li-871"><p id="p-derived-li-871">Manipulating linked lists (i.e. search, sort, reverse)</p></li>
+<li id="li-863"><p id="p-derived-li-863">Linked lists</p></li>
+<li id="li-864"><p id="p-derived-li-864">Passing linked lists to functions</p></li>
+<li id="li-865"><p id="p-derived-li-865">Simplifying and automating the creation of linked lists</p></li>
+<li id="li-866"><p id="p-derived-li-866">Using linked lists to store extremely large numbers</p></li>
+<li id="li-867"><p id="p-derived-li-867">Manipulating linked lists (i.e. search, sort, reverse)</p></li>
 </ul></section><nav class="summary-links"><ul>
 <li><a href="linkedlists-intro.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Intro to Linked Lists</span></a></li>
 <li><a href="linkedlists-functions.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Pass Linked Lists to Functions</span></a></li>

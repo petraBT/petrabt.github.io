@@ -478,9 +478,9 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="pointers-bottom-up-testing"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">20.6</span> <span class="title">Bottom-Up Testing</span>
 </h2>
-<p id="p-1213">When working on a small sub-sub-problem of a big program via a function it is important to test the function extensively before making it part of the bigger program.</p>
-<p id="p-1214">To do so, one simply writes a so-called <em class="alert">driver</em>, that is, a main function whose purpose it is to call your new function in order to check whether if works correctly.</p>
-<p id="p-1215">Suppose, for example, you are writing the function <code class="code-inline tex2jax_ignore">simplify()</code> that simplifies a fraction. Here is a sample driver to test this function:</p>
+<p id="p-1219">When working on a small sub-sub-problem of a big program via a function it is important to test the function extensively before making it part of the bigger program.</p>
+<p id="p-1220">To do so, one simply writes a so-called <em class="alert">driver</em>, that is, a main function whose purpose it is to call your new function in order to check whether if works correctly.</p>
+<p id="p-1221">Suppose, for example, you are writing the function <code class="code-inline tex2jax_ignore">simplify()</code> that simplifies a fraction. Here is a sample driver to test this function:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int main(void) {
   int numer = 50;
   int denom = 10;
@@ -489,14 +489,15 @@ eBookConfig.enable_chatcodes =  false;
   printf("simplified: %d/%d\n", numer, denom);
 }
 </code></pre></div>
-<p id="p-1216">There is no point in making this fancy: you'll discard it later!</p>
-<article class="example example-like" id="example-22"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-22"><h3 class="heading">
+<p id="p-1222">There is no point in making this fancy: you'll discard it later!</p>
+<article class="example example-like" id="example-22"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">20.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-22"><article class="example example-like"><p id="p-1217">What should your driver do to the function you are testing?</p>
+</h3>
+<p id="p-1223">What should your driver do to the function you are testing?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-1218">Provide it with some test inputs!</p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><p id="p-1219">Using your driver, you'll want to ensure that given certain inputs, your function outputs expected results. Whether you pass an integer, some floats, an array, or potentially nothing (if it's a <code class="code-inline tex2jax_ignore">void</code> function), the return value(s) or output from the function should match what you expect. If not, you will know something needs fixing...</p></div></div>
-</div></article></div></section></div></main>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-1224">Provide it with some test inputs!</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><p id="p-1225">Using your driver, you'll want to ensure that given certain inputs, your function outputs expected results. Whether you pass an integer, some floats, an array, or potentially nothing (if it's a <code class="code-inline tex2jax_ignore">void</code> function), the return value(s) or output from the function should match what you expect. If not, you will know something needs fixing...</p></div></div>
+</div></article></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
