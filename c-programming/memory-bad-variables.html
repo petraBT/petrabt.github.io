@@ -478,14 +478,14 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="memory-bad-variables"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.5</span> <span class="title">Bad Variable Names</span>
 </h2>
-<p id="p-1160">Here is a really nasty example. Don't ever write code with variable names like this! In the code, towards the right-hand side, comments are there to help you tell the scope of the variables and functions.</p>
+<p id="p-1175">Here is a really nasty example. Don't ever write code with variable names like this! In the code, towards the right-hand side, comments are there to help you tell the scope of the variables and functions.</p>
 <ul class="disc">
-<li id="li-622"><p id="p-derived-li-622">all: global scope - can be used anywhere (in <em class="alert">main</em> and functions)</p></li>
-<li id="li-623"><p id="p-derived-li-623">main: scope is the <em class="alert">main</em> function, not known elsewhere</p></li>
-<li id="li-624"><p id="p-derived-li-624">one: scope is function <em class="alert">one</em></p></li>
-<li id="li-625"><p id="p-derived-li-625">two: scope is function <em class="alert">two</em></p></li>
-<li id="li-626"><p id="p-derived-li-626">the function <em class="alert">one</em> cannot be called from the function <em class="alert">two</em> because of a conflict: in function <em class="alert">two</em>, there is a variable parameter that is called <em class="alert">one</em> and so this is what the function <em class="alert">two</em> will 'think of' when it 'sees' <em class="alert">one</em>.</p></li>
-<li id="li-627"><p id="p-derived-li-627">So, function <em class="alert">one</em> can be called from <em class="alert">main</em> and it can be called from within itself, but it cannot be called from <em class="alert">two</em>.</p></li>
+<li id="li-614"><p id="p-derived-li-614">all: global scope - can be used anywhere (in <em class="alert">main</em> and functions)</p></li>
+<li id="li-615"><p id="p-derived-li-615">main: scope is the <em class="alert">main</em> function, not known elsewhere</p></li>
+<li id="li-616"><p id="p-derived-li-616">one: scope is function <em class="alert">one</em></p></li>
+<li id="li-617"><p id="p-derived-li-617">two: scope is function <em class="alert">two</em></p></li>
+<li id="li-618"><p id="p-derived-li-618">the function <em class="alert">one</em> cannot be called from the function <em class="alert">two</em> because of a conflict: in function <em class="alert">two</em>, there is a variable parameter that is called <em class="alert">one</em> and so this is what the function <em class="alert">two</em> will 'think of' when it 'sees' <em class="alert">one</em>.</p></li>
+<li id="li-619"><p id="p-derived-li-619">So, function <em class="alert">one</em> can be called from <em class="alert">main</em> and it can be called from within itself, but it cannot be called from <em class="alert">two</em>.</p></li>
 </ul>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nscope3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nscope3.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nscope3.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe></section></div></main>

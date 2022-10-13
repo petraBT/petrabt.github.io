@@ -481,48 +481,48 @@ eBookConfig.enable_chatcodes =  false;
 <section class="subsection" id="subsection-45"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.4.1</span> <span class="title">Navigation Commands</span>
 </h3>
-<p id="p-911">To begin exploring how to find your files using typed commands in Linux, we must learn how to navigate between folders using only typed commands.</p>
-<p id="p-912">The first <em class="alert">command</em> we will study is <code class="code-inline tex2jax_ignore">ls</code>. This command lists the content of a directory. You of course are familiar with how to accomplish the equivalent in a file browser: you simply click on the folder icon and automatically are shown the files inside the folder.</p>
+<p id="p-926">To begin exploring how to find your files using typed commands in Linux, we must learn how to navigate between folders using only typed commands.</p>
+<p id="p-927">The first <em class="alert">command</em> we will study is <code class="code-inline tex2jax_ignore">ls</code>. This command lists the content of a directory. You of course are familiar with how to accomplish the equivalent in a file browser: you simply click on the folder icon and automatically are shown the files inside the folder.</p>
 <article class="activity project-like" id="activity-52"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.1</span><span class="period">.</span>
 </h4>
-<p id="p-913">Try it out by typing <code class="code-inline tex2jax_ignore">ls</code> in your terminal window. What happens?</p></article><p id="p-914"><em class="alert">Switches</em> can be added to a command to modify its behavior. For <code class="code-inline tex2jax_ignore">ls</code>, switches include:</p>
+<p id="p-928">Try it out by typing <code class="code-inline tex2jax_ignore">ls</code> in your terminal window. What happens?</p></article><p id="p-929"><em class="alert">Switches</em> can be added to a command to modify its behavior. For <code class="code-inline tex2jax_ignore">ls</code>, switches include:</p>
 <ul class="disc">
-<li id="li-435"><p id="p-derived-li-435"><code class="code-inline tex2jax_ignore">-l</code>: long listing (type <code class="code-inline tex2jax_ignore">ls -l</code> into the terminal window to try it out)</p></li>
-<li id="li-436"><p id="p-derived-li-436"><code class="code-inline tex2jax_ignore">-t</code>: sorts by date (type <code class="code-inline tex2jax_ignore">ls -t</code>)</p></li>
-<li id="li-437"><p id="p-derived-li-437"><code class="code-inline tex2jax_ignore">-a</code>: show all files, even those that are hidden by the operating system (type <code class="code-inline tex2jax_ignore">ls -a</code>)</p></li>
+<li id="li-427"><p id="p-derived-li-427"><code class="code-inline tex2jax_ignore">-l</code>: long listing (type <code class="code-inline tex2jax_ignore">ls -l</code> into the terminal window to try it out)</p></li>
+<li id="li-428"><p id="p-derived-li-428"><code class="code-inline tex2jax_ignore">-t</code>: sorts by date (type <code class="code-inline tex2jax_ignore">ls -t</code>)</p></li>
+<li id="li-429"><p id="p-derived-li-429"><code class="code-inline tex2jax_ignore">-a</code>: show all files, even those that are hidden by the operating system (type <code class="code-inline tex2jax_ignore">ls -a</code>)</p></li>
 </ul>
-<p id="p-915">You can also combine several switches in arbitrary order:</p>
+<p id="p-930">You can also combine several switches in arbitrary order:</p>
 <ul class="disc">
-<li id="li-438"><p id="p-derived-li-438"><code class="code-inline tex2jax_ignore">-lta</code>: shows a long listing, sorted by date, of all files (type <code class="code-inline tex2jax_ignore">ls -lta</code>)</p></li>
-<li id="li-439"><p id="p-derived-li-439">See <a href="linux-cheat-sheet.html" class="internal" title="Section 15.12: List of Linux Commands">List of Linux Commands</a> for more switches and description of <code class="code-inline tex2jax_ignore">ls</code></p></li>
+<li id="li-430"><p id="p-derived-li-430"><code class="code-inline tex2jax_ignore">-lta</code>: shows a long listing, sorted by date, of all files (type <code class="code-inline tex2jax_ignore">ls -lta</code>)</p></li>
+<li id="li-431"><p id="p-derived-li-431">See <a href="linux-cheat-sheet.html" class="internal" title="Section 15.12: List of Linux Commands">List of Linux Commands</a> for more switches and description of <code class="code-inline tex2jax_ignore">ls</code></p></li>
 </ul>
 <article class="activity project-like" id="activity-53"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span>
 </h4>
-<p id="p-916">Now, try typing <code class="code-inline tex2jax_ignore">ls engs20</code> into the terminal window. What do you see? How would you accomplish this in the file browser?</p></article><p id="p-917">The next <em class="alert">command</em> we will discuss is <code class="code-inline tex2jax_ignore">cd</code>. This command is used to change the directory in which you find yourself.</p>
+<p id="p-931">Now, try typing <code class="code-inline tex2jax_ignore">ls engs20</code> into the terminal window. What do you see? How would you accomplish this in the file browser?</p></article><p id="p-932">The next <em class="alert">command</em> we will discuss is <code class="code-inline tex2jax_ignore">cd</code>. This command is used to change the directory in which you find yourself.</p>
 <article class="activity project-like" id="activity-54"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.3</span><span class="period">.</span>
 </h4>
-<p id="p-918">Try it out by typing <code class="code-inline tex2jax_ignore">cd engs20</code>, then type <code class="code-inline tex2jax_ignore">ls</code>. Now, your file browser and terminal are both pointing to the same directory.</p></article><p id="p-919">How do we return to the <em class="emphasis">parent directory</em>, which is the directory in which <code class="code-inline tex2jax_ignore">engs20</code> is located?</p>
+<p id="p-933">Try it out by typing <code class="code-inline tex2jax_ignore">cd engs20</code>, then type <code class="code-inline tex2jax_ignore">ls</code>. Now, your file browser and terminal are both pointing to the same directory.</p></article><p id="p-934">How do we return to the <em class="emphasis">parent directory</em>, which is the directory in which <code class="code-inline tex2jax_ignore">engs20</code> is located?</p>
 <article class="activity project-like" id="activity-55"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.4</span><span class="period">.</span>
 </h4>
-<p id="p-920">Type <code class="code-inline tex2jax_ignore">cd ..</code>, then type <code class="code-inline tex2jax_ignore">ls</code> to verify that we are back to where we started. How would you do this in the file browser?</p>
-<p id="p-921">What are all these other directories and where in the file system are we to begin with?</p></article></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
+<p id="p-935">Type <code class="code-inline tex2jax_ignore">cd ..</code>, then type <code class="code-inline tex2jax_ignore">ls</code> to verify that we are back to where we started. How would you do this in the file browser?</p>
+<p id="p-936">What are all these other directories and where in the file system are we to begin with?</p></article></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.4.2</span> <span class="title">Hierarchical File System</span>
 </h3>
-<p id="p-922">The Linux file system is hierarchical and is pretty much organized like a tree. The start of the file system is called its <em class="emphasis">root</em> directory: <code class="code-inline tex2jax_ignore">/</code>. Type <code class="code-inline tex2jax_ignore">cd /</code>, then type <code class="code-inline tex2jax_ignore">ls</code>. You should see something like the following:</p>
+<p id="p-937">The Linux file system is hierarchical and is pretty much organized like a tree. The start of the file system is called its <em class="emphasis">root</em> directory: <code class="code-inline tex2jax_ignore">/</code>. Type <code class="code-inline tex2jax_ignore">cd /</code>, then type <code class="code-inline tex2jax_ignore">ls</code>. You should see something like the following:</p>
 <div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="external/images/Linux_root.png" class="contained"></div>
-<p id="p-923">Where did <code class="code-inline tex2jax_ignore">engs20</code> go? Don't worry, we'll find it!</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<p id="p-938">Where did <code class="code-inline tex2jax_ignore">engs20</code> go? Don't worry, we'll find it!</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.4.3</span> <span class="title">Expanded Hierarchical File System</span>
 </h3>
-<p id="p-924">Can you find your <code class="code-inline tex2jax_ignore">engs20</code> folder now?</p>
+<p id="p-939">Can you find your <code class="code-inline tex2jax_ignore">engs20</code> folder now?</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/Linux_root_large.png" class="contained"></div>
 <article class="activity project-like" id="activity-56"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.5</span><span class="period">.</span>
 </h4>
-<p id="p-925">Now that you know where it is located, what Linux commands do you type in the terminal window to get you back into the <code class="code-inline tex2jax_ignore">engs20</code> folder?</p></article></section></section></div></main>
+<p id="p-940">Now that you know where it is located, what Linux commands do you type in the terminal window to get you back into the <code class="code-inline tex2jax_ignore">engs20</code> folder?</p></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<p>One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</p>
-<span class="incontext"><a href="libraries-object.html#p-1710" class="internal">in-context</a></span>
+<p>The <em class="alert">header file</em> contains all of the prototypes of functions from the library (remember, the compiler needs to know about these prototypes so that it can check whether you are using your functions correctly). That's why we need to <code class="code-inline tex2jax_ignore">#include ...</code> the header files of those libraries whose functions we wish to invoke in our code.</p>
+<span class="incontext"><a href="libraries-intro.html#p-1710" class="internal">in-context</a></span>
 </body>
 </html>
