@@ -115,6 +115,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -485,16 +486,14 @@ eBookConfig.enable_chatcodes =  false;
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching11.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><article class="example example-like" id="example-14"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">11.1</span><span class="period">.</span>
 </h3>
-<p id="p-747">Is there a difference between the two following scenarios, if the same statements are used within each element?</p>
-<ul class="disc">
+<p id="p-747">Is there a difference between the two following scenarios, if the same statements are used within each element?</p> <ul class="disc">
 <li id="li-309"><p id="p-derived-li-309">Nesting an <code class="code-inline tex2jax_ignore">if</code> statement within a loop</p></li>
 <li id="li-310"><p id="p-derived-li-310">Nesting a loop within an <code class="code-inline tex2jax_ignore">if</code> statement</p></li>
 </ul>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-748">Yes! They can produce quite different results!</p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<p id="p-749">Here is just one example of how the same statements placed in different orders can produce vastly different results:</p>
-<ol class="decimal">
+<p id="p-749">Here is just one example of how the same statements placed in different orders can produce vastly different results:</p> <ol class="decimal">
 <li id="li-311"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
 int a = 5;
 for (i=0; i&lt;11; i++){
@@ -511,8 +510,7 @@ if (a&lt;i){
   }
 }
 </code></pre></div></li>
-</ol>
-<p id="p-750">The first example program will output "6 7 8 9 10", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!</p>
+</ol> <p id="p-750">The first example program will output "6 7 8 9 10", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!</p>
 </div></div>
 </div></article></section></div></main>
 </div>

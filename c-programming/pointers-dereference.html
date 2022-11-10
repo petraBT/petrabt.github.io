@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -489,15 +490,12 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-pointers-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1214">You want to write a function that increases the integer value stored in a variable num by one. Given the following function definition, what is the correct function call? Assume that a variable num of type int has been declared and initialized.</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void increasebyone(int *a)
+<p id="p-1214">You want to write a function that increases the integer value stored in a variable num by one. Given the following function definition, what is the correct function call? Assume that a variable num of type int has been declared and initialized.</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void increasebyone(int *a)
 {
   *a = *a + 1;
 }
-</code></pre></div>
-<p id="p-1215"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p>
-<p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" frameborder="0" width="100%" height="400"></iframe><ol class="lower-alpha">
+</code></pre></div> <p id="p-1215"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" frameborder="0" width="100%" height="400"></iframe> <ol class="lower-alpha">
 <li id="li-629"><pre class="code-block tex2jax_ignore">increasebyone(*num);
 </pre></li>
 <li id="li-630"><pre class="code-block tex2jax_ignore">increasebyone(&amp;num);
@@ -506,23 +504,19 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-632"><pre class="code-block tex2jax_ignore">num = increasebyone(&amp;num);
 </pre></li>
-</ol>
-<p id="p-1216"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-pointers-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1217">What does the following piece of code do?</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">float num = 5.0;
+</ol> <p id="p-1216"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-pointers-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1217">What does the following piece of code do?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">float num = 5.0;
 float *pointer;
 
 pointer = &amp;num;
 *pointer = *pointer + 1.0;
 printf("%f", *pointer);
-</code></pre></div>
-<ol class="lower-alpha">
+</code></pre></div> <ol class="lower-alpha">
 <li id="li-633"><p id="p-derived-li-633">This code prints out the number 5.000000 to the default output.</p></li>
 <li id="li-634"><p id="p-derived-li-634">This code prints out the address of the variable pointer to the default output.</p></li>
 <li id="li-635"><p id="p-derived-li-635">This code prints out the number 6.000000 to the default output.</p></li>
 <li id="li-636"><p id="p-derived-li-636">This code prints the address of the variable num to the default output.</p></li>
-</ol>
-<p id="p-1218"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1218"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

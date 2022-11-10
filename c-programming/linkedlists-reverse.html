@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -489,24 +490,20 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist2-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1696">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
+<p id="p-1696">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
   if(start != NULL) {
     whatAmIDoing(start-&gt;next);
     printf("%d", start-&gt;num);
   }
 }
-</code></pre></div>
-<ol class="lower-alpha">
+</code></pre></div> <ol class="lower-alpha">
 <li id="li-900"><p id="p-derived-li-900">It prints every other digit of the number stored in the linked list.</p></li>
 <li id="li-901"><p id="p-derived-li-901">It prints the entire number stored in the linked list in reverse order.</p></li>
 <li id="li-902"><p id="p-derived-li-902">It prints every other digit of the number stored in the linked list, in reverse order.</p></li>
 <li id="li-903"><p id="p-derived-li-903">It prints the entire number stored in the linked list.</p></li>
 <li id="li-904"><p id="p-derived-li-904">It produces an endless loop.</p></li>
-</ol>
-<p id="p-1697"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-linkedlist2-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1698">Given again the definition of a linked list of digits as in the video, the following function <code class="code-inline tex2jax_ignore">reverse()</code> is supposed to reverse a linked list of digits in place, that is, without creating a copy of the list. There is one line missing at the end of the function.</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct digit * reverse(struct digit * start) {
+</ol> <p id="p-1697"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-linkedlist2-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1698">Given again the definition of a linked list of digits as in the video, the following function <code class="code-inline tex2jax_ignore">reverse()</code> is supposed to reverse a linked list of digits in place, that is, without creating a copy of the list. There is one line missing at the end of the function.</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct digit * reverse(struct digit * start) {
   struct digit * prev = NULL;
   struct digit * current = start;
   struct digit * next;
@@ -518,9 +515,7 @@ eBookConfig.enable_chatcodes =  false;
   }
   /*ADD LINE HERE*/
 }
-</code></pre></div>
-<p id="p-1699">What should be added in place of <code class="code-inline tex2jax_ignore">/*ADD LINE HERE*/</code>, so that the function correctly reverses the number?</p>
-<ol class="lower-alpha">
+</code></pre></div> <p id="p-1699">What should be added in place of <code class="code-inline tex2jax_ignore">/*ADD LINE HERE*/</code>, so that the function correctly reverses the number?</p> <ol class="lower-alpha">
 <li id="li-905"><pre class="code-block tex2jax_ignore">return(current);
 </pre></li>
 <li id="li-906"><pre class="code-block tex2jax_ignore">return(next);
@@ -529,8 +524,7 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-908"><pre class="code-block tex2jax_ignore">return(NULL);
 </pre></li>
-</ol>
-<p id="p-1700"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1700"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

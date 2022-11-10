@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -491,16 +492,13 @@ eBookConfig.enable_chatcodes =  false;
 <p id="p-1278">Suppose an array of integers has been declared using the declaration</p>
 <pre class="code-block tex2jax_ignore">int num[50];
 </pre>
-<p id="p-1279">Next, <em class="emphasis">x</em> integers are stored in this array (where x is no larger than 50). The array is to be passed to a function sum which is to add up the x integers stored in the array. What should you be passing to the function sum?</p>
-<ol class="lower-alpha">
+<p id="p-1279">Next, <em class="emphasis">x</em> integers are stored in this array (where x is no larger than 50). The array is to be passed to a function sum which is to add up the x integers stored in the array. What should you be passing to the function sum?</p> <ol class="lower-alpha">
 <li id="li-680"><p id="p-derived-li-680">The number x of integers stored in the array and a pointer to the first element of num.</p></li>
 <li id="li-681"><p id="p-derived-li-681">A pointer to the first element of num.</p></li>
 <li id="li-682"><p id="p-derived-li-682">num[0]</p></li>
 <li id="li-683"><p id="p-derived-li-683">The 50 elements of num, stored as individual integers.</p></li>
-</ol>
-<p id="p-1280"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-arrayfunction-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1281">Suppose a function sum has been defined as follows:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int sum(int n, int array[])
+</ol> <p id="p-1280"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-arrayfunction-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1281">Suppose a function sum has been defined as follows:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int sum(int n, int array[])
 {
            int i;
            int result = 0;
@@ -508,14 +506,9 @@ eBookConfig.enable_chatcodes =  false;
              result += array[i];
            return(result);
 }
-</code></pre></div>
-<p id="p-1282">Suppose furthermore that in your main function an array num has been declared and initialized with the following:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int num[]={4,2,7,5,8,9,4,2,4,6};
-</code></pre></div>
-<p id="p-1283">What is the correct function call of <code class="code-inline tex2jax_ignore">sum()</code>, using this array?</p>
-<p id="p-1284"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p>
-<p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" frameborder="0" width="100%" height="600"></iframe><ol class="lower-alpha">
+</code></pre></div> <p id="p-1282">Suppose furthermore that in your main function an array num has been declared and initialized with the following:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int num[]={4,2,7,5,8,9,4,2,4,6};
+</code></pre></div> <p id="p-1283">What is the correct function call of <code class="code-inline tex2jax_ignore">sum()</code>, using this array?</p> <p id="p-1284"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" frameborder="0" width="100%" height="600"></iframe> <ol class="lower-alpha">
 <li id="li-684"><pre class="code-block tex2jax_ignore">sum(10, array[0]);
 </pre></li>
 <li id="li-685"><pre class="code-block tex2jax_ignore">sum(10, num[0]);
@@ -526,8 +519,7 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-688"><pre class="code-block tex2jax_ignore">sum(10, array);
 </pre></li>
-</ol>
-<p id="p-1285"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article></section></section></div></main>
+</ol> <p id="p-1285"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

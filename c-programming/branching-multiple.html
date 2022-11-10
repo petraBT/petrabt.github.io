@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -491,16 +492,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-703">Use an exclamation mark to negate a condition.</p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
-<p id="p-704">By using an exclamation mark in front of the condition in our <code class="code-inline tex2jax_ignore">if</code> statement, C will interpret the condition as the opposite of whatever it normally would be. For example, if our simple <code class="code-inline tex2jax_ignore">if</code> statement was as follows:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int var; /*see below for our example values of var*/
+<p id="p-704">By using an exclamation mark in front of the condition in our <code class="code-inline tex2jax_ignore">if</code> statement, C will interpret the condition as the opposite of whatever it normally would be. For example, if our simple <code class="code-inline tex2jax_ignore">if</code> statement was as follows:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int var; /*see below for our example values of var*/
 if (!var){
   print("True");
 }else{
   printf("False");
 }
-</code></pre></div>
-<p id="p-705">then, if <code class="code-inline tex2jax_ignore">var = 0</code> which is originally false, <code class="code-inline tex2jax_ignore">!var</code> would be true.</p>
-<p id="p-706">Similarly, if <code class="code-inline tex2jax_ignore">var = 1</code> which is originally true, <code class="code-inline tex2jax_ignore">!var</code> would thus be false.</p>
+</code></pre></div> <p id="p-705">then, if <code class="code-inline tex2jax_ignore">var = 0</code> which is originally false, <code class="code-inline tex2jax_ignore">!var</code> would be true.</p> <p id="p-706">Similarly, if <code class="code-inline tex2jax_ignore">var = 1</code> which is originally true, <code class="code-inline tex2jax_ignore">!var</code> would thus be false.</p>
 </div></div>
 </div></article></section></div></main>
 </div>

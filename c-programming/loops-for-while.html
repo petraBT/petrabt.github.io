@@ -115,6 +115,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -517,8 +518,7 @@ while (i&gt;5) {
 <article class="example example-like" id="example-16"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">14.1</span><span class="period">.</span>
 </h3>
-<p id="p-858">Would a <code class="code-inline tex2jax_ignore">for</code>- or <code class="code-inline tex2jax_ignore">while</code>-loop be more efficient to implement in the following scenario?</p>
-<p id="p-859"><em class="emphasis">In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.</em></p>
+<p id="p-858">Would a <code class="code-inline tex2jax_ignore">for</code>- or <code class="code-inline tex2jax_ignore">while</code>-loop be more efficient to implement in the following scenario?</p> <p id="p-859"><em class="emphasis">In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.</em></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-860">A <code class="code-inline tex2jax_ignore">while</code>-loop</p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><p id="p-861">Though this task could technically be accomplished with either type of loop, a <code class="code-inline tex2jax_ignore">while</code>-loop would be more efficient to use, since you don't know how many times the user will input information before that certain "stop" integer is entered. With a <code class="code-inline tex2jax_ignore">for</code>-loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A <code class="code-inline tex2jax_ignore">while</code>-loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain "stop" integer being entered.</p></div></div>

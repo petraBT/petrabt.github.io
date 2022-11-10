@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -507,18 +508,12 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist1-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1643">Let's start with a quick review question.</p>
-<p id="p-1644">Suppose the following declarations have been made:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
+<p id="p-1643">Let's start with a quick review question.</p> <p id="p-1644">Suppose the following declarations have been made:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
      int x;
      int y;
 } point_t;
-</code></pre></div>
-<p id="p-1645">and</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">point_t octagon[8];
-</code></pre></div>
-<p id="p-1646">How would you assign the value 20 to the y-coordinate of the last point in the array <em class="emphasis">octagon</em>?</p>
-<ol class="lower-alpha">
+</code></pre></div> <p id="p-1645">and</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">point_t octagon[8];
+</code></pre></div> <p id="p-1646">How would you assign the value 20 to the y-coordinate of the last point in the array <em class="emphasis">octagon</em>?</p> <ol class="lower-alpha">
 <li id="li-864"><pre class="code-block tex2jax_ignore">octagon[20].y = 7;
 </pre></li>
 <li id="li-865"><pre class="code-block tex2jax_ignore">octagon[7].y = 20;
@@ -527,19 +522,14 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-867"><pre class="code-block tex2jax_ignore">octagon[7]-&gt;y = 20;
 </pre></li>
-</ol>
-<p id="p-1647"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-linkedlist1-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1648">Suppose that we have created a linked list of three student records using the structure definition below:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
+</ol> <p id="p-1647"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-linkedlist1-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1648">Suppose that we have created a linked list of three student records using the structure definition below:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
      char    name[50];
      int     birthYear;
      float   gpa;     
      struct student *next;
 };
-</code></pre></div>
-<p id="p-1649">Suppose also that the pointer <code class="code-inline tex2jax_ignore">start</code> of type <code class="code-inline tex2jax_ignore">struct student *</code> points to the first student in the list.</p>
-<p id="p-1650">How would you print the name and GPA of the first student in the list?</p>
-<ol class="lower-alpha">
+</code></pre></div> <p id="p-1649">Suppose also that the pointer <code class="code-inline tex2jax_ignore">start</code> of type <code class="code-inline tex2jax_ignore">struct student *</code> points to the first student in the list.</p> <p id="p-1650">How would you print the name and GPA of the first student in the list?</p> <ol class="lower-alpha">
 <li id="li-868"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start.name, start.gpa);
 </pre></li>
 <li id="li-869"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", *start-&gt;name, *start-&gt;gpa);
@@ -548,8 +538,7 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-871"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start-&gt;name, start-&gt;gpa);
 </pre></li>
-</ol>
-<p id="p-1651"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1651"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

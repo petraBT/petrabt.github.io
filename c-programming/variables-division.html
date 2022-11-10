@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -486,9 +487,8 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span>
 </h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="activity-variables-division" data-multipleanswers="false" data-random="">
-<p id="p-408">Try to predict what the output of the following program will be:</p>
-<p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Ndivision1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true&amp;hide_run=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true&amp;hide_run=true" frameborder="0" width="100%" height="300"></iframe><p id="p-409">Which of the following do you think will be printed to the screen?</p>
+<p id="p-408">Try to predict what the output of the following program will be:</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Ndivision1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true&amp;hide_run=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true&amp;hide_run=true" frameborder="0" width="100%" height="300"></iframe> <p id="p-409">Which of the following do you think will be printed to the screen?</p>
 <li data-component="answer" id="activity-variables-division_opt_a" data-correct=""><code class="code-inline tex2jax_ignore">5 / 3 = 1</code></li>
 <li data-component="feedback" id="activity-variables-division_opt_a"><p id="p-410">Correct! Do you have any idea why this might be happening?</p></li>
 <li data-component="answer" id="activity-variables-division_opt_b"><code class="code-inline tex2jax_ignore">5 / 3 = 1.666667</code></li>
@@ -505,11 +505,8 @@ eBookConfig.enable_chatcodes =  false;
 <article class="activity project-like" id="activity-17"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
 </h4>
-<p id="p-415">Click on the <code class="code-inline tex2jax_ignore">Run</code> button in the window below to reveal the integer division behavior that C exhibits. Next, change the data types of some of the variables (use float instead of int) and observe the outcome. What do you notice?</p>
-<p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Ndivision1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe></article><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Summary of division behavior in C:.</span></h4>
-<p id="p-416">Following are the results of various examples of division in C. Notice the effect that the <em class="emphasis">types</em> of numbers being divided have on the quotient. Are there patterns? Why is this happening?</p>
-<ul class="disc">
+<p id="p-415">Click on the <code class="code-inline tex2jax_ignore">Run</code> button in the window below to reveal the integer division behavior that C exhibits. Next, change the data types of some of the variables (use float instead of int) and observe the outcome. What do you notice?</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Ndivision1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Ndivision1.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe></article><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Summary of division behavior in C:.</span></h4> <p id="p-416">Following are the results of various examples of division in C. Notice the effect that the <em class="emphasis">types</em> of numbers being divided have on the quotient. Are there patterns? Why is this happening?</p> <ul class="disc">
 <li id="li-99"><pre class="code-block tex2jax_ignore">5/2 = 2
 </pre></li>
 <li id="li-100"><pre class="code-block tex2jax_ignore">5.0/2 = 2.5

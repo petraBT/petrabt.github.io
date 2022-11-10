@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -496,8 +497,7 @@ int main(void)
 </code></pre>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like">
-<p id="p-419">We're not really sure.  But it would begin as follows:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+<p id="p-419">We're not really sure.  But it would begin as follows:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 
 int main(void)
 {
@@ -550,7 +550,7 @@ int main(void)
 </div></div></div></article><article class="exercise exercise-like" id="short-answer-question"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Short Answer.</span>
 </h4>
-<p id="p-428">This sample book is configured to make some simple questions interactive on a capable platform, by adding a <code class="code-inline tex2jax_ignore">&lt;response&gt;</code> element as a signal.</p></article><article class="exercise exercise-like" id="fillin-integer"><h4 class="heading">
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="shortanswer" data-question_label="" class="journal" data-mathjax="" id="short-answer-question" data-placeholder="You can write here, and it will be saved on this device, but your response will not be graded."><p id="p-428">This sample book is configured to make some simple questions interactive on a capable platform, by adding a <code class="code-inline tex2jax_ignore">&lt;response&gt;</code> element as a signal.</p></div></div></div></article><article class="exercise exercise-like" id="fillin-integer"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Fill-In, Integer Answer.</span>
 </h4>
 <div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="fillin-integer">
@@ -560,8 +560,7 @@ int main(void)
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Fill-In, String and Number Answers.</span>
 </h4>
 <div class="ptx-runestone-container"><div class="runestone"><div data-component="fillintheblank" data-question_label="" id="fillin-string-integer">
-<p id="p-433">Complete the following line of a Python program so that it will declare an integer variable <code class="code-inline tex2jax_ignore">age</code> with an initial value of <code class="code-inline tex2jax_ignore">5</code>. (These two answer blanks have been set to be very short.)</p>
-<p id="p-434"><input type="text" placeholder="Text" size="3"> <code class="code-inline tex2jax_ignore">age = </code> <input type="text" placeholder="Number" size="3"><code class="code-inline tex2jax_ignore">;</code></p>
+<p id="p-433">Complete the following line of a Python program so that it will declare an integer variable <code class="code-inline tex2jax_ignore">age</code> with an initial value of <code class="code-inline tex2jax_ignore">5</code>. (These two answer blanks have been set to be very short.)</p> <p id="p-434"><input type="text" placeholder="Text" size="3"> <code class="code-inline tex2jax_ignore">age = </code> <input type="text" placeholder="Number" size="3"><code class="code-inline tex2jax_ignore">;</code></p>
 <script type="application/json">[[{"regex": "^\\s*int\\s*$", "regexFlags": "", "feedback": "<p id=\"p-435\">A variable of type <code class=\"code-inline tex2jax_ignore\">int<\/code> is appropriate for whole number ages.<\/p>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p id=\"p-436\">Remember that C uses just the first three letters of the word “integer” to define an integral type.<\/p>"}], [{"number": [5, 5], "feedback": "<p id=\"p-437\">An integer variable may be initialized to a value.<\/p>"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p id=\"p-438\">Use <code class=\"code-inline tex2jax_ignore\">5<\/code> as the initial value of the variable.<\/p>"}]]</script>
 </div></div></div></article><article class="exercise exercise-like" id="fillin-case-insensitive"><h4 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Fill-In, Case-Insensitive Answer.</span>

@@ -115,6 +115,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -496,8 +497,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-malloc-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1375">Given the following code:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+<p id="p-1375">Given the following code:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 int main(void) {
   int *a, *b;
@@ -513,19 +513,16 @@ int main(void) {
   free(c);
   return 0;
 }
-</code></pre></div>
-<p id="p-1376">What would the line</p>
+</code></pre></div> <p id="p-1376">What would the line</p>
 <pre class="code-block tex2jax_ignore">printf("a = %d, b = %d, c = %f\n", *a, *b, *c);
 </pre>
-<p id="p-1377">print to the screen if placed right before the <code class="code-inline tex2jax_ignore">return 0;</code> line?</p>
-<ol class="lower-alpha">
+<p id="p-1377">print to the screen if placed right before the <code class="code-inline tex2jax_ignore">return 0;</code> line?</p> <ol class="lower-alpha">
 <li id="li-719"><p id="p-derived-li-719">a = 2, b = 3, c = 0.5</p></li>
 <li id="li-720"><p id="p-derived-li-720">a = 1, b = 2, c = 3.5</p></li>
 <li id="li-721"><p id="p-derived-li-721">a = 2, b = 2, c = 3.5</p></li>
 <li id="li-722"><p id="p-derived-li-722">a = 2, b = 3, c = 3.5</p></li>
 <li id="li-723"><p id="p-derived-li-723">The result is unpredictable and may be different from one system to the next.</p></li>
-</ol>
-<p id="p-1378"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article></section></section></div></main>
+</ol> <p id="p-1378"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

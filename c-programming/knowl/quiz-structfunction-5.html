@@ -14,26 +14,17 @@
 <article class="exercise exercise-like"><h4 class="heading">
 <span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span>
 </h4>
-<p>Time for some review of multidimensional arrays (this is called <em class="emphasis">interleaved learning</em> - a method of learning that helps you retain better what you have learned!)</p>
-<p>Suppose you have written a function that initializes a two-dimensional array as follows:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void initialize_array(int array[][NCOLS])
+<p>Time for some review of multidimensional arrays (this is called <em class="emphasis">interleaved learning</em> - a method of learning that helps you retain better what you have learned!)</p> <p>Suppose you have written a function that initializes a two-dimensional array as follows:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void initialize_array(int array[][NCOLS])
 {
   int i,j;
   for (i=0; i&lt;NROWS; i++)
     for (j=0; j&lt;NCOLS; j++)
       array[i][j] = i;
 }
-</code></pre></div>
-<p>Assume that you also have</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define NROWS 20
+</code></pre></div> <p>Assume that you also have</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define NROWS 20
 #define NCOLS 30
-</code></pre></div>
-<p>as part of your code.</p>
-<p>In your main program you have declared an array matrix as follows:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int matrix[NROWS][NCOLS];
-</code></pre></div>
-<p>What is the correct function call of the function <code class="code-inline tex2jax_ignore">initialize_array()</code> from within your main function?</p>
-<ol class="lower-alpha">
+</code></pre></div> <p>as part of your code.</p> <p>In your main program you have declared an array matrix as follows:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int matrix[NROWS][NCOLS];
+</code></pre></div> <p>What is the correct function call of the function <code class="code-inline tex2jax_ignore">initialize_array()</code> from within your main function?</p> <ol class="lower-alpha">
 <li><pre class="code-block tex2jax_ignore">initialize_array(matrix[][NCOLS]);
 </pre></li>
 <li><pre class="code-block tex2jax_ignore">initialize_array(matrix[NROWS][]);
@@ -44,7 +35,6 @@
 </pre></li>
 <li><pre class="code-block tex2jax_ignore">initialize_array(&amp;matrix);
 </pre></li>
-</ol>
-<p><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><span class="incontext"><a href="structures-pointers.html#quiz-structfunction-5" class="internal">in-context</a></span>
+</ol> <p><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><span class="incontext"><a href="structures-pointers.html#quiz-structfunction-5" class="internal">in-context</a></span>
 </body>
 </html>

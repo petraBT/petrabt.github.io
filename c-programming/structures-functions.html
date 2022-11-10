@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -510,34 +511,27 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h4>
 <article class="exercise exercise-like" id="quiz-structfunction-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-1554">Suppose you have declared a structure to hold student data as in the video:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+<p id="p-1554">Suppose you have declared a structure to hold student data as in the video:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
   double aveGrade;
 };
-</code></pre></div>
-<p id="p-1555">Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?</p>
-<ol class="lower-alpha">
+</code></pre></div> <p id="p-1555">Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?</p> <ol class="lower-alpha">
 <li id="li-798"><pre class="code-block tex2jax_ignore">double compareStudents(stud1, stud2);
 </pre></li>
 <li id="li-799"><pre class="code-block tex2jax_ignore">struct student compareStudents(struct student stud1, struct student stud2);
 </pre></li>
 <li id="li-800"><pre class="code-block tex2jax_ignore">double compareStudents(struct student stud1, struct student stud2);
 </pre></li>
-</ol>
-<p id="p-1556"><em class="emphasis">Enter your choice (a/b/c):</em></p></article><article class="exercise exercise-like" id="quiz-structfunction-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-1557">In the same scenario as in the previous question, where you have declared a structure to hold student data via:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+</ol> <p id="p-1556"><em class="emphasis">Enter your choice (a/b/c):</em></p></article><article class="exercise exercise-like" id="quiz-structfunction-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-1557">In the same scenario as in the previous question, where you have declared a structure to hold student data via:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
   double aveGrade;
 };
-</code></pre></div>
-<p id="p-1558">and are writing a function <code class="code-inline tex2jax_ignore">compareStudents()</code> which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:</p>
-<ol class="lower-alpha">
+</code></pre></div> <p id="p-1558">and are writing a function <code class="code-inline tex2jax_ignore">compareStudents()</code> which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:</p> <ol class="lower-alpha">
 <li id="li-801"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
 if (stud1.aveGrade&lt;stud2.aveGrade)
   lower = stud1.aveGrade;
@@ -553,8 +547,7 @@ else
 <li id="li-803"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
 lower = stud1.aveGrade&lt;stud2.aveGrade;
 </code></pre></div></li>
-</ol>
-<p id="p-1559"><em class="emphasis">Enter your choice (a/b/c):</em></p></article></section></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
+</ol> <p id="p-1559"><em class="emphasis">Enter your choice (a/b/c):</em></p></article></section></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">26.4.2</span> <span class="title">Passing by Reference</span>
 </h3>
 <p id="p-1560">If we want to be able to modify a structure variable from within a function we need to pass a pointer to this variable to the function - just as we do for regular variables. In other words, we need to pass the variable to the function "by reference". In the next video we'll learn how to do so.</p>
@@ -568,8 +561,7 @@ lower = stud1.aveGrade&lt;stud2.aveGrade;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h4>
 <article class="exercise exercise-like" id="quiz-structfunction-3"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-1562">What is wrong with the following piece of code and how would you fix it?</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+<p id="p-1562">What is wrong with the following piece of code and how would you fix it?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
@@ -583,8 +575,7 @@ int main(void) {
   *studentptr.birthYear = 1998;
   return 0;
 }
-</code></pre></div>
-<ol class="lower-alpha">
+</code></pre></div> <ol class="lower-alpha">
 <li id="li-807">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(*studentptr.birthYear) = 1998;
 </pre>
 </li>
@@ -595,8 +586,7 @@ int main(void) {
 </pre>
 </li>
 <li id="li-810"><p id="p-derived-li-810">There is nothing wrong with this code.</p></li>
-</ol>
-<p id="p-1563"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></section></div></main>
+</ol> <p id="p-1563"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></section></div></main>
 </div>
 </body>
 </html>

@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -568,8 +569,7 @@ char words[NRECS][STRLEN];
 <p id="p-1488">Suppose you have declared an “array of strings” using the command</p>
 <pre class="code-block tex2jax_ignore">char name[100][30];
 </pre>
-<p id="p-1489">If you wanted to store the name “Taylor” in the topmost position of this array, how would you do so?</p>
-<ol class="lower-alpha">
+<p id="p-1489">If you wanted to store the name “Taylor” in the topmost position of this array, how would you do so?</p> <ol class="lower-alpha">
 <li id="li-780"><pre class="code-block tex2jax_ignore">name[0] = "Taylor";
 </pre></li>
 <li id="li-781"><pre class="code-block tex2jax_ignore">name = "Taylor";
@@ -578,8 +578,7 @@ char words[NRECS][STRLEN];
 </pre></li>
 <li id="li-783"><pre class="code-block tex2jax_ignore">strcpy(name[0][0], "Taylor");
 </pre></li>
-</ol>
-<p id="p-1490"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1490"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

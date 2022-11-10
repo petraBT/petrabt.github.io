@@ -114,6 +114,7 @@ eBookConfig.enable_chatcodes =  false;
 <div id="searchresultsplaceholder" style="display: none">
 <button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
 </h2>
+<div id="searchempty"><span>No results.</span></div>
 <ol id="searchresults"></ol>
 </div>
 </div></div>
@@ -495,8 +496,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-sortsearch-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1410">Quick review question: Which of the following is the correct way to declare and initialize a string?</p>
-<ol class="lower-alpha">
+<p id="p-1410">Quick review question: Which of the following is the correct way to declare and initialize a string?</p> <ol class="lower-alpha">
 <li id="li-739"><pre class="code-block tex2jax_ignore">char name = "cool_file_name";
 </pre></li>
 <li id="li-740"><pre class="code-block tex2jax_ignore">char name[50]; name = "cool_file_name";
@@ -505,14 +505,11 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-742"><pre class="code-block tex2jax_ignore">char = "cool_file_name"[50];
 </pre></li>
-</ol>
-<p id="p-1411"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-sortsearch-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1412">More review: Is there anything wrong with the following:</p>
-<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">char name[10];
+</ol> <p id="p-1411"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-sortsearch-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1412">More review: Is there anything wrong with the following:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">char name[10];
 . . . 
 strcpy(name, "TodayIsMonday");
-</code></pre></div>
-<ol class="lower-alpha">
+</code></pre></div> <ol class="lower-alpha">
 <li id="li-743"><p id="p-derived-li-743">No, nothing wrong.</p></li>
 <li id="li-744">It should be<pre class="code-block tex2jax_ignore">strcpy("name", TodayIsMonday);
 </pre>
@@ -521,28 +518,23 @@ strcpy(name, "TodayIsMonday");
 </pre>
 </li>
 <li id="li-746"><p id="p-derived-li-746">This will overwrite memory cells that have not been reserved for name.</p></li>
-</ol>
-<p id="p-1413"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-sortsearch-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+</ol> <p id="p-1413"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-sortsearch-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <p id="p-1414">Even more review: What is the result of the following:</p>
 <pre class="code-block tex2jax_ignore">strcmp("my_apple", "my_banana");
 </pre>
-<p id="p-1415"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p>
-<p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" frameborder="0" width="100%" height="300"></iframe><ol class="lower-alpha">
+<p id="p-1415"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
 <li id="li-747"><p id="p-derived-li-747">a positive number</p></li>
 <li id="li-748"><p id="p-derived-li-748">the letter 'b'</p></li>
 <li id="li-749"><p id="p-derived-li-749">a negative number</p></li>
 <li id="li-750"><p id="p-derived-li-750">zero</p></li>
 <li id="li-751"><p id="p-derived-li-751">the letter 'a'</p></li>
-</ol>
-<p id="p-1416"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-sortsearch-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+</ol> <p id="p-1416"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-sortsearch-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <p id="p-1417">Final review question (I promise!): Suppose a string has been declared as follows:</p>
 <pre class="code-block tex2jax_ignore">char food[30];
 </pre>
-<p id="p-1418">You want the user to enter their favorite food and store the response in the string food. What is the correct command to do so?</p>
-<p id="p-1419"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p>
-<p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" frameborder="0" width="100%" height="300"></iframe><ol class="lower-alpha">
+<p id="p-1418">You want the user to enter their favorite food and store the response in the string food. What is the correct command to do so?</p> <p id="p-1419"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
 <li id="li-752"><pre class="code-block tex2jax_ignore">scanf("%s", *food);
 </pre></li>
 <li id="li-753"><pre class="code-block tex2jax_ignore">scanf("%s", food[0]);
@@ -551,8 +543,7 @@ strcpy(name, "TodayIsMonday");
 </pre></li>
 <li id="li-755"><pre class="code-block tex2jax_ignore">scanf("%s", &amp;food);
 </pre></li>
-</ol>
-<p id="p-1420"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1420"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>
