@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,11 +479,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="libraries-object"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">29.5</span> <span class="title">Making Our Own Library - Object File</span>
 </h2>
-<p id="p-1725">One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</p>
-<p id="p-1726">The library then consists of both the header file and the object file. In our example, this would be</p>
+<p id="p-1718">One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</p>
+<p id="p-1719">The library then consists of both the header file and the object file. In our example, this would be</p>
 <pre class="code-block tex2jax_ignore">arbitraryintegers.h arbitraryintegers.o
 </pre>
-<p id="p-1727">We can now use this library in other programs:</p>
+<p id="p-1720">We can now use this library in other programs:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 #include "arbitraryintegers.h"
 
@@ -494,7 +494,7 @@ int main(void) {
   . . . 
 }
 </code></pre></div>
-<p id="p-1728">Note the use of <code class="code-inline tex2jax_ignore">" "</code> for user-defined libraries instead of <code class="code-inline tex2jax_ignore">&lt; &gt;</code>, which is reserved for built-in libraries.</p></section></div></main>
+<p id="p-1721">Note the use of <code class="code-inline tex2jax_ignore">" "</code> for user-defined libraries instead of <code class="code-inline tex2jax_ignore">&lt; &gt;</code>, which is reserved for built-in libraries.</p></section></div></main>
 </div>
 </body>
 </html>

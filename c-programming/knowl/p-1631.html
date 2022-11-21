@@ -11,12 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<p>So far we have used arrays to store multiple items of the same data type. There are several situations you can imagine in which this is not ideal. Here are two such scenarios:</p>
-<ul class="disc">
-<li><p>One problem with this method is that you have to declare the array in question (in your code with a fixed size or at runtime using dynamic memory allocation) and whichever way you do so, by the time you first use the array its length is locked in. Then what are you options if your array is full and you wish to add in another record? The only choice would be to ask for space for a bigger array, copy all of the information over and then add the new record. This is not exactly efficient.</p></li>
-<li><p>Next, imagine that your array contains records that have been sorted by some criterion. Suppose you wanted to add a new record, and it would have to go somewhere in the middle of your array in order to maintain the sorting. You'd then have to move over all of the records that need to come after the new record in order to make room for the new record. Again, this is not a very efficient way to go about things.</p></li>
-</ul>
-<span class="incontext"><a href="linkedlists.html#p-1631" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<p>Without knowing <em class="emphasis">all of</em> the locations of the stored elements it would be impossible to know what (and where) the elements of the list are. This is where the idea of a <em class="alert">linked list</em> comes in. In a linked list it is the job of each element to keep track of the location of the next element in the list. Thus, if you know where the first element is located you can again traverse the entire list by asking the first element for the address of the second, the second element for the address of the third, and so forth. This idea is depicted in the next image:</p>
+<span class="incontext"><a href="linkedlists-intro.html#p-1631" class="internal">in-context</a></span>
 </body>
 </html>

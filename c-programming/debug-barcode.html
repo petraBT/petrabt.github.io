@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,25 +479,25 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="debug-barcode"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">17.6</span> <span class="title">Back to File I/O</span>
 </h2>
-<p id="p-1085">Here is our overarching goal:</p>
-<p id="p-1086">Write a barcode (UPC) checksum program: Read 12 digits of a barcode from a file. (The first digit indicates the type of product being identified, the next five identify the manufacturer, the next five identify the product, and the last digit (12th digit) is a check digit).</p>
-<p id="p-1087">Next, compute the proper check digit: Sum the first, third, fifth, seventh, ninth and eleventh digits, and multiply the result by 3. Next, sum the second, fourth, sixth, eighth, and tenth digits. Add this new sum to the first result. Finally, fin d the smallest number that needs to be added to this total to make it equal a multiple of 10. This number is the check digit.</p>
-<p id="p-1088">Print the computed check digit as well as the one read from file.</p>
-<p id="p-1089">Here is an example:</p>
+<p id="p-1078">Here is our overarching goal:</p>
+<p id="p-1079">Write a barcode (UPC) checksum program: Read 12 digits of a barcode from a file. (The first digit indicates the type of product being identified, the next five identify the manufacturer, the next five identify the product, and the last digit (12th digit) is a check digit).</p>
+<p id="p-1080">Next, compute the proper check digit: Sum the first, third, fifth, seventh, ninth and eleventh digits, and multiply the result by 3. Next, sum the second, fourth, sixth, eighth, and tenth digits. Add this new sum to the first result. Finally, fin d the smallest number that needs to be added to this total to make it equal a multiple of 10. This number is the check digit.</p>
+<p id="p-1081">Print the computed check digit as well as the one read from file.</p>
+<p id="p-1082">Here is an example:</p>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/UPCAnatomy.jpg" class="contained" alt="Sample Barcode"></div>
 <article class="activity project-like" id="activity-72"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span>
 </h3>
-<p id="p-1090"><em class="alert">Your first task:</em> Check by hand if the calculated check digit equals the check digit in the image.</p> <p id="p-1091">Do the calculations agree with the barcode?</p> <ul class="disc">
+<p id="p-1083"><em class="alert">Your first task:</em> Check by hand if the calculated check digit equals the check digit in the image.</p> <p id="p-1084">Do the calculations agree with the barcode?</p> <ul class="disc">
 <li id="li-546"><p id="p-derived-li-546">Yes!</p></li>
 <li id="li-547"><p id="p-derived-li-547">No...</p></li>
-</ul> <p id="p-1092">Write a C program that reads 12 integers from the file <code class="code-inline tex2jax_ignore">sampleBarcode.txt</code>. Your program should perform the following tasks:</p> <ul class="disc">
+</ul> <p id="p-1085">Write a C program that reads 12 integers from the file <code class="code-inline tex2jax_ignore">sampleBarcode.txt</code>. Your program should perform the following tasks:</p> <ul class="disc">
 <li id="li-548"><p id="p-derived-li-548">print the barcode to the screen</p></li>
 <li id="li-549"><p id="p-derived-li-549">computes the check digit</p></li>
 <li id="li-550"><p id="p-derived-li-550">compares the computed check digit with the actual check digit</p></li>
 <li id="li-551"><p id="p-derived-li-551">print a message to the screen indicating whether the barcode was correctly read.</p></li>
-</ul> <p id="p-1093">The code window below contains a file <code class="code-inline tex2jax_ignore">"sampleBarcode.txt"</code>. If you'd rather work on the server then you need to create your own such file and fill it with 12 integers.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO9.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO9.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO9.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe> <p id="p-1094"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></p></article><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
+</ul> <p id="p-1086">The code window below contains a file <code class="code-inline tex2jax_ignore">"sampleBarcode.txt"</code>. If you'd rather work on the server then you need to create your own such file and fill it with 12 integers.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO9.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO9.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO9.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe> <p id="p-1087"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></p></article><section class="subsection" id="subsection-59"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">17.6.1</span> <span class="title">Optional: Make it fancier!</span>
 </h3>
 <article class="activity project-like" id="activity-73"><h4 class="heading">

@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,11 +479,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="memory-rounding"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.9</span> <span class="title">Rounding in C</span>
 </h2>
-<p id="p-1184">C supports several functions to help with rounding (such as rounding up, rounding down, just rounding, etc). You need to</p>
+<p id="p-1177">C supports several functions to help with rounding (such as rounding up, rounding down, just rounding, etc). You need to</p>
 <pre class="code-block tex2jax_ignore">#include &lt;math.h&gt;
 </pre>
-<p id="p-1185">in order to use them. Here are some of the functions at your disposal:</p>
-<p id="p-1186"> </p>
+<p id="p-1178">in order to use them. Here are some of the functions at your disposal:</p>
+<p id="p-1179"> </p>
 <figure class="table table-like" id="table-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">19.1<span class="period">.</span></span><span class="space"> </span>Rounding Functions in C</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l t b2 r0 l0 t3 lines"><em class="alert">Function</em></td>
@@ -493,28 +493,28 @@ eBookConfig.enable_chatcodes =  false;
 <tr>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">floor()</code></td>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double floor(double x);</code></td>
-<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1187">Returns the nearest integer which is less than or equal to the argument passed to this function.</p></td>
+<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1180">Returns the nearest integer which is less than or equal to the argument passed to this function.</p></td>
 </tr>
 <tr>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">round()</code></td>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double round (double x);</code></td>
-<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1188">Returns the nearest integer value of the argument passed to this function.</p></td>
+<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1181">Returns the nearest integer value of the argument passed to this function.</p></td>
 </tr>
 <tr>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">lround()</code></td>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">long lround (double x);</code></td>
-<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1189">Returns the nearest integer value of the argument passed to this function.</p></td>
+<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1182">Returns the nearest integer value of the argument passed to this function.</p></td>
 </tr>
 <tr>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">ceil()</code></td>
 <td class="l t b1 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">double ceil (double x);</code></td>
-<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1190">Returns the nearest integer value which is greater than or equal to the argument passed to this function.</p></td>
+<td class="l t b1 r0 l0 t0" style="max-width:360px;"><p id="p-1183">Returns the nearest integer value which is greater than or equal to the argument passed to this function.</p></td>
 </tr>
-</table></div></figure><p id="p-1191"> </p>
+</table></div></figure><p id="p-1184"> </p>
 <article class="activity project-like" id="activity-83"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">19.4</span><span class="period">.</span>
 </h3>
-<p id="p-1192">Why might it be useful to have both a <code class="code-inline tex2jax_ignore">round()</code> and an <code class="code-inline tex2jax_ignore">lround()</code> function?</p></article></section></div></main>
+<p id="p-1185">Why might it be useful to have both a <code class="code-inline tex2jax_ignore">round()</code> and an <code class="code-inline tex2jax_ignore">lround()</code> function?</p></article></section></div></main>
 </div>
 </body>
 </html>

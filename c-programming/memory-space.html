@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,10 +479,10 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="memory-space"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.1</span> <span class="title">Space Needed to Store Variables</span>
 </h2>
-<p id="p-1146">We already have a pretty good idea that different data types take up different amounts of space in memory. For example, to store a character (<code class="code-inline tex2jax_ignore">char</code>) all we need to do is store its ASCII code which, when represented in binary, fits into one byte. On the other hand, most integers (for example the number 999) need more than one byte to store them in binary 2's complement. And recall that floats are stored in scientific notation as mantissa and exponent - lots of memory needed there. Let's see how we can make this more precise.</p>
+<p id="p-1139">We already have a pretty good idea that different data types take up different amounts of space in memory. For example, to store a character (<code class="code-inline tex2jax_ignore">char</code>) all we need to do is store its ASCII code which, when represented in binary, fits into one byte. On the other hand, most integers (for example the number 999) need more than one byte to store them in binary 2's complement. And recall that floats are stored in scientific notation as mantissa and exponent - lots of memory needed there. Let's see how we can make this more precise.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521655562031" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521655562031" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-42"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1147" class="disc">
+<ul id="p-1140" class="disc">
 <li id="li-600"><p id="p-derived-li-600">Use <code class="code-inline tex2jax_ignore">sizeof()</code> to see how much space different variable-types take up in memory</p></li>
 <li id="li-601"><p id="p-derived-li-601">Example:</p></li>
 </ul>
@@ -490,7 +490,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-memory-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1148">Assuming that a variable of type double occupies 8 bytes in memory, how much space will be occupied by the variable doubleArray declared as follows:</p>
+<p id="p-1141">Assuming that a variable of type double occupies 8 bytes in memory, how much space will be occupied by the variable doubleArray declared as follows:</p>
 <pre class="code-block tex2jax_ignore">double doubleArray[3];
 </pre>
 <ol class="lower-alpha">

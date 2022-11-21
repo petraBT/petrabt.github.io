@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,18 +479,18 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="linkedlists-intro"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">28.1</span> <span class="title">Intro to Linked Lists</span>
 </h2>
-<p id="p-1634">So far we have used arrays to store multiple items of the same data type. For example, we could use an array of characters to store the characters 'E', 'N', 'G', 'S', '2', '0' as depicted in the illustration below.</p>
+<p id="p-1627">So far we have used arrays to store multiple items of the same data type. For example, we could use an array of characters to store the characters 'E', 'N', 'G', 'S', '2', '0' as depicted in the illustration below.</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/linkedLists1.png" class="contained"></div>
-<p id="p-1635">Note that this is simply an illustration for the purpose of creating a conceptual understanding. Above the memory cells are the addresses of the memory locations - these are fictitious of course. In reality, memory addresses look a bit more complicated, for example something like <code class="code-inline tex2jax_ignore">0x7ffcce3fe0a0</code> (which is just hexadecimal for a pretty large number).</p>
-<p id="p-1636">When the elements of our array are stored right next to each other (as they are in the case of an array) then all the computer needs to find all of these elements is the address of the first element (and its datatype). With that information and the knowledge of how much room each element of this datatype takes up, the computer can calculate the address of subsequent elements and thereby access all of them (while it's the programmers job to keep track of the length of the array).</p>
-<p id="p-1637">Suppose now that for some reason the elements of the array were not stored right next to each other in memory but rather scattered about as in the following illustration:</p>
+<p id="p-1628">Note that this is simply an illustration for the purpose of creating a conceptual understanding. Above the memory cells are the addresses of the memory locations - these are fictitious of course. In reality, memory addresses look a bit more complicated, for example something like <code class="code-inline tex2jax_ignore">0x7ffcce3fe0a0</code> (which is just hexadecimal for a pretty large number).</p>
+<p id="p-1629">When the elements of our array are stored right next to each other (as they are in the case of an array) then all the computer needs to find all of these elements is the address of the first element (and its datatype). With that information and the knowledge of how much room each element of this datatype takes up, the computer can calculate the address of subsequent elements and thereby access all of them (while it's the programmers job to keep track of the length of the array).</p>
+<p id="p-1630">Suppose now that for some reason the elements of the array were not stored right next to each other in memory but rather scattered about as in the following illustration:</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/linkedLists2.png" class="contained"></div>
-<p id="p-1638">Without knowing <em class="emphasis">all of</em> the locations of the stored elements it would be impossible to know what (and where) the elements of the list are. This is where the idea of a <em class="alert">linked list</em> comes in. In a linked list it is the job of each element to keep track of the location of the next element in the list. Thus, if you know where the first element is located you can again traverse the entire list by asking the first element for the address of the second, the second element for the address of the third, and so forth. This idea is depicted in the next image:</p>
+<p id="p-1631">Without knowing <em class="emphasis">all of</em> the locations of the stored elements it would be impossible to know what (and where) the elements of the list are. This is where the idea of a <em class="alert">linked list</em> comes in. In a linked list it is the job of each element to keep track of the location of the next element in the list. Thus, if you know where the first element is located you can again traverse the entire list by asking the first element for the address of the second, the second element for the address of the third, and so forth. This idea is depicted in the next image:</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/linkedLists3.png" class="contained"></div>
-<p id="p-1639">It is our job to keep track of the start, that is, the address of the first element of the list (in the image it is stored in a variable named <code class="code-inline tex2jax_ignore">start</code>). Each element knows where the next element is stored, and the last element knows that it is last. This is all the information needed to access the entire list. We'll therefore group together whatever it is we'd like to store along with an additional address field which is there to store the location of the next element. We'll typically use a structure for this purpose as is depicted in the following image:</p>
+<p id="p-1632">It is our job to keep track of the start, that is, the address of the first element of the list (in the image it is stored in a variable named <code class="code-inline tex2jax_ignore">start</code>). Each element knows where the next element is stored, and the last element knows that it is last. This is all the information needed to access the entire list. We'll therefore group together whatever it is we'd like to store along with an additional address field which is there to store the location of the next element. We'll typically use a structure for this purpose as is depicted in the following image:</p>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/linkedLists4.png" class="contained"></div>
-<p id="p-1640">The following video presents a first example of a linked list. Just as we did previously in class with arrays, we'll be storing coordinates of points in this example, but unlike the arrays we used in class for this purpose, this time around each individual point will be stored at some place assigned to it during run-time, and each point will keep track of the location of the subsequent point in order to maintain the ordering.</p>
-<p id="p-1641">In order to do so, we need to store the address of a point (the next point in the list) as part of (so as a member of) the structure that holds the coordinates of the point. We'll therefore work with the following structure in this example (note that we are switching coordinates to integers just to make the memory view nicer):</p>
+<p id="p-1633">The following video presents a first example of a linked list. Just as we did previously in class with arrays, we'll be storing coordinates of points in this example, but unlike the arrays we used in class for this purpose, this time around each individual point will be stored at some place assigned to it during run-time, and each point will keep track of the location of the subsequent point in order to maintain the ordering.</p>
+<p id="p-1634">In order to do so, we need to store the address of a point (the next point in the list) as part of (so as a member of) the structure that holds the coordinates of the point. We'll therefore work with the following structure in this example (note that we are switching coordinates to integers just to make the memory view nicer):</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point{
   int x;
   int y;
@@ -499,7 +499,7 @@ eBookConfig.enable_chatcodes =  false;
 </code></pre></div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521228105232" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521228105232" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-62"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1642" class="disc">
+<ul id="p-1635" class="disc">
 <li id="li-860"><p id="p-derived-li-860">The structure that holds the data also includes a pointer to the next element</p></li>
 <li id="li-861"><p id="p-derived-li-861">A list must have a first element (we call it "start" here) and you need to remember where this is stored</p></li>
 <li id="li-862"><p id="p-derived-li-862">Once you can access the initial element of the list you can traverse the entire list by going from the first element to the second using the pointer stored in the first element, then from the second to the third using the pointer stored in the second element, all the way to the list's final element (indicated by a NULL pointer in place of the pointer to the next element).</p></li>
@@ -508,12 +508,12 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist1-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1643">Let's start with a quick review question.</p> <p id="p-1644">Suppose the following declarations have been made:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
+<p id="p-1636">Let's start with a quick review question.</p> <p id="p-1637">Suppose the following declarations have been made:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
      int x;
      int y;
 } point_t;
-</code></pre></div> <p id="p-1645">and</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">point_t octagon[8];
-</code></pre></div> <p id="p-1646">How would you assign the value 20 to the y-coordinate of the last point in the array <em class="emphasis">octagon</em>?</p> <ol class="lower-alpha">
+</code></pre></div> <p id="p-1638">and</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">point_t octagon[8];
+</code></pre></div> <p id="p-1639">How would you assign the value 20 to the y-coordinate of the last point in the array <em class="emphasis">octagon</em>?</p> <ol class="lower-alpha">
 <li id="li-864"><pre class="code-block tex2jax_ignore">octagon[20].y = 7;
 </pre></li>
 <li id="li-865"><pre class="code-block tex2jax_ignore">octagon[7].y = 20;
@@ -522,14 +522,14 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-867"><pre class="code-block tex2jax_ignore">octagon[7]-&gt;y = 20;
 </pre></li>
-</ol> <p id="p-1647"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-linkedlist1-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1648">Suppose that we have created a linked list of three student records using the structure definition below:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
+</ol> <p id="p-1640"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-linkedlist1-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1641">Suppose that we have created a linked list of three student records using the structure definition below:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
      char    name[50];
      int     birthYear;
      float   gpa;     
      struct student *next;
 };
-</code></pre></div> <p id="p-1649">Suppose also that the pointer <code class="code-inline tex2jax_ignore">start</code> of type <code class="code-inline tex2jax_ignore">struct student *</code> points to the first student in the list.</p> <p id="p-1650">How would you print the name and GPA of the first student in the list?</p> <ol class="lower-alpha">
+</code></pre></div> <p id="p-1642">Suppose also that the pointer <code class="code-inline tex2jax_ignore">start</code> of type <code class="code-inline tex2jax_ignore">struct student *</code> points to the first student in the list.</p> <p id="p-1643">How would you print the name and GPA of the first student in the list?</p> <ol class="lower-alpha">
 <li id="li-868"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start.name, start.gpa);
 </pre></li>
 <li id="li-869"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", *start-&gt;name, *start-&gt;gpa);
@@ -538,7 +538,7 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-871"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start-&gt;name, start-&gt;gpa);
 </pre></li>
-</ol> <p id="p-1651"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1644"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

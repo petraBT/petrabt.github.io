@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,18 +479,18 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="linkedlists-reverse"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">28.12</span> <span class="title">Reverse a Linked List</span>
 </h2>
-<p id="p-1693">In this video we'll continue working on our arbitrarily long integers and examine how to create a backward copy of one such integer.</p>
-<p id="p-1694">Note that the <code class="code-inline tex2jax_ignore">typedef</code> command does not work properly in the environment in which this lecture is recorded, hence its use is avoided for the purpose of the recordings only.</p>
+<p id="p-1686">In this video we'll continue working on our arbitrarily long integers and examine how to create a backward copy of one such integer.</p>
+<p id="p-1687">Note that the <code class="code-inline tex2jax_ignore">typedef</code> command does not work properly in the environment in which this lecture is recorded, hence its use is avoided for the purpose of the recordings only.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521831954448" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521831954448" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-66"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1695" class="disc">
+<ul id="p-1688" class="disc">
 <li id="li-898"><p id="p-derived-li-898">A linked list can be reversed by reordering the pointers that connect the list</p></li>
 <li id="li-899"><p id="p-derived-li-899">Check out either the Codecast or printed code for the full and lengthy example!</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-66"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist2-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1696">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
+<p id="p-1689">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
   if(start != NULL) {
     whatAmIDoing(start-&gt;next);
     printf("%d", start-&gt;num);
@@ -502,8 +502,8 @@ eBookConfig.enable_chatcodes =  false;
 <li id="li-902"><p id="p-derived-li-902">It prints every other digit of the number stored in the linked list, in reverse order.</p></li>
 <li id="li-903"><p id="p-derived-li-903">It prints the entire number stored in the linked list.</p></li>
 <li id="li-904"><p id="p-derived-li-904">It produces an endless loop.</p></li>
-</ol> <p id="p-1697"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-linkedlist2-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1698">Given again the definition of a linked list of digits as in the video, the following function <code class="code-inline tex2jax_ignore">reverse()</code> is supposed to reverse a linked list of digits in place, that is, without creating a copy of the list. There is one line missing at the end of the function.</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct digit * reverse(struct digit * start) {
+</ol> <p id="p-1690"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-linkedlist2-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1691">Given again the definition of a linked list of digits as in the video, the following function <code class="code-inline tex2jax_ignore">reverse()</code> is supposed to reverse a linked list of digits in place, that is, without creating a copy of the list. There is one line missing at the end of the function.</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct digit * reverse(struct digit * start) {
   struct digit * prev = NULL;
   struct digit * current = start;
   struct digit * next;
@@ -515,7 +515,7 @@ eBookConfig.enable_chatcodes =  false;
   }
   /*ADD LINE HERE*/
 }
-</code></pre></div> <p id="p-1699">What should be added in place of <code class="code-inline tex2jax_ignore">/*ADD LINE HERE*/</code>, so that the function correctly reverses the number?</p> <ol class="lower-alpha">
+</code></pre></div> <p id="p-1692">What should be added in place of <code class="code-inline tex2jax_ignore">/*ADD LINE HERE*/</code>, so that the function correctly reverses the number?</p> <ol class="lower-alpha">
 <li id="li-905"><pre class="code-block tex2jax_ignore">return(current);
 </pre></li>
 <li id="li-906"><pre class="code-block tex2jax_ignore">return(next);
@@ -524,7 +524,7 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-908"><pre class="code-block tex2jax_ignore">return(NULL);
 </pre></li>
-</ol> <p id="p-1700"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1693"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

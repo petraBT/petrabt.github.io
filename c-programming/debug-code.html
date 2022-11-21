@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,18 +479,18 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="debug-code"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">17.2</span> <span class="title">Debugging Code</span>
 </h2>
-<p id="p-1054">The next thing that happens once you write more complicated programs, is that you make mistakes ("bugs"). You therefore need strategies to "debug" your program.</p>
-<p id="p-1055">If you program compiles and runs but doesn't do what you had intended for it to do then one great strategy is to <em class="alert">sprinkle your code with <code class="code-inline tex2jax_ignore">printf()</code> statements</em> that leave a trail of how the program executes and allow you to track the values of important variables along the way. This strategy makes it easier to pinpoint where in your code things are starting to go wrong.</p>
+<p id="p-1047">The next thing that happens once you write more complicated programs, is that you make mistakes ("bugs"). You therefore need strategies to "debug" your program.</p>
+<p id="p-1048">If you program compiles and runs but doesn't do what you had intended for it to do then one great strategy is to <em class="alert">sprinkle your code with <code class="code-inline tex2jax_ignore">printf()</code> statements</em> that leave a trail of how the program executes and allow you to track the values of important variables along the way. This strategy makes it easier to pinpoint where in your code things are starting to go wrong.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513627032612" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513627032612" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-35"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1056" class="disc">
+<ul id="p-1049" class="disc">
 <li id="li-517"><p id="p-derived-li-517">Using <code class="code-inline tex2jax_ignore">printf()</code> statements to debug code</p></li>
 <li id="li-518"><p id="p-derived-li-518">Insert them into your code to see what the value of a variable is at a certain point, or even to make sure your code is reaching a certain place (you would be surprised...)</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-37"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-debug-4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1057">Which of the three <code class="code-inline tex2jax_ignore">printf()</code> statements in the code below is the <em class="alert">most useful</em> in debugging this faulty loop?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+<p id="p-1050">Which of the three <code class="code-inline tex2jax_ignore">printf()</code> statements in the code below is the <em class="alert">most useful</em> in debugging this faulty loop?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 int main(void)
 {
   int N, i, sum;
@@ -510,8 +510,8 @@ int main(void)
 <li id="li-519"><p id="p-derived-li-519"><code class="code-inline tex2jax_ignore">printf()</code> statement #1</p></li>
 <li id="li-520"><p id="p-derived-li-520"><code class="code-inline tex2jax_ignore">printf()</code> statement #2</p></li>
 <li id="li-521"><p id="p-derived-li-521"><code class="code-inline tex2jax_ignore">printf()</code> statement #2</p></li>
-</ol> <p id="p-1058"><em class="emphasis">Enter your choice (a/b/c):</em></p></article><article class="exercise exercise-like" id="quiz-debug-5"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1059">You want to add up the numbers from 0 to 9 and write the following code to do so. What (if anything) is wrong with this code?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i;
+</ol> <p id="p-1051"><em class="emphasis">Enter your choice (a/b/c):</em></p></article><article class="exercise exercise-like" id="quiz-debug-5"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1052">You want to add up the numbers from 0 to 9 and write the following code to do so. What (if anything) is wrong with this code?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i;
 int sum=0;
 for (i=0; i&lt;10; i--) {
   sum = sum+i;
@@ -522,7 +522,7 @@ printf("The sum of the number from 0 to 9 equals %d\n", sum);
 <li id="li-523"><p id="p-derived-li-523">There is nothing wrong with this code.</p></li>
 <li id="li-524"><p id="p-derived-li-524">One needs to use a <code class="code-inline tex2jax_ignore">while</code>-loop here instead of a <code class="code-inline tex2jax_ignore">for</code>-loop.</p></li>
 <li id="li-525"><p id="p-derived-li-525">The instruction <code class="code-inline tex2jax_ignore">i--</code> should be <code class="code-inline tex2jax_ignore">i++</code></p></li>
-</ol> <p id="p-1060"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1053"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

@@ -11,8 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<p> </p>
-<span class="incontext"><a href="memory-stack.html#p-1154" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<ul class="disc">
+<li><p>When passing a variable <em class="emphasis">by value</em> to a function, only the value (that is, what is stored in the variable) is known inside the function but not where the original variable is stored in memory.</p></li>
+<li><p>As a result, changing the value of a variable inside a function will not change the variable outside of the function, if it was passed by value</p></li>
+<li><p>Example of passing by value: Suppose you have variables <code class="code-inline tex2jax_ignore">a,b</code> with <code class="code-inline tex2jax_ignore">a=3</code> and <code class="code-inline tex2jax_ignore">b=5</code>. Then the call <code class="code-inline tex2jax_ignore">myFunction(a, b)</code> passes the numbers 3 and 5 to <code class="code-inline tex2jax_ignore">myFunction()</code> but not the locations where <code class="code-inline tex2jax_ignore">a</code> and <code class="code-inline tex2jax_ignore">b</code> are stored.</p></li>
+</ul>
+<span class="incontext"><a href="memory-functions.html#p-1154" class="internal">in-context</a></span>
 </body>
 </html>

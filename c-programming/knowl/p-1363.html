@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<p>The C-command to ask for (allocate) memory in the heap is called <code class="code-inline tex2jax_ignore">malloc()</code>. This function takes as an argument the amount of space you wish to reserve (in bytes), attempts to find that amount of space in the heap and then returns a pointer to the start of the reserved block of memory. The return data type of the <code class="code-inline tex2jax_ignore">malloc()</code> function is a <code class="code-inline tex2jax_ignore">void *</code> and it is your job to <em class="alert">cast</em> this void pointer to the type of pointer (<code class="code-inline tex2jax_ignore">int *</code>, <code class="code-inline tex2jax_ignore">float *</code>, etc.) that fits your needs.</p>
-<span class="incontext"><a href="malloc-intro.html#p-1363" class="internal">in-context</a></span>
+<p>Recall that memory reserved dynamically via <code class="code-inline tex2jax_ignore">malloc()</code> is completely your responsibility. Therefore, when you are done using the memory it is your job to tell the computer that you no longer need it and thus make available this memory for other purposes. The process of releasing memory is called freeing and we will now learn how to release, or <em class="alert">free</em>, memory that has been reserved via malloc() in the heap. The function to do so is called <code class="code-inline tex2jax_ignore">free()</code> and it takes as an argument a pointer to the memory block that you'd like to release.</p>
+<span class="incontext"><a href="malloc-free.html#p-1363" class="internal">in-context</a></span>
 </body>
 </html>

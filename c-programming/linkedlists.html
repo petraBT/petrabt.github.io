@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,11 +479,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="linkedlists"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">28</span> <span class="title">Linked Lists</span>
 </h2>
-<section class="introduction" id="introduction-28"><p id="p-1631">So far we have used arrays to store multiple items of the same data type. There are several situations you can imagine in which this is not ideal. Here are two such scenarios:</p>
+<section class="introduction" id="introduction-28"><p id="p-1624">So far we have used arrays to store multiple items of the same data type. There are several situations you can imagine in which this is not ideal. Here are two such scenarios:</p>
 <ul class="disc">
 <li id="li-853"><p id="p-derived-li-853">One problem with this method is that you have to declare the array in question (in your code with a fixed size or at runtime using dynamic memory allocation) and whichever way you do so, by the time you first use the array its length is locked in. Then what are you options if your array is full and you wish to add in another record? The only choice would be to ask for space for a bigger array, copy all of the information over and then add the new record. This is not exactly efficient.</p></li>
 <li id="li-854"><p id="p-derived-li-854">Next, imagine that your array contains records that have been sorted by some criterion. Suppose you wanted to add a new record, and it would have to go somewhere in the middle of your array in order to maintain the sorting. You'd then have to move over all of the records that need to come after the new record in order to make room for the new record. Again, this is not a very efficient way to go about things.</p></li>
-</ul> <p id="p-1632">This is where linked lists might present a better way to store your data. A linked list provides a linear ordering of records without them having to be physically arranged that way in memory. In other words, rather than using the records' arrangement in memory to determine their ordering, each record keeps track of the location of the record that is to follow it in the linear ordering. This will all become clear shortly.</p> <p id="p-1633">In this chapter, we will cover the following topics:</p> <ul class="disc">
+</ul> <p id="p-1625">This is where linked lists might present a better way to store your data. A linked list provides a linear ordering of records without them having to be physically arranged that way in memory. In other words, rather than using the records' arrangement in memory to determine their ordering, each record keeps track of the location of the record that is to follow it in the linear ordering. This will all become clear shortly.</p> <p id="p-1626">In this chapter, we will cover the following topics:</p> <ul class="disc">
 <li id="li-855"><p id="p-derived-li-855">Linked lists</p></li>
 <li id="li-856"><p id="p-derived-li-856">Passing linked lists to functions</p></li>
 <li id="li-857"><p id="p-derived-li-857">Simplifying and automating the creation of linked lists</p></li>

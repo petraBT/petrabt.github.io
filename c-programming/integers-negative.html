@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,28 +479,28 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="integers-negative"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Storing Negative Integers</span>
 </h2>
-<p id="p-491">Now we know how positive integers can be stored in the computer. How about negative integers? There actually are several different options. The following video describes the <em class="alert">signed magnitude</em> representation of negative numbers:</p>
+<p id="p-484">Now we know how positive integers can be stored in the computer. How about negative integers? There actually are several different options. The following video describes the <em class="alert">signed magnitude</em> representation of negative numbers:</p>
 <aside class="aside aside-like" id="aside-10"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-492" class="disc">
+<ul id="p-485" class="disc">
 <li id="li-131"><p id="p-derived-li-131">In signed magnitude representation the most significant bit is interpreted as a sign (negative or positive)</p></li>
 <li id="li-132"><p id="p-derived-li-132">0 is negative, 1 is positive</p></li>
 <li id="li-133"><p id="p-derived-li-133">In an 8-bit number, only 7 bits remain for the magnitude of the number</p></li>
 <li id="li-134"><p id="p-derived-li-134">Binary adding does not work in a straight-forward manner in this representation</p></li>
 </ul></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="UqfbrVH9EAA" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/UqfbrVH9EAA?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<article class="example example-like" id="example-7"><h3 class="heading">
+<article class="example example-like" id="example-3"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span>
 </h3>
-<p id="p-493">Does the binary number <code class="code-inline tex2jax_ignore">10000001</code> represent the <em class="emphasis">same</em> decimal number in both unsigned binary and signed magnitude binary?</p>
+<p id="p-486">Does the binary number <code class="code-inline tex2jax_ignore">10000001</code> represent the <em class="emphasis">same</em> decimal number in both unsigned binary and signed magnitude binary?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-494">Try converting the binary number to decimal, following the rules of each binary representation method.</p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-495">No, they are different decimal numbers!</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-487">Try converting the binary number to decimal, following the rules of each binary representation method.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-488">No, they are different decimal numbers!</p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<p id="p-496">In unsigned binary, <code class="code-inline tex2jax_ignore">10000001</code> represents</p>
+<p id="p-489">In unsigned binary, <code class="code-inline tex2jax_ignore">10000001</code> represents</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (1 × 2^7) + (0 × 2^6) + (0 × 2^5) + (0 × 2^4) + (0 × 2^3) + (0 × 2^2) + (0 × 2^1) + (1 × 2^0) = 128 + 1 = 129
 \end{equation*}
-</div> <p id="p-497">In signed magnitude binary, <code class="code-inline tex2jax_ignore">10000001</code> represents</p>
+</div> <p id="p-490">In signed magnitude binary, <code class="code-inline tex2jax_ignore">10000001</code> represents</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 -1 * [(0 × 2^6) + (0 × 2^5) + (0 × 2^4) + (0 × 2^3) + (0 × 2^2) + (0 × 2^1) + (1 × 2^0)] = -1 * (1) = -1
@@ -508,71 +508,71 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <p class="continuation">since the most significant bit (the left-most bit) is "1", which denotes a negative number in this binary representation. Thus, that one binary number represents 129 in binary and -1 in signed magnitude, which are definitely different!</p>
 </div></div>
-</div></article><p id="p-498">We have been representing positive integers as binary numbers, what about negative integers?</p>
-<p id="p-499">Several strategies are possible:</p>
-<p id="p-500">The most obvious is known as <em class="alert">signed magnitude</em>, which uses the most significant bit (MSB) for the sign: <code class="code-inline tex2jax_ignore">0</code> for <code class="code-inline tex2jax_ignore">+</code> and <code class="code-inline tex2jax_ignore">1</code> for <code class="code-inline tex2jax_ignore">-</code>.</p>
-<p id="p-501">For an 8-bit binary number:</p>
+</div></article><p id="p-491">We have been representing positive integers as binary numbers, what about negative integers?</p>
+<p id="p-492">Several strategies are possible:</p>
+<p id="p-493">The most obvious is known as <em class="alert">signed magnitude</em>, which uses the most significant bit (MSB) for the sign: <code class="code-inline tex2jax_ignore">0</code> for <code class="code-inline tex2jax_ignore">+</code> and <code class="code-inline tex2jax_ignore">1</code> for <code class="code-inline tex2jax_ignore">-</code>.</p>
+<p id="p-494">For an 8-bit binary number:</p>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/SignedMagnitude.png" class="contained"></div>
-<p id="p-502">This allows for a range from -127 to 127 to be represented.</p>
-<p id="p-503">For an n-bit binary number: <span class="process-math">\(-(2^{n-1}-1)\)</span> to <span class="process-math">\((2^{n-1}-1)\)</span></p>
+<p id="p-495">This allows for a range from -127 to 127 to be represented.</p>
+<p id="p-496">For an n-bit binary number: <span class="process-math">\(-(2^{n-1}-1)\)</span> to <span class="process-math">\((2^{n-1}-1)\)</span></p>
 <section class="subsection" id="subsection-10"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.1</span> <span class="title">Adding in Binary</span>
 </h3>
-<p id="p-504">How do you add binary numbers?</p>
-<p id="p-505">Recall addition in the <em class="alert">decimal system</em>:</p>
+<p id="p-497">How do you add binary numbers?</p>
+<p id="p-498">Recall addition in the <em class="alert">decimal system</em>:</p>
 <pre class="code-block tex2jax_ignore">                   1
    79              79      
 + 106           + 106
 ______   --&gt;    ______   
   185             185
 </pre>
-<p id="p-506">Notice how we "carry" the one from the ones digits (shown on the right above)? We add similarly in binary, following these rules:</p>
+<p id="p-499">Notice how we "carry" the one from the ones digits (shown on the right above)? We add similarly in binary, following these rules:</p>
 <pre class="code-block tex2jax_ignore">1 + 0 = 01
 1 + 1 = 10
 </pre>
-<p id="p-507">Here's an example of adding in binary (with "carrying" the ones shown on the right again):</p>
+<p id="p-500">Here's an example of adding in binary (with "carrying" the ones shown on the right again):</p>
 <pre class="code-block tex2jax_ignore">                       1  111
   01001111             01001111     
 + 01101010           + 01101010
 ___________   --&gt;    ___________   
   10111001             10111001
 </pre>
-<p id="p-508">We can check that this binary addition aligns with decimal addition, as 79 + 106 = 185 (as shown above).</p></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<p id="p-501">We can check that this binary addition aligns with decimal addition, as 79 + 106 = 185 (as shown above).</p></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.2</span> <span class="title">Adding in Signed Magnitude</span>
 </h3>
-<p id="p-509">How about adding numbers in binary when using the signed magnitude representation of integers?</p>
-<p id="p-510">Adding two positive numbers:</p>
+<p id="p-502">How about adding numbers in binary when using the signed magnitude representation of integers?</p>
+<p id="p-503">Adding two positive numbers:</p>
 <pre class="code-block tex2jax_ignore">  00001101   (13 decimal)
 + 01100100   (100 decimal)
 ___________  
   01110001   (113 decimal)
 </pre>
-<p id="p-511">Adding a positive and a negative number:</p>
+<p id="p-504">Adding a positive and a negative number:</p>
 <pre class="code-block tex2jax_ignore">  00001101   (13 decimal)
 + 11100100   (-100 decimal)
 ___________  
   11110001   (-113 decimal)
 </pre>
-<p id="p-512">Addition does not work with signed magnitude numbers!</p></section><section class="reading-questions" id="reading-questions-10"><h3 class="heading hide-type">
+<p id="p-505">Addition does not work with signed magnitude numbers!</p></section><section class="reading-questions" id="reading-questions-10"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber">6.3.3</span> <span class="title">Quiz</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-integers-5"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-513">What is the 8-bit representation of the decimal number -63, if the signed magnitude representation is used?</p></article></section><p id="p-514">We noticed in the last video that arithmetic is not straight forward in the signed magnitude representation of negative numbers. We therefore introduce a different way to store negative integers, namely the <em class="alert">binary two's complement</em> representation. While this representation may seem cumbersome at first, the point is really to fix the problems we observed with binary addition when negative numbers are involved. The binary two's complement representation allows for the same process to be used in adding integers internally inside the computer, regardless of whether the numbers are positive or negative. This process is typically hard-wired in the computer's processor which makes for super fast execution time.</p>
+<p id="p-506">What is the 8-bit representation of the decimal number -63, if the signed magnitude representation is used?</p></article></section><p id="p-507">We noticed in the last video that arithmetic is not straight forward in the signed magnitude representation of negative numbers. We therefore introduce a different way to store negative integers, namely the <em class="alert">binary two's complement</em> representation. While this representation may seem cumbersome at first, the point is really to fix the problems we observed with binary addition when negative numbers are involved. The binary two's complement representation allows for the same process to be used in adding integers internally inside the computer, regardless of whether the numbers are positive or negative. This process is typically hard-wired in the computer's processor which makes for super fast execution time.</p>
 <aside class="aside aside-like" id="aside-11"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-515" class="disc">
+<ul id="p-508" class="disc">
 <li id="li-135"><p id="p-derived-li-135">Addition works in binary 2's compliment</p></li>
 <li id="li-136"><p id="p-derived-li-136">To represent negative integers, find the binary of the magnitude first, then swap all 0s and 1s and finally add 1</p></li>
 <li id="li-137"><p id="p-derived-li-137">Calculating the range of numbers that can be represented</p></li>
 </ul></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="feIY5ElGvL0" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/feIY5ElGvL0?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<p id="p-516">Addition does not work with signed magnitude numbers.</p>
-<p id="p-517">Solution: use an alternative for representing signed integers known as <em class="alert">binary 2's complement</em>.</p>
-<p id="p-518">Idea: Store negative integers in such a way that when summed with its complement (positive number) the result is zero.</p>
-<p id="p-519">Rules for writing the 2's complement of a number:</p>
+<p id="p-509">Addition does not work with signed magnitude numbers.</p>
+<p id="p-510">Solution: use an alternative for representing signed integers known as <em class="alert">binary 2's complement</em>.</p>
+<p id="p-511">Idea: Store negative integers in such a way that when summed with its complement (positive number) the result is zero.</p>
+<p id="p-512">Rules for writing the 2's complement of a number:</p>
 <ol class="decimal">
 <li id="li-138"><p id="p-derived-li-138">Write down the <em class="alert">binary representation</em> of the <em class="alert">magnitude</em></p></li>
 <li id="li-139"><p id="p-derived-li-139"><em class="alert">Positive integers</em> stay the <em class="alert">same</em></p></li>
 <li id="li-140">
-<p id="p-520"><em class="alert">Negative integers:</em></p>
+<p id="p-513"><em class="alert">Negative integers:</em></p>
 <ol class="lower-alpha">
 <li id="li-141"><p id="p-derived-li-141">Change all <code class="code-inline tex2jax_ignore">0s</code> to <code class="code-inline tex2jax_ignore">1s</code> and all <code class="code-inline tex2jax_ignore">1s</code> to <code class="code-inline tex2jax_ignore">0s</code></p></li>
 <li id="li-142"><p id="p-derived-li-142">Add 1</p></li>
@@ -582,32 +582,32 @@ ___________
 <section class="subsection" id="subsection-12"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.4</span> <span class="title">2's Complement Example</span>
 </h3>
-<p id="p-521">Decimal:</p>
+<p id="p-514">Decimal:</p>
 <pre class="code-block tex2jax_ignore">     13
 +  -100
 ________
     -87
 </pre>
-<p id="p-522">Step 1: magnitude</p>
+<p id="p-515">Step 1: magnitude</p>
 <pre class="code-block tex2jax_ignore">13    --&gt;  00001101
 -100  --&gt;  01100100
 </pre>
-<p id="p-523">Steps 2 and 3a: binary complement</p>
+<p id="p-516">Steps 2 and 3a: binary complement</p>
 <pre class="code-block tex2jax_ignore">00001101  --&gt;  stays the same
 01100100  --&gt;  10011011
 </pre>
-<p id="p-524">Steps 2 and 3b: add 1</p>
+<p id="p-517">Steps 2 and 3b: add 1</p>
 <pre class="code-block tex2jax_ignore">00001101  --&gt;  stays the same
 10011011  --&gt;  10011100
 </pre>
-<p id="p-525">Add!</p>
+<p id="p-518">Add!</p>
 <pre class="code-block tex2jax_ignore">  00001101  
 + 10011011 
 ___________
   10101001
 </pre>
-<p id="p-526">Did it work? Is this the 2's complement of -87?</p>
-<p id="p-527">We need a way to decode a 2's complement number...</p></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<p id="p-519">Did it work? Is this the 2's complement of -87?</p>
+<p id="p-520">We need a way to decode a 2's complement number...</p></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.5</span> <span class="title">Decoding 2's Complement Numbers</span>
 </h3>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/TwosComplement.png" class="contained"></div>
@@ -616,24 +616,24 @@ ___________
 <li id="li-144"><p id="p-derived-li-144">Add values of the places which are zero: (64 + 16 + 4 + 2)  -- shown in pink</p></li>
 <li id="li-145"><p id="p-derived-li-145">Add one to the result</p></li>
 </ol>
-<p id="p-528">So the binary 2's complement number 10101001 is:</p>
-<p id="p-529">-(64 + 16 + 4 + 2 + 1) = -87</p>
-<p id="p-530">So, addition with 2's complement integers works!</p>
-<p id="p-531">Whats the range of numbers you can represent when using the binary 2's complement?</p>
-<p id="p-532"><em class="alert">8-bit</em> 2's complement numbers range: -128 to 127</p>
-<p id="p-533"><em class="alert">n-bit</em> 2's complement numbers: <span class="process-math">\(-(2^{n-1})\)</span> to <span class="process-math">\((2^{n-1}-1)\)</span></p>
-<p id="p-534">Food for thought: why is <span class="process-math">\(2^{n-1}\)</span> not represented in 2's complement?</p></section><section class="reading-questions" id="reading-questions-11"><h3 class="heading hide-type">
+<p id="p-521">So the binary 2's complement number 10101001 is:</p>
+<p id="p-522">-(64 + 16 + 4 + 2 + 1) = -87</p>
+<p id="p-523">So, addition with 2's complement integers works!</p>
+<p id="p-524">Whats the range of numbers you can represent when using the binary 2's complement?</p>
+<p id="p-525"><em class="alert">8-bit</em> 2's complement numbers range: -128 to 127</p>
+<p id="p-526"><em class="alert">n-bit</em> 2's complement numbers: <span class="process-math">\(-(2^{n-1})\)</span> to <span class="process-math">\((2^{n-1}-1)\)</span></p>
+<p id="p-527">Food for thought: why is <span class="process-math">\(2^{n-1}\)</span> not represented in 2's complement?</p></section><section class="reading-questions" id="reading-questions-11"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber">6.3.6</span> <span class="title">Quiz</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-integers-6"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-535">What is the 8-bit binary 2's complement representation of the number 63 (careful: this is a positive number... what do positive numbers look like in 2's complement?)</p></article><article class="exercise exercise-like" id="quiz-integers-7"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-536">What is the 8-bit binary 2's complement representation of the number -63</p></article></section><p id="p-537">Finally, let's take a look at what happens when counting beyond the largest possible number in binary 2's complement.</p>
+<p id="p-528">What is the 8-bit binary 2's complement representation of the number 63 (careful: this is a positive number... what do positive numbers look like in 2's complement?)</p></article><article class="exercise exercise-like" id="quiz-integers-7"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-529">What is the 8-bit binary 2's complement representation of the number -63</p></article></section><p id="p-530">Finally, let's take a look at what happens when counting beyond the largest possible number in binary 2's complement.</p>
 <aside class="aside aside-like" id="aside-12"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-538" class="disc">
+<ul id="p-531" class="disc">
 <li id="li-146"><p id="p-derived-li-146">What happens when you exceed the binary range?</p></li>
 <li id="li-147"><p id="p-derived-li-147">The decimal representation becomes negative!</p></li>
 </ul></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="_6IdQgAivpvk" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/6IdQgAivpvk?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<p id="p-539">More food for thought: start at 0, keep adding 1. What happens?</p>
+<p id="p-532">More food for thought: start at 0, keep adding 1. What happens?</p>
 <pre class="code-block tex2jax_ignore">Decimal     Binary Two's Complement
    0              00000000
    1              00000001
@@ -646,7 +646,7 @@ ___________
  127              01111111
        +1 ?????
 </pre>
-<p id="p-540">What is the decimal value of this 2's complement number?</p>
+<p id="p-533">What is the decimal value of this 2's complement number?</p>
 <pre class="code-block tex2jax_ignore">           1111111     &lt;-- carrying the ones
   127      01111111
 +   1    + 00000001
@@ -658,12 +658,12 @@ ______   ___________
 <li id="li-149"><p id="p-derived-li-149">Add values of the places which are zero: 64 + 32 + 16 + 8 + 4 + 2 + 1 = 127</p></li>
 <li id="li-150"><p id="p-derived-li-150">Add 1 to the result</p></li>
 </ol>
-<p id="p-541">Thus, the result is -128.</p>
+<p id="p-534">Thus, the result is -128.</p>
 <section class="reading-questions" id="reading-questions-12"><h3 class="heading hide-type">
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber">6.3.7</span> <span class="title">Quiz</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-integers-8"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-542">What is the decimal value of the 8-bit binary 2's complement number <code class="code-inline tex2jax_ignore">10101010</code>?</p></article></section></section></div></main>
+<p id="p-535">What is the decimal value of the 8-bit binary 2's complement number <code class="code-inline tex2jax_ignore">10101010</code>?</p></article></section></section></div></main>
 </div>
 </body>
 </html>

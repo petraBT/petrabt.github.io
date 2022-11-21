@@ -88,8 +88,8 @@ eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runtime.ec090fc8f03de338.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.22/runestone.48f02b2020706eab.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.22/runestone.93e720e6c6581fb5.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runtime.b9c4862031d919a3.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.3.24/runestone.d6e48037c4e99c27.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.3.24/runestone.93e720e6c6581fb5.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -479,19 +479,19 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="arraystruct-dynamic"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">27.4</span> <span class="title">Dynamic Arrays of Structures</span>
 </h2>
-<p id="p-1618">Why stop at triangles? Suppose we wanted to store polygons with variable numbers of vertices.</p>
-<p id="p-1619">Recall that in order to reserve space in memory (for example for an array whose size only becomes known at run-time of your program) we use the function <code class="code-inline tex2jax_ignore">malloc()</code> whose prototype is</p>
+<p id="p-1611">Why stop at triangles? Suppose we wanted to store polygons with variable numbers of vertices.</p>
+<p id="p-1612">Recall that in order to reserve space in memory (for example for an array whose size only becomes known at run-time of your program) we use the function <code class="code-inline tex2jax_ignore">malloc()</code> whose prototype is</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void * malloc(size_t size);
 </code></pre></div>
-<p id="p-1620">Here, <code class="code-inline tex2jax_ignore">size</code> is the total amount of space you need for your data. For example, if you wanted to store 10 structures of type <code class="code-inline tex2jax_ignore">point_t</code> you'd need space in the amount of 10*sizeof(point_t).</p>
-<p id="p-1621">Also recall that in order to use <code class="code-inline tex2jax_ignore">malloc()</code> you need to</p>
+<p id="p-1613">Here, <code class="code-inline tex2jax_ignore">size</code> is the total amount of space you need for your data. For example, if you wanted to store 10 structures of type <code class="code-inline tex2jax_ignore">point_t</code> you'd need space in the amount of 10*sizeof(point_t).</p>
+<p id="p-1614">Also recall that in order to use <code class="code-inline tex2jax_ignore">malloc()</code> you need to</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdlib.h&gt;
 </code></pre></div>
 <article class="activity project-like" id="activity-122"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">27.5</span><span class="period">.</span>
 </h3>
-<p id="p-1622">Write a function <code class="code-inline tex2jax_ignore">createPolygon()</code> to which you can pass an integer and that reserves space in memory for an array of points of that size and returns a pointer to that array. Just to be on the safe side, have this function also initialize all coordinates to (0.0,0.0).</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NarraysOfStructures.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" frameborder="0" width="100%" height="600"></iframe> <p id="p-1623"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></p></article></section></div></main>
+<p id="p-1615">Write a function <code class="code-inline tex2jax_ignore">createPolygon()</code> to which you can pass an integer and that reserves space in memory for an array of points of that size and returns a pointer to that array. Just to be on the safe side, have this function also initialize all coordinates to (0.0,0.0).</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NarraysOfStructures.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" frameborder="0" width="100%" height="600"></iframe> <p id="p-1616"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></p></article></section></div></main>
 </div>
 </body>
 </html>

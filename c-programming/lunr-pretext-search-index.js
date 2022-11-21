@@ -79,21 +79,21 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Submissions",
-  "body": " Submissions  During class, you will regularly work on coding activities. Oftentimes, there will be opportunities for you to submit your code or responses. Out of class, you will watch videos and work through short examples, many of which contain student response questions. Here is a sneak-peak at what the different submission boxes for code, responses, etc. will look like, so that you know what to expect:   Code Submissions  At the end of coding activities, you may be prompted to submit your code. Generally, this is what you will see:    When you are done, please paste your code into the code submission box below.     Sometimes you will be asked for your entire code and other times you may be asked to only paste in a certain piece of it, so be sure to read the prompt closely. And remember, these in-class submissions show your active participation during class and give us a live view into how the class is doing with the material, so be sure to always submit what you have, even if it doesn't quite work correctly!    Text Submissions  In addition to submitting some of your code during class, text responses are sometimes collected as well. For these cases, you will see a very similar submission box as with Code Submissions. They will resemble the following:    Please paste your text submission into the box below.       Pre-Class Canvas Quiz Previews  Before each class meeting, there are short Canvas quizzes that are accompanied by Codecasts, videos, and other materials. While these questions must be submitted on Canvas to receive credit, the same questions are shown throughout this book in their respective sections, alongside the relative content. While you are able to type in answers in the question boxes, this is only for your personal reference: you can mark down notes to yourself here for when you answer the Canvas quizzes, but you must submit on Canvas to receive credit. Here is what an example quiz preview question looks like:   Check your understanding  Where do you need to submit your answers to the Canvas quiz questions, which are previewed in the textbook?     They must be submitted on Canvas    Great job!      They must NOT be submitted on Canvas    Not quite - try again!      They must be never be submitted on Canvas    Not quite - try again!     Why do you think we call them Canvas quizzes?     "
+  "body": " Submissions  During class, you will regularly work on coding activities. Oftentimes, there will be opportunities for you to submit your code or responses. Out of class, you will watch videos and work through short examples, many of which contain student response questions. Here is a sneak-peak at what the different submission boxes for code, responses, etc. will look like, so that you know what to expect:   Code Submissions  At the end of coding activities in class, you may be prompted to submit your code. This will be done through a specific in-class response system that we use in class. In case you'd like to keep track of your submissions inside this book we'll provde text submission boxes of the following form for these purposes. Please note that your submissions will be saved on the particular device you use but will not be visible for anyone else or persist when you switch devices or browsers.    When you are done, please paste your code into the code submission box below.     Sometimes you will be asked for your entire code and other times you may be asked to only paste in a certain piece of it, so be sure to read the prompt closely. And remember, these in-class submissions show your active participation during class and give us a live view into how the class is doing with the material, so be sure to always submit what you have, even if it doesn't quite work correctly!    Text Submissions  In addition to submitting some of your code during class, text responses are sometimes collected as well. For these cases, you will see a very similar submission box as with Code Submissions in class. In case you wish to keep track of your responses here in this book we'll again provdide submission boxes as before:    Please paste your text submission into the box below.       Pre-Class Canvas Quiz Previews  Before each class meeting, there are short Canvas quizzes that are accompanied by Codecasts, videos, and other materials. While these questions must be submitted on Canvas to receive credit, the same questions are shown throughout this book in their respective sections, alongside the relative content. While you are able to type in answers in the question boxes, this is only for your personal reference: you can mark down notes to yourself here for when you answer the Canvas quizzes, but you must submit on Canvas to receive credit. Here is what an example quiz preview question looks like:   Check your understanding  Where do you need to submit your answers to the Canvas quiz questions, which are previewed in the textbook?     They must be submitted on Canvas    Great job!      They must NOT be submitted on Canvas    Not quite - try again!      They must be never be submitted on Canvas    Not quite - try again!     Why do you think we call them Canvas quizzes?     "
 },
 {
-  "id": "activity-1",
+  "id": "example",
   "level": "2",
-  "url": "gettingstarted-submissions.html#activity-1",
+  "url": "gettingstarted-submissions.html#example",
   "type": "Activity",
   "number": "1.1",
   "title": "",
   "body": "  When you are done, please paste your code into the code submission box below.    "
 },
 {
-  "id": "activity-2",
+  "id": "example-submission-no-output",
   "level": "2",
-  "url": "gettingstarted-submissions.html#activity-2",
+  "url": "gettingstarted-submissions.html#example-submission-no-output",
   "type": "Activity",
   "number": "1.2",
   "title": "",
@@ -127,18 +127,18 @@ var ptx_lunr_docs = [
   "body": " Petra and Rémi explain Computers, Hardware, Software and Algorithms    "
 },
 {
-  "id": "exercise-2",
+  "id": "computers-vocabulary-reading-question1",
   "level": "2",
-  "url": "computers-vocabulary.html#exercise-2",
+  "url": "computers-vocabulary.html#computers-vocabulary-reading-question1",
   "type": "Reading Question",
   "number": "2.1.1",
   "title": "",
   "body": " Can you think of any examples of software that you have used recently?   Do you use word processing software? How about spreadsheets? Or graphics programs?  "
 },
 {
-  "id": "exercise-3",
+  "id": "computers-vocabulary-reading-question2",
   "level": "2",
-  "url": "computers-vocabulary.html#exercise-3",
+  "url": "computers-vocabulary.html#computers-vocabulary-reading-question2",
   "type": "Reading Question",
   "number": "2.1.2",
   "title": "",
@@ -295,7 +295,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Printing Numbers",
-  "body": " Printing Numbers  data type integers There are lots of different types of numbers: integers (whole numbers without any decimal places), rational numbers, irrational numbers, complex numbers, etc. No matter how large, a computer's amount of storage has limits. You can see that therefore it would be hard to store with 100% accuracy, a number with infinitely many decimal places such as . Moreover, different types of numbers are dealt with in different ways internally and that's why we discuss them separately. We start with whole numbers, also called integers , or int for short. Integers can be positive, negative, or zero and have no digits after the decimal point.  printf() format specifiers %d Up to this point, we have only printed words to the screen. In the following Codecast we'll learn how to print numbers to the screen using the printf() statement and the format specifier for integers.    Video Description    Using printf() to print integers  The %d format specifier is demonstrated  Multiple parameters are used in one printf() statement  NEW SYNTAX: the following will print \"Hello, 5\":  printf(\"Hello, %d\", 5);     What will be printed to the screen by the following program:  #include <stdio.h> int main(void) { printf(\"We need %d apples and %d cups sugar.\\n\", 10, 2); return(0); }     We need 10 apples and 2 cups of sugar.    Great job!      We need 10 apples and 10 cups of sugar.    Not quite - try again!      We need 2 apples and 2 cups of sugar.    Not quite - try again!      We need 2 apples and 10 cups of sugar.    Not quite - try again!      We need %d apples and %d cups of sugar.    Not quite - try again!     There is a one-to-one match between format specifiers and parameters.    What will be printed to the screen by the following program:  #include <stdio.h> int main(void) { printf(\"We need %d apples and %d cups sugar.\\n\", 10, 2); return(0); }      We need 10 apples and 2 cups of sugar.    Great job!      We need 10 apples and 10 cups of sugar.    Not quite - try again!      We need 2 apples and 2 cups of sugar.    Not quite - try again!      We need 2 apples and 10 cups of sugar.    Not quite - try again!      We need %d apples and %d cups of sugar.    Not quite - try again!     There is a one-to-one match between format specifiers and parameters.    "
+  "body": " Printing Numbers  data type integers There are lots of different types of numbers: integers (whole numbers without any decimal places), rational numbers, irrational numbers, complex numbers, etc. No matter how large, a computer's amount of storage has limits. You can see that therefore it would be hard to store with 100% accuracy, a number with infinitely many decimal places such as . Moreover, different types of numbers are dealt with in different ways internally and that's why we discuss them separately. We start with whole numbers, also called integers , or int for short. Integers can be positive, negative, or zero and have no digits after the decimal point.  printf() format specifiers %d Up to this point, we have only printed words to the screen. In the following Codecast we'll learn how to print numbers to the screen using the printf() statement and the format specifier for integers.    Video Description    Using printf() to print integers  The %d format specifier is demonstrated  Multiple parameters are used in one printf() statement  NEW SYNTAX: the following will print \"Hello, 5\":  printf(\"Hello, %d\", 5);     What will be printed to the screen by the following program:  #include <stdio.h> int main(void) { printf(\"We need %d apples and %d cups sugar.\\n\", 10, 2); return(0); }     We need 10 apples and 2 cups of sugar.    Great job!      We need 10 apples and 10 cups of sugar.    Not quite - try again!      We need 2 apples and 2 cups of sugar.    Not quite - try again!      We need 2 apples and 10 cups of sugar.    Not quite - try again!      We need %d apples and %d cups of sugar.    Not quite - try again!     There is a one-to-one match between format specifiers and parameters.    "
 },
 {
   "id": "p-296",
@@ -325,24 +325,6 @@ var ptx_lunr_docs = [
   "body": " What will be printed to the screen by the following program:  #include <stdio.h> int main(void) { printf(\"We need %d apples and %d cups sugar.\\n\", 10, 2); return(0); }     We need 10 apples and 2 cups of sugar.    Great job!      We need 10 apples and 10 cups of sugar.    Not quite - try again!      We need 2 apples and 2 cups of sugar.    Not quite - try again!      We need 2 apples and 10 cups of sugar.    Not quite - try again!      We need %d apples and %d cups of sugar.    Not quite - try again!     There is a one-to-one match between format specifiers and parameters.  "
 },
 {
-  "id": "quiz-printing-test",
-  "level": "2",
-  "url": "variables-printing-numbers.html#quiz-printing-test",
-  "type": "Reading Question",
-  "number": "4.1.2",
-  "title": "",
-  "body": " What will be printed to the screen by the following program:  #include <stdio.h> int main(void) { printf(\"We need %d apples and %d cups sugar.\\n\", 10, 2); return(0); }  "
-},
-{
-  "id": "quiz-printing-test2",
-  "level": "2",
-  "url": "variables-printing-numbers.html#quiz-printing-test2",
-  "type": "Reading Question",
-  "number": "4.1.3",
-  "title": "",
-  "body": "   We need 10 apples and 2 cups of sugar.    Great job!      We need 10 apples and 10 cups of sugar.    Not quite - try again!      We need 2 apples and 2 cups of sugar.    Not quite - try again!      We need 2 apples and 10 cups of sugar.    Not quite - try again!      We need %d apples and %d cups of sugar.    Not quite - try again!     There is a one-to-one match between format specifiers and parameters.  "
-},
-{
   "id": "variables-calculations",
   "level": "1",
   "url": "variables-calculations.html",
@@ -370,19 +352,19 @@ var ptx_lunr_docs = [
   "body": " Introduction to Variables  variables declare variables initialize We'll now introduce the concept of a variable. As mentioned earlier, you can think of a variable as a storage location with a name associated to it by which you can refer to the contents of the storage location. A fundamental aspect of working with variables in C is that you need to decide and tell the computer up front what type of data (integer, character, etc) you wish to store in it. We call this process declaring the variable. Furthermore, it is good practice to assign a value to a variable right at the outset (we call this initializing ) so that your variable holds a value that you control. If you try to use a variable that has not been declared, you will receive an error message from the compiler. Using a variable that has been declared but not initialized (not assigned a value) will lead to unpredictable results.    Can you deduce why uninitialized variables may give unpredictable results? What, if anything, do you think a variable that you have declared but not initialized contains?     How can we store numbers and recall them at different places in a program?    Video Description    Creating (declaring) variables  Assigning values to variables  Using variables  NEW SYNTAX: int myNum; creates an integer variable named \"myNum\"  NEW SYNTAX: myNum = 5; stores the integer \"5\" in the variable \"myNum\"       What will be printed to the screen by the following program:  #include <stdio.h> int main(void) { int money; money = 5; printf(\"I have %d dollars; that equals %d quarters.\\n\", money, 4*money); return 0; }     I have 5 dollars; that equals 20 quarters.    Great job!      I have %d dollars; that equals %d quarters.    Not quite - try again!      I have 5 dollars; that equals 4*5 quarters.    Not quite - try again!      I have 20 dollars; that equals 5 quarters.    Not quite - try again!     There is a one-to-one match between format specifiers and parameters.    "
 },
 {
-  "id": "p-317",
+  "id": "p-310",
   "level": "2",
-  "url": "variables-intro.html#p-317",
+  "url": "variables-intro.html#p-310",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "declaring initializing "
 },
 {
-  "id": "example-1",
+  "id": "activity-variables-intro",
   "level": "2",
-  "url": "variables-intro.html#example-1",
-  "type": "Check Your Understanding",
+  "url": "variables-intro.html#activity-variables-intro",
+  "type": "Investigate",
   "number": "4.1",
   "title": "",
   "body": "  Can you deduce why uninitialized variables may give unpredictable results? What, if anything, do you think a variable that you have declared but not initialized contains?    "
@@ -469,29 +451,29 @@ var ptx_lunr_docs = [
   "body": " Common Variable Errors  variables errors We all make mistakes. In coding there are several types of errors we are all prone to. Some are akin to spelling or grammar errors (we call them syntax errors) and some are of logical nature, for example. It can be helpful to think about potential errors before getting started so that you can be on the lookout. Let's look at some common errors in working with variables.  The following three activities present erroneous code. Can you spot the error and fix it? Don't be afraid to play around and try out multiple solutions. You cannot break anything! Remember that you can always go back to the original problem by clicking on the Start fresh button.   Fix Me!    You'd like to print your age to the screen. What is wrong with the following code? Can you fix it?  If you'd like our autograder to check your program for correctness, please do not change the printf() statement.   What was wrong with the given code?  Please paste your text submission into the box below.       Fix me too...!    Again, you'd like to print your age to the screen. And again, something is wrong with the following code. Can you fix it?  If you'd like our autograder to check your program for correctness, please do not change the printf() statement.   What was wrong with the given code?  Please paste your text submission into the box below.       Fix me three...!    Another error! You'd like to print your age to the screen. And again, something is wrong with the following code. Can you fix it?  If you'd like our autograder to check your program for correctness, please do not change the printf statement.   What was wrong with the given code?  Please paste your text submission into the box below.       Summary  Here is what we have learned:   Variable names can only contain letters, numbers and the underscore character _ .  Variable names must start with a letter or an underscore _ .  Variable names are case sensitive.  Variables need to be initialized (assigned a value) BEFORE they are used.    "
 },
 {
-  "id": "activity-10",
+  "id": "activity-4-6-1-Fix_Me_1",
   "level": "2",
-  "url": "variables-errors.html#activity-10",
+  "url": "variables-errors.html#activity-4-6-1-Fix_Me_1",
   "type": "Activity",
-  "number": "4.1",
+  "number": "4.2",
   "title": "",
   "body": "  You'd like to print your age to the screen. What is wrong with the following code? Can you fix it?  If you'd like our autograder to check your program for correctness, please do not change the printf() statement.   What was wrong with the given code?  Please paste your text submission into the box below.    "
 },
 {
-  "id": "activity-11",
+  "id": "activity-4-6-2-Fix_Me_2",
   "level": "2",
-  "url": "variables-errors.html#activity-11",
+  "url": "variables-errors.html#activity-4-6-2-Fix_Me_2",
   "type": "Activity",
-  "number": "4.2",
+  "number": "4.3",
   "title": "",
   "body": "  Again, you'd like to print your age to the screen. And again, something is wrong with the following code. Can you fix it?  If you'd like our autograder to check your program for correctness, please do not change the printf() statement.   What was wrong with the given code?  Please paste your text submission into the box below.    "
 },
 {
-  "id": "activity-12",
+  "id": "activity-4-6-3-Fix_Me_3",
   "level": "2",
-  "url": "variables-errors.html#activity-12",
+  "url": "variables-errors.html#activity-4-6-3-Fix_Me_3",
   "type": "Activity",
-  "number": "4.3",
+  "number": "4.4",
   "title": "",
   "body": "  Another error! You'd like to print your age to the screen. And again, something is wrong with the following code. Can you fix it?  If you'd like our autograder to check your program for correctness, please do not change the printf statement.   What was wrong with the given code?  Please paste your text submission into the box below.    "
 },
@@ -505,20 +487,20 @@ var ptx_lunr_docs = [
   "body": " Using Variables in Loops: Practice!    Please print a multiplication table (for multiplication by 7) to the screen, in the following form:  1 x 7 = 7 2 x 7 = 14 3 x 7 = 21 4 x 7 = 28 5 x 7 = 35 6 x 7 = 42 7 x 7 = 49 8 x 7 = 56 9 x 7 = 63 10 x 7 = 70  Be sure to use a loop here, do not write 10 printf() statements...  As a reminder, here is the format of a for -loop that runs 10 times:  int i; \/* a variable, for example by the name of i, is needed *\/ for (i=1; i<=10; i++) { \/* code that needs to be repeated goes here *\/ } Through this loop, the variable i successively gets assigned values from 1 to 10. In the first run through the loop i has the value 1, in the next run-through that value is increased to 2, then to 3, all the way up to and including 10.  When you are done, please put your code into the box below:       How could you easily change the output of this program, so that instead of each line reading i x 7 , where i is that incrementing variable, it prints as 7 x i ? Or, what if you wanted to print a multiplication table for a different number, instead of 7? Try out some of these changes if you have time!    "
 },
 {
-  "id": "activity-13",
+  "id": "activity-4-7-1-Practice_Your_Loops",
   "level": "2",
-  "url": "variables-loop-practice.html#activity-13",
+  "url": "variables-loop-practice.html#activity-4-7-1-Practice_Your_Loops",
   "type": "Activity",
-  "number": "4.4",
+  "number": "4.5",
   "title": "",
   "body": "  Please print a multiplication table (for multiplication by 7) to the screen, in the following form:  1 x 7 = 7 2 x 7 = 14 3 x 7 = 21 4 x 7 = 28 5 x 7 = 35 6 x 7 = 42 7 x 7 = 49 8 x 7 = 56 9 x 7 = 63 10 x 7 = 70  Be sure to use a loop here, do not write 10 printf() statements...  As a reminder, here is the format of a for -loop that runs 10 times:  int i; \/* a variable, for example by the name of i, is needed *\/ for (i=1; i<=10; i++) { \/* code that needs to be repeated goes here *\/ } Through this loop, the variable i successively gets assigned values from 1 to 10. In the first run through the loop i has the value 1, in the next run-through that value is increased to 2, then to 3, all the way up to and including 10.  When you are done, please put your code into the box below:    "
 },
 {
-  "id": "example-2",
+  "id": "investigation-2",
   "level": "2",
-  "url": "variables-loop-practice.html#example-2",
-  "type": "Check Your Understanding",
-  "number": "4.2",
+  "url": "variables-loop-practice.html#investigation-2",
+  "type": "Investigate",
+  "number": "4.6",
   "title": "",
   "body": "  How could you easily change the output of this program, so that instead of each line reading i x 7 , where i is that incrementing variable, it prints as 7 x i ? Or, what if you wanted to print a multiplication table for a different number, instead of 7? Try out some of these changes if you have time!   "
 },
@@ -532,11 +514,11 @@ var ptx_lunr_docs = [
   "body": " User Input Using scanf()  scanf() It is possible to have the user (the person sitting in front of the computer screen) modify the value of a variable while the program is running! To do so the user needs to enter a value (this is typically done by typing on the keyboard) and your program needs to be ready to accept such an input value and store it in a variable. The C-command to accomplish this is scanf() .  The following code asks the user for their age, has them enter it and then prints it out. You'll notice the strange ampersand (&) character in front of the variable in which we are storing the user input. We'll explain this a bit later - for now: don't worry.   Try it out by hitting the Run button! When prompted, enter your age.  You can read multiple entries with one scanf() statement if you wish (or you can simply use multiple scanf() statements in a row):   Let's get back to our multiplication table. Rather than printing the x7 table, in this next example, we'll have the user enter which multiplication table to print:    Adding User Input   Please write a program that adds integers, entered by the user.  First, ask the user to enter the number of integers they wish to add. Next, use a for -loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.  When the loop terminates, print the result to the screen.  Here is a sample session, with simulated user input in bold:   How many numbers do you wish to add?  5  Please enter number 1:  7  Please enter number 2:  13  Please enter number 3:  4  Please enter number 4:  -3  Please enter number 5:  9  The numbers you entered add up to 30.    When you are done, please copy the code you  added  into the box below:     "
 },
 {
-  "id": "activity-14",
+  "id": "activity-4-8-1-Adding_User_Input",
   "level": "2",
-  "url": "variables-user-input.html#activity-14",
+  "url": "variables-user-input.html#activity-4-8-1-Adding_User_Input",
   "type": "Activity",
-  "number": "4.5",
+  "number": "4.7",
   "title": "Adding User Input.",
   "body": " Adding User Input   Please write a program that adds integers, entered by the user.  First, ask the user to enter the number of integers they wish to add. Next, use a for -loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.  When the loop terminates, print the result to the screen.  Here is a sample session, with simulated user input in bold:   How many numbers do you wish to add?  5  Please enter number 1:  7  Please enter number 2:  13  Please enter number 3:  4  Please enter number 4:  -3  Please enter number 5:  9  The numbers you entered add up to 30.    When you are done, please copy the code you  added  into the box below:    "
 },
@@ -550,29 +532,29 @@ var ptx_lunr_docs = [
   "body": " The char Datatype  So far we have only stored integer numbers in variables.   data type characters You can also store letters or symbols in variables (in computer speak these are called characters ).   format specifiers %c The datatype to store a character is called char , the format specifier is %c   Here is an example:    printf Practice   Write a program that prints out ENGS 20 using the following printf() statement:  printf(\"%c%c%cS 20\\n\", letter1, letter2, letter3);  Please do not make any changes to the printf statement since the autograder will not function correctly if you do.   When you are done, please put your code into the box below:      Reading characters from the user input  You can use scanf() to read a character from the user input:      What do you think would happen if you tried to use the scanf() function to read a character, but you use the format specifier for an integer-type variable, %d ? Will it work or fail?    Take your best guess, and then feel free to try it out in the code window above    It does not work!    Since our scanf() statement in the code window above has &letter as the destination where the scanned input is to be stored, the scanf() function knows that &letter was declared as a char , so it expects the complementary %c format specifier.    "
 },
 {
-  "id": "p-389",
+  "id": "p-382",
   "level": "2",
-  "url": "variables-char-datatype.html#p-389",
+  "url": "variables-char-datatype.html#p-382",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "characters "
 },
 {
-  "id": "activity-15",
+  "id": "activity-4-9-1-printf_Practice",
   "level": "2",
-  "url": "variables-char-datatype.html#activity-15",
+  "url": "variables-char-datatype.html#activity-4-9-1-printf_Practice",
   "type": "Activity",
-  "number": "4.6",
+  "number": "4.8",
   "title": "<code class=\"code-inline tex2jax_ignore\">printf<\/code> Practice.",
   "body": " printf Practice   Write a program that prints out ENGS 20 using the following printf() statement:  printf(\"%c%c%cS 20\\n\", letter1, letter2, letter3);  Please do not make any changes to the printf statement since the autograder will not function correctly if you do.   When you are done, please put your code into the box below:    "
 },
 {
-  "id": "example-3",
+  "id": "investigation-3",
   "level": "2",
-  "url": "variables-char-datatype.html#example-3",
-  "type": "Check Your Understanding",
-  "number": "4.3",
+  "url": "variables-char-datatype.html#investigation-3",
+  "type": "Investigate",
+  "number": "4.9",
   "title": "",
   "body": "  What do you think would happen if you tried to use the scanf() function to read a character, but you use the format specifier for an integer-type variable, %d ? Will it work or fail?    Take your best guess, and then feel free to try it out in the code window above    It does not work!    Since our scanf() statement in the code window above has &letter as the destination where the scanned input is to be stored, the scanf() function knows that &letter was declared as a char , so it expects the complementary %c format specifier.   "
 },
@@ -586,11 +568,11 @@ var ptx_lunr_docs = [
   "body": " The float Datatype   data type floats Storing decimal numbers takes up more computer memory than storing integers because of all those decimal places. The more precision you are looking for the more space it takes up. Although today's computers come with plenty of memory, it is prudent to only use up what you really need.  C has several data types to store decimal numbers: float , double and long double . They have increasing precision. We'll mostly use the type float .   format specifiers %f The format specifier for a float is %f .  While internally, numbers are always stored with the precision dictated by the number's data type, for visualization purposes you can specify the number of decimal places to display using %.1f (one decimal place), %.2f (two decimal places), etc.  By default (if using simply %f ) floats are displayed with 6 decimal places.     What happens if the precision of the format specifier exceeds that of the number being displayed? For example, if the user enters 1.77 in the code window above, but the code specifies the output to have four decimal places, %.4f , what will happen?    Try it out above to see what happens, then see if you can guess why that happens!    "
 },
 {
-  "id": "example-4",
+  "id": "investigation-4",
   "level": "2",
-  "url": "variables-float-datatype.html#example-4",
-  "type": "Check Your Understanding",
-  "number": "4.4",
+  "url": "variables-float-datatype.html#investigation-4",
+  "type": "Investigate",
+  "number": "4.10",
   "title": "",
   "body": "  What happens if the precision of the format specifier exceeds that of the number being displayed? For example, if the user enters 1.77 in the code window above, but the code specifies the output to have four decimal places, %.4f , what will happen?    Try it out above to see what happens, then see if you can guess why that happens!   "
 },
@@ -608,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "variables-division.html#activity-variables-division",
   "type": "Activity",
-  "number": "4.7",
+  "number": "4.11",
   "title": "",
   "body": "  Try to predict what the output of the following program will be:   Which of the following do you think will be printed to the screen?      5 \/ 3 = 1    Correct! Do you have any idea why this might be happening?      5 \/ 3 = 1.666667    Unfortunately, this is not what happens...      5 \/ 3 = 1.67    Unfortunately, this is not what happens...      5 \/ 3 = 2    Not quite - try again!      5 \/ 3 = 1.7    Not quite - try again!     "
 },
@@ -617,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "variables-division.html#activity-17",
   "type": "Activity",
-  "number": "4.8",
+  "number": "4.12",
   "title": "",
   "body": " Click on the Run button in the window below to reveal the integer division behavior that C exhibits. Next, change the data types of some of the variables (use float instead of int) and observe the outcome. What do you notice?   "
 },
@@ -784,9 +766,9 @@ var ptx_lunr_docs = [
   "body": " binary   "
 },
 {
-  "id": "example-5",
+  "id": "example-1",
   "level": "2",
-  "url": "integers-positive.html#example-5",
+  "url": "integers-positive.html#example-1",
   "type": "Check Your Understanding",
   "number": "6.2",
   "title": "",
@@ -811,9 +793,9 @@ var ptx_lunr_docs = [
   "body": " How many bits are there in one byte?   2  4  8  16   Enter your choice (a\/b\/c\/d):  "
 },
 {
-  "id": "example-6",
+  "id": "example-2",
   "level": "2",
-  "url": "integers-positive.html#example-6",
+  "url": "integers-positive.html#example-2",
   "type": "Check Your Understanding",
   "number": "6.3",
   "title": "",
@@ -847,9 +829,9 @@ var ptx_lunr_docs = [
   "body": " Storing Negative Integers  Now we know how positive integers can be stored in the computer. How about negative integers? There actually are several different options. The following video describes the signed magnitude representation of negative numbers:   Video Description    binary signed magnitude In signed magnitude representation the most significant bit is interpreted as a sign (negative or positive)  0 is negative, 1 is positive  In an 8-bit number, only 7 bits remain for the magnitude of the number  Binary adding does not work in a straight-forward manner in this representation        Does the binary number 10000001 represent the same decimal number in both unsigned binary and signed magnitude binary?    Try converting the binary number to decimal, following the rules of each binary representation method.    No, they are different decimal numbers!    In unsigned binary, 10000001 represents  In signed magnitude binary, 10000001 represents since the most significant bit (the left-most bit) is \"1\", which denotes a negative number in this binary representation. Thus, that one binary number represents 129 in binary and -1 in signed magnitude, which are definitely different!    We have been representing positive integers as binary numbers, what about negative integers?  Several strategies are possible:  The most obvious is known as signed magnitude , which uses the most significant bit (MSB) for the sign: 0 for + and 1 for - .  For an 8-bit binary number:   This allows for a range from -127 to 127 to be represented.  For an n-bit binary number: to   Adding in Binary  How do you add binary numbers?  Recall addition in the decimal system :  1 79 79 + 106 + 106 ______ --> ______ 185 185  Notice how we \"carry\" the one from the ones digits (shown on the right above)? We add similarly in binary, following these rules:  1 + 0 = 01 1 + 1 = 10  Here's an example of adding in binary (with \"carrying\" the ones shown on the right again):  1 111 01001111 01001111 + 01101010 + 01101010 ___________ --> ___________ 10111001 10111001  We can check that this binary addition aligns with decimal addition, as 79 + 106 = 185 (as shown above).    Adding in Signed Magnitude  How about adding numbers in binary when using the signed magnitude representation of integers?  Adding two positive numbers:  00001101 (13 decimal) + 01100100 (100 decimal) ___________ 01110001 (113 decimal)  Adding a positive and a negative number:  00001101 (13 decimal) + 11100100 (-100 decimal) ___________ 11110001 (-113 decimal)  Addition does not work with signed magnitude numbers!    Quiz   What is the 8-bit representation of the decimal number -63, if the signed magnitude representation is used?    We noticed in the last video that arithmetic is not straight forward in the signed magnitude representation of negative numbers. We therefore introduce a different way to store negative integers, namely the binary two's complement representation. While this representation may seem cumbersome at first, the point is really to fix the problems we observed with binary addition when negative numbers are involved. The binary two's complement representation allows for the same process to be used in adding integers internally inside the computer, regardless of whether the numbers are positive or negative. This process is typically hard-wired in the computer's processor which makes for super fast execution time.   Video Description    Addition works in binary 2's compliment  binary two's complement To represent negative integers, find the binary of the magnitude first, then swap all 0s and 1s and finally add 1  Calculating the range of numbers that can be represented      Addition does not work with signed magnitude numbers.  Solution: use an alternative for representing signed integers known as binary 2's complement .  Idea: Store negative integers in such a way that when summed with its complement (positive number) the result is zero.  Rules for writing the 2's complement of a number:   Write down the binary representation of the magnitude  Positive integers stay the same   Negative integers:   Change all 0s to 1s and all 1s to 0s  Add 1       2's Complement Example  Decimal:  13 + -100 ________ -87  Step 1: magnitude  13 --> 00001101 -100 --> 01100100  Steps 2 and 3a: binary complement  00001101 --> stays the same 01100100 --> 10011011  Steps 2 and 3b: add 1  00001101 --> stays the same 10011011 --> 10011100  Add!  00001101 + 10011011 ___________ 10101001  Did it work? Is this the 2's complement of -87?  We need a way to decode a 2's complement number...    Decoding 2's Complement Numbers    All 2's complement numbers that are negative have MSB 'set' (negative) -- shown in blue  Add values of the places which are zero: (64 + 16 + 4 + 2) -- shown in pink  Add one to the result   So the binary 2's complement number 10101001 is:  -(64 + 16 + 4 + 2 + 1) = -87  So, addition with 2's complement integers works!  Whats the range of numbers you can represent when using the binary 2's complement?  8-bit 2's complement numbers range: -128 to 127  n-bit 2's complement numbers: to  Food for thought: why is not represented in 2's complement?    Quiz   What is the 8-bit binary 2's complement representation of the number 63 (careful: this is a positive number... what do positive numbers look like in 2's complement?)    What is the 8-bit binary 2's complement representation of the number -63    Finally, let's take a look at what happens when counting beyond the largest possible number in binary 2's complement.   Video Description    What happens when you exceed the binary range?  The decimal representation becomes negative!      More food for thought: start at 0, keep adding 1. What happens?  Decimal Binary Two's Complement 0 00000000 1 00000001 2 00000010 3 00000011 . . . . . . 126 01111110 127 01111111 +1 ?????  What is the decimal value of this 2's complement number?  1111111 <-- carrying the ones 127 01111111 + 1 + 00000001 ______ ___________ ??? 10000000   MSB is 'set', so the number is negative  Add values of the places which are zero: 64 + 32 + 16 + 8 + 4 + 2 + 1 = 127  Add 1 to the result   Thus, the result is -128.   Quiz   What is the decimal value of the 8-bit binary 2's complement number 10101010 ?    "
 },
 {
-  "id": "example-7",
+  "id": "example-3",
   "level": "2",
-  "url": "integers-negative.html#example-7",
+  "url": "integers-negative.html#example-3",
   "type": "Check Your Understanding",
   "number": "6.4",
   "title": "",
@@ -1036,9 +1018,9 @@ var ptx_lunr_docs = [
   "body": " Remainders  remainder A remainder is the amount that remains after division takes place. The mathematical operation that produces this remainder is called the modulo operation . Note that this is the fractional remainder, not a decimal value, so the result of the modulo operation should always be an integer. For example, the remainder when dividing 29 by 3 is 2 since 3 goes into 29 just 9 times and 29 - 9*3 = 2.  Suppose we want to know the remainder of the division of one integer by another. Can we do this with our current programming knowledge?     What is the remainder of 15\/6?    3    Try it out in the code window above! We can check that the answer is 3, since we can see how many times 6 goes into 15.  15-6=9 9-6=3 6 doesn't go into 3, so 3 is the remainder.    "
 },
 {
-  "id": "example-8",
+  "id": "example-4",
   "level": "2",
-  "url": "floats-remainder.html#example-8",
+  "url": "floats-remainder.html#example-4",
   "type": "Check Your Understanding",
   "number": "7.1",
   "title": "",
@@ -1153,9 +1135,9 @@ var ptx_lunr_docs = [
   "body": " Amended Prefixes     Prefix    Size     kibibyte  KiB   = 1,024 bytes    mebibyte  MiB       gibibyte  GiB       tebibyte  TiB       pebibyte  PiB       exibyte  EiB       zebibyte  ZiB       yobibyte  YiB       "
 },
 {
-  "id": "example-9",
+  "id": "example-5",
   "level": "2",
-  "url": "prefixes-intro.html#example-9",
+  "url": "prefixes-intro.html#example-5",
   "type": "Check Your Understanding",
   "number": "9.3",
   "title": "",
@@ -1225,18 +1207,18 @@ var ptx_lunr_docs = [
   "body": " Relational and Equality Operators  We have already learned about several operators for numbers:   arithmetic  + , - , * addition, subtraction, and multiplication (integers and floats)  \/ integer division for integers and floating point division for floats  % remainder (modulus) of an integer division   Next, we'll learn about relational and equality operators that serve to compare the values of two quantities:    calculations relational operators  < , > less than and greater than operators  <= , >= less than or equal to, greater than or equal to  != not equal to   calculations equality operators  == equal to (note the double equal sign; the single equal sign = has already been 'used up' for our assignment operator)     Which of the following variables would C interpret as \"true\"? For example, if each variable was placed in the following code's if statement as \"variable\", would the program output \"True\" or \"False\"?   int a = -1  char b = 'b'  float c = 0.0  int d = 4000   if (variable){ printf(\"True\") } else{ printf(\"False\") }    C will interpret the variables a , b , and d as \"True\", and the variable c as \"False\"    In C, any nonzero integer or float is interpreted as true, as well as any character.    A true logical relation evaluates to 1, whereas a false relation evaluates to 0. Examples:   Suppose x has the value 3.5. Then (x <= 5.0) evaluates to 1.  Suppose next that x has the value 7. Then (x <= 5.0) evaluates to 0.  (age == 30) evaluates to 1 if indeed age has the value 30, otherwise it evaluates to 0.   Note: Instead of (x <= 5.0) you could also write (5.0 >= x) , and instead of (age == 30) you could just as well write (30 == age) .    Does the following statement, which is comparing two characters, evaluate to true or false , according to C?  ('A' > 'a')      False    Recall that characters are really stored as their ASCII codes in memory. Therefore, when comparing characters, C really compares their ASCII codes. In this case, we have 'A'=65 and 'a'=97. Sure enough, 65 is not greater than 97, so the above statement evaluates to false .    Let's look at an example.    Video Description    Logic expressions resulting from comparing variable values  Producing true\/false relations  Using if-else based on true\/false values of logic statements  Example: an if statement can include a logic statement such as (x>5) , and it will then execute code if this logic statement evaluates to true       You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.  Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).   When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).    "
 },
 {
-  "id": "example-10",
+  "id": "example-6",
   "level": "2",
-  "url": "branching-operators.html#example-10",
+  "url": "branching-operators.html#example-6",
   "type": "Check Your Understanding",
   "number": "10.1",
   "title": "",
   "body": "  Which of the following variables would C interpret as \"true\"? For example, if each variable was placed in the following code's if statement as \"variable\", would the program output \"True\" or \"False\"?   int a = -1  char b = 'b'  float c = 0.0  int d = 4000   if (variable){ printf(\"True\") } else{ printf(\"False\") }    C will interpret the variables a , b , and d as \"True\", and the variable c as \"False\"    In C, any nonzero integer or float is interpreted as true, as well as any character.   "
 },
 {
-  "id": "example-11",
+  "id": "example-7",
   "level": "2",
-  "url": "branching-operators.html#example-11",
+  "url": "branching-operators.html#example-7",
   "type": "Check Your Understanding",
   "number": "10.2",
   "title": "",
@@ -1306,9 +1288,9 @@ var ptx_lunr_docs = [
   "body": " Combining Multiple Logic Statements  Sometimes you may want to check whether several statements are true at the same time, or whether at least one of several statements is true, or whether something is not true, etc. We'll take a look at how do do this in C now.  logic AND The way to write the logical AND in C is with two ampersand signs: &&   logic OR The way to write the logical OR in C is with two vertical bars: ||   logic NOT The way to negate a condition in C is to put an exclamation mark in front of it: !(...)     Zero is the value which C interprets as false. How could you use a logical operator so that C would interpret anything except zero as false, such as in an if statement?    Use an exclamation mark to negate a condition.    By using an exclamation mark in front of the condition in our if statement, C will interpret the condition as the opposite of whatever it normally would be. For example, if our simple if statement was as follows:  int var; \/*see below for our example values of var*\/ if (!var){ print(\"True\"); }else{ printf(\"False\"); }  then, if var = 0 which is originally false, !var would be true.  Similarly, if var = 1 which is originally true, !var would thus be false.    "
 },
 {
-  "id": "example-12",
+  "id": "example-8",
   "level": "2",
-  "url": "branching-multiple.html#example-12",
+  "url": "branching-multiple.html#example-8",
   "type": "Check Your Understanding",
   "number": "10.4",
   "title": "",
@@ -1387,9 +1369,9 @@ var ptx_lunr_docs = [
   "body": " The Idea of a Flag   boolean behavior (true\/false)  flag Despite the fact that the C-programming language does not have a boolean data type, we can simulate boolean (true\/false) behavior using an integer-type variable. This is often called a flag.   Video Description    Idea of a flag variable  Symbolizing true\/false in code  For example: use an integer variable with value of 1 to symbolize true and a value of 0 to symbolize false        What are some scenarios where it would be useful to have a true\/false variable? Any past activities come to mind?      What is the value of the variable d once the following code has been executed:  int d, num; num = 17; d = ((17%3)==0);    "
 },
 {
-  "id": "example-13",
+  "id": "example-9",
   "level": "2",
-  "url": "branching-flag.html#example-13",
+  "url": "branching-flag.html#example-9",
   "type": "Check Your Understanding",
   "number": "10.5",
   "title": "",
@@ -1477,9 +1459,9 @@ var ptx_lunr_docs = [
   "body": " for and if together  nesting for and if You can nest an if statement inside a loop or a loop inside an if statement.  Take a look at the following example which prints out those numbers between 0 and 29 that are divisible by 3. Make sure to try to understand how the code accomplishes this task.     Is there a difference between the two following scenarios, if the same statements are used within each element?   Nesting an if statement within a loop  Nesting a loop within an if statement     Yes! They can produce quite different results!    Here is just one example of how the same statements placed in different orders can produce vastly different results:   int i = 0; int a = 5; for (i=0; i<11; i++){ if (a<i){ printf(\"%d \", i); } }  int i = 0; int a = 5; if (a<i){ for (i=0; i<11; i++){ printf(\"%d \", i); } }   The first example program will output \"6 7 8 9 10\", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!    "
 },
 {
-  "id": "example-14",
+  "id": "example-10",
   "level": "2",
-  "url": "adv-branching-for-if.html#example-14",
+  "url": "adv-branching-for-if.html#example-10",
   "type": "Check Your Understanding",
   "number": "11.1",
   "title": "",
@@ -1693,9 +1675,9 @@ var ptx_lunr_docs = [
   "body": " Program Style  program style Style, which is how you format your source code, is an important consideration when writing computer programs. In the following Codecast, we will explore ways to craft easy-to-read code and why style is so important. Considerations such as indentation, where to place line breaks, grouping pieces of code together, choice of variable names, where to place comments are all part of coding style.    Video Description    Best practices for the style of your code  i.e. consistent spacing, line breaks, indentation, and variable-naming conventions       Time for some reflection:  Do you think your current style when coding is clean and easy-to-read, such as the example shown in the Codecast above, or do you think there's some room for improvement?    Either way, think about the example from the Codecast when you work on your next coding assignments. Great style will become increasingly important as the complexity of your code increases!      "
 },
 {
-  "id": "example-15",
+  "id": "example-11",
   "level": "2",
-  "url": "format-style.html#example-15",
+  "url": "format-style.html#example-11",
   "type": "Check Your Understanding",
   "number": "12.3",
   "title": "",
@@ -1900,18 +1882,18 @@ var ptx_lunr_docs = [
   "body": " for vs. while Loops  Though for - and while -loops can accomplish the same tasks, both have certain benefits and drawbacks. Here, we compare the syntaxes of both loops and discuss situations and scenarios in which one loop is preferable over the other.  for -loop syntax:  for (initialization; loop run condition; update) { statements...; }  At the very start of the loop (before any kind of repetition is entered) the initialization statement is executed. This happens exactly once. At the start of every repetition the loop condition is checked. If it evaluates to true then the actual loop statements are executed once. Afterwards, the update statement is executed and next, the loop run condition is checked again. If still true, the loop statements are executed again, etc.  Example:  for (i=10; i>5; i--) { printf(\"i = %d\\n\", i); }  In this example, i is initialized with the value 10 right before the start of the loop. Next, the logic statement i>5 is evaluated, and since 10 is indeed greater than 5, the loop is entered. The printf() statement prints i = 10 to the screen. Next, the update statement i-- is executed, decreasing the value of i to 9. The loop condition is checked (9 is still greater than 5) and so i = 9 is printed to the screen. i is next decreased to 8, loop condition checked, etc. This continues on until i = 6 is printed to the screen. When i is next decreased to 5, the check of the loop condition evaluates to false since 5 is not greater than 5. The loop terminates with the loop counter having the value 5.  while -loop syntax:  while (condition) { statements...; }  At the start of every run through the loop, the condition is checked and only if it evaluates to true are the statements in the loop body executed. It is the programmer's job to build in an update condition into these statements so that eventually the loop condition will evaluate to false, causing the loop to terminate. It is really easy to forget to do this, leading to a never-ending loop...  Example:  i=10; while (i>5) { printf(\"i = %d\\n\", i); i--; }  This loop generates the exact same output as the above for loop. Notice that you have to explicitly initialize i on your own before the loop and program the update condition i--; as part of the loop body.  In general:   loops for vs. while Use a for -loop when you have a known number of iterations.  loops for vs. while Use a while -loop when you have an unspecified number of iterations.     Would a for - or while -loop be more efficient to implement in the following scenario?  In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.    A while -loop    Though this task could technically be accomplished with either type of loop, a while -loop would be more efficient to use, since you don't know how many times the user will input information before that certain \"stop\" integer is entered. With a for -loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A while -loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain \"stop\" integer being entered.    Clearly, the following would be difficult to accomplish with a for -loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.   In the previous example, we had to type the scanf() statement twice: once to read the user input and then one more time in case they entered something negative by accident. This is not the most elegant code (though perfectly acceptable). So there is a third kind of loop that helps in such a case, the do-while -loop:   Unlike our previous two types of loops, a do-while loop is guaranteed to execute its loop body at least once since it doesn't get around to checking the loop condition until after execution of the loop body.    What differences between while -loops and do-while -loops do you notice? Are there any similarities in their syntaxes?    We'll look into the do-while -loop in the next section!    "
 },
 {
-  "id": "example-16",
+  "id": "example-12",
   "level": "2",
-  "url": "loops-for-while.html#example-16",
+  "url": "loops-for-while.html#example-12",
   "type": "Check Your Understanding",
   "number": "14.1",
   "title": "",
   "body": "  Would a for - or while -loop be more efficient to implement in the following scenario?  In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.    A while -loop    Though this task could technically be accomplished with either type of loop, a while -loop would be more efficient to use, since you don't know how many times the user will input information before that certain \"stop\" integer is entered. With a for -loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A while -loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain \"stop\" integer being entered.   "
 },
 {
-  "id": "example-17",
+  "id": "example-13",
   "level": "2",
-  "url": "loops-for-while.html#example-17",
+  "url": "loops-for-while.html#example-13",
   "type": "Check Your Understanding",
   "number": "14.2",
   "title": "",
@@ -1963,9 +1945,9 @@ var ptx_lunr_docs = [
   "body": " Increment \/ Decrement Operators  loops operators shorthand  Certain incremental and decrement statements, such as the following, are so commonly used in C, especially when working with loops, that there is even a shorthand for the shorthand!  i += 1;  i -= 1;  Because of their ubiquitousness, there is yet another shorthand notation just for these operations of adding one to or subtracting one from a variable!    Do you remember what the following is shorthand notation for:  i += 1;      i = i + 1;    Remember: i += 1; is a compound assignment operation that we just learned about in the previous section!    In the following video, we'll take a look at the shorthand notation that shortens the already short compound assignment operators += and += :    Video Description    Shorthand notation for incrementing and decrementing the same variable  i.e. i++; , ++i  i.e. i--; , --i  Pre- and post-fix notation: the location of ++ or -- either before or after the variable to be modified determines the timing of the update relative to other instructions that are part of the same statement.  NEW SYNTAX: i++ , for example, is equivalent to i = i + 1       What does the following code print to the screen?  int i = 5; i++; printf(\"%d \", i); printf(\"%d \", i++); printf(\"%d \", i--); printf(\"%d \", --i);   6 7 6 5  6 6 7 5  6 7 6 6  5 5 4 4  5 6 5 4   Enter your choice (a\/b\/c\/d\/e):    "
 },
 {
-  "id": "example-18",
+  "id": "example-14",
   "level": "2",
-  "url": "loops-operators.html#example-18",
+  "url": "loops-operators.html#example-14",
   "type": "Check Your Understanding",
   "number": "14.4",
   "title": "",
@@ -2350,9 +2332,9 @@ var ptx_lunr_docs = [
   "body": " File I\/O Overview  So far, the only way in which we have been able to supply data to our code is via interaction with the user at runtime. We call such program use \"interactive\" the user supplies input.  Input to a program can also come from a data file and this is sometimes called batch mode  a data file provides input to the code.  A data file  is stored somewhere and accessed by your program. The storage location could be your hard disk, a CD-ROM (remember those?), a flash drive, etc.  In C, there are three steps that are necessary to execute in the following order when attempting to read from or write to a file:   Open file  Read\/write to\/from file  Close file   We will now learn about each of these steps in detail.    What do you think are some benefits gained from receiving input from a data file as opposed to interactive user input?    There are many! We'll explore the benefits throughout this chapter and beyond.    "
 },
 {
-  "id": "example-19",
+  "id": "example-15",
   "level": "2",
-  "url": "files-intro.html#example-19",
+  "url": "files-intro.html#example-15",
   "type": "Check Your Understanding",
   "number": "16.1",
   "title": "",
@@ -2431,9 +2413,9 @@ var ptx_lunr_docs = [
   "body": " Check Whether a File Exists  How do we know whether our file is actually open? What if we misspelled the filename for example? Or what if something went wrong during opening of the file? Or what if the file doesn't even exist (but we thought it did)?  file check if exists We use the fact that fopen() returns a special value if it is not able to open the file for some reason. That special value is a NULL pointer .    In , we learned that C interprets variables with the value of zero as false. Do you think that a null pointer will be interpreted as true or false?    False    There are only a few types and values of variables in C that are interpreted as false, and a null pointer is one of them!     Note that in the case where the file isn't actually open (indicated by fopen() returning a value of NULL ) there is no need to close the file. In fact, even attempting to close the file in this case would lead to a runtime error: feel free to try it out!  "
 },
 {
-  "id": "example-20",
+  "id": "example-16",
   "level": "2",
-  "url": "files-exist.html#example-20",
+  "url": "files-exist.html#example-16",
   "type": "Check Your Understanding",
   "number": "16.2",
   "title": "",
@@ -3115,9 +3097,9 @@ var ptx_lunr_docs = [
   "body": " Top-Down Design  design top-down Top-Down Design is a method for solving problems in which the problem is broken down into smaller sub-problems , which are solved (perhaps by breaking into sub-sub-problems...) to derive a solution to the main problem.  This is the technique you should use for any problem!  Functions are ideal for this purpose and reinforce this type of solution strategy.    How can implementing a top-down design method while coding potentially lead to an easier debugging process?    While there could be many reasons, one benefit of the top-down design method is that by working in smaller, more tangible pieces of code, it can be easier to see if a certain task is functioning correctly. Once you see that your small bits of code (e.g. functions) are working as planned, then after linking them together, you are more likely to have a successful code than if you blindly wrote it all with no intermediate testing.    "
 },
 {
-  "id": "example-21",
+  "id": "example-17",
   "level": "2",
-  "url": "pointers-design.html#example-21",
+  "url": "pointers-design.html#example-17",
   "type": "Check Your Understanding",
   "number": "20.1",
   "title": "",
@@ -3133,9 +3115,9 @@ var ptx_lunr_docs = [
   "body": " Bottom-Up Testing  testing bottom-up When working on a small sub-sub-problem of a big program via a function it is important to test the function extensively before making it part of the bigger program.  To do so, one simply writes a so-called driver , that is, a main function whose purpose it is to call your new function in order to check whether if works correctly.  Suppose, for example, you are writing the function simplify() that simplifies a fraction. Here is a sample driver to test this function:  int main(void) { int numer = 50; int denom = 10; printf(\"original: %d\/%d\\n\", numer, denom); simplify(&numer, &denom); printf(\"simplified: %d\/%d\\n\", numer, denom); }  There is no point in making this fancy: you'll discard it later!    What should your driver do to the function you are testing?    Provide it with some test inputs!    Using your driver, you'll want to ensure that given certain inputs, your function outputs expected results. Whether you pass an integer, some floats, an array, or potentially nothing (if it's a void function), the return value(s) or output from the function should match what you expect. If not, you will know something needs fixing...    "
 },
 {
-  "id": "example-22",
+  "id": "example-18",
   "level": "2",
-  "url": "pointers-bottom-up-testing.html#example-22",
+  "url": "pointers-bottom-up-testing.html#example-18",
   "type": "Check Your Understanding",
   "number": "20.2",
   "title": "",
@@ -3331,9 +3313,9 @@ var ptx_lunr_docs = [
   "body": " Declaring and Initializing Strings  strings Suppose you wanted to store a name (for example \"Petra\") in the computer's memory. Of course you could simply declare five individual characters and assign the letters of the name to them. But that's not very convenient and we already know that an array of characters would be a much better option. We could then simply use a loop to print out all of the characters one-by-one. The only slight issue would be that we'd have to keep track of the length of the name somewhere in order to be able to tell the loop how many times to run. Not a huge deal really, and we are already used to doing so for other arrays.  But C actually provides some additional functionality for storing so-called strings that makes it unnecessary to separately keep track of the length of the string. How? An extra character (the null terminator \\0 ) is placed after the last character in the array in order to indicate the end of the string. And so:  A string is an array of type char that is terminated with the null character \\0 . By the way, the null terminator (character) is the character in the ASCII table with ASCII code 0.  We have already been using string constants (that cannot be changed), for example:  printf(\"This is a string constant.\\n\");  But it is very useful to have variables that can hold strings (for example, filenames). In the following example we use a variable of type string (so really, an array of characters), to hold a first name and a last name. You can see from the example how you can initialize such a variable at declaration time . Sadly things won't be quite as easy elsewhere in our code but more on that later.     How much space is allocated in memory for the string firstName if each char uses 1 byte?    6 bytes    The contents of this string include the name we are storing, \"Petra\", followed by the null character \\0 which signifies the termination of the string. Each character uses 1 byte, so together we have 5 bytes for the name plus one for the null character. That adds up to 6 bytes total!  Feel free to check this logic using the sizeof() function and the %zu format specifier, as discussed in .    "
 },
 {
-  "id": "example-23",
+  "id": "example-19",
   "level": "2",
-  "url": "strings-intro.html#example-23",
+  "url": "strings-intro.html#example-19",
   "type": "Check Your Understanding",
   "number": "21.1",
   "title": "",
@@ -3358,9 +3340,9 @@ var ptx_lunr_docs = [
   "body": " Can you assign a new string value to firstName in the code? For example, can you use the following line?  firstName = \"Alex\";   Please paste your text submission into the box below, then select Run to submit it:   "
 },
 {
-  "id": "example-24",
+  "id": "example-20",
   "level": "2",
-  "url": "strings-assign.html#example-24",
+  "url": "strings-assign.html#example-20",
   "type": "Check Your Understanding",
   "number": "21.2",
   "title": "",
@@ -3403,9 +3385,9 @@ var ptx_lunr_docs = [
   "body": " String Length  strings length C can find the length of a string for you! Of course, you could do so yourself. This means that strings are fundamentally different from general arrays, in that their length can be determined due to the placement of the null character at the end of each string.     Without using strlen() , how could you find the length of a string?    Remember, all strings are terminated by the null character \/0 .    Try your solution in the code window above, then compare it to the length provided when using strlen() to ensure your solution works.    "
 },
 {
-  "id": "example-25",
+  "id": "example-21",
   "level": "2",
-  "url": "strings-length.html#example-25",
+  "url": "strings-length.html#example-21",
   "type": "Check Your Understanding",
   "number": "21.3",
   "title": "",
@@ -3421,9 +3403,9 @@ var ptx_lunr_docs = [
   "body": " Reading Strings from Input  strings read from input format specifiers %s The scanf() function can be used to read a string from the user input using the %s format specifier. By default, reading stops when white space (i.e. a space, return, etc.) is encountered. There are many options to modify this behavior so that the reading stops based on different conditions (if interested: Google).  The below example shows how to read a two words (a first name and a last name) from the user input and store them in corresponding strings.     Why is the ampersand character & missing in front of firstName and lastName in the above scanf() statement?    Remember, a string is really an array of characters (with the null terminator placed at the end). Do you remember what an array variable really stores?.    The variable firstName (and also the variable lastName), without any brackets placed behind it, stores the address of the zeroth element of the array (so the first letter of the name in this case). Since it is already an address there is no need to place an additional & operator in front of it since that would get you the address of the address!    "
 },
 {
-  "id": "example-26",
+  "id": "example-22",
   "level": "2",
-  "url": "strings-input.html#example-26",
+  "url": "strings-input.html#example-22",
   "type": "Check Your Understanding",
   "number": "21.4",
   "title": "",
@@ -4051,9 +4033,9 @@ var ptx_lunr_docs = [
   "body": " Passing Structures to Functions   Passing by Value  In the next video we'll learn how to pass structures to functions by value.  structures pass-to-function by value Passing by value means that a copy will be made of the data stored in the structure. We will therefore have access to all of the data stored in the structure variable but we cannot modify it within the function (since all we'd end up doing is modify the copies of the values).    Imagine we declare a structure named student in both the main() function and in a new function, and we then pass the structure from the main() function into our new one by value. If we now change a value within the new function's structure, will it affect the original structure?    No!    Remember when we discussed what not to name your variables in ? Just because we named the structures the same thing doesn't mean they are the same! Soon we'll learn how to pass structures by reference...    We'll work with the following structure example:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  This stores student data (first and last name, birth year and average grade) in a structure.  The following Codecast shows you how to pass a student record to a function in order to print the record. Note that in the video we do not use typedef for the sole reason that sadly, typedef has not (yet) been implemented in the recording software.    Video Description    Structures can be passed to functions  NEW SYNTAX: the following line is a prototype for a function that receives the structure struct student by value and names the received structure var in the function:  void function(struct student var);     Suppose you have declared a structure to hold student data as in the video:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?   double compareStudents(stud1, stud2);  struct student compareStudents(struct student stud1, struct student stud2);  double compareStudents(struct student stud1, struct student stud2);   Enter your choice (a\/b\/c):    In the same scenario as in the previous question, where you have declared a structure to hold student data via:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  and are writing a function compareStudents() which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:    double lower; if (stud1.aveGrade<stud2.aveGrade) lower = stud1.aveGrade; else lower = stud2.aveGrade;    double lower; if (aveGrade(stud1)<aveGrade(stud2)) lower = stud1.aveGrade; else lower = stud2.aveGrade;    double lower; lower = stud1.aveGrade<stud2.aveGrade;    Enter your choice (a\/b\/c):      Passing by Reference  structures pass-to-function by reference If we want to be able to modify a structure variable from within a function we need to pass a pointer to this variable to the function - just as we do for regular variables. In other words, we need to pass the variable to the function \"by reference\". In the next video we'll learn how to do so.    Video Description    Passing a structure pointer follows previously learned methods  The address of the structure is passed to a function, i.e. &variable  Pointers can be dereferenced in a function using *       What is wrong with the following piece of code and how would you fix it?  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; }; int main(void) { struct student me = {\"Petra\", \"Bonfert-Taylor\", 2001, 3.8}; struct student * studentptr = &me; *studentptr.birthYear = 1998; return 0; }   The second-to-last line of code should be (*studentptr.birthYear) = 1998;  The second-to-last line of code should be (&studentptr).birthYear = 1998;  The second-to-last line of code should be (*studentptr).birthYear = 1998;  There is nothing wrong with this code.   Enter your choice (a\/b\/c\/d):     "
 },
 {
-  "id": "example-27",
+  "id": "example-23",
   "level": "2",
-  "url": "structures-functions.html#example-27",
+  "url": "structures-functions.html#example-23",
   "type": "Check Your Understanding",
   "number": "26.1",
   "title": "",
