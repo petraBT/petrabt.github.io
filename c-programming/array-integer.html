@@ -479,19 +479,19 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="array-integer"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">18.1</span> <span class="title">Arrays of Integers</span>
 </h2>
-<p id="p-1090">Up to this point we have been using <em class="emphasis">singular data types,</em> such as</p>
+<p id="p-1092">Up to this point we have been using <em class="emphasis">singular data types,</em> such as</p>
 <pre class="code-block tex2jax_ignore">int i, j, k;
 </pre>
 <pre class="code-block tex2jax_ignore">float x, y, z;
 </pre>
 <pre class="code-block tex2jax_ignore">double u, v, w;
 </pre>
-<p id="p-1091">Often situations arise in which it is more natural to store a <em class="alert">collection of values</em> together in a <em class="emphasis"><em class="alert">single variable</em></em>.</p>
-<p id="p-1092">We will first focus on storing integers in an array. For example, we may wish to store all students' grades on an exam or the coordinates for an object or the values of a function at regular intervals, etc.</p>
-<p id="p-1093">An <em class="alert">array</em> (think of a collection of data items of the <em class="alert">same type</em>) is just what we need to accomplish this efficiently.</p>
+<p id="p-1093">Often situations arise in which it is more natural to store a <em class="alert">collection of values</em> together in a <em class="emphasis"><em class="alert">single variable</em></em>.</p>
+<p id="p-1094">We will first focus on storing integers in an array. For example, we may wish to store all students' grades on an exam or the coordinates for an object or the values of a function at regular intervals, etc.</p>
+<p id="p-1095">An <em class="alert">array</em> (think of a collection of data items of the <em class="alert">same type</em>) is just what we need to accomplish this efficiently.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518460628953" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518460628953" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-38"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1094" class="disc">
+<ul id="p-1096" class="disc">
 <li id="li-563"><p id="p-derived-li-563">Declaring arrays of integers</p></li>
 <li id="li-564"><p id="p-derived-li-564">Assigning values to arrays</p></li>
 <li id="li-565"><p id="p-derived-li-565">NEW SYNTAX: <code class="code-inline tex2jax_ignore">int array[3];</code> creates a variable named array and reserves space to hold three integers</p></li>
@@ -501,7 +501,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-array-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1095">How much space is reserved with the following declaration:</p>
+<p id="p-1097">How much space is reserved with the following declaration:</p>
 <pre class="code-block tex2jax_ignore">int numbers[10];
 </pre>
 <ol class="lower-alpha">
@@ -510,11 +510,11 @@ eBookConfig.enable_chatcodes =  false;
 <li id="li-570"><p id="p-derived-li-570">space for 9 integers</p></li>
 <li id="li-571"><p id="p-derived-li-571">space for 11 integers</p></li>
 <li id="li-572"><p id="p-derived-li-572">space for 12 integers</p></li>
-</ol> <p id="p-1096"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article></section><p id="p-1097">Now that we know how to create these arrays, how do we actually use them?</p>
-<p id="p-1098"> </p>
+</ol> <p id="p-1098"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article></section><p id="p-1099">Now that we know how to create these arrays, how do we actually use them?</p>
+<p id="p-1100"> </p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521653766713" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521653766713" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-39"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1099" class="disc">
+<ul id="p-1101" class="disc">
 <li id="li-573"><p id="p-derived-li-573">Arrays and <code class="code-inline tex2jax_ignore">for</code>-loops</p></li>
 <li id="li-574"><p id="p-derived-li-574">Reading values from the user input into an array</p></li>
 <li id="li-575"><p id="p-derived-li-575">NEW SYNTAX: you can fill the array using a <code class="code-inline tex2jax_ignore">for</code>-loop, where you use the following line to fill each array element</p></li>
@@ -523,16 +523,16 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-array-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1100">After the declaration</p>
+<p id="p-1102">After the declaration</p>
 <pre class="code-block tex2jax_ignore">int num[50];
 </pre>
-<p id="p-1101">what is the value of <code class="code-inline tex2jax_ignore">num[5]</code>?</p> <ol class="lower-alpha">
+<p id="p-1103">what is the value of <code class="code-inline tex2jax_ignore">num[5]</code>?</p> <ol class="lower-alpha">
 <li id="li-576"><p id="p-derived-li-576">6</p></li>
 <li id="li-577"><p id="p-derived-li-577">random</p></li>
 <li id="li-578"><p id="p-derived-li-578">0</p></li>
 <li id="li-579"><p id="p-derived-li-579">4</p></li>
 <li id="li-580"><p id="p-derived-li-580">5</p></li>
-</ol> <p id="p-1102"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article></section></section></div></main>
+</ol> <p id="p-1104"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

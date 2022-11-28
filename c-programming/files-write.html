@@ -479,17 +479,17 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="files-write"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">16.7</span> <span class="title">Writing to a File</span>
 </h2>
-<p id="p-1028">So far we have read data from files. It is just as easy to write data to a file. The main differences to reading are:</p>
+<p id="p-1030">So far we have read data from files. It is just as easy to write data to a file. The main differences to reading are:</p>
 <ul class="disc">
 <li id="li-488"><p id="p-derived-li-488">Use "w" (as in writing) in the <code class="code-inline tex2jax_ignore">fopen()</code> statement instead of "r" (as in reading).</p></li>
 <li id="li-489"><p id="p-derived-li-489">Use <code class="code-inline tex2jax_ignore">fprintf()</code> to write to the file instead of <code class="code-inline tex2jax_ignore">fscanf()</code> to read from the file.</p></li>
 </ul>
-<p id="p-1029">When writing to a file, the first step is to open the file using:</p>
-<p id="p-1030"><code class="code-inline tex2jax_ignore">fopen(filename, "w");</code></p>
-<p id="p-1031">Note that if the file does not exist prior to this command then it will be <em class="alert">created</em>. If it does exist already, then the existing file will be <em class="alert">overwritten</em> without any warning (you might lose important data this way!!).</p>
-<p id="p-1032">Another way to write to a file is to open it for “appending”:</p>
-<p id="p-1033"><code class="code-inline tex2jax_ignore">fopen(filename, "a");</code></p>
-<p id="p-1034">This appends data to the file at its end (if the file exists) and otherwise creates a new file. Take a look at this example:</p>
+<p id="p-1031">When writing to a file, the first step is to open the file using:</p>
+<p id="p-1032"><code class="code-inline tex2jax_ignore">fopen(filename, "w");</code></p>
+<p id="p-1033">Note that if the file does not exist prior to this command then it will be <em class="alert">created</em>. If it does exist already, then the existing file will be <em class="alert">overwritten</em> without any warning (you might lose important data this way!!).</p>
+<p id="p-1034">Another way to write to a file is to open it for “appending”:</p>
+<p id="p-1035"><code class="code-inline tex2jax_ignore">fopen(filename, "a");</code></p>
+<p id="p-1036">This appends data to the file at its end (if the file exists) and otherwise creates a new file. Take a look at this example:</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO8.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO8.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO8.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe></section></div></main>
 </div>

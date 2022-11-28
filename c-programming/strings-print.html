@@ -479,14 +479,14 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="strings-print"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">21.7</span> <span class="title">Printing to Strings</span>
 </h2>
-<p id="p-1341">Suppose you wanted to store a file name in a string (in order to be able to work with the file) and you had the user enter the name (such as "importantFile") but you then wanted to add the file extension (such as ".txt") to this name. Here is a clever way to create such a custom string: You can actually "print" to a string using the <code class="code-inline tex2jax_ignore">sprintf()</code> function which basically works exactly the same as <code class="code-inline tex2jax_ignore">printf()</code>! Here is the exact format:</p>
+<p id="p-1343">Suppose you wanted to store a file name in a string (in order to be able to work with the file) and you had the user enter the name (such as "importantFile") but you then wanted to add the file extension (such as ".txt") to this name. Here is a clever way to create such a custom string: You can actually "print" to a string using the <code class="code-inline tex2jax_ignore">sprintf()</code> function which basically works exactly the same as <code class="code-inline tex2jax_ignore">printf()</code>! Here is the exact format:</p>
 <pre class="code-block tex2jax_ignore">sprintf(dest, format_string, print_list);
 </pre>
-<p id="p-1342">So in the above example you could use something like <code class="code-inline tex2jax_ignore">sprintf(fileName, "%s.txt", userEntry);</code> to accomplish the creation of the desired file name.</p>
-<p id="p-1343">Usage of <code class="code-inline tex2jax_ignore">sprintf()</code> requires the standard library and with that the inclusion of this line at the top of your code:</p>
+<p id="p-1344">So in the above example you could use something like <code class="code-inline tex2jax_ignore">sprintf(fileName, "%s.txt", userEntry);</code> to accomplish the creation of the desired file name.</p>
+<p id="p-1345">Usage of <code class="code-inline tex2jax_ignore">sprintf()</code> requires the standard library and with that the inclusion of this line at the top of your code:</p>
 <pre class="code-block tex2jax_ignore">#include &lt;stdlib.h&gt;
 </pre>
-<p id="p-1344"></p>
+<p id="p-1346"></p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nstrings6.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nstrings6.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nstrings6.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe></section></div></main>
 </div>

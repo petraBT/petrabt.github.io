@@ -11,39 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="activity project-like"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">29.5</span><span class="period">.</span>
-</h4>
-<p>Here is a quick program to test some functionality of our library. You'll have to work on the server in order to compile the library and link it to the test program. I'll walk you through this below. Add more tests here!</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">/* Program to test our complex number library
-* 
-*  testComplex.c
-* 
-* compile this program to an object file using
-*     gcc -c -o testComplex.o testComplex.c
-*
-* then link this object file with the complex number library
-*     gcc -o testComplex testComplex.o complexlib.o -lm
-*
-*/
-
-#include &lt;stdio.h&gt;
-#include "complexlib.h"
-
-int main(void) {
-	complex_t z,w;
-	
-	z = complex(2,3);
-	w = complex(-4,-6.5);
-	
-	display_c(z);
-	printf(" + ");
-	display_c(w);
-	printf(" = ");
-	display_c(add_c(z,w));
-	printf("\n");
-
-    return(0);
-}
-</code></pre></div> </article><span class="incontext"><a href="libraries-complex-test.html#activity-138" class="internal">in-context</a></span>
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">29.4</span><span class="period">.</span>
+</h3>
+<p>Please visit today's Google Doc at the bottom of the page to sign up for a function you wish to write. We'll also share our code in this Google Doc.</p> <p>For your convenience, here is a code window for you to test individual functions. Note that you'll have to write your own <code class="code-inline tex2jax_ignore">main()</code> function that tests your code.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_InClassComplexLibrary.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_InClassComplexLibrary.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_InClassComplexLibrary.c&amp;nocheck=true" frameborder="0" width="100%" height="900"></iframe> <p>Access to our class google doc is provided below. Please make sure that you have turned off “smart quotes” before pasting any code into the below google doc. Smart quotes are those curly pretty-looking quotation marks that'll get our compiler all bent out of shape. To turn off smart quotes in google:</p>
+<ul class="disc">
+<li><p>Open any Google doc.</p></li>
+<li><p>Click on "Tools" in the menu bar.</p></li>
+<li><p>Select "Preferences..."</p></li>
+<li><p>Uncheck the box "Use smart quotes".</p></li>
+</ul>
+<p class="continuation">Note that this choice will affect all of your future Google documents: whenever you hit the quotation mark key on your keyboard, from now on straight marks will appear. This does not affect already existing smart quotes in existing documents - only newly typed quotes are affected. As soon as you turn smart quotes back on by checking the "Use smart quotes" box, smart quotes will be enabled again.</p> <p><iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" src="https://docs.google.com/document/d/e/2PACX-1vTUzPTohvQ8JDX4psjndEhhMeWLPFL5LD9K0emeskBgGawHhQSvLww6gW8SBFUMpdhtYt8I6eAds3gG/pub?embedded=true" width="1000" height="700" style="border: 1px solid #0b5942; background: lightgrey;" frameborder="1" marginheight="0" marginwidth="0">Loading...</iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this document, please click <a href="https://docs.google.com/document/d/e/2PACX-1vTUzPTohvQ8JDX4psjndEhhMeWLPFL5LD9K0emeskBgGawHhQSvLww6gW8SBFUMpdhtYt8I6eAds3gG/pub?embedded=true" target="_blank"><font color="blue">here</font></a>.</p></p></article><span class="incontext"><a href="libraries-complex-assemble.html#activity-138" class="internal">in-context</a></span>
 </body>
 </html>

@@ -479,9 +479,9 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="format-io"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">12.1</span> <span class="title">Formatted Input and Output</span>
 </h2>
-<p id="p-764">We have already seen and used the <code class="code-inline tex2jax_ignore">printf()</code> and the <code class="code-inline tex2jax_ignore">scanf()</code> statements. Both have additional options that come in handy when trying to produce nicely formatted output.</p>
+<p id="p-766">We have already seen and used the <code class="code-inline tex2jax_ignore">printf()</code> and the <code class="code-inline tex2jax_ignore">scanf()</code> statements. Both have additional options that come in handy when trying to produce nicely formatted output.</p>
 <aside class="aside aside-like" id="aside-24"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-765" class="disc">
+<ul id="p-767" class="disc">
 <li id="li-318"><p id="p-derived-li-318">Each data type comes with its own format specifier, for example <code class="code-inline tex2jax_ignore">%d</code> for integers, <code class="code-inline tex2jax_ignore">%f</code> for floating point numbers and <code class="code-inline tex2jax_ignore">%c</code> for individual characters. We will get to know other format specifiers as we discover other data types.</p></li>
 <li id="li-319"><p id="p-derived-li-319">Each format specifier in the format string must correspond to a variable of the same data type in a <code class="code-inline tex2jax_ignore">printf()</code> statement.</p></li>
 <li id="li-320"><p id="p-derived-li-320">Escape sequences start with a backslash <code class="code-inline tex2jax_ignore">\</code> and are used to send special formatting instructions to the computer within a format string. For example, when used within a <code class="code-inline tex2jax_ignore">printf()</code> statement, <code class="code-inline tex2jax_ignore">\n</code> is used to start a new line in the output, <code class="code-inline tex2jax_ignore">\b</code> creates a backspace (moves the cursor one space to the left) and <code class="code-inline tex2jax_ignore">\"</code> renders a double quotation mark.</p></li>
@@ -490,7 +490,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-format-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-766">How do you print the sentence <em class="alert">She said "yes" to my suggestion.</em> using the <code class="code-inline tex2jax_ignore">printf()</code> command? Feel free to use the window below to try out some commands.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_basicIO1play.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO1play.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<p id="p-768">How do you print the sentence <em class="alert">She said "yes" to my suggestion.</em> using the <code class="code-inline tex2jax_ignore">printf()</code> command? Feel free to use the window below to try out some commands.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_basicIO1play.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO1play.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO1play.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
 <li id="li-321"><pre class="code-block tex2jax_ignore">printf("She said "yes" to my suggestion.");
 </pre></li>
@@ -500,18 +500,18 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-324"><pre class="code-block tex2jax_ignore">printf("She said 'yes' to my suggestion.");
 </pre></li>
-</ol> <p id="p-767"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-format-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-768">What happens when you don’t have enough variables to match the number of format specifiers in your format string? For example, what happens when you type:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int age = 34;
+</ol> <p id="p-769"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-format-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-770">What happens when you don’t have enough variables to match the number of format specifiers in your format string? For example, what happens when you type:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int age = 34;
 printf("I am %d years old and weight %f pounds.", age);
-</code></pre></div> <p id="p-769">Feel free to quickly write a program to try this out.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_basicIO5play.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO5play.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+</code></pre></div> <p id="p-771">Feel free to quickly write a program to try this out.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_basicIO5play.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO5play.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO5play.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
 <li id="li-325"><p id="p-derived-li-325">The compiler automatically substitutes the correct value for the missing variable.</p></li>
 <li id="li-326"><p id="p-derived-li-326">The program will compile but crash at runtime.</p></li>
 <li id="li-327"><p id="p-derived-li-327">The compiler will give a warning, but the program will run and print something.</p></li>
 <li id="li-328"><p id="p-derived-li-328">The compiler will abort with an error message.</p></li>
-</ol> <p id="p-770"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section><p id="p-771">Sometimes it is useful to use additional formatting options that are available for format specifiers in order to control the output more precisely.</p>
+</ol> <p id="p-772"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section><p id="p-773">Sometimes it is useful to use additional formatting options that are available for format specifiers in order to control the output more precisely.</p>
 <aside class="aside aside-like" id="aside-25"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-772" class="disc"><li id="li-329"><p id="p-derived-li-329">Output using format specifiers can be formatted, using the syntax:</p></li></ul>
+<ul id="p-774" class="disc"><li id="li-329"><p id="p-derived-li-329">Output using format specifiers can be formatted, using the syntax:</p></li></ul>
 <p class="continuation">%[flag][width][.precision][type_mod]type</p>
 <ul class="disc">
 <li id="li-330"><p id="p-derived-li-330">Parameters in brackets [] are optional.</p></li>
@@ -523,23 +523,23 @@ printf("I am %d years old and weight %f pounds.", age);
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-format-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-773">What is the output of</p>
+<p id="p-775">What is the output of</p>
 <pre class="code-block tex2jax_ignore">printf("a = %05d\n", 35);
 </pre>
-<p id="p-774">You should first think about this and try to figure out the answer by hand. Then feel free to use the window below to write a program to verify your answer. This time you have to write the entire program by yourself (hint: get started by copying and pasting from a previous program.)</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_basicIO3play.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO3play.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<p id="p-776">You should first think about this and try to figure out the answer by hand. Then feel free to use the window below to write a program to verify your answer. This time you have to write the entire program by yourself (hint: get started by copying and pasting from a previous program.)</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_basicIO3play.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO3play.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO3play.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
 <li id="li-334"><p id="p-derived-li-334">00035</p></li>
 <li id="li-335"><p id="p-derived-li-335">35</p></li>
 <li id="li-336"><p id="p-derived-li-336">a = 00035</p></li>
 <li id="li-337"><p id="p-derived-li-337">a = 0535</p></li>
-</ol> <p id="p-775"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-format-4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-776">What happens when you use the format specifier <code class="code-inline tex2jax_ignore">%f</code> to print out an integer? (feel free to write a short C program to try this out).</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_basicIO4play.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO4play.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+</ol> <p id="p-777"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-format-4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-778">What happens when you use the format specifier <code class="code-inline tex2jax_ignore">%f</code> to print out an integer? (feel free to write a short C program to try this out).</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_basicIO4play.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO4play.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_basicIO4play.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
 <li id="li-338"><p id="p-derived-li-338">The compiler will notice and abort the compilation with an error message.</p></li>
 <li id="li-339"><p id="p-derived-li-339">No answer text provided.</p></li>
 <li id="li-340"><p id="p-derived-li-340">The compiler will give a warning and output will most likely be incorrect.</p></li>
 <li id="li-341"><p id="p-derived-li-341">The integer is automatically converted to a float and printed out correctly.</p></li>
-</ol> <p id="p-777"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-779"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

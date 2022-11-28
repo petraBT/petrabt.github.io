@@ -479,9 +479,9 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="debug-software"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">17.1</span> <span class="title">Software Development</span>
 </h2>
-<p id="p-1037">Now that our programs are starting to get more complex (and the first longer assignment is coming up), it's time to think more carefully about how to organize your mind and your program to accomplish more complicated tasks.</p>
+<p id="p-1039">Now that our programs are starting to get more complex (and the first longer assignment is coming up), it's time to think more carefully about how to organize your mind and your program to accomplish more complicated tasks.</p>
 <aside class="aside aside-like" id="aside-34"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1038" class="disc">
+<ul id="p-1040" class="disc">
 <li id="li-496"><p id="p-derived-li-496">Software development method</p></li>
 <li id="li-497"><p id="p-derived-li-497">Specify the problem requirements, analyze the problem, design the algorithm</p></li>
 </ul></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="_4Ss4AvS2c1Y" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/4Ss4AvS2c1Y?&amp;modestbranding=1&amp;rel=0"></iframe></div>
@@ -489,10 +489,10 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-debug-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1039">Quick review: On your hard drive you have a file named "my_grades.txt", in which you store all of your course grades (as floats) for the purpose of calculating your GPA. You have already declared a variable <code class="code-inline tex2jax_ignore">ifile</code> via</p>
+<p id="p-1041">Quick review: On your hard drive you have a file named "my_grades.txt", in which you store all of your course grades (as floats) for the purpose of calculating your GPA. You have already declared a variable <code class="code-inline tex2jax_ignore">ifile</code> via</p>
 <pre class="code-block tex2jax_ignore">FILE *ifile;
 </pre>
-<p id="p-1040">and now wish to open the file my_grades.txt for reading. Which of the following commands should you use?</p> <ol class="lower-alpha">
+<p id="p-1042">and now wish to open the file my_grades.txt for reading. Which of the following commands should you use?</p> <ol class="lower-alpha">
 <li id="li-498"><pre class="code-block tex2jax_ignore">ifile = fopen(my_grades.txt, "a");
 </pre></li>
 <li id="li-499"><pre class="code-block tex2jax_ignore">fopen(ifile, "my_grades.txt", "r");
@@ -501,10 +501,10 @@ eBookConfig.enable_chatcodes =  false;
 </pre></li>
 <li id="li-501"><pre class="code-block tex2jax_ignore">ifile = fopen("my_grades.txt", "r");
 </pre></li>
-</ol> <p id="p-1041"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-debug-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1042">As in the previous question, you have a file named "my_grades.txt" on your hard drive, in which you store all of your course grades (as floats) for the purpose of calculating your GPA. You have already declared a variable <code class="code-inline tex2jax_ignore">myfile</code> of type <code class="code-inline tex2jax_ignore">FILE *</code> and a variable <code class="code-inline tex2jax_ignore">num</code> of type float via</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">FILE *myfile;
+</ol> <p id="p-1043"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article><article class="exercise exercise-like" id="quiz-debug-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1044">As in the previous question, you have a file named "my_grades.txt" on your hard drive, in which you store all of your course grades (as floats) for the purpose of calculating your GPA. You have already declared a variable <code class="code-inline tex2jax_ignore">myfile</code> of type <code class="code-inline tex2jax_ignore">FILE *</code> and a variable <code class="code-inline tex2jax_ignore">num</code> of type float via</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">FILE *myfile;
 float num = 3.7;
-</code></pre></div> <p id="p-1043">You wish to add the new grade (stored in num) to the end of the file. Please select the appropriate commands from the list below and put them into the correct order so as to perform this task. <em class="emphasis">Select exactly three commands and enter their corresponding letters in order, i.e.</em> <em class="alert">G, H, I</em>:</p> <ol class="lower-alpha">
+</code></pre></div> <p id="p-1045">You wish to add the new grade (stored in num) to the end of the file. Please select the appropriate commands from the list below and put them into the correct order so as to perform this task. <em class="emphasis">Select exactly three commands and enter their corresponding letters in order, i.e.</em> <em class="alert">G, H, I</em>:</p> <ol class="lower-alpha">
 <li id="li-502"><pre class="code-block tex2jax_ignore">fprintf(myfile, "%f", num);
 </pre></li>
 <li id="li-503"><pre class="code-block tex2jax_ignore">fscanf(myfile, "%f", &amp;num);
@@ -517,8 +517,8 @@ float num = 3.7;
 </pre></li>
 <li id="li-507"><pre class="code-block tex2jax_ignore">myfile = fopen("my_grades.txt", "w");
 </pre></li>
-</ol> <p id="p-1044"><em class="emphasis">Enter your choice (a/b/c/d/e/f):</em></p></article><article class="exercise exercise-like" id="quiz-debug-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-1045">Please select <em class="alert">six</em> steps from the following list and arrange their corresponding letters in the correct order for creating a computer program, i.e. <em class="alert">A, B, ...</em></p> <ol class="lower-alpha">
+</ol> <p id="p-1046"><em class="emphasis">Enter your choice (a/b/c/d/e/f):</em></p></article><article class="exercise exercise-like" id="quiz-debug-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-1047">Please select <em class="alert">six</em> steps from the following list and arrange their corresponding letters in the correct order for creating a computer program, i.e. <em class="alert">A, B, ...</em></p> <ol class="lower-alpha">
 <li id="li-508"><p id="p-derived-li-508">Have a cup of coffee</p></li>
 <li id="li-509"><p id="p-derived-li-509">Go for a walk</p></li>
 <li id="li-510"><p id="p-derived-li-510">Write the code to implement your algorithm</p></li>
@@ -528,7 +528,7 @@ float num = 3.7;
 <li id="li-514"><p id="p-derived-li-514">Maintain and update the program</p></li>
 <li id="li-515"><p id="p-derived-li-515">State the problem clearly</p></li>
 <li id="li-516"><p id="p-derived-li-516">Talk to your dog</p></li>
-</ol> <p id="p-1046"><em class="emphasis">Enter your choice (a - i):</em></p></article></section></section></div></main>
+</ol> <p id="p-1048"><em class="emphasis">Enter your choice (a - i):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>
