@@ -763,7 +763,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.2",
   "title": "Storing Positive Integers",
-  "body": " Storing Positive Integers  digital representation integers Computers speak in binary, which is how integers are stored in memory.  Let's start by reviewing binary numbers:   Video Description    Computers only speak in binary  Binary can only include 0s and 1s  8 bits = 1 byte  Binary is a base-2 system      binary      What is the decimal value of 01000001 ?    65    Remember from the video above that binary is base-2, with the least significant bit as the right-most digit, which has a place value of . Moving left, the the place values are , , , etc. Only those digits that are 1 contribute their place value to the number, so for this binary number, we interpret it as    Computers \"speak\" in binary (base-2) only, which includes only 1s and 0s.   Bit : one b inary dig it (0 or 1)  Byte : number of bits used to represent a character, almost always 8 bits  Word : natural unit of memory for a given computer design; unit of data that can pass across the bus to or from main memory at one time   For example, in the 8-digit binary number 01100110 , the left-most bit is the M ost S ignificant B it, and the right-most bit is the L east S ignificant B it.  In decimal (base-10), the number 135 can be represented as:   where is the \"hundreds\" place, is the \"tens\" place, and is the \"ones\" place.  Instead of base-10, what if we have base- b ?    : base (binary: 2, decimal: 10, ...)  : digits (binary: 0-1, decimal: 0-9, in general 0-(b-1))  : position of \"most significant digit\" (MSD)   Special case: base (binary) -- note: in binary there are only two different digits: 0 and 1   Note: Digits have different weights (place values)    Quiz   What are the decimal values of each of the following binary numbers?   00110001  11111110  10011001   Enter your three answers , separated by commas, i.e. \"1, 2, 3\"    How many bits are there in one byte?   2  4  8  16   Enter your choice (a\/b\/c\/d):    Next, we'll learn how to convert between different binary and decimal representations:   Video Description    How to convert from decimal to binary  By repeatedly dividing by 2, the remainder (0 or 1) represents digits of the binary number  The remainders are written from right-to-left  The same method works for any other base as well        What is the remainder when dividing 50 by 3?    2    3x16 = 48, meaning that 3 can go into 50 sixteen times. The remainder, or leftover amount, is then 50-48=2.    How do we convert from one base to another?  In particular, how do we find the binary representation (base-2) of a decimal number (base-10)?  Example: What is 135 decimal in binary or base-2 ?  Hint: The easiest way to do this is to divide the number by 2 repeatedly and keep track of the remainder.  135 \/2 = 67 R1 * 2^0 67 \/2 = 33 R1 * 2^1 33 \/2 = 16 R1 * 2^2 16 \/2 = 8 R0 * 2^3 8 \/2 = 4 R0 * 2^4 4 \/2 = 2 R0 * 2^5 2 \/2 = 1 R0 * 2^6 1 \/2 = 0 R1 * 2^7 135 -> 1000 0111  Does it work? 128 + 4 + 2 + 1 = 135  and... does this work for any base?  Example: what does the algorithm say 135 is in... base-10?  135 \/10 = 13 R5 * 10^0 LSD 13 \/10 = 1 R3 * 10^1 1 \/10 = 0 R1 * 10^2 MSD 135 -> 135  Not very surprising...  There are other ways to find the binary representation of a number.  Recall the binary place values:   So...  135 = 1 * 128 + 7 7 = 0 * 64 + 0 * 32 + 0 * 16 + 0 * 8 + 1 * 4 + 3 3 = 1 * 2 + 1 1 = 1 * 1 135 = 1 * 128 + 0 * 64 + 0 * 32 + 0 * 16 + 0 * 8 + 1 * 4 + 1 * 2 + 1 * 1  Thus 135 is 10000111 in binary.   Quiz   What is the remainder when dividing 36 by 15?    Convert the decimal number 222 to 8-bit binary.    "
+  "body": " Storing Positive Integers  digital representation integers Computers speak in binary, which is how integers are stored in memory.  Let's start by reviewing binary numbers:   Video Description    Computers only speak in binary  Binary can only include 0s and 1s  8 bits = 1 byte  Binary is a base-2 system      binary      What is the decimal value of 01000001 ?    65    Remember from the video above that binary is base-2, with the least significant bit as the right-most digit, which has a place value of . Moving left, the the place values are , , , etc. Only those digits that are 1 contribute their place value to the number, so for this binary number, we interpret it as    Computers \"speak\" in binary (base-2) only, which includes only 1s and 0s.   Bit : one b inary dig it (0 or 1)  Byte : number of bits used to represent a character, almost always 8 bits  Word : natural unit of memory for a given computer design; unit of data that can pass across the bus to or from main memory at one time   For example, in the 8-digit binary number 01100110 , the left-most bit is the M ost S ignificant B it, and the right-most bit is the L east S ignificant B it.  In decimal (base-10), the number 135 can be represented as:   where is the \"hundreds\" place, is the \"tens\" place, and is the \"ones\" place.  Instead of base-10, what if we have base- b ?    : base (binary: 2, decimal: 10, ...)  : digits (binary: 0-1, decimal: 0-9, in general 0-(b-1))  : position of \"most significant digit\" (MSD)   Special case: base (binary) -- note: in binary there are only two different digits: 0 and 1   Note: Digits have different weights (place values)     Find the decimal value of each of the following binary numbers:   00110001    11111110    10011001         Correct!      Incorrect. Be sure to review the video before you try again!        Correct!      Incorrect. Be sure to review the video before you try again!        Correct!      Incorrect. Be sure to review the video before you try again!       How many bits are there in one byte?      Correct! There are 8 bits in one byte.      Incorrect. Be sure to review the video before you try again!       Next, we'll learn how to convert between different binary and decimal representations:   Video Description    How to convert from decimal to binary  By repeatedly dividing by 2, the remainder (0 or 1) represents digits of the binary number  The remainders are written from right-to-left  The same method works for any other base as well        What is the remainder when dividing 50 by 3?    2    3x16 = 48, meaning that 3 can go into 50 sixteen times. The remainder, or leftover amount, is then 50-48=2.    How do we convert from one base to another?  In particular, how do we find the binary representation (base-2) of a decimal number (base-10)?  Example: What is 135 decimal in binary or base-2 ?  Hint: The easiest way to do this is to divide the number by 2 repeatedly and keep track of the remainder.  135 \/2 = 67 R1 * 2^0 67 \/2 = 33 R1 * 2^1 33 \/2 = 16 R1 * 2^2 16 \/2 = 8 R0 * 2^3 8 \/2 = 4 R0 * 2^4 4 \/2 = 2 R0 * 2^5 2 \/2 = 1 R0 * 2^6 1 \/2 = 0 R1 * 2^7 135 -> 1000 0111  Does it work? 128 + 4 + 2 + 1 = 135  and... does this work for any base?  Example: what does the algorithm say 135 is in... base-10?  135 \/10 = 13 R5 * 10^0 LSD 13 \/10 = 1 R3 * 10^1 1 \/10 = 0 R1 * 10^2 MSD 135 -> 135  Not very surprising...  There are other ways to find the binary representation of a number.  Recall the binary place values:   So...  135 = 1 * 128 + 7 7 = 0 * 64 + 0 * 32 + 0 * 16 + 0 * 8 + 1 * 4 + 3 3 = 1 * 2 + 1 1 = 1 * 1 135 = 1 * 128 + 0 * 64 + 0 * 32 + 0 * 16 + 0 * 8 + 1 * 4 + 1 * 2 + 1 * 1  Thus 135 is 10000111 in binary.    What is the remainder when dividing 36 by 15?      Correct!      Incorrect. Be sure to review the video before you try again!       Find the 8-bit binary representation of the decimal number 222:      Correct!      Incorrect. Be sure to review the video before you try again!       "
 },
 {
   "id": "figure-3",
@@ -775,11 +775,11 @@ var ptx_lunr_docs = [
   "body": " binary   "
 },
 {
-  "id": "example-1",
+  "id": "investigation-5",
   "level": "2",
-  "url": "integers-positive.html#example-1",
-  "type": "Check Your Understanding",
-  "number": "6.2",
+  "url": "integers-positive.html#investigation-5",
+  "type": "Investigate",
+  "number": "6.3",
   "title": "",
   "body": "  What is the decimal value of 01000001 ?    65    Remember from the video above that binary is base-2, with the least significant bit as the right-most digit, which has a place value of . Moving left, the the place values are , , , etc. Only those digits that are 1 contribute their place value to the number, so for this binary number, we interpret it as   "
 },
@@ -790,7 +790,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "6.2.1",
   "title": "",
-  "body": " What are the decimal values of each of the following binary numbers?   00110001  11111110  10011001   Enter your three answers , separated by commas, i.e. \"1, 2, 3\"  "
+  "body": " Find the decimal value of each of the following binary numbers:   00110001    11111110    10011001         Correct!      Incorrect. Be sure to review the video before you try again!        Correct!      Incorrect. Be sure to review the video before you try again!        Correct!      Incorrect. Be sure to review the video before you try again!     "
 },
 {
   "id": "quiz-integers-2",
@@ -799,14 +799,14 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "6.2.2",
   "title": "",
-  "body": " How many bits are there in one byte?   2  4  8  16   Enter your choice (a\/b\/c\/d):  "
+  "body": " How many bits are there in one byte?      Correct! There are 8 bits in one byte.      Incorrect. Be sure to review the video before you try again!     "
 },
 {
-  "id": "example-2",
+  "id": "investigation-6",
   "level": "2",
-  "url": "integers-positive.html#example-2",
-  "type": "Check Your Understanding",
-  "number": "6.3",
+  "url": "integers-positive.html#investigation-6",
+  "type": "Investigate",
+  "number": "6.4",
   "title": "",
   "body": "  What is the remainder when dividing 50 by 3?    2    3x16 = 48, meaning that 3 can go into 50 sixteen times. The remainder, or leftover amount, is then 50-48=2.   "
 },
@@ -817,7 +817,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "6.2.1",
   "title": "",
-  "body": " What is the remainder when dividing 36 by 15?  "
+  "body": " What is the remainder when dividing 36 by 15?      Correct!      Incorrect. Be sure to review the video before you try again!     "
 },
 {
   "id": "quiz-integers-4",
@@ -826,7 +826,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "6.2.2",
   "title": "",
-  "body": " Convert the decimal number 222 to 8-bit binary.  "
+  "body": " Find the 8-bit binary representation of the decimal number 222:      Correct!      Incorrect. Be sure to review the video before you try again!     "
 },
 {
   "id": "integers-negative",
@@ -838,13 +838,40 @@ var ptx_lunr_docs = [
   "body": " Storing Negative Integers  Now we know how positive integers can be stored in the computer. How about negative integers? There actually are several different options. The following video describes the signed magnitude representation of negative numbers:   Video Description    binary signed magnitude In signed magnitude representation the most significant bit is interpreted as a sign (negative or positive)  0 is negative, 1 is positive  In an 8-bit number, only 7 bits remain for the magnitude of the number  Binary adding does not work in a straight-forward manner in this representation        Does the binary number 10000001 represent the same decimal number in both unsigned binary and signed magnitude binary?    Try converting the binary number to decimal, following the rules of each binary representation method.    No, they are different decimal numbers!    In unsigned binary, 10000001 represents  In signed magnitude binary, 10000001 represents since the most significant bit (the left-most bit) is \"1\", which denotes a negative number in this binary representation. Thus, that one binary number represents 129 in binary and -1 in signed magnitude, which are definitely different!    We have been representing positive integers as binary numbers, what about negative integers?  Several strategies are possible:  The most obvious is known as signed magnitude , which uses the most significant bit (MSB) for the sign: 0 for + and 1 for - .  For an 8-bit binary number:   This allows for a range from -127 to 127 to be represented.  For an n-bit binary number: to   Adding in Binary  How do you add binary numbers?  Recall addition in the decimal system :  1 79 79 + 106 + 106 ______ --> ______ 185 185  Notice how we \"carry\" the one from the ones digits (shown on the right above)? We add similarly in binary, following these rules:  1 + 0 = 01 1 + 1 = 10  Here's an example of adding in binary (with \"carrying\" the ones shown on the right again):  1 111 01001111 01001111 + 01101010 + 01101010 ___________ --> ___________ 10111001 10111001  We can check that this binary addition aligns with decimal addition, as 79 + 106 = 185 (as shown above).    Adding in Signed Magnitude  How about adding numbers in binary when using the signed magnitude representation of integers?  Adding two positive numbers:  00001101 (13 decimal) + 01100100 (100 decimal) ___________ 01110001 (113 decimal)  Adding a positive and a negative number:  00001101 (13 decimal) + 11100100 (-100 decimal) ___________ 11110001 (-113 decimal)  Addition does not work with signed magnitude numbers!    Quiz   What is the 8-bit representation of the decimal number -63, if the signed magnitude representation is used?    We noticed in the last video that arithmetic is not straight forward in the signed magnitude representation of negative numbers. We therefore introduce a different way to store negative integers, namely the binary two's complement representation. While this representation may seem cumbersome at first, the point is really to fix the problems we observed with binary addition when negative numbers are involved. The binary two's complement representation allows for the same process to be used in adding integers internally inside the computer, regardless of whether the numbers are positive or negative. This process is typically hard-wired in the computer's processor which makes for super fast execution time.   Video Description    Addition works in binary 2's compliment  binary two's complement To represent negative integers, find the binary of the magnitude first, then swap all 0s and 1s and finally add 1  Calculating the range of numbers that can be represented      Addition does not work with signed magnitude numbers.  Solution: use an alternative for representing signed integers known as binary 2's complement .  Idea: Store negative integers in such a way that when summed with its complement (positive number) the result is zero.  Rules for writing the 2's complement of a number:   Write down the binary representation of the magnitude  Positive integers stay the same   Negative integers:   Change all 0s to 1s and all 1s to 0s  Add 1       2's Complement Example  Decimal:  13 + -100 ________ -87  Step 1: magnitude  13 --> 00001101 -100 --> 01100100  Steps 2 and 3a: binary complement  00001101 --> stays the same 01100100 --> 10011011  Steps 2 and 3b: add 1  00001101 --> stays the same 10011011 --> 10011100  Add!  00001101 + 10011011 ___________ 10101001  Did it work? Is this the 2's complement of -87?  We need a way to decode a 2's complement number...    Decoding 2's Complement Numbers    All 2's complement numbers that are negative have MSB 'set' (negative) -- shown in blue  Add values of the places which are zero: (64 + 16 + 4 + 2) -- shown in pink  Add one to the result   So the binary 2's complement number 10101001 is:  -(64 + 16 + 4 + 2 + 1) = -87  So, addition with 2's complement integers works!  Whats the range of numbers you can represent when using the binary 2's complement?  8-bit 2's complement numbers range: -128 to 127  n-bit 2's complement numbers: to  Food for thought: why is not represented in 2's complement?    Quiz   What is the 8-bit binary 2's complement representation of the number 63 (careful: this is a positive number... what do positive numbers look like in 2's complement?)    What is the 8-bit binary 2's complement representation of the number -63    Finally, let's take a look at what happens when counting beyond the largest possible number in binary 2's complement.   Video Description    What happens when you exceed the binary range?  The decimal representation becomes negative!      More food for thought: start at 0, keep adding 1. What happens?  Decimal Binary Two's Complement 0 00000000 1 00000001 2 00000010 3 00000011 . . . . . . 126 01111110 127 01111111 +1 ?????  What is the decimal value of this 2's complement number?  1111111 <-- carrying the ones 127 01111111 + 1 + 00000001 ______ ___________ ??? 10000000   MSB is 'set', so the number is negative  Add values of the places which are zero: 64 + 32 + 16 + 8 + 4 + 2 + 1 = 127  Add 1 to the result   Thus, the result is -128.   Quiz   What is the decimal value of the 8-bit binary 2's complement number 10101010 ?    "
 },
 {
-  "id": "example-3",
+  "id": "p-496",
   "level": "2",
-  "url": "integers-negative.html#example-3",
+  "url": "integers-negative.html#p-496",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "signed magnitude "
+},
+{
+  "id": "example-1",
+  "level": "2",
+  "url": "integers-negative.html#example-1",
   "type": "Check Your Understanding",
-  "number": "6.4",
+  "number": "6.2",
   "title": "",
   "body": "  Does the binary number 10000001 represent the same decimal number in both unsigned binary and signed magnitude binary?    Try converting the binary number to decimal, following the rules of each binary representation method.    No, they are different decimal numbers!    In unsigned binary, 10000001 represents  In signed magnitude binary, 10000001 represents since the most significant bit (the left-most bit) is \"1\", which denotes a negative number in this binary representation. Thus, that one binary number represents 129 in binary and -1 in signed magnitude, which are definitely different!   "
+},
+{
+  "id": "p-505",
+  "level": "2",
+  "url": "integers-negative.html#p-505",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "signed magnitude "
+},
+{
+  "id": "p-510",
+  "level": "2",
+  "url": "integers-negative.html#p-510",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "decimal system "
 },
 {
   "id": "quiz-integers-5",
@@ -854,6 +881,24 @@ var ptx_lunr_docs = [
   "number": "6.3.3.1",
   "title": "",
   "body": " What is the 8-bit representation of the decimal number -63, if the signed magnitude representation is used?  "
+},
+{
+  "id": "p-519",
+  "level": "2",
+  "url": "integers-negative.html#p-519",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "binary two's complement "
+},
+{
+  "id": "p-522",
+  "level": "2",
+  "url": "integers-negative.html#p-522",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "binary 2's complement "
 },
 {
   "id": "quiz-integers-6",
@@ -896,9 +941,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "integers-hex.html#activity-21",
   "type": "Activity",
-  "number": "6.3",
+  "number": "6.5",
   "title": "",
   "body": " Please convert the decimal number 20,000 into hexadecimal.  0x4E20  "
+},
+{
+  "id": "p-551",
+  "level": "2",
+  "url": "integers-hex.html#p-551",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Binary hexadecimal base-16 "
+},
+{
+  "id": "p-569",
+  "level": "2",
+  "url": "integers-hex.html#p-569",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Hexadecimal to decimal: best done via binary! "
 },
 {
   "id": "integers-summary",
@@ -1027,9 +1090,9 @@ var ptx_lunr_docs = [
   "body": " Remainders  remainder A remainder is the amount that remains after division takes place. The mathematical operation that produces this remainder is called the modulo operation . Note that this is the fractional remainder, not a decimal value, so the result of the modulo operation should always be an integer. For example, the remainder when dividing 29 by 3 is 2 since 3 goes into 29 just 9 times and 29 - 9*3 = 2.  Suppose we want to know the remainder of the division of one integer by another. Can we do this with our current programming knowledge?     What is the remainder of 15\/6?    3    Try it out in the code window above! We can check that the answer is 3, since we can see how many times 6 goes into 15.  15-6=9 9-6=3 6 doesn't go into 3, so 3 is the remainder.    "
 },
 {
-  "id": "example-4",
+  "id": "example-2",
   "level": "2",
-  "url": "floats-remainder.html#example-4",
+  "url": "floats-remainder.html#example-2",
   "type": "Check Your Understanding",
   "number": "7.1",
   "title": "",
@@ -1144,9 +1207,9 @@ var ptx_lunr_docs = [
   "body": " Amended Prefixes     Prefix    Size     kibibyte  KiB   = 1,024 bytes    mebibyte  MiB       gibibyte  GiB       tebibyte  TiB       pebibyte  PiB       exibyte  EiB       zebibyte  ZiB       yobibyte  YiB       "
 },
 {
-  "id": "example-5",
+  "id": "example-3",
   "level": "2",
-  "url": "prefixes-intro.html#example-5",
+  "url": "prefixes-intro.html#example-3",
   "type": "Check Your Understanding",
   "number": "9.3",
   "title": "",
@@ -1216,18 +1279,18 @@ var ptx_lunr_docs = [
   "body": " Relational and Equality Operators  We have already learned about several operators for numbers:   arithmetic  + , - , * addition, subtraction, and multiplication (integers and floats)  \/ integer division for integers and floating point division for floats  % remainder (modulus) of an integer division   Next, we'll learn about relational and equality operators that serve to compare the values of two quantities:    calculations relational operators  < , > less than and greater than operators  <= , >= less than or equal to, greater than or equal to  != not equal to   calculations equality operators  == equal to (note the double equal sign; the single equal sign = has already been 'used up' for our assignment operator)     Which of the following variables would C interpret as \"true\"? For example, if each variable was placed in the following code's if statement as \"variable\", would the program output \"True\" or \"False\"?   int a = -1  char b = 'b'  float c = 0.0  int d = 4000   if (variable){ printf(\"True\") } else{ printf(\"False\") }    C will interpret the variables a , b , and d as \"True\", and the variable c as \"False\"    In C, any nonzero integer or float is interpreted as true, as well as any character.    A true logical relation evaluates to 1, whereas a false relation evaluates to 0. Examples:   Suppose x has the value 3.5. Then (x <= 5.0) evaluates to 1.  Suppose next that x has the value 7. Then (x <= 5.0) evaluates to 0.  (age == 30) evaluates to 1 if indeed age has the value 30, otherwise it evaluates to 0.   Note: Instead of (x <= 5.0) you could also write (5.0 >= x) , and instead of (age == 30) you could just as well write (30 == age) .    Does the following statement, which is comparing two characters, evaluate to true or false , according to C?  ('A' > 'a')      False    Recall that characters are really stored as their ASCII codes in memory. Therefore, when comparing characters, C really compares their ASCII codes. In this case, we have 'A'=65 and 'a'=97. Sure enough, 65 is not greater than 97, so the above statement evaluates to false .    Let's look at an example.    Video Description    Logic expressions resulting from comparing variable values  Producing true\/false relations  Using if-else based on true\/false values of logic statements  Example: an if statement can include a logic statement such as (x>5) , and it will then execute code if this logic statement evaluates to true       You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.  Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).   When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).    "
 },
 {
-  "id": "example-6",
+  "id": "example-4",
   "level": "2",
-  "url": "branching-operators.html#example-6",
+  "url": "branching-operators.html#example-4",
   "type": "Check Your Understanding",
   "number": "10.1",
   "title": "",
   "body": "  Which of the following variables would C interpret as \"true\"? For example, if each variable was placed in the following code's if statement as \"variable\", would the program output \"True\" or \"False\"?   int a = -1  char b = 'b'  float c = 0.0  int d = 4000   if (variable){ printf(\"True\") } else{ printf(\"False\") }    C will interpret the variables a , b , and d as \"True\", and the variable c as \"False\"    In C, any nonzero integer or float is interpreted as true, as well as any character.   "
 },
 {
-  "id": "example-7",
+  "id": "example-5",
   "level": "2",
-  "url": "branching-operators.html#example-7",
+  "url": "branching-operators.html#example-5",
   "type": "Check Your Understanding",
   "number": "10.2",
   "title": "",
@@ -1297,9 +1360,9 @@ var ptx_lunr_docs = [
   "body": " Combining Multiple Logic Statements  Sometimes you may want to check whether several statements are true at the same time, or whether at least one of several statements is true, or whether something is not true, etc. We'll take a look at how do do this in C now.  logic AND The way to write the logical AND in C is with two ampersand signs: &&   logic OR The way to write the logical OR in C is with two vertical bars: ||   logic NOT The way to negate a condition in C is to put an exclamation mark in front of it: !(...)     Zero is the value which C interprets as false. How could you use a logical operator so that C would interpret anything except zero as false, such as in an if statement?    Use an exclamation mark to negate a condition.    By using an exclamation mark in front of the condition in our if statement, C will interpret the condition as the opposite of whatever it normally would be. For example, if our simple if statement was as follows:  int var; \/*see below for our example values of var*\/ if (!var){ print(\"True\"); }else{ printf(\"False\"); }  then, if var = 0 which is originally false, !var would be true.  Similarly, if var = 1 which is originally true, !var would thus be false.    "
 },
 {
-  "id": "example-8",
+  "id": "example-6",
   "level": "2",
-  "url": "branching-multiple.html#example-8",
+  "url": "branching-multiple.html#example-6",
   "type": "Check Your Understanding",
   "number": "10.4",
   "title": "",
@@ -1378,9 +1441,9 @@ var ptx_lunr_docs = [
   "body": " The Idea of a Flag   boolean behavior (true\/false)  flag Despite the fact that the C-programming language does not have a boolean data type, we can simulate boolean (true\/false) behavior using an integer-type variable. This is often called a flag.   Video Description    Idea of a flag variable  Symbolizing true\/false in code  For example: use an integer variable with value of 1 to symbolize true and a value of 0 to symbolize false        What are some scenarios where it would be useful to have a true\/false variable? Any past activities come to mind?      What is the value of the variable d once the following code has been executed:  int d, num; num = 17; d = ((17%3)==0);    "
 },
 {
-  "id": "example-9",
+  "id": "example-7",
   "level": "2",
-  "url": "branching-flag.html#example-9",
+  "url": "branching-flag.html#example-7",
   "type": "Check Your Understanding",
   "number": "10.5",
   "title": "",
@@ -1468,9 +1531,9 @@ var ptx_lunr_docs = [
   "body": " for and if together  nesting for and if You can nest an if statement inside a loop or a loop inside an if statement.  Take a look at the following example which prints out those numbers between 0 and 29 that are divisible by 3. Make sure to try to understand how the code accomplishes this task.     Is there a difference between the two following scenarios, if the same statements are used within each element?   Nesting an if statement within a loop  Nesting a loop within an if statement     Yes! They can produce quite different results!    Here is just one example of how the same statements placed in different orders can produce vastly different results:   int i = 0; int a = 5; for (i=0; i<11; i++){ if (a<i){ printf(\"%d \", i); } }  int i = 0; int a = 5; if (a<i){ for (i=0; i<11; i++){ printf(\"%d \", i); } }   The first example program will output \"6 7 8 9 10\", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!    "
 },
 {
-  "id": "example-10",
+  "id": "example-8",
   "level": "2",
-  "url": "adv-branching-for-if.html#example-10",
+  "url": "adv-branching-for-if.html#example-8",
   "type": "Check Your Understanding",
   "number": "11.1",
   "title": "",
@@ -1684,9 +1747,9 @@ var ptx_lunr_docs = [
   "body": " Program Style  program style Style, which is how you format your source code, is an important consideration when writing computer programs. In the following Codecast, we will explore ways to craft easy-to-read code and why style is so important. Considerations such as indentation, where to place line breaks, grouping pieces of code together, choice of variable names, where to place comments are all part of coding style.    Video Description    Best practices for the style of your code  i.e. consistent spacing, line breaks, indentation, and variable-naming conventions       Time for some reflection:  Do you think your current style when coding is clean and easy-to-read, such as the example shown in the Codecast above, or do you think there's some room for improvement?    Either way, think about the example from the Codecast when you work on your next coding assignments. Great style will become increasingly important as the complexity of your code increases!      "
 },
 {
-  "id": "example-11",
+  "id": "example-9",
   "level": "2",
-  "url": "format-style.html#example-11",
+  "url": "format-style.html#example-9",
   "type": "Check Your Understanding",
   "number": "12.3",
   "title": "",
@@ -1891,18 +1954,18 @@ var ptx_lunr_docs = [
   "body": " for vs. while Loops  Though for - and while -loops can accomplish the same tasks, both have certain benefits and drawbacks. Here, we compare the syntaxes of both loops and discuss situations and scenarios in which one loop is preferable over the other.  for -loop syntax:  for (initialization; loop run condition; update) { statements...; }  At the very start of the loop (before any kind of repetition is entered) the initialization statement is executed. This happens exactly once. At the start of every repetition the loop condition is checked. If it evaluates to true then the actual loop statements are executed once. Afterwards, the update statement is executed and next, the loop run condition is checked again. If still true, the loop statements are executed again, etc.  Example:  for (i=10; i>5; i--) { printf(\"i = %d\\n\", i); }  In this example, i is initialized with the value 10 right before the start of the loop. Next, the logic statement i>5 is evaluated, and since 10 is indeed greater than 5, the loop is entered. The printf() statement prints i = 10 to the screen. Next, the update statement i-- is executed, decreasing the value of i to 9. The loop condition is checked (9 is still greater than 5) and so i = 9 is printed to the screen. i is next decreased to 8, loop condition checked, etc. This continues on until i = 6 is printed to the screen. When i is next decreased to 5, the check of the loop condition evaluates to false since 5 is not greater than 5. The loop terminates with the loop counter having the value 5.  while -loop syntax:  while (condition) { statements...; }  At the start of every run through the loop, the condition is checked and only if it evaluates to true are the statements in the loop body executed. It is the programmer's job to build in an update condition into these statements so that eventually the loop condition will evaluate to false, causing the loop to terminate. It is really easy to forget to do this, leading to a never-ending loop...  Example:  i=10; while (i>5) { printf(\"i = %d\\n\", i); i--; }  This loop generates the exact same output as the above for loop. Notice that you have to explicitly initialize i on your own before the loop and program the update condition i--; as part of the loop body.  In general:   loops for vs. while Use a for -loop when you have a known number of iterations.  loops for vs. while Use a while -loop when you have an unspecified number of iterations.     Would a for - or while -loop be more efficient to implement in the following scenario?  In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.    A while -loop    Though this task could technically be accomplished with either type of loop, a while -loop would be more efficient to use, since you don't know how many times the user will input information before that certain \"stop\" integer is entered. With a for -loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A while -loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain \"stop\" integer being entered.    Clearly, the following would be difficult to accomplish with a for -loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.   In the previous example, we had to type the scanf() statement twice: once to read the user input and then one more time in case they entered something negative by accident. This is not the most elegant code (though perfectly acceptable). So there is a third kind of loop that helps in such a case, the do-while -loop:   Unlike our previous two types of loops, a do-while loop is guaranteed to execute its loop body at least once since it doesn't get around to checking the loop condition until after execution of the loop body.    What differences between while -loops and do-while -loops do you notice? Are there any similarities in their syntaxes?    We'll look into the do-while -loop in the next section!    "
 },
 {
-  "id": "example-12",
+  "id": "example-10",
   "level": "2",
-  "url": "loops-for-while.html#example-12",
+  "url": "loops-for-while.html#example-10",
   "type": "Check Your Understanding",
   "number": "14.1",
   "title": "",
   "body": "  Would a for - or while -loop be more efficient to implement in the following scenario?  In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.    A while -loop    Though this task could technically be accomplished with either type of loop, a while -loop would be more efficient to use, since you don't know how many times the user will input information before that certain \"stop\" integer is entered. With a for -loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A while -loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain \"stop\" integer being entered.   "
 },
 {
-  "id": "example-13",
+  "id": "example-11",
   "level": "2",
-  "url": "loops-for-while.html#example-13",
+  "url": "loops-for-while.html#example-11",
   "type": "Check Your Understanding",
   "number": "14.2",
   "title": "",
@@ -1954,9 +2017,9 @@ var ptx_lunr_docs = [
   "body": " Increment \/ Decrement Operators  loops operators shorthand  Certain incremental and decrement statements, such as the following, are so commonly used in C, especially when working with loops, that there is even a shorthand for the shorthand!  i += 1;  i -= 1;  Because of their ubiquitousness, there is yet another shorthand notation just for these operations of adding one to or subtracting one from a variable!    Do you remember what the following is shorthand notation for:  i += 1;      i = i + 1;    Remember: i += 1; is a compound assignment operation that we just learned about in the previous section!    In the following video, we'll take a look at the shorthand notation that shortens the already short compound assignment operators += and += :    Video Description    Shorthand notation for incrementing and decrementing the same variable  i.e. i++; , ++i  i.e. i--; , --i  Pre- and post-fix notation: the location of ++ or -- either before or after the variable to be modified determines the timing of the update relative to other instructions that are part of the same statement.  NEW SYNTAX: i++ , for example, is equivalent to i = i + 1       What does the following code print to the screen?  int i = 5; i++; printf(\"%d \", i); printf(\"%d \", i++); printf(\"%d \", i--); printf(\"%d \", --i);   6 7 6 5  6 6 7 5  6 7 6 6  5 5 4 4  5 6 5 4   Enter your choice (a\/b\/c\/d\/e):    "
 },
 {
-  "id": "example-14",
+  "id": "example-12",
   "level": "2",
-  "url": "loops-operators.html#example-14",
+  "url": "loops-operators.html#example-12",
   "type": "Check Your Understanding",
   "number": "14.4",
   "title": "",
@@ -2341,9 +2404,9 @@ var ptx_lunr_docs = [
   "body": " File I\/O Overview  So far, the only way in which we have been able to supply data to our code is via interaction with the user at runtime. We call such program use \"interactive\" the user supplies input.  Input to a program can also come from a data file and this is sometimes called batch mode  a data file provides input to the code.  A data file  is stored somewhere and accessed by your program. The storage location could be your hard disk, a CD-ROM (remember those?), a flash drive, etc.  In C, there are three steps that are necessary to execute in the following order when attempting to read from or write to a file:   Open file  Read\/write to\/from file  Close file   We will now learn about each of these steps in detail.    What do you think are some benefits gained from receiving input from a data file as opposed to interactive user input?    There are many! We'll explore the benefits throughout this chapter and beyond.    "
 },
 {
-  "id": "example-15",
+  "id": "example-13",
   "level": "2",
-  "url": "files-intro.html#example-15",
+  "url": "files-intro.html#example-13",
   "type": "Check Your Understanding",
   "number": "16.1",
   "title": "",
@@ -2422,9 +2485,9 @@ var ptx_lunr_docs = [
   "body": " Check Whether a File Exists  How do we know whether our file is actually open? What if we misspelled the filename for example? Or what if something went wrong during opening of the file? Or what if the file doesn't even exist (but we thought it did)?  file check if exists We use the fact that fopen() returns a special value if it is not able to open the file for some reason. That special value is a NULL pointer .    In , we learned that C interprets variables with the value of zero as false. Do you think that a null pointer will be interpreted as true or false?    False    There are only a few types and values of variables in C that are interpreted as false, and a null pointer is one of them!     Note that in the case where the file isn't actually open (indicated by fopen() returning a value of NULL ) there is no need to close the file. In fact, even attempting to close the file in this case would lead to a runtime error: feel free to try it out!  "
 },
 {
-  "id": "example-16",
+  "id": "example-14",
   "level": "2",
-  "url": "files-exist.html#example-16",
+  "url": "files-exist.html#example-14",
   "type": "Check Your Understanding",
   "number": "16.2",
   "title": "",
@@ -3106,9 +3169,9 @@ var ptx_lunr_docs = [
   "body": " Top-Down Design  design top-down Top-Down Design is a method for solving problems in which the problem is broken down into smaller sub-problems , which are solved (perhaps by breaking into sub-sub-problems...) to derive a solution to the main problem.  This is the technique you should use for any problem!  Functions are ideal for this purpose and reinforce this type of solution strategy.    How can implementing a top-down design method while coding potentially lead to an easier debugging process?    While there could be many reasons, one benefit of the top-down design method is that by working in smaller, more tangible pieces of code, it can be easier to see if a certain task is functioning correctly. Once you see that your small bits of code (e.g. functions) are working as planned, then after linking them together, you are more likely to have a successful code than if you blindly wrote it all with no intermediate testing.    "
 },
 {
-  "id": "example-17",
+  "id": "example-15",
   "level": "2",
-  "url": "pointers-design.html#example-17",
+  "url": "pointers-design.html#example-15",
   "type": "Check Your Understanding",
   "number": "20.1",
   "title": "",
@@ -3124,9 +3187,9 @@ var ptx_lunr_docs = [
   "body": " Bottom-Up Testing  testing bottom-up When working on a small sub-sub-problem of a big program via a function it is important to test the function extensively before making it part of the bigger program.  To do so, one simply writes a so-called driver , that is, a main function whose purpose it is to call your new function in order to check whether if works correctly.  Suppose, for example, you are writing the function simplify() that simplifies a fraction. Here is a sample driver to test this function:  int main(void) { int numer = 50; int denom = 10; printf(\"original: %d\/%d\\n\", numer, denom); simplify(&numer, &denom); printf(\"simplified: %d\/%d\\n\", numer, denom); }  There is no point in making this fancy: you'll discard it later!    What should your driver do to the function you are testing?    Provide it with some test inputs!    Using your driver, you'll want to ensure that given certain inputs, your function outputs expected results. Whether you pass an integer, some floats, an array, or potentially nothing (if it's a void function), the return value(s) or output from the function should match what you expect. If not, you will know something needs fixing...    "
 },
 {
-  "id": "example-18",
+  "id": "example-16",
   "level": "2",
-  "url": "pointers-bottom-up-testing.html#example-18",
+  "url": "pointers-bottom-up-testing.html#example-16",
   "type": "Check Your Understanding",
   "number": "20.2",
   "title": "",
@@ -3322,9 +3385,9 @@ var ptx_lunr_docs = [
   "body": " Declaring and Initializing Strings  strings Suppose you wanted to store a name (for example \"Petra\") in the computer's memory. Of course you could simply declare five individual characters and assign the letters of the name to them. But that's not very convenient and we already know that an array of characters would be a much better option. We could then simply use a loop to print out all of the characters one-by-one. The only slight issue would be that we'd have to keep track of the length of the name somewhere in order to be able to tell the loop how many times to run. Not a huge deal really, and we are already used to doing so for other arrays.  But C actually provides some additional functionality for storing so-called strings that makes it unnecessary to separately keep track of the length of the string. How? An extra character (the null terminator \\0 ) is placed after the last character in the array in order to indicate the end of the string. And so:  A string is an array of type char that is terminated with the null character \\0 . By the way, the null terminator (character) is the character in the ASCII table with ASCII code 0.  We have already been using string constants (that cannot be changed), for example:  printf(\"This is a string constant.\\n\");  But it is very useful to have variables that can hold strings (for example, filenames). In the following example we use a variable of type string (so really, an array of characters), to hold a first name and a last name. You can see from the example how you can initialize such a variable at declaration time . Sadly things won't be quite as easy elsewhere in our code but more on that later.     How much space is allocated in memory for the string firstName if each char uses 1 byte?    6 bytes    The contents of this string include the name we are storing, \"Petra\", followed by the null character \\0 which signifies the termination of the string. Each character uses 1 byte, so together we have 5 bytes for the name plus one for the null character. That adds up to 6 bytes total!  Feel free to check this logic using the sizeof() function and the %zu format specifier, as discussed in .    "
 },
 {
-  "id": "example-19",
+  "id": "example-17",
   "level": "2",
-  "url": "strings-intro.html#example-19",
+  "url": "strings-intro.html#example-17",
   "type": "Check Your Understanding",
   "number": "21.1",
   "title": "",
@@ -3349,9 +3412,9 @@ var ptx_lunr_docs = [
   "body": " Can you assign a new string value to firstName in the code? For example, can you use the following line?  firstName = \"Alex\";   Please paste your text submission into the box below, then select Run to submit it:   "
 },
 {
-  "id": "example-20",
+  "id": "example-18",
   "level": "2",
-  "url": "strings-assign.html#example-20",
+  "url": "strings-assign.html#example-18",
   "type": "Check Your Understanding",
   "number": "21.2",
   "title": "",
@@ -3394,9 +3457,9 @@ var ptx_lunr_docs = [
   "body": " String Length  strings length C can find the length of a string for you! Of course, you could do so yourself. This means that strings are fundamentally different from general arrays, in that their length can be determined due to the placement of the null character at the end of each string.     Without using strlen() , how could you find the length of a string?    Remember, all strings are terminated by the null character \/0 .    Try your solution in the code window above, then compare it to the length provided when using strlen() to ensure your solution works.    "
 },
 {
-  "id": "example-21",
+  "id": "example-19",
   "level": "2",
-  "url": "strings-length.html#example-21",
+  "url": "strings-length.html#example-19",
   "type": "Check Your Understanding",
   "number": "21.3",
   "title": "",
@@ -3412,9 +3475,9 @@ var ptx_lunr_docs = [
   "body": " Reading Strings from Input  strings read from input format specifiers %s The scanf() function can be used to read a string from the user input using the %s format specifier. By default, reading stops when white space (i.e. a space, return, etc.) is encountered. There are many options to modify this behavior so that the reading stops based on different conditions (if interested: Google).  The below example shows how to read a two words (a first name and a last name) from the user input and store them in corresponding strings.     Why is the ampersand character & missing in front of firstName and lastName in the above scanf() statement?    Remember, a string is really an array of characters (with the null terminator placed at the end). Do you remember what an array variable really stores?.    The variable firstName (and also the variable lastName), without any brackets placed behind it, stores the address of the zeroth element of the array (so the first letter of the name in this case). Since it is already an address there is no need to place an additional & operator in front of it since that would get you the address of the address!    "
 },
 {
-  "id": "example-22",
+  "id": "example-20",
   "level": "2",
-  "url": "strings-input.html#example-22",
+  "url": "strings-input.html#example-20",
   "type": "Check Your Understanding",
   "number": "21.4",
   "title": "",
@@ -4042,9 +4105,9 @@ var ptx_lunr_docs = [
   "body": " Passing Structures to Functions   Passing by Value  In the next video we'll learn how to pass structures to functions by value.  structures pass-to-function by value Passing by value means that a copy will be made of the data stored in the structure. We will therefore have access to all of the data stored in the structure variable but we cannot modify it within the function (since all we'd end up doing is modify the copies of the values).    Imagine we declare a structure named student in both the main() function and in a new function, and we then pass the structure from the main() function into our new one by value. If we now change a value within the new function's structure, will it affect the original structure?    No!    Remember when we discussed what not to name your variables in ? Just because we named the structures the same thing doesn't mean they are the same! Soon we'll learn how to pass structures by reference...    We'll work with the following structure example:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  This stores student data (first and last name, birth year and average grade) in a structure.  The following Codecast shows you how to pass a student record to a function in order to print the record. Note that in the video we do not use typedef for the sole reason that sadly, typedef has not (yet) been implemented in the recording software.    Video Description    Structures can be passed to functions  NEW SYNTAX: the following line is a prototype for a function that receives the structure struct student by value and names the received structure var in the function:  void function(struct student var);     Suppose you have declared a structure to hold student data as in the video:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?   double compareStudents(stud1, stud2);  struct student compareStudents(struct student stud1, struct student stud2);  double compareStudents(struct student stud1, struct student stud2);   Enter your choice (a\/b\/c):    In the same scenario as in the previous question, where you have declared a structure to hold student data via:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  and are writing a function compareStudents() which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:    double lower; if (stud1.aveGrade<stud2.aveGrade) lower = stud1.aveGrade; else lower = stud2.aveGrade;    double lower; if (aveGrade(stud1)<aveGrade(stud2)) lower = stud1.aveGrade; else lower = stud2.aveGrade;    double lower; lower = stud1.aveGrade<stud2.aveGrade;    Enter your choice (a\/b\/c):      Passing by Reference  structures pass-to-function by reference If we want to be able to modify a structure variable from within a function we need to pass a pointer to this variable to the function - just as we do for regular variables. In other words, we need to pass the variable to the function \"by reference\". In the next video we'll learn how to do so.    Video Description    Passing a structure pointer follows previously learned methods  The address of the structure is passed to a function, i.e. &variable  Pointers can be dereferenced in a function using *       What is wrong with the following piece of code and how would you fix it?  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; }; int main(void) { struct student me = {\"Petra\", \"Bonfert-Taylor\", 2001, 3.8}; struct student * studentptr = &me; *studentptr.birthYear = 1998; return 0; }   The second-to-last line of code should be (*studentptr.birthYear) = 1998;  The second-to-last line of code should be (&studentptr).birthYear = 1998;  The second-to-last line of code should be (*studentptr).birthYear = 1998;  There is nothing wrong with this code.   Enter your choice (a\/b\/c\/d):     "
 },
 {
-  "id": "example-23",
+  "id": "example-21",
   "level": "2",
-  "url": "structures-functions.html#example-23",
+  "url": "structures-functions.html#example-21",
   "type": "Check Your Understanding",
   "number": "26.1",
   "title": "",

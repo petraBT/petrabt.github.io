@@ -479,19 +479,19 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="structures-intro"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">26.1</span> <span class="title">Intro to Structures</span>
 </h2>
-<p id="p-1509">Up to this point we have been using the standard data types provided by C:</p>
+<p id="p-1519">Up to this point we have been using the standard data types provided by C:</p>
 <pre class="code-block tex2jax_ignore">int, float, double, char, void
 </pre>
-<p id="p-1510">C also provides the capability to define your own data types. In particular, we'll be learning about “structures”.</p>
-<p id="p-1511">A <em class="alert">structure</em> is simply a <em class="alert">collection of items of various data types</em> into one single object.</p>
-<p id="p-1512">Note that arrays on the other hand have to stick to one data type. Suppose we wanted to store some student data, for example, for each student:</p>
+<p id="p-1520">C also provides the capability to define your own data types. In particular, we'll be learning about “structures”.</p>
+<p id="p-1521">A <em class="alert">structure</em> is simply a <em class="alert">collection of items of various data types</em> into one single object.</p>
+<p id="p-1522">Note that arrays on the other hand have to stick to one data type. Suppose we wanted to store some student data, for example, for each student:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">char firstName[50];
 char lastName[50];
 int birthYear;
 double aveGrade;
 </code></pre></div>
-<p id="p-1513">We could simply create four separate arrays: one that holds the first names, one for last names, etc. Structures make this much easier, however. We can store, in one variable, all of the data for one specific student. We can then simply create one array of students to hold all of the data we are interested in.</p>
-<p id="p-1514">In the code window below you can see how to define such a <code class="code-inline tex2jax_ignore">struct student</code> data type and how to subsequently use it in your code to declare variables <code class="code-inline tex2jax_ignore">me</code> and <code class="code-inline tex2jax_ignore">you</code> of this data type. You can also see how to initialize such a structure at declaration time and how to access the so-called <em class="alert">members</em> of the structure (so <code class="code-inline tex2jax_ignore">firstName</code>, <code class="code-inline tex2jax_ignore">lastName</code>, <code class="code-inline tex2jax_ignore">birthYear</code>, <code class="code-inline tex2jax_ignore">aveGrade</code>) in your code.</p>
+<p id="p-1523">We could simply create four separate arrays: one that holds the first names, one for last names, etc. Structures make this much easier, however. We can store, in one variable, all of the data for one specific student. We can then simply create one array of students to hold all of the data we are interested in.</p>
+<p id="p-1524">In the code window below you can see how to define such a <code class="code-inline tex2jax_ignore">struct student</code> data type and how to subsequently use it in your code to declare variables <code class="code-inline tex2jax_ignore">me</code> and <code class="code-inline tex2jax_ignore">you</code> of this data type. You can also see how to initialize such a structure at declaration time and how to access the so-called <em class="alert">members</em> of the structure (so <code class="code-inline tex2jax_ignore">firstName</code>, <code class="code-inline tex2jax_ignore">lastName</code>, <code class="code-inline tex2jax_ignore">birthYear</code>, <code class="code-inline tex2jax_ignore">aveGrade</code>) in your code.</p>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nstructures1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nstructures1.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nstructures1.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe></section></div></main>
 </div>

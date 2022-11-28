@@ -479,27 +479,27 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="pointers-arrays"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">20.9</span> <span class="title">Arrays and Pointers</span>
 </h2>
-<p id="p-1246">Given an array variable such as <code class="code-inline tex2jax_ignore">int myArray[6];</code> what exactly does the variable <code class="code-inline tex2jax_ignore">myArray</code> itself store (if we don't add in the brackets to refer to a specific element)? It turns out, <code class="code-inline tex2jax_ignore">myArray</code> holds the <em class="alert">address of the zeroth element of the array</em>! That is, <code class="code-inline tex2jax_ignore">myArray</code> is a pointer of type <em class="emphasis">int</em>. So:</p>
+<p id="p-1256">Given an array variable such as <code class="code-inline tex2jax_ignore">int myArray[6];</code> what exactly does the variable <code class="code-inline tex2jax_ignore">myArray</code> itself store (if we don't add in the brackets to refer to a specific element)? It turns out, <code class="code-inline tex2jax_ignore">myArray</code> holds the <em class="alert">address of the zeroth element of the array</em>! That is, <code class="code-inline tex2jax_ignore">myArray</code> is a pointer of type <em class="emphasis">int</em>. So:</p>
 <pre class="code-block tex2jax_ignore">myArray == &amp;myArray[0]
 </pre>
-<p id="p-1247">But it gets even better than that: The computer can do arithmetic, giving us the ability to easily find the address of <code class="code-inline tex2jax_ignore">myArray[1]</code> or <code class="code-inline tex2jax_ignore">myArray[2]</code>, for example:</p>
+<p id="p-1257">But it gets even better than that: The computer can do arithmetic, giving us the ability to easily find the address of <code class="code-inline tex2jax_ignore">myArray[1]</code> or <code class="code-inline tex2jax_ignore">myArray[2]</code>, for example:</p>
 <pre class="code-block tex2jax_ignore">myArray + 1 == &amp;myArray[1]
 </pre>
 <pre class="code-block tex2jax_ignore">myArray + 2 == &amp;myArray[2]
 </pre>
-<p id="p-1248">This is called <em class="alert">pointer arithmetic.</em> So by adding 1 to the address <code class="code-inline tex2jax_ignore">myArray</code>, the computer automatically locates the address of the next array element, <code class="code-inline tex2jax_ignore">&amp;myArray[1]</code>.</p>
-<p id="p-1249">Watch the video to find out more.</p>
+<p id="p-1258">This is called <em class="alert">pointer arithmetic.</em> So by adding 1 to the address <code class="code-inline tex2jax_ignore">myArray</code>, the computer automatically locates the address of the next array element, <code class="code-inline tex2jax_ignore">&amp;myArray[1]</code>.</p>
+<p id="p-1259">Watch the video to find out more.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519145309501" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519145309501" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-48"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1250" class="disc">
-<li id="li-646"><p id="p-derived-li-646">The array variable itself holds the address of the zeroth element of the array</p></li>
-<li id="li-647"><p id="p-derived-li-647">Adding "1" to the pointer of an array will update the address to the next element of the array</p></li>
-<li id="li-648"><p id="p-derived-li-648">i.e. <code class="code-inline tex2jax_ignore">*array = 3</code>, <code class="code-inline tex2jax_ignore">*(array+1)=10</code> will update the first (the zeroth, truthfully speaking) number in the array as 3 and the next as 10</p></li>
+<ul id="p-1260" class="disc">
+<li id="li-642"><p id="p-derived-li-642">The array variable itself holds the address of the zeroth element of the array</p></li>
+<li id="li-643"><p id="p-derived-li-643">Adding "1" to the pointer of an array will update the address to the next element of the array</p></li>
+<li id="li-644"><p id="p-derived-li-644">i.e. <code class="code-inline tex2jax_ignore">*array = 3</code>, <code class="code-inline tex2jax_ignore">*(array+1)=10</code> will update the first (the zeroth, truthfully speaking) number in the array as 3 and the next as 10</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-48"><h3 class="heading hide-type">
-<span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
+<span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-arithmetic-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1251">Let's start with a review question!</p> <p id="p-1252">What is the output of the following program:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+<p id="p-1261">Let's start with a review question!</p> <p id="p-1262">What is the output of the following program:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 void swap (char *x, char *y); 
 int main(void) {
   char c = 'P';
@@ -516,65 +516,65 @@ void swap (char *x, char *y) {
   *y = temp;
 }
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-649"><p id="p-derived-li-649">PT PT</p></li>
-<li id="li-650"><p id="p-derived-li-650">PT xy</p></li>
-<li id="li-651"><p id="p-derived-li-651">PT TP</p></li>
-<li id="li-652"><p id="p-derived-li-652">PT yx</p></li>
-<li id="li-653"><p id="p-derived-li-653">None of the above</p></li>
-</ol> <p id="p-1253"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-arithmetic-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1254">Suppose you have declared an array of integers by typing</p>
+<li id="li-645"><p id="p-derived-li-645">PT PT</p></li>
+<li id="li-646"><p id="p-derived-li-646">PT xy</p></li>
+<li id="li-647"><p id="p-derived-li-647">PT TP</p></li>
+<li id="li-648"><p id="p-derived-li-648">PT yx</p></li>
+<li id="li-649"><p id="p-derived-li-649">None of the above</p></li>
+</ol> <p id="p-1263"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-arithmetic-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1264">Suppose you have declared an array of integers by typing</p>
 <pre class="code-block tex2jax_ignore">int numbers[] = {5, -1, 7, 10, 0, -11};
 </pre>
-<p id="p-1255">What is <code class="code-inline tex2jax_ignore"> *(numbers+4)</code>?</p> <p id="p-1256">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<p id="p-1265">What is <code class="code-inline tex2jax_ignore"> *(numbers+4)</code>?</p> <p id="p-1266">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers1.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
-<li id="li-654"><p id="p-derived-li-654">-11</p></li>
-<li id="li-655"><p id="p-derived-li-655">-1</p></li>
-<li id="li-656"><p id="p-derived-li-656">7</p></li>
-<li id="li-657"><p id="p-derived-li-657">0</p></li>
-<li id="li-658"><p id="p-derived-li-658">10</p></li>
-<li id="li-659"><p id="p-derived-li-659">5</p></li>
-<li id="li-660"><p id="p-derived-li-660">None of the above</p></li>
-</ol> <p id="p-1257"><em class="emphasis">Enter your choice (a/b/c/d/e/f/g):</em></p></article><article class="exercise exercise-like" id="quiz-arithmetic-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-1258">Suppose you have declared an array of integers by typing</p>
+<li id="li-650"><p id="p-derived-li-650">-11</p></li>
+<li id="li-651"><p id="p-derived-li-651">-1</p></li>
+<li id="li-652"><p id="p-derived-li-652">7</p></li>
+<li id="li-653"><p id="p-derived-li-653">0</p></li>
+<li id="li-654"><p id="p-derived-li-654">10</p></li>
+<li id="li-655"><p id="p-derived-li-655">5</p></li>
+<li id="li-656"><p id="p-derived-li-656">None of the above</p></li>
+</ol> <p id="p-1267"><em class="emphasis">Enter your choice (a/b/c/d/e/f/g):</em></p></article><article class="exercise exercise-like" id="quiz-arithmetic-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-1268">Suppose you have declared an array of integers by typing</p>
 <pre class="code-block tex2jax_ignore">int numbers[] = {5, -1, 7, 10, 0, -11};
 </pre>
-<p id="p-1259">What is <code class="code-inline tex2jax_ignore">*numbers+4</code>? Notice that the only difference to the previous question is the omission of parenthesis.</p> <p id="p-1260">You really need to think about this first before just trying it out. Really! Anyway, here is the code window for you to try out some code.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<p id="p-1269">What is <code class="code-inline tex2jax_ignore">*numbers+4</code>? Notice that the only difference to the previous question is the omission of parenthesis.</p> <p id="p-1270">You really need to think about this first before just trying it out. Really! Anyway, here is the code window for you to try out some code.</p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers2.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
-<li id="li-661"><p id="p-derived-li-661">-1</p></li>
-<li id="li-662"><p id="p-derived-li-662">5</p></li>
-<li id="li-663"><p id="p-derived-li-663">7</p></li>
-<li id="li-664"><p id="p-derived-li-664">4</p></li>
-<li id="li-665"><p id="p-derived-li-665">0</p></li>
-<li id="li-666"><p id="p-derived-li-666">9</p></li>
-</ol> <p id="p-1261"><em class="emphasis">Enter your choice (a/b/c/d/e/f):</em></p></article><article class="exercise exercise-like" id="quiz-arithmetic-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-1262">Suppose (again...) you have declared an array of integers by typing</p>
+<li id="li-657"><p id="p-derived-li-657">-1</p></li>
+<li id="li-658"><p id="p-derived-li-658">5</p></li>
+<li id="li-659"><p id="p-derived-li-659">7</p></li>
+<li id="li-660"><p id="p-derived-li-660">4</p></li>
+<li id="li-661"><p id="p-derived-li-661">0</p></li>
+<li id="li-662"><p id="p-derived-li-662">9</p></li>
+</ol> <p id="p-1271"><em class="emphasis">Enter your choice (a/b/c/d/e/f):</em></p></article><article class="exercise exercise-like" id="quiz-arithmetic-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-1272">Suppose (again...) you have declared an array of integers by typing</p>
 <pre class="code-block tex2jax_ignore">int numbers[] = {5, -1, 7, 10, 0, -11};
 </pre>
-<p id="p-1263">What is numbers[10]?</p> <ol class="lower-alpha">
-<li id="li-667"><p id="p-derived-li-667">This will cause a crash of your program</p></li>
-<li id="li-668"><p id="p-derived-li-668">5</p></li>
-<li id="li-669"><p id="p-derived-li-669">Random and depends on what is at that memory location</p></li>
-<li id="li-670"><p id="p-derived-li-670">The compiler sets this to zero</p></li>
-<li id="li-671"><p id="p-derived-li-671">-11</p></li>
-</ol> <p id="p-1264"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-arithmetic-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-1265">Suppose (for the last time) you have declared an array of integers by typing</p>
+<p id="p-1273">What is numbers[10]?</p> <ol class="lower-alpha">
+<li id="li-663"><p id="p-derived-li-663">This will cause a crash of your program</p></li>
+<li id="li-664"><p id="p-derived-li-664">5</p></li>
+<li id="li-665"><p id="p-derived-li-665">Random and depends on what is at that memory location</p></li>
+<li id="li-666"><p id="p-derived-li-666">The compiler sets this to zero</p></li>
+<li id="li-667"><p id="p-derived-li-667">-11</p></li>
+</ol> <p id="p-1274"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></p></article><article class="exercise exercise-like" id="quiz-arithmetic-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-1275">Suppose (for the last time) you have declared an array of integers by typing</p>
 <pre class="code-block tex2jax_ignore">int numbers[] = {5, -1, 7, 10, 0, -11};
 </pre>
-<p id="p-1266">You have furthermore declared a pointer via</p>
+<p id="p-1276">You have furthermore declared a pointer via</p>
 <pre class="code-block tex2jax_ignore">int *ptr;
 </pre>
-<p id="p-1267">and initialized it via</p>
+<p id="p-1277">and initialized it via</p>
 <pre class="code-block tex2jax_ignore">ptr = numbers + 2;
 </pre>
-<p id="p-1268">What is <code class="code-inline tex2jax_ignore">*(++ptr)</code>?</p> <p id="p-1269"><em class="emphasis">You want to try this out, right? Remember... Think first!</em></p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers3.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<p id="p-1278">What is <code class="code-inline tex2jax_ignore">*(++ptr)</code>?</p> <p id="p-1279"><em class="emphasis">You want to try this out, right? Remember... Think first!</em></p> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers3.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers3.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
-<li id="li-672"><p id="p-derived-li-672">5</p></li>
-<li id="li-673"><p id="p-derived-li-673">-11</p></li>
-<li id="li-674"><p id="p-derived-li-674">10</p></li>
-<li id="li-675"><p id="p-derived-li-675">0</p></li>
-<li id="li-676"><p id="p-derived-li-676">-1</p></li>
-<li id="li-677"><p id="p-derived-li-677">7</p></li>
-</ol> <p id="p-1270"><em class="emphasis">Enter your choice (a/b/c/d/e/f):</em></p></article></section></section></div></main>
+<li id="li-668"><p id="p-derived-li-668">5</p></li>
+<li id="li-669"><p id="p-derived-li-669">-11</p></li>
+<li id="li-670"><p id="p-derived-li-670">10</p></li>
+<li id="li-671"><p id="p-derived-li-671">0</p></li>
+<li id="li-672"><p id="p-derived-li-672">-1</p></li>
+<li id="li-673"><p id="p-derived-li-673">7</p></li>
+</ol> <p id="p-1280"><em class="emphasis">Enter your choice (a/b/c/d/e/f):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

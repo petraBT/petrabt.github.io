@@ -479,33 +479,33 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="linkedlists-autolink"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">28.3</span> <span class="title">Automate the Linking Process</span>
 </h2>
-<p id="p-1653">We'll continue working with our linked list of points in the next video. This time we'll learn how to automate the linking process between the points with the help of a function.</p>
+<p id="p-1663">We'll continue working with our linked list of points in the next video. This time we'll learn how to automate the linking process between the points with the help of a function.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521230782513" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521230782513" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-64"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1654" class="disc">
-<li id="li-878"><p id="p-derived-li-878">Functions can be used to link one point to another point</p></li>
-<li id="li-879"><p id="p-derived-li-879">Functions can be used to add on (append) a new element to an existing list</p></li>
-<li id="li-880"><p id="p-derived-li-880">Whole lists are created by repeatedly appending a new element to the previous end of the list</p></li>
-<li id="li-881"><p id="p-derived-li-881">i.e. call a function, pass to it the current end of the list and the element to be appended, create the link inside the function and return the new end of the list (which is the element that was just added on)</p></li>
+<ul id="p-1664" class="disc">
+<li id="li-874"><p id="p-derived-li-874">Functions can be used to link one point to another point</p></li>
+<li id="li-875"><p id="p-derived-li-875">Functions can be used to add on (append) a new element to an existing list</p></li>
+<li id="li-876"><p id="p-derived-li-876">Whole lists are created by repeatedly appending a new element to the previous end of the list</p></li>
+<li id="li-877"><p id="p-derived-li-877">i.e. call a function, pass to it the current end of the list and the element to be appended, create the link inside the function and return the new end of the list (which is the element that was just added on)</p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-64"><h3 class="heading hide-type">
-<span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
+<span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist1-4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1655">Given the structure definition from the video,</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point{
+<p id="p-1665">Given the structure definition from the video,</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point{
   int x;
   int y;
   struct point * next;
 };
-</code></pre></div> <p id="p-1656">what is the return type of the following function:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point * append (struct point * end, struct point * newpt) {
+</code></pre></div> <p id="p-1666">what is the return type of the following function:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point * append (struct point * end, struct point * newpt) {
   end-&gt;next = newpt;
   return(end-&gt;next);
 }
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-882"><p id="p-derived-li-882">a student</p></li>
-<li id="li-883"><p id="p-derived-li-883">an object of type <code class="code-inline tex2jax_ignore">struct student</code></p></li>
-<li id="li-884"><p id="p-derived-li-884">an integer</p></li>
-<li id="li-885"><p id="p-derived-li-885">a pointer to an object of type <code class="code-inline tex2jax_ignore">struct student</code></p></li>
-</ol> <p id="p-1657"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+<li id="li-878"><p id="p-derived-li-878">a student</p></li>
+<li id="li-879"><p id="p-derived-li-879">an object of type <code class="code-inline tex2jax_ignore">struct student</code></p></li>
+<li id="li-880"><p id="p-derived-li-880">an integer</p></li>
+<li id="li-881"><p id="p-derived-li-881">a pointer to an object of type <code class="code-inline tex2jax_ignore">struct student</code></p></li>
+</ol> <p id="p-1667"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

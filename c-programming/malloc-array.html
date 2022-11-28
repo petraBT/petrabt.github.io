@@ -479,27 +479,27 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="malloc-array"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">22.3</span> <span class="title">Allocate Memory for Arrays</span>
 </h2>
-<p id="p-1374">We can extend the use of <code class="code-inline tex2jax_ignore">malloc()</code> beyond single variables and use it to reserve memory for an entire array!</p>
+<p id="p-1384">We can extend the use of <code class="code-inline tex2jax_ignore">malloc()</code> beyond single variables and use it to reserve memory for an entire array!</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519660322746" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519660322746" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-52"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<ul id="p-1375" class="disc">
-<li id="li-724"><p id="p-derived-li-724">By doing the math (multiplying the size of a given datatype with the number of elements of that type you wish to store), the <code class="code-inline tex2jax_ignore">malloc()</code> function can be used to reserve space for entire arrays</p></li>
-<li id="li-725"><p id="p-derived-li-725">NEW SYNTAX: the following line will block off memory for an integer array with five elements</p></li>
+<ul id="p-1385" class="disc">
+<li id="li-720"><p id="p-derived-li-720">By doing the math (multiplying the size of a given datatype with the number of elements of that type you wish to store), the <code class="code-inline tex2jax_ignore">malloc()</code> function can be used to reserve space for entire arrays</p></li>
+<li id="li-721"><p id="p-derived-li-721">NEW SYNTAX: the following line will block off memory for an integer array with five elements</p></li>
 </ul>
 <p class="continuation">array = (int *) malloc(5*sizeof(int));</p></aside><section class="reading-questions" id="reading-questions-52"><h3 class="heading hide-type">
-<span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
+<span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-malloc-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-1376">Suppose you would like to reserve space in memory for an array of N integers (where N is a variable of type <code class="code-inline tex2jax_ignore">int</code> that holds the number of ints to be stored) and store the resulting location in an integer pointer (an <code class="code-inline tex2jax_ignore">int *</code>.) What is the correct way to do so?</p> <ol class="lower-alpha">
-<li id="li-726"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*sizeof(int));
+<p id="p-1386">Suppose you would like to reserve space in memory for an array of N integers (where N is a variable of type <code class="code-inline tex2jax_ignore">int</code> that holds the number of ints to be stored) and store the resulting location in an integer pointer (an <code class="code-inline tex2jax_ignore">int *</code>.) What is the correct way to do so?</p> <ol class="lower-alpha">
+<li id="li-722"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*sizeof(int));
 </pre></li>
-<li id="li-727"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*int);
+<li id="li-723"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*int);
 </pre></li>
-<li id="li-728"><pre class="code-block tex2jax_ignore">N = (int *) malloc(array*sizeof(int));
+<li id="li-724"><pre class="code-block tex2jax_ignore">N = (int *) malloc(array*sizeof(int));
 </pre></li>
-<li id="li-729"><pre class="code-block tex2jax_ignore">(int *) array = N*malloc(sizeof(int));
+<li id="li-725"><pre class="code-block tex2jax_ignore">(int *) array = N*malloc(sizeof(int));
 </pre></li>
-</ol> <p id="p-1377"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
+</ol> <p id="p-1387"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></div></main>
 </div>
 </body>
 </html>

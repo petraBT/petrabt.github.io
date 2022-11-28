@@ -482,16 +482,16 @@ eBookConfig.enable_chatcodes =  false;
 <section class="subsection" id="subsection-90"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">26.4.1</span> <span class="title">Passing by Value</span>
 </h3>
-<p id="p-1540">In the next video we'll learn how to pass structures to functions by value.</p>
-<p id="p-1541">Passing by value means that a copy will be made of the data stored in the structure. We will therefore have access to all of the data stored in the structure variable but we cannot modify it within the function (since all we'd end up doing is modify the copies of the values).</p>
-<article class="example example-like" id="example-23"><h4 class="heading">
+<p id="p-1550">In the next video we'll learn how to pass structures to functions by value.</p>
+<p id="p-1551">Passing by value means that a copy will be made of the data stored in the structure. We will therefore have access to all of the data stored in the structure variable but we cannot modify it within the function (since all we'd end up doing is modify the copies of the values).</p>
+<article class="example example-like" id="example-21"><h4 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">26.1</span><span class="period">.</span>
 </h4>
-<p id="p-1542">Imagine we declare a structure named <code class="code-inline tex2jax_ignore">student</code> in both the <code class="code-inline tex2jax_ignore">main()</code> function and in a new function, and we then pass the structure from the <code class="code-inline tex2jax_ignore">main()</code> function into our new one by value. If we now change a value within the new function's structure, will it affect the original structure?</p>
+<p id="p-1552">Imagine we declare a structure named <code class="code-inline tex2jax_ignore">student</code> in both the <code class="code-inline tex2jax_ignore">main()</code> function and in a new function, and we then pass the structure from the <code class="code-inline tex2jax_ignore">main()</code> function into our new one by value. If we now change a value within the new function's structure, will it affect the original structure?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-1543">No!</p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><p id="p-1544">Remember when we discussed what <em class="emphasis">not</em> to name your variables in <a href="memory-scope.html" class="internal" title="Section 19.4: The Scope of a Variable">Section 19.4</a>? Just because we named the structures the same thing doesn't mean they are the same! Soon we'll learn how to pass structures by reference...</p></div></div>
-</div></article><p id="p-1545">We'll work with the following structure example:</p>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><p id="p-1553">No!</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><p id="p-1554">Remember when we discussed what <em class="emphasis">not</em> to name your variables in <a href="memory-scope.html" class="internal" title="Section 19.4: The Scope of a Variable">Section 19.4</a>? Just because we named the structures the same thing doesn't mean they are the same! Soon we'll learn how to pass structures by reference...</p></div></div>
+</div></article><p id="p-1555">We'll work with the following structure example:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
@@ -499,69 +499,69 @@ eBookConfig.enable_chatcodes =  false;
   double aveGrade;
 };
 </code></pre></div>
-<p id="p-1546">This stores student data (first and last name, birth year and average grade) in a structure.</p>
-<p id="p-1547">The following Codecast shows you how to pass a student record to a function in order to print the record. Note that in the video we do not use <code class="code-inline tex2jax_ignore">typedef</code> for the sole reason that sadly, <code class="code-inline tex2jax_ignore">typedef</code> has not (yet) been implemented in the recording software.</p>
+<p id="p-1556">This stores student data (first and last name, birth year and average grade) in a structure.</p>
+<p id="p-1557">The following Codecast shows you how to pass a student record to a function in order to print the record. Note that in the video we do not use <code class="code-inline tex2jax_ignore">typedef</code> for the sole reason that sadly, <code class="code-inline tex2jax_ignore">typedef</code> has not (yet) been implemented in the recording software.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521046478311" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521046478311" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-59"><h4 class="heading"><span class="title">Video Description.</span></h4>
-<ul id="p-1548" class="disc">
-<li id="li-796"><p id="p-derived-li-796">Structures can be passed to functions</p></li>
-<li id="li-797"><p id="p-derived-li-797">NEW SYNTAX: the following line is a prototype for a function that receives the structure <code class="code-inline tex2jax_ignore">struct student</code> by value and names the received structure <code class="code-inline tex2jax_ignore">var</code> in the function:</p></li>
+<ul id="p-1558" class="disc">
+<li id="li-792"><p id="p-derived-li-792">Structures can be passed to functions</p></li>
+<li id="li-793"><p id="p-derived-li-793">NEW SYNTAX: the following line is a prototype for a function that receives the structure <code class="code-inline tex2jax_ignore">struct student</code> by value and names the received structure <code class="code-inline tex2jax_ignore">var</code> in the function:</p></li>
 </ul>
 <p class="continuation">void function(struct student var);</p></aside><section class="reading-questions" id="reading-questions-59"><h4 class="heading hide-type">
-<span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
+<span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h4>
 <article class="exercise exercise-like" id="quiz-structfunction-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-1549">Suppose you have declared a structure to hold student data as in the video:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+<p id="p-1559">Suppose you have declared a structure to hold student data as in the video:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
   double aveGrade;
 };
-</code></pre></div> <p id="p-1550">Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?</p> <ol class="lower-alpha">
-<li id="li-798"><pre class="code-block tex2jax_ignore">double compareStudents(stud1, stud2);
+</code></pre></div> <p id="p-1560">Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?</p> <ol class="lower-alpha">
+<li id="li-794"><pre class="code-block tex2jax_ignore">double compareStudents(stud1, stud2);
 </pre></li>
-<li id="li-799"><pre class="code-block tex2jax_ignore">struct student compareStudents(struct student stud1, struct student stud2);
+<li id="li-795"><pre class="code-block tex2jax_ignore">struct student compareStudents(struct student stud1, struct student stud2);
 </pre></li>
-<li id="li-800"><pre class="code-block tex2jax_ignore">double compareStudents(struct student stud1, struct student stud2);
+<li id="li-796"><pre class="code-block tex2jax_ignore">double compareStudents(struct student stud1, struct student stud2);
 </pre></li>
-</ol> <p id="p-1551"><em class="emphasis">Enter your choice (a/b/c):</em></p></article><article class="exercise exercise-like" id="quiz-structfunction-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-1552">In the same scenario as in the previous question, where you have declared a structure to hold student data via:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+</ol> <p id="p-1561"><em class="emphasis">Enter your choice (a/b/c):</em></p></article><article class="exercise exercise-like" id="quiz-structfunction-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-1562">In the same scenario as in the previous question, where you have declared a structure to hold student data via:</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
   double aveGrade;
 };
-</code></pre></div> <p id="p-1553">and are writing a function <code class="code-inline tex2jax_ignore">compareStudents()</code> which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:</p> <ol class="lower-alpha">
-<li id="li-801"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
+</code></pre></div> <p id="p-1563">and are writing a function <code class="code-inline tex2jax_ignore">compareStudents()</code> which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:</p> <ol class="lower-alpha">
+<li id="li-797"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
 if (stud1.aveGrade&lt;stud2.aveGrade)
   lower = stud1.aveGrade;
 else
   lower = stud2.aveGrade;
 </code></pre></div></li>
-<li id="li-802"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
+<li id="li-798"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
 if (aveGrade(stud1)&lt;aveGrade(stud2))
   lower = stud1.aveGrade;
 else
   lower = stud2.aveGrade;
 </code></pre></div></li>
-<li id="li-803"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
+<li id="li-799"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
 lower = stud1.aveGrade&lt;stud2.aveGrade;
 </code></pre></div></li>
-</ol> <p id="p-1554"><em class="emphasis">Enter your choice (a/b/c):</em></p></article></section></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
+</ol> <p id="p-1564"><em class="emphasis">Enter your choice (a/b/c):</em></p></article></section></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">26.4.2</span> <span class="title">Passing by Reference</span>
 </h3>
-<p id="p-1555">If we want to be able to modify a structure variable from within a function we need to pass a pointer to this variable to the function - just as we do for regular variables. In other words, we need to pass the variable to the function "by reference". In the next video we'll learn how to do so.</p>
+<p id="p-1565">If we want to be able to modify a structure variable from within a function we need to pass a pointer to this variable to the function - just as we do for regular variables. In other words, we need to pass the variable to the function "by reference". In the next video we'll learn how to do so.</p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521047452712" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521047452712" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-60"><h4 class="heading"><span class="title">Video Description.</span></h4>
-<ul id="p-1556" class="disc">
-<li id="li-804"><p id="p-derived-li-804">Passing a structure pointer follows previously learned methods</p></li>
-<li id="li-805"><p id="p-derived-li-805">The address of the structure is passed to a function, i.e. <code class="code-inline tex2jax_ignore">&amp;variable</code></p></li>
-<li id="li-806"><p id="p-derived-li-806">Pointers can be dereferenced in a function using <code class="code-inline tex2jax_ignore">*</code></p></li>
+<ul id="p-1566" class="disc">
+<li id="li-800"><p id="p-derived-li-800">Passing a structure pointer follows previously learned methods</p></li>
+<li id="li-801"><p id="p-derived-li-801">The address of the structure is passed to a function, i.e. <code class="code-inline tex2jax_ignore">&amp;variable</code></p></li>
+<li id="li-802"><p id="p-derived-li-802">Pointers can be dereferenced in a function using <code class="code-inline tex2jax_ignore">*</code></p></li>
 </ul></aside><section class="reading-questions" id="reading-questions-60"><h4 class="heading hide-type">
-<span class="type">Canvas Pre-Class Quiz Preview</span> <span class="codenumber"></span> <span class="title">Canvas Pre-Class Quiz Preview</span>
+<span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h4>
 <article class="exercise exercise-like" id="quiz-structfunction-3"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-1557">What is wrong with the following piece of code and how would you fix it?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+<p id="p-1567">What is wrong with the following piece of code and how would you fix it?</p> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
@@ -576,17 +576,17 @@ int main(void) {
   return 0;
 }
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-807">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(*studentptr.birthYear) = 1998;
+<li id="li-803">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(*studentptr.birthYear) = 1998;
 </pre>
 </li>
-<li id="li-808">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(&amp;studentptr).birthYear = 1998;
+<li id="li-804">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(&amp;studentptr).birthYear = 1998;
 </pre>
 </li>
-<li id="li-809">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(*studentptr).birthYear = 1998;
+<li id="li-805">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(*studentptr).birthYear = 1998;
 </pre>
 </li>
-<li id="li-810"><p id="p-derived-li-810">There is nothing wrong with this code.</p></li>
-</ol> <p id="p-1558"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></section></div></main>
+<li id="li-806"><p id="p-derived-li-806">There is nothing wrong with this code.</p></li>
+</ol> <p id="p-1568"><em class="emphasis">Enter your choice (a/b/c/d):</em></p></article></section></section></section></div></main>
 </div>
 </body>
 </html>

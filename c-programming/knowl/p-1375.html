@@ -11,12 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<ul class="disc">
-<li><p>By doing the math (multiplying the size of a given datatype with the number of elements of that type you wish to store), the <code class="code-inline tex2jax_ignore">malloc()</code> function can be used to reserve space for entire arrays</p></li>
-<li><p>NEW SYNTAX: the following line will block off memory for an integer array with five elements</p></li>
-</ul>
-<p class="continuation">array = (int *) malloc(5*sizeof(int));</p>
-<span class="incontext"><a href="malloc-array.html#p-1375" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<p>Recall that memory reserved dynamically via <code class="code-inline tex2jax_ignore">malloc()</code> is completely your responsibility. Therefore, when you are done using the memory it is your job to tell the computer that you no longer need it and thus make available this memory for other purposes. The process of releasing memory is called freeing and we will now learn how to release, or <em class="alert">free</em>, memory that has been reserved via malloc() in the heap. The function to do so is called <code class="code-inline tex2jax_ignore">free()</code> and it takes as an argument a pointer to the memory block that you'd like to release.</p>
+<span class="incontext"><a href="malloc-free.html#p-1375" class="internal">in-context</a></span>
 </body>
 </html>

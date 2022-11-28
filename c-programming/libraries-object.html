@@ -479,11 +479,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="libraries-object"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">29.5</span> <span class="title">Making Our Own Library - Object File</span>
 </h2>
-<p id="p-1720">One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</p>
-<p id="p-1721">The library then consists of both the header file and the object file. In our example, this would be</p>
+<p id="p-1730">One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</p>
+<p id="p-1731">The library then consists of both the header file and the object file. In our example, this would be</p>
 <pre class="code-block tex2jax_ignore">arbitraryintegers.h arbitraryintegers.o
 </pre>
-<p id="p-1722">We can now use this library in other programs:</p>
+<p id="p-1732">We can now use this library in other programs:</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 #include "arbitraryintegers.h"
 
@@ -494,7 +494,7 @@ int main(void) {
   . . . 
 }
 </code></pre></div>
-<p id="p-1723">Note the use of <code class="code-inline tex2jax_ignore">" "</code> for user-defined libraries instead of <code class="code-inline tex2jax_ignore">&lt; &gt;</code>, which is reserved for built-in libraries.</p></section></div></main>
+<p id="p-1733">Note the use of <code class="code-inline tex2jax_ignore">" "</code> for user-defined libraries instead of <code class="code-inline tex2jax_ignore">&lt; &gt;</code>, which is reserved for built-in libraries.</p></section></div></main>
 </div>
 </body>
 </html>
