@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<p>Next, we will investigate how to switch a number of one datatype to that of another. After all, the integer 5 for example could also be written as the float 5.0. In the computer's memory, the 5 would be stored in binary 2's complement whereas the 5.0 would be stored in a totally different fashion (which we'll learn about in this lesson). We have seen that a number's datatype affects how arithmetic is performed (recall the strange division behavior in C? 5/2 = 2 but 5.0/2.0 = 1.5?) That's why it's necessary to know how to convert the datatype for example from an <code class="code-inline tex2jax_ignore">int</code> to a <code class="code-inline tex2jax_ignore">float</code> in C. This process is called <em class="alert">casting</em>.</p>
-<span class="incontext"><a href="floats.html#p-585" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<p><em class="alert">Casting</em> a float to an integer sets the data type for that stored <code class="code-inline tex2jax_ignore">float</code> as an <code class="code-inline tex2jax_ignore">int</code> now, which means that instead of using mantissa and exponent to store the number, the binary 2's complement is used. What happens if the original float had decimal places after the decimal point? Will they get lost? Will rounding occur? Try it out:</p>
+<span class="incontext"><a href="floats-float-to-int.html#p-585" class="internal">in-context</a></span>
 </body>
 </html>

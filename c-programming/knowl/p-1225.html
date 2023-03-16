@@ -11,11 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<ul class="disc">
-<li><p>Instead of having a function return a value to a variable outside the function, the function can return nothing (i.e. void function) and update the variable by dereferencing the pointer</p></li>
-<li><p>For example, <code class="code-inline tex2jax_ignore">*resultptr = z;</code> will update the value of the variable whose address is <code class="code-inline tex2jax_ignore">resultptr</code> with the value in <code class="code-inline tex2jax_ignore">z</code></p></li>
-</ul>
-<span class="incontext"><a href="pointers-example.html#p-1225" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<p>Given an array variable such as <code class="code-inline tex2jax_ignore">int myArray[6];</code> what exactly does the variable <code class="code-inline tex2jax_ignore">myArray</code> itself store (if we don't add in the brackets to refer to a specific element)? It turns out, <code class="code-inline tex2jax_ignore">myArray</code> holds the <em class="alert">address of the zeroth element of the array</em>! That is, <code class="code-inline tex2jax_ignore">myArray</code> is a pointer of type <em class="emphasis">int</em>. So:</p>
+<span class="incontext"><a href="pointers-arrays.html#p-1225" class="internal">in-context</a></span>
 </body>
 </html>
