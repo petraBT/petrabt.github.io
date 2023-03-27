@@ -1056,33 +1056,33 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="branching-operators"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Relational and Equality Operators</span>
 </h2>
-<div class="para" id="p-699">We have already learned about several operators for numbers:</div>
+<div class="para" id="p-711">We have already learned about several operators for numbers:</div>
 <ul class="disc">
-<li id="li-218"><div class="para" id="p-derived-li-218">  <code class="code-inline tex2jax_ignore">+</code>, <code class="code-inline tex2jax_ignore">-</code>, <code class="code-inline tex2jax_ignore">*</code> addition, subtraction, and multiplication (integers and floats)</div></li>
-<li id="li-219"><div class="para" id="p-derived-li-219">
+<li id="li-210"><div class="para" id="p-derived-li-210">  <code class="code-inline tex2jax_ignore">+</code>, <code class="code-inline tex2jax_ignore">-</code>, <code class="code-inline tex2jax_ignore">*</code> addition, subtraction, and multiplication (integers and floats)</div></li>
+<li id="li-211"><div class="para" id="p-derived-li-211">
 <code class="code-inline tex2jax_ignore">/</code> integer division for integers and floating point division for floats</div></li>
-<li id="li-220"><div class="para" id="p-derived-li-220">
+<li id="li-212"><div class="para" id="p-derived-li-212">
 <code class="code-inline tex2jax_ignore">%</code> remainder (modulus) of an integer division</div></li>
 </ul>
-<div class="para" id="p-700">Next, we'll learn about relational and equality operators that serve to compare the values of two quantities:</div>
+<div class="para" id="p-712">Next, we'll learn about relational and equality operators that serve to compare the values of two quantities:</div>
 <ul class="disc">
-<li id="li-221"><div class="para" id="p-derived-li-221"> <code class="code-inline tex2jax_ignore">&lt;</code>, <code class="code-inline tex2jax_ignore">&gt;</code> less than and greater than operators</div></li>
-<li id="li-222"><div class="para" id="p-derived-li-222">
+<li id="li-213"><div class="para" id="p-derived-li-213"> <code class="code-inline tex2jax_ignore">&lt;</code>, <code class="code-inline tex2jax_ignore">&gt;</code> less than and greater than operators</div></li>
+<li id="li-214"><div class="para" id="p-derived-li-214">
 <code class="code-inline tex2jax_ignore">&lt;=</code>, <code class="code-inline tex2jax_ignore">&gt;=</code> less than or equal to, greater than or equal to</div></li>
-<li id="li-223"><div class="para" id="p-derived-li-223">
+<li id="li-215"><div class="para" id="p-derived-li-215">
 <code class="code-inline tex2jax_ignore">!=</code> not equal to</div></li>
-<li id="li-224"><div class="para" id="p-derived-li-224"> <code class="code-inline tex2jax_ignore">==</code> equal to (note the double equal sign; the single equal sign <code class="code-inline tex2jax_ignore">=</code> has already been 'used up' for our assignment operator)</div></li>
+<li id="li-216"><div class="para" id="p-derived-li-216"> <code class="code-inline tex2jax_ignore">==</code> equal to (note the double equal sign; the single equal sign <code class="code-inline tex2jax_ignore">=</code> has already been 'used up' for our assignment operator)</div></li>
 </ul>
 <article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">9.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><div class="para" id="p-701">Which of the following variables would C interpret as "true"? For example, if each variable was placed in the following code's <code class="code-inline tex2jax_ignore">if</code> statement as "variable", would the program output "True" or "False"?</div> <ol class="decimal">
-<li id="li-225"><pre class="code-block tex2jax_ignore">int a = -1
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><div class="para" id="p-713">Which of the following variables would C interpret as "true"? For example, if each variable was placed in the following code's <code class="code-inline tex2jax_ignore">if</code> statement as "variable", would the program output "True" or "False"?</div> <ol class="decimal">
+<li id="li-217"><pre class="code-block tex2jax_ignore">int a = -1
 </pre></li>
-<li id="li-226"><pre class="code-block tex2jax_ignore">char b = 'b'
+<li id="li-218"><pre class="code-block tex2jax_ignore">char b = 'b'
 </pre></li>
-<li id="li-227"><pre class="code-block tex2jax_ignore">float c = 0.0
+<li id="li-219"><pre class="code-block tex2jax_ignore">float c = 0.0
 </pre></li>
-<li id="li-228"><pre class="code-block tex2jax_ignore">int d = 4000
+<li id="li-220"><pre class="code-block tex2jax_ignore">int d = 4000
 </pre></li>
 </ol> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (variable){
   printf("True")
@@ -1092,41 +1092,41 @@ else{
 }
 </code></pre></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="para" id="p-702">C will interpret the variables <code class="code-inline tex2jax_ignore">a</code>, <code class="code-inline tex2jax_ignore">b</code>, and <code class="code-inline tex2jax_ignore">d</code> as "True", and the variable <code class="code-inline tex2jax_ignore">c</code> as "False"</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para" id="p-703">In C, any nonzero integer or float is interpreted as true, as well as any character.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="para" id="p-714">C will interpret the variables <code class="code-inline tex2jax_ignore">a</code>, <code class="code-inline tex2jax_ignore">b</code>, and <code class="code-inline tex2jax_ignore">d</code> as "True", and the variable <code class="code-inline tex2jax_ignore">c</code> as "False"</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para" id="p-715">In C, any nonzero integer or float is interpreted as true, as well as any character.</div></div></div>
 </div></article></div>
-<div class="para" id="p-704">A true logical relation evaluates to 1, whereas a false relation evaluates to 0. Examples:</div>
+<div class="para" id="p-716">A true logical relation evaluates to 1, whereas a false relation evaluates to 0. Examples:</div>
 <ul class="disc">
-<li id="li-229"><div class="para" id="p-derived-li-229">Suppose x has the value 3.5. Then <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> evaluates to 1.</div></li>
-<li id="li-230"><div class="para" id="p-derived-li-230">Suppose next that x has the value 7. Then <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> evaluates to 0.</div></li>
-<li id="li-231"><div class="para" id="p-derived-li-231">
+<li id="li-221"><div class="para" id="p-derived-li-221">Suppose x has the value 3.5. Then <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> evaluates to 1.</div></li>
+<li id="li-222"><div class="para" id="p-derived-li-222">Suppose next that x has the value 7. Then <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> evaluates to 0.</div></li>
+<li id="li-223"><div class="para" id="p-derived-li-223">
 <code class="code-inline tex2jax_ignore">(age == 30)</code> evaluates to 1 if indeed age has the value 30, otherwise it evaluates to 0.</div></li>
 </ul>
-<div class="para" id="p-705">Note: Instead of <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> you could also write <code class="code-inline tex2jax_ignore">(5.0 &gt;= x)</code>, and instead of <code class="code-inline tex2jax_ignore">(age == 30)</code> you could just as well write <code class="code-inline tex2jax_ignore">(30 == age)</code>.</div>
+<div class="para" id="p-717">Note: Instead of <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> you could also write <code class="code-inline tex2jax_ignore">(5.0 &gt;= x)</code>, and instead of <code class="code-inline tex2jax_ignore">(age == 30)</code> you could just as well write <code class="code-inline tex2jax_ignore">(30 == age)</code>.</div>
 <article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h3 class="heading">
 <span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">9.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><div class="para" id="p-706">Does the following statement, which is comparing two characters, evaluate to <em class="emphasis">true</em> or <em class="emphasis">false</em>, according to C?</div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><div class="para" id="p-718">Does the following statement, which is comparing two characters, evaluate to <em class="emphasis">true</em> or <em class="emphasis">false</em>, according to C?</div>
 <pre class="code-block tex2jax_ignore">('A' &gt; 'a')
 </pre>
-<div class="para" id="p-707"></div>
+<div class="para" id="p-719"></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><div class="para" id="p-708">False</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="para" id="p-709">Recall that characters are really stored as their ASCII codes in memory. Therefore, when comparing characters, C really compares their ASCII codes. In this case, we have 'A'=65 and 'a'=97. Sure enough, 65 is not greater than 97, so the above statement evaluates to <em class="emphasis">false</em>.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><div class="para" id="p-720">False</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="para" id="p-721">Recall that characters are really stored as their ASCII codes in memory. Therefore, when comparing characters, C really compares their ASCII codes. In this case, we have 'A'=65 and 'a'=97. Sure enough, 65 is not greater than 97, so the above statement evaluates to <em class="emphasis">false</em>.</div></div></div>
 </div></article></div>
-<div class="para" id="p-710">Let's look at an example.</div>
+<div class="para" id="p-722">Let's look at an example.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1512413350447" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1512413350447" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-19"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-711"><ul class="disc">
-<li id="li-232"><div class="para" id="p-derived-li-232">Logic expressions resulting from comparing variable values</div></li>
-<li id="li-233"><div class="para" id="p-derived-li-233">Producing true/false relations</div></li>
-<li id="li-234"><div class="para" id="p-derived-li-234">Using <code class="code-inline tex2jax_ignore">if-else</code> based on true/false values of logic statements</div></li>
-<li id="li-235"><div class="para" id="p-derived-li-235">Example: an <code class="code-inline tex2jax_ignore">if</code> statement can include a logic statement such as <code class="code-inline tex2jax_ignore">(x&gt;5)</code>, and it will then execute code if this logic statement evaluates to true</div></li>
+<div class="para logical" id="p-723"><ul class="disc">
+<li id="li-224"><div class="para" id="p-derived-li-224">Logic expressions resulting from comparing variable values</div></li>
+<li id="li-225"><div class="para" id="p-derived-li-225">Producing true/false relations</div></li>
+<li id="li-226"><div class="para" id="p-derived-li-226">Using <code class="code-inline tex2jax_ignore">if-else</code> based on true/false values of logic statements</div></li>
+<li id="li-227"><div class="para" id="p-derived-li-227">Example: an <code class="code-inline tex2jax_ignore">if</code> statement can include a logic statement such as <code class="code-inline tex2jax_ignore">(x&gt;5)</code>, and it will then execute code if this logic statement evaluates to true</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-20"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-branching-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-712">You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.</div> <div class="para" id="p-713">Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGbranching4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGbranching4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGbranching4.c" frameborder="0" width="100%" height="300"></iframe> <div class="para" id="p-714"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></div></article></section></section></div>
+<div class="para" id="p-724">You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.</div> <div class="para" id="p-725">Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGbranching4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGbranching4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGbranching4.c" frameborder="0" width="100%" height="300"></iframe> <div class="para" id="p-726"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="branching-if-else.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="branching-if-else-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

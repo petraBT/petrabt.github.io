@@ -1056,24 +1056,24 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="malloc-free"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">21.2</span> <span class="title"><code class="code-inline tex2jax_ignore">free()</code> - Releasing Dynamically Allocated Memory</span>
 </h2>
-<div class="para" id="p-1395">Recall that memory reserved dynamically via <code class="code-inline tex2jax_ignore">malloc()</code> is completely your responsibility. Therefore, when you are done using the memory it is your job to tell the computer that you no longer need it and thus make available this memory for other purposes. The process of releasing memory is called freeing and we will now learn how to release, or <em class="alert">free</em>, memory that has been reserved via malloc() in the heap. The function to do so is called <code class="code-inline tex2jax_ignore">free()</code> and it takes as an argument a pointer to the memory block that you'd like to release.</div>
-<div class="para" id="p-1396">The prototype for <code class="code-inline tex2jax_ignore">free()</code> is</div>
+<div class="para" id="p-1407">Recall that memory reserved dynamically via <code class="code-inline tex2jax_ignore">malloc()</code> is completely your responsibility. Therefore, when you are done using the memory it is your job to tell the computer that you no longer need it and thus make available this memory for other purposes. The process of releasing memory is called freeing and we will now learn how to release, or <em class="alert">free</em>, memory that has been reserved via malloc() in the heap. The function to do so is called <code class="code-inline tex2jax_ignore">free()</code> and it takes as an argument a pointer to the memory block that you'd like to release.</div>
+<div class="para" id="p-1408">The prototype for <code class="code-inline tex2jax_ignore">free()</code> is</div>
 <pre class="code-block tex2jax_ignore">void free(void *ptr);
 </pre>
-<div class="para" id="p-1397">The <code class="code-inline tex2jax_ignore">free()</code> function also is a part of the standard library <code class="code-inline tex2jax_ignore">&lt;stdlib.h&gt;</code> and you therefore need to</div>
+<div class="para" id="p-1409">The <code class="code-inline tex2jax_ignore">free()</code> function also is a part of the standard library <code class="code-inline tex2jax_ignore">&lt;stdlib.h&gt;</code> and you therefore need to</div>
 <pre class="code-block tex2jax_ignore">#include &lt;stdlib.h&gt;
 </pre>
-<div class="para" id="p-1398">(which you probably already did for the use of <code class="code-inline tex2jax_ignore">malloc()</code>.) The following video demonstrates the use of the <code class="code-inline tex2jax_ignore">free()</code> function.</div>
+<div class="para" id="p-1410">(which you probably already did for the use of <code class="code-inline tex2jax_ignore">malloc()</code>.) The following video demonstrates the use of the <code class="code-inline tex2jax_ignore">free()</code> function.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1522245743723" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1522245743723" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-51"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1399"><ul class="disc">
-<li id="li-693"><div class="para" id="p-derived-li-693">If memory has been reserved using <code class="code-inline tex2jax_ignore">malloc()</code>, it must be freed using <code class="code-inline tex2jax_ignore">free()</code> after it is no longer needed</div></li>
-<li id="li-694"><div class="para" id="p-derived-li-694">NEW SYNTAX: <code class="code-inline tex2jax_ignore">free(ptr)</code> frees the memory reserved at the pointer "ptr"</div></li>
+<div class="para logical" id="p-1411"><ul class="disc">
+<li id="li-685"><div class="para" id="p-derived-li-685">If memory has been reserved using <code class="code-inline tex2jax_ignore">malloc()</code>, it must be freed using <code class="code-inline tex2jax_ignore">free()</code> after it is no longer needed</div></li>
+<li id="li-686"><div class="para" id="p-derived-li-686">NEW SYNTAX: <code class="code-inline tex2jax_ignore">free(ptr)</code> frees the memory reserved at the pointer "ptr"</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-51"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-malloc-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1400">Given the following code:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+<div class="para" id="p-1412">Given the following code:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 int main(void) {
   int *a, *b;
@@ -1089,16 +1089,16 @@ int main(void) {
   free(c);
   return 0;
 }
-</code></pre></div> <div class="para" id="p-1401">What would the line</div>
+</code></pre></div> <div class="para" id="p-1413">What would the line</div>
 <pre class="code-block tex2jax_ignore">printf("a = %d, b = %d, c = %f\n", *a, *b, *c);
 </pre>
-<div class="para" id="p-1402">print to the screen if placed right before the <code class="code-inline tex2jax_ignore">return 0;</code> line?</div> <ol class="lower-alpha">
-<li id="li-695"><div class="para" id="p-derived-li-695">a = 2, b = 3, c = 0.5</div></li>
-<li id="li-696"><div class="para" id="p-derived-li-696">a = 1, b = 2, c = 3.5</div></li>
-<li id="li-697"><div class="para" id="p-derived-li-697">a = 2, b = 2, c = 3.5</div></li>
-<li id="li-698"><div class="para" id="p-derived-li-698">a = 2, b = 3, c = 3.5</div></li>
-<li id="li-699"><div class="para" id="p-derived-li-699">The result is unpredictable and may be different from one system to the next.</div></li>
-</ol> <div class="para" id="p-1403"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
+<div class="para" id="p-1414">print to the screen if placed right before the <code class="code-inline tex2jax_ignore">return 0;</code> line?</div> <ol class="lower-alpha">
+<li id="li-687"><div class="para" id="p-derived-li-687">a = 2, b = 3, c = 0.5</div></li>
+<li id="li-688"><div class="para" id="p-derived-li-688">a = 1, b = 2, c = 3.5</div></li>
+<li id="li-689"><div class="para" id="p-derived-li-689">a = 2, b = 2, c = 3.5</div></li>
+<li id="li-690"><div class="para" id="p-derived-li-690">a = 2, b = 3, c = 3.5</div></li>
+<li id="li-691"><div class="para" id="p-derived-li-691">The result is unpredictable and may be different from one system to the next.</div></li>
+</ol> <div class="para" id="p-1415"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="malloc-intro.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="malloc-array.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

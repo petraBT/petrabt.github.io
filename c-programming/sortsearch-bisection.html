@@ -1056,29 +1056,29 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sortsearch-bisection"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">22.2</span> <span class="title">Bisection Search</span>
 </h2>
-<div class="para" id="p-1446">As you have seen, <em class="alert">Linear Search</em> (also called sequential search) is a very simple algorithm, for which the data to be searched can be in any order. But… the algorithm is not very efficient. Imagine looking for a name in a phone book that hasn't been sorted alphabetically…</div>
-<div class="para" id="p-1447">If your data is sorted, then there is a much more efficient algorithm called <em class="alert">Bisection Search</em> that you can use to look for an item in your list.</div>
+<div class="para" id="p-1458">As you have seen, <em class="alert">Linear Search</em> (also called sequential search) is a very simple algorithm, for which the data to be searched can be in any order. But… the algorithm is not very efficient. Imagine looking for a name in a phone book that hasn't been sorted alphabetically…</div>
+<div class="para" id="p-1459">If your data is sorted, then there is a much more efficient algorithm called <em class="alert">Bisection Search</em> that you can use to look for an item in your list.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518610736869" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518610736869" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-54"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1448"><ul class="disc">
-<li id="li-732"><div class="para" id="p-derived-li-732">Requires that the list is in sorted order</div></li>
-<li id="li-733"><div class="para" id="p-derived-li-733">Splits list in half, compares which half the element will be in</div></li>
-<li id="li-734"><div class="para" id="p-derived-li-734">Continues to halve the list until the item is found</div></li>
+<div class="para logical" id="p-1460"><ul class="disc">
+<li id="li-724"><div class="para" id="p-derived-li-724">Requires that the list is in sorted order</div></li>
+<li id="li-725"><div class="para" id="p-derived-li-725">Splits list in half, compares which half the element will be in</div></li>
+<li id="li-726"><div class="para" id="p-derived-li-726">Continues to halve the list until the item is found</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-54"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-sortsearch-5"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1449">Which of the following is the correct sequence of instructions to swap the values of two variables a and b (you may use an additional variable c if you wish)?</div> <div class="para" id="p-1450"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_sorting1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_sorting1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<div class="para" id="p-1461">Which of the following is the correct sequence of instructions to swap the values of two variables a and b (you may use an additional variable c if you wish)?</div> <div class="para" id="p-1462"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_sorting1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_sorting1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_sorting1.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
-<li id="li-735"><pre class="code-block tex2jax_ignore">a=b; b=c; c=a;
+<li id="li-727"><pre class="code-block tex2jax_ignore">a=b; b=c; c=a;
 </pre></li>
-<li id="li-736"><pre class="code-block tex2jax_ignore">c=b; a=c; b=a;
+<li id="li-728"><pre class="code-block tex2jax_ignore">c=b; a=c; b=a;
 </pre></li>
-<li id="li-737"><pre class="code-block tex2jax_ignore">c=a; a=b; b=c;
+<li id="li-729"><pre class="code-block tex2jax_ignore">c=a; a=b; b=c;
 </pre></li>
-<li id="li-738"><pre class="code-block tex2jax_ignore">a=b; b=a;
+<li id="li-730"><pre class="code-block tex2jax_ignore">a=b; b=a;
 </pre></li>
-</ol> <div class="para" id="p-1451"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+</ol> <div class="para" id="p-1463"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sortsearch-linear.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sortsearch-linear-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

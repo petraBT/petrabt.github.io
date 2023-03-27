@@ -1056,62 +1056,62 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="array-integer"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">17.1</span> <span class="title">Arrays of Integers</span>
 </h2>
-<div class="para" id="p-1122">Up to this point we have been using <em class="emphasis">singular data types,</em> such as</div>
+<div class="para" id="p-1134">Up to this point we have been using <em class="emphasis">singular data types,</em> such as</div>
 <pre class="code-block tex2jax_ignore">int i, j, k;
 </pre>
 <pre class="code-block tex2jax_ignore">float x, y, z;
 </pre>
 <pre class="code-block tex2jax_ignore">double u, v, w;
 </pre>
-<div class="para" id="p-1123">Often situations arise in which it is more natural to store a <em class="alert">collection of values</em> together in a <em class="emphasis"><em class="alert">single variable</em></em>.</div>
-<div class="para" id="p-1124">We will first focus on storing integers in an array. For example, we may wish to store all students' grades on an exam or the coordinates for an object or the values of a function at regular intervals, etc.</div>
-<div class="para" id="p-1125">An <em class="alert">array</em> (think of a collection of data items of the <em class="alert">same type</em>) is just what we need to accomplish this efficiently.</div>
+<div class="para" id="p-1135">Often situations arise in which it is more natural to store a <em class="alert">collection of values</em> together in a <em class="emphasis"><em class="alert">single variable</em></em>.</div>
+<div class="para" id="p-1136">We will first focus on storing integers in an array. For example, we may wish to store all students' grades on an exam or the coordinates for an object or the values of a function at regular intervals, etc.</div>
+<div class="para" id="p-1137">An <em class="alert">array</em> (think of a collection of data items of the <em class="alert">same type</em>) is just what we need to accomplish this efficiently.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518460628953" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518460628953" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-38"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1126"><ul class="disc">
-<li id="li-539"><div class="para" id="p-derived-li-539">Declaring arrays of integers</div></li>
-<li id="li-540"><div class="para" id="p-derived-li-540">Assigning values to arrays</div></li>
-<li id="li-541"><div class="para" id="p-derived-li-541">NEW SYNTAX: <code class="code-inline tex2jax_ignore">int array[3];</code> creates a variable named array and reserves space to hold three integers</div></li>
-<li id="li-542"><div class="para" id="p-derived-li-542">NEW SYNTAX: <code class="code-inline tex2jax_ignore">array[0] = 16;</code> initializes the first entry in the array with the value "16"</div></li>
-<li id="li-543"><div class="para" id="p-derived-li-543">Arrays in C are zero-based</div></li>
+<div class="para logical" id="p-1138"><ul class="disc">
+<li id="li-531"><div class="para" id="p-derived-li-531">Declaring arrays of integers</div></li>
+<li id="li-532"><div class="para" id="p-derived-li-532">Assigning values to arrays</div></li>
+<li id="li-533"><div class="para" id="p-derived-li-533">NEW SYNTAX: <code class="code-inline tex2jax_ignore">int array[3];</code> creates a variable named array and reserves space to hold three integers</div></li>
+<li id="li-534"><div class="para" id="p-derived-li-534">NEW SYNTAX: <code class="code-inline tex2jax_ignore">array[0] = 16;</code> initializes the first entry in the array with the value "16"</div></li>
+<li id="li-535"><div class="para" id="p-derived-li-535">Arrays in C are zero-based</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-40"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-array-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1127">How much space is reserved with the following declaration:</div>
+<div class="para" id="p-1139">How much space is reserved with the following declaration:</div>
 <pre class="code-block tex2jax_ignore">int numbers[10];
 </pre>
 <ol class="lower-alpha">
-<li id="li-544"><div class="para" id="p-derived-li-544">space for 10 integers</div></li>
-<li id="li-545"><div class="para" id="p-derived-li-545">space for 1 integer</div></li>
-<li id="li-546"><div class="para" id="p-derived-li-546">space for 9 integers</div></li>
-<li id="li-547"><div class="para" id="p-derived-li-547">space for 11 integers</div></li>
-<li id="li-548"><div class="para" id="p-derived-li-548">space for 12 integers</div></li>
-</ol> <div class="para" id="p-1128"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section><div class="para" id="p-1129">Now that we know how to create these arrays, how do we actually use them?</div>
-<div class="para" id="p-1130"> </div>
+<li id="li-536"><div class="para" id="p-derived-li-536">space for 10 integers</div></li>
+<li id="li-537"><div class="para" id="p-derived-li-537">space for 1 integer</div></li>
+<li id="li-538"><div class="para" id="p-derived-li-538">space for 9 integers</div></li>
+<li id="li-539"><div class="para" id="p-derived-li-539">space for 11 integers</div></li>
+<li id="li-540"><div class="para" id="p-derived-li-540">space for 12 integers</div></li>
+</ol> <div class="para" id="p-1140"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section><div class="para" id="p-1141">Now that we know how to create these arrays, how do we actually use them?</div>
+<div class="para" id="p-1142"> </div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521653766713" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521653766713" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-39"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1131">
+<div class="para logical" id="p-1143">
 <ul class="disc">
-<li id="li-549"><div class="para" id="p-derived-li-549">Arrays and <code class="code-inline tex2jax_ignore">for</code>-loops</div></li>
-<li id="li-550"><div class="para" id="p-derived-li-550">Reading values from the user input into an array</div></li>
-<li id="li-551"><div class="para" id="p-derived-li-551">NEW SYNTAX: you can fill the array using a <code class="code-inline tex2jax_ignore">for</code>-loop, where you use the following line to fill each array element</div></li>
+<li id="li-541"><div class="para" id="p-derived-li-541">Arrays and <code class="code-inline tex2jax_ignore">for</code>-loops</div></li>
+<li id="li-542"><div class="para" id="p-derived-li-542">Reading values from the user input into an array</div></li>
+<li id="li-543"><div class="para" id="p-derived-li-543">NEW SYNTAX: you can fill the array using a <code class="code-inline tex2jax_ignore">for</code>-loop, where you use the following line to fill each array element</div></li>
 </ul>
 <div class="para"><code class="code-inline tex2jax_ignore">scanf("%d", &amp;array[i]);</code></div>
 </div></aside><section class="reading-questions" id="reading-questions-41"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-array-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1132">After the declaration</div>
+<div class="para" id="p-1144">After the declaration</div>
 <pre class="code-block tex2jax_ignore">int num[50];
 </pre>
-<div class="para" id="p-1133">what is the value of <code class="code-inline tex2jax_ignore">num[5]</code>?</div> <ol class="lower-alpha">
-<li id="li-552"><div class="para" id="p-derived-li-552">6</div></li>
-<li id="li-553"><div class="para" id="p-derived-li-553">random</div></li>
-<li id="li-554"><div class="para" id="p-derived-li-554">0</div></li>
-<li id="li-555"><div class="para" id="p-derived-li-555">4</div></li>
-<li id="li-556"><div class="para" id="p-derived-li-556">5</div></li>
-</ol> <div class="para" id="p-1134"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
+<div class="para" id="p-1145">what is the value of <code class="code-inline tex2jax_ignore">num[5]</code>?</div> <ol class="lower-alpha">
+<li id="li-544"><div class="para" id="p-derived-li-544">6</div></li>
+<li id="li-545"><div class="para" id="p-derived-li-545">random</div></li>
+<li id="li-546"><div class="para" id="p-derived-li-546">0</div></li>
+<li id="li-547"><div class="para" id="p-derived-li-547">4</div></li>
+<li id="li-548"><div class="para" id="p-derived-li-548">5</div></li>
+</ol> <div class="para" id="p-1146"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="array.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="array-other.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

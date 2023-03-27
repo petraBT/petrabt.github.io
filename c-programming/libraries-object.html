@@ -1056,11 +1056,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="libraries-object"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">28.5</span> <span class="title">Making Our Own Library - Object File</span>
 </h2>
-<div class="para" id="p-1750">One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</div>
-<div class="para" id="p-1751">The library then consists of both the header file and the object file. In our example, this would be</div>
+<div class="para" id="p-1762">One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</div>
+<div class="para" id="p-1763">The library then consists of both the header file and the object file. In our example, this would be</div>
 <pre class="code-block tex2jax_ignore">arbitraryintegers.h arbitraryintegers.o
 </pre>
-<div class="para" id="p-1752">We can now use this library in other programs:</div>
+<div class="para" id="p-1764">We can now use this library in other programs:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 #include "arbitraryintegers.h"
 
@@ -1071,7 +1071,7 @@ int main(void) {
   . . . 
 }
 </code></pre></div>
-<div class="para" id="p-1753">Note the use of <code class="code-inline tex2jax_ignore">" "</code> for user-defined libraries instead of <code class="code-inline tex2jax_ignore">&lt; &gt;</code>, which is reserved for built-in libraries.</div></section></div>
+<div class="para" id="p-1765">Note the use of <code class="code-inline tex2jax_ignore">" "</code> for user-defined libraries instead of <code class="code-inline tex2jax_ignore">&lt; &gt;</code>, which is reserved for built-in libraries.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="libraries-source.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="libraries-complex.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

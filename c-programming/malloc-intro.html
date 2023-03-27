@@ -1056,43 +1056,43 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="malloc-intro"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">21.1</span> <span class="title"><code class="code-inline tex2jax_ignore">malloc()</code> - Dynamically Allocating Memory</span>
 </h2>
-<div class="para" id="p-1385">
+<div class="para" id="p-1397">
 <em class="alert">Dynamic memory allocation</em> happens at runtime: depending on your needs you can ask for memory, which is then reserved in the so-called <em class="alert">heap</em> (as opposed to the <em class="alert">stack</em>, where your 'normal' variables are stored).</div>
-<div class="para" id="p-1386">This can be useful, for example, when you need an array to store data but you don't know until runtime how large this array needs to be.</div>
-<div class="para" id="p-1387">Recall that memory in the stack is managed for you. The heap is a bit different. Unlike variables in the stack (which only persist for the duration of the function in which they are declared), memory allocated dynamically remains reserved for you until you explicitly <em class="alert">free</em> this reservation.</div>
-<div class="para" id="p-1388">The C-command to ask for (allocate) memory in the heap is called <code class="code-inline tex2jax_ignore">malloc()</code>. This function takes as an argument the amount of space you wish to reserve (in bytes), attempts to find that amount of space in the heap and then returns a pointer to the start of the reserved block of memory. The return data type of the <code class="code-inline tex2jax_ignore">malloc()</code> function is a <code class="code-inline tex2jax_ignore">void *</code> and it is your job to <em class="alert">cast</em> this void pointer to the type of pointer (<code class="code-inline tex2jax_ignore">int *</code>, <code class="code-inline tex2jax_ignore">float *</code>, etc.) that fits your needs.</div>
-<div class="para" id="p-1389">The prototype for <code class="code-inline tex2jax_ignore">malloc()</code> is thus</div>
+<div class="para" id="p-1398">This can be useful, for example, when you need an array to store data but you don't know until runtime how large this array needs to be.</div>
+<div class="para" id="p-1399">Recall that memory in the stack is managed for you. The heap is a bit different. Unlike variables in the stack (which only persist for the duration of the function in which they are declared), memory allocated dynamically remains reserved for you until you explicitly <em class="alert">free</em> this reservation.</div>
+<div class="para" id="p-1400">The C-command to ask for (allocate) memory in the heap is called <code class="code-inline tex2jax_ignore">malloc()</code>. This function takes as an argument the amount of space you wish to reserve (in bytes), attempts to find that amount of space in the heap and then returns a pointer to the start of the reserved block of memory. The return data type of the <code class="code-inline tex2jax_ignore">malloc()</code> function is a <code class="code-inline tex2jax_ignore">void *</code> and it is your job to <em class="alert">cast</em> this void pointer to the type of pointer (<code class="code-inline tex2jax_ignore">int *</code>, <code class="code-inline tex2jax_ignore">float *</code>, etc.) that fits your needs.</div>
+<div class="para" id="p-1401">The prototype for <code class="code-inline tex2jax_ignore">malloc()</code> is thus</div>
 <pre class="code-block tex2jax_ignore">void * mallow(int numb_bytes);
 </pre>
-<div class="para" id="p-1390">The <code class="code-inline tex2jax_ignore">malloc()</code> function can be found in the standard library <code class="code-inline tex2jax_ignore">&lt;stdlib.h&gt;</code>. You therefore need to</div>
+<div class="para" id="p-1402">The <code class="code-inline tex2jax_ignore">malloc()</code> function can be found in the standard library <code class="code-inline tex2jax_ignore">&lt;stdlib.h&gt;</code>. You therefore need to</div>
 <pre class="code-block tex2jax_ignore">#include &lt;std lib.h&gt;
 </pre>
-<div class="para" id="p-1391">in order to use the function. The following video demonstrates the use of <code class="code-inline tex2jax_ignore">malloc()</code>.</div>
+<div class="para" id="p-1403">in order to use the function. The following video demonstrates the use of <code class="code-inline tex2jax_ignore">malloc()</code>.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519588708670" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519588708670" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-50"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1392">
+<div class="para logical" id="p-1404">
 <ul class="disc">
-<li id="li-686"><div class="para" id="p-derived-li-686">
+<li id="li-678"><div class="para" id="p-derived-li-678">
 <code class="code-inline tex2jax_ignore">malloc()</code> blocks off a given section of a memory for a variable and returns a <code class="code-inline tex2jax_ignore">void *</code> to that memory</div></li>
-<li id="li-687"><div class="para" id="p-derived-li-687">NEW SYNTAX: the following line reserves memory for one <code class="code-inline tex2jax_ignore">int</code> and returns the pointer to that memory (which can then be dereferenced)</div></li>
+<li id="li-679"><div class="para" id="p-derived-li-679">NEW SYNTAX: the following line reserves memory for one <code class="code-inline tex2jax_ignore">int</code> and returns the pointer to that memory (which can then be dereferenced)</div></li>
 </ul>
 <div class="para">intptr = (int *) malloc(sizeof(int));</div>
 </div></aside><section class="reading-questions" id="reading-questions-50"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-malloc-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1393">Suppose you wanted to reserve space in memory for one number of type float and then store the memory location in a variable numptr of type <code class="code-inline tex2jax_ignore">float *</code>. Which of the following would be the correct way to do so?</div> <ol class="lower-alpha">
-<li id="li-688"><pre class="code-block tex2jax_ignore">numptr = (float *) malloc(sizeof(float));
+<div class="para" id="p-1405">Suppose you wanted to reserve space in memory for one number of type float and then store the memory location in a variable numptr of type <code class="code-inline tex2jax_ignore">float *</code>. Which of the following would be the correct way to do so?</div> <ol class="lower-alpha">
+<li id="li-680"><pre class="code-block tex2jax_ignore">numptr = (float *) malloc(sizeof(float));
 </pre></li>
-<li id="li-689"><pre class="code-block tex2jax_ignore">numptr = malloc(float *);
+<li id="li-681"><pre class="code-block tex2jax_ignore">numptr = malloc(float *);
 </pre></li>
-<li id="li-690"><pre class="code-block tex2jax_ignore">numptr = (float) malloc(sizeof(float *));
+<li id="li-682"><pre class="code-block tex2jax_ignore">numptr = (float) malloc(sizeof(float *));
 </pre></li>
-<li id="li-691"><pre class="code-block tex2jax_ignore">(float *) numptr = malloc (float);
+<li id="li-683"><pre class="code-block tex2jax_ignore">(float *) numptr = malloc (float);
 </pre></li>
-<li id="li-692"><pre class="code-block tex2jax_ignore">numptr = (float *) malloc(sizeof(num));
+<li id="li-684"><pre class="code-block tex2jax_ignore">numptr = (float *) malloc(sizeof(num));
 </pre></li>
-</ol> <div class="para" id="p-1394"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
+</ol> <div class="para" id="p-1406"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="malloc.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="malloc-free.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

@@ -1056,56 +1056,56 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="debug-conditional"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">16.3</span> <span class="title">Conditional Compilation</span>
 </h2>
-<div class="para" id="p-1086">
+<div class="para" id="p-1098">
 <code class="code-inline tex2jax_ignore">printf()</code> statements are a <em class="alert">quick and easy</em> way to trace the path of execution of a program.</div>
-<div class="para" id="p-1087">But...</div>
-<div class="para" id="p-1088">It <em class="alert">can be tedious</em> to insert and delete <code class="code-inline tex2jax_ignore">printf</code> statements when code is being debugged. (After all, we don't want debug statements flashing by all the time.)</div>
-<div class="para" id="p-1089">Of course you can <em class="alert">comment out</em> <code class="code-inline tex2jax_ignore">(/*   */)</code> the <code class="code-inline tex2jax_ignore">printf()</code> statements after code is debugged. But it can still be a bit tedious (yet, it's my preferred method...).</div>
-<div class="para" id="p-1090">There is another way however:</div>
-<div class="para" id="p-1091">You can <em class="alert">conditionally include</em> debugging lines (such as <code class="code-inline tex2jax_ignore">printf()</code> statements) by instructing the preprocessor to either include them or to not do so. Any line that starts with a hash mark (<code class="code-inline tex2jax_ignore">#</code>) is meant for and interpreted by the preprocessor. In fact, we have already seen the preprocessor at work with our <code class="code-inline tex2jax_ignore">#include</code> statements! Therefore, when using preprocessor directives to conditionally include debug statements then it is the preprocessor that does the work!</div>
+<div class="para" id="p-1099">But...</div>
+<div class="para" id="p-1100">It <em class="alert">can be tedious</em> to insert and delete <code class="code-inline tex2jax_ignore">printf</code> statements when code is being debugged. (After all, we don't want debug statements flashing by all the time.)</div>
+<div class="para" id="p-1101">Of course you can <em class="alert">comment out</em> <code class="code-inline tex2jax_ignore">(/*   */)</code> the <code class="code-inline tex2jax_ignore">printf()</code> statements after code is debugged. But it can still be a bit tedious (yet, it's my preferred method...).</div>
+<div class="para" id="p-1102">There is another way however:</div>
+<div class="para" id="p-1103">You can <em class="alert">conditionally include</em> debugging lines (such as <code class="code-inline tex2jax_ignore">printf()</code> statements) by instructing the preprocessor to either include them or to not do so. Any line that starts with a hash mark (<code class="code-inline tex2jax_ignore">#</code>) is meant for and interpreted by the preprocessor. In fact, we have already seen the preprocessor at work with our <code class="code-inline tex2jax_ignore">#include</code> statements! Therefore, when using preprocessor directives to conditionally include debug statements then it is the preprocessor that does the work!</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513627597624" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513627597624" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-36"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1092"><ul class="disc">
-<li id="li-502"><div class="para" id="p-derived-li-502">Using preprocessor directives, determine whether your debugging <code class="code-inline tex2jax_ignore">printf()</code> statements will be included in your compiled code or not</div></li>
-<li id="li-503"><div class="para" id="p-derived-li-503">For example, <code class="code-inline tex2jax_ignore">#ifdef DEBUG</code> followed by a <code class="code-inline tex2jax_ignore">printf()</code> will include that <code class="code-inline tex2jax_ignore">printf()</code> statement only if you <code class="code-inline tex2jax_ignore">#define DEBUG</code> at the top of the code</div></li>
-</ul></div></aside><div class="para" id="p-1093"> </div>
+<div class="para logical" id="p-1104"><ul class="disc">
+<li id="li-494"><div class="para" id="p-derived-li-494">Using preprocessor directives, determine whether your debugging <code class="code-inline tex2jax_ignore">printf()</code> statements will be included in your compiled code or not</div></li>
+<li id="li-495"><div class="para" id="p-derived-li-495">For example, <code class="code-inline tex2jax_ignore">#ifdef DEBUG</code> followed by a <code class="code-inline tex2jax_ignore">printf()</code> will include that <code class="code-inline tex2jax_ignore">printf()</code> statement only if you <code class="code-inline tex2jax_ignore">#define DEBUG</code> at the top of the code</div></li>
+</ul></div></aside><div class="para" id="p-1105"> </div>
 <ul class="disc">
-<li id="li-504"><div class="para" id="p-derived-li-504">
+<li id="li-496"><div class="para" id="p-derived-li-496">
 <code class="code-inline tex2jax_ignore">#if</code> (condition)</div></li>
-<li id="li-505"><div class="para" id="p-derived-li-505">
+<li id="li-497"><div class="para" id="p-derived-li-497">
 <code class="code-inline tex2jax_ignore">#ifdef</code> or <code class="code-inline tex2jax_ignore">#if defined</code>
 </div></li>
-<li id="li-506"><div class="para" id="p-derived-li-506">
+<li id="li-498"><div class="para" id="p-derived-li-498">
 <code class="code-inline tex2jax_ignore">#elif</code> (condition)</div></li>
-<li id="li-507"><div class="para" id="p-derived-li-507">
+<li id="li-499"><div class="para" id="p-derived-li-499">
 <code class="code-inline tex2jax_ignore">#else</code> (branch statement for preprocessor!)</div></li>
-<li id="li-508"><div class="para" id="p-derived-li-508"><code class="code-inline tex2jax_ignore">#endif</code></div></li>
+<li id="li-500"><div class="para" id="p-derived-li-500"><code class="code-inline tex2jax_ignore">#endif</code></div></li>
 </ul>
 <section class="reading-questions" id="reading-questions-38"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-debug-6"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1094">What is the output of the following code, once it has been compiled and run:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define DEBUG
+<div class="para" id="p-1106">What is the output of the following code, once it has been compiled and run:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define DEBUG
 . . . 
 #ifdef DEBUG printf("No idea what's wrong.");
 #else printf("All good!");
 #endif
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-509"><div class="para" id="p-derived-li-509">All good!</div></li>
-<li id="li-510"><div class="para" id="p-derived-li-510">No idea what's wrong. All good!</div></li>
-<li id="li-511"><div class="para" id="p-derived-li-511">No idea what's wrong.</div></li>
-</ol> <div class="para" id="p-1095"><em class="emphasis">Enter your choice (a/b/c):</em></div></article></section><div class="para" id="p-1096">You could even be fancier and allow for different levels of debugging:</div>
+<li id="li-501"><div class="para" id="p-derived-li-501">All good!</div></li>
+<li id="li-502"><div class="para" id="p-derived-li-502">No idea what's wrong. All good!</div></li>
+<li id="li-503"><div class="para" id="p-derived-li-503">No idea what's wrong.</div></li>
+</ol> <div class="para" id="p-1107"><em class="emphasis">Enter your choice (a/b/c):</em></div></article></section><div class="para" id="p-1108">You could even be fancier and allow for different levels of debugging:</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513628036113" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1513628036113" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-37"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1097"><ul class="disc">
-<li id="li-512"><div class="para" id="p-derived-li-512">Using preprocessor directives such as <code class="code-inline tex2jax_ignore">#define</code> to conditionally include <code class="code-inline tex2jax_ignore">printf()</code> debug statements in your compiled code</div></li>
-<li id="li-513"><div class="para" id="p-derived-li-513">Defining different levels of debugging to conditionally choose what aspects of the code to debug</div></li>
-<li id="li-514"><div class="para" id="p-derived-li-514">For example, <code class="code-inline tex2jax_ignore">#if (DEBUG &gt; 1)</code> will include the following statement only if you <code class="code-inline tex2jax_ignore">#define DEBUG</code> as a value greater than 1</div></li>
+<div class="para logical" id="p-1109"><ul class="disc">
+<li id="li-504"><div class="para" id="p-derived-li-504">Using preprocessor directives such as <code class="code-inline tex2jax_ignore">#define</code> to conditionally include <code class="code-inline tex2jax_ignore">printf()</code> debug statements in your compiled code</div></li>
+<li id="li-505"><div class="para" id="p-derived-li-505">Defining different levels of debugging to conditionally choose what aspects of the code to debug</div></li>
+<li id="li-506"><div class="para" id="p-derived-li-506">For example, <code class="code-inline tex2jax_ignore">#if (DEBUG &gt; 1)</code> will include the following statement only if you <code class="code-inline tex2jax_ignore">#define DEBUG</code> as a value greater than 1</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-39"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-debug-7"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1098">What is the output of the following code?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define DEBUG 1
+<div class="para" id="p-1110">What is the output of the following code?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define DEBUG 1
 #include &lt;stdio.h&gt;
 int main(void)
 {
@@ -1122,18 +1122,18 @@ int main(void)
   #endif
 }
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-515"><div class="para" id="p-derived-li-515">Huh...!</div></li>
-<li id="li-516"><div class="para" id="p-derived-li-516">Not too bad! huh...!</div></li>
-<li id="li-517"><div class="para" id="p-derived-li-517">Not too bad!</div></li>
-<li id="li-518"><div class="para" id="p-derived-li-518">It's sunny! Not too bad!</div></li>
-<li id="li-519"><div class="para" id="p-derived-li-519">It's a beautiful day!</div></li>
-<li id="li-520"><div class="para" id="p-derived-li-520">It's a beautiful day! It's sunny!</div></li>
-<li id="li-521"><div class="para" id="p-derived-li-521">It's sunny!</div></li>
-</ol> <div class="para" id="p-1099"><em class="emphasis">Enter your choice (a/b/c/d/e/f/g):</em></div></article><article class="exercise exercise-like" id="quiz-debug-8"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1100">Please correct the following loop, which is supposed to add up the numbers from 1 to n:</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGdebug4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug4.c" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1101"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></div></article><article class="exercise exercise-like" id="quiz-debug-9"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1102">Please correct the following loop, which is supposed to add up the numbers from 1 to n:</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGdebug5.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug5.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug5.c" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1103"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></div></article></section></section></div>
+<li id="li-507"><div class="para" id="p-derived-li-507">Huh...!</div></li>
+<li id="li-508"><div class="para" id="p-derived-li-508">Not too bad! huh...!</div></li>
+<li id="li-509"><div class="para" id="p-derived-li-509">Not too bad!</div></li>
+<li id="li-510"><div class="para" id="p-derived-li-510">It's sunny! Not too bad!</div></li>
+<li id="li-511"><div class="para" id="p-derived-li-511">It's a beautiful day!</div></li>
+<li id="li-512"><div class="para" id="p-derived-li-512">It's a beautiful day! It's sunny!</div></li>
+<li id="li-513"><div class="para" id="p-derived-li-513">It's sunny!</div></li>
+</ol> <div class="para" id="p-1111"><em class="emphasis">Enter your choice (a/b/c/d/e/f/g):</em></div></article><article class="exercise exercise-like" id="quiz-debug-8"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1112">Please correct the following loop, which is supposed to add up the numbers from 1 to n:</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGdebug4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug4.c" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1113"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></div></article><article class="exercise exercise-like" id="quiz-debug-9"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1114">Please correct the following loop, which is supposed to add up the numbers from 1 to n:</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGdebug5.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug5.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGdebug5.c" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1115"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="debug-code.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="debug-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

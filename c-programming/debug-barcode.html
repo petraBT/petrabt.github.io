@@ -1056,34 +1056,34 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="debug-barcode"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">16.6</span> <span class="title">Back to File I/O</span>
 </h2>
-<div class="para" id="p-1110">Here is our overarching goal:</div>
-<div class="para" id="p-1111">Write a barcode (UPC) checksum program: Read 12 digits of a barcode from a file. (The first digit indicates the type of product being identified, the next five identify the manufacturer, the next five identify the product, and the last digit (12th digit) is a check digit).</div>
-<div class="para" id="p-1112">Next, compute the proper check digit: Sum the first, third, fifth, seventh, ninth and eleventh digits, and multiply the result by 3. Next, sum the second, fourth, sixth, eighth, and tenth digits. Add this new sum to the first result. Finally, fin d the smallest number that needs to be added to this total to make it equal a multiple of 10. This number is the check digit.</div>
-<div class="para" id="p-1113">Print the computed check digit as well as the one read from file.</div>
-<div class="para" id="p-1114">Here is an example:</div>
+<div class="para" id="p-1122">Here is our overarching goal:</div>
+<div class="para" id="p-1123">Write a barcode (UPC) checksum program: Read 12 digits of a barcode from a file. (The first digit indicates the type of product being identified, the next five identify the manufacturer, the next five identify the product, and the last digit (12th digit) is a check digit).</div>
+<div class="para" id="p-1124">Next, compute the proper check digit: Sum the first, third, fifth, seventh, ninth and eleventh digits, and multiply the result by 3. Next, sum the second, fourth, sixth, eighth, and tenth digits. Add this new sum to the first result. Finally, fin d the smallest number that needs to be added to this total to make it equal a multiple of 10. This number is the check digit.</div>
+<div class="para" id="p-1125">Print the computed check digit as well as the one read from file.</div>
+<div class="para" id="p-1126">Here is an example:</div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/UPCAnatomy.jpg" class="contained" alt="Sample Barcode"></div>
 <article class="activity project-like" id="activity-72"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">16.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1115">
-<em class="alert">Your first task:</em> Check by hand if the calculated check digit equals the check digit in the image.</div> <div class="para" id="p-1116">Do the calculations agree with the barcode?</div> <ul class="disc">
-<li id="li-522"><div class="para" id="p-derived-li-522">Yes!</div></li>
-<li id="li-523"><div class="para" id="p-derived-li-523">No...</div></li>
-</ul> <div class="para" id="p-1117">Write a C program that reads 12 integers from the file <code class="code-inline tex2jax_ignore">sampleBarcode.txt</code>. Your program should perform the following tasks:</div> <ul class="disc">
-<li id="li-524"><div class="para" id="p-derived-li-524">print the barcode to the screen</div></li>
-<li id="li-525"><div class="para" id="p-derived-li-525">computes the check digit</div></li>
-<li id="li-526"><div class="para" id="p-derived-li-526">compares the computed check digit with the actual check digit</div></li>
-<li id="li-527"><div class="para" id="p-derived-li-527">print a message to the screen indicating whether the barcode was correctly read.</div></li>
-</ul> <div class="para" id="p-1118">The code window below contains a file <code class="code-inline tex2jax_ignore">"sampleBarcode.txt"</code>. If you'd rather work on the server then you need to create your own such file and fill it with 12 integers.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO9.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO9.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO9.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe> <div class="para" id="p-1119"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div></article><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
+<div class="para" id="p-1127">
+<em class="alert">Your first task:</em> Check by hand if the calculated check digit equals the check digit in the image.</div> <div class="para" id="p-1128">Do the calculations agree with the barcode?</div> <ul class="disc">
+<li id="li-514"><div class="para" id="p-derived-li-514">Yes!</div></li>
+<li id="li-515"><div class="para" id="p-derived-li-515">No...</div></li>
+</ul> <div class="para" id="p-1129">Write a C program that reads 12 integers from the file <code class="code-inline tex2jax_ignore">sampleBarcode.txt</code>. Your program should perform the following tasks:</div> <ul class="disc">
+<li id="li-516"><div class="para" id="p-derived-li-516">print the barcode to the screen</div></li>
+<li id="li-517"><div class="para" id="p-derived-li-517">computes the check digit</div></li>
+<li id="li-518"><div class="para" id="p-derived-li-518">compares the computed check digit with the actual check digit</div></li>
+<li id="li-519"><div class="para" id="p-derived-li-519">print a message to the screen indicating whether the barcode was correctly read.</div></li>
+</ul> <div class="para" id="p-1130">The code window below contains a file <code class="code-inline tex2jax_ignore">"sampleBarcode.txt"</code>. If you'd rather work on the server then you need to create your own such file and fill it with 12 integers.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO9.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO9.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO9.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe> <div class="para" id="p-1131"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div></article><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">16.6.1</span> <span class="title">Optional: Make it fancier!</span>
 </h3>
 <article class="activity project-like" id="activity-73"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">16.7</span><span class="period">.</span>
 </h4>
 <ol class="decimal">
-<li id="li-528"><div class="para" id="p-derived-li-528">In your previous program, build in a check as to whether the file from which you are reading exists.</div></li>
-<li id="li-529"><div class="para" id="p-derived-li-529">Write a C program that asks the user to enter a 12-digit barcode and that saves this barcode in a file (you may choose the filename). Note that you'll have to write this program <em class="alert">in your own editor and compile on the server</em> since we cannot write to files from code windows.</div></li>
+<li id="li-520"><div class="para" id="p-derived-li-520">In your previous program, build in a check as to whether the file from which you are reading exists.</div></li>
+<li id="li-521"><div class="para" id="p-derived-li-521">Write a C program that asks the user to enter a 12-digit barcode and that saves this barcode in a file (you may choose the filename). Note that you'll have to write this program <em class="alert">in your own editor and compile on the server</em> since we cannot write to files from code windows.</div></li>
 </ol></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="debug-test.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="debug-summary.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

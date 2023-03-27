@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Recall that memory reserved dynamically via <code class="code-inline tex2jax_ignore">malloc()</code> is completely your responsibility. Therefore, when you are done using the memory it is your job to tell the computer that you no longer need it and thus make available this memory for other purposes. The process of releasing memory is called freeing and we will now learn how to release, or <em class="alert">free</em>, memory that has been reserved via malloc() in the heap. The function to do so is called <code class="code-inline tex2jax_ignore">free()</code> and it takes as an argument a pointer to the memory block that you'd like to release.</div>
-<span class="incontext"><a href="malloc-free.html#p-1395" class="internal">in-context</a></span>
+<h2 class="heading"><span class="type">Paragraph</span></h2>
+<div class="para">Suppose you wanted to store prime numbers in an array so that you can quickly access them at a later time during the run of your program. Since there are infinitely many prime numbers it's a bit unclear how large an array you should declare in your code. Suppose you ask the user at the start of execution how many primes they wish to work with. It would then make sense to, at that time, declare an appropriately sized array. Our techniques so far do not allow us to do so. With our ANSI C compiler, the size of an array has to be known at compile-time and cannot be given at runtime. We'll now learn how to ask for memory at runtime.</div>
+<span class="incontext"><a href="malloc.html#p-1395" class="internal">in-context</a></span>
 </body>
 </html>

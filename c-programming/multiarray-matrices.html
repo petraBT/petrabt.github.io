@@ -1056,25 +1056,25 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="multiarray-matrices"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">24.2</span> <span class="title">Matrices</span>
 </h2>
-<div class="para" id="p-1516">Just like we can have a 2-dimensional array of characters (or array of strings), it is also possible to have multidimensional arrays of other datatypes. Here is an example of a 2-dimensional array of integers (also known as a matrix):</div>
+<div class="para" id="p-1528">Just like we can have a 2-dimensional array of characters (or array of strings), it is also possible to have multidimensional arrays of other datatypes. Here is an example of a 2-dimensional array of integers (also known as a matrix):</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int matrix[2][3];
 </code></pre></div>
-<div class="para" id="p-1517">This declares (reserves space for) a 2-dimensional array of integers by the name of matrix, which has 2 rows and 3 columns. More generally, the following code could be used to declare a 2-dimensional array of integers with <code class="code-inline tex2jax_ignore">NROWS</code> rows and <code class="code-inline tex2jax_ignore">NCOLS</code> columns:</div>
+<div class="para" id="p-1529">This declares (reserves space for) a 2-dimensional array of integers by the name of matrix, which has 2 rows and 3 columns. More generally, the following code could be used to declare a 2-dimensional array of integers with <code class="code-inline tex2jax_ignore">NROWS</code> rows and <code class="code-inline tex2jax_ignore">NCOLS</code> columns:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int numbers[NROWS][NCOLS];
 </code></pre></div>
-<div class="para" id="p-1518">This of course assumes that somewhere in your code you have told the computer what values <code class="code-inline tex2jax_ignore">NROWS</code> and <code class="code-inline tex2jax_ignore">NCOLS</code> take, for example via</div>
+<div class="para" id="p-1530">This of course assumes that somewhere in your code you have told the computer what values <code class="code-inline tex2jax_ignore">NROWS</code> and <code class="code-inline tex2jax_ignore">NCOLS</code> take, for example via</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define NROWS 3
 #define NCOLS 2
 </code></pre></div>
-<div class="para" id="p-1519">at the top of your code.</div>
-<div class="para" id="p-1520">The following video illustrates how to work with 2-dimensional arrays.</div>
+<div class="para" id="p-1531">at the top of your code.</div>
+<div class="para" id="p-1532">The following video illustrates how to work with 2-dimensional arrays.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519416840248" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519416840248" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-57"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1521">
+<div class="para logical" id="p-1533">
 <ul class="disc">
-<li id="li-760"><div class="para" id="p-derived-li-760">A two-dimensional array of integers is a matrix!</div></li>
-<li id="li-761"><div class="para" id="p-derived-li-761">When using <code class="code-inline tex2jax_ignore">scanf()</code> to allow the user to enter values into your array, don't forget about the <code class="code-inline tex2jax_ignore">&amp;</code>!</div></li>
-<li id="li-762"><div class="para" id="p-derived-li-762">NEW SYNTAX: the following line reads an integer from the user entry and stores it into the matrix element at location <span class="process-math">\((row,col)\)</span>
+<li id="li-752"><div class="para" id="p-derived-li-752">A two-dimensional array of integers is a matrix!</div></li>
+<li id="li-753"><div class="para" id="p-derived-li-753">When using <code class="code-inline tex2jax_ignore">scanf()</code> to allow the user to enter values into your array, don't forget about the <code class="code-inline tex2jax_ignore">&amp;</code>!</div></li>
+<li id="li-754"><div class="para" id="p-derived-li-754">NEW SYNTAX: the following line reads an integer from the user entry and stores it into the matrix element at location <span class="process-math">\((row,col)\)</span>
 </div></li>
 </ul>
 <div class="para">scanf("%d", &amp;matrix[row][col])</div>
@@ -1082,10 +1082,10 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-multiarray-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1522">Suppose that integers are stored using 4 bytes, and you are declaring a variable matrix using</div>
+<div class="para" id="p-1534">Suppose that integers are stored using 4 bytes, and you are declaring a variable matrix using</div>
 <pre class="code-block tex2jax_ignore">int matrix[7][9];
 </pre>
-<div class="para" id="p-1523">How much space (in bytes) is reserved in memory by this declaration? Please enter just a number, do not enter the word 'bytes'.</div></article></section></section></div>
+<div class="para" id="p-1535">How much space (in bytes) is reserved in memory by this declaration? Please enter just a number, do not enter the word 'bytes'.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="multiarray-strings.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="multiarray-initialize.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

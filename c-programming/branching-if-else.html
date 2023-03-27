@@ -1056,26 +1056,34 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="branching-if-else"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title"><code class="code-inline tex2jax_ignore">if - else</code> Statements</span>
 </h2>
-<div class="para" id="p-695"> Next, we'll see how to perform another action in case the condition is not met.</div>
+<div class="para" id="p-699"> Next, we'll see how to perform another action in case the condition is not met.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1512409742275" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1512409742275" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-18"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-696"><ul class="disc">
-<li id="li-211"><div class="para" id="p-derived-li-211">The <code class="code-inline tex2jax_ignore">if-else</code> statement is introduced</div></li>
-<li id="li-212"><div class="para" id="p-derived-li-212">If the condition for the <code class="code-inline tex2jax_ignore">if</code> statement is not met, then the code in the <code class="code-inline tex2jax_ignore">else</code> statement will be executed instead</div></li>
-<li id="li-213"><div class="para" id="p-derived-li-213">NEW SYNTAX: <code class="code-inline tex2jax_ignore">if (something is true)</code><code class="code-inline tex2jax_ignore">{do this};</code> <code class="code-inline tex2jax_ignore">else {do this};</code>
+<div class="para logical" id="p-700"><ul class="disc">
+<li id="li-207"><div class="para" id="p-derived-li-207">The <code class="code-inline tex2jax_ignore">if-else</code> statement is introduced</div></li>
+<li id="li-208"><div class="para" id="p-derived-li-208">If the condition for the <code class="code-inline tex2jax_ignore">if</code> statement is not met, then the code in the <code class="code-inline tex2jax_ignore">else</code> statement will be executed instead</div></li>
+<li id="li-209"><div class="para" id="p-derived-li-209">NEW SYNTAX: <code class="code-inline tex2jax_ignore">if (something is true)</code><code class="code-inline tex2jax_ignore">{do this};</code> <code class="code-inline tex2jax_ignore">else {do this};</code>
 </div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-19"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-branching-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-697">What is the output of the following piece of code, assuming that n is a variable of type int that has the value 1:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (n) printf("You win!");
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-branching-2" data-multipleanswers="false" data-random="">
+<div class="para" id="p-701">What is the output of the following piece of code, assuming that n is a variable of type int that has the value 1:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (n) printf("You win!");
 else printf("Ooops!");
-</code></pre></div> <ol class="lower-alpha">
-<li id="li-214"><div class="para" id="p-derived-li-214">You win!</div></li>
-<li id="li-215"><div class="para" id="p-derived-li-215">Ooops!</div></li>
-<li id="li-216"><div class="para" id="p-derived-li-216">You win! Ooops!</div></li>
-<li id="li-217"><div class="para" id="p-derived-li-217">This does not generate any output.</div></li>
-</ol> <div class="para" id="p-698"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+</code></pre></div>
+<li data-component="answer" id="quiz-branching-2_opt_a" data-correct=""><div class="para" id="p-702">You win!</div></li>
+<li data-component="feedback" id="quiz-branching-2_opt_a"><div class="para" id="p-703">Correct</div></li>
+<li data-component="answer" id="quiz-branching-2_opt_b"><div class="para" id="p-704">Ooops!</div></li>
+<li data-component="feedback" id="quiz-branching-2_opt_b"><div class="para" id="p-705">Not quite - try again!</div></li>
+<li data-component="answer" id="quiz-branching-2_opt_c"><div class="para" id="p-706">You win! Ooops!</div></li>
+<li data-component="feedback" id="quiz-branching-2_opt_c"><div class="para" id="p-707">Not quite - try again!</div></li>
+<li data-component="answer" id="quiz-branching-2_opt_d"><div class="para" id="p-708">This does not generate any output.</div></li>
+<li data-component="feedback" id="quiz-branching-2_opt_d"><div class="para" id="p-709">Not quite - try again!</div></li>
+</ul></div></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><div class="para" id="p-710">Watch out for little details such as the semicolon at the end of the statement or the parentheses surrounding the condition.</div></div></div>
+</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="branching-if.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="branching-operators.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

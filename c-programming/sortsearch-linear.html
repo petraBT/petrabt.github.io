@@ -1056,71 +1056,71 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sortsearch-linear"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">22.1</span> <span class="title">Linear Search</span>
 </h2>
-<div class="para" id="p-1432">There are many reasons for wanting to sort and/or search lists of data:</div>
+<div class="para" id="p-1444">There are many reasons for wanting to sort and/or search lists of data:</div>
 <ul class="disc">
-<li id="li-709"><div class="para" id="p-derived-li-709">Look for a student record in a list of records</div></li>
-<li id="li-710"><div class="para" id="p-derived-li-710">Print alphabetically sorted list of names</div></li>
-<li id="li-711"><div class="para" id="p-derived-li-711">Sort data values in ascending/descending order</div></li>
-<li id="li-712"><div class="para" id="p-derived-li-712">And many more!</div></li>
+<li id="li-701"><div class="para" id="p-derived-li-701">Look for a student record in a list of records</div></li>
+<li id="li-702"><div class="para" id="p-derived-li-702">Print alphabetically sorted list of names</div></li>
+<li id="li-703"><div class="para" id="p-derived-li-703">Sort data values in ascending/descending order</div></li>
+<li id="li-704"><div class="para" id="p-derived-li-704">And many more!</div></li>
 </ul>
-<div class="para" id="p-1433">We'll start by introducing a very simple algorithm, called <em class="alert">linear search</em>, to search for a specific item in a list of items.</div>
+<div class="para" id="p-1445">We'll start by introducing a very simple algorithm, called <em class="alert">linear search</em>, to search for a specific item in a list of items.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518608621712" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518608621712" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-53"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1434"><ul class="disc">
-<li id="li-713"><div class="para" id="p-derived-li-713">Linear search goes through an array element by element and checks if the element matches the search argument</div></li>
-<li id="li-714"><div class="para" id="p-derived-li-714">If the element is found, break the <code class="code-inline tex2jax_ignore">while</code> loop by using a flag variable to indicate something has been "found"</div></li>
+<div class="para logical" id="p-1446"><ul class="disc">
+<li id="li-705"><div class="para" id="p-derived-li-705">Linear search goes through an array element by element and checks if the element matches the search argument</div></li>
+<li id="li-706"><div class="para" id="p-derived-li-706">If the element is found, break the <code class="code-inline tex2jax_ignore">while</code> loop by using a flag variable to indicate something has been "found"</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-53"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-sortsearch-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1435">Quick review question: Which of the following is the correct way to declare and initialize a string?</div> <ol class="lower-alpha">
-<li id="li-715"><pre class="code-block tex2jax_ignore">char name = "cool_file_name";
+<div class="para" id="p-1447">Quick review question: Which of the following is the correct way to declare and initialize a string?</div> <ol class="lower-alpha">
+<li id="li-707"><pre class="code-block tex2jax_ignore">char name = "cool_file_name";
 </pre></li>
-<li id="li-716"><pre class="code-block tex2jax_ignore">char name[50]; name = "cool_file_name";
+<li id="li-708"><pre class="code-block tex2jax_ignore">char name[50]; name = "cool_file_name";
 </pre></li>
-<li id="li-717"><pre class="code-block tex2jax_ignore">char name[] = "cool_file_name";
+<li id="li-709"><pre class="code-block tex2jax_ignore">char name[] = "cool_file_name";
 </pre></li>
-<li id="li-718"><pre class="code-block tex2jax_ignore">char = "cool_file_name"[50];
+<li id="li-710"><pre class="code-block tex2jax_ignore">char = "cool_file_name"[50];
 </pre></li>
-</ol> <div class="para" id="p-1436"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-sortsearch-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1437">More review: Is there anything wrong with the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">char name[10];
+</ol> <div class="para" id="p-1448"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-sortsearch-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1449">More review: Is there anything wrong with the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">char name[10];
 . . . 
 strcpy(name, "TodayIsMonday");
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-719"><div class="para" id="p-derived-li-719">No, nothing wrong.</div></li>
-<li id="li-720">It should be<pre class="code-block tex2jax_ignore">strcpy("name", TodayIsMonday);
+<li id="li-711"><div class="para" id="p-derived-li-711">No, nothing wrong.</div></li>
+<li id="li-712">It should be<pre class="code-block tex2jax_ignore">strcpy("name", TodayIsMonday);
 </pre>
 </li>
-<li id="li-721">It should be<pre class="code-block tex2jax_ignore">strcpy(“TodayIsMonday”, name);
+<li id="li-713">It should be<pre class="code-block tex2jax_ignore">strcpy(“TodayIsMonday”, name);
 </pre>
 </li>
-<li id="li-722"><div class="para" id="p-derived-li-722">This will overwrite memory cells that have not been reserved for name.</div></li>
-</ol> <div class="para" id="p-1438"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-sortsearch-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1439">Even more review: What is the result of the following:</div>
+<li id="li-714"><div class="para" id="p-derived-li-714">This will overwrite memory cells that have not been reserved for name.</div></li>
+</ol> <div class="para" id="p-1450"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-sortsearch-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1451">Even more review: What is the result of the following:</div>
 <pre class="code-block tex2jax_ignore">strcmp("my_apple", "my_banana");
 </pre>
-<div class="para" id="p-1440"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<div class="para" id="p-1452"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
-<li id="li-723"><div class="para" id="p-derived-li-723">a positive number</div></li>
-<li id="li-724"><div class="para" id="p-derived-li-724">the letter 'b'</div></li>
-<li id="li-725"><div class="para" id="p-derived-li-725">a negative number</div></li>
-<li id="li-726"><div class="para" id="p-derived-li-726">zero</div></li>
-<li id="li-727"><div class="para" id="p-derived-li-727">the letter 'a'</div></li>
-</ol> <div class="para" id="p-1441"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article><article class="exercise exercise-like" id="quiz-sortsearch-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1442">Final review question (I promise!): Suppose a string has been declared as follows:</div>
+<li id="li-715"><div class="para" id="p-derived-li-715">a positive number</div></li>
+<li id="li-716"><div class="para" id="p-derived-li-716">the letter 'b'</div></li>
+<li id="li-717"><div class="para" id="p-derived-li-717">a negative number</div></li>
+<li id="li-718"><div class="para" id="p-derived-li-718">zero</div></li>
+<li id="li-719"><div class="para" id="p-derived-li-719">the letter 'a'</div></li>
+</ol> <div class="para" id="p-1453"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article><article class="exercise exercise-like" id="quiz-sortsearch-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1454">Final review question (I promise!): Suppose a string has been declared as follows:</div>
 <pre class="code-block tex2jax_ignore">char food[30];
 </pre>
-<div class="para" id="p-1443">You want the user to enter their favorite food and store the response in the string food. What is the correct command to do so?</div> <div class="para" id="p-1444"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<div class="para" id="p-1455">You want the user to enter their favorite food and store the response in the string food. What is the correct command to do so?</div> <div class="para" id="p-1456"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" frameborder="0" width="100%" height="300"></iframe> <ol class="lower-alpha">
-<li id="li-728"><pre class="code-block tex2jax_ignore">scanf("%s", *food);
+<li id="li-720"><pre class="code-block tex2jax_ignore">scanf("%s", *food);
 </pre></li>
-<li id="li-729"><pre class="code-block tex2jax_ignore">scanf("%s", food[0]);
+<li id="li-721"><pre class="code-block tex2jax_ignore">scanf("%s", food[0]);
 </pre></li>
-<li id="li-730"><pre class="code-block tex2jax_ignore">scanf("%s", food);
+<li id="li-722"><pre class="code-block tex2jax_ignore">scanf("%s", food);
 </pre></li>
-<li id="li-731"><pre class="code-block tex2jax_ignore">scanf("%s", &amp;food);
+<li id="li-723"><pre class="code-block tex2jax_ignore">scanf("%s", &amp;food);
 </pre></li>
-</ol> <div class="para" id="p-1445"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+</ol> <div class="para" id="p-1457"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sortsearch.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sortsearch-bisection.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

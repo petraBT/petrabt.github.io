@@ -1056,22 +1056,22 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="strings-alphabetize"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">20.8</span> <span class="title">Alphabetize Strings</span>
 </h2>
-<div class="para" id="p-1377">Similar to how we can sort numbers, strings can also be sorted (by alphabet.) The C string library provides help for doing so via the <code class="code-inline tex2jax_ignore">strcmp</code> function. This function compares two strings and returns a negative number, zero or a positive number depending on which of the two strings comes first in the alphabet.</div>
-<div class="para" id="p-1378">Here is how the function works: <code class="code-inline tex2jax_ignore">strcmp</code> compares the two strings character by character. If the first character of two strings is equal, the next character of two strings are compared. This continues until the corresponding characters of the two strings are different or a null character '\0' is reached. Here is the return value of the function:</div>
-<div class="para logical" id="p-1379">
+<div class="para" id="p-1389">Similar to how we can sort numbers, strings can also be sorted (by alphabet.) The C string library provides help for doing so via the <code class="code-inline tex2jax_ignore">strcmp</code> function. This function compares two strings and returns a negative number, zero or a positive number depending on which of the two strings comes first in the alphabet.</div>
+<div class="para" id="p-1390">Here is how the function works: <code class="code-inline tex2jax_ignore">strcmp</code> compares the two strings character by character. If the first character of two strings is equal, the next character of two strings are compared. This continues until the corresponding characters of the two strings are different or a null character '\0' is reached. Here is the return value of the function:</div>
+<div class="para logical" id="p-1391">
 <div class="para">
 <code class="code-inline tex2jax_ignore">strcmp()</code> returns</div>
 <ul class="disc">
-<li id="li-674"><div class="para" id="p-derived-li-674">0 if both strings are identical</div></li>
-<li id="li-675"><div class="para" id="p-derived-li-675">a negative integer if the ASCII value of the first unmatched character is less than that of the second</div></li>
-<li id="li-676"><div class="para" id="p-derived-li-676">a positive integer if the ASCII value of the first unmatched character is greater than that of the second</div></li>
+<li id="li-666"><div class="para" id="p-derived-li-666">0 if both strings are identical</div></li>
+<li id="li-667"><div class="para" id="p-derived-li-667">a negative integer if the ASCII value of the first unmatched character is less than that of the second</div></li>
+<li id="li-668"><div class="para" id="p-derived-li-668">a positive integer if the ASCII value of the first unmatched character is greater than that of the second</div></li>
 </ul>
 <div class="para">So if you compare "Hello" with "hello", what would <code class="code-inline tex2jax_ignore">strcmp()</code> return? Use the code window below to look at a bunch of examples and really understand the function.</div>
 </div>
 <article class="activity project-like" id="activity-96"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">20.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1380">Which strings come first in the alphabet?</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nstrings7.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nstrings7.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<div class="para" id="p-1392">Which strings come first in the alphabet?</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nstrings7.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nstrings7.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nstrings7.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="strings-print.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="strings-summary.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

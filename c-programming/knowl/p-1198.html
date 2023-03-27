@@ -11,8 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">What do you think the below code will print? It is really important and beneficial for your learning to think about this first and to try to run through the code in your head. That's why there is no <code class="code-inline tex2jax_ignore">Run</code> button!</div>
-<span class="incontext"><a href="memory-scope.html#p-1198" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ul class="disc">
+<li><div class="para">When passing a variable <em class="emphasis">by value</em> to a function, only the value (that is, what is stored in the variable) is known inside the function but not where the original variable is stored in memory.</div></li>
+<li><div class="para">As a result, changing the value of a variable inside a function will not change the variable outside of the function, if it was passed by value</div></li>
+<li><div class="para">Example of passing by value: Suppose you have variables <code class="code-inline tex2jax_ignore">a,b</code> with <code class="code-inline tex2jax_ignore">a=3</code> and <code class="code-inline tex2jax_ignore">b=5</code>. Then the call <code class="code-inline tex2jax_ignore">myFunction(a, b)</code> passes the numbers 3 and 5 to <code class="code-inline tex2jax_ignore">myFunction()</code> but not the locations where <code class="code-inline tex2jax_ignore">a</code> and <code class="code-inline tex2jax_ignore">b</code> are stored.</div></li>
+</ul></div>
+<span class="incontext"><a href="memory-functions.html#p-1198" class="internal">in-context</a></span>
 </body>
 </html>

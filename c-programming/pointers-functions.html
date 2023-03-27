@@ -1056,27 +1056,27 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="pointers-functions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.10</span> <span class="title">Passing Arrays to Functions</span>
 </h2>
-<div class="para" id="p-1301">In the following video you will learn how to pass arrays to functions so that within the function you can use as well as modify values stored in the array.</div>
+<div class="para" id="p-1313">In the following video you will learn how to pass arrays to functions so that within the function you can use as well as modify values stored in the array.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519159561626" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519159561626" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-49"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1302"><ul class="disc">
-<li id="li-654"><div class="para" id="p-derived-li-654">When passing arrays to functions, an <code class="code-inline tex2jax_ignore">&amp;</code> is not needed, since the name of the array is already a pointer to its first element</div></li>
-<li id="li-655"><div class="para" id="p-derived-li-655">Arrays can then be modified and used in functions using their pointer name in the function, such as <code class="code-inline tex2jax_ignore">ptr[i]</code>
+<div class="para logical" id="p-1314"><ul class="disc">
+<li id="li-646"><div class="para" id="p-derived-li-646">When passing arrays to functions, an <code class="code-inline tex2jax_ignore">&amp;</code> is not needed, since the name of the array is already a pointer to its first element</div></li>
+<li id="li-647"><div class="para" id="p-derived-li-647">Arrays can then be modified and used in functions using their pointer name in the function, such as <code class="code-inline tex2jax_ignore">ptr[i]</code>
 </div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-49"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-arrayfunction-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1303">Suppose an array of integers has been declared using the declaration</div>
+<div class="para" id="p-1315">Suppose an array of integers has been declared using the declaration</div>
 <pre class="code-block tex2jax_ignore">int num[50];
 </pre>
-<div class="para" id="p-1304">Next, <em class="emphasis">x</em> integers are stored in this array (where x is no larger than 50). The array is to be passed to a function sum which is to add up the x integers stored in the array. What should you be passing to the function sum?</div> <ol class="lower-alpha">
-<li id="li-656"><div class="para" id="p-derived-li-656">The number x of integers stored in the array and a pointer to the first element of num.</div></li>
-<li id="li-657"><div class="para" id="p-derived-li-657">A pointer to the first element of num.</div></li>
-<li id="li-658"><div class="para" id="p-derived-li-658">num[0]</div></li>
-<li id="li-659"><div class="para" id="p-derived-li-659">The 50 elements of num, stored as individual integers.</div></li>
-</ol> <div class="para" id="p-1305"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-arrayfunction-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1306">Suppose a function sum has been defined as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int sum(int n, int array[])
+<div class="para" id="p-1316">Next, <em class="emphasis">x</em> integers are stored in this array (where x is no larger than 50). The array is to be passed to a function sum which is to add up the x integers stored in the array. What should you be passing to the function sum?</div> <ol class="lower-alpha">
+<li id="li-648"><div class="para" id="p-derived-li-648">The number x of integers stored in the array and a pointer to the first element of num.</div></li>
+<li id="li-649"><div class="para" id="p-derived-li-649">A pointer to the first element of num.</div></li>
+<li id="li-650"><div class="para" id="p-derived-li-650">num[0]</div></li>
+<li id="li-651"><div class="para" id="p-derived-li-651">The 50 elements of num, stored as individual integers.</div></li>
+</ol> <div class="para" id="p-1317"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-arrayfunction-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1318">Suppose a function sum has been defined as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int sum(int n, int array[])
 {
            int i;
            int result = 0;
@@ -1084,20 +1084,20 @@ eBookConfig.enable_chatcodes =  false;
              result += array[i];
            return(result);
 }
-</code></pre></div> <div class="para" id="p-1307">Suppose furthermore that in your main function an array num has been declared and initialized with the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int num[]={4,2,7,5,8,9,4,2,4,6};
-</code></pre></div> <div class="para" id="p-1308">What is the correct function call of <code class="code-inline tex2jax_ignore">sum()</code>, using this array?</div> <div class="para" id="p-1309"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+</code></pre></div> <div class="para" id="p-1319">Suppose furthermore that in your main function an array num has been declared and initialized with the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int num[]={4,2,7,5,8,9,4,2,4,6};
+</code></pre></div> <div class="para" id="p-1320">What is the correct function call of <code class="code-inline tex2jax_ignore">sum()</code>, using this array?</div> <div class="para" id="p-1321"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" frameborder="0" width="100%" height="600"></iframe> <ol class="lower-alpha">
-<li id="li-660"><pre class="code-block tex2jax_ignore">sum(10, array[0]);
+<li id="li-652"><pre class="code-block tex2jax_ignore">sum(10, array[0]);
 </pre></li>
-<li id="li-661"><pre class="code-block tex2jax_ignore">sum(10, num[0]);
+<li id="li-653"><pre class="code-block tex2jax_ignore">sum(10, num[0]);
 </pre></li>
-<li id="li-662"><pre class="code-block tex2jax_ignore">sum(10, num);
+<li id="li-654"><pre class="code-block tex2jax_ignore">sum(10, num);
 </pre></li>
-<li id="li-663"><pre class="code-block tex2jax_ignore">sum(10, *num);
+<li id="li-655"><pre class="code-block tex2jax_ignore">sum(10, *num);
 </pre></li>
-<li id="li-664"><pre class="code-block tex2jax_ignore">sum(10, array);
+<li id="li-656"><pre class="code-block tex2jax_ignore">sum(10, array);
 </pre></li>
-</ol> <div class="para" id="p-1310"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
+</ol> <div class="para" id="p-1322"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="pointers-arrays.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="pointers-functions-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

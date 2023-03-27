@@ -1123,7 +1123,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.1",
   "title": "<code class=\"code-inline tex2jax_ignore\">if<\/code> Statements",
-  "body": " if Statements   branching if We are ready for a really important and powerful new concept: the ability to create computer instructions that are executed only if certain conditions are met. Let's take a look.    Video Description    Branching using the if statement is introduced  Branching can be used to execute code only in the case that some condition is true (or false)  NEW SYNTAX: if (something is true) { do this }; will check if the statement in parenthesis is true, and if so, will execute the statement(s) within curly brackets       Which of the following shows the correct syntax for an if statement?   if (cloudy) printf(\"It's not sunny :-(\");  printf(\"It's not sunny :-(\") if (cloudy);  if (cloudy) printf(\"It's not sunny :-(\")  if cloudy printf(\"It's not sunny :-(\");   Enter your choice (a\/b\/c\/d):    "
+  "body": " if Statements   branching if We are ready for a really important and powerful new concept: the ability to create computer instructions that are executed only if certain conditions are met. Let's take a look.    Video Description    Branching using the if statement is introduced  Branching can be used to execute code only in the case that some condition is true (or false)  NEW SYNTAX: if (something is true) { do this }; will check if the statement in parenthesis is true, and if so, will execute the statement(s) within curly brackets       Which of the following shows the correct syntax for an if statement?     if (cloudy) printf(\"It's not sunny :-(\");    Correct      printf(\"It's not sunny :-(\") if (cloudy);    Not quite - try again!      if (cloudy) printf(\"It's not sunny :-(\")    Not quite - try again!      if cloudy printf(\"It's not sunny :-(\");    Not quite - try again!     Review the video if you are stumped.    "
 },
 {
   "id": "quiz-branching-1",
@@ -1132,7 +1132,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "9.1.1",
   "title": "",
-  "body": " Which of the following shows the correct syntax for an if statement?   if (cloudy) printf(\"It's not sunny :-(\");  printf(\"It's not sunny :-(\") if (cloudy);  if (cloudy) printf(\"It's not sunny :-(\")  if cloudy printf(\"It's not sunny :-(\");   Enter your choice (a\/b\/c\/d):  "
+  "body": " Which of the following shows the correct syntax for an if statement?     if (cloudy) printf(\"It's not sunny :-(\");    Correct      printf(\"It's not sunny :-(\") if (cloudy);    Not quite - try again!      if (cloudy) printf(\"It's not sunny :-(\")    Not quite - try again!      if cloudy printf(\"It's not sunny :-(\");    Not quite - try again!     Review the video if you are stumped.  "
 },
 {
   "id": "branching-if-else",
@@ -1141,7 +1141,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.2",
   "title": "<code class=\"code-inline tex2jax_ignore\">if - else<\/code> Statements",
-  "body": " if - else Statements   branching if - else Next, we'll see how to perform another action in case the condition is not met.    Video Description    The if-else statement is introduced  If the condition for the if statement is not met, then the code in the else statement will be executed instead  NEW SYNTAX: if (something is true) {do this};  else {do this};       What is the output of the following piece of code, assuming that n is a variable of type int that has the value 1:  if (n) printf(\"You win!\"); else printf(\"Ooops!\");   You win!  Ooops!  You win! Ooops!  This does not generate any output.   Enter your choice (a\/b\/c\/d):    "
+  "body": " if - else Statements   branching if - else Next, we'll see how to perform another action in case the condition is not met.    Video Description    The if-else statement is introduced  If the condition for the if statement is not met, then the code in the else statement will be executed instead  NEW SYNTAX: if (something is true) {do this};  else {do this};       What is the output of the following piece of code, assuming that n is a variable of type int that has the value 1:  if (n) printf(\"You win!\"); else printf(\"Ooops!\");     You win!    Correct      Ooops!    Not quite - try again!      You win! Ooops!    Not quite - try again!      This does not generate any output.    Not quite - try again!     Watch out for little details such as the semicolon at the end of the statement or the parentheses surrounding the condition.    "
 },
 {
   "id": "quiz-branching-2",
@@ -1150,7 +1150,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "9.2.1",
   "title": "",
-  "body": " What is the output of the following piece of code, assuming that n is a variable of type int that has the value 1:  if (n) printf(\"You win!\"); else printf(\"Ooops!\");   You win!  Ooops!  You win! Ooops!  This does not generate any output.   Enter your choice (a\/b\/c\/d):  "
+  "body": " What is the output of the following piece of code, assuming that n is a variable of type int that has the value 1:  if (n) printf(\"You win!\"); else printf(\"Ooops!\");     You win!    Correct      Ooops!    Not quite - try again!      You win! Ooops!    Not quite - try again!      This does not generate any output.    Not quite - try again!     Watch out for little details such as the semicolon at the end of the statement or the parentheses surrounding the condition.  "
 },
 {
   "id": "branching-operators",
