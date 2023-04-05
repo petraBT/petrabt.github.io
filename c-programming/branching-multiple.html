@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.5.4';
+eBookConfig.runestone_version = '6.6.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runtime.0d64a5199ae36cbe.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1065,9 +1065,10 @@ eBookConfig.enable_chatcodes =  false;
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching9.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><div class="para" id="p-738">The way to negate a condition in C is to put an exclamation mark in front of it: <code class="code-inline tex2jax_ignore">!(...)</code>
 </div>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nbranching10.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching10.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching10.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h3 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">9.4</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><div class="para" id="p-739">Zero is the value which C interprets as false. How could you use a logical operator so that C would interpret anything <em class="emphasis">except</em> zero as false, such as in an <code class="code-inline tex2jax_ignore">if</code> statement?</div>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching10.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><article class="investigation project-like" id="investigation-12"><h3 class="heading">
+<span class="type">Investigate</span><span class="space"> </span><span class="codenumber">9.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-739">Zero is the value which C interprets as false. How could you use a logical operator so that C would interpret anything <em class="emphasis">except</em> zero as false, such as in an <code class="code-inline tex2jax_ignore">if</code> statement?</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><div class="para" id="p-740">Use an exclamation mark to negate a condition.</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
@@ -1079,7 +1080,7 @@ if (!var){
 }
 </code></pre></div> <div class="para" id="p-742">then, if <code class="code-inline tex2jax_ignore">var = 0</code> which is originally false, <code class="code-inline tex2jax_ignore">!var</code> would be true.</div> <div class="para" id="p-743">Similarly, if <code class="code-inline tex2jax_ignore">var = 1</code> which is originally true, <code class="code-inline tex2jax_ignore">!var</code> would thus be false.</div>
 </div></div>
-</div></article></div></section></div>
+</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="branching-advanced.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="branching-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

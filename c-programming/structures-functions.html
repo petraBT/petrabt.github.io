@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.5.4';
+eBookConfig.runestone_version = '6.6.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runtime.0d64a5199ae36cbe.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1061,14 +1061,14 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="p-1582">In the next video we'll learn how to pass structures to functions by value.</div>
 <div class="para" id="p-1583">Passing by value means that a copy will be made of the data stored in the structure. We will therefore have access to all of the data stored in the structure variable but we cannot modify it within the function (since all we'd end up doing is modify the copies of the values).</div>
-<article class="example example-like" id="example-18"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-18"><h4 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">25.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-18"><article class="example example-like"><div class="para" id="p-1584">Imagine we declare a structure named <code class="code-inline tex2jax_ignore">student</code> in both the <code class="code-inline tex2jax_ignore">main()</code> function and in a new function, and we then pass the structure from the <code class="code-inline tex2jax_ignore">main()</code> function into our new one by value. If we now change a value within the new function's structure, will it affect the original structure?</div>
+<article class="investigation project-like" id="investigation-27"><h4 class="heading">
+<span class="type">Investigate</span><span class="space"> </span><span class="codenumber">25.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-1584">Imagine we declare a structure named <code class="code-inline tex2jax_ignore">student</code> in both the <code class="code-inline tex2jax_ignore">main()</code> function and in a new function, and we then pass the structure from the <code class="code-inline tex2jax_ignore">main()</code> function into our new one by value. If we now change a value within the new function's structure, will it affect the original structure?</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like"><div class="para" id="p-1585">No!</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><div class="para" id="p-1586">Remember when we discussed what <em class="emphasis">not</em> to name your variables in <a href="memory-scope.html" class="internal" title="Section 18.4: The Scope of a Variable">Section 18.4</a>? Just because we named the structures the same thing doesn't mean they are the same! Soon we'll learn how to pass structures by reference...</div></div></div>
-</div></article></div>
-<div class="para" id="p-1587">We'll work with the following structure example:</div>
+</div></article><div class="para" id="p-1587">We'll work with the following structure example:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];

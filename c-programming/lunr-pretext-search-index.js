@@ -1159,22 +1159,22 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.3",
   "title": "Relational and Equality Operators",
-  "body": " Relational and Equality Operators  We have already learned about several operators for numbers:   arithmetic  + , - , * addition, subtraction, and multiplication (integers and floats)  \/ integer division for integers and floating point division for floats  % remainder (modulus) of an integer division   Next, we'll learn about relational and equality operators that serve to compare the values of two quantities:    calculations relational operators  < , > less than and greater than operators  <= , >= less than or equal to, greater than or equal to  != not equal to   calculations equality operators  == equal to (note the double equal sign; the single equal sign = has already been 'used up' for our assignment operator)     Which of the following variables would C interpret as \"true\"? For example, if each variable was placed in the following code's if statement as \"variable\", would the program output \"True\" or \"False\"?   int a = -1  char b = 'b'  float c = 0.0  int d = 4000   if (variable){ printf(\"True\") } else{ printf(\"False\") }    C will interpret the variables a , b , and d as \"True\", and the variable c as \"False\"    In C, any nonzero integer or float is interpreted as true, as well as any character.    A true logical relation evaluates to 1, whereas a false relation evaluates to 0. Examples:   Suppose x has the value 3.5. Then (x <= 5.0) evaluates to 1.  Suppose next that x has the value 7. Then (x <= 5.0) evaluates to 0.  (age == 30) evaluates to 1 if indeed age has the value 30, otherwise it evaluates to 0.   Note: Instead of (x <= 5.0) you could also write (5.0 >= x) , and instead of (age == 30) you could just as well write (30 == age) .    Does the following statement, which is comparing two characters, evaluate to true or false , according to C?  ('A' > 'a')      False    Recall that characters are really stored as their ASCII codes in memory. Therefore, when comparing characters, C really compares their ASCII codes. In this case, we have 'A'=65 and 'a'=97. Sure enough, 65 is not greater than 97, so the above statement evaluates to false .    Let's look at an example.    Video Description    Logic expressions resulting from comparing variable values  Producing true\/false relations  Using if-else based on true\/false values of logic statements  Example: an if statement can include a logic statement such as (x>5) , and it will then execute code if this logic statement evaluates to true       You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.  Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).   When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).    "
+  "body": " Relational and Equality Operators  We have already learned about several operators for numbers:   arithmetic  + , - , * addition, subtraction, and multiplication (integers and floats)  \/ integer division for integers and floating point division for floats  % remainder (modulus) of an integer division   Next, we'll learn about relational and equality operators that serve to compare the values of two quantities:    calculations relational operators  < , > less than and greater than operators  <= , >= less than or equal to, greater than or equal to  != not equal to   calculations equality operators  == equal to (note the double equal sign; the single equal sign = has already been 'used up' for our assignment operator)     Which of the following variables would C interpret as \"true\"? For example, if each variable was placed in the following code's if statement as \"variable\", would the program output \"True\" or \"False\"?   int a = -1  char b = 'b'  float c = 0.0  int d = 4000   if (variable){ printf(\"True\") } else{ printf(\"False\") }    C will interpret the variables a , b , and d as \"True\", and the variable c as \"False\"    In C, any nonzero integer or float is interpreted as true, as well as any character.    A true logical relation evaluates to 1, whereas a false relation evaluates to 0. Examples:   Suppose x has the value 3.5. Then (x <= 5.0) evaluates to 1.  Suppose next that x has the value 7. Then (x <= 5.0) evaluates to 0.  (age == 30) evaluates to 1 if indeed age has the value 30, otherwise it evaluates to 0.   Note: Instead of (x <= 5.0) you could also write (5.0 >= x) , and instead of (age == 30) you could just as well write (30 == age) .    Does the following statement, which is comparing two characters, evaluate to true or false , according to C?  ('A' > 'a')      False    Recall that characters are really stored as their ASCII codes in memory. Therefore, when comparing characters, C really compares their ASCII codes. In this case, we have 'A'=65 and 'a'=97. Sure enough, 65 is not greater than 97, so the above statement evaluates to false .    Let's look at an example.    Video Description    Logic expressions resulting from comparing variable values  Producing true\/false relations  Using if-else based on true\/false values of logic statements  Example: an if statement can include a logic statement such as (x>5) , and it will then execute code if this logic statement evaluates to true       You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.  Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).   When your program performs correctly you'll be given a keyword to enter in Canvas.    "
 },
 {
-  "id": "example-1",
+  "id": "investigation-10",
   "level": "2",
-  "url": "branching-operators.html#example-1",
-  "type": "Check Your Understanding",
+  "url": "branching-operators.html#investigation-10",
+  "type": "Investigate",
   "number": "9.1",
   "title": "",
   "body": "  Which of the following variables would C interpret as \"true\"? For example, if each variable was placed in the following code's if statement as \"variable\", would the program output \"True\" or \"False\"?   int a = -1  char b = 'b'  float c = 0.0  int d = 4000   if (variable){ printf(\"True\") } else{ printf(\"False\") }    C will interpret the variables a , b , and d as \"True\", and the variable c as \"False\"    In C, any nonzero integer or float is interpreted as true, as well as any character.   "
 },
 {
-  "id": "example-2",
+  "id": "investigation-11",
   "level": "2",
-  "url": "branching-operators.html#example-2",
-  "type": "Check Your Understanding",
+  "url": "branching-operators.html#investigation-11",
+  "type": "Investigate",
   "number": "9.2",
   "title": "",
   "body": "  Does the following statement, which is comparing two characters, evaluate to true or false , according to C?  ('A' > 'a')      False    Recall that characters are really stored as their ASCII codes in memory. Therefore, when comparing characters, C really compares their ASCII codes. In this case, we have 'A'=65 and 'a'=97. Sure enough, 65 is not greater than 97, so the above statement evaluates to false .   "
@@ -1186,7 +1186,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "9.3.1",
   "title": "",
-  "body": " You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.  Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).   When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).  "
+  "body": " You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.  Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).   When your program performs correctly you'll be given a keyword to enter in Canvas.  "
 },
 {
   "id": "branching-if-else-practice",
@@ -1195,16 +1195,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.4",
   "title": "<code class=\"code-inline tex2jax_ignore\">if - else<\/code> Statement Practice",
-  "body": " if - else Statement Practice  You are staying at a youth hostel that has the funniest pricing policy:  In order to encourage people to arrive early they charge more, the later you arrive on your day of check-in. You can arrive at any time between noon and midnight on the day of check-in, but the later you arrive, the more expensive the night will be.    Write a C-program that reads from the user the hour of arrival (between 0 - meaning noon - and 12 - meaning midnight) and that then outputs the price to pay for the night.  The cost for the night is a $10 base fee plus $5 for every hour you arrive past noon. So if you arrive at noon, the total cost is only $10, if you arrive at 1pm, the price goes up to $15, etc. Thankfully the total price is capped at $57, so even if you arrive at 11pm, the price will be $57.   When you are done, please paste the lines of code you added to make this program work into the code submission box below:     "
+  "body": " if - else Statement Practice  You are staying at a youth hostel that has the funniest pricing policy:  In order to encourage people to arrive early they charge more, the later you arrive on your day of check-in. You can arrive at any time between noon and midnight on the day of check-in, but the later you arrive, the more expensive the night will be.    Write a C-program that reads from the user the hour of arrival (between 0 - meaning noon - and 12 - meaning midnight) and that then outputs the price to pay for the night.  The cost for the night is a $10 base fee plus $5 for every hour you arrive past noon. So if you arrive at noon, the total cost is only $10, if you arrive at 1pm, the price goes up to $15, etc. Thankfully the total price is capped at $57, so even if you arrive at 11pm, the price will be $57.   When you are done, please paste the lines of code you added to make this program work into the box below:     "
 },
 {
-  "id": "activity-26",
+  "id": "activity-9-4-1-if_else_Statement_Practice",
   "level": "2",
-  "url": "branching-if-else-practice.html#activity-26",
+  "url": "branching-if-else-practice.html#activity-9-4-1-if_else_Statement_Practice",
   "type": "Activity",
-  "number": "9.1",
+  "number": "9.3",
   "title": "",
-  "body": "  Write a C-program that reads from the user the hour of arrival (between 0 - meaning noon - and 12 - meaning midnight) and that then outputs the price to pay for the night.  The cost for the night is a $10 base fee plus $5 for every hour you arrive past noon. So if you arrive at noon, the total cost is only $10, if you arrive at 1pm, the price goes up to $15, etc. Thankfully the total price is capped at $57, so even if you arrive at 11pm, the price will be $57.   When you are done, please paste the lines of code you added to make this program work into the code submission box below:    "
+  "body": "  Write a C-program that reads from the user the hour of arrival (between 0 - meaning noon - and 12 - meaning midnight) and that then outputs the price to pay for the night.  The cost for the night is a $10 base fee plus $5 for every hour you arrive past noon. So if you arrive at noon, the total cost is only $10, if you arrive at 1pm, the price goes up to $15, etc. Thankfully the total price is capped at $57, so even if you arrive at 11pm, the price will be $57.   When you are done, please paste the lines of code you added to make this program work into the box below:    "
 },
 {
   "id": "branching-advanced",
@@ -1220,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "branching-advanced.html#figure-5",
   "type": "Figure",
-  "number": "9.3",
+  "number": "9.1",
   "title": "",
   "body": " branching if - else-if - else   "
 },
@@ -1243,10 +1243,10 @@ var ptx_lunr_docs = [
   "body": " Combining Multiple Logic Statements  Sometimes you may want to check whether several statements are true at the same time, or whether at least one of several statements is true, or whether something is not true, etc. We'll take a look at how do do this in C now.  logic AND The way to write the logical AND in C is with two ampersand signs: &&   logic OR The way to write the logical OR in C is with two vertical bars: ||   logic NOT The way to negate a condition in C is to put an exclamation mark in front of it: !(...)     Zero is the value which C interprets as false. How could you use a logical operator so that C would interpret anything except zero as false, such as in an if statement?    Use an exclamation mark to negate a condition.    By using an exclamation mark in front of the condition in our if statement, C will interpret the condition as the opposite of whatever it normally would be. For example, if our simple if statement was as follows:  int var; \/*see below for our example values of var*\/ if (!var){ print(\"True\"); }else{ printf(\"False\"); }  then, if var = 0 which is originally false, !var would be true.  Similarly, if var = 1 which is originally true, !var would thus be false.    "
 },
 {
-  "id": "example-3",
+  "id": "investigation-12",
   "level": "2",
-  "url": "branching-multiple.html#example-3",
-  "type": "Check Your Understanding",
+  "url": "branching-multiple.html#investigation-12",
+  "type": "Investigate",
   "number": "9.4",
   "title": "",
   "body": "  Zero is the value which C interprets as false. How could you use a logical operator so that C would interpret anything except zero as false, such as in an if statement?    Use an exclamation mark to negate a condition.    By using an exclamation mark in front of the condition in our if statement, C will interpret the condition as the opposite of whatever it normally would be. For example, if our simple if statement was as follows:  int var; \/*see below for our example values of var*\/ if (!var){ print(\"True\"); }else{ printf(\"False\"); }  then, if var = 0 which is originally false, !var would be true.  Similarly, if var = 1 which is originally true, !var would thus be false.   "
@@ -1265,16 +1265,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "branching-practice.html#activity-27",
   "type": "Activity",
-  "number": "9.2",
+  "number": "9.5",
   "title": "",
   "body": " You'd like to print the ordinal day of the month (i.e. 1st, 2nd, 3rd) in the following form based on the cardinal input provided (i.e. 1, 2, 3).  \"Today is the 2nd day of the month.\"  \"Today is the 21st day of the month.\"  Complete the following C-program so that it will accomplish this task.   "
 },
 {
-  "id": "activity-28",
+  "id": "activity-9-7-2-Constant_or_Vowel-no-output",
   "level": "2",
-  "url": "branching-practice.html#activity-28",
+  "url": "branching-practice.html#activity-9-7-2-Constant_or_Vowel-no-output",
   "type": "Activity",
-  "number": "9.3",
+  "number": "9.6",
   "title": "",
   "body": "  Write a C program that reads from the user input a letter and that prints out whether this letter is a vowel or a consonant.  For example, if the user input is 'b', the program's output should be:  \"The letter b is a consonant.\"  If, on the other hand, the user input is 'E', for example, then the program's output should be:  \"The letter E is a vowel.\"   When you are done, please put your code you added into the code submission box below:    "
 },
@@ -1292,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "branching-evaluating.html#activity-29",
   "type": "Activity",
-  "number": "9.4",
+  "number": "9.7",
   "title": "",
   "body": "  Take a look at the program below for example. What is its output? Try to figure this out first by only thinking about the program and not yet running it.   What do you think the output will be?   \"True\"  \"Huh??? False???\"  \"True Huh??? False???\"   Enter your choice (a\/b\/c):   "
 },
@@ -1324,11 +1324,11 @@ var ptx_lunr_docs = [
   "body": " The Idea of a Flag   boolean behavior (true\/false)  flag Despite the fact that the C-programming language does not have a boolean data type, we can simulate boolean (true\/false) behavior using an integer-type variable. This is often called a flag.   Video Description    Idea of a flag variable  Symbolizing true\/false in code  For example: use an integer variable with value of 1 to symbolize true and a value of 0 to symbolize false        What are some scenarios where it would be useful to have a true\/false variable? Any past activities come to mind?      What is the value of the variable d once the following code has been executed:  int d, num; num = 17; d = ((17%3)==0);    "
 },
 {
-  "id": "example-4",
+  "id": "investigation-13",
   "level": "2",
-  "url": "branching-flag.html#example-4",
-  "type": "Check Your Understanding",
-  "number": "9.5",
+  "url": "branching-flag.html#investigation-13",
+  "type": "Investigate",
+  "number": "9.8",
   "title": "",
   "body": "  What are some scenarios where it would be useful to have a true\/false variable? Any past activities come to mind?   "
 },
@@ -1396,9 +1396,9 @@ var ptx_lunr_docs = [
   "body": " The switch() Statement  switch() The switch() statement is a selection control structure that allows one of several alternatives to be executed, depending on the value a variable takes. To be more precise, a switch() statement allows a variable to be compared to a list of values. Each value is called a case. If the variable equals a value from the list then the instructions following that particular case are executed.  Let's take a look at an example:    switch() Statement Practice    Please complete the program below so that it prints out the correct month, depending on the value of the variable month . For example, if month=3 , the program should print  We are in the month of March.  Your program should use a switch() statement.   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-30",
+  "id": "activity-10-1-1-switch_Statement_Practice",
   "level": "2",
-  "url": "adv-branching-switch.html#activity-30",
+  "url": "adv-branching-switch.html#activity-10-1-1-switch_Statement_Practice",
   "type": "Activity",
   "number": "10.1",
   "title": "",
@@ -1414,11 +1414,11 @@ var ptx_lunr_docs = [
   "body": " for and if together  nesting for and if You can nest an if statement inside a loop or a loop inside an if statement.  Take a look at the following example which prints out those numbers between 0 and 29 that are divisible by 3. Make sure to try to understand how the code accomplishes this task.     Is there a difference between the two following scenarios, if the same statements are used within each element?   Nesting an if statement within a loop  Nesting a loop within an if statement     Yes! They can produce quite different results!    Here is just one example of how the same statements placed in different orders can produce vastly different results:   int i = 0; int a = 5; for (i=0; i<11; i++){ if (a<i){ printf(\"%d \", i); } }  int i = 0; int a = 5; if (a<i){ for (i=0; i<11; i++){ printf(\"%d \", i); } }   The first example program will output \"6 7 8 9 10\", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!    "
 },
 {
-  "id": "example-5",
+  "id": "investigation-14",
   "level": "2",
-  "url": "adv-branching-for-if.html#example-5",
-  "type": "Check Your Understanding",
-  "number": "10.1",
+  "url": "adv-branching-for-if.html#investigation-14",
+  "type": "Investigate",
+  "number": "10.2",
   "title": "",
   "body": "  Is there a difference between the two following scenarios, if the same statements are used within each element?   Nesting an if statement within a loop  Nesting a loop within an if statement     Yes! They can produce quite different results!    Here is just one example of how the same statements placed in different orders can produce vastly different results:   int i = 0; int a = 5; for (i=0; i<11; i++){ if (a<i){ printf(\"%d \", i); } }  int i = 0; int a = 5; if (a<i){ for (i=0; i<11; i++){ printf(\"%d \", i); } }   The first example program will output \"6 7 8 9 10\", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!   "
 },
@@ -1436,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "adv-branching-nested.html#activity-31",
   "type": "Activity",
-  "number": "10.2",
+  "number": "10.3",
   "title": "",
   "body": "  What does this print? Be sure to read through the code and pretend you are the computer in order to determine what will happen. Do not simply run the code (that's why there is no Run button). Get out a piece of paper and trace through the code.  "
 },
@@ -1454,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "adv-branching-practice.html#activity-32",
   "type": "Activity",
-  "number": "10.3",
+  "number": "10.4",
   "title": "",
   "body": " Okay, you can try this out now. Does the the output of the program agree with what you thought would happen? If not, do you see why? Do you have questions?   "
 },
@@ -1463,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "adv-branching-practice.html#activity-33",
   "type": "Activity",
-  "number": "10.4",
+  "number": "10.5",
   "title": "",
   "body": " Let's try this again with another example. Again, do not simply run the code but rather trace through the code as if you were the computer. What is the output of the following program?   "
 },
@@ -1481,16 +1481,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "adv-branching-practice2.html#activity-34",
   "type": "Activity",
-  "number": "10.5",
+  "number": "10.6",
   "title": "",
   "body": " Okay, time to try it out. Take a look at the output of the program. Is this what you came up with? If not, do you understand the difference? Please ask questions if anything is unclear.   "
 },
 {
-  "id": "activity-35",
+  "id": "activity-10-4-4-Adv_Branching_Practice_4",
   "level": "2",
-  "url": "adv-branching-practice2.html#activity-35",
+  "url": "adv-branching-practice2.html#activity-10-4-4-Adv_Branching_Practice_4",
   "type": "Activity",
-  "number": "10.6",
+  "number": "10.7",
   "title": "",
   "body": "  Below is a program that calculates the factorial of a number, for example, when N=5, N! = 5*4*3*2*1 = 120.  Modify this program so that it prints a list of the factorials from 1! to 10!, that is something like:  1! = 1 2! = 2 3! = 6 4! = 24 5! = 120 6! = 720 ...  Your program should use nested loops to accomplish this task.   When you are done, please put your code into the code submission box below:    "
 },
@@ -1508,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "adv-branching-errors.html#activity-36",
   "type": "Activity",
-  "number": "10.7",
+  "number": "10.8",
   "title": "",
   "body": " What's wrong here? Why is this not printing a list of factorials? Can you fix it?   "
 },
@@ -1517,7 +1517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "adv-branching-errors.html#activity-37",
   "type": "Activity",
-  "number": "10.8",
+  "number": "10.9",
   "title": "",
   "body": " What's wrong with this now?  You'd like to print out a rectangle of stars that is 8 stars wide and 3 stars tall, just as in the output below:  ******** ******** ********  Something is wrong with your code however. Can you fix it?   "
 },
@@ -1526,7 +1526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "adv-branching-errors.html#activity-38",
   "type": "Activity",
-  "number": "10.9",
+  "number": "10.10",
   "title": "",
   "body": " What's wrong with this code? Why is it not printing the equation you expect?   What is wrong here?  "
 },
@@ -1630,11 +1630,11 @@ var ptx_lunr_docs = [
   "body": " Program Style  program style Style, which is how you format your source code, is an important consideration when writing computer programs. In the following Codecast, we will explore ways to craft easy-to-read code and why style is so important. Considerations such as indentation, where to place line breaks, grouping pieces of code together, choice of variable names, where to place comments are all part of coding style.    Video Description    Best practices for the style of your code  i.e. consistent spacing, line breaks, indentation, and variable-naming conventions       Time for some reflection:  Do you think your current style when coding is clean and easy-to-read, such as the example shown in the Codecast above, or do you think there's some room for improvement?    Either way, think about the example from the Codecast when you work on your next coding assignments. Great style will become increasingly important as the complexity of your code increases!      "
 },
 {
-  "id": "example-6",
+  "id": "investigation-15",
   "level": "2",
-  "url": "format-style.html#example-6",
-  "type": "Check Your Understanding",
-  "number": "11.3",
+  "url": "format-style.html#investigation-15",
+  "type": "Investigate",
+  "number": "11.1",
   "title": "",
   "body": "  Time for some reflection:  Do you think your current style when coding is clean and easy-to-read, such as the example shown in the Codecast above, or do you think there's some room for improvement?    Either way, think about the example from the Codecast when you work on your next coding assignments. Great style will become increasingly important as the complexity of your code increases!   "
 },
@@ -1837,19 +1837,19 @@ var ptx_lunr_docs = [
   "body": " for vs. while Loops  Though for - and while -loops can accomplish the same tasks, both have certain benefits and drawbacks. Here, we compare the syntaxes of both loops and discuss situations and scenarios in which one loop is preferable over the other.  for -loop syntax:  for (initialization; loop run condition; update) { statements...; }  At the very start of the loop (before any kind of repetition is entered) the initialization statement is executed. This happens exactly once. At the start of every repetition the loop condition is checked. If it evaluates to true then the actual loop statements are executed once. Afterwards, the update statement is executed and next, the loop run condition is checked again. If still true, the loop statements are executed again, etc.  Example:  for (i=10; i>5; i--) { printf(\"i = %d\\n\", i); }  In this example, i is initialized with the value 10 right before the start of the loop. Next, the logic statement i>5 is evaluated, and since 10 is indeed greater than 5, the loop is entered. The printf() statement prints i = 10 to the screen. Next, the update statement i-- is executed, decreasing the value of i to 9. The loop condition is checked (9 is still greater than 5) and so i = 9 is printed to the screen. i is next decreased to 8, loop condition checked, etc. This continues on until i = 6 is printed to the screen. When i is next decreased to 5, the check of the loop condition evaluates to false since 5 is not greater than 5. The loop terminates with the loop counter having the value 5.  while -loop syntax:  while (condition) { statements...; }  At the start of every run through the loop, the condition is checked and only if it evaluates to true are the statements in the loop body executed. It is the programmer's job to build in an update condition into these statements so that eventually the loop condition will evaluate to false, causing the loop to terminate. It is really easy to forget to do this, leading to a never-ending loop...  Example:  i=10; while (i>5) { printf(\"i = %d\\n\", i); i--; }  This loop generates the exact same output as the above for loop. Notice that you have to explicitly initialize i on your own before the loop and program the update condition i--; as part of the loop body.  In general:   loops for vs. while Use a for -loop when you have a known number of iterations.  loops for vs. while Use a while -loop when you have an unspecified number of iterations.     Would a for - or while -loop be more efficient to implement in the following scenario?  In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.    A while -loop    Though this task could technically be accomplished with either type of loop, a while -loop would be more efficient to use, since you don't know how many times the user will input information before that certain \"stop\" integer is entered. With a for -loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A while -loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain \"stop\" integer being entered.    Clearly, the following would be difficult to accomplish with a for -loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.   In the previous example, we had to type the scanf() statement twice: once to read the user input and then one more time in case they entered something negative by accident. This is not the most elegant code (though perfectly acceptable). So there is a third kind of loop that helps in such a case, the do-while -loop:   Unlike our previous two types of loops, a do-while loop is guaranteed to execute its loop body at least once since it doesn't get around to checking the loop condition until after execution of the loop body.    What differences between while -loops and do-while -loops do you notice? Are there any similarities in their syntaxes?    We'll look into the do-while -loop in the next section!    "
 },
 {
-  "id": "example-7",
+  "id": "investigation-16",
   "level": "2",
-  "url": "loops-for-while.html#example-7",
-  "type": "Check Your Understanding",
+  "url": "loops-for-while.html#investigation-16",
+  "type": "Investigate",
   "number": "13.1",
   "title": "",
   "body": "  Would a for - or while -loop be more efficient to implement in the following scenario?  In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.    A while -loop    Though this task could technically be accomplished with either type of loop, a while -loop would be more efficient to use, since you don't know how many times the user will input information before that certain \"stop\" integer is entered. With a for -loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A while -loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain \"stop\" integer being entered.   "
 },
 {
-  "id": "example-8",
+  "id": "investigation-17",
   "level": "2",
-  "url": "loops-for-while.html#example-8",
-  "type": "Check Your Understanding",
+  "url": "loops-for-while.html#investigation-17",
+  "type": "Investigate",
   "number": "13.2",
   "title": "",
   "body": "  What differences between while -loops and do-while -loops do you notice? Are there any similarities in their syntaxes?    We'll look into the do-while -loop in the next section!   "
@@ -1868,7 +1868,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "loops-do-while.html#activity-44",
   "type": "Activity",
-  "number": "13.1",
+  "number": "13.3",
   "title": "",
   "body": " Try out the features of the do-while -loop in the code window below. Test what happens if you edit the code so the condition of the loop is NOT met. Change the loop from a do-while -to a while -loop, and see if it produces the same results!    loops do-while  #include <stdio.h> int main(void) { int i = 1; do { printf(\"Hello, World!\\n\"); i++; } while (i < 5); return (0); }   "
 },
@@ -1900,10 +1900,10 @@ var ptx_lunr_docs = [
   "body": " Increment \/ Decrement Operators  loops operators shorthand  Certain incremental and decrement statements, such as the following, are so commonly used in C, especially when working with loops, that there is even a shorthand for the shorthand!  i += 1;  i -= 1;  Because of their ubiquitousness, there is yet another shorthand notation just for these operations of adding one to or subtracting one from a variable!    Do you remember what the following is shorthand notation for:  i += 1;      i = i + 1;    Remember: i += 1; is a compound assignment operation that we just learned about in the previous section!    In the following video, we'll take a look at the shorthand notation that shortens the already short compound assignment operators += and += :    Video Description    Shorthand notation for incrementing and decrementing the same variable  i.e. i++; , ++i  i.e. i--; , --i  Pre- and post-fix notation: the location of ++ or -- either before or after the variable to be modified determines the timing of the update relative to other instructions that are part of the same statement.  NEW SYNTAX: i++ , for example, is equivalent to i = i + 1       What does the following code print to the screen?  int i = 5; i++; printf(\"%d \", i); printf(\"%d \", i++); printf(\"%d \", i--); printf(\"%d \", --i);   6 7 6 5  6 6 7 5  6 7 6 6  5 5 4 4  5 6 5 4   Enter your choice (a\/b\/c\/d\/e):    "
 },
 {
-  "id": "example-9",
+  "id": "investigation-18",
   "level": "2",
-  "url": "loops-operators.html#example-9",
-  "type": "Check Your Understanding",
+  "url": "loops-operators.html#investigation-18",
+  "type": "Investigate",
   "number": "13.4",
   "title": "",
   "body": "  Do you remember what the following is shorthand notation for:  i += 1;      i = i + 1;    Remember: i += 1; is a compound assignment operation that we just learned about in the previous section!   "
@@ -1931,7 +1931,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "loops-operators-practice.html#activity-45",
   "type": "Activity",
-  "number": "13.2",
+  "number": "13.5",
   "title": "",
   "body": " Do you remember what this code prints to the screen?   "
 },
@@ -1940,7 +1940,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "loops-operators-practice.html#activity-46",
   "type": "Activity",
-  "number": "13.3",
+  "number": "13.6",
   "title": "",
   "body": " Now look at the part that is commented out - basically the same printf() statements as above, but this time all in one line. What do you expect this to print to the screen?  Be sure to think about this first, before actually running the code.   "
 },
@@ -1949,7 +1949,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "loops-operators-practice.html#activity-47",
   "type": "Activity",
-  "number": "13.4",
+  "number": "13.7",
   "title": "",
   "body": " Okay, now you can hit the Run button. Is this what you predicted?   What happened?  "
 },
@@ -1963,38 +1963,38 @@ var ptx_lunr_docs = [
   "body": " Fun With Loops!  Remember: the best way to learn to code is to write code! So let's practice our loops. Pick one of the following prompts. And most importantly: have fun! If you get done early, pick another one!   Option 1    Write a program that prompts the user to enter a positive integer n and then computes the sum of the numbers from 1 through n . For example, if the user enters 5, then your program's output should be:  \"The sum of the numbers from 1 through 5 equals 15.\"  A quick way to check that your program works is to ensure that the sum of the numbers from 1 to n equals .  Write two versions of this program: One using a while -loop, and another one using a for -loop.   When you are done, please paste your code into the code submission box below:       Option 2    Write a program that continuously asks the user to enter a nonzero number and adds up all of the numbers entered. The program should terminate when the user enters a zero and then print out the total sum.  Here is a sample run of the program:   Please enter a number:  5  Please enter a number:  11  Please enter a number:  -3  Please enter a number:  0  The numbers you entered add up to 13.    When you are done, please paste the code you  added  into the code submission box below:       Option 3    Write a program that prompts the user for two numbers p and q , then calculates the greatest common divisor of p and q . You may do so using the \"brute force\" method: If q   p , for example, you simply check each of the divisors q, q-1, q-2, ..., 1 , until you find one that divides both p and q .  Challenge: implement the Euclidean algorithm!   When you are done, please paste the code you  added  into the code submission box below:       Option 4    Write a program that determines whether a number entered by the user is prime (again, you may use the brute force method, going through all possible divisors 2, 3, 4, , n ).  (You only really need to check factors up to .)   When you are done, please paste the code you  added  into the code submission box below:      "
 },
 {
-  "id": "activity-48",
+  "id": "activity-13-7-1_Fun_With_Loops_1",
   "level": "2",
-  "url": "loops-fun.html#activity-48",
+  "url": "loops-fun.html#activity-13-7-1_Fun_With_Loops_1",
   "type": "Activity",
-  "number": "13.5",
+  "number": "13.8",
   "title": "",
   "body": "  Write a program that prompts the user to enter a positive integer n and then computes the sum of the numbers from 1 through n . For example, if the user enters 5, then your program's output should be:  \"The sum of the numbers from 1 through 5 equals 15.\"  A quick way to check that your program works is to ensure that the sum of the numbers from 1 to n equals .  Write two versions of this program: One using a while -loop, and another one using a for -loop.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-49",
+  "id": "activity-13-7-2-Fun_With_Loops_2-no-output",
   "level": "2",
-  "url": "loops-fun.html#activity-49",
+  "url": "loops-fun.html#activity-13-7-2-Fun_With_Loops_2-no-output",
   "type": "Activity",
-  "number": "13.6",
+  "number": "13.9",
   "title": "",
   "body": "  Write a program that continuously asks the user to enter a nonzero number and adds up all of the numbers entered. The program should terminate when the user enters a zero and then print out the total sum.  Here is a sample run of the program:   Please enter a number:  5  Please enter a number:  11  Please enter a number:  -3  Please enter a number:  0  The numbers you entered add up to 13.    When you are done, please paste the code you  added  into the code submission box below:    "
 },
 {
-  "id": "activity-50",
+  "id": "activity-13-7-3-Fun_With_Loops_3-no-output",
   "level": "2",
-  "url": "loops-fun.html#activity-50",
+  "url": "loops-fun.html#activity-13-7-3-Fun_With_Loops_3-no-output",
   "type": "Activity",
-  "number": "13.7",
+  "number": "13.10",
   "title": "",
   "body": "  Write a program that prompts the user for two numbers p and q , then calculates the greatest common divisor of p and q . You may do so using the \"brute force\" method: If q   p , for example, you simply check each of the divisors q, q-1, q-2, ..., 1 , until you find one that divides both p and q .  Challenge: implement the Euclidean algorithm!   When you are done, please paste the code you  added  into the code submission box below:    "
 },
 {
-  "id": "activity-51",
+  "id": "activity-13-7-4-Fun_With_Loops_4-no-output",
   "level": "2",
-  "url": "loops-fun.html#activity-51",
+  "url": "loops-fun.html#activity-13-7-4-Fun_With_Loops_4-no-output",
   "type": "Activity",
-  "number": "13.8",
+  "number": "13.11",
   "title": "",
   "body": "  Write a program that determines whether a number entered by the user is prime (again, you may use the brute force method, going through all possible divisors 2, 3, 4, , n ).  (You only really need to check factors up to .)   When you are done, please paste the code you  added  into the code submission box below:    "
 },
@@ -2287,10 +2287,10 @@ var ptx_lunr_docs = [
   "body": " File I\/O Overview  So far, the only way in which we have been able to supply data to our code is via interaction with the user at runtime. We call such program use \"interactive\" the user supplies input.  Input to a program can also come from a data file and this is sometimes called batch mode  a data file provides input to the code.  A data file  is stored somewhere and accessed by your program. The storage location could be your hard disk, a CD-ROM (remember those?), a flash drive, etc.  In C, there are three steps that are necessary to execute in the following order when attempting to read from or write to a file:   Open file  Read\/write to\/from file  Close file   We will now learn about each of these steps in detail.    What do you think are some benefits gained from receiving input from a data file as opposed to interactive user input?    There are many! We'll explore the benefits throughout this chapter and beyond.    "
 },
 {
-  "id": "example-10",
+  "id": "investigation-19",
   "level": "2",
-  "url": "files-intro.html#example-10",
-  "type": "Check Your Understanding",
+  "url": "files-intro.html#investigation-19",
+  "type": "Investigate",
   "number": "15.1",
   "title": "",
   "body": "  What do you think are some benefits gained from receiving input from a data file as opposed to interactive user input?    There are many! We'll explore the benefits throughout this chapter and beyond.   "
@@ -2309,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "files-read.html#activity-63",
   "type": "Activity",
-  "number": "15.1",
+  "number": "15.2",
   "title": "",
   "body": " Use the code window below to find that average!   "
 },
@@ -2323,29 +2323,29 @@ var ptx_lunr_docs = [
   "body": " Practice Reading from Files  Now that you have seen an example of how to read numbers from a file and find their average it's time to practice some more. Pick one of the following options:   Option 1    Modify the program we just wrote so that it also computes the standard deviation of the numbers in the file.  Hint: To do so, you'll first have to find the average (as we did before). Then, you have to reset the file by closing it and re-opening it, then you can read the file again and compute the standard deviation using the following:   For each number you read from the file, subtract the average and square the result.  You need to find the average of those squared differences.  Take the square root of that average squared difference and you are done!    When you are done, please paste your code into the code submission box below:       Option 2    Modify the program we just wrote so that, instead of finding the average of the numbers in the file, it finds the largest number in the file.   When you are done, please paste your code into the code submission box below:       Option 3    Modify the program we just wrote so that instead of reading numbers, it reads characters from the file my_second_file.txt . Print out the characters you read from the file one next to the other.  As before, for now we are telling you how many characters are in the file, namely 9. So that you know what to expect, here is what the contents of the file looks like:  chocolate   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-64",
+  "id": "activity-15-4-1-Practice_Reading_From_Files_1",
   "level": "2",
-  "url": "files-read-practice.html#activity-64",
+  "url": "files-read-practice.html#activity-15-4-1-Practice_Reading_From_Files_1",
   "type": "Activity",
-  "number": "15.2",
+  "number": "15.3",
   "title": "",
   "body": "  Modify the program we just wrote so that it also computes the standard deviation of the numbers in the file.  Hint: To do so, you'll first have to find the average (as we did before). Then, you have to reset the file by closing it and re-opening it, then you can read the file again and compute the standard deviation using the following:   For each number you read from the file, subtract the average and square the result.  You need to find the average of those squared differences.  Take the square root of that average squared difference and you are done!    When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-65",
+  "id": "activity-15-4-2-Practice_Reading_From_Files_2",
   "level": "2",
-  "url": "files-read-practice.html#activity-65",
+  "url": "files-read-practice.html#activity-15-4-2-Practice_Reading_From_Files_2",
   "type": "Activity",
-  "number": "15.3",
+  "number": "15.4",
   "title": "",
   "body": "  Modify the program we just wrote so that, instead of finding the average of the numbers in the file, it finds the largest number in the file.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-66",
+  "id": "activity-15-4-3-Practice_Reading_From_Files_3",
   "level": "2",
-  "url": "files-read-practice.html#activity-66",
+  "url": "files-read-practice.html#activity-15-4-3-Practice_Reading_From_Files_3",
   "type": "Activity",
-  "number": "15.4",
+  "number": "15.5",
   "title": "",
   "body": "  Modify the program we just wrote so that instead of reading numbers, it reads characters from the file my_second_file.txt . Print out the characters you read from the file one next to the other.  As before, for now we are telling you how many characters are in the file, namely 9. So that you know what to expect, here is what the contents of the file looks like:  chocolate   When you are done, please paste your code into the code submission box below:    "
 },
@@ -2368,11 +2368,11 @@ var ptx_lunr_docs = [
   "body": " Check Whether a File Exists  How do we know whether our file is actually open? What if we misspelled the filename for example? Or what if something went wrong during opening of the file? Or what if the file doesn't even exist (but we thought it did)?  file check if exists We use the fact that fopen() returns a special value if it is not able to open the file for some reason. That special value is a NULL pointer .    In , we learned that C interprets variables with the value of zero as false. Do you think that a null pointer will be interpreted as true or false?    False    There are only a few types and values of variables in C that are interpreted as false, and a null pointer is one of them!     Note that in the case where the file isn't actually open (indicated by fopen() returning a value of NULL ) there is no need to close the file. In fact, even attempting to close the file in this case would lead to a runtime error: feel free to try it out!  "
 },
 {
-  "id": "example-11",
+  "id": "investigation-20",
   "level": "2",
-  "url": "files-exist.html#example-11",
-  "type": "Check Your Understanding",
-  "number": "15.2",
+  "url": "files-exist.html#investigation-20",
+  "type": "Investigate",
+  "number": "15.6",
   "title": "",
   "body": "  In , we learned that C interprets variables with the value of zero as false. Do you think that a null pointer will be interpreted as true or false?    False    There are only a few types and values of variables in C that are interpreted as false, and a null pointer is one of them!   "
 },
@@ -2584,9 +2584,9 @@ var ptx_lunr_docs = [
   "body": " Back to File I\/O  Here is our overarching goal:  Write a barcode (UPC) checksum program: Read 12 digits of a barcode from a file. (The first digit indicates the type of product being identified, the next five identify the manufacturer, the next five identify the product, and the last digit (12th digit) is a check digit).  Next, compute the proper check digit: Sum the first, third, fifth, seventh, ninth and eleventh digits, and multiply the result by 3. Next, sum the second, fourth, sixth, eighth, and tenth digits. Add this new sum to the first result. Finally, fin d the smallest number that needs to be added to this total to make it equal a multiple of 10. This number is the check digit.  Print the computed check digit as well as the one read from file.  Here is an example:   Sample Barcode     Your first task: Check by hand if the calculated check digit equals the check digit in the image.  Do the calculations agree with the barcode?   Yes!  No...   Write a C program that reads 12 integers from the file sampleBarcode.txt . Your program should perform the following tasks:   print the barcode to the screen  computes the check digit  compares the computed check digit with the actual check digit  print a message to the screen indicating whether the barcode was correctly read.   The code window below contains a file \"sampleBarcode.txt\" . If you'd rather work on the server then you need to create your own such file and fill it with 12 integers.   When you are done, please paste your code into the code submission box below:      Optional: Make it fancier!    In your previous program, build in a check as to whether the file from which you are reading exists.  Write a C program that asks the user to enter a 12-digit barcode and that saves this barcode in a file (you may choose the filename). Note that you'll have to write this program in your own editor and compile on the server since we cannot write to files from code windows.     "
 },
 {
-  "id": "activity-72",
+  "id": "activity-16-6-1-Barcode_File_IO",
   "level": "2",
-  "url": "debug-barcode.html#activity-72",
+  "url": "debug-barcode.html#activity-16-6-1-Barcode_File_IO",
   "type": "Activity",
   "number": "16.6",
   "title": "",
@@ -2692,27 +2692,27 @@ var ptx_lunr_docs = [
   "body": " Array Practice  Time to practice working with arrays. Remember that practice (which automatically includes making lots of mistakes) is the best way to learn. Please pick and solve at least one of the following problems. If you get done early be sure to move on to one of the other problems!   Option 1    Write a program that does the following: Declare an array of 10 integer values and have the user enter 10 integers which you save in the array (you should use a loop here). Next, print out all 10 values the user has entered.  For example, if the user entered 45, -34, 5, 0, 1, 100, -55, ... then the output should be:  1. 45 2. -34 3. 5 4. 0 5. 1 6. 100 7. -55 ...  Challenge: Write the program so that the number '10' above could be easily replaced with any other integer value (for example 15, or 20, etc), by changing only one value in your program. Hint: use #define .    When you are done, please paste your code into the code submission box below:       Option 2    Write a program that declares an array of 100 floats. Fill this array with the square roots of the numbers 1 - 100 and print the result in the following form:  The square root of 1 equals 1.00000. The square root of 2 equals 1.41421. The square root of 3 equal 1.732051. ...  Note: In order to be able to use the square root function, sqrt() , you need to include the header file for the mathematics library using the command  #include <math.h>  at the top of your program where the other #include directives are located.   When you are done, please paste your code into the code submission box below:       Option 3    Write a program that prompts the user to type in a sentence, and that reads the sentence, character by character, and stores it in an array of characters. Stop reading, when the array is full or the character read is \\n . Next, print out the sentence in reverse.  Here is a sample output:   Enter a sentence:  I love programming.  Reverse: .gnimmargorp evol I    When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-74",
+  "id": "activity-17-4-1-Array_Practice_1",
   "level": "2",
-  "url": "array-practice.html#activity-74",
+  "url": "array-practice.html#activity-17-4-1-Array_Practice_1",
   "type": "Activity",
   "number": "17.1",
   "title": "",
   "body": "  Write a program that does the following: Declare an array of 10 integer values and have the user enter 10 integers which you save in the array (you should use a loop here). Next, print out all 10 values the user has entered.  For example, if the user entered 45, -34, 5, 0, 1, 100, -55, ... then the output should be:  1. 45 2. -34 3. 5 4. 0 5. 1 6. 100 7. -55 ...  Challenge: Write the program so that the number '10' above could be easily replaced with any other integer value (for example 15, or 20, etc), by changing only one value in your program. Hint: use #define .    When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-75",
+  "id": "activity-17-4-2-Array_Practice_2",
   "level": "2",
-  "url": "array-practice.html#activity-75",
+  "url": "array-practice.html#activity-17-4-2-Array_Practice_2",
   "type": "Activity",
   "number": "17.2",
   "title": "",
   "body": "  Write a program that declares an array of 100 floats. Fill this array with the square roots of the numbers 1 - 100 and print the result in the following form:  The square root of 1 equals 1.00000. The square root of 2 equals 1.41421. The square root of 3 equal 1.732051. ...  Note: In order to be able to use the square root function, sqrt() , you need to include the header file for the mathematics library using the command  #include <math.h>  at the top of your program where the other #include directives are located.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-76",
+  "id": "activity-17-4-3-Array_Practice_3",
   "level": "2",
-  "url": "array-practice.html#activity-76",
+  "url": "array-practice.html#activity-17-4-3-Array_Practice_3",
   "type": "Activity",
   "number": "17.3",
   "title": "",
@@ -2728,27 +2728,27 @@ var ptx_lunr_docs = [
   "body": " Advanced Array Practice  More practice? Yes! I don't have to remind you that practice makes perfect, right? Please pick and solve at least one of the following problems:   Option 1    Write a program that prompts the user to enter the weight of a letter and that tells the user the postage necessary to mail this letter with the US Postal Service.  Here is a sample output:   How much does your letter weigh (in ounces):  5.5  The postage is 203 cents.   Note: You can start with the code given below. Postage is calculated based on the next higher weight in the chart.   When you are done, please paste your code into the code submission box below:       Option 2    Write a C-program that finds the largest integer stored in an array of integers. You can write your code so that the array values are entered by the user, or you may simply hardcore an integer array for test purposes as is done below.   When you are done, please paste your code into the code submission box below:       Option 3    Write a C program that finds the average of integer numbers stored in an array. You may have the user enter the array values, or you can simply hard-code the array for testing purposes as is done below.   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-77",
+  "id": "activity-17-5-1-Adv_Array_Practice_1",
   "level": "2",
-  "url": "array-advanced.html#activity-77",
+  "url": "array-advanced.html#activity-17-5-1-Adv_Array_Practice_1",
   "type": "Activity",
   "number": "17.4",
   "title": "",
   "body": "  Write a program that prompts the user to enter the weight of a letter and that tells the user the postage necessary to mail this letter with the US Postal Service.  Here is a sample output:   How much does your letter weigh (in ounces):  5.5  The postage is 203 cents.   Note: You can start with the code given below. Postage is calculated based on the next higher weight in the chart.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-78",
+  "id": "activity-17-5-2-Adv_Array_Practice_2",
   "level": "2",
-  "url": "array-advanced.html#activity-78",
+  "url": "array-advanced.html#activity-17-5-2-Adv_Array_Practice_2",
   "type": "Activity",
   "number": "17.5",
   "title": "",
   "body": "  Write a C-program that finds the largest integer stored in an array of integers. You can write your code so that the array values are entered by the user, or you may simply hardcore an integer array for test purposes as is done below.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-79",
+  "id": "activity-17-5-3-Adv_Array_Practice_3",
   "level": "2",
-  "url": "array-advanced.html#activity-79",
+  "url": "array-advanced.html#activity-17-5-3-Adv_Array_Practice_3",
   "type": "Activity",
   "number": "17.6",
   "title": "",
@@ -2872,9 +2872,9 @@ var ptx_lunr_docs = [
   "body": " Practice Modifying Arrays with Functions    Write a function enterValues() in which you ask the user to enter values to be stored in the array that is passed into the function. You can assume that the constant N holds the size of the array. Call your function from within main() with array as the argument.   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-82",
+  "id": "activity-18-7-1-Practice_Modifying_Arrays_With_Functions",
   "level": "2",
-  "url": "memory-arrays.html#activity-82",
+  "url": "memory-arrays.html#activity-18-7-1-Practice_Modifying_Arrays_With_Functions",
   "type": "Activity",
   "number": "18.3",
   "title": "",
@@ -2926,9 +2926,9 @@ var ptx_lunr_docs = [
   "body": " Practice Your Rounding!    Write a function roundToTwo() that rounds off a floating point value to two decimal places. For example, 5.567 should be rounded to 5.67 and 5.534 should become 5.53.  The prototype for this function should be  double roundToTwo(double);  Please complete the code below.  Challenge: Round to n decimal places (you'll have to pass an additional integer n to the function).   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-84",
+  "id": "activity-18-10-1-Practice_Your_Rounding",
   "level": "2",
-  "url": "memory-rounding-practice.html#activity-84",
+  "url": "memory-rounding-practice.html#activity-18-10-1-Practice_Your_Rounding",
   "type": "Activity",
   "number": "18.5",
   "title": "",
@@ -2944,9 +2944,9 @@ var ptx_lunr_docs = [
   "body": " Overflow  overflow Overflow occurs when a value that you attempt to store in memory is larger than the datatype being used allows.    Remember the binary 2's complement representation of integers?  Using the sizeof() function, please find out how many bits in memory are used to store an integer on our system (recall that the sizeof() function returns the number of bytes ), then use that information to compute the largest integer that can be represented on our system (assuming binary 2's complement is used). Next, please print out this integer as well as the number you obtain when you add 1 to this integer.   If you are done, please modify your code to perform similarly for the data types short and long .  When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-85",
+  "id": "activity-18-11-1-Memory_Overflow",
   "level": "2",
-  "url": "memory-overflow.html#activity-85",
+  "url": "memory-overflow.html#activity-18-11-1-Memory_Overflow",
   "type": "Activity",
   "number": "18.6",
   "title": "",
@@ -3052,11 +3052,11 @@ var ptx_lunr_docs = [
   "body": " Top-Down Design  design top-down Top-Down Design is a method for solving problems in which the problem is broken down into smaller sub-problems , which are solved (perhaps by breaking into sub-sub-problems...) to derive a solution to the main problem.  This is the technique you should use for any problem!  Functions are ideal for this purpose and reinforce this type of solution strategy.    How can implementing a top-down design method while coding potentially lead to an easier debugging process?    While there could be many reasons, one benefit of the top-down design method is that by working in smaller, more tangible pieces of code, it can be easier to see if a certain task is functioning correctly. Once you see that your small bits of code (e.g. functions) are working as planned, then after linking them together, you are more likely to have a successful code than if you blindly wrote it all with no intermediate testing.    "
 },
 {
-  "id": "example-12",
+  "id": "investigation-21",
   "level": "2",
-  "url": "pointers-design.html#example-12",
-  "type": "Check Your Understanding",
-  "number": "19.1",
+  "url": "pointers-design.html#investigation-21",
+  "type": "Investigate",
+  "number": "19.3",
   "title": "",
   "body": "  How can implementing a top-down design method while coding potentially lead to an easier debugging process?    While there could be many reasons, one benefit of the top-down design method is that by working in smaller, more tangible pieces of code, it can be easier to see if a certain task is functioning correctly. Once you see that your small bits of code (e.g. functions) are working as planned, then after linking them together, you are more likely to have a successful code than if you blindly wrote it all with no intermediate testing.   "
 },
@@ -3070,11 +3070,11 @@ var ptx_lunr_docs = [
   "body": " Bottom-Up Testing  testing bottom-up When working on a small sub-sub-problem of a big program via a function it is important to test the function extensively before making it part of the bigger program.  To do so, one simply writes a so-called driver , that is, a main function whose purpose it is to call your new function in order to check whether if works correctly.  Suppose, for example, you are writing the function simplify() that simplifies a fraction. Here is a sample driver to test this function:  int main(void) { int numer = 50; int denom = 10; printf(\"original: %d\/%d\\n\", numer, denom); simplify(&numer, &denom); printf(\"simplified: %d\/%d\\n\", numer, denom); }  There is no point in making this fancy: you'll discard it later!    What should your driver do to the function you are testing?    Provide it with some test inputs!    Using your driver, you'll want to ensure that given certain inputs, your function outputs expected results. Whether you pass an integer, some floats, an array, or potentially nothing (if it's a void function), the return value(s) or output from the function should match what you expect. If not, you will know something needs fixing...    "
 },
 {
-  "id": "example-13",
+  "id": "investigation-22",
   "level": "2",
-  "url": "pointers-bottom-up-testing.html#example-13",
-  "type": "Check Your Understanding",
-  "number": "19.2",
+  "url": "pointers-bottom-up-testing.html#investigation-22",
+  "type": "Investigate",
+  "number": "19.4",
   "title": "",
   "body": "  What should your driver do to the function you are testing?    Provide it with some test inputs!    Using your driver, you'll want to ensure that given certain inputs, your function outputs expected results. Whether you pass an integer, some floats, an array, or potentially nothing (if it's a void function), the return value(s) or output from the function should match what you expect. If not, you will know something needs fixing...   "
 },
@@ -3187,29 +3187,29 @@ var ptx_lunr_docs = [
   "body": " Practice Passing Arrays to Functions  Time to practice! Please pick and solve at least one of the following problems. If you get done early please pick another problem!   Option 1    Write a program that does the following: Declare an array of 10 integer values and pass the array to a function in which you have the user enter 10 integers which you save in the array (you should use a loop here). Next, use a second function to print out all 10 values the user has entered.  For example, if the user entered 45, -34, 5, 0, 1, 100, -55,... then the output should be:  1. 45 2. -34 3. 5 4. 0 5. 1 6. 100 7. -55 ...  Does this problem look familiar? You have worked on this before, just not using functions. Below is the code we wrote previously for this problem.   When you are done, please paste your code into the code submission box below:       Option 2    Write a program that declares an array of 100 floats. Then call a function, to which you pass the array, which fills the array with the square roots of the numbers 1 - 100. Next, call another function to print the numbers stored in the array in the following form:  The square root of 1 equals 1.00000. The square root of 2 equals 1.41421. The square root of 3 equal 1.732051. ...  Note: In order to be able to use the square root function ( sqrt() ), you need to include the header file for the mathematics library using the command  #include <math.h>  at the top of your program where the other #include directives are located.  Does this problem look familiar? You have worked on this before, just not using functions. Below is the code we wrote previously for this problem.   When you are done, please paste your code into the code submission box below:       Option 3    Write a program that prompts the user to type in a sentence, and that reads the sentence, character by character, and stores it in an array of characters. Stop reading, when the array is full or the character read is \\n . Next, print out the sentence in reverse. Your program should use two functions: one function to read from the user input the relevant sentence, and another function to print the sentence in reverse. You'll also need to think about passing along the length of the sentence entered by the user.  Here is a sample output:   Enter a sentence:  I love programming.  Reverse: .gnimmargorp evol I   Does this problem look familiar? You have worked on this before, just not using functions. Below is the code we wrote previously for this problem.   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-88",
+  "id": "activity-19-11-1-Passing_Arrays_To_Functions_1",
   "level": "2",
-  "url": "pointers-functions-practice.html#activity-88",
+  "url": "pointers-functions-practice.html#activity-19-11-1-Passing_Arrays_To_Functions_1",
   "type": "Activity",
-  "number": "19.3",
+  "number": "19.5",
   "title": "",
   "body": "  Write a program that does the following: Declare an array of 10 integer values and pass the array to a function in which you have the user enter 10 integers which you save in the array (you should use a loop here). Next, use a second function to print out all 10 values the user has entered.  For example, if the user entered 45, -34, 5, 0, 1, 100, -55,... then the output should be:  1. 45 2. -34 3. 5 4. 0 5. 1 6. 100 7. -55 ...  Does this problem look familiar? You have worked on this before, just not using functions. Below is the code we wrote previously for this problem.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-89",
+  "id": "activity-19-11-2-Passing_Arrays_To_Functions_2",
   "level": "2",
-  "url": "pointers-functions-practice.html#activity-89",
+  "url": "pointers-functions-practice.html#activity-19-11-2-Passing_Arrays_To_Functions_2",
   "type": "Activity",
-  "number": "19.4",
+  "number": "19.6",
   "title": "",
   "body": "  Write a program that declares an array of 100 floats. Then call a function, to which you pass the array, which fills the array with the square roots of the numbers 1 - 100. Next, call another function to print the numbers stored in the array in the following form:  The square root of 1 equals 1.00000. The square root of 2 equals 1.41421. The square root of 3 equal 1.732051. ...  Note: In order to be able to use the square root function ( sqrt() ), you need to include the header file for the mathematics library using the command  #include <math.h>  at the top of your program where the other #include directives are located.  Does this problem look familiar? You have worked on this before, just not using functions. Below is the code we wrote previously for this problem.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-90",
+  "id": "activity-19-11-3-Passing_Arrays_To_Functions_3",
   "level": "2",
-  "url": "pointers-functions-practice.html#activity-90",
+  "url": "pointers-functions-practice.html#activity-19-11-3-Passing_Arrays_To_Functions_3",
   "type": "Activity",
-  "number": "19.5",
+  "number": "19.7",
   "title": "",
   "body": "  Write a program that prompts the user to type in a sentence, and that reads the sentence, character by character, and stores it in an array of characters. Stop reading, when the array is full or the character read is \\n . Next, print out the sentence in reverse. Your program should use two functions: one function to read from the user input the relevant sentence, and another function to print the sentence in reverse. You'll also need to think about passing along the length of the sentence entered by the user.  Here is a sample output:   Enter a sentence:  I love programming.  Reverse: .gnimmargorp evol I   Does this problem look familiar? You have worked on this before, just not using functions. Below is the code we wrote previously for this problem.   When you are done, please paste your code into the code submission box below:    "
 },
@@ -3223,29 +3223,29 @@ var ptx_lunr_docs = [
   "body": " Arrays, Functions, and Pointer Arithmetic  More practice! Remember: practice makes perfect. Please pick and solve at least one of the following problems:   Option 1   Write a program that prompts the user to enter the weight of a letter and that tells the user the postage necessary to mail this letter with the US Postal Service.  Here is a sample output:   How much does your letter weigh (in ounces):  5.5  The postage is 203 cents.   Note: You can start with the code given below. Postage is calculated based on the next higher weight in the chart.  Your program should use a function, to which you pass the two relevant arrays along with their sizes, as well as the weight entered by the user, and which returns the corresponding postage. The final version of your program should use pointer arithmetic .  Does this problem look familiar? You have worked on this before, just not using functions or pointer arithmetic. Below is the code we wrote previously for this problem.   When you are done, please put your code into the code submission box below:      Option 2   Write a C-program that finds the largest integer stored in an array of integers. You can write your code so that the array values are entered by the user (use a function for this), or you may simply hardcode an integer array for test purposes. For the main task you should definitely use a function, to which you pass the array as well as its size, and which returns the largest integer stored in the array. Your function should not access any array elements using [] , but rather you should use pointer arithmetic .  Does this problem look familiar? You have worked on this before, just not using functions or pointer arithmetic. Below is the code we wrote previously for this problem.   When you are done, please put your code into the code submission box below:      Option 3   Write a C program that finds the average of integer numbers stored in an array. You may have the user enter the array values via a function, or you can simply hard-code the array for testing purposes. For the main task you should definitely use a function to which you pass the array as well as its size, and which returns the average of the numbers stored in the array. Your function should use pointer arithmetic .  Does this problem look familiar? You have worked on this before, just not using functions or pointer arithmetic. Below is the code we wrote previously for this problem.   When you are done, please put your code into the code submission box below:     "
 },
 {
-  "id": "activity-91",
+  "id": "activity-19-12-1-Option_1",
   "level": "2",
-  "url": "pointers-arithmetic.html#activity-91",
+  "url": "pointers-arithmetic.html#activity-19-12-1-Option_1",
   "type": "Activity",
-  "number": "19.6",
+  "number": "19.8",
   "title": "",
   "body": " Write a program that prompts the user to enter the weight of a letter and that tells the user the postage necessary to mail this letter with the US Postal Service.  Here is a sample output:   How much does your letter weigh (in ounces):  5.5  The postage is 203 cents.   Note: You can start with the code given below. Postage is calculated based on the next higher weight in the chart.  Your program should use a function, to which you pass the two relevant arrays along with their sizes, as well as the weight entered by the user, and which returns the corresponding postage. The final version of your program should use pointer arithmetic .  Does this problem look familiar? You have worked on this before, just not using functions or pointer arithmetic. Below is the code we wrote previously for this problem.   When you are done, please put your code into the code submission box below:   "
 },
 {
-  "id": "activity-92",
+  "id": "activity-19-12-2-Option_2",
   "level": "2",
-  "url": "pointers-arithmetic.html#activity-92",
+  "url": "pointers-arithmetic.html#activity-19-12-2-Option_2",
   "type": "Activity",
-  "number": "19.7",
+  "number": "19.9",
   "title": "",
   "body": " Write a C-program that finds the largest integer stored in an array of integers. You can write your code so that the array values are entered by the user (use a function for this), or you may simply hardcode an integer array for test purposes. For the main task you should definitely use a function, to which you pass the array as well as its size, and which returns the largest integer stored in the array. Your function should not access any array elements using [] , but rather you should use pointer arithmetic .  Does this problem look familiar? You have worked on this before, just not using functions or pointer arithmetic. Below is the code we wrote previously for this problem.   When you are done, please put your code into the code submission box below:   "
 },
 {
-  "id": "activity-93",
+  "id": "activity-19-12-3-Option_3",
   "level": "2",
-  "url": "pointers-arithmetic.html#activity-93",
+  "url": "pointers-arithmetic.html#activity-19-12-3-Option_3",
   "type": "Activity",
-  "number": "19.8",
+  "number": "19.10",
   "title": "",
   "body": " Write a C program that finds the average of integer numbers stored in an array. You may have the user enter the array values via a function, or you can simply hard-code the array for testing purposes. For the main task you should definitely use a function to which you pass the array as well as its size, and which returns the average of the numbers stored in the array. Your function should use pointer arithmetic .  Does this problem look familiar? You have worked on this before, just not using functions or pointer arithmetic. Below is the code we wrote previously for this problem.   When you are done, please put your code into the code submission box below:   "
 },
@@ -3268,10 +3268,10 @@ var ptx_lunr_docs = [
   "body": " Declaring and Initializing Strings  strings Suppose you wanted to store a name (for example \"Petra\") in the computer's memory. Of course you could simply declare five individual characters and assign the letters of the name to them. But that's not very convenient and we already know that an array of characters would be a much better option. We could then simply use a loop to print out all of the characters one-by-one. The only slight issue would be that we'd have to keep track of the length of the name somewhere in order to be able to tell the loop how many times to run. Not a huge deal really, and we are already used to doing so for other arrays.  But C actually provides some additional functionality for storing so-called strings that makes it unnecessary to separately keep track of the length of the string. How? An extra character (the null terminator \\0 ) is placed after the last character in the array in order to indicate the end of the string. And so:  A string is an array of type char that is terminated with the null character \\0 . By the way, the null terminator (character) is the character in the ASCII table with ASCII code 0.  We have already been using string constants (that cannot be changed), for example:  printf(\"This is a string constant.\\n\");  But it is very useful to have variables that can hold strings (for example, filenames). In the following example we use a variable of type string (so really, an array of characters), to hold a first name and a last name. You can see from the example how you can initialize such a variable at declaration time . Sadly things won't be quite as easy elsewhere in our code but more on that later.     How much space is allocated in memory for the string firstName if each char uses 1 byte?    6 bytes    The contents of this string include the name we are storing, \"Petra\", followed by the null character \\0 which signifies the termination of the string. Each character uses 1 byte, so together we have 5 bytes for the name plus one for the null character. That adds up to 6 bytes total!  Feel free to check this logic using the sizeof() function and the %zu format specifier, as discussed in .    "
 },
 {
-  "id": "example-14",
+  "id": "investigation-23",
   "level": "2",
-  "url": "strings-intro.html#example-14",
-  "type": "Check Your Understanding",
+  "url": "strings-intro.html#investigation-23",
+  "type": "Investigate",
   "number": "20.1",
   "title": "",
   "body": "  How much space is allocated in memory for the string firstName if each char uses 1 byte?    6 bytes    The contents of this string include the name we are storing, \"Petra\", followed by the null character \\0 which signifies the termination of the string. Each character uses 1 byte, so together we have 5 bytes for the name plus one for the null character. That adds up to 6 bytes total!  Feel free to check this logic using the sizeof() function and the %zu format specifier, as discussed in .   "
@@ -3286,20 +3286,20 @@ var ptx_lunr_docs = [
   "body": " Assign a New Value  strings update Just like the variables we have previously worked with, strings can also be updated after they are initialized.   Can you assign a new string value to firstName in the code? For example, can you use the following line?  firstName = \"Alex\";   Please paste your text submission into the box below, then select Run to submit it:      We declare strings as arrays of type char , so is it possible to include numbers within these strings? For example, could we declare the following string?  char firstName[] = \"Simon1234\";      Yes, numbers can be included!    Numbers are characters too, so they can be included in strings. This logic is not reversible, however, so you cannot include letters within a numerical array (such as an integer array).  Try it out above by declaring a string with numbers in it and an integer array with letters in it.    "
 },
 {
-  "id": "activity-94",
+  "id": "activity-20-1-1-New_String_Value-no-output",
   "level": "2",
-  "url": "strings-assign.html#activity-94",
+  "url": "strings-assign.html#activity-20-1-1-New_String_Value-no-output",
   "type": "Activity",
-  "number": "20.1",
+  "number": "20.2",
   "title": "",
   "body": " Can you assign a new string value to firstName in the code? For example, can you use the following line?  firstName = \"Alex\";   Please paste your text submission into the box below, then select Run to submit it:   "
 },
 {
-  "id": "example-15",
+  "id": "investigation-24",
   "level": "2",
-  "url": "strings-assign.html#example-15",
-  "type": "Check Your Understanding",
-  "number": "20.2",
+  "url": "strings-assign.html#investigation-24",
+  "type": "Investigate",
+  "number": "20.3",
   "title": "",
   "body": "  We declare strings as arrays of type char , so is it possible to include numbers within these strings? For example, could we declare the following string?  char firstName[] = \"Simon1234\";      Yes, numbers can be included!    Numbers are characters too, so they can be included in strings. This logic is not reversible, however, so you cannot include letters within a numerical array (such as an integer array).  Try it out above by declaring a string with numbers in it and an integer array with letters in it.   "
 },
@@ -3322,11 +3322,11 @@ var ptx_lunr_docs = [
   "body": " Practice Your Strings!   Take a look at the code and then hit the Run button. Is that the output you expected? What is going on with the code here?   Please paste your text submission into the box below, then select Run to submit it:    "
 },
 {
-  "id": "activity-95",
+  "id": "activity-20-4-1-String_Practice-no-output",
   "level": "2",
-  "url": "strings-practice.html#activity-95",
+  "url": "strings-practice.html#activity-20-4-1-String_Practice-no-output",
   "type": "Activity",
-  "number": "20.2",
+  "number": "20.4",
   "title": "",
   "body": " Take a look at the code and then hit the Run button. Is that the output you expected? What is going on with the code here?   Please paste your text submission into the box below, then select Run to submit it:   "
 },
@@ -3340,11 +3340,11 @@ var ptx_lunr_docs = [
   "body": " String Length  strings length C can find the length of a string for you! Of course, you could do so yourself. This means that strings are fundamentally different from general arrays, in that their length can be determined due to the placement of the null character at the end of each string.     Without using strlen() , how could you find the length of a string?    Remember, all strings are terminated by the null character \/0 .    Try your solution in the code window above, then compare it to the length provided when using strlen() to ensure your solution works.    "
 },
 {
-  "id": "example-16",
+  "id": "investigation-25",
   "level": "2",
-  "url": "strings-length.html#example-16",
-  "type": "Check Your Understanding",
-  "number": "20.3",
+  "url": "strings-length.html#investigation-25",
+  "type": "Investigate",
+  "number": "20.5",
   "title": "",
   "body": "  Without using strlen() , how could you find the length of a string?    Remember, all strings are terminated by the null character \/0 .    Try your solution in the code window above, then compare it to the length provided when using strlen() to ensure your solution works.   "
 },
@@ -3358,11 +3358,11 @@ var ptx_lunr_docs = [
   "body": " Reading Strings from Input  strings read from input format specifiers %s The scanf() function can be used to read a string from the user input using the %s format specifier. By default, reading stops when white space (i.e. a space, return, etc.) is encountered. There are many options to modify this behavior so that the reading stops based on different conditions (if interested: Google).  The below example shows how to read a two words (a first name and a last name) from the user input and store them in corresponding strings.     Why is the ampersand character & missing in front of firstName and lastName in the above scanf() statement?    Remember, a string is really an array of characters (with the null terminator placed at the end). Do you remember what an array variable really stores?.    The variable firstName (and also the variable lastName), without any brackets placed behind it, stores the address of the zeroth element of the array (so the first letter of the name in this case). Since it is already an address there is no need to place an additional & operator in front of it since that would get you the address of the address!    "
 },
 {
-  "id": "example-17",
+  "id": "investigation-26",
   "level": "2",
-  "url": "strings-input.html#example-17",
-  "type": "Check Your Understanding",
-  "number": "20.4",
+  "url": "strings-input.html#investigation-26",
+  "type": "Investigate",
+  "number": "20.6",
   "title": "",
   "body": "  Why is the ampersand character & missing in front of firstName and lastName in the above scanf() statement?    Remember, a string is really an array of characters (with the null terminator placed at the end). Do you remember what an array variable really stores?.    The variable firstName (and also the variable lastName), without any brackets placed behind it, stores the address of the zeroth element of the array (so the first letter of the name in this case). Since it is already an address there is no need to place an additional & operator in front of it since that would get you the address of the address!   "
 },
@@ -3389,7 +3389,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "strings-alphabetize.html#activity-96",
   "type": "Activity",
-  "number": "20.3",
+  "number": "20.7",
   "title": "",
   "body": " Which strings come first in the alphabet?   "
 },
@@ -3466,18 +3466,18 @@ var ptx_lunr_docs = [
   "body": " Malloc and Free Practice  Time to practice! Please pick and solve at least one of the following problems:   Option 1    Write a program that does the following:  In the main function, ask the user to enter a number of integers they wish to store, and then allocate memory for a large enough array to hold all of these numbers. Next, call a function userInput() , to which you pass the array along with the size of the array, in which the user enters the desired integers which are then saved in the array. Next, your main function should call a printArray() function (to which you again pass the array and its size), and which prints out all values the user has entered.  Your main function should thus look as follows:  #include <stdio.h> #include <stdlib.h> \/* prototypes here... *\/ int main (void) { int *numbers; int size; \/* Have user enter size... *\/ numbers = (int *) malloc(...); userInput(size, numbers); printArray(size, numbers); free(numbers); return(0); }   When you are done, please paste your code into the code submission box below:       Option 2    Write a simple C-program with a main function and a function allocateString() that allocates memory for strings. The allocateString() function should be declared as returning a pointer to a char type (namely holding the location of the string), and it takes as argument an integer, representing the number of characters to allocate space for in memory.  Your main function should call allocateString() with an argument large enough to hold the sentence I love programming! (don't forget about needing space for the null terminator), and then copy this sentence into the space pointed to by the returned pointer. Next, you should print the sentence (using the pointer) and then free the pointer.   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-97",
+  "id": "activity-21-4-1-Malloc_Free_Practice_1",
   "level": "2",
-  "url": "malloc-practice.html#activity-97",
+  "url": "malloc-practice.html#activity-21-4-1-Malloc_Free_Practice_1",
   "type": "Activity",
   "number": "21.1",
   "title": "",
   "body": "  Write a program that does the following:  In the main function, ask the user to enter a number of integers they wish to store, and then allocate memory for a large enough array to hold all of these numbers. Next, call a function userInput() , to which you pass the array along with the size of the array, in which the user enters the desired integers which are then saved in the array. Next, your main function should call a printArray() function (to which you again pass the array and its size), and which prints out all values the user has entered.  Your main function should thus look as follows:  #include <stdio.h> #include <stdlib.h> \/* prototypes here... *\/ int main (void) { int *numbers; int size; \/* Have user enter size... *\/ numbers = (int *) malloc(...); userInput(size, numbers); printArray(size, numbers); free(numbers); return(0); }   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-98",
+  "id": "activity-21-4-2-Malloc_Free_Practice_2",
   "level": "2",
-  "url": "malloc-practice.html#activity-98",
+  "url": "malloc-practice.html#activity-21-4-2-Malloc_Free_Practice_2",
   "type": "Activity",
   "number": "21.2",
   "title": "",
@@ -3493,18 +3493,18 @@ var ptx_lunr_docs = [
   "body": " String Practice  Have you ever wondered how to store a bunch of names in an array? You'd need an array of strings. But each string on its own is already an array of characters. Yikes! You'd therefore need an array of arrays! This sounds rather complicated but now we actually have all of the tools needed to do so. Before embarking on the array of strings challenge, let's quickly review strings on their own. Please pick and solve at least one of the following problems:   Option 1    Write a C program with a function printString() that takes a string (i.e. a char * ) as an argument and prints the string, with individual characters separated by spaces. Here is an example:  printString(\"chocolate\");  should print  c h o c o l a t e  and  printString(\"I love chocolate!\");  should print  I l o v e c h o c o l a t e !   When you are done, please paste your code into the code submission box below:       Option 2    Write a C program with a function countWords() that takes a string as an input parameter and returns the number of words in the string.  For example,  countWords(\"Today is Wednesday!\");  should return the number 3.   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-99",
+  "id": "activity-21-5-1-String_Practice_1",
   "level": "2",
-  "url": "malloc-strings.html#activity-99",
+  "url": "malloc-strings.html#activity-21-5-1-String_Practice_1",
   "type": "Activity",
   "number": "21.3",
   "title": "",
   "body": "  Write a C program with a function printString() that takes a string (i.e. a char * ) as an argument and prints the string, with individual characters separated by spaces. Here is an example:  printString(\"chocolate\");  should print  c h o c o l a t e  and  printString(\"I love chocolate!\");  should print  I l o v e c h o c o l a t e !   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-100",
+  "id": "activity-21-5-2-String_Practice_2",
   "level": "2",
-  "url": "malloc-strings.html#activity-100",
+  "url": "malloc-strings.html#activity-21-5-2-String_Practice_2",
   "type": "Activity",
   "number": "21.4",
   "title": "",
@@ -3520,9 +3520,9 @@ var ptx_lunr_docs = [
   "body": " Arrays of Strings  How do we store a list of names in an array? A name is stored in an array of characters, so we kind of need an array of arrays? We'll talk about such multi-dimensional arrays soon, but for now we'll use a slightly different method: an array of pointers.   Write a C program that reads a list of first names from the file \"names.txt\" (a test file can be accessed in the coding window below if you are using our code tool - if you work on the servers directly, please simply create your own input file \"names.txt\" ). For each name that you read you need to reserve space in memory using malloc() to store the name. To do so, you can either read the name first into a temporary variable, find its length, and then allocate the relevant memory (don't forget about the null terminator), or you may assume that no name has more than 50 characters and allocate that same amount of space for each name read. In addition to allocating space for the name read and placing the name read into that space, you also need to store the pointer to the name in an array of pointers. You may assume that there are no more than 20 names in the file.  When you are done reading all of the names, call a function printNames() , to which you pass the array of pointers along with the number of names you read, and which prints out the list of names. Finally, call a function freeNames() , to which you again pass the array of pointers as well as the number of names stored in it, and which frees the space allocated for each name.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-101",
+  "id": "activity-21-6-1-Array_of_Strings-no-output",
   "level": "2",
-  "url": "malloc-array-strings.html#activity-101",
+  "url": "malloc-array-strings.html#activity-21-6-1-Array_of_Strings-no-output",
   "type": "Activity",
   "number": "21.5",
   "title": "",
@@ -3610,9 +3610,9 @@ var ptx_lunr_docs = [
   "body": " Linear Search Practice    You are conducting a linguistic study and are interested in finding words that contain the letter 't' or 'T' in the first half of the word (including the middle letter if there is one). Specifically, if the first half of the word does contain a 't' or a 'T', your program's output should be a 1, if the first half does not contain the letter 't' or 'T', but the second half does, then your program should output a 2. Otherwise (if there is no 't' or 'T' in the word at all), your program's output should be -1. You may assume that the word entered does not have more than 50 letters.  Here are some examples:   Input:  apple  Output: -1  Input:  raincoat  Output: 2  Input:  enter  Output: 1  Input:  Taylor  Output: 1    When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-102",
+  "id": "activity-22-3-1-Linear_Search_Practice",
   "level": "2",
-  "url": "sortsearch-linear-practice.html#activity-102",
+  "url": "sortsearch-linear-practice.html#activity-22-3-1-Linear_Search_Practice",
   "type": "Activity",
   "number": "22.1",
   "title": "",
@@ -3664,9 +3664,9 @@ var ptx_lunr_docs = [
   "body": " Selection Sort  sort selection Selection Sort is one of the simplest sorting techniques. Suppose you wanted to sort from smallest to largest. Here are the steps:   Search through the list for the smallest element.  Swap the smallest element with the first element.  Continue\/repeat with the reduced list (since the first element is already in its correct place).   The following visualization might help more clearly describe this process:  ADAMSAPPLET style=\"width:50%; height:150px; margin-left:auto; margin-right:auto;\" data-program=\"sorters\" data-types=\"sel-uno-bac\" data-size=\"20\" data-duplicates=\"2\" data-order=\"319,locked\" ENDADAMSAPPLET    Please implement the selection sort algorithm to sort the given array of numbers. Use a function to which you pass the unsorted array as well as its number of elements, and which sorts the array 'in place', meaning that the unsorted array is replaced by the sorted array (rather than creating a sorted copy). You can use the given function printArray() to check whether your algorithm performed correctly.   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-103",
+  "id": "activity-22-5-1-Selection_Sort_Practice",
   "level": "2",
-  "url": "sortsearch-selection.html#activity-103",
+  "url": "sortsearch-selection.html#activity-22-5-1-Selection_Sort_Practice",
   "type": "Activity",
   "number": "22.2",
   "title": "",
@@ -3718,9 +3718,9 @@ var ptx_lunr_docs = [
   "body": " Sort Arrays   Suppose you have declared two arrays:  int numbers[]={5, -1, 8, 4, 0, -10}; int sort[6];  What values should you place in your sort array so the following loop prints out the list of numbers, sorted from smallest to largest?  for (i=0; i<6; i++) { printf(\"%d, \", numbers[sort[i]]); }  Please paste your text submission into the box below, then select Run to submit it:    "
 },
 {
-  "id": "activity-105",
+  "id": "activity-22-9-1-Sort_Arrays-no-output",
   "level": "2",
-  "url": "sortsearch-arrays.html#activity-105",
+  "url": "sortsearch-arrays.html#activity-22-9-1-Sort_Arrays-no-output",
   "type": "Activity",
   "number": "22.4",
   "title": "",
@@ -3736,18 +3736,18 @@ var ptx_lunr_docs = [
   "body": " Implementing Sort Arrays   Printing  sort array print When printing out arrays the order of whose elements is given by a sort array, it is important to not only pass the array itself to the printing routine but also include the sort array (how else would the routine be able to know the correct order).    Please write a function printArray() , to which you pass the number of elements in your list to be sorted as well as the list and the sort array. The function should print the list in the order defined by the sort array.   When you are done, please paste your code into the code submission box below:       Sorting  sort array sorting When sorting arrays using a sort array, when your code finds values whose locations should be swapped, instead of swapping the values in the array, swap their respective elements of the sort array.    Please implement the function sortArray() , to which you pass the number of elements in your list to be sorted, the unsorted array as well as a sort array, and which sorts the array, using bubble sort, by making changes only to the sort array.   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-106",
+  "id": "activity-22-10-1-Implementing_Sort_Arrays_Printing",
   "level": "2",
-  "url": "sortsearch-implementing.html#activity-106",
+  "url": "sortsearch-implementing.html#activity-22-10-1-Implementing_Sort_Arrays_Printing",
   "type": "Activity",
   "number": "22.5",
   "title": "",
   "body": "  Please write a function printArray() , to which you pass the number of elements in your list to be sorted as well as the list and the sort array. The function should print the list in the order defined by the sort array.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-107",
+  "id": "activity-22-10-2-Implementing_Sort_Arrays_Sorting",
   "level": "2",
-  "url": "sortsearch-implementing.html#activity-107",
+  "url": "sortsearch-implementing.html#activity-22-10-2-Implementing_Sort_Arrays_Sorting",
   "type": "Activity",
   "number": "22.6",
   "title": "",
@@ -3853,9 +3853,9 @@ var ptx_lunr_docs = [
   "body": " Practice Your Multidimensional Arrays!  The program below reads a text, word by word, from the file \"reverseText.txt\" , which is located on our code server. It then stores this text in an array of strings (thus a two-dimensional array of characters) and subsequently prints this text to the screen.    Your first job is to write a function printText() , to which you pass the array of strings as well as the number of words stored in the array, and which prints the text to the screen (thereby making the corresponding lines in the main function redundant: you can delete those lines).  You may notice that the text makes no sense. Your second job, therefore, is to print the text in reverse. You only have to reverse the order of the words, not the characters in an individual word. Please use a function printReverseText() for this purpose.   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-108",
+  "id": "activity-24-5-1-Practice_Multidimensional_Arrays",
   "level": "2",
-  "url": "multiarray-practice.html#activity-108",
+  "url": "multiarray-practice.html#activity-24-5-1-Practice_Multidimensional_Arrays",
   "type": "Activity",
   "number": "24.1",
   "title": "",
@@ -3898,81 +3898,81 @@ var ptx_lunr_docs = [
   "body": " The Fraction Calculator Using Structures   Define a New Data Type  fraction calculator using structures Remember our fraction calculator? We'll start rewriting it using structures now.    Let's start by defining a new data type fraction_t , designed to store the numerator and denominator of a fraction (as integers). Try implementing this below:   When you are done, please paste your code into the code submission box below:       Declare the Variables    Now that we have our fraction type, let's declare two variables, frac1 and frac2 , of this type, and make them correspond to the fractions and .   When you are done, please paste your code into the code submission box below:       Print the Fractions  Now let's see if we can print out these fractions.    What's the best way to go about that?   When you are done, please paste your code into the code submission box below:       Adding Fractions    Since we are working on a fraction calculator, how would we go about adding these two fractions? Let's store the result in a third variable, result. Can we simply say the following?  result = frac1 + frac2   When you are done, please paste your code into the code submission box below:       Print-Fraction Function  You can see that it would be great to write some functions in order to re-use our code.    Let's try to write a function that prints a fraction.   When you are done, please paste your code into the code submission box below:       Add-Fractions Function    Now let's try our luck with a function that adds two fractions...   When you are done, please paste your code into the code submission box below:       Enter-Fraction Function    Now we need a function that allows the user to enter a fraction. Be sure to prevent the user from entering a denominator of zero!   When you are done, please paste your code into the code submission box below:       Multiplying Fractions  Multiplying two fractions is now easy!    Let's multiply two fractions!   When you are done, please paste your code into the code submission box below:       Additional Steps    What else do we need to make our fraction calculator work?   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-109",
+  "id": "activity-25-3-1-Frac_Calc_Define_Datatype",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-109",
+  "url": "structures-frac-calc.html#activity-25-3-1-Frac_Calc_Define_Datatype",
   "type": "Activity",
   "number": "25.1",
   "title": "",
   "body": "  Let's start by defining a new data type fraction_t , designed to store the numerator and denominator of a fraction (as integers). Try implementing this below:   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-110",
+  "id": "activity-25-3-2-Frac_Calc_Declare_Variables",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-110",
+  "url": "structures-frac-calc.html#activity-25-3-2-Frac_Calc_Declare_Variables",
   "type": "Activity",
   "number": "25.2",
   "title": "",
   "body": "  Now that we have our fraction type, let's declare two variables, frac1 and frac2 , of this type, and make them correspond to the fractions and .   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-111",
+  "id": "activity-25-3-3--Frac_Calc_Print_Fractions",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-111",
+  "url": "structures-frac-calc.html#activity-25-3-3--Frac_Calc_Print_Fractions",
   "type": "Activity",
   "number": "25.3",
   "title": "",
   "body": "  What's the best way to go about that?   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-112",
+  "id": "activity-25-3-4-Frac_Calc_Adding_Fractions",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-112",
+  "url": "structures-frac-calc.html#activity-25-3-4-Frac_Calc_Adding_Fractions",
   "type": "Activity",
   "number": "25.4",
   "title": "",
   "body": "  Since we are working on a fraction calculator, how would we go about adding these two fractions? Let's store the result in a third variable, result. Can we simply say the following?  result = frac1 + frac2   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-113",
+  "id": "activity-25-3-5-Frac_Calc_Print_Fraction_Function",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-113",
+  "url": "structures-frac-calc.html#activity-25-3-5-Frac_Calc_Print_Fraction_Function",
   "type": "Activity",
   "number": "25.5",
   "title": "",
   "body": "  Let's try to write a function that prints a fraction.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-114",
+  "id": "activity-25-3-6-Frac_Calc_Add_Fractions_Function",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-114",
+  "url": "structures-frac-calc.html#activity-25-3-6-Frac_Calc_Add_Fractions_Function",
   "type": "Activity",
   "number": "25.6",
   "title": "",
   "body": "  Now let's try our luck with a function that adds two fractions...   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-115",
+  "id": "activity-25-3-7-Frac_Calc_Enter_Fraction_Function",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-115",
+  "url": "structures-frac-calc.html#activity-25-3-7-Frac_Calc_Enter_Fraction_Function",
   "type": "Activity",
   "number": "25.7",
   "title": "",
   "body": "  Now we need a function that allows the user to enter a fraction. Be sure to prevent the user from entering a denominator of zero!   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-116",
+  "id": "activity-25-3-8_Multiplying_Fractions",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-116",
+  "url": "structures-frac-calc.html#activity-25-3-8_Multiplying_Fractions",
   "type": "Activity",
   "number": "25.8",
   "title": "",
   "body": "  Let's multiply two fractions!   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-117",
+  "id": "activity-25-3-9-Frac_Calc_Additional_Steps",
   "level": "2",
-  "url": "structures-frac-calc.html#activity-117",
+  "url": "structures-frac-calc.html#activity-25-3-9-Frac_Calc_Additional_Steps",
   "type": "Activity",
   "number": "25.9",
   "title": "",
@@ -3988,11 +3988,11 @@ var ptx_lunr_docs = [
   "body": " Passing Structures to Functions   Passing by Value  In the next video we'll learn how to pass structures to functions by value.  structures pass-to-function by value Passing by value means that a copy will be made of the data stored in the structure. We will therefore have access to all of the data stored in the structure variable but we cannot modify it within the function (since all we'd end up doing is modify the copies of the values).    Imagine we declare a structure named student in both the main() function and in a new function, and we then pass the structure from the main() function into our new one by value. If we now change a value within the new function's structure, will it affect the original structure?    No!    Remember when we discussed what not to name your variables in ? Just because we named the structures the same thing doesn't mean they are the same! Soon we'll learn how to pass structures by reference...    We'll work with the following structure example:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  This stores student data (first and last name, birth year and average grade) in a structure.  The following Codecast shows you how to pass a student record to a function in order to print the record. Note that in the video we do not use typedef for the sole reason that sadly, typedef has not (yet) been implemented in the recording software.    Video Description    Structures can be passed to functions  NEW SYNTAX: the following line is a prototype for a function that receives the structure struct student by value and names the received structure var in the function:  void function(struct student var);     Suppose you have declared a structure to hold student data as in the video:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?   double compareStudents(stud1, stud2);  struct student compareStudents(struct student stud1, struct student stud2);  double compareStudents(struct student stud1, struct student stud2);   Enter your choice (a\/b\/c):    In the same scenario as in the previous question, where you have declared a structure to hold student data via:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  and are writing a function compareStudents() which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:    double lower; if (stud1.aveGrade<stud2.aveGrade) lower = stud1.aveGrade; else lower = stud2.aveGrade;    double lower; if (aveGrade(stud1)<aveGrade(stud2)) lower = stud1.aveGrade; else lower = stud2.aveGrade;    double lower; lower = stud1.aveGrade<stud2.aveGrade;    Enter your choice (a\/b\/c):      Passing by Reference  structures pass-to-function by reference If we want to be able to modify a structure variable from within a function we need to pass a pointer to this variable to the function - just as we do for regular variables. In other words, we need to pass the variable to the function \"by reference\". In the next video we'll learn how to do so.    Video Description    Passing a structure pointer follows previously learned methods  The address of the structure is passed to a function, i.e. &variable  Pointers can be dereferenced in a function using *       What is wrong with the following piece of code and how would you fix it?  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; }; int main(void) { struct student me = {\"Petra\", \"Bonfert-Taylor\", 2001, 3.8}; struct student * studentptr = &me; *studentptr.birthYear = 1998; return 0; }   The second-to-last line of code should be (*studentptr.birthYear) = 1998;  The second-to-last line of code should be (&studentptr).birthYear = 1998;  The second-to-last line of code should be (*studentptr).birthYear = 1998;  There is nothing wrong with this code.   Enter your choice (a\/b\/c\/d):     "
 },
 {
-  "id": "example-18",
+  "id": "investigation-27",
   "level": "2",
-  "url": "structures-functions.html#example-18",
-  "type": "Check Your Understanding",
-  "number": "25.1",
+  "url": "structures-functions.html#investigation-27",
+  "type": "Investigate",
+  "number": "25.10",
   "title": "",
   "body": "  Imagine we declare a structure named student in both the main() function and in a new function, and we then pass the structure from the main() function into our new one by value. If we now change a value within the new function's structure, will it affect the original structure?    No!    Remember when we discussed what not to name your variables in ? Just because we named the structures the same thing doesn't mean they are the same! Soon we'll learn how to pass structures by reference...   "
 },
@@ -4150,9 +4150,9 @@ var ptx_lunr_docs = [
   "body": " Arrays of Structures  array structures structures arrays We'll now look at storing multiple structures in an array. As an example you might think of creating a record (structure) for each student in a class, consisting of the student's name, year of birth and GPA. You could then store the information for all students in a class in an array with each array elements being a student structure. You'd thus have an array of structures.  Let's practice! Rather than using student data, in today's class we'd like to store the vertices of a polygon in an array of structures. Each vertex consists of an x- and a y-coordinate. In order to efficiently store these coordinates for a point we'll define a new structure, called point_t , that stores these coordinates for a given point. The code window below already has such a structure defined.    Let's warm up by quickly writing some functions that serve to assign values to a variable of type point_t and print the coordinates of a variable of type point_t .  More specifically:   write a function initializePoint() to which you pass a variable of type point_t (by reference) along with two floats, and that assigns the first float to the x-coordinate and the second float to the y-coordinate of the point.  write a function printPoint() to which you pass a variable of type point_t (by value) and that prints out the coordinates of the variable in the form (x,y).    When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-118",
+  "id": "activity-26-2-1-Array_Structures_Practice",
   "level": "2",
-  "url": "arraystruct-structures.html#activity-118",
+  "url": "arraystruct-structures.html#activity-26-2-1-Array_Structures_Practice",
   "type": "Activity",
   "number": "26.1",
   "title": "",
@@ -4168,27 +4168,27 @@ var ptx_lunr_docs = [
   "body": " Arrays of Structures: Triangle  We can now put multiple points together and store them in an array of points (which is an array of structures). Three points stored together could be viewed as the vertices of a triangle, for example. Four points might give you a quadrilateral, five points a pentagon, etc.   Declare a Triangle    So let’s declare a triangle. To do so, all we need is an array that holds three points, thus an array with three elements of type point_t . Declare a variable triangle with these features.   When you are done, please paste your piece of code into the code submission box below:       Store Vertices    Now store the vertices (0,0), (2,0), (1,3) in the variable triangle, using the function initializePoint() .   When you are done, please paste your code into the code submission box below:       Print Triangle    Write a function printTriangle() to which you pass an array of three points, and which prints out the coordinates of these three points. The function printTriangle() should call the function printPoint() .   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-119",
+  "id": "activity-26-3-1-Array_Structures_Triangle-no-output",
   "level": "2",
-  "url": "arraystruct-triangle.html#activity-119",
+  "url": "arraystruct-triangle.html#activity-26-3-1-Array_Structures_Triangle-no-output",
   "type": "Activity",
   "number": "26.2",
   "title": "",
   "body": "  So let’s declare a triangle. To do so, all we need is an array that holds three points, thus an array with three elements of type point_t . Declare a variable triangle with these features.   When you are done, please paste your piece of code into the code submission box below:    "
 },
 {
-  "id": "activity-120",
+  "id": "activity-26-3-2-Array_Structures_Store_Triangle_Vertices",
   "level": "2",
-  "url": "arraystruct-triangle.html#activity-120",
+  "url": "arraystruct-triangle.html#activity-26-3-2-Array_Structures_Store_Triangle_Vertices",
   "type": "Activity",
   "number": "26.3",
   "title": "",
   "body": "  Now store the vertices (0,0), (2,0), (1,3) in the variable triangle, using the function initializePoint() .   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-121",
+  "id": "activity-26-3-3-Array_Structures_Print_Triangle",
   "level": "2",
-  "url": "arraystruct-triangle.html#activity-121",
+  "url": "arraystruct-triangle.html#activity-26-3-3-Array_Structures_Print_Triangle",
   "type": "Activity",
   "number": "26.4",
   "title": "",
@@ -4204,9 +4204,9 @@ var ptx_lunr_docs = [
   "body": " Dynamic Arrays of Structures  Why stop at triangles? Suppose we wanted to store polygons with variable numbers of vertices.  Recall that in order to reserve space in memory (for example for an array whose size only becomes known at run-time of your program) we use the function malloc() whose prototype is  void * malloc(size_t size);  Here, size is the total amount of space you need for your data. For example, if you wanted to store 10 structures of type point_t you'd need space in the amount of 10*sizeof(point_t).  Also recall that in order to use malloc() you need to  #include <stdlib.h>    Write a function createPolygon() to which you can pass an integer and that reserves space in memory for an array of points of that size and returns a pointer to that array. Just to be on the safe side, have this function also initialize all coordinates to (0.0,0.0).   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-122",
+  "id": "activity-26-4-1-Dynamic_Array_Structures",
   "level": "2",
-  "url": "arraystruct-dynamic.html#activity-122",
+  "url": "arraystruct-dynamic.html#activity-26-4-1-Dynamic_Array_Structures",
   "type": "Activity",
   "number": "26.5",
   "title": "",
@@ -4222,27 +4222,27 @@ var ptx_lunr_docs = [
   "body": " Dynamic Arrays of Structures: Pentagon   Declare Vertices    Use the function createPolygon to create a pentagon (5 vertices) with vertices (0,0), (1,0), (2,1), (1,3), (0,1).   When you are done, please paste your code into the code submission box below:       Print Pentagon    Finally... Write a function printPoly() to which you pass a polygon and a number (its number of vertices), and which prints out these vertices.   When you are done, please paste your code into the code submission box below:       Don't forget to free()!    One last step, free the allocated memory!   When you are done, please paste your code into the code submission box below:      "
 },
 {
-  "id": "activity-123",
+  "id": "activity-26-5-1-Dynamic_Array_Structures_Pentagon",
   "level": "2",
-  "url": "arraystruct-pentagon.html#activity-123",
+  "url": "arraystruct-pentagon.html#activity-26-5-1-Dynamic_Array_Structures_Pentagon",
   "type": "Activity",
   "number": "26.6",
   "title": "",
   "body": "  Use the function createPolygon to create a pentagon (5 vertices) with vertices (0,0), (1,0), (2,1), (1,3), (0,1).   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-124",
+  "id": "activity-26-5-2-Dynamic_Array_Structures_Print_Pentagon",
   "level": "2",
-  "url": "arraystruct-pentagon.html#activity-124",
+  "url": "arraystruct-pentagon.html#activity-26-5-2-Dynamic_Array_Structures_Print_Pentagon",
   "type": "Activity",
   "number": "26.7",
   "title": "",
   "body": "  Finally... Write a function printPoly() to which you pass a polygon and a number (its number of vertices), and which prints out these vertices.   When you are done, please paste your code into the code submission box below:    "
 },
 {
-  "id": "activity-125",
+  "id": "activity-26-5-3-Dynamic_Array_Structures_Free",
   "level": "2",
-  "url": "arraystruct-pentagon.html#activity-125",
+  "url": "arraystruct-pentagon.html#activity-26-5-3-Dynamic_Array_Structures_Free",
   "type": "Activity",
   "number": "26.8",
   "title": "",
@@ -4357,18 +4357,18 @@ var ptx_lunr_docs = [
   "body": " Arbitrarily Large Integers   Recall that the data types int and long int have limits on the size of numbers they can store. Why again is this so?  Please paste your text submission into the box below, then select Run to submit it:    linked lists digits In order to be able to store arbitrarily large integers we'll create a linked list of digits. This will allow us to store as many digits as we'd like (up to the amount of memory available in the computer of course.)    Define a structure struct digit suitable for this purpose.  When you are done, please paste your structure into the code submission box below:     "
 },
 {
-  "id": "activity-126",
+  "id": "activity-27-5-1-Data_Type_Limits-no-output",
   "level": "2",
-  "url": "linkedlists-large-ints.html#activity-126",
+  "url": "linkedlists-large-ints.html#activity-27-5-1-Data_Type_Limits-no-output",
   "type": "Activity",
   "number": "27.1",
   "title": "",
   "body": " Recall that the data types int and long int have limits on the size of numbers they can store. Why again is this so?  Please paste your text submission into the box below, then select Run to submit it:   "
 },
 {
-  "id": "activity-127",
+  "id": "activity-27-5-2-Linked_List_Large_Ints-no-output",
   "level": "2",
-  "url": "linkedlists-large-ints.html#activity-127",
+  "url": "linkedlists-large-ints.html#activity-27-5-2-Linked_List_Large_Ints-no-output",
   "type": "Activity",
   "number": "27.2",
   "title": "",
@@ -4384,9 +4384,9 @@ var ptx_lunr_docs = [
   "body": " Create Digits in Memory  It's time to create some digits! Remember, each digit can store the actual numerical value to be saved as well as a pointer to the next digit in the number.    Please write the function createDigit() which receives an integer (0-9) as an argument and which creates space in memory for a digit of type digit_t . The function should store the integer passed into it in this newly created digit and then return the address of this digit to the calling function. The function should furthermore initialize the pointer next as the NULL pointer, just to be safe.   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-128",
+  "id": "activity-27-6-1-Linked_List_Create_Digits",
   "level": "2",
-  "url": "linkedlists-digits.html#activity-128",
+  "url": "linkedlists-digits.html#activity-27-6-1-Linked_List_Create_Digits",
   "type": "Activity",
   "number": "27.3",
   "title": "",
@@ -4402,9 +4402,9 @@ var ptx_lunr_docs = [
   "body": " Append Digits to List  Now that we can create new digits in memory, the next step is to be able to link digits together into a number (= a linked list of digits). We'll take an iterative approach in which we simply keep adding on digits to the current end of our list of numbers.    Please write the function append() which takes two digit_t pointers as arguments:   a pointer to the current last element of the list  a pointer to the element that is to be appended to the list   Since by appending a new digit the end of the list will change, the function needs to return a pointer to the new last element of the list. Please also print the (three-digit) number stored in the newly created list and next free the space reserved for all digits.   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-129",
+  "id": "activity-27-7-1-Linked_List_Append_To_List",
   "level": "2",
-  "url": "linkedlists-append.html#activity-129",
+  "url": "linkedlists-append.html#activity-27-7-1-Linked_List_Append_To_List",
   "type": "Activity",
   "number": "27.4",
   "title": "",
@@ -4420,9 +4420,9 @@ var ptx_lunr_docs = [
   "body": " Function to Print a Number  So far we have only printed a 3-digit number by dereferencing successively the pointers to the three digits. This is not something that could be generalized to an arbitrarily long number and that's why next our goal is to print an arbitrary number using a function to which we only pass a pointer to the first digit of the number.    Let's move the printing of our number into a function. The function should work for arbitrarily long numbers, not just for our 3-digit number. Please write a function printNumber() to which you pass a pointer to the first digit of your number and which prints all of the digits of the number to the screen. The function does not need to return anything.   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-130",
+  "id": "activity-27-8-1-Linked_List_Print_Function",
   "level": "2",
-  "url": "linkedlists-print.html#activity-130",
+  "url": "linkedlists-print.html#activity-27-8-1-Linked_List_Print_Function",
   "type": "Activity",
   "number": "27.5",
   "title": "",
@@ -4438,9 +4438,9 @@ var ptx_lunr_docs = [
   "body": " Function to Free a Number  Remember: Whenever you reserve space dynamically (at run-time) using a function such as malloc() it is also your responsibility to free the reserved space once you are done using it.    Next, let's move the freeing of all allocated space for a number into a function. The function should again work for arbitrarily long numbers, not just for our 3-digit number. Please write a function freeNumber() to which you pass a pointer to the first digit of your number and which frees the space allocated for all of the digits of the number. The function does not need to return anything.   When you are done, please paste your code into the code submission box below:     "
 },
 {
-  "id": "activity-131",
+  "id": "activity-27-9-1-Linked_List_Free",
   "level": "2",
-  "url": "linkedlists-free.html#activity-131",
+  "url": "linkedlists-free.html#activity-27-9-1-Linked_List_Free",
   "type": "Activity",
   "number": "27.6",
   "title": "",
@@ -4546,9 +4546,9 @@ var ptx_lunr_docs = [
   "body": " Intro to Libraries  Now that we have created our own data types and functions that allow us to manipulate instances of objects of these new types it is common to package such functions as a library . Take as an example our arbitrarily large integers. In order to allow others to use these numbers in their code it would make sense to hide and package up all the work and messiness that goes into creating such a number. You'd probably even want to provide some additional functionality such as adding, subtracting, multiplying, dividing two such number and then hand all that to a user who just wants to be able to work with really large numbers (but has no interest in how you implemented that functionality). That's where libraries come in.  libraries We have actually already encountered libraries in our work, for example the standard input\/output library stdio , the standard library stdlib and the math library math . Each such library actually comes with two files, one ending in .h (the so-called header file ) and one ending in .o (the so-called object file .  The header file contains all of the prototypes of functions from the library (remember, the compiler needs to know about these prototypes so that it can check whether you are using your functions correctly). That's why we need to #include ... the header files of those libraries whose functions we wish to invoke in our code.  The object file contains the actual library functions in machine language. It's already been translated by the compiler so that when you build your program you don't have to compile the entire library each time around. You can simply link the translated code contained in the library object file to your own code (that's what the linker does.)  So here is an example. Suppose you are writing a C-program coolProgram.c that uses functions from the two libraries stdio and math . In order for the compiler to have access to all of the function prototypes from these libraries, we need to:  #include <stdio.h> #include <math.h>  Once your program compiles without any compiler errors, the compiler produces an object file coolProgram.o , which is your code, translated into machine language. Next, the linker starts its job and finds the object files that contain the input\/output functions and math functions used in your program, namely stdio.o and math.o . These object files contain all of these functions already compiled into machine language. The linker then links (packages) these object files together with the object file coolProgram.o of the program you are writing, and if all goes well, an executable file results.   Which of the following are part of a library?   a header file  an object file  source code   Please paste your text submission into the box below, then select Run to submit it:    "
 },
 {
-  "id": "activity-134",
+  "id": "activity-28-1-1-Library_Parts-no-output",
   "level": "2",
-  "url": "libraries-intro.html#activity-134",
+  "url": "libraries-intro.html#activity-28-1-1-Library_Parts-no-output",
   "type": "Activity",
   "number": "28.1",
   "title": "",
@@ -4564,9 +4564,9 @@ var ptx_lunr_docs = [
   "body": " Library Components  libraries components header file object file A library consists of a header file (.h) and an object file (.o) .   For example, for the standard library stdlib , the header file, which you include via  #include <stdlib.h>  contains prototypes for standard functions like:  int abs(int x); void *calloc(size_t nitems, size_t size); void *malloc(size_t size); void free(void *block); int atoi(const char *s);  The actual object file is part of your C distribution. We never get to see the actual source code.   What do you think the function atoi() does?  Please paste your text submission into the box below, then select Run to submit it:     "
 },
 {
-  "id": "activity-135",
+  "id": "activity-28-2-1-ATOI_Function-no-output",
   "level": "2",
-  "url": "libraries-components.html#activity-135",
+  "url": "libraries-components.html#activity-28-2-1-ATOI_Function-no-output",
   "type": "Activity",
   "number": "28.2",
   "title": "",
@@ -4609,9 +4609,9 @@ var ptx_lunr_docs = [
   "body": " Create A Complex Number Library  Let's give this a try! We'll now create our own library, namely a complex number library (note that C does not come with a complex number data type).  A complex number     has a real part x and an imaginary part y. Often, we write z in polar form also as     where is the absolute value (also called magnitude) of the complex number and is the argument (also called phase of the number).  complex numbers Again, C does not provide a built-in complex data type (many other languages do), so we must create our own.    Please declare a new datatype complex_t that stores the real part \"real\" and the imaginary part \"imag\" of a complex number as floats.  When you are done, please paste your datatype into the code submission box below:     "
 },
 {
-  "id": "activity-136",
+  "id": "activity-28-6-1-Libraries_Complex_Numbers-no-output",
   "level": "2",
-  "url": "libraries-complex.html#activity-136",
+  "url": "libraries-complex.html#activity-28-6-1-Libraries_Complex_Numbers-no-output",
   "type": "Activity",
   "number": "28.3",
   "title": "",

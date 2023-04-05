@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.5.4';
+eBookConfig.runestone_version = '6.6.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runtime.0d64a5199ae36cbe.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1058,14 +1058,14 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <div class="para" id="p-1063">How do we know whether our file is actually open? What if we misspelled the filename for example? Or what if something went wrong during opening of the file? Or what if the file doesn't even exist (but we thought it did)?</div>
 <div class="para" id="p-1064">We use the fact that <code class="code-inline tex2jax_ignore">fopen()</code> returns a special value if it is not able to open the file for some reason. That special value is a <em class="alert">NULL pointer</em>.</div>
-<article class="example example-like" id="example-11"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-11"><h3 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-11"><article class="example example-like"><div class="para" id="p-1065">In <a href="branching-operators.html" class="internal" title="Section 9.3: Relational and Equality Operators">Section 9.3</a>, we learned that C interprets variables with the value of zero as false. Do you think that a null pointer will be interpreted as true or false?</div>
+<article class="investigation project-like" id="investigation-20"><h3 class="heading">
+<span class="type">Investigate</span><span class="space"> </span><span class="codenumber">15.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1065">In <a href="branching-operators.html" class="internal" title="Section 9.3: Relational and Equality Operators">Section 9.3</a>, we learned that C interprets variables with the value of zero as false. Do you think that a null pointer will be interpreted as true or false?</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><div class="para" id="p-1066">False</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><div class="para" id="p-1067">There are only a few types and values of variables in C that are interpreted as false, and a null pointer is one of them!</div></div></div>
-</div></article></div>
-<p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO7.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO7.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+</div></article><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO7.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO7.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO7.c&amp;nocheck=true" frameborder="0" width="100%" height="500"></iframe><div class="para" id="p-1068">Note that in the case where the file isn't actually open (indicated by <code class="code-inline tex2jax_ignore">fopen()</code> returning a value of <code class="code-inline tex2jax_ignore">NULL</code>) there is no need to close the file. In fact, even attempting to close the file in this case would lead to a runtime error: feel free to try it out!</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="files-read-efficient.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="files-read-server.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

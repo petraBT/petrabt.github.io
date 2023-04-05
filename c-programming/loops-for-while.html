@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.5.4';
+eBookConfig.runestone_version = '6.6.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runtime.0d64a5199ae36cbe.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1093,24 +1093,25 @@ while (i&gt;5) {
 <li id="li-355"><div class="para" id="p-derived-li-355">Use a <code class="code-inline tex2jax_ignore">for</code>-loop when you have a known number of iterations.</div></li>
 <li id="li-356"><div class="para" id="p-derived-li-356">Use a <code class="code-inline tex2jax_ignore">while</code>-loop when you have an unspecified number of iterations.</div></li>
 </ul>
-<article class="example example-like" id="example-7"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h3 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><div class="para" id="p-895">Would a <code class="code-inline tex2jax_ignore">for</code>- or <code class="code-inline tex2jax_ignore">while</code>-loop be more efficient to implement in the following scenario?</div> <div class="para" id="p-896"><em class="emphasis">In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.</em></div>
+<article class="investigation project-like" id="investigation-16"><h3 class="heading">
+<span class="type">Investigate</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-895">Would a <code class="code-inline tex2jax_ignore">for</code>- or <code class="code-inline tex2jax_ignore">while</code>-loop be more efficient to implement in the following scenario?</div> <div class="para" id="p-896"><em class="emphasis">In your program, you want to use a loop to continuously get input from the user, and you want to continue to take in user input until a certain integer is entered.</em></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><div class="para" id="p-897">A <code class="code-inline tex2jax_ignore">while</code>-loop</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="para" id="p-898">Though this task could technically be accomplished with either type of loop, a <code class="code-inline tex2jax_ignore">while</code>-loop would be more efficient to use, since you don't know how many times the user will input information before that certain "stop" integer is entered. With a <code class="code-inline tex2jax_ignore">for</code>-loop, you'd have to prescribe a certain number of iterations through the loop, but you don't know this number up front! A <code class="code-inline tex2jax_ignore">while</code>-loop does not need to be told how many times to iterate, rather it can simply run until it finds that certain "stop" integer being entered.</div></div></div>
-</div></article></div>
-<div class="para" id="p-899">Clearly, the following would be difficult to accomplish with a <code class="code-inline tex2jax_ignore">for</code>-loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.</div>
+</div></article><div class="para" id="p-899">Clearly, the following would be difficult to accomplish with a <code class="code-inline tex2jax_ignore">for</code>-loop. We are asking the user to enter a positive number, and in case they accidentally put in a negative number, have them repeat the input.</div>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nloop9.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop9.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop9.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><div class="para" id="p-900">In the previous example, we had to type the <code class="code-inline tex2jax_ignore">scanf()</code> statement twice: once to read the user input and then one more time in case they entered something negative by accident. This is not the most elegant code (though perfectly acceptable). So there is a third kind of loop that helps in such a case, the <code class="code-inline tex2jax_ignore">do-while</code>-loop:</div>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nloop10.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop10.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nloop10.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><div class="para" id="p-901">Unlike our previous two types of loops, a <code class="code-inline tex2jax_ignore">do-while</code> loop is guaranteed to execute its loop body at least once since it doesn't get around to checking the loop condition until after execution of the loop body.</div>
-<article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h3 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><div class="para" id="p-902">What differences between <code class="code-inline tex2jax_ignore">while</code>-loops and <code class="code-inline tex2jax_ignore">do-while</code>-loops do you notice? Are there any similarities in their syntaxes?</div>
+<article class="investigation project-like" id="investigation-17"><h3 class="heading">
+<span class="type">Investigate</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-902">What differences between <code class="code-inline tex2jax_ignore">while</code>-loops and <code class="code-inline tex2jax_ignore">do-while</code>-loops do you notice? Are there any similarities in their syntaxes?</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><div class="para" id="p-903">We'll look into the <code class="code-inline tex2jax_ignore">do-while</code>-loop in the next section!</div></div></div>
-</div></article></div></section></div>
+</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="loops-while.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="loops-do-while.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

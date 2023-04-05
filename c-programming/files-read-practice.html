@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.5.4';
+eBookConfig.runestone_version = '6.6.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runtime.0d64a5199ae36cbe.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1060,32 +1060,38 @@ eBookConfig.enable_chatcodes =  false;
 <section class="subsection" id="subsection-54"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.3.1</span> <span class="title">Option 1</span>
 </h3>
-<article class="activity project-like" id="activity-64"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span>
+<article class="activity project-like" id="activity-15-4-1-Practice_Reading_From_Files_1"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.3</span><span class="period">.</span>
 </h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="shortanswer" data-question_label="" class="journal" data-mathjax="" id="activity-15-4-1-Practice_Reading_From_Files_1" data-placeholder="You can write here, and it will be saved on this device, but your response will not be graded.">
 <div class="para" id="p-1048">Modify the program we just wrote so that it also computes the standard deviation of the numbers in the file.</div> <div class="para" id="p-1049">Hint: To do so,  you'll first have to find the average (as we did before). Then, you have to “reset” the file by closing it and re-opening it, then you can read the file again and compute the standard deviation using the following:</div> <ol class="decimal">
 <li id="li-453"><div class="para" id="p-derived-li-453">For each number you read from the file, subtract the average and square the result.</div></li>
 <li id="li-454"><div class="para" id="p-derived-li-454">You need to find the average of <em class="alert">those</em> squared differences.</div></li>
 <li id="li-455"><div class="para" id="p-derived-li-455">Take the square root of that average squared difference and you are done!</div></li>
 </ol> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO2.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO2.c&amp;nocheck=true" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1050"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div></article></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO2.c&amp;nocheck=true" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1050"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div>
+</div></div></div></article></section><section class="subsection" id="subsection-55"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.3.2</span> <span class="title">Option 2</span>
 </h3>
-<article class="activity project-like" id="activity-65"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.3</span><span class="period">.</span>
-</h4>
-<div class="para" id="p-1051">Modify the program we just wrote so that, instead of finding the average of the numbers in the file, it finds the largest number in the file.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO3.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO3.c&amp;nocheck=true" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1052"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">15.3.3</span> <span class="title">Option 3</span>
-</h3>
-<article class="activity project-like" id="activity-66"><h4 class="heading">
+<article class="activity project-like" id="activity-15-4-2-Practice_Reading_From_Files_2"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.4</span><span class="period">.</span>
 </h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="shortanswer" data-question_label="" class="journal" data-mathjax="" id="activity-15-4-2-Practice_Reading_From_Files_2" data-placeholder="You can write here, and it will be saved on this device, but your response will not be graded.">
+<div class="para" id="p-1051">Modify the program we just wrote so that, instead of finding the average of the numbers in the file, it finds the largest number in the file.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO3.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO3.c&amp;nocheck=true" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1052"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div>
+</div></div></div></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">15.3.3</span> <span class="title">Option 3</span>
+</h3>
+<article class="activity project-like" id="activity-15-4-3-Practice_Reading_From_Files_3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">15.5</span><span class="period">.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="shortanswer" data-question_label="" class="journal" data-mathjax="" id="activity-15-4-3-Practice_Reading_From_Files_3" data-placeholder="You can write here, and it will be saved on this device, but your response will not be graded.">
 <div class="para" id="p-1053">Modify the program we just wrote so that instead of reading numbers, it reads characters from the file <code class="code-inline tex2jax_ignore">my_second_file.txt</code>. Print out the characters you read from the file one next to the other.</div> <div class="para" id="p-1054">As before, for now we are telling you how many characters are in the file, namely 9. So that you know what to expect, here is what the contents of the file looks like:</div>
 <pre class="code-block tex2jax_ignore">chocolate
 </pre>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO4.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO4.c&amp;nocheck=true" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1055"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div></article></section></section></div>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO4.c&amp;nocheck=true" frameborder="0" width="100%" height="400"></iframe> <div class="para" id="p-1055"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div>
+</div></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="files-read.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="files-read-efficient.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

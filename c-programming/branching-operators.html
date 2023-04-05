@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.5.4';
+eBookConfig.runestone_version = '6.6.1';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runtime.0d64a5199ae36cbe.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.5.4/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.5.4/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1073,9 +1073,10 @@ eBookConfig.enable_chatcodes =  false;
 <code class="code-inline tex2jax_ignore">!=</code> not equal to</div></li>
 <li id="li-216"><div class="para" id="p-derived-li-216"> <code class="code-inline tex2jax_ignore">==</code> equal to (note the double equal sign; the single equal sign <code class="code-inline tex2jax_ignore">=</code> has already been 'used up' for our assignment operator)</div></li>
 </ul>
-<article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h3 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">9.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><div class="para" id="p-713">Which of the following variables would C interpret as "true"? For example, if each variable was placed in the following code's <code class="code-inline tex2jax_ignore">if</code> statement as "variable", would the program output "True" or "False"?</div> <ol class="decimal">
+<article class="investigation project-like" id="investigation-10"><h3 class="heading">
+<span class="type">Investigate</span><span class="space"> </span><span class="codenumber">9.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-713">Which of the following variables would C interpret as "true"? For example, if each variable was placed in the following code's <code class="code-inline tex2jax_ignore">if</code> statement as "variable", would the program output "True" or "False"?</div> <ol class="decimal">
 <li id="li-217"><pre class="code-block tex2jax_ignore">int a = -1
 </pre></li>
 <li id="li-218"><pre class="code-block tex2jax_ignore">char b = 'b'
@@ -1094,8 +1095,7 @@ else{
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="para" id="p-714">C will interpret the variables <code class="code-inline tex2jax_ignore">a</code>, <code class="code-inline tex2jax_ignore">b</code>, and <code class="code-inline tex2jax_ignore">d</code> as "True", and the variable <code class="code-inline tex2jax_ignore">c</code> as "False"</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para" id="p-715">In C, any nonzero integer or float is interpreted as true, as well as any character.</div></div></div>
-</div></article></div>
-<div class="para" id="p-716">A true logical relation evaluates to 1, whereas a false relation evaluates to 0. Examples:</div>
+</div></article><div class="para" id="p-716">A true logical relation evaluates to 1, whereas a false relation evaluates to 0. Examples:</div>
 <ul class="disc">
 <li id="li-221"><div class="para" id="p-derived-li-221">Suppose x has the value 3.5. Then <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> evaluates to 1.</div></li>
 <li id="li-222"><div class="para" id="p-derived-li-222">Suppose next that x has the value 7. Then <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> evaluates to 0.</div></li>
@@ -1103,17 +1103,17 @@ else{
 <code class="code-inline tex2jax_ignore">(age == 30)</code> evaluates to 1 if indeed age has the value 30, otherwise it evaluates to 0.</div></li>
 </ul>
 <div class="para" id="p-717">Note: Instead of <code class="code-inline tex2jax_ignore">(x &lt;= 5.0)</code> you could also write <code class="code-inline tex2jax_ignore">(5.0 &gt;= x)</code>, and instead of <code class="code-inline tex2jax_ignore">(age == 30)</code> you could just as well write <code class="code-inline tex2jax_ignore">(30 == age)</code>.</div>
-<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h3 class="heading">
-<span class="type">Check Your Understanding</span><span class="space"> </span><span class="codenumber">9.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><div class="para" id="p-718">Does the following statement, which is comparing two characters, evaluate to <em class="emphasis">true</em> or <em class="emphasis">false</em>, according to C?</div>
+<article class="investigation project-like" id="investigation-11"><h3 class="heading">
+<span class="type">Investigate</span><span class="space"> </span><span class="codenumber">9.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-718">Does the following statement, which is comparing two characters, evaluate to <em class="emphasis">true</em> or <em class="emphasis">false</em>, according to C?</div>
 <pre class="code-block tex2jax_ignore">('A' &gt; 'a')
 </pre>
 <div class="para" id="p-719"></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><div class="para" id="p-720">False</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="para" id="p-721">Recall that characters are really stored as their ASCII codes in memory. Therefore, when comparing characters, C really compares their ASCII codes. In this case, we have 'A'=65 and 'a'=97. Sure enough, 65 is not greater than 97, so the above statement evaluates to <em class="emphasis">false</em>.</div></div></div>
-</div></article></div>
-<div class="para" id="p-722">Let's look at an example.</div>
+</div></article><div class="para" id="p-722">Let's look at an example.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1512413350447" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1512413350447" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-19"><h3 class="heading"><span class="title">Video Description.</span></h3>
 <div class="para logical" id="p-723"><ul class="disc">
@@ -1126,7 +1126,7 @@ else{
 </h3>
 <article class="exercise exercise-like" id="quiz-branching-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="para" id="p-724">You are writing a C program that calculates the price of a rental car, depending on how many miles the user wants to drive. If the user drives less than 50 miles then the price of the car is a flat fee of $40. If on the other hand the user drives 50 or more miles, then the cost is computed as $0.70 per mile plus a handling fee of $5.</div> <div class="para" id="p-725">Please complete the following C program: After the user has entered the number of miles they wish to drive, the program should output the price of the rental car in dollars (with two decimal places).</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NAGbranching4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGbranching4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGbranching4.c" frameborder="0" width="100%" height="300"></iframe> <div class="para" id="p-726"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter below. Please enter the keyword exactly as given to you (without the quotation marks).</em></div></article></section></section></div>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NAGbranching4.c" frameborder="0" width="100%" height="300"></iframe> <div class="para" id="p-726"><em class="emphasis">When your program performs correctly you'll be given a keyword to enter in Canvas.</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="branching-if-else.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="branching-if-else-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
