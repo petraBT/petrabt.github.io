@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.6.1';
+eBookConfig.runestone_version = '6.6.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runtime.66b619f51b746382.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1056,31 +1056,31 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linkedlists-reverse"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">27.12</span> <span class="title">Reverse a Linked List</span>
 </h2>
-<div class="para" id="p-1730">In this video we'll continue working on our arbitrarily long integers and examine how to create a backward copy of one such integer.</div>
-<div class="para" id="p-1731">Note that the <code class="code-inline tex2jax_ignore">typedef</code> command does not work properly in the environment in which this lecture is recorded, hence its use is avoided for the purpose of the recordings only.</div>
+<div class="para" id="p-1929">In this video we'll continue working on our arbitrarily long integers and examine how to create a backward copy of one such integer.</div>
+<div class="para" id="p-1930">Note that the <code class="code-inline tex2jax_ignore">typedef</code> command does not work properly in the environment in which this lecture is recorded, hence its use is avoided for the purpose of the recordings only.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521831954448" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521831954448" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-66"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1732"><ul class="disc">
-<li id="li-866"><div class="para" id="p-derived-li-866">A linked list can be reversed by reordering the pointers that connect the list</div></li>
-<li id="li-867"><div class="para" id="p-derived-li-867">Check out either the Codecast or printed code for the full and lengthy example!</div></li>
+<div class="para logical" id="p-1931"><ul class="disc">
+<li id="li-755"><div class="para" id="p-derived-li-755">A linked list can be reversed by reordering the pointers that connect the list</div></li>
+<li id="li-756"><div class="para" id="p-derived-li-756">Check out either the Codecast or printed code for the full and lengthy example!</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-66"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist2-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1733">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
+<div class="para" id="p-1932">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
   if(start != NULL) {
     whatAmIDoing(start-&gt;next);
     printf("%d", start-&gt;num);
   }
 }
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-868"><div class="para" id="p-derived-li-868">It prints every other digit of the number stored in the linked list.</div></li>
-<li id="li-869"><div class="para" id="p-derived-li-869">It prints the entire number stored in the linked list in reverse order.</div></li>
-<li id="li-870"><div class="para" id="p-derived-li-870">It prints every other digit of the number stored in the linked list, in reverse order.</div></li>
-<li id="li-871"><div class="para" id="p-derived-li-871">It prints the entire number stored in the linked list.</div></li>
-<li id="li-872"><div class="para" id="p-derived-li-872">It produces an endless loop.</div></li>
-</ol> <div class="para" id="p-1734"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article><article class="exercise exercise-like" id="quiz-linkedlist2-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1735">Given again the definition of a linked list of digits as in the video, the following function <code class="code-inline tex2jax_ignore">reverse()</code> is supposed to reverse a linked list of digits in place, that is, without creating a copy of the list. There is one line missing at the end of the function.</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct digit * reverse(struct digit * start) {
+<li id="li-757"><div class="para" id="p-derived-li-757">It prints every other digit of the number stored in the linked list.</div></li>
+<li id="li-758"><div class="para" id="p-derived-li-758">It prints the entire number stored in the linked list in reverse order.</div></li>
+<li id="li-759"><div class="para" id="p-derived-li-759">It prints every other digit of the number stored in the linked list, in reverse order.</div></li>
+<li id="li-760"><div class="para" id="p-derived-li-760">It prints the entire number stored in the linked list.</div></li>
+<li id="li-761"><div class="para" id="p-derived-li-761">It produces an endless loop.</div></li>
+</ol> <div class="para" id="p-1933"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article><article class="exercise exercise-like" id="quiz-linkedlist2-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1934">Given again the definition of a linked list of digits as in the video, the following function <code class="code-inline tex2jax_ignore">reverse()</code> is supposed to reverse a linked list of digits in place, that is, without creating a copy of the list. There is one line missing at the end of the function.</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct digit * reverse(struct digit * start) {
   struct digit * prev = NULL;
   struct digit * current = start;
   struct digit * next;
@@ -1092,16 +1092,16 @@ eBookConfig.enable_chatcodes =  false;
   }
   /*ADD LINE HERE*/
 }
-</code></pre></div> <div class="para" id="p-1736">What should be added in place of <code class="code-inline tex2jax_ignore">/*ADD LINE HERE*/</code>, so that the function correctly reverses the number?</div> <ol class="lower-alpha">
-<li id="li-873"><pre class="code-block tex2jax_ignore">return(current);
+</code></pre></div> <div class="para" id="p-1935">What should be added in place of <code class="code-inline tex2jax_ignore">/*ADD LINE HERE*/</code>, so that the function correctly reverses the number?</div> <ol class="lower-alpha">
+<li id="li-762"><pre class="code-block tex2jax_ignore">return(current);
 </pre></li>
-<li id="li-874"><pre class="code-block tex2jax_ignore">return(next);
+<li id="li-763"><pre class="code-block tex2jax_ignore">return(next);
 </pre></li>
-<li id="li-875"><pre class="code-block tex2jax_ignore">return(prev);
+<li id="li-764"><pre class="code-block tex2jax_ignore">return(prev);
 </pre></li>
-<li id="li-876"><pre class="code-block tex2jax_ignore">return(NULL);
+<li id="li-765"><pre class="code-block tex2jax_ignore">return(NULL);
 </pre></li>
-</ol> <div class="para" id="p-1737"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+</ol> <div class="para" id="p-1936"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="linkedlists-search.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="linkedlists-sort.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

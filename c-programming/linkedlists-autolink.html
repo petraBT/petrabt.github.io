@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.6.1';
+eBookConfig.runestone_version = '6.6.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runtime.66b619f51b746382.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1056,35 +1056,35 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linkedlists-autolink"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">27.3</span> <span class="title">Automate the Linking Process</span>
 </h2>
-<div class="para" id="p-1695">We'll continue working with our linked list of points in the next video. This time we'll learn how to automate the linking process between the points with the help of a function.</div>
+<div class="para" id="p-1894">We'll continue working with our linked list of points in the next video. This time we'll learn how to automate the linking process between the points with the help of a function.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521230782513" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521230782513" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-64"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1696"><ul class="disc">
-<li id="li-846"><div class="para" id="p-derived-li-846">Functions can be used to link one point to another point</div></li>
-<li id="li-847"><div class="para" id="p-derived-li-847">Functions can be used to add on (append) a new element to an existing list</div></li>
-<li id="li-848"><div class="para" id="p-derived-li-848">Whole lists are created by repeatedly appending a new element to the previous end of the list</div></li>
-<li id="li-849"><div class="para" id="p-derived-li-849">i.e. call a function, pass to it the current end of the list and the element to be appended, create the link inside the function and return the new end of the list (which is the element that was just added on)</div></li>
+<div class="para logical" id="p-1895"><ul class="disc">
+<li id="li-735"><div class="para" id="p-derived-li-735">Functions can be used to link one point to another point</div></li>
+<li id="li-736"><div class="para" id="p-derived-li-736">Functions can be used to add on (append) a new element to an existing list</div></li>
+<li id="li-737"><div class="para" id="p-derived-li-737">Whole lists are created by repeatedly appending a new element to the previous end of the list</div></li>
+<li id="li-738"><div class="para" id="p-derived-li-738">i.e. call a function, pass to it the current end of the list and the element to be appended, create the link inside the function and return the new end of the list (which is the element that was just added on)</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-64"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist1-4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1697">Given the structure definition from the video,</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point{
+<div class="para" id="p-1896">Given the structure definition from the video,</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point{
   int x;
   int y;
   struct point * next;
 };
-</code></pre></div> <div class="para" id="p-1698">what is the return type of the following function:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point * append (struct point * end, struct point * newpt) {
+</code></pre></div> <div class="para" id="p-1897">what is the return type of the following function:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point * append (struct point * end, struct point * newpt) {
   end-&gt;next = newpt;
   return(end-&gt;next);
 }
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-850"><div class="para" id="p-derived-li-850">a student</div></li>
-<li id="li-851"><div class="para" id="p-derived-li-851">an object of type <code class="code-inline tex2jax_ignore">struct student</code>
+<li id="li-739"><div class="para" id="p-derived-li-739">a student</div></li>
+<li id="li-740"><div class="para" id="p-derived-li-740">an object of type <code class="code-inline tex2jax_ignore">struct student</code>
 </div></li>
-<li id="li-852"><div class="para" id="p-derived-li-852">an integer</div></li>
-<li id="li-853"><div class="para" id="p-derived-li-853">a pointer to an object of type <code class="code-inline tex2jax_ignore">struct student</code>
+<li id="li-741"><div class="para" id="p-derived-li-741">an integer</div></li>
+<li id="li-742"><div class="para" id="p-derived-li-742">a pointer to an object of type <code class="code-inline tex2jax_ignore">struct student</code>
 </div></li>
-</ol> <div class="para" id="p-1699"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+</ol> <div class="para" id="p-1898"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="linkedlists-functions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="linkedlists-create.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

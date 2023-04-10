@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.6.1';
+eBookConfig.runestone_version = '6.6.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runtime.66b619f51b746382.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1056,29 +1056,35 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="malloc-array"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">21.3</span> <span class="title">Allocate Memory for Arrays</span>
 </h2>
-<div class="para" id="p-1416">We can extend the use of <code class="code-inline tex2jax_ignore">malloc()</code> beyond single variables and use it to reserve memory for an entire array!</div>
+<div class="para" id="p-1550">We can extend the use of <code class="code-inline tex2jax_ignore">malloc()</code> beyond single variables and use it to reserve memory for an entire array!</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519660322746" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519660322746" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-52"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1417">
+<div class="para logical" id="p-1551">
 <ul class="disc">
-<li id="li-692"><div class="para" id="p-derived-li-692">By doing the math (multiplying the size of a given datatype with the number of elements of that type you wish to store), the <code class="code-inline tex2jax_ignore">malloc()</code> function can be used to reserve space for entire arrays</div></li>
-<li id="li-693"><div class="para" id="p-derived-li-693">NEW SYNTAX: the following line will block off memory for an integer array with five elements</div></li>
+<li id="li-618"><div class="para" id="p-derived-li-618">By doing the math (multiplying the size of a given datatype with the number of elements of that type you wish to store), the <code class="code-inline tex2jax_ignore">malloc()</code> function can be used to reserve space for entire arrays</div></li>
+<li id="li-619"><div class="para" id="p-derived-li-619">NEW SYNTAX: the following line will block off memory for an integer array with five elements</div></li>
 </ul>
 <div class="para">array = (int *) malloc(5*sizeof(int));</div>
 </div></aside><section class="reading-questions" id="reading-questions-52"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-malloc-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1418">Suppose you would like to reserve space in memory for an array of N integers (where N is a variable of type <code class="code-inline tex2jax_ignore">int</code> that holds the number of ints to be stored) and store the resulting location in an integer pointer (an <code class="code-inline tex2jax_ignore">int *</code>.) What is the correct way to do so?</div> <ol class="lower-alpha">
-<li id="li-694"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*sizeof(int));
-</pre></li>
-<li id="li-695"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*int);
-</pre></li>
-<li id="li-696"><pre class="code-block tex2jax_ignore">N = (int *) malloc(array*sizeof(int));
-</pre></li>
-<li id="li-697"><pre class="code-block tex2jax_ignore">(int *) array = N*malloc(sizeof(int));
-</pre></li>
-</ol> <div class="para" id="p-1419"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-malloc-3" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1552">Suppose you would like to reserve space in memory for an array of N integers (where N is a variable of type <code class="code-inline tex2jax_ignore">int</code> that holds the number of ints to be stored) and store the resulting location in an integer pointer (an <code class="code-inline tex2jax_ignore">int *</code>)<pre class="code-block tex2jax_ignore">array
+</pre>that has already been declared. What is the correct way to do so?</div>
+<li data-component="answer" id="quiz-malloc-3_opt_a" data-correct=""><div class="para" id="p-1553"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*sizeof(int));
+</pre></div></li>
+<li data-component="feedback" id="quiz-malloc-3_opt_a"><div class="para" id="p-1554">Correct</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_b"><div class="para" id="p-1555"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*int);
+</pre></div></li>
+<li data-component="feedback" id="quiz-malloc-3_opt_b"><div class="para" id="p-1556">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_c"><div class="para" id="p-1557"><pre class="code-block tex2jax_ignore">N = (int *) malloc(array*sizeof(int));
+</pre></div></li>
+<li data-component="feedback" id="quiz-malloc-3_opt_c"><div class="para" id="p-1558">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_d"><div class="para" id="p-1559"><pre class="code-block tex2jax_ignore">(int *) array = N*malloc(sizeof(int));
+</pre></div></li>
+<li data-component="feedback" id="quiz-malloc-3_opt_d"><div class="para" id="p-1560">Not quite. Try again!</div></li>
+</ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="malloc-free.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="malloc-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

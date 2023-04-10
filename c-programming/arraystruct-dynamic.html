@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.6.1';
+eBookConfig.runestone_version = '6.6.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runtime.66b619f51b746382.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1056,20 +1056,20 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="arraystruct-dynamic"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">26.4</span> <span class="title">Dynamic Arrays of Structures</span>
 </h2>
-<div class="para" id="p-1655">Why stop at triangles? Suppose we wanted to store polygons with variable numbers of vertices.</div>
-<div class="para" id="p-1656">Recall that in order to reserve space in memory (for example for an array whose size only becomes known at run-time of your program) we use the function <code class="code-inline tex2jax_ignore">malloc()</code> whose prototype is</div>
+<div class="para" id="p-1854">Why stop at triangles? Suppose we wanted to store polygons with variable numbers of vertices.</div>
+<div class="para" id="p-1855">Recall that in order to reserve space in memory (for example for an array whose size only becomes known at run-time of your program) we use the function <code class="code-inline tex2jax_ignore">malloc()</code> whose prototype is</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void * malloc(size_t size);
 </code></pre></div>
-<div class="para" id="p-1657">Here, <code class="code-inline tex2jax_ignore">size</code> is the total amount of space you need for your data. For example, if you wanted to store 10 structures of type <code class="code-inline tex2jax_ignore">point_t</code> you'd need space in the amount of 10*sizeof(point_t).</div>
-<div class="para" id="p-1658">Also recall that in order to use <code class="code-inline tex2jax_ignore">malloc()</code> you need to</div>
+<div class="para" id="p-1856">Here, <code class="code-inline tex2jax_ignore">size</code> is the total amount of space you need for your data. For example, if you wanted to store 10 structures of type <code class="code-inline tex2jax_ignore">point_t</code> you'd need space in the amount of 10*sizeof(point_t).</div>
+<div class="para" id="p-1857">Also recall that in order to use <code class="code-inline tex2jax_ignore">malloc()</code> you need to</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdlib.h&gt;
 </code></pre></div>
 <article class="activity project-like" id="activity-26-4-1-Dynamic_Array_Structures"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">26.5</span><span class="period">.</span>
 </h3>
 <div class="ptx-runestone-container"><div class="runestone"><div data-component="shortanswer" data-question_label="" class="journal" data-mathjax="" id="activity-26-4-1-Dynamic_Array_Structures" data-placeholder="You can write here, and it will be saved on this device, but your response will not be graded.">
-<div class="para" id="p-1659">Write a function <code class="code-inline tex2jax_ignore">createPolygon()</code> to which you can pass an integer and that reserves space in memory for an array of points of that size and returns a pointer to that array. Just to be on the safe side, have this function also initialize all coordinates to (0.0,0.0).</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NarraysOfStructures.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" frameborder="0" width="100%" height="600"></iframe> <div class="para" id="p-1660"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div>
+<div class="para" id="p-1858">Write a function <code class="code-inline tex2jax_ignore">createPolygon()</code> to which you can pass an integer and that reserves space in memory for an array of points of that size and returns a pointer to that array. Just to be on the safe side, have this function also initialize all coordinates to (0.0,0.0).</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NarraysOfStructures.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NarraysOfStructures.c&amp;nocheck=true" frameborder="0" width="100%" height="600"></iframe> <div class="para" id="p-1859"><em class="emphasis">When you are done, please paste your code into the code submission box below:</em></div>
 </div></div></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="arraystruct-triangle.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="arraystruct-pentagon.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

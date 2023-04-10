@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.6.1';
+eBookConfig.runestone_version = '6.6.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runtime.66b619f51b746382.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1056,11 +1056,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="libraries-object"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">28.5</span> <span class="title">Making Our Own Library - Object File</span>
 </h2>
-<div class="para" id="p-1762">One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</div>
-<div class="para" id="p-1763">The library then consists of both the header file and the object file. In our example, this would be</div>
+<div class="para" id="p-1961">One typically compiles the source code to an object. This object file contains machine language for all of the functions in the source file but is by itself not executable (since it contains no <code class="code-inline tex2jax_ignore">main()</code> function!).</div>
+<div class="para" id="p-1962">The library then consists of both the header file and the object file. In our example, this would be</div>
 <pre class="code-block tex2jax_ignore">arbitraryintegers.h arbitraryintegers.o
 </pre>
-<div class="para" id="p-1764">We can now use this library in other programs:</div>
+<div class="para" id="p-1963">We can now use this library in other programs:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 #include "arbitraryintegers.h"
 
@@ -1071,7 +1071,7 @@ int main(void) {
   . . . 
 }
 </code></pre></div>
-<div class="para" id="p-1765">Note the use of <code class="code-inline tex2jax_ignore">" "</code> for user-defined libraries instead of <code class="code-inline tex2jax_ignore">&lt; &gt;</code>, which is reserved for built-in libraries.</div></section></div>
+<div class="para" id="p-1964">Note the use of <code class="code-inline tex2jax_ignore">" "</code> for user-defined libraries instead of <code class="code-inline tex2jax_ignore">&lt; &gt;</code>, which is reserved for built-in libraries.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="libraries-source.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="libraries-complex.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

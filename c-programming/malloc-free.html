@@ -87,15 +87,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '6.6.1';
+eBookConfig.runestone_version = '6.6.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runtime.143aca1952f785bd.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.1/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/637.0fa6cababf056764.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.1/runestone.3eb60bc006ae9a54.css">
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runtime.66b619f51b746382.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/runestone.3eb60bc006ae9a54.css">
 </head>
 <body id="bonfert-taylor-ICP" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
@@ -1056,24 +1056,25 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="malloc-free"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">21.2</span> <span class="title"><code class="code-inline tex2jax_ignore">free()</code> - Releasing Dynamically Allocated Memory</span>
 </h2>
-<div class="para" id="p-1407">Recall that memory reserved dynamically via <code class="code-inline tex2jax_ignore">malloc()</code> is completely your responsibility. Therefore, when you are done using the memory it is your job to tell the computer that you no longer need it and thus make available this memory for other purposes. The process of releasing memory is called freeing and we will now learn how to release, or <em class="alert">free</em>, memory that has been reserved via malloc() in the heap. The function to do so is called <code class="code-inline tex2jax_ignore">free()</code> and it takes as an argument a pointer to the memory block that you'd like to release.</div>
-<div class="para" id="p-1408">The prototype for <code class="code-inline tex2jax_ignore">free()</code> is</div>
+<div class="para" id="p-1532">Recall that memory reserved dynamically via <code class="code-inline tex2jax_ignore">malloc()</code> is completely your responsibility. Therefore, when you are done using the memory it is your job to tell the computer that you no longer need it and thus make available this memory for other purposes. The process of releasing memory is called freeing and we will now learn how to release, or <em class="alert">free</em>, memory that has been reserved via malloc() in the heap. The function to do so is called <code class="code-inline tex2jax_ignore">free()</code> and it takes as an argument a pointer to the memory block that you'd like to release.</div>
+<div class="para" id="p-1533">The prototype for <code class="code-inline tex2jax_ignore">free()</code> is</div>
 <pre class="code-block tex2jax_ignore">void free(void *ptr);
 </pre>
-<div class="para" id="p-1409">The <code class="code-inline tex2jax_ignore">free()</code> function also is a part of the standard library <code class="code-inline tex2jax_ignore">&lt;stdlib.h&gt;</code> and you therefore need to</div>
+<div class="para" id="p-1534">The <code class="code-inline tex2jax_ignore">free()</code> function also is a part of the standard library <code class="code-inline tex2jax_ignore">&lt;stdlib.h&gt;</code> and you therefore need to</div>
 <pre class="code-block tex2jax_ignore">#include &lt;stdlib.h&gt;
 </pre>
-<div class="para" id="p-1410">(which you probably already did for the use of <code class="code-inline tex2jax_ignore">malloc()</code>.) The following video demonstrates the use of the <code class="code-inline tex2jax_ignore">free()</code> function.</div>
+<div class="para" id="p-1535">(which you probably already did for the use of <code class="code-inline tex2jax_ignore">malloc()</code>.) The following video demonstrates the use of the <code class="code-inline tex2jax_ignore">free()</code> function.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1522245743723" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1522245743723" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-51"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1411"><ul class="disc">
-<li id="li-685"><div class="para" id="p-derived-li-685">If memory has been reserved using <code class="code-inline tex2jax_ignore">malloc()</code>, it must be freed using <code class="code-inline tex2jax_ignore">free()</code> after it is no longer needed</div></li>
-<li id="li-686"><div class="para" id="p-derived-li-686">NEW SYNTAX: <code class="code-inline tex2jax_ignore">free(ptr)</code> frees the memory reserved at the pointer "ptr"</div></li>
+<div class="para logical" id="p-1536"><ul class="disc">
+<li id="li-616"><div class="para" id="p-derived-li-616">If memory has been reserved using <code class="code-inline tex2jax_ignore">malloc()</code>, it must be freed using <code class="code-inline tex2jax_ignore">free()</code> after it is no longer needed</div></li>
+<li id="li-617"><div class="para" id="p-derived-li-617">NEW SYNTAX: <code class="code-inline tex2jax_ignore">free(ptr)</code> frees the memory reserved at the pointer "ptr"</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-51"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-malloc-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1412">Given the following code:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-malloc-2" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1537">Given the following code:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 int main(void) {
   int *a, *b;
@@ -1089,16 +1090,21 @@ int main(void) {
   free(c);
   return 0;
 }
-</code></pre></div> <div class="para" id="p-1413">What would the line</div>
+</code></pre></div> <div class="para" id="p-1538">What would the line</div>
 <pre class="code-block tex2jax_ignore">printf("a = %d, b = %d, c = %f\n", *a, *b, *c);
 </pre>
-<div class="para" id="p-1414">print to the screen if placed right before the <code class="code-inline tex2jax_ignore">return 0;</code> line?</div> <ol class="lower-alpha">
-<li id="li-687"><div class="para" id="p-derived-li-687">a = 2, b = 3, c = 0.5</div></li>
-<li id="li-688"><div class="para" id="p-derived-li-688">a = 1, b = 2, c = 3.5</div></li>
-<li id="li-689"><div class="para" id="p-derived-li-689">a = 2, b = 2, c = 3.5</div></li>
-<li id="li-690"><div class="para" id="p-derived-li-690">a = 2, b = 3, c = 3.5</div></li>
-<li id="li-691"><div class="para" id="p-derived-li-691">The result is unpredictable and may be different from one system to the next.</div></li>
-</ol> <div class="para" id="p-1415"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article></section></section></div>
+<div class="para" id="p-1539">print to the screen if placed right before the <code class="code-inline tex2jax_ignore">return 0;</code> line?</div>
+<li data-component="answer" id="quiz-malloc-2_opt_a" data-correct=""><div class="para" id="p-1540">The result is unpredictable and may be different from one system to the next.</div></li>
+<li data-component="feedback" id="quiz-malloc-2_opt_a"><div class="para" id="p-1541">Correct</div></li>
+<li data-component="answer" id="quiz-malloc-2_opt_b"><div class="para" id="p-1542">a = 1, b = 2, c = 3.5</div></li>
+<li data-component="feedback" id="quiz-malloc-2_opt_b"><div class="para" id="p-1543">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-2_opt_c"><div class="para" id="p-1544">a = 2, b = 2, c = 3.5</div></li>
+<li data-component="feedback" id="quiz-malloc-2_opt_c"><div class="para" id="p-1545">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-2_opt_d"><div class="para" id="p-1546">a = 2, b = 3, c = 3.5</div></li>
+<li data-component="feedback" id="quiz-malloc-2_opt_d"><div class="para" id="p-1547">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-2_opt_e"><div class="para" id="p-1548">a = 2, b = 3, c = 0.5</div></li>
+<li data-component="feedback" id="quiz-malloc-2_opt_e"><div class="para" id="p-1549">Not quite. Try again!</div></li>
+</ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="malloc-intro.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="malloc-array.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
