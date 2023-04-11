@@ -1056,57 +1056,74 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="debug-software"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">16.1</span> <span class="title">Software Development</span>
 </h2>
-<div class="para" id="p-1081">Now that our programs are starting to get more complex (and the first longer assignment is coming up), it's time to think more carefully about how to organize your mind and your program to accomplish more complicated tasks.</div>
+<div class="para" id="p-1095">Now that our programs are starting to get more complex (and the first longer assignment is coming up), it's time to think more carefully about how to organize your mind and your program to accomplish more complicated tasks.</div>
 <aside class="aside aside-like" id="aside-34"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1082"><ul class="disc">
-<li id="li-464"><div class="para" id="p-derived-li-464">Software development method</div></li>
-<li id="li-465"><div class="para" id="p-derived-li-465">Specify the problem requirements, analyze the problem, design the algorithm</div></li>
+<div class="para logical" id="p-1096"><ul class="disc">
+<li id="li-456"><div class="para" id="p-derived-li-456">Software development method</div></li>
+<li id="li-457"><div class="para" id="p-derived-li-457">Specify the problem requirements, analyze the problem, design the algorithm</div></li>
 </ul></div></aside><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="_4Ss4AvS2c1Y" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/4Ss4AvS2c1Y?&amp;modestbranding=1&amp;rel=0"></iframe></div>
 <section class="reading-questions" id="reading-questions-36"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-debug-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1083">Quick review: On your hard drive you have a file named "my_grades.txt", in which you store all of your course grades (as floats) for the purpose of calculating your GPA. You have already declared a variable <code class="code-inline tex2jax_ignore">ifile</code> via</div>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-debug-1" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1097">Quick review: On your hard drive you have a file named "my_grades.txt", in which you store all of your course grades (as floats) for the purpose of calculating your GPA. You have already declared a variable <code class="code-inline tex2jax_ignore">ifile</code> via</div>
 <pre class="code-block tex2jax_ignore">FILE *ifile;
 </pre>
-<div class="para" id="p-1084">and now wish to open the file my_grades.txt for reading. Which of the following commands should you use?</div> <ol class="lower-alpha">
-<li id="li-466"><pre class="code-block tex2jax_ignore">ifile = fopen(my_grades.txt, "a");
-</pre></li>
-<li id="li-467"><pre class="code-block tex2jax_ignore">fopen(ifile, "my_grades.txt", "r");
-</pre></li>
-<li id="li-468"><pre class="code-block tex2jax_ignore">fopen("my_grades.txt", "w");
-</pre></li>
-<li id="li-469"><pre class="code-block tex2jax_ignore">ifile = fopen("my_grades.txt", "r");
-</pre></li>
-</ol> <div class="para" id="p-1085"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-debug-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1086">As in the previous question, you have a file named "my_grades.txt" on your hard drive, in which you store all of your course grades (as floats) for the purpose of calculating your GPA. You have already declared a variable <code class="code-inline tex2jax_ignore">myfile</code> of type <code class="code-inline tex2jax_ignore">FILE *</code> and a variable <code class="code-inline tex2jax_ignore">num</code> of type float via</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">FILE *myfile;
+<div class="para" id="p-1098">and now wish to open the file my_grades.txt for reading. Which of the following commands should you use?</div>
+<li data-component="answer" id="quiz-debug-1_opt_a" data-correct=""><code class="code-inline tex2jax_ignore">ifile = fopen("my_grades.txt", "r");</code></li>
+<li data-component="feedback" id="quiz-debug-1_opt_a"><div class="para" id="p-1099">Correct</div></li>
+<li data-component="answer" id="quiz-debug-1_opt_b"><code class="code-inline tex2jax_ignore">fopen(ifile, "my_grades.txt", "r");</code></li>
+<li data-component="feedback" id="quiz-debug-1_opt_b"><div class="para" id="p-1100">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-debug-1_opt_c"><code class="code-inline tex2jax_ignore">fopen("my_grades.txt", "w");</code></li>
+<li data-component="feedback" id="quiz-debug-1_opt_c"><div class="para" id="p-1101">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-debug-1_opt_d"><code class="code-inline tex2jax_ignore">ifile = fopen(my_grades.txt, "a");</code></li>
+<li data-component="feedback" id="quiz-debug-1_opt_d"><div class="para" id="p-1102">Not quite. Try again!</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="quiz-debug-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="quiz-debug-2">
+<div class="parsons_question parsons-text">
+<div class="para" id="p-1103">As in the previous question, you have a file named "my_grades.txt" on your hard drive, in which you store all of your course grades (as floats) for the purpose of calculating your GPA. You have already declared a variable <code class="code-inline tex2jax_ignore">myfile</code> of type <code class="code-inline tex2jax_ignore">FILE *</code> and a variable <code class="code-inline tex2jax_ignore">num</code> of type float via</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">FILE *myfile;
 float num = 3.7;
-</code></pre></div> <div class="para" id="p-1087">You wish to add the new grade (stored in num) to the end of the file. Please select the appropriate commands from the list below and put them into the correct order so as to perform this task. <em class="emphasis">Select exactly three commands and enter their corresponding letters in order, i.e.</em> <em class="alert">G, H, I</em>:</div> <ol class="lower-alpha">
-<li id="li-470"><pre class="code-block tex2jax_ignore">fprintf(myfile, "%f", num);
-</pre></li>
-<li id="li-471"><pre class="code-block tex2jax_ignore">fscanf(myfile, "%f", &amp;num);
-</pre></li>
-<li id="li-472"><pre class="code-block tex2jax_ignore">myfile = fprintf("%f", num);
-</pre></li>
-<li id="li-473"><pre class="code-block tex2jax_ignore">myfile = fopen("my_grades.txt", "a");
-</pre></li>
-<li id="li-474"><pre class="code-block tex2jax_ignore">fclose(myfile);
-</pre></li>
-<li id="li-475"><pre class="code-block tex2jax_ignore">myfile = fopen("my_grades.txt", "w");
-</pre></li>
-</ol> <div class="para" id="p-1088"><em class="emphasis">Enter your choice (a/b/c/d/e/f):</em></div></article><article class="exercise exercise-like" id="quiz-debug-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1089">Please select <em class="alert">six</em> steps from the following list and arrange their corresponding letters in the correct order for creating a computer program, i.e. <em class="alert">A, B, ...</em>
-</div> <ol class="lower-alpha">
-<li id="li-476"><div class="para" id="p-derived-li-476">Have a cup of coffee</div></li>
-<li id="li-477"><div class="para" id="p-derived-li-477">Go for a walk</div></li>
-<li id="li-478"><div class="para" id="p-derived-li-478">Write the code to implement your algorithm</div></li>
-<li id="li-479"><div class="para" id="p-derived-li-479">On paper, design the algorithm to solve the problem</div></li>
-<li id="li-480"><div class="para" id="p-derived-li-480">Identify input, outputs, and constraints</div></li>
-<li id="li-481"><div class="para" id="p-derived-li-481">Test and verify the completed program</div></li>
-<li id="li-482"><div class="para" id="p-derived-li-482">Maintain and update the program</div></li>
-<li id="li-483"><div class="para" id="p-derived-li-483">State the problem clearly</div></li>
-<li id="li-484"><div class="para" id="p-derived-li-484">Talk to your dog</div></li>
-</ol> <div class="para" id="p-1090"><em class="emphasis">Enter your choice (a - i):</em></div></article></section></section></div>
+</code></pre></div> <div class="para" id="p-1104">You wish to add the new grade (stored in num) to the end of the file. Please select the appropriate commands from the list below and put them into the correct order:</div>
+</div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="natural" data-noindent="true">myfile = fopen("my_grades.txt", "a");
+
+---
+fprintf(myfile, "%f", num);
+
+---
+fclose(myfile);
+
+---
+fscanf(myfile, "%f", &amp;num);
+ #distractor
+---
+myfile = fprintf("%f", num);
+ #distractor
+---
+myfile = fopen("my_grades.txt", "w");
+ #distractor</pre>
+</div></div></div></article><article class="exercise exercise-like" id="quiz-debug-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="quiz-debug-3">
+<div class="parsons_question parsons-text"><div class="para" id="p-1105">Please select <em class="emphasis">six</em> steps from the following list and arrange them in the correct order for creating a computer program.</div></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="natural" data-noindent="true"><div class="para" id="p-1106">State the problem clearly</div>
+---
+<div class="para" id="p-1107">Identify input, outputs, and constraints</div>
+---
+<div class="para" id="p-1108">On paper, design the algorithm to solve the problem</div>
+---
+<div class="para" id="p-1109">Write the code to implement your algorithm</div>
+---
+<div class="para" id="p-1110">Test and verify the completed program</div>
+---
+<div class="para" id="p-1111">Maintain and update the program</div>
+---
+<div class="para" id="p-1112">Talk to your dog</div> #distractor
+---
+<div class="para" id="p-1113">Have a cup of coffee</div> #distractor
+---
+<div class="para" id="p-1114">Go for a walk</div> #distractor</pre>
+</div></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="debug.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="debug-code.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

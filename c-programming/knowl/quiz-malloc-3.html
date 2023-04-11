@@ -15,20 +15,20 @@
 <span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
 </h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-malloc-3" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1552">Suppose you would like to reserve space in memory for an array of N integers (where N is a variable of type <code class="code-inline tex2jax_ignore">int</code> that holds the number of ints to be stored) and store the resulting location in an integer pointer (an <code class="code-inline tex2jax_ignore">int *</code>)<pre class="code-block tex2jax_ignore">array
+<div class="para" id="p-1605">Suppose you would like to reserve space in memory for an array of N integers (where N is a variable of type <code class="code-inline tex2jax_ignore">int</code> that holds the number of ints to be stored) and store the resulting location in an integer pointer (an <code class="code-inline tex2jax_ignore">int *</code>)<pre class="code-block tex2jax_ignore">array
 </pre>that has already been declared. What is the correct way to do so?</div>
-<li data-component="answer" id="quiz-malloc-3_opt_a" data-correct=""><div class="para" id="p-1553"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*sizeof(int));
+<li data-component="answer" id="quiz-malloc-3_opt_a" data-correct=""><div class="para" id="p-1606"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*sizeof(int));
 </pre></div></li>
-<li data-component="feedback" id="quiz-malloc-3_opt_a"><div class="para" id="p-1554">Correct</div></li>
-<li data-component="answer" id="quiz-malloc-3_opt_b"><div class="para" id="p-1555"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*int);
+<li data-component="feedback" id="quiz-malloc-3_opt_a"><div class="para" id="p-1607">Correct</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_b"><div class="para" id="p-1608"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*int);
 </pre></div></li>
-<li data-component="feedback" id="quiz-malloc-3_opt_b"><div class="para" id="p-1556">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-malloc-3_opt_c"><div class="para" id="p-1557"><pre class="code-block tex2jax_ignore">N = (int *) malloc(array*sizeof(int));
+<li data-component="feedback" id="quiz-malloc-3_opt_b"><div class="para" id="p-1609">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_c"><div class="para" id="p-1610"><pre class="code-block tex2jax_ignore">N = (int *) malloc(array*sizeof(int));
 </pre></div></li>
-<li data-component="feedback" id="quiz-malloc-3_opt_c"><div class="para" id="p-1558">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-malloc-3_opt_d"><div class="para" id="p-1559"><pre class="code-block tex2jax_ignore">(int *) array = N*malloc(sizeof(int));
+<li data-component="feedback" id="quiz-malloc-3_opt_c"><div class="para" id="p-1611">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_d"><div class="para" id="p-1612"><pre class="code-block tex2jax_ignore">(int *) array = N*malloc(sizeof(int));
 </pre></div></li>
-<li data-component="feedback" id="quiz-malloc-3_opt_d"><div class="para" id="p-1560">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-malloc-3_opt_d"><div class="para" id="p-1613">Not quite. Try again!</div></li>
 </ul></div></div></article><span class="incontext"><a href="malloc-array.html#quiz-malloc-3" class="internal">in-context</a></span>
 </body>
 </html>

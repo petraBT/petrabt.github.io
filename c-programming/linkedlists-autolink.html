@@ -1056,35 +1056,35 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linkedlists-autolink"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">27.3</span> <span class="title">Automate the Linking Process</span>
 </h2>
-<div class="para" id="p-1894">We'll continue working with our linked list of points in the next video. This time we'll learn how to automate the linking process between the points with the help of a function.</div>
+<div class="para" id="p-1947">We'll continue working with our linked list of points in the next video. This time we'll learn how to automate the linking process between the points with the help of a function.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521230782513" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521230782513" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-64"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1895"><ul class="disc">
-<li id="li-735"><div class="para" id="p-derived-li-735">Functions can be used to link one point to another point</div></li>
-<li id="li-736"><div class="para" id="p-derived-li-736">Functions can be used to add on (append) a new element to an existing list</div></li>
-<li id="li-737"><div class="para" id="p-derived-li-737">Whole lists are created by repeatedly appending a new element to the previous end of the list</div></li>
-<li id="li-738"><div class="para" id="p-derived-li-738">i.e. call a function, pass to it the current end of the list and the element to be appended, create the link inside the function and return the new end of the list (which is the element that was just added on)</div></li>
+<div class="para logical" id="p-1948"><ul class="disc">
+<li id="li-691"><div class="para" id="p-derived-li-691">Functions can be used to link one point to another point</div></li>
+<li id="li-692"><div class="para" id="p-derived-li-692">Functions can be used to add on (append) a new element to an existing list</div></li>
+<li id="li-693"><div class="para" id="p-derived-li-693">Whole lists are created by repeatedly appending a new element to the previous end of the list</div></li>
+<li id="li-694"><div class="para" id="p-derived-li-694">i.e. call a function, pass to it the current end of the list and the element to be appended, create the link inside the function and return the new end of the list (which is the element that was just added on)</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-64"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist1-4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1896">Given the structure definition from the video,</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point{
+<div class="para" id="p-1949">Given the structure definition from the video,</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point{
   int x;
   int y;
   struct point * next;
 };
-</code></pre></div> <div class="para" id="p-1897">what is the return type of the following function:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point * append (struct point * end, struct point * newpt) {
+</code></pre></div> <div class="para" id="p-1950">what is the return type of the following function:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct point * append (struct point * end, struct point * newpt) {
   end-&gt;next = newpt;
   return(end-&gt;next);
 }
 </code></pre></div> <ol class="lower-alpha">
-<li id="li-739"><div class="para" id="p-derived-li-739">a student</div></li>
-<li id="li-740"><div class="para" id="p-derived-li-740">an object of type <code class="code-inline tex2jax_ignore">struct student</code>
+<li id="li-695"><div class="para" id="p-derived-li-695">a student</div></li>
+<li id="li-696"><div class="para" id="p-derived-li-696">an object of type <code class="code-inline tex2jax_ignore">struct student</code>
 </div></li>
-<li id="li-741"><div class="para" id="p-derived-li-741">an integer</div></li>
-<li id="li-742"><div class="para" id="p-derived-li-742">a pointer to an object of type <code class="code-inline tex2jax_ignore">struct student</code>
+<li id="li-697"><div class="para" id="p-derived-li-697">an integer</div></li>
+<li id="li-698"><div class="para" id="p-derived-li-698">a pointer to an object of type <code class="code-inline tex2jax_ignore">struct student</code>
 </div></li>
-</ol> <div class="para" id="p-1898"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+</ol> <div class="para" id="p-1951"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="linkedlists-functions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="linkedlists-create.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

@@ -1056,33 +1056,33 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linkedlists-functions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">27.2</span> <span class="title">Pass Linked Lists to Functions</span>
 </h2>
-<div class="para" id="p-1888">In the next video we'll see how to use functions in conjunction with linked lists. In particular, we'll enhance the previous example by moving the part that prints the linked list into a function.</div>
+<div class="para" id="p-1941">In the next video we'll see how to use functions in conjunction with linked lists. In particular, we'll enhance the previous example by moving the part that prints the linked list into a function.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521228847299" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521228847299" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-63"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1889"><ul class="disc">
-<li id="li-729"><div class="para" id="p-derived-li-729">The start of the linked list is what gets passed to functions</div></li>
-<li id="li-730"><div class="para" id="p-derived-li-730">i.e. <code class="code-inline tex2jax_ignore">printPoints(start);</code>
+<div class="para logical" id="p-1942"><ul class="disc">
+<li id="li-685"><div class="para" id="p-derived-li-685">The start of the linked list is what gets passed to functions</div></li>
+<li id="li-686"><div class="para" id="p-derived-li-686">i.e. <code class="code-inline tex2jax_ignore">printPoints(start);</code>
 </div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-63"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist1-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1890">As in the previous question, you have created a linked list of three student records using the structure definition below:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
+<div class="para" id="p-1943">As in the previous question, you have created a linked list of three student records using the structure definition below:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
      char    name[50];
      int     birthYear;
      float   gpa;     
      struct student *next;
 };
-</code></pre></div> <div class="para" id="p-1891">Suppose also that the pointer <code class="code-inline tex2jax_ignore">start</code> of type <code class="code-inline tex2jax_ignore">struct student *</code> points to the first student in the list.</div> <div class="para" id="p-1892">How would you print the name and GPA of the <em class="alert">second</em> student in the list?</div> <ol class="lower-alpha">
-<li id="li-731"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start-&gt;next.name, start-&gt;next.gpa);
+</code></pre></div> <div class="para" id="p-1944">Suppose also that the pointer <code class="code-inline tex2jax_ignore">start</code> of type <code class="code-inline tex2jax_ignore">struct student *</code> points to the first student in the list.</div> <div class="para" id="p-1945">How would you print the name and GPA of the <em class="alert">second</em> student in the list?</div> <ol class="lower-alpha">
+<li id="li-687"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start-&gt;next.name, start-&gt;next.gpa);
 </pre></li>
-<li id="li-732"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start.next-&gt;name, start.next-&gt;gpa);
+<li id="li-688"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start.next-&gt;name, start.next-&gt;gpa);
 </pre></li>
-<li id="li-733"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start.next.name, start.next.gpa);
+<li id="li-689"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start.next.name, start.next.gpa);
 </pre></li>
-<li id="li-734"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start-&gt;next-&gt;name, start-&gt;next-&gt;gpa);
+<li id="li-690"><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start-&gt;next-&gt;name, start-&gt;next-&gt;gpa);
 </pre></li>
-</ol> <div class="para" id="p-1893"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+</ol> <div class="para" id="p-1946"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="linkedlists-intro.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="linkedlists-autolink.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

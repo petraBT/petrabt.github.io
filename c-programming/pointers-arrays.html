@@ -1056,28 +1056,28 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="pointers-arrays"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.9</span> <span class="title">Arrays and Pointers</span>
 </h2>
-<div class="para" id="p-1334">Given an array variable such as <code class="code-inline tex2jax_ignore">int myArray[6];</code> what exactly does the variable <code class="code-inline tex2jax_ignore">myArray</code> itself store (if we don't add in the brackets to refer to a specific element)? It turns out, <code class="code-inline tex2jax_ignore">myArray</code> holds the <em class="alert">address of the zeroth element of the array</em>! That is, <code class="code-inline tex2jax_ignore">myArray</code> is a pointer of type <em class="emphasis">int</em>. So:</div>
+<div class="para" id="p-1388">Given an array variable such as <code class="code-inline tex2jax_ignore">int myArray[6];</code> what exactly does the variable <code class="code-inline tex2jax_ignore">myArray</code> itself store (if we don't add in the brackets to refer to a specific element)? It turns out, <code class="code-inline tex2jax_ignore">myArray</code> holds the <em class="alert">address of the zeroth element of the array</em>! That is, <code class="code-inline tex2jax_ignore">myArray</code> is a pointer of type <em class="emphasis">int</em>. So:</div>
 <pre class="code-block tex2jax_ignore">myArray == &amp;myArray[0]
 </pre>
-<div class="para" id="p-1335">But it gets even better than that: The computer can do arithmetic, giving us the ability to easily find the address of <code class="code-inline tex2jax_ignore">myArray[1]</code> or <code class="code-inline tex2jax_ignore">myArray[2]</code>, for example:</div>
+<div class="para" id="p-1389">But it gets even better than that: The computer can do arithmetic, giving us the ability to easily find the address of <code class="code-inline tex2jax_ignore">myArray[1]</code> or <code class="code-inline tex2jax_ignore">myArray[2]</code>, for example:</div>
 <pre class="code-block tex2jax_ignore">myArray + 1 == &amp;myArray[1]
 </pre>
 <pre class="code-block tex2jax_ignore">myArray + 2 == &amp;myArray[2]
 </pre>
-<div class="para" id="p-1336">This is called <em class="alert">pointer arithmetic.</em> So by adding 1 to the address <code class="code-inline tex2jax_ignore">myArray</code>, the computer automatically locates the address of the next array element, <code class="code-inline tex2jax_ignore">&amp;myArray[1]</code>.</div>
-<div class="para" id="p-1337">Watch the video to find out more.</div>
+<div class="para" id="p-1390">This is called <em class="alert">pointer arithmetic.</em> So by adding 1 to the address <code class="code-inline tex2jax_ignore">myArray</code>, the computer automatically locates the address of the next array element, <code class="code-inline tex2jax_ignore">&amp;myArray[1]</code>.</div>
+<div class="para" id="p-1391">Watch the video to find out more.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519145309501" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519145309501" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-48"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1338"><ul class="disc">
-<li id="li-588"><div class="para" id="p-derived-li-588">The array variable itself holds the address of the zeroth element of the array</div></li>
-<li id="li-589"><div class="para" id="p-derived-li-589">Adding "1" to the pointer of an array will update the address to the next element of the array</div></li>
-<li id="li-590"><div class="para" id="p-derived-li-590">i.e. <code class="code-inline tex2jax_ignore">*array = 3</code>, <code class="code-inline tex2jax_ignore">*(array+1)=10</code> will update the first (the zeroth, truthfully speaking) number in the array as 3 and the next as 10</div></li>
+<div class="para logical" id="p-1392"><ul class="disc">
+<li id="li-544"><div class="para" id="p-derived-li-544">The array variable itself holds the address of the zeroth element of the array</div></li>
+<li id="li-545"><div class="para" id="p-derived-li-545">Adding "1" to the pointer of an array will update the address to the next element of the array</div></li>
+<li id="li-546"><div class="para" id="p-derived-li-546">i.e. <code class="code-inline tex2jax_ignore">*array = 3</code>, <code class="code-inline tex2jax_ignore">*(array+1)=10</code> will update the first (the zeroth, truthfully speaking) number in the array as 3 and the next as 10</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-48"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-arithmetic-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-arithmetic-1" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1339">Let's start with a review question!</div> <div class="para" id="p-1340">What is the output of the following program:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+<div class="para" id="p-1393">Let's start with a review question!</div> <div class="para" id="p-1394">What is the output of the following program:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
 void swap (char *x, char *y); 
 int main(void) {
   char c = 'P';
@@ -1094,94 +1094,94 @@ void swap (char *x, char *y) {
   *y = temp;
 }
 </code></pre></div>
-<li data-component="answer" id="quiz-arithmetic-1_opt_a" data-correct=""><div class="para" id="p-1341">PT TP</div></li>
-<li data-component="feedback" id="quiz-arithmetic-1_opt_a"><div class="para" id="p-1342">Correct</div></li>
-<li data-component="answer" id="quiz-arithmetic-1_opt_b"><div class="para" id="p-1343">PT xy</div></li>
-<li data-component="feedback" id="quiz-arithmetic-1_opt_b"><div class="para" id="p-1344">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-1_opt_c"><div class="para" id="p-1345">PT PT</div></li>
-<li data-component="feedback" id="quiz-arithmetic-1_opt_c"><div class="para" id="p-1346">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-1_opt_d"><div class="para" id="p-1347">PT yx</div></li>
-<li data-component="feedback" id="quiz-arithmetic-1_opt_d"><div class="para" id="p-1348">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-1_opt_e"><div class="para" id="p-1349">None of the above</div></li>
-<li data-component="feedback" id="quiz-arithmetic-1_opt_e"><div class="para" id="p-1350">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-1_opt_a" data-correct=""><div class="para" id="p-1395">PT TP</div></li>
+<li data-component="feedback" id="quiz-arithmetic-1_opt_a"><div class="para" id="p-1396">Correct</div></li>
+<li data-component="answer" id="quiz-arithmetic-1_opt_b"><div class="para" id="p-1397">PT xy</div></li>
+<li data-component="feedback" id="quiz-arithmetic-1_opt_b"><div class="para" id="p-1398">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-1_opt_c"><div class="para" id="p-1399">PT PT</div></li>
+<li data-component="feedback" id="quiz-arithmetic-1_opt_c"><div class="para" id="p-1400">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-1_opt_d"><div class="para" id="p-1401">PT yx</div></li>
+<li data-component="feedback" id="quiz-arithmetic-1_opt_d"><div class="para" id="p-1402">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-1_opt_e"><div class="para" id="p-1403">None of the above</div></li>
+<li data-component="feedback" id="quiz-arithmetic-1_opt_e"><div class="para" id="p-1404">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-arithmetic-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-arithmetic-2" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1351">Suppose you have declared an array of integers by typing</div>
+<div class="para" id="p-1405">Suppose you have declared an array of integers by typing</div>
 <pre class="code-block tex2jax_ignore">int numbers[] = {5, -1, 7, 10, 0, -11};
 </pre>
-<div class="para" id="p-1352">What is <code class="code-inline tex2jax_ignore"> *(numbers+4)</code>?</div> <div class="para" id="p-1353">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers1.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-arithmetic-2_opt_a" data-correct=""><div class="para" id="p-1354">0</div></li>
-<li data-component="feedback" id="quiz-arithmetic-2_opt_a"><div class="para" id="p-1355">Correct</div></li>
-<li data-component="answer" id="quiz-arithmetic-2_opt_b"><div class="para" id="p-1356">-1</div></li>
-<li data-component="feedback" id="quiz-arithmetic-2_opt_b"><div class="para" id="p-1357">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-2_opt_c"><div class="para" id="p-1358">7</div></li>
-<li data-component="feedback" id="quiz-arithmetic-2_opt_c"><div class="para" id="p-1359">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-2_opt_d"><div class="para" id="p-1360">-11</div></li>
-<li data-component="feedback" id="quiz-arithmetic-2_opt_d"><div class="para" id="p-1361">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-2_opt_e"><div class="para" id="p-1362">10</div></li>
-<li data-component="feedback" id="quiz-arithmetic-2_opt_e"><div class="para" id="p-1363">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-2_opt_f"><div class="para" id="p-1364">5</div></li>
-<li data-component="feedback" id="quiz-arithmetic-2_opt_f"><div class="para" id="p-1365">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-2_opt_g"><div class="para" id="p-1366">None of the above</div></li>
-<li data-component="feedback" id="quiz-arithmetic-2_opt_g"><div class="para" id="p-1367">Not quite. Try again!</div></li>
+<div class="para" id="p-1406">What is <code class="code-inline tex2jax_ignore"> *(numbers+4)</code>?</div> <div class="para" id="p-1407">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers1.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-arithmetic-2_opt_a" data-correct=""><div class="para" id="p-1408">0</div></li>
+<li data-component="feedback" id="quiz-arithmetic-2_opt_a"><div class="para" id="p-1409">Correct</div></li>
+<li data-component="answer" id="quiz-arithmetic-2_opt_b"><div class="para" id="p-1410">-1</div></li>
+<li data-component="feedback" id="quiz-arithmetic-2_opt_b"><div class="para" id="p-1411">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-2_opt_c"><div class="para" id="p-1412">7</div></li>
+<li data-component="feedback" id="quiz-arithmetic-2_opt_c"><div class="para" id="p-1413">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-2_opt_d"><div class="para" id="p-1414">-11</div></li>
+<li data-component="feedback" id="quiz-arithmetic-2_opt_d"><div class="para" id="p-1415">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-2_opt_e"><div class="para" id="p-1416">10</div></li>
+<li data-component="feedback" id="quiz-arithmetic-2_opt_e"><div class="para" id="p-1417">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-2_opt_f"><div class="para" id="p-1418">5</div></li>
+<li data-component="feedback" id="quiz-arithmetic-2_opt_f"><div class="para" id="p-1419">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-2_opt_g"><div class="para" id="p-1420">None of the above</div></li>
+<li data-component="feedback" id="quiz-arithmetic-2_opt_g"><div class="para" id="p-1421">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-arithmetic-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-arithmetic-3" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1368">Suppose you have declared an array of integers by typing</div>
+<div class="para" id="p-1422">Suppose you have declared an array of integers by typing</div>
 <pre class="code-block tex2jax_ignore">int numbers[] = {5, -1, 7, 10, 0, -11};
 </pre>
-<div class="para" id="p-1369">What is <code class="code-inline tex2jax_ignore">*numbers+4</code>? Notice that the only difference to the previous question is the omission of parenthesis.</div> <div class="para" id="p-1370">You really need to think about this first before just trying it out. Really! Anyway, here is the code window for you to try out some code.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers2.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-arithmetic-3_opt_a" data-correct=""><div class="para" id="p-1371">9</div></li>
-<li data-component="feedback" id="quiz-arithmetic-3_opt_a"><div class="para" id="p-1372">Correct</div></li>
-<li data-component="answer" id="quiz-arithmetic-3_opt_b"><div class="para" id="p-1373">5</div></li>
-<li data-component="feedback" id="quiz-arithmetic-3_opt_b"><div class="para" id="p-1374">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-3_opt_c"><div class="para" id="p-1375">7</div></li>
-<li data-component="feedback" id="quiz-arithmetic-3_opt_c"><div class="para" id="p-1376">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-3_opt_d"><div class="para" id="p-1377">4</div></li>
-<li data-component="feedback" id="quiz-arithmetic-3_opt_d"><div class="para" id="p-1378">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-3_opt_e"><div class="para" id="p-1379">0</div></li>
-<li data-component="feedback" id="quiz-arithmetic-3_opt_e"><div class="para" id="p-1380">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-3_opt_f"><div class="para" id="p-1381">-1</div></li>
-<li data-component="feedback" id="quiz-arithmetic-3_opt_f"><div class="para" id="p-1382">Not quite. Try again!</div></li>
+<div class="para" id="p-1423">What is <code class="code-inline tex2jax_ignore">*numbers+4</code>? Notice that the only difference to the previous question is the omission of parenthesis.</div> <div class="para" id="p-1424">You really need to think about this first before just trying it out. Really! Anyway, here is the code window for you to try out some code.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers2.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-arithmetic-3_opt_a" data-correct=""><div class="para" id="p-1425">9</div></li>
+<li data-component="feedback" id="quiz-arithmetic-3_opt_a"><div class="para" id="p-1426">Correct</div></li>
+<li data-component="answer" id="quiz-arithmetic-3_opt_b"><div class="para" id="p-1427">5</div></li>
+<li data-component="feedback" id="quiz-arithmetic-3_opt_b"><div class="para" id="p-1428">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-3_opt_c"><div class="para" id="p-1429">7</div></li>
+<li data-component="feedback" id="quiz-arithmetic-3_opt_c"><div class="para" id="p-1430">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-3_opt_d"><div class="para" id="p-1431">4</div></li>
+<li data-component="feedback" id="quiz-arithmetic-3_opt_d"><div class="para" id="p-1432">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-3_opt_e"><div class="para" id="p-1433">0</div></li>
+<li data-component="feedback" id="quiz-arithmetic-3_opt_e"><div class="para" id="p-1434">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-3_opt_f"><div class="para" id="p-1435">-1</div></li>
+<li data-component="feedback" id="quiz-arithmetic-3_opt_f"><div class="para" id="p-1436">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-arithmetic-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-arithmetic-4" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1383">Suppose (again...) you have declared an array of integers by typing</div>
+<div class="para" id="p-1437">Suppose (again...) you have declared an array of integers by typing</div>
 <pre class="code-block tex2jax_ignore">int numbers[] = {5, -1, 7, 10, 0, -11};
 </pre>
-<div class="para" id="p-1384">What is numbers[10]?</div>
-<li data-component="answer" id="quiz-arithmetic-4_opt_a" data-correct=""><div class="para" id="p-1385">Random and depends on what is at that memory location</div></li>
-<li data-component="feedback" id="quiz-arithmetic-4_opt_a"><div class="para" id="p-1386">Correct</div></li>
-<li data-component="answer" id="quiz-arithmetic-4_opt_b"><div class="para" id="p-1387">5</div></li>
-<li data-component="feedback" id="quiz-arithmetic-4_opt_b"><div class="para" id="p-1388">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-4_opt_c"><div class="para" id="p-1389">This will cause a crash of your program</div></li>
-<li data-component="feedback" id="quiz-arithmetic-4_opt_c"><div class="para" id="p-1390">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-4_opt_d"><div class="para" id="p-1391">The compiler sets this to zero</div></li>
-<li data-component="feedback" id="quiz-arithmetic-4_opt_d"><div class="para" id="p-1392">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-4_opt_e"><div class="para" id="p-1393">-11</div></li>
-<li data-component="feedback" id="quiz-arithmetic-4_opt_e"><div class="para" id="p-1394">Not quite. Try again!</div></li>
+<div class="para" id="p-1438">What is numbers[10]?</div>
+<li data-component="answer" id="quiz-arithmetic-4_opt_a" data-correct=""><div class="para" id="p-1439">Random and depends on what is at that memory location</div></li>
+<li data-component="feedback" id="quiz-arithmetic-4_opt_a"><div class="para" id="p-1440">Correct</div></li>
+<li data-component="answer" id="quiz-arithmetic-4_opt_b"><div class="para" id="p-1441">5</div></li>
+<li data-component="feedback" id="quiz-arithmetic-4_opt_b"><div class="para" id="p-1442">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-4_opt_c"><div class="para" id="p-1443">This will cause a crash of your program</div></li>
+<li data-component="feedback" id="quiz-arithmetic-4_opt_c"><div class="para" id="p-1444">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-4_opt_d"><div class="para" id="p-1445">The compiler sets this to zero</div></li>
+<li data-component="feedback" id="quiz-arithmetic-4_opt_d"><div class="para" id="p-1446">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-4_opt_e"><div class="para" id="p-1447">-11</div></li>
+<li data-component="feedback" id="quiz-arithmetic-4_opt_e"><div class="para" id="p-1448">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-arithmetic-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-arithmetic-5" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1395">Suppose (for the last time) you have declared an array of integers by typing</div>
+<div class="para" id="p-1449">Suppose (for the last time) you have declared an array of integers by typing</div>
 <pre class="code-block tex2jax_ignore">int numbers[] = {5, -1, 7, 10, 0, -11};
 </pre>
-<div class="para" id="p-1396">You have furthermore declared a pointer via</div>
+<div class="para" id="p-1450">You have furthermore declared a pointer via</div>
 <pre class="code-block tex2jax_ignore">int *ptr;
 </pre>
-<div class="para" id="p-1397">and initialized it via</div>
+<div class="para" id="p-1451">and initialized it via</div>
 <pre class="code-block tex2jax_ignore">ptr = numbers + 2;
 </pre>
-<div class="para" id="p-1398">What is <code class="code-inline tex2jax_ignore">*(++ptr)</code>?</div> <div class="para" id="p-1399"><em class="emphasis">You want to try this out, right? Remember... Think first!</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers3.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers3.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-arithmetic-5_opt_a" data-correct=""><div class="para" id="p-1400">10</div></li>
-<li data-component="feedback" id="quiz-arithmetic-5_opt_a"><div class="para" id="p-1401">Correct</div></li>
-<li data-component="answer" id="quiz-arithmetic-5_opt_b"><div class="para" id="p-1402">-11</div></li>
-<li data-component="feedback" id="quiz-arithmetic-5_opt_b"><div class="para" id="p-1403">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-5_opt_c"><div class="para" id="p-1404">5</div></li>
-<li data-component="feedback" id="quiz-arithmetic-5_opt_c"><div class="para" id="p-1405">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-5_opt_d"><div class="para" id="p-1406">0</div></li>
-<li data-component="feedback" id="quiz-arithmetic-5_opt_d"><div class="para" id="p-1407">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-5_opt_e"><div class="para" id="p-1408">-1</div></li>
-<li data-component="feedback" id="quiz-arithmetic-5_opt_e"><div class="para" id="p-1409">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arithmetic-5_opt_f"><div class="para" id="p-1410">7</div></li>
-<li data-component="feedback" id="quiz-arithmetic-5_opt_f"><div class="para" id="p-1411">Not quite. Try again!</div></li>
+<div class="para" id="p-1452">What is <code class="code-inline tex2jax_ignore">*(++ptr)</code>?</div> <div class="para" id="p-1453"><em class="emphasis">You want to try this out, right? Remember... Think first!</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_pointers3.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers3.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_pointers3.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-arithmetic-5_opt_a" data-correct=""><div class="para" id="p-1454">10</div></li>
+<li data-component="feedback" id="quiz-arithmetic-5_opt_a"><div class="para" id="p-1455">Correct</div></li>
+<li data-component="answer" id="quiz-arithmetic-5_opt_b"><div class="para" id="p-1456">-11</div></li>
+<li data-component="feedback" id="quiz-arithmetic-5_opt_b"><div class="para" id="p-1457">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-5_opt_c"><div class="para" id="p-1458">5</div></li>
+<li data-component="feedback" id="quiz-arithmetic-5_opt_c"><div class="para" id="p-1459">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-5_opt_d"><div class="para" id="p-1460">0</div></li>
+<li data-component="feedback" id="quiz-arithmetic-5_opt_d"><div class="para" id="p-1461">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-5_opt_e"><div class="para" id="p-1462">-1</div></li>
+<li data-component="feedback" id="quiz-arithmetic-5_opt_e"><div class="para" id="p-1463">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arithmetic-5_opt_f"><div class="para" id="p-1464">7</div></li>
+<li data-component="feedback" id="quiz-arithmetic-5_opt_f"><div class="para" id="p-1465">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="pointers-frac-calc.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="pointers-functions.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

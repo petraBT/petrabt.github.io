@@ -1056,51 +1056,51 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="array-integer"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">17.1</span> <span class="title">Arrays of Integers</span>
 </h2>
-<div class="para" id="p-1134">Up to this point we have been using <em class="emphasis">singular data types,</em> such as</div>
+<div class="para" id="p-1188">Up to this point we have been using <em class="emphasis">singular data types,</em> such as</div>
 <pre class="code-block tex2jax_ignore">int i, j, k;
 </pre>
 <pre class="code-block tex2jax_ignore">float x, y, z;
 </pre>
 <pre class="code-block tex2jax_ignore">double u, v, w;
 </pre>
-<div class="para" id="p-1135">Often situations arise in which it is more natural to store a <em class="alert">collection of values</em> together in a <em class="emphasis"><em class="alert">single variable</em></em>.</div>
-<div class="para" id="p-1136">We will first focus on storing integers in an array. For example, we may wish to store all students' grades on an exam or the coordinates for an object or the values of a function at regular intervals, etc.</div>
-<div class="para" id="p-1137">An <em class="alert">array</em> (think of a collection of data items of the <em class="alert">same type</em>) is just what we need to accomplish this efficiently.</div>
+<div class="para" id="p-1189">Often situations arise in which it is more natural to store a <em class="alert">collection of values</em> together in a <em class="emphasis"><em class="alert">single variable</em></em>.</div>
+<div class="para" id="p-1190">We will first focus on storing integers in an array. For example, we may wish to store all students' grades on an exam or the coordinates for an object or the values of a function at regular intervals, etc.</div>
+<div class="para" id="p-1191">An <em class="alert">array</em> (think of a collection of data items of the <em class="alert">same type</em>) is just what we need to accomplish this efficiently.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518460628953" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518460628953" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-38"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1138"><ul class="disc">
-<li id="li-531"><div class="para" id="p-derived-li-531">Declaring arrays of integers</div></li>
-<li id="li-532"><div class="para" id="p-derived-li-532">Assigning values to arrays</div></li>
-<li id="li-533"><div class="para" id="p-derived-li-533">NEW SYNTAX: <code class="code-inline tex2jax_ignore">int array[3];</code> creates a variable named array and reserves space to hold three integers</div></li>
-<li id="li-534"><div class="para" id="p-derived-li-534">NEW SYNTAX: <code class="code-inline tex2jax_ignore">array[0] = 16;</code> initializes the first entry in the array with the value "16"</div></li>
-<li id="li-535"><div class="para" id="p-derived-li-535">Arrays in C are zero-based</div></li>
+<div class="para logical" id="p-1192"><ul class="disc">
+<li id="li-487"><div class="para" id="p-derived-li-487">Declaring arrays of integers</div></li>
+<li id="li-488"><div class="para" id="p-derived-li-488">Assigning values to arrays</div></li>
+<li id="li-489"><div class="para" id="p-derived-li-489">NEW SYNTAX: <code class="code-inline tex2jax_ignore">int array[3];</code> creates a variable named array and reserves space to hold three integers</div></li>
+<li id="li-490"><div class="para" id="p-derived-li-490">NEW SYNTAX: <code class="code-inline tex2jax_ignore">array[0] = 16;</code> initializes the first entry in the array with the value "16"</div></li>
+<li id="li-491"><div class="para" id="p-derived-li-491">Arrays in C are zero-based</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-40"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-array-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-array-1" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1139">How much space is reserved with the following declaration:</div>
+<div class="para" id="p-1193">How much space is reserved with the following declaration:</div>
 <pre class="code-block tex2jax_ignore">int numbers[10];
 </pre>
-<li data-component="answer" id="quiz-array-1_opt_a" data-correct=""><div class="para" id="p-1140">space for 10 integers</div></li>
-<li data-component="feedback" id="quiz-array-1_opt_a"><div class="para" id="p-1141">Correct</div></li>
-<li data-component="answer" id="quiz-array-1_opt_b"><div class="para" id="p-1142">space for 1 integer</div></li>
-<li data-component="feedback" id="quiz-array-1_opt_b"><div class="para" id="p-1143">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-array-1_opt_c"><div class="para" id="p-1144">space for 9 integers</div></li>
-<li data-component="feedback" id="quiz-array-1_opt_c"><div class="para" id="p-1145">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-array-1_opt_d"><div class="para" id="p-1146">space for 11 integers</div></li>
-<li data-component="feedback" id="quiz-array-1_opt_d"><div class="para" id="p-1147">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-array-1_opt_e"><div class="para" id="p-1148">space for 12 integers</div></li>
-<li data-component="feedback" id="quiz-array-1_opt_e"><div class="para" id="p-1149">Not quite. Try again!</div></li>
-</ul></div></div></article></section><div class="para" id="p-1150">Now that we know how to create these arrays, how do we actually use them?</div>
-<div class="para" id="p-1151"> </div>
+<li data-component="answer" id="quiz-array-1_opt_a" data-correct=""><div class="para" id="p-1194">space for 10 integers</div></li>
+<li data-component="feedback" id="quiz-array-1_opt_a"><div class="para" id="p-1195">Correct</div></li>
+<li data-component="answer" id="quiz-array-1_opt_b"><div class="para" id="p-1196">space for 1 integer</div></li>
+<li data-component="feedback" id="quiz-array-1_opt_b"><div class="para" id="p-1197">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-array-1_opt_c"><div class="para" id="p-1198">space for 9 integers</div></li>
+<li data-component="feedback" id="quiz-array-1_opt_c"><div class="para" id="p-1199">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-array-1_opt_d"><div class="para" id="p-1200">space for 11 integers</div></li>
+<li data-component="feedback" id="quiz-array-1_opt_d"><div class="para" id="p-1201">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-array-1_opt_e"><div class="para" id="p-1202">space for 12 integers</div></li>
+<li data-component="feedback" id="quiz-array-1_opt_e"><div class="para" id="p-1203">Not quite. Try again!</div></li>
+</ul></div></div></article></section><div class="para" id="p-1204">Now that we know how to create these arrays, how do we actually use them?</div>
+<div class="para" id="p-1205"> </div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521653766713" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521653766713" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-39"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1152">
+<div class="para logical" id="p-1206">
 <ul class="disc">
-<li id="li-536"><div class="para" id="p-derived-li-536">Arrays and <code class="code-inline tex2jax_ignore">for</code>-loops</div></li>
-<li id="li-537"><div class="para" id="p-derived-li-537">Reading values from the user input into an array</div></li>
-<li id="li-538"><div class="para" id="p-derived-li-538">NEW SYNTAX: you can fill the array using a <code class="code-inline tex2jax_ignore">for</code>-loop, where you use the following line to fill each array element</div></li>
+<li id="li-492"><div class="para" id="p-derived-li-492">Arrays and <code class="code-inline tex2jax_ignore">for</code>-loops</div></li>
+<li id="li-493"><div class="para" id="p-derived-li-493">Reading values from the user input into an array</div></li>
+<li id="li-494"><div class="para" id="p-derived-li-494">NEW SYNTAX: you can fill the array using a <code class="code-inline tex2jax_ignore">for</code>-loop, where you use the following line to fill each array element</div></li>
 </ul>
 <div class="para"><code class="code-inline tex2jax_ignore">scanf("%d", &amp;array[i]);</code></div>
 </div></aside><section class="reading-questions" id="reading-questions-41"><h3 class="heading hide-type">
@@ -1108,20 +1108,20 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <article class="exercise exercise-like" id="quiz-array-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-array-2" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1153">After the declaration</div>
+<div class="para" id="p-1207">After the declaration</div>
 <pre class="code-block tex2jax_ignore">int num[50];
 </pre>
-<div class="para" id="p-1154">what is the value of <code class="code-inline tex2jax_ignore">num[5]</code>?</div>
-<li data-component="answer" id="quiz-array-2_opt_a" data-correct=""><div class="para" id="p-1155">random</div></li>
-<li data-component="feedback" id="quiz-array-2_opt_a"><div class="para" id="p-1156">Correct</div></li>
-<li data-component="answer" id="quiz-array-2_opt_b"><div class="para" id="p-1157">5</div></li>
-<li data-component="feedback" id="quiz-array-2_opt_b"><div class="para" id="p-1158">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-array-2_opt_c"><div class="para" id="p-1159">0</div></li>
-<li data-component="feedback" id="quiz-array-2_opt_c"><div class="para" id="p-1160">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-array-2_opt_d"><div class="para" id="p-1161">4</div></li>
-<li data-component="feedback" id="quiz-array-2_opt_d"><div class="para" id="p-1162">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-array-2_opt_e"><div class="para" id="p-1163">6</div></li>
-<li data-component="feedback" id="quiz-array-2_opt_e"><div class="para" id="p-1164">Not quite. Try again!</div></li>
+<div class="para" id="p-1208">what is the value of <code class="code-inline tex2jax_ignore">num[5]</code>?</div>
+<li data-component="answer" id="quiz-array-2_opt_a" data-correct=""><div class="para" id="p-1209">random</div></li>
+<li data-component="feedback" id="quiz-array-2_opt_a"><div class="para" id="p-1210">Correct</div></li>
+<li data-component="answer" id="quiz-array-2_opt_b"><div class="para" id="p-1211">5</div></li>
+<li data-component="feedback" id="quiz-array-2_opt_b"><div class="para" id="p-1212">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-array-2_opt_c"><div class="para" id="p-1213">0</div></li>
+<li data-component="feedback" id="quiz-array-2_opt_c"><div class="para" id="p-1214">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-array-2_opt_d"><div class="para" id="p-1215">4</div></li>
+<li data-component="feedback" id="quiz-array-2_opt_d"><div class="para" id="p-1216">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-array-2_opt_e"><div class="para" id="p-1217">6</div></li>
+<li data-component="feedback" id="quiz-array-2_opt_e"><div class="para" id="p-1218">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="array.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="array-other.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

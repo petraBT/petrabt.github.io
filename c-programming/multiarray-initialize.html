@@ -1056,7 +1056,7 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="multiarray-initialize"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">24.3</span> <span class="title">Initializing Multidimensional Arrays</span>
 </h2>
-<div class="para" id="p-1728">It is possible to initialize a multidimensional array during declaration time. In fact, there are multiple ways to do so. The following four ways are actually all equivalent and all initialize a 2-dimensional array with the same values:</div>
+<div class="para" id="p-1781">It is possible to initialize a multidimensional array during declaration time. In fact, there are multiple ways to do so. The following four ways are actually all equivalent and all initialize a 2-dimensional array with the same values:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int matrix1[NROWS][NCOLS] = {{1,2}, {3,4}, {5,6}, {7,8} };
 int matrix2[NROWS][NCOLS] = { {1,2},
                               {3,4},
@@ -1065,32 +1065,32 @@ int matrix2[NROWS][NCOLS] = { {1,2},
 int matrix3[][NCOLS] = {{1,2}, {3,4}, {5,6}, {7,8} };
 int matrix4[][NCOLS] = {1, 2, 3, 4, 5, 6, 7, 8};
 </code></pre></div>
-<div class="para" id="p-1729">The Codecast below illustrates this further:</div>
+<div class="para" id="p-1782">The Codecast below illustrates this further:</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1522700958321" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1522700958321" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-58"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1730"><ul class="disc">
-<li id="li-648"><div class="para" id="p-derived-li-648">Multidimensional arrays can be initialized by enclosing values in (nested) curly brackets: <code class="code-inline tex2jax_ignore">{}</code>
+<div class="para logical" id="p-1783"><ul class="disc">
+<li id="li-604"><div class="para" id="p-derived-li-604">Multidimensional arrays can be initialized by enclosing values in (nested) curly brackets: <code class="code-inline tex2jax_ignore">{}</code>
 </div></li>
-<li id="li-649"><div class="para" id="p-derived-li-649">i.e. <code class="code-inline tex2jax_ignore">int matrix[4][2] = {{1,2}, {3,4}, {5,6}, {7,8}};</code>
+<li id="li-605"><div class="para" id="p-derived-li-605">i.e. <code class="code-inline tex2jax_ignore">int matrix[4][2] = {{1,2}, {3,4}, {5,6}, {7,8}};</code>
 </div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-58"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-multiarray-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-multiarray-3" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1731">Which of the following is correct?</div>
-<li data-component="answer" id="quiz-multiarray-3_opt_a" data-correct=""><div class="para" id="p-1732"><pre class="code-block tex2jax_ignore">int matrix[][2] = {5, 2, 7, 5, 3, 2, 8, 6};
+<div class="para" id="p-1784">Which of the following is correct?</div>
+<li data-component="answer" id="quiz-multiarray-3_opt_a" data-correct=""><div class="para" id="p-1785"><pre class="code-block tex2jax_ignore">int matrix[][2] = {5, 2, 7, 5, 3, 2, 8, 6};
 </pre></div></li>
-<li data-component="feedback" id="quiz-multiarray-3_opt_a"><div class="para" id="p-1733">Correct</div></li>
-<li data-component="answer" id="quiz-multiarray-3_opt_b"><div class="para" id="p-1734"><pre class="code-block tex2jax_ignore">int matrix[4][] = {5, 2, 7, 5, 3, 2, 8, 6};
+<li data-component="feedback" id="quiz-multiarray-3_opt_a"><div class="para" id="p-1786">Correct</div></li>
+<li data-component="answer" id="quiz-multiarray-3_opt_b"><div class="para" id="p-1787"><pre class="code-block tex2jax_ignore">int matrix[4][] = {5, 2, 7, 5, 3, 2, 8, 6};
 </pre></div></li>
-<li data-component="feedback" id="quiz-multiarray-3_opt_b"><div class="para" id="p-1735">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-multiarray-3_opt_c"><div class="para" id="p-1736"><pre class="code-block tex2jax_ignore">int matrix = {5, 2, 7, 5, 3, 2, 8, 6};
+<li data-component="feedback" id="quiz-multiarray-3_opt_b"><div class="para" id="p-1788">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-multiarray-3_opt_c"><div class="para" id="p-1789"><pre class="code-block tex2jax_ignore">int matrix = {5, 2, 7, 5, 3, 2, 8, 6};
 </pre></div></li>
-<li data-component="feedback" id="quiz-multiarray-3_opt_c"><div class="para" id="p-1737">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-multiarray-3_opt_d"><div class="para" id="p-1738"><pre class="code-block tex2jax_ignore">int matrix[][] = {5, 2, 7, 5, 3, 2, 8, 6};
+<li data-component="feedback" id="quiz-multiarray-3_opt_c"><div class="para" id="p-1790">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-multiarray-3_opt_d"><div class="para" id="p-1791"><pre class="code-block tex2jax_ignore">int matrix[][] = {5, 2, 7, 5, 3, 2, 8, 6};
 </pre></div></li>
-<li data-component="feedback" id="quiz-multiarray-3_opt_d"><div class="para" id="p-1739">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-multiarray-3_opt_d"><div class="para" id="p-1792">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="multiarray-matrices.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="multiarray-functions.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

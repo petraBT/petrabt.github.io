@@ -1056,13 +1056,13 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="malloc-array"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">21.3</span> <span class="title">Allocate Memory for Arrays</span>
 </h2>
-<div class="para" id="p-1550">We can extend the use of <code class="code-inline tex2jax_ignore">malloc()</code> beyond single variables and use it to reserve memory for an entire array!</div>
+<div class="para" id="p-1603">We can extend the use of <code class="code-inline tex2jax_ignore">malloc()</code> beyond single variables and use it to reserve memory for an entire array!</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519660322746" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519660322746" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-52"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1551">
+<div class="para logical" id="p-1604">
 <ul class="disc">
-<li id="li-618"><div class="para" id="p-derived-li-618">By doing the math (multiplying the size of a given datatype with the number of elements of that type you wish to store), the <code class="code-inline tex2jax_ignore">malloc()</code> function can be used to reserve space for entire arrays</div></li>
-<li id="li-619"><div class="para" id="p-derived-li-619">NEW SYNTAX: the following line will block off memory for an integer array with five elements</div></li>
+<li id="li-574"><div class="para" id="p-derived-li-574">By doing the math (multiplying the size of a given datatype with the number of elements of that type you wish to store), the <code class="code-inline tex2jax_ignore">malloc()</code> function can be used to reserve space for entire arrays</div></li>
+<li id="li-575"><div class="para" id="p-derived-li-575">NEW SYNTAX: the following line will block off memory for an integer array with five elements</div></li>
 </ul>
 <div class="para">array = (int *) malloc(5*sizeof(int));</div>
 </div></aside><section class="reading-questions" id="reading-questions-52"><h3 class="heading hide-type">
@@ -1070,20 +1070,20 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <article class="exercise exercise-like" id="quiz-malloc-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-malloc-3" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1552">Suppose you would like to reserve space in memory for an array of N integers (where N is a variable of type <code class="code-inline tex2jax_ignore">int</code> that holds the number of ints to be stored) and store the resulting location in an integer pointer (an <code class="code-inline tex2jax_ignore">int *</code>)<pre class="code-block tex2jax_ignore">array
+<div class="para" id="p-1605">Suppose you would like to reserve space in memory for an array of N integers (where N is a variable of type <code class="code-inline tex2jax_ignore">int</code> that holds the number of ints to be stored) and store the resulting location in an integer pointer (an <code class="code-inline tex2jax_ignore">int *</code>)<pre class="code-block tex2jax_ignore">array
 </pre>that has already been declared. What is the correct way to do so?</div>
-<li data-component="answer" id="quiz-malloc-3_opt_a" data-correct=""><div class="para" id="p-1553"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*sizeof(int));
+<li data-component="answer" id="quiz-malloc-3_opt_a" data-correct=""><div class="para" id="p-1606"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*sizeof(int));
 </pre></div></li>
-<li data-component="feedback" id="quiz-malloc-3_opt_a"><div class="para" id="p-1554">Correct</div></li>
-<li data-component="answer" id="quiz-malloc-3_opt_b"><div class="para" id="p-1555"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*int);
+<li data-component="feedback" id="quiz-malloc-3_opt_a"><div class="para" id="p-1607">Correct</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_b"><div class="para" id="p-1608"><pre class="code-block tex2jax_ignore">array = (int *) malloc(N*int);
 </pre></div></li>
-<li data-component="feedback" id="quiz-malloc-3_opt_b"><div class="para" id="p-1556">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-malloc-3_opt_c"><div class="para" id="p-1557"><pre class="code-block tex2jax_ignore">N = (int *) malloc(array*sizeof(int));
+<li data-component="feedback" id="quiz-malloc-3_opt_b"><div class="para" id="p-1609">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_c"><div class="para" id="p-1610"><pre class="code-block tex2jax_ignore">N = (int *) malloc(array*sizeof(int));
 </pre></div></li>
-<li data-component="feedback" id="quiz-malloc-3_opt_c"><div class="para" id="p-1558">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-malloc-3_opt_d"><div class="para" id="p-1559"><pre class="code-block tex2jax_ignore">(int *) array = N*malloc(sizeof(int));
+<li data-component="feedback" id="quiz-malloc-3_opt_c"><div class="para" id="p-1611">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-malloc-3_opt_d"><div class="para" id="p-1612"><pre class="code-block tex2jax_ignore">(int *) array = N*malloc(sizeof(int));
 </pre></div></li>
-<li data-component="feedback" id="quiz-malloc-3_opt_d"><div class="para" id="p-1560">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-malloc-3_opt_d"><div class="para" id="p-1613">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="malloc-free.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="malloc-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

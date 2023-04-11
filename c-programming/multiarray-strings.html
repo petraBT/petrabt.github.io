@@ -1056,11 +1056,11 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="multiarray-strings"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">24.1</span> <span class="title">Arrays of Strings</span>
 </h2>
-<div class="para" id="p-1702">Recall that in C, a string is a NULL-terminated array of characters. Therefore, if we wanted to store multiple strings in an array, we'd need an array of strings, which is an array of arrays! This is also called a two-dimensional array.</div>
-<div class="para" id="p-1703">Such an array of strings is declared as follows:</div>
+<div class="para" id="p-1755">Recall that in C, a string is a NULL-terminated array of characters. Therefore, if we wanted to store multiple strings in an array, we'd need an array of strings, which is an array of arrays! This is also called a two-dimensional array.</div>
+<div class="para" id="p-1756">Such an array of strings is declared as follows:</div>
 <pre class="code-block tex2jax_ignore">char name[NRECS][STRLEN];
 </pre>
-<div class="para" id="p-1704">Here, <code class="code-inline tex2jax_ignore">name</code> is the name of the array, <code class="code-inline tex2jax_ignore">NRECS</code> the number of strings to store, and <code class="code-inline tex2jax_ignore">STRLEN</code> a bound on the length of the strings to be stored (remember to leave room for the NULL-terminator).</div>
+<div class="para" id="p-1757">Here, <code class="code-inline tex2jax_ignore">name</code> is the name of the array, <code class="code-inline tex2jax_ignore">NRECS</code> the number of strings to store, and <code class="code-inline tex2jax_ignore">STRLEN</code> a bound on the length of the strings to be stored (remember to leave room for the NULL-terminator).</div>
 <figure class="table table-like" id="table-4"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">24.1<span class="period">.</span></span><span class="space"> </span>An Array of Strings</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l t b2 r2 l3 t3 lines"><code class="code-inline tex2jax_ignore">P</code></td>
@@ -1122,23 +1122,23 @@ eBookConfig.enable_chatcodes =  false;
 <td class="l t b3 r2 l0 t0 lines"><code class="code-inline tex2jax_ignore"> </code></td>
 <td class="l t b3 r3 l0 t0 lines"><code class="code-inline tex2jax_ignore"> </code></td>
 </tr>
-</table></div></figure><div class="para" id="p-1705">The above sample table has <code class="code-inline tex2jax_ignore">STRLEN=10</code> and <code class="code-inline tex2jax_ignore">NRECS=5</code>.</div>
-<div class="para" id="p-1706">You could <code class="code-inline tex2jax_ignore">#define</code> <code class="code-inline tex2jax_ignore">NRECS</code> and <code class="code-inline tex2jax_ignore">STRLEN</code> at the top of your program if you wish, so that you could easily change these constants. For example:</div>
+</table></div></figure><div class="para" id="p-1758">The above sample table has <code class="code-inline tex2jax_ignore">STRLEN=10</code> and <code class="code-inline tex2jax_ignore">NRECS=5</code>.</div>
+<div class="para" id="p-1759">You could <code class="code-inline tex2jax_ignore">#define</code> <code class="code-inline tex2jax_ignore">NRECS</code> and <code class="code-inline tex2jax_ignore">STRLEN</code> at the top of your program if you wish, so that you could easily change these constants. For example:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define NRECS 100
 #define STRLEN 50
 char words[NRECS][STRLEN];
 </code></pre></div>
-<div class="para" id="p-1707">declares an array of strings that can hold 100 strings of maximum length 50 characters (including the NULL-terminator). You could also simply write</div>
+<div class="para" id="p-1760">declares an array of strings that can hold 100 strings of maximum length 50 characters (including the NULL-terminator). You could also simply write</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">char words[100][50];
 </code></pre></div>
-<div class="para" id="p-1708">The following video shows how to work with arrays of strings.</div>
+<div class="para" id="p-1761">The following video shows how to work with arrays of strings.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1522698798801" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1522698798801" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-56"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1709">
+<div class="para logical" id="p-1762">
 <ul class="disc">
-<li id="li-642"><div class="para" id="p-derived-li-642">To store one word we need a string, which is a one-dimensional array. Thus to store multiple words we need either multiple one-dimensional arrays or one two-dimensional array</div></li>
-<li id="li-643"><div class="para" id="p-derived-li-643">Multidimensional arrays can be initialized using loops</div></li>
-<li id="li-644"><div class="para" id="p-derived-li-644">NEW SYNTAX: the following line declares an array of strings, with [NRECS] = number of records and [STRLEN] = max. string length</div></li>
+<li id="li-598"><div class="para" id="p-derived-li-598">To store one word we need a string, which is a one-dimensional array. Thus to store multiple words we need either multiple one-dimensional arrays or one two-dimensional array</div></li>
+<li id="li-599"><div class="para" id="p-derived-li-599">Multidimensional arrays can be initialized using loops</div></li>
+<li id="li-600"><div class="para" id="p-derived-li-600">NEW SYNTAX: the following line declares an array of strings, with [NRECS] = number of records and [STRLEN] = max. string length</div></li>
 </ul>
 <div class="para"><code class="code-inline tex2jax_ignore">char name[NRECS][STRLEN];</code></div>
 </div></aside><section class="reading-questions" id="reading-questions-56"><h3 class="heading hide-type">
@@ -1146,22 +1146,22 @@ char words[NRECS][STRLEN];
 </h3>
 <article class="exercise exercise-like" id="quiz-multiarray-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-multiarray-1" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1710">Suppose you have declared an “array of strings” using the command</div>
+<div class="para" id="p-1763">Suppose you have declared an “array of strings” using the command</div>
 <pre class="code-block tex2jax_ignore">char name[100][30];
 </pre>
-<div class="para" id="p-1711">If you wanted to store the name “Taylor” in the topmost position of this array, how would you do so?</div>
-<li data-component="answer" id="quiz-multiarray-1_opt_a" data-correct=""><div class="para" id="p-1712"><pre class="code-block tex2jax_ignore">strcpy(name[0], "Taylor");
+<div class="para" id="p-1764">If you wanted to store the name “Taylor” in the topmost position of this array, how would you do so?</div>
+<li data-component="answer" id="quiz-multiarray-1_opt_a" data-correct=""><div class="para" id="p-1765"><pre class="code-block tex2jax_ignore">strcpy(name[0], "Taylor");
 </pre></div></li>
-<li data-component="feedback" id="quiz-multiarray-1_opt_a"><div class="para" id="p-1713">Correct</div></li>
-<li data-component="answer" id="quiz-multiarray-1_opt_b"><div class="para" id="p-1714"><pre class="code-block tex2jax_ignore">name = "Taylor";
+<li data-component="feedback" id="quiz-multiarray-1_opt_a"><div class="para" id="p-1766">Correct</div></li>
+<li data-component="answer" id="quiz-multiarray-1_opt_b"><div class="para" id="p-1767"><pre class="code-block tex2jax_ignore">name = "Taylor";
 </pre></div></li>
-<li data-component="feedback" id="quiz-multiarray-1_opt_b"><div class="para" id="p-1715">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-multiarray-1_opt_c"><div class="para" id="p-1716"><pre class="code-block tex2jax_ignore">name[0] = "Taylor";
+<li data-component="feedback" id="quiz-multiarray-1_opt_b"><div class="para" id="p-1768">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-multiarray-1_opt_c"><div class="para" id="p-1769"><pre class="code-block tex2jax_ignore">name[0] = "Taylor";
 </pre></div></li>
-<li data-component="feedback" id="quiz-multiarray-1_opt_c"><div class="para" id="p-1717">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-multiarray-1_opt_d"><div class="para" id="p-1718"><pre class="code-block tex2jax_ignore">strcpy(name[0][0], "Taylor");
+<li data-component="feedback" id="quiz-multiarray-1_opt_c"><div class="para" id="p-1770">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-multiarray-1_opt_d"><div class="para" id="p-1771"><pre class="code-block tex2jax_ignore">strcpy(name[0][0], "Taylor");
 </pre></div></li>
-<li data-component="feedback" id="quiz-multiarray-1_opt_d"><div class="para" id="p-1719">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-multiarray-1_opt_d"><div class="para" id="p-1772">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="multiarray.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="multiarray-matrices.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -1056,41 +1056,41 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linkedlists-create"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">27.4</span> <span class="title">Create Linked Lists "On The Fly"</span>
 </h2>
-<div class="para" id="p-1899">We are ready to put everything together! Rather than simply storing three points that were already known at compile time, we'll now ask the user to enter the number of points they wish to store and then create space in memory at run-time for each such point. Each newly created point (other than the first one, which is the start of the list), is linked to the list by saving its address at the previous element of the list.</div>
+<div class="para" id="p-1952">We are ready to put everything together! Rather than simply storing three points that were already known at compile time, we'll now ask the user to enter the number of points they wish to store and then create space in memory at run-time for each such point. Each newly created point (other than the first one, which is the start of the list), is linked to the list by saving its address at the previous element of the list.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521232711745" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521232711745" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-65"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1900"><ul class="disc">
-<li id="li-743"><div class="para" id="p-derived-li-743">Linked lists can be created with a <code class="code-inline tex2jax_ignore">for</code>-loop and function</div></li>
-<li id="li-744"><div class="para" id="p-derived-li-744">The <code class="code-inline tex2jax_ignore">for</code>-loop asks for the values in each element of the list, the function creates the element, and then the pointers are linked</div></li>
-<li id="li-745"><div class="para" id="p-derived-li-745">
+<div class="para logical" id="p-1953"><ul class="disc">
+<li id="li-699"><div class="para" id="p-derived-li-699">Linked lists can be created with a <code class="code-inline tex2jax_ignore">for</code>-loop and function</div></li>
+<li id="li-700"><div class="para" id="p-derived-li-700">The <code class="code-inline tex2jax_ignore">for</code>-loop asks for the values in each element of the list, the function creates the element, and then the pointers are linked</div></li>
+<li id="li-701"><div class="para" id="p-derived-li-701">
 <code class="code-inline tex2jax_ignore">malloc()</code> is used to allocate memory for each element</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-65"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist1-5"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1901">You'd like to print all of the names of students whose records are stored in a linked list. As before, each student record is stored as</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
+<div class="para" id="p-1954">You'd like to print all of the names of students whose records are stored in a linked list. As before, each student record is stored as</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
      char    name[50];
      int     birthYear;
      float   gpa;     
      struct student *next;
 };
-</code></pre></div> <div class="para" id="p-1902">You are given the following function in order to print the names of all students in the list:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void printNames(struct student *start) {
+</code></pre></div> <div class="para" id="p-1955">You are given the following function in order to print the names of all students in the list:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void printNames(struct student *start) {
   while (start-&gt;next!=NULL) {
        printf("%s\n", start-&gt;name); 
        start = start-&gt;next;
   }
 }
-</code></pre></div> <div class="para" id="p-1903">Which of the following is true about the above function?</div> <ol class="lower-alpha">
-<li id="li-746"><div class="para" id="p-derived-li-746">The function will print a random name when the list is empty.</div></li>
-<li id="li-747"><div class="para" id="p-derived-li-747">The function is implemented incorrectly because it changes start.</div></li>
-<li id="li-748"><div class="para" id="p-derived-li-748">The function doesn't print the name of the last student in the list if the list is nonempty.</div></li>
-</ol> <div class="para" id="p-1904"><em class="emphasis">Enter your choice (a/b/c):</em></div></article><article class="exercise exercise-like" id="quiz-linkedlist1-6"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1905">Suppose you wanted to delete the third student in a linked list of five student records. Why can’t you just free the space allocated for the third student?</div> <ol class="lower-alpha">
-<li id="li-749"><div class="para" id="p-derived-li-749">It is impossible to delete a student from a linked list of students. That's why arrays are better than linked lists.</div></li>
-<li id="li-750"><div class="para" id="p-derived-li-750">The compiler won’t let you do that.</div></li>
-<li id="li-751"><div class="para" id="p-derived-li-751">By deleting the third student you'd loose access to the remaining students in the list. Instead, you'd need to link the second student to the fourth student in the list (and in order to do so, you need to know where the third student was pointing).</div></li>
-<li id="li-752"><div class="para" id="p-derived-li-752">You need to use the command free instead of simply deleting the student. As long as you use free you are okay.</div></li>
-</ol> <div class="para" id="p-1906"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
+</code></pre></div> <div class="para" id="p-1956">Which of the following is true about the above function?</div> <ol class="lower-alpha">
+<li id="li-702"><div class="para" id="p-derived-li-702">The function will print a random name when the list is empty.</div></li>
+<li id="li-703"><div class="para" id="p-derived-li-703">The function is implemented incorrectly because it changes start.</div></li>
+<li id="li-704"><div class="para" id="p-derived-li-704">The function doesn't print the name of the last student in the list if the list is nonempty.</div></li>
+</ol> <div class="para" id="p-1957"><em class="emphasis">Enter your choice (a/b/c):</em></div></article><article class="exercise exercise-like" id="quiz-linkedlist1-6"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1958">Suppose you wanted to delete the third student in a linked list of five student records. Why can’t you just free the space allocated for the third student?</div> <ol class="lower-alpha">
+<li id="li-705"><div class="para" id="p-derived-li-705">It is impossible to delete a student from a linked list of students. That's why arrays are better than linked lists.</div></li>
+<li id="li-706"><div class="para" id="p-derived-li-706">The compiler won’t let you do that.</div></li>
+<li id="li-707"><div class="para" id="p-derived-li-707">By deleting the third student you'd loose access to the remaining students in the list. Instead, you'd need to link the second student to the fourth student in the list (and in order to do so, you need to know where the third student was pointing).</div></li>
+<li id="li-708"><div class="para" id="p-derived-li-708">You need to use the command free instead of simply deleting the student. As long as you use free you are okay.</div></li>
+</ol> <div class="para" id="p-1959"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="linkedlists-autolink.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="linkedlists-large-ints.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

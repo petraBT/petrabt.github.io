@@ -1056,52 +1056,52 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="pointers-dereference"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.2</span> <span class="title">Dereferencing a Pointer</span>
 </h2>
-<div class="para" id="p-1281">We will now explore how the concept of pointers (addresses) can be used to modify the value of a variable inside a function, despite the fact that the variable's scope does not extend to that function.</div>
+<div class="para" id="p-1335">We will now explore how the concept of pointers (addresses) can be used to modify the value of a variable inside a function, despite the fact that the variable's scope does not extend to that function.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519142414918" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519142414918" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-46"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1282"><ul class="disc">
-<li id="li-576"><div class="para" id="p-derived-li-576">Passing variables to functions "by reference" (via their address)</div></li>
-<li id="li-577"><div class="para" id="p-derived-li-577">To change a variable's value whose address is stored in <code class="code-inline tex2jax_ignore">var</code>, use <code class="code-inline tex2jax_ignore">*var = *var + 10;</code>, which (for example) would add 10 to the value of original variable passed to the function by reference</div></li>
-<li id="li-578"><div class="para" id="p-derived-li-578">Passing a variable to a function by reference allows the variable to be used and updated in the function</div></li>
+<div class="para logical" id="p-1336"><ul class="disc">
+<li id="li-532"><div class="para" id="p-derived-li-532">Passing variables to functions "by reference" (via their address)</div></li>
+<li id="li-533"><div class="para" id="p-derived-li-533">To change a variable's value whose address is stored in <code class="code-inline tex2jax_ignore">var</code>, use <code class="code-inline tex2jax_ignore">*var = *var + 10;</code>, which (for example) would add 10 to the value of original variable passed to the function by reference</div></li>
+<li id="li-534"><div class="para" id="p-derived-li-534">Passing a variable to a function by reference allows the variable to be used and updated in the function</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-46"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-pointers-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-pointers-1" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1283">You want to write a function that increases the integer value stored in a variable num by one. Given the following function definition, what is the correct function call? Assume that a variable num of type int has been declared and initialized.</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void increasebyone(int *a)
+<div class="para" id="p-1337">You want to write a function that increases the integer value stored in a variable num by one. Given the following function definition, what is the correct function call? Assume that a variable num of type int has been declared and initialized.</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void increasebyone(int *a)
 {
   *a = *a + 1;
 }
-</code></pre></div> <div class="para" id="p-1284"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" frameborder="0" width="100%" height="400"></iframe><li data-component="answer" id="quiz-pointers-1_opt_a" data-correct=""><div class="para" id="p-1285"><pre class="code-block tex2jax_ignore">increasebyone(&amp;num);
+</code></pre></div> <div class="para" id="p-1338"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions2.c" frameborder="0" width="100%" height="400"></iframe><li data-component="answer" id="quiz-pointers-1_opt_a" data-correct=""><div class="para" id="p-1339"><pre class="code-block tex2jax_ignore">increasebyone(&amp;num);
 </pre></div></li>
-<li data-component="feedback" id="quiz-pointers-1_opt_a"><div class="para" id="p-1286">Correct</div></li>
-<li data-component="answer" id="quiz-pointers-1_opt_b"><div class="para" id="p-1287"><pre class="code-block tex2jax_ignore">increasebyone(*num);
+<li data-component="feedback" id="quiz-pointers-1_opt_a"><div class="para" id="p-1340">Correct</div></li>
+<li data-component="answer" id="quiz-pointers-1_opt_b"><div class="para" id="p-1341"><pre class="code-block tex2jax_ignore">increasebyone(*num);
 </pre></div></li>
-<li data-component="feedback" id="quiz-pointers-1_opt_b"><div class="para" id="p-1288">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-pointers-1_opt_c"><div class="para" id="p-1289"><pre class="code-block tex2jax_ignore">increasebyone(num);
+<li data-component="feedback" id="quiz-pointers-1_opt_b"><div class="para" id="p-1342">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-pointers-1_opt_c"><div class="para" id="p-1343"><pre class="code-block tex2jax_ignore">increasebyone(num);
 </pre></div></li>
-<li data-component="feedback" id="quiz-pointers-1_opt_c"><div class="para" id="p-1290">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-pointers-1_opt_d"><div class="para" id="p-1291"><pre class="code-block tex2jax_ignore">num = increasebyone(&amp;num);
+<li data-component="feedback" id="quiz-pointers-1_opt_c"><div class="para" id="p-1344">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-pointers-1_opt_d"><div class="para" id="p-1345"><pre class="code-block tex2jax_ignore">num = increasebyone(&amp;num);
 </pre></div></li>
-<li data-component="feedback" id="quiz-pointers-1_opt_d"><div class="para" id="p-1292">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-pointers-1_opt_d"><div class="para" id="p-1346">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-pointers-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-pointers-2" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1293">What does the following piece of code do?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">float num = 5.0;
+<div class="para" id="p-1347">What does the following piece of code do?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">float num = 5.0;
 float *pointer;
 
 pointer = &amp;num;
 *pointer = *pointer + 1.0;
 printf("%f", *pointer);
 </code></pre></div>
-<li data-component="answer" id="quiz-pointers-2_opt_a" data-correct=""><div class="para" id="p-1294">This code prints out the number 6.000000 to the default output.</div></li>
-<li data-component="feedback" id="quiz-pointers-2_opt_a"><div class="para" id="p-1295">Correct</div></li>
-<li data-component="answer" id="quiz-pointers-2_opt_b"><div class="para" id="p-1296">This code prints out the address of the variable pointer to the default output.</div></li>
-<li data-component="feedback" id="quiz-pointers-2_opt_b"><div class="para" id="p-1297">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-pointers-2_opt_c"><div class="para" id="p-1298">This code prints out the number 5.000000 to the default output.</div></li>
-<li data-component="feedback" id="quiz-pointers-2_opt_c"><div class="para" id="p-1299">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-pointers-2_opt_d"><div class="para" id="p-1300">This code prints the address of the variable num to the default output.</div></li>
-<li data-component="feedback" id="quiz-pointers-2_opt_d"><div class="para" id="p-1301">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-pointers-2_opt_a" data-correct=""><div class="para" id="p-1348">This code prints out the number 6.000000 to the default output.</div></li>
+<li data-component="feedback" id="quiz-pointers-2_opt_a"><div class="para" id="p-1349">Correct</div></li>
+<li data-component="answer" id="quiz-pointers-2_opt_b"><div class="para" id="p-1350">This code prints out the address of the variable pointer to the default output.</div></li>
+<li data-component="feedback" id="quiz-pointers-2_opt_b"><div class="para" id="p-1351">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-pointers-2_opt_c"><div class="para" id="p-1352">This code prints out the number 5.000000 to the default output.</div></li>
+<li data-component="feedback" id="quiz-pointers-2_opt_c"><div class="para" id="p-1353">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-pointers-2_opt_d"><div class="para" id="p-1354">This code prints the address of the variable num to the default output.</div></li>
+<li data-component="feedback" id="quiz-pointers-2_opt_d"><div class="para" id="p-1355">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="pointers-address.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="pointers-example.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
