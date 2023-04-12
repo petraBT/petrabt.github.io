@@ -14,18 +14,24 @@
 <article class="exercise exercise-like"><h4 class="heading">
 <span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
 </h4>
-<div class="para">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-linkedlist2-1" data-multipleanswers="false" data-random="">
+<div class="para" id="p-2081">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
   if(start != NULL) {
     whatAmIDoing(start-&gt;next);
     printf("%d", start-&gt;num);
   }
 }
-</code></pre></div> <ol class="lower-alpha">
-<li><div class="para">It prints every other digit of the number stored in the linked list.</div></li>
-<li><div class="para">It prints the entire number stored in the linked list in reverse order.</div></li>
-<li><div class="para">It prints every other digit of the number stored in the linked list, in reverse order.</div></li>
-<li><div class="para">It prints the entire number stored in the linked list.</div></li>
-<li><div class="para">It produces an endless loop.</div></li>
-</ol> <div class="para"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article><span class="incontext"><a href="linkedlists-reverse.html#quiz-linkedlist2-1" class="internal">in-context</a></span>
+</code></pre></div>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_a" data-correct=""><div class="para" id="p-2082">It prints the entire number stored in the linked list in reverse order.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_a"><div class="para" id="p-2083">Correct</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_b"><div class="para" id="p-2084">It prints every other digit of the number stored in the linked list.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_b"><div class="para" id="p-2085">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_c"><div class="para" id="p-2086">It prints every other digit of the number stored in the linked list, in reverse order.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_c"><div class="para" id="p-2087">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_d"><div class="para" id="p-2088">It prints the entire number stored in the linked list.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_d"><div class="para" id="p-2089">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_e"><div class="para" id="p-2090">It produces an endless loop.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_e"><div class="para" id="p-2091">Not quite. Try again!</div></li>
+</ul></div></div></article><span class="incontext"><a href="linkedlists-reverse.html#quiz-linkedlist2-1" class="internal">in-context</a></span>
 </body>
 </html>

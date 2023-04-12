@@ -14,21 +14,22 @@
 <article class="exercise exercise-like"><h4 class="heading">
 <span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span>
 </h4>
-<div class="para">Suppose that we have created a linked list of three student records using the structure definition below:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-linkedlist1-2" data-multipleanswers="false" data-random="">
+<div class="para" id="p-2000">Suppose that we have created a linked list of three student records using the structure definition below:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
      char    name[50];
      int     birthYear;
      float   gpa;     
      struct student *next;
 };
-</code></pre></div> <div class="para">Suppose also that the pointer <code class="code-inline tex2jax_ignore">start</code> of type <code class="code-inline tex2jax_ignore">struct student *</code> points to the first student in the list.</div> <div class="para">How would you print the name and GPA of the first student in the list?</div> <ol class="lower-alpha">
-<li><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start.name, start.gpa);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", *start-&gt;name, *start-&gt;gpa);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", *start.name, *start.gpa);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">printf("%s has a gpa of %f.", start-&gt;name, start-&gt;gpa);
-</pre></li>
-</ol> <div class="para"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><span class="incontext"><a href="linkedlists-intro.html#quiz-linkedlist1-2" class="internal">in-context</a></span>
+</code></pre></div> <div class="para" id="p-2001">Suppose also that the pointer <code class="code-inline tex2jax_ignore">start</code> of type <code class="code-inline tex2jax_ignore">struct student *</code> points to the first student in the list.</div> <div class="para" id="p-2002">How would you print the name and GPA of the first student in the list?</div>
+<li data-component="answer" id="quiz-linkedlist1-2_opt_a" data-correct=""><div class="para" id="p-2003"><code class="code-inline tex2jax_ignore">printf("%s has a gpa of %f.", start-&gt;name, start-&gt;gpa);</code></div></li>
+<li data-component="feedback" id="quiz-linkedlist1-2_opt_a"><div class="para" id="p-2004">Correct</div></li>
+<li data-component="answer" id="quiz-linkedlist1-2_opt_b"><div class="para" id="p-2005"><code class="code-inline tex2jax_ignore">printf("%s has a gpa of %f.", *start-&gt;name, *start-&gt;gpa);</code></div></li>
+<li data-component="feedback" id="quiz-linkedlist1-2_opt_b"><div class="para" id="p-2006">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist1-2_opt_c"><div class="para" id="p-2007"><code class="code-inline tex2jax_ignore">printf("%s has a gpa of %f.", *start.name, *start.gpa);</code></div></li>
+<li data-component="feedback" id="quiz-linkedlist1-2_opt_c"><div class="para" id="p-2008">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist1-2_opt_d"><div class="para" id="p-2009"><code class="code-inline tex2jax_ignore">printf("%s has a gpa of %f.", start.name, start.gpa);</code></div></li>
+<li data-component="feedback" id="quiz-linkedlist1-2_opt_d"><div class="para" id="p-2010">Not quite. Try again!</div></li>
+</ul></div></div></article><span class="incontext"><a href="linkedlists-intro.html#quiz-linkedlist1-2" class="internal">in-context</a></span>
 </body>
 </html>

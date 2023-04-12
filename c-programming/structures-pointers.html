@@ -1056,8 +1056,8 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="structures-pointers"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">25.5</span> <span class="title">Structures and Pointers</span>
 </h2>
-<div class="para" id="p-1853">When dealing with a pointer to a structure it can get pretty cumbersome to access a member of the structure being pointed to.</div>
-<div class="para" id="p-1854">Suppose again that we have declared a structure as before:</div>
+<div class="para" id="p-1867">When dealing with a pointer to a structure it can get pretty cumbersome to access a member of the structure being pointed to.</div>
+<div class="para" id="p-1868">Suppose again that we have declared a structure as before:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
@@ -1065,30 +1065,31 @@ eBookConfig.enable_chatcodes =  false;
   double aveGrade;
 };
 </code></pre></div>
-<div class="para" id="p-1855">Suppose furthermore that we have a pointer:</div>
+<div class="para" id="p-1869">Suppose furthermore that we have a pointer:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student * studentptr;
 </code></pre></div>
-<div class="para" id="p-1856">which points to a particular student's record. In order to access a member (for example birthYear) of this student's record via the pointer we first need to dereference the pointer (*studentptr) and then access the member via the <em class="alert">direct member selection operator</em> <code class="code-inline tex2jax_ignore">.</code>:</div>
+<div class="para" id="p-1870">which points to a particular student's record. In order to access a member (for example birthYear) of this student's record via the pointer we first need to dereference the pointer (*studentptr) and then access the member via the <dfn class="terminology">direct member selection operator</dfn> <code class="code-inline tex2jax_ignore">.</code>:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">(*studentptr).birthYear
 </code></pre></div>
-<div class="para" id="p-1857">The parentheses around (*studentptr) are important since without them the computer would attempt to execute the member selection operator first, which would make no sense, given that studentptr is not a structure but rather a pointer to a structure.</div>
-<div class="para" id="p-1858">The <em class="alert">indirect member selection operator</em> <code class="code-inline tex2jax_ignore">-&gt;</code> combines these steps into one:</div>
+<div class="para" id="p-1871">The parentheses around (*studentptr) are important since without them the computer would attempt to execute the member selection operator first, which would make no sense, given that studentptr is not a structure but rather a pointer to a structure.</div>
+<div class="para" id="p-1872">The <dfn class="terminology">indirect member selection operator</dfn> <code class="code-inline tex2jax_ignore">-&gt;</code> combines these steps into one:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">studentptr-&gt;birthYear
 </code></pre></div>
-<div class="para" id="p-1859">and therefore accomplishes the same thing as the above. Watch the video to find out more:</div>
+<div class="para" id="p-1873">and therefore accomplishes the same thing as the above. Watch the video to find out more:</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521049225939" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521049225939" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-61"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1860"><ul class="disc">
-<li id="li-624"><div class="para" id="p-derived-li-624">Instead of using the syntax <code class="code-inline tex2jax_ignore">(*ptr).birthyear</code> to access the member <code class="code-inline tex2jax_ignore">birthyear</code> of the record pointed to by <code class="code-inline tex2jax_ignore">ptr</code>, one could also use the shorthand notation <code class="code-inline tex2jax_ignore">ptr-&gt;birthyear</code>
+<div class="para logical" id="p-1874"><ul class="disc">
+<li id="li-614"><div class="para" id="p-derived-li-614">Instead of using the syntax <code class="code-inline tex2jax_ignore">(*ptr).birthyear</code> to access the member <code class="code-inline tex2jax_ignore">birthyear</code> of the record pointed to by <code class="code-inline tex2jax_ignore">ptr</code>, one could also use the shorthand notation <code class="code-inline tex2jax_ignore">ptr-&gt;birthyear</code>
 </div></li>
-<li id="li-625"><div class="para" id="p-derived-li-625">Instead of using the syntax <code class="code-inline tex2jax_ignore">&amp;(*ptr).record</code> to access the address of the member of a structure (in order to use <code class="code-inline tex2jax_ignore">sanf()</code>, for example), one could also use the shorthand notation <code class="code-inline tex2jax_ignore">&amp;ptr-&gt;record</code>
+<li id="li-615"><div class="para" id="p-derived-li-615">Instead of using the syntax <code class="code-inline tex2jax_ignore">&amp;(*ptr).record</code> to access the address of the member of a structure (in order to use <code class="code-inline tex2jax_ignore">sanf()</code>, for example), one could also use the shorthand notation <code class="code-inline tex2jax_ignore">&amp;ptr-&gt;record</code>
 </div></li>
-<li id="li-626"><div class="para" id="p-derived-li-626">Similarly for storing strings, the same notation works as long as the <code class="code-inline tex2jax_ignore">&amp;</code> is removed (remember that a string is an array of characters whose name already stores the address of the zeroth element)</div></li>
+<li id="li-616"><div class="para" id="p-derived-li-616">Similarly for storing strings, the same notation works as long as the <code class="code-inline tex2jax_ignore">&amp;</code> is removed (remember that a string is an array of characters whose name already stores the address of the zeroth element)</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-61"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-structfunction-4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1861">Now, what is wrong with the following piece of code and how would you fix it?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-4" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1875">Now, what is wrong with the following piece of code and how would you fix it?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
@@ -1102,104 +1103,113 @@ int main(void) {
      me-&gt;birthYear = 1998;
      return 0;
 }
-</code></pre></div> <ol class="lower-alpha">
-<li id="li-627">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(&amp;me)-&gt;birthYear = 1998;
-</pre>
-</li>
-<li id="li-628">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(*me)-&gt;birthYear = 1998;
-</pre>
-</li>
-<li id="li-629">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(me)-&gt;birthYear = 1998;
-</pre>
-</li>
-<li id="li-630"><div class="para" id="p-derived-li-630">There is nothing wrong with this code.</div></li>
-</ol> <div class="para" id="p-1862"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-5"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-1863">Time for some review of multidimensional arrays (this is called <em class="emphasis">interleaved learning</em> - a method of learning that helps you retain better what you have learned!)</div> <div class="para" id="p-1864">Suppose you have written a function that initializes a two-dimensional array as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void initialize_array(int array[][NCOLS])
+</code></pre></div>
+<li data-component="answer" id="quiz-structfunction-4_opt_a" data-correct=""><div class="para" id="p-1876">The second-to-last line of code should be <code class="code-inline tex2jax_ignore">(&amp;me)-&gt;birthYear = 1998;</code>
+</div></li>
+<li data-component="feedback" id="quiz-structfunction-4_opt_a"><div class="para" id="p-1877">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-4_opt_b"><div class="para" id="p-1878">The second-to-last line of code should be <code class="code-inline tex2jax_ignore">(*me)-&gt;birthYear = 1998;</code>
+</div></li>
+<li data-component="feedback" id="quiz-structfunction-4_opt_b"><div class="para" id="p-1879">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-4_opt_c"><div class="para" id="p-1880">The second-to-last line of code should be <code class="code-inline tex2jax_ignore">(me)-&gt;birthYear = 1998;</code>
+</div></li>
+<li data-component="feedback" id="quiz-structfunction-4_opt_c"><div class="para" id="p-1881">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-4_opt_d"><div class="para" id="p-1882">There is nothing wrong with this code.</div></li>
+<li data-component="feedback" id="quiz-structfunction-4_opt_d"><div class="para" id="p-1883">Not quite. Try again!</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="quiz-structfunction-5"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-5" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1884">Time for some review of multidimensional arrays (this is called <em class="emphasis">interleaved learning</em> - a method of learning that helps you retain better what you have learned!)</div> <div class="para" id="p-1885">Suppose you have written a function that initializes a two-dimensional array as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void initialize_array(int array[][NCOLS])
 {
   int i,j;
   for (i=0; i&lt;NROWS; i++)
     for (j=0; j&lt;NCOLS; j++)
       array[i][j] = i;
 }
-</code></pre></div> <div class="para" id="p-1865">Assume that you also have</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define NROWS 20
+</code></pre></div> <div class="para" id="p-1886">Assume that you also have</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define NROWS 20
 #define NCOLS 30
-</code></pre></div> <div class="para" id="p-1866">as part of your code.</div> <div class="para" id="p-1867">In your main program you have declared an array matrix as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int matrix[NROWS][NCOLS];
-</code></pre></div> <div class="para" id="p-1868">What is the correct function call of the function <code class="code-inline tex2jax_ignore">initialize_array()</code> from within your main function?</div> <ol class="lower-alpha">
-<li id="li-631"><pre class="code-block tex2jax_ignore">initialize_array(matrix[][NCOLS]);
-</pre></li>
-<li id="li-632"><pre class="code-block tex2jax_ignore">initialize_array(matrix[NROWS][]);
-</pre></li>
-<li id="li-633"><pre class="code-block tex2jax_ignore">initialize_array(matrix);
-</pre></li>
-<li id="li-634"><pre class="code-block tex2jax_ignore">initialize_array(matrix[NROWS][NCOLS]);
-</pre></li>
-<li id="li-635"><pre class="code-block tex2jax_ignore">initialize_array(&amp;matrix);
-</pre></li>
-</ol> <div class="para" id="p-1869"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-6"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1870">Please complete the following program so that the function <code class="code-inline tex2jax_ignore">maxTemp()</code> finds the maximum value stored in the array passed to it. Be sure to enter your prototype at the top of the program and don't forget to insert the correct function call into the main function. Store the value returned by the function <code class="code-inline tex2jax_ignore">maxTemp()</code> in the variable "maximum" so that it gets printed out properly in the following line.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_multiArrays1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_multiArrays1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_multiArrays1.c" frameborder="0" width="100%" height="600"></iframe> <div class="para" id="p-1871">When your program performs correctly you'll be given a keyword to enter in Canvas.</div> <div class="para" id="p-1872"><em class="emphasis">If your code appears to perform correctly but you are not given a keyword, please check for any extra spaces or line breaks in your output and remove them.</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-7"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1873">Which of the following properly defines a structure:</div> <ol class="lower-alpha">
-<li id="li-636"><pre class="code-block tex2jax_ignore">struct point int x; int y;
-</pre></li>
-<li id="li-637"><pre class="code-block tex2jax_ignore">struct point { int x; int y; };
-</pre></li>
-<li id="li-638"><pre class="code-block tex2jax_ignore">struct point { int x; int y; }
-</pre></li>
-<li id="li-639"><pre class="code-block tex2jax_ignore">struct { int x; int y; };
-</pre></li>
-</ol> <div class="para" id="p-1874"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-8"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1875">Which of the following properly declares a variable z (i.e. an instance) of structure point?</div> <ol class="lower-alpha">
-<li id="li-640"><pre class="code-block tex2jax_ignore">struct point;
-</pre></li>
-<li id="li-641"><pre class="code-block tex2jax_ignore">struct z point;
-</pre></li>
-<li id="li-642"><pre class="code-block tex2jax_ignore">struct point z;
-</pre></li>
-<li id="li-643"><pre class="code-block tex2jax_ignore">point z;
-</pre></li>
-</ol> <div class="para" id="p-1876"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-9"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1877">Which of the following properly declares a new type “point_t”?</div> <ol class="lower-alpha">
-<li id="li-644"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
+</code></pre></div> <div class="para" id="p-1887">as part of your code.</div> <div class="para" id="p-1888">In your main program you have declared an array matrix as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int matrix[NROWS][NCOLS];
+</code></pre></div> <div class="para" id="p-1889">What is the correct function call of the function <code class="code-inline tex2jax_ignore">initialize_array()</code> from within your main function?</div>
+<li data-component="answer" id="quiz-structfunction-5_opt_a" data-correct=""><div class="para" id="p-1890"><code class="code-inline tex2jax_ignore">initialize_array(matrix);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_a"><div class="para" id="p-1891">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-5_opt_b"><div class="para" id="p-1892"><code class="code-inline tex2jax_ignore">initialize_array(matrix[NROWS][]);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_b"><div class="para" id="p-1893">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-5_opt_c"><div class="para" id="p-1894"><code class="code-inline tex2jax_ignore">initialize_array(matrix[][NCOLS]);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_c"><div class="para" id="p-1895">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-5_opt_d"><div class="para" id="p-1896"><code class="code-inline tex2jax_ignore">initialize_array(matrix[NROWS][NCOLS]);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_d"><div class="para" id="p-1897">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-5_opt_e"><div class="para" id="p-1898"><code class="code-inline tex2jax_ignore">initialize_array(&amp;matrix);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_e"><div class="para" id="p-1899">Not quite. Try again!</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="quiz-structfunction-6"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1900">Please complete the following program so that the function <code class="code-inline tex2jax_ignore">maxTemp()</code> finds the maximum value stored in the array passed to it. Be sure to enter your prototype at the top of the program and don't forget to insert the correct function call into the main function. Store the value returned by the function <code class="code-inline tex2jax_ignore">maxTemp()</code> in the variable "maximum" so that it gets printed out properly in the following line.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_multiArrays1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_multiArrays1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_multiArrays1.c" frameborder="0" width="100%" height="600"></iframe> <div class="para" id="p-1901">When your program performs correctly you'll be given a keyword to enter in Canvas.</div> <div class="para" id="p-1902"><em class="emphasis">If your code appears to perform correctly but you are not given a keyword, please check for any extra spaces or line breaks in your output and remove them.</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-7"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-7" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1903">Which of the following properly defines a structure:</div>
+<li data-component="answer" id="quiz-structfunction-7_opt_a" data-correct=""><div class="para" id="p-1904"><code class="code-inline tex2jax_ignore">struct point { int x; int y; }</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-7_opt_a"><div class="para" id="p-1905">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-7_opt_b"><div class="para" id="p-1906"><code class="code-inline tex2jax_ignore">struct point { int x; int y; };</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-7_opt_b"><div class="para" id="p-1907">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-7_opt_c"><div class="para" id="p-1908"><code class="code-inline tex2jax_ignore">struct point { int x; int y; }</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-7_opt_c"><div class="para" id="p-1909">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-7_opt_d"><div class="para" id="p-1910"><code class="code-inline tex2jax_ignore">struct point int x; int y;</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-7_opt_d"><div class="para" id="p-1911">Not quite. Try again!</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="quiz-structfunction-8"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-8" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1912">Which of the following properly declares a variable z (i.e. an instance) of structure point?</div>
+<li data-component="answer" id="quiz-structfunction-8_opt_a" data-correct=""><div class="para" id="p-1913"><code class="code-inline tex2jax_ignore">struct point z;</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-8_opt_a"><div class="para" id="p-1914">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-8_opt_b"><div class="para" id="p-1915"><code class="code-inline tex2jax_ignore">struct z point;</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-8_opt_b"><div class="para" id="p-1916">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-8_opt_c"><div class="para" id="p-1917"><code class="code-inline tex2jax_ignore">struct point;</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-8_opt_c"><div class="para" id="p-1918">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-8_opt_d"><div class="para" id="p-1919"><code class="code-inline tex2jax_ignore">point z;</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-8_opt_d"><div class="para" id="p-1920">Not quite. Try again!</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="quiz-structfunction-9"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-9" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1921">Which of the following properly declares a new type “point_t”?</div>
+<li data-component="answer" id="quiz-structfunction-9_opt_a" data-correct=""><div class="para" id="p-1922"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
   int x;
   int y;
 } point_t;
-</code></pre></div></li>
-<li id="li-645"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct point {
+</code></pre></div></div></li>
+<li data-component="feedback" id="quiz-structfunction-9_opt_a"><div class="para" id="p-1923">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-9_opt_b"><div class="para" id="p-1924"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct point {
   int x;
   int y; 
 } point_t;
-</code></pre></div></li>
-<li id="li-646"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct point {
+</code></pre></div></div></li>
+<li data-component="feedback" id="quiz-structfunction-9_opt_b"><div class="para" id="p-1925">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-9_opt_c"><div class="para" id="p-1926"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct point {
   int x;
   int y;
 };
-</code></pre></div></li>
-</ol> <div class="para" id="p-1878"><em class="emphasis">Enter your choice (a/b/c):</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-10"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1879">Suppose you have declared a new type “student_t” as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
+</code></pre></div></div></li>
+<li data-component="feedback" id="quiz-structfunction-9_opt_c"><div class="para" id="p-1927">Not quite. Try again!</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="quiz-structfunction-10"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-10" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1928">Suppose you have declared a new type “student_t” as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
            char name[30];
            long id;
            int class;
 } student_t;
-</code></pre></div> <div class="para" id="p-1880">What is the correct way to declare and initialize a variable me of type <code class="code-inline tex2jax_ignore">student_t</code>?</div> <ol class="lower-alpha">
-<li id="li-647"><pre class="code-block tex2jax_ignore">student_t = {“Petra”, 123456L, 1994} me;
-</pre></li>
-<li id="li-648"><pre class="code-block tex2jax_ignore">me = student_t{“Petra”, 123456L, 1994};
-</pre></li>
-<li id="li-649"><pre class="code-block tex2jax_ignore">student_t me = {“Petra”, 123456L, 1994};
-</pre></li>
-<li id="li-650"><pre class="code-block tex2jax_ignore">student_t me; me = {“Petra”, 123456L, 1994};
-</pre></li>
-</ol> <div class="para" id="p-1881"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-11"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1882">As in the previous problem, you have defined a structure to store some student information as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
+</code></pre></div> <div class="para" id="p-1929">What is the correct way to declare and initialize a variable me of type <code class="code-inline tex2jax_ignore">student_t</code>?</div>
+<li data-component="answer" id="quiz-structfunction-10_opt_a" data-correct=""><div class="para" id="p-1930"><code class="code-inline tex2jax_ignore">student_t me = {“Petra”, 123456L, 1994};</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-10_opt_a"><div class="para" id="p-1931">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-10_opt_b"><div class="para" id="p-1932"><code class="code-inline tex2jax_ignore">me = student_t{“Petra”, 123456L, 1994};</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-10_opt_b"><div class="para" id="p-1933">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-10_opt_c"><div class="para" id="p-1934"><code class="code-inline tex2jax_ignore">student_t = {“Petra”, 123456L, 1994} me;</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-10_opt_c"><div class="para" id="p-1935">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-10_opt_d"><div class="para" id="p-1936"><code class="code-inline tex2jax_ignore">student_t me; me = {“Petra”, 123456L, 1994};</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-10_opt_d"><div class="para" id="p-1937">Not quite. Try again!</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="quiz-structfunction-11"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-1938">As in the previous problem, you have defined a structure to store some student information as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">typedef struct {
            char name[30];
            long id;
            int class;
 } student_t;
-</code></pre></div> <div class="para" id="p-1883">In your main program, you have furthermore declared a variable "me" of type <code class="code-inline tex2jax_ignore">student_t</code> and initialized it, for example as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">student_t me = {"Petra", 123456L, 1994};
-</code></pre></div> <div class="para" id="p-1884">You'd now like to print the student record to the screen (i.e. print what is stored in the variable <code class="code-inline tex2jax_ignore">me</code>). How would you do this?</div> <div class="para" id="p-1885">Feel free to use the following window to try things out. I have already given you a bit of code to make things easier.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_structs1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_structs1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+</code></pre></div> <div class="para" id="p-1939">In your main program, you have furthermore declared a variable "me" of type <code class="code-inline tex2jax_ignore">student_t</code> and initialized it, for example as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">student_t me = {"Petra", 123456L, 1994};
+</code></pre></div> <div class="para" id="p-1940">You'd now like to print the student record to the screen (i.e. print what is stored in the variable <code class="code-inline tex2jax_ignore">me</code>). How would you do this?</div> <div class="para" id="p-1941">Feel free to use the following window to try things out. I have already given you a bit of code to make things easier.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_structs1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_structs1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_structs1.c" frameborder="0" width="100%" height="500"></iframe></article><article class="exercise exercise-like" id="quiz-structfunction-12"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="p-1886">Let's continue developing the previous problem. This time we'll practice how to change entries in a structure. Complete the following C program so that the user can enter a new student name, id and class year to be stored in the variable me of type <code class="code-inline tex2jax_ignore">student_t</code>. All you need to do is complete the <code class="code-inline tex2jax_ignore">scanf()</code> and <code class="code-inline tex2jax_ignore">printf()</code> lines.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_structs2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_structs2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_structs2.c" frameborder="0" width="100%" height="500"></iframe> <div class="para" id="p-1887">When your program performs correctly you'll be given a keyword to enter in Canvas.</div> <div class="para" id="p-1888"><em class="emphasis">If your code appears to perform correctly but you are not given a keyword, please check for any extra spaces or line breaks in your output and remove them.</em></div></article></section></section></div>
+<div class="para" id="p-1942">Let's continue developing the previous problem. This time we'll practice how to change entries in a structure. Complete the following C program so that the user can enter a new student name, id and class year to be stored in the variable me of type <code class="code-inline tex2jax_ignore">student_t</code>. All you need to do is complete the <code class="code-inline tex2jax_ignore">scanf()</code> and <code class="code-inline tex2jax_ignore">printf()</code> lines.</div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_structs2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_structs2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_structs2.c" frameborder="0" width="100%" height="500"></iframe> <div class="para" id="p-1943">When your program performs correctly you'll be given a keyword to enter in Canvas.</div> <div class="para" id="p-1944"><em class="emphasis">If your code appears to perform correctly but you are not given a keyword, please check for any extra spaces or line breaks in your output and remove them.</em></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="structures-functions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="structures-summary.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

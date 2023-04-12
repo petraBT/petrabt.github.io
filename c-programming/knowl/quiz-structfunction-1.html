@@ -14,19 +14,20 @@
 <article class="exercise exercise-like"><h5 class="heading">
 <span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
 </h5>
-<div class="para">Suppose you have declared a structure to hold student data as in the video:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-1" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1843">Suppose you have declared a structure to hold student data as in the video:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
   double aveGrade;
 };
-</code></pre></div> <div class="para">Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?</div> <ol class="lower-alpha">
-<li><pre class="code-block tex2jax_ignore">double compareStudents(stud1, stud2);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">struct student compareStudents(struct student stud1, struct student stud2);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">double compareStudents(struct student stud1, struct student stud2);
-</pre></li>
-</ol> <div class="para"><em class="emphasis">Enter your choice (a/b/c):</em></div></article><span class="incontext"><a href="structures-functions.html#quiz-structfunction-1" class="internal">in-context</a></span>
+</code></pre></div> <div class="para" id="p-1844">Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?</div>
+<li data-component="answer" id="quiz-structfunction-1_opt_a" data-correct=""><code class="code-inline tex2jax_ignore">double compareStudents(struct student stud1, struct student stud2);</code></li>
+<li data-component="feedback" id="quiz-structfunction-1_opt_a"><div class="para" id="p-1845">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-1_opt_b"><code class="code-inline tex2jax_ignore">struct student compareStudents(struct student stud1, struct student stud2);</code></li>
+<li data-component="feedback" id="quiz-structfunction-1_opt_b"><div class="para" id="p-1846">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-1_opt_c"><code class="code-inline tex2jax_ignore">double compareStudents(stud1, stud2);</code></li>
+<li data-component="feedback" id="quiz-structfunction-1_opt_c"><div class="para" id="p-1847">Not quite. Try again!</div></li>
+</ul></div></div></article><span class="incontext"><a href="structures-functions.html#quiz-structfunction-1" class="internal">in-context</a></span>
 </body>
 </html>

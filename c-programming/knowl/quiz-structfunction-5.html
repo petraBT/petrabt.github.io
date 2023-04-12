@@ -14,27 +14,28 @@
 <article class="exercise exercise-like"><h4 class="heading">
 <span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span>
 </h4>
-<div class="para">Time for some review of multidimensional arrays (this is called <em class="emphasis">interleaved learning</em> - a method of learning that helps you retain better what you have learned!)</div> <div class="para">Suppose you have written a function that initializes a two-dimensional array as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void initialize_array(int array[][NCOLS])
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-5" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1884">Time for some review of multidimensional arrays (this is called <em class="emphasis">interleaved learning</em> - a method of learning that helps you retain better what you have learned!)</div> <div class="para" id="p-1885">Suppose you have written a function that initializes a two-dimensional array as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void initialize_array(int array[][NCOLS])
 {
   int i,j;
   for (i=0; i&lt;NROWS; i++)
     for (j=0; j&lt;NCOLS; j++)
       array[i][j] = i;
 }
-</code></pre></div> <div class="para">Assume that you also have</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define NROWS 20
+</code></pre></div> <div class="para" id="p-1886">Assume that you also have</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">#define NROWS 20
 #define NCOLS 30
-</code></pre></div> <div class="para">as part of your code.</div> <div class="para">In your main program you have declared an array matrix as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int matrix[NROWS][NCOLS];
-</code></pre></div> <div class="para">What is the correct function call of the function <code class="code-inline tex2jax_ignore">initialize_array()</code> from within your main function?</div> <ol class="lower-alpha">
-<li><pre class="code-block tex2jax_ignore">initialize_array(matrix[][NCOLS]);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">initialize_array(matrix[NROWS][]);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">initialize_array(matrix);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">initialize_array(matrix[NROWS][NCOLS]);
-</pre></li>
-<li><pre class="code-block tex2jax_ignore">initialize_array(&amp;matrix);
-</pre></li>
-</ol> <div class="para"><em class="emphasis">Enter your choice (a/b/c/d/e):</em></div></article><span class="incontext"><a href="structures-pointers.html#quiz-structfunction-5" class="internal">in-context</a></span>
+</code></pre></div> <div class="para" id="p-1887">as part of your code.</div> <div class="para" id="p-1888">In your main program you have declared an array matrix as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int matrix[NROWS][NCOLS];
+</code></pre></div> <div class="para" id="p-1889">What is the correct function call of the function <code class="code-inline tex2jax_ignore">initialize_array()</code> from within your main function?</div>
+<li data-component="answer" id="quiz-structfunction-5_opt_a" data-correct=""><div class="para" id="p-1890"><code class="code-inline tex2jax_ignore">initialize_array(matrix);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_a"><div class="para" id="p-1891">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-5_opt_b"><div class="para" id="p-1892"><code class="code-inline tex2jax_ignore">initialize_array(matrix[NROWS][]);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_b"><div class="para" id="p-1893">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-5_opt_c"><div class="para" id="p-1894"><code class="code-inline tex2jax_ignore">initialize_array(matrix[][NCOLS]);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_c"><div class="para" id="p-1895">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-5_opt_d"><div class="para" id="p-1896"><code class="code-inline tex2jax_ignore">initialize_array(matrix[NROWS][NCOLS]);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_d"><div class="para" id="p-1897">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-5_opt_e"><div class="para" id="p-1898"><code class="code-inline tex2jax_ignore">initialize_array(&amp;matrix);</code></div></li>
+<li data-component="feedback" id="quiz-structfunction-5_opt_e"><div class="para" id="p-1899">Not quite. Try again!</div></li>
+</ul></div></div></article><span class="incontext"><a href="structures-pointers.html#quiz-structfunction-5" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1090,59 +1090,65 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h4>
 <article class="exercise exercise-like" id="quiz-structfunction-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-1" data-multipleanswers="false" data-random="">
 <div class="para" id="p-1843">Suppose you have declared a structure to hold student data as in the video:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
   double aveGrade;
 };
-</code></pre></div> <div class="para" id="p-1844">Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?</div> <ol class="lower-alpha">
-<li id="li-611"><pre class="code-block tex2jax_ignore">double compareStudents(stud1, stud2);
-</pre></li>
-<li id="li-612"><pre class="code-block tex2jax_ignore">struct student compareStudents(struct student stud1, struct student stud2);
-</pre></li>
-<li id="li-613"><pre class="code-block tex2jax_ignore">double compareStudents(struct student stud1, struct student stud2);
-</pre></li>
-</ol> <div class="para" id="p-1845"><em class="emphasis">Enter your choice (a/b/c):</em></div></article><article class="exercise exercise-like" id="quiz-structfunction-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-1846">In the same scenario as in the previous question, where you have declared a structure to hold student data via:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+</code></pre></div> <div class="para" id="p-1844">Suppose furthermore that you are writing a function compareStudents(), to which you'd like to pass two students of type struct student, and which returns the average grade of the student whose average grade is the lower of the two. Which of the following is the correct function prototype for such a function?</div>
+<li data-component="answer" id="quiz-structfunction-1_opt_a" data-correct=""><code class="code-inline tex2jax_ignore">double compareStudents(struct student stud1, struct student stud2);</code></li>
+<li data-component="feedback" id="quiz-structfunction-1_opt_a"><div class="para" id="p-1845">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-1_opt_b"><code class="code-inline tex2jax_ignore">struct student compareStudents(struct student stud1, struct student stud2);</code></li>
+<li data-component="feedback" id="quiz-structfunction-1_opt_b"><div class="para" id="p-1846">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-1_opt_c"><code class="code-inline tex2jax_ignore">double compareStudents(stud1, stud2);</code></li>
+<li data-component="feedback" id="quiz-structfunction-1_opt_c"><div class="para" id="p-1847">Not quite. Try again!</div></li>
+</ul></div></div></article><article class="exercise exercise-like" id="quiz-structfunction-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-2" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1848">In the same scenario as in the previous question, where you have declared a structure to hold student data via:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
   double aveGrade;
 };
-</code></pre></div> <div class="para" id="p-1847">and are writing a function <code class="code-inline tex2jax_ignore">compareStudents()</code> which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:</div> <ol class="lower-alpha">
-<li id="li-614"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
+</code></pre></div> <div class="para" id="p-1849">and are writing a function <code class="code-inline tex2jax_ignore">compareStudents()</code> which compares the average grades of the two student records passed to the function, which of the following correctly finds the lower of the two average grades:</div>
+<li data-component="answer" id="quiz-structfunction-2_opt_a" data-correct=""><div class="para" id="p-1850"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
 if (stud1.aveGrade&lt;stud2.aveGrade)
   lower = stud1.aveGrade;
 else
   lower = stud2.aveGrade;
-</code></pre></div></li>
-<li id="li-615"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
+</code></pre></div></div></li>
+<li data-component="feedback" id="quiz-structfunction-2_opt_a"><div class="para" id="p-1851">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-2_opt_b"><div class="para" id="p-1852"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
 if (aveGrade(stud1)&lt;aveGrade(stud2))
   lower = stud1.aveGrade;
 else
   lower = stud2.aveGrade;
-</code></pre></div></li>
-<li id="li-616"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
+</code></pre></div></div></li>
+<li data-component="feedback" id="quiz-structfunction-2_opt_b"><div class="para" id="p-1853">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-2_opt_c"><div class="para" id="p-1854"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">double lower;
 lower = stud1.aveGrade&lt;stud2.aveGrade;
-</code></pre></div></li>
-</ol> <div class="para" id="p-1848"><em class="emphasis">Enter your choice (a/b/c):</em></div></article></section></section><section class="subsection" id="subsection-93"><h3 class="heading hide-type">
+</code></pre></div></div></li>
+<li data-component="feedback" id="quiz-structfunction-2_opt_c"><div class="para" id="p-1855">Not quite. Try again!</div></li>
+</ul></div></div></article></section></section><section class="subsection" id="subsection-93"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">25.4.2</span> <span class="title">Passing by Reference</span>
 </h3>
-<div class="para" id="p-1849">If we want to be able to modify a structure variable from within a function we need to pass a pointer to this variable to the function - just as we do for regular variables. In other words, we need to pass the variable to the function "by reference". In the next video we'll learn how to do so.</div>
+<div class="para" id="p-1856">If we want to be able to modify a structure variable from within a function we need to pass a pointer to this variable to the function - just as we do for regular variables. In other words, we need to pass the variable to the function "by reference". In the next video we'll learn how to do so.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521047452712" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521047452712" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-60"><h4 class="heading"><span class="title">Video Description.</span></h4>
-<div class="para logical" id="p-1850"><ul class="disc">
-<li id="li-617"><div class="para" id="p-derived-li-617">Passing a structure pointer follows previously learned methods</div></li>
-<li id="li-618"><div class="para" id="p-derived-li-618">The address of the structure is passed to a function, i.e. <code class="code-inline tex2jax_ignore">&amp;variable</code>
+<div class="para logical" id="p-1857"><ul class="disc">
+<li id="li-611"><div class="para" id="p-derived-li-611">Passing a structure pointer follows previously learned methods</div></li>
+<li id="li-612"><div class="para" id="p-derived-li-612">The address of the structure is passed to a function, i.e. <code class="code-inline tex2jax_ignore">&amp;variable</code>
 </div></li>
-<li id="li-619"><div class="para" id="p-derived-li-619">Pointers can be dereferenced in a function using <code class="code-inline tex2jax_ignore">*</code>
+<li id="li-613"><div class="para" id="p-derived-li-613">Pointers can be dereferenced in a function using <code class="code-inline tex2jax_ignore">*</code>
 </div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-60"><h4 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h4>
 <article class="exercise exercise-like" id="quiz-structfunction-3"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-1851">What is wrong with the following piece of code and how would you fix it?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-structfunction-3" data-multipleanswers="false" data-random="">
+<div class="para" id="p-1858">What is wrong with the following piece of code and how would you fix it?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student{
   char firstName[30];
   char lastName[30];
   int birthYear;
@@ -1156,18 +1162,19 @@ int main(void) {
   *studentptr.birthYear = 1998;
   return 0;
 }
-</code></pre></div> <ol class="lower-alpha">
-<li id="li-620">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(*studentptr.birthYear) = 1998;
-</pre>
-</li>
-<li id="li-621">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(&amp;studentptr).birthYear = 1998;
-</pre>
-</li>
-<li id="li-622">The second-to-last line of code should be<pre class="code-block tex2jax_ignore">(*studentptr).birthYear = 1998;
-</pre>
-</li>
-<li id="li-623"><div class="para" id="p-derived-li-623">There is nothing wrong with this code.</div></li>
-</ol> <div class="para" id="p-1852"><em class="emphasis">Enter your choice (a/b/c/d):</em></div></article></section></section></section></div>
+</code></pre></div>
+<li data-component="answer" id="quiz-structfunction-3_opt_a" data-correct=""><div class="para" id="p-1859">The second-to-last line of code should be <code class="code-inline tex2jax_ignore">(*studentptr).birthYear = 1998;</code>
+</div></li>
+<li data-component="feedback" id="quiz-structfunction-3_opt_a"><div class="para" id="p-1860">Correct</div></li>
+<li data-component="answer" id="quiz-structfunction-3_opt_b"><div class="para" id="p-1861">The second-to-last line of code should be <code class="code-inline tex2jax_ignore">(&amp;studentptr).birthYear = 1998;</code>
+</div></li>
+<li data-component="feedback" id="quiz-structfunction-3_opt_b"><div class="para" id="p-1862">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-3_opt_c"><div class="para" id="p-1863">The second-to-last line of code should be <code class="code-inline tex2jax_ignore">(*studentptr.birthYear) = 1998;</code>
+</div></li>
+<li data-component="feedback" id="quiz-structfunction-3_opt_c"><div class="para" id="p-1864">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-structfunction-3_opt_d"><div class="para" id="p-1865">There is nothing wrong with this code.</div></li>
+<li data-component="feedback" id="quiz-structfunction-3_opt_d"><div class="para" id="p-1866">Not quite. Try again!</div></li>
+</ul></div></div></article></section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="structures-frac-calc.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="structures-pointers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
