@@ -11,8 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">We already have a pretty good idea that different data types take up different amounts of space in memory. For example, to store a character (<code class="code-inline tex2jax_ignore">char</code>) all we need to do is store its ASCII code which, when represented in binary, fits into one byte. On the other hand, most integers (for example the number 999) need more than one byte to store them in binary 2's complement. And recall that floats are stored in scientific notation as mantissa and exponent - lots of memory needed there. Let's see how we can make this more precise.</div>
-<span class="incontext"><a href="memory-space.html#p-1269" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ul class="disc">
+<li><div class="para">Declaring arrays of integers</div></li>
+<li><div class="para">Assigning values to arrays</div></li>
+<li><div class="para">NEW SYNTAX: <code class="code-inline tex2jax_ignore">int array[3];</code> creates a variable named array and reserves space to hold three integers</div></li>
+<li><div class="para">NEW SYNTAX: <code class="code-inline tex2jax_ignore">array[0] = 16;</code> initializes the first entry in the array with the value "16"</div></li>
+<li><div class="para">Arrays in C are zero-based</div></li>
+</ul></div>
+<span class="incontext"><a href="array-integer.html#p-1269" class="internal">in-context</a></span>
 </body>
 </html>

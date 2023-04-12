@@ -1056,18 +1056,18 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="linkedlists"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">27</span> <span class="title">Linked Lists</span>
 </h2>
-<section class="introduction" id="introduction-28"><div class="para logical" id="p-1976">
+<section class="introduction" id="introduction-28"><div class="para logical" id="p-2053">
 <div class="para">So far we have used arrays to store multiple items of the same data type. There are several situations you can imagine in which this is not ideal. Here are two such scenarios:</div>
 <ul class="disc">
-<li id="li-632"><div class="para" id="p-derived-li-632">One problem with this method is that you have to declare the array in question (in your code with a fixed size or at runtime using dynamic memory allocation) and whichever way you do so, by the time you first use the array its length is locked in. Then what are you options if your array is full and you wish to add in another record? The only choice would be to ask for space for a bigger array, copy all of the information over and then add the new record. This is not exactly efficient.</div></li>
-<li id="li-633"><div class="para" id="p-derived-li-633">Next, imagine that your array contains records that have been sorted by some criterion. Suppose you wanted to add a new record, and it would have to go somewhere in the middle of your array in order to maintain the sorting. You'd then have to move over all of the records that need to come after the new record in order to make room for the new record. Again, this is not a very efficient way to go about things.</div></li>
+<li id="li-588"><div class="para" id="p-derived-li-588">One problem with this method is that you have to declare the array in question (in your code with a fixed size or at runtime using dynamic memory allocation) and whichever way you do so, by the time you first use the array its length is locked in. Then what are you options if your array is full and you wish to add in another record? The only choice would be to ask for space for a bigger array, copy all of the information over and then add the new record. This is not exactly efficient.</div></li>
+<li id="li-589"><div class="para" id="p-derived-li-589">Next, imagine that your array contains records that have been sorted by some criterion. Suppose you wanted to add a new record, and it would have to go somewhere in the middle of your array in order to maintain the sorting. You'd then have to move over all of the records that need to come after the new record in order to make room for the new record. Again, this is not a very efficient way to go about things.</div></li>
 </ul>
-</div> <div class="para" id="p-1977">This is where linked lists might present a better way to store your data. A linked list provides a linear ordering of records without them having to be physically arranged that way in memory. In other words, rather than using the records' arrangement in memory to determine their ordering, each record keeps track of the location of the record that is to follow it in the linear ordering. This will all become clear shortly.</div> <div class="para" id="p-1978">In this chapter, we will cover the following topics:</div> <ul class="disc">
-<li id="li-634"><div class="para" id="p-derived-li-634">Linked lists</div></li>
-<li id="li-635"><div class="para" id="p-derived-li-635">Passing linked lists to functions</div></li>
-<li id="li-636"><div class="para" id="p-derived-li-636">Simplifying and automating the creation of linked lists</div></li>
-<li id="li-637"><div class="para" id="p-derived-li-637">Using linked lists to store extremely large numbers</div></li>
-<li id="li-638"><div class="para" id="p-derived-li-638">Manipulating linked lists (i.e. search, sort, reverse)</div></li>
+</div> <div class="para" id="p-2054">This is where linked lists might present a better way to store your data. A linked list provides a linear ordering of records without them having to be physically arranged that way in memory. In other words, rather than using the records' arrangement in memory to determine their ordering, each record keeps track of the location of the record that is to follow it in the linear ordering. This will all become clear shortly.</div> <div class="para" id="p-2055">In this chapter, we will cover the following topics:</div> <ul class="disc">
+<li id="li-590"><div class="para" id="p-derived-li-590">Linked lists</div></li>
+<li id="li-591"><div class="para" id="p-derived-li-591">Passing linked lists to functions</div></li>
+<li id="li-592"><div class="para" id="p-derived-li-592">Simplifying and automating the creation of linked lists</div></li>
+<li id="li-593"><div class="para" id="p-derived-li-593">Using linked lists to store extremely large numbers</div></li>
+<li id="li-594"><div class="para" id="p-derived-li-594">Manipulating linked lists (i.e. search, sort, reverse)</div></li>
 </ul></section><nav class="summary-links"><ul>
 <li><a href="linkedlists-intro.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Intro to Linked Lists</span></a></li>
 <li><a href="linkedlists-functions.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Pass Linked Lists to Functions</span></a></li>

@@ -1056,38 +1056,38 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linkedlists-reverse"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">27.12</span> <span class="title">Reverse a Linked List</span>
 </h2>
-<div class="para" id="p-2078">In this video we'll continue working on our arbitrarily long integers and examine how to create a backward copy of one such integer.</div>
-<div class="para" id="p-2079">Note that the <code class="code-inline tex2jax_ignore">typedef</code> command does not work properly in the environment in which this lecture is recorded, hence its use is avoided for the purpose of the recordings only.</div>
+<div class="para" id="p-2155">In this video we'll continue working on our arbitrarily long integers and examine how to create a backward copy of one such integer.</div>
+<div class="para" id="p-2156">Note that the <code class="code-inline tex2jax_ignore">typedef</code> command does not work properly in the environment in which this lecture is recorded, hence its use is avoided for the purpose of the recordings only.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521831954448" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521831954448" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-66"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-2080"><ul class="disc">
-<li id="li-654"><div class="para" id="p-derived-li-654">A linked list can be reversed by reordering the pointers that connect the list</div></li>
-<li id="li-655"><div class="para" id="p-derived-li-655">Check out either the Codecast or printed code for the full and lengthy example!</div></li>
+<div class="para logical" id="p-2157"><ul class="disc">
+<li id="li-610"><div class="para" id="p-derived-li-610">A linked list can be reversed by reordering the pointers that connect the list</div></li>
+<li id="li-611"><div class="para" id="p-derived-li-611">Check out either the Codecast or printed code for the full and lengthy example!</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-66"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-linkedlist2-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-linkedlist2-1" data-multipleanswers="false" data-random="">
-<div class="para" id="p-2081">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
+<div class="para" id="p-2158">Given the definition of a linked list of digits as in the video, what does the following function do if called with the address of the first digit of a linked list of digits?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void whatAmIDoing(struct digit * start) {
   if(start != NULL) {
     whatAmIDoing(start-&gt;next);
     printf("%d", start-&gt;num);
   }
 }
 </code></pre></div>
-<li data-component="answer" id="quiz-linkedlist2-1_opt_a" data-correct=""><div class="para" id="p-2082">It prints the entire number stored in the linked list in reverse order.</div></li>
-<li data-component="feedback" id="quiz-linkedlist2-1_opt_a"><div class="para" id="p-2083">Correct</div></li>
-<li data-component="answer" id="quiz-linkedlist2-1_opt_b"><div class="para" id="p-2084">It prints every other digit of the number stored in the linked list.</div></li>
-<li data-component="feedback" id="quiz-linkedlist2-1_opt_b"><div class="para" id="p-2085">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-linkedlist2-1_opt_c"><div class="para" id="p-2086">It prints every other digit of the number stored in the linked list, in reverse order.</div></li>
-<li data-component="feedback" id="quiz-linkedlist2-1_opt_c"><div class="para" id="p-2087">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-linkedlist2-1_opt_d"><div class="para" id="p-2088">It prints the entire number stored in the linked list.</div></li>
-<li data-component="feedback" id="quiz-linkedlist2-1_opt_d"><div class="para" id="p-2089">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-linkedlist2-1_opt_e"><div class="para" id="p-2090">It produces an endless loop.</div></li>
-<li data-component="feedback" id="quiz-linkedlist2-1_opt_e"><div class="para" id="p-2091">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_a" data-correct=""><div class="para" id="p-2159">It prints the entire number stored in the linked list in reverse order.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_a"><div class="para" id="p-2160">Correct</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_b"><div class="para" id="p-2161">It prints every other digit of the number stored in the linked list.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_b"><div class="para" id="p-2162">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_c"><div class="para" id="p-2163">It prints every other digit of the number stored in the linked list, in reverse order.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_c"><div class="para" id="p-2164">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_d"><div class="para" id="p-2165">It prints the entire number stored in the linked list.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_d"><div class="para" id="p-2166">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-1_opt_e"><div class="para" id="p-2167">It produces an endless loop.</div></li>
+<li data-component="feedback" id="quiz-linkedlist2-1_opt_e"><div class="para" id="p-2168">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-linkedlist2-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-linkedlist2-2" data-multipleanswers="false" data-random="">
-<div class="para" id="p-2092">Given again the definition of a linked list of digits as in the video, the following function <code class="code-inline tex2jax_ignore">reverse()</code> is supposed to reverse a linked list of digits in place, that is, without creating a copy of the list. There is one line missing at the end of the function.</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct digit * reverse(struct digit * start) {
+<div class="para" id="p-2169">Given again the definition of a linked list of digits as in the video, the following function <code class="code-inline tex2jax_ignore">reverse()</code> is supposed to reverse a linked list of digits in place, that is, without creating a copy of the list. There is one line missing at the end of the function.</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct digit * reverse(struct digit * start) {
   struct digit * prev = NULL;
   struct digit * current = start;
   struct digit * next;
@@ -1099,15 +1099,15 @@ eBookConfig.enable_chatcodes =  false;
   }
   /*ADD LINE HERE*/
 }
-</code></pre></div> <div class="para" id="p-2093">What should be added in place of <code class="code-inline tex2jax_ignore">/*ADD LINE HERE*/</code>, so that the function correctly reverses the number?</div>
-<li data-component="answer" id="quiz-linkedlist2-2_opt_a" data-correct=""><div class="para" id="p-2094"><code class="code-inline tex2jax_ignore">return(prev);</code></div></li>
-<li data-component="feedback" id="quiz-linkedlist2-2_opt_a"><div class="para" id="p-2095">Correct</div></li>
-<li data-component="answer" id="quiz-linkedlist2-2_opt_b"><div class="para" id="p-2096"><code class="code-inline tex2jax_ignore">return(next);</code></div></li>
-<li data-component="feedback" id="quiz-linkedlist2-2_opt_b"><div class="para" id="p-2097">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-linkedlist2-2_opt_c"><div class="para" id="p-2098"><code class="code-inline tex2jax_ignore">return(current);</code></div></li>
-<li data-component="feedback" id="quiz-linkedlist2-2_opt_c"><div class="para" id="p-2099">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-linkedlist2-2_opt_d"><div class="para" id="p-2100"><code class="code-inline tex2jax_ignore">return(NULL);</code></div></li>
-<li data-component="feedback" id="quiz-linkedlist2-2_opt_d"><div class="para" id="p-2101">Not quite. Try again!</div></li>
+</code></pre></div> <div class="para" id="p-2170">What should be added in place of <code class="code-inline tex2jax_ignore">/*ADD LINE HERE*/</code>, so that the function correctly reverses the number?</div>
+<li data-component="answer" id="quiz-linkedlist2-2_opt_a" data-correct=""><div class="para" id="p-2171"><code class="code-inline tex2jax_ignore">return(prev);</code></div></li>
+<li data-component="feedback" id="quiz-linkedlist2-2_opt_a"><div class="para" id="p-2172">Correct</div></li>
+<li data-component="answer" id="quiz-linkedlist2-2_opt_b"><div class="para" id="p-2173"><code class="code-inline tex2jax_ignore">return(next);</code></div></li>
+<li data-component="feedback" id="quiz-linkedlist2-2_opt_b"><div class="para" id="p-2174">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-2_opt_c"><div class="para" id="p-2175"><code class="code-inline tex2jax_ignore">return(current);</code></div></li>
+<li data-component="feedback" id="quiz-linkedlist2-2_opt_c"><div class="para" id="p-2176">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist2-2_opt_d"><div class="para" id="p-2177"><code class="code-inline tex2jax_ignore">return(NULL);</code></div></li>
+<li data-component="feedback" id="quiz-linkedlist2-2_opt_d"><div class="para" id="p-2178">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="linkedlists-search.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="linkedlists-sort.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

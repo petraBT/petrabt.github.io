@@ -1056,25 +1056,25 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="branching-summary"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.13</span> <span class="title">Summary</span>
 </h2>
-<div class="para" id="p-772">Various ways to use branching statements in C:</div>
+<div class="para" id="p-791">Various ways to use branching statements in C:</div>
 <ul class="disc">
-<li id="li-252"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (condition){
+<li id="li-241"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (condition){
   statement;
 }
 </code></pre></div></li>
-<li id="li-253"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (condition){
+<li id="li-242"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (condition){
   statement1;
   statement2;
   ...
 }
 </code></pre></div></li>
-<li id="li-254"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (condition){
+<li id="li-243"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (condition){
   statement(s);
 } else {
   statement(s);
 }
 </code></pre></div></li>
-<li id="li-255"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (condition){
+<li id="li-244"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">if (condition){
   statement(s);
 } else if (other condition){
   statement(s);
@@ -1084,43 +1084,43 @@ eBookConfig.enable_chatcodes =  false;
   statement(s);
 }
 </code></pre></div></li>
-<li id="li-256"><div class="para" id="p-derived-li-256">There can be as many <code class="code-inline tex2jax_ignore">if-else</code> cases as you would like.</div></li>
-<li id="li-257"><div class="para" id="p-derived-li-257">The final <code class="code-inline tex2jax_ignore">else</code> statement can be omitted if that makes sense.</div></li>
+<li id="li-245"><div class="para" id="p-derived-li-245">There can be as many <code class="code-inline tex2jax_ignore">if-else</code> cases as you would like.</div></li>
+<li id="li-246"><div class="para" id="p-derived-li-246">The final <code class="code-inline tex2jax_ignore">else</code> statement can be omitted if that makes sense.</div></li>
 </ul>
-<div class="para" id="p-773">Several conditions can be combined with logic operators:</div>
+<div class="para" id="p-792">Several conditions can be combined with logic operators:</div>
 <ul class="disc">
-<li id="li-258"><div class="para" id="p-derived-li-258">
+<li id="li-247"><div class="para" id="p-derived-li-247">
 <code class="code-inline tex2jax_ignore">&amp;&amp;</code> is the logical AND</div></li>
-<li id="li-259"><div class="para" id="p-derived-li-259">
+<li id="li-248"><div class="para" id="p-derived-li-248">
 <code class="code-inline tex2jax_ignore">||</code> is the logical OR</div></li>
-<li id="li-260"><div class="para" id="p-derived-li-260">
+<li id="li-249"><div class="para" id="p-derived-li-249">
 <code class="code-inline tex2jax_ignore">!</code> is the logical NOT</div></li>
-<li id="li-261"><div class="para" id="p-derived-li-261">DeMorgan 1: <code class="code-inline tex2jax_ignore">!(A &amp;&amp; B) == (!A) || (!B)</code>
+<li id="li-250"><div class="para" id="p-derived-li-250">DeMorgan 1: <code class="code-inline tex2jax_ignore">!(A &amp;&amp; B) == (!A) || (!B)</code>
 </div></li>
-<li id="li-262"><div class="para" id="p-derived-li-262">DeMorgan 2: <code class="code-inline tex2jax_ignore">!(A || B) == (!A) &amp;&amp; (!B)</code>
+<li id="li-251"><div class="para" id="p-derived-li-251">DeMorgan 2: <code class="code-inline tex2jax_ignore">!(A || B) == (!A) &amp;&amp; (!B)</code>
 </div></li>
 </ul>
-<div class="para" id="p-774">Relational and equality operators are:</div>
+<div class="para" id="p-793">Relational and equality operators are:</div>
 <ul class="disc">
-<li id="li-263"><div class="para" id="p-derived-li-263">
+<li id="li-252"><div class="para" id="p-derived-li-252">
 <code class="code-inline tex2jax_ignore">&lt;</code> less than</div></li>
-<li id="li-264"><div class="para" id="p-derived-li-264">
+<li id="li-253"><div class="para" id="p-derived-li-253">
 <code class="code-inline tex2jax_ignore">&gt;</code> greater than</div></li>
-<li id="li-265"><div class="para" id="p-derived-li-265">
+<li id="li-254"><div class="para" id="p-derived-li-254">
 <code class="code-inline tex2jax_ignore">&lt;=</code> less than or equal</div></li>
-<li id="li-266"><div class="para" id="p-derived-li-266">
+<li id="li-255"><div class="para" id="p-derived-li-255">
 <code class="code-inline tex2jax_ignore">&gt;=</code> greater than or equal</div></li>
-<li id="li-267"><div class="para" id="p-derived-li-267">
+<li id="li-256"><div class="para" id="p-derived-li-256">
 <code class="code-inline tex2jax_ignore">==</code> equal</div></li>
-<li id="li-268"><div class="para" id="p-derived-li-268">
+<li id="li-257"><div class="para" id="p-derived-li-257">
 <code class="code-inline tex2jax_ignore">!=</code> not equal</div></li>
 </ul>
-<div class="para" id="p-775">A few extra topics when it comes to branching and logic expressions in coding:</div>
+<div class="para" id="p-794">A few extra topics when it comes to branching and logic expressions in coding:</div>
 <ul class="disc">
-<li id="li-269"><div class="para" id="p-derived-li-269">Operator precedence in logic expressions</div></li>
-<li id="li-270"><div class="para" id="p-derived-li-270">Using a "flag" variable to represent true/false</div></li>
-<li id="li-271"><div class="para" id="p-derived-li-271">Translating logical expressions from English to C</div></li>
-<li id="li-272"><div class="para" id="p-derived-li-272">Negating logical expressions</div></li>
+<li id="li-258"><div class="para" id="p-derived-li-258">Operator precedence in logic expressions</div></li>
+<li id="li-259"><div class="para" id="p-derived-li-259">Using a "flag" variable to represent true/false</div></li>
+<li id="li-260"><div class="para" id="p-derived-li-260">Translating logical expressions from English to C</div></li>
+<li id="li-261"><div class="para" id="p-derived-li-261">Negating logical expressions</div></li>
 </ul></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="branching-negate.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="adv-branching.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -15,25 +15,25 @@
 <span class="type">Reading Question</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
 </h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-linkedlist1-5" data-multipleanswers="false" data-random="">
-<div class="para" id="p-2038">You'd like to print all of the names of students whose records are stored in a linked list. As before, each student record is stored as</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
+<div class="para" id="p-2115">You'd like to print all of the names of students whose records are stored in a linked list. As before, each student record is stored as</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">struct student {
      char    name[50];
      int     birthYear;
      float   gpa;     
      struct student *next;
 };
-</code></pre></div> <div class="para" id="p-2039">You are given the following function in order to print the names of all students in the list:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void printNames(struct student *start) {
+</code></pre></div> <div class="para" id="p-2116">You are given the following function in order to print the names of all students in the list:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">void printNames(struct student *start) {
   while (start-&gt;next!=NULL) {
        printf("%s\n", start-&gt;name); 
        start = start-&gt;next;
   }
 }
-</code></pre></div> <div class="para" id="p-2040">Which of the following is true about the above function?</div>
-<li data-component="answer" id="quiz-linkedlist1-5_opt_a" data-correct=""><div class="para" id="p-2041">The function doesn't print the name of the last student in the list if the list is nonempty.</div></li>
-<li data-component="feedback" id="quiz-linkedlist1-5_opt_a"><div class="para" id="p-2042">Correct</div></li>
-<li data-component="answer" id="quiz-linkedlist1-5_opt_b"><div class="para" id="p-2043">The function is implemented incorrectly because it changes start.</div></li>
-<li data-component="feedback" id="quiz-linkedlist1-5_opt_b"><div class="para" id="p-2044">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-linkedlist1-5_opt_c"><div class="para" id="p-2045">The function will print a random name when the list is empty.</div></li>
-<li data-component="feedback" id="quiz-linkedlist1-5_opt_c"><div class="para" id="p-2046">Not quite. Try again!</div></li>
+</code></pre></div> <div class="para" id="p-2117">Which of the following is true about the above function?</div>
+<li data-component="answer" id="quiz-linkedlist1-5_opt_a" data-correct=""><div class="para" id="p-2118">The function doesn't print the name of the last student in the list if the list is nonempty.</div></li>
+<li data-component="feedback" id="quiz-linkedlist1-5_opt_a"><div class="para" id="p-2119">Correct</div></li>
+<li data-component="answer" id="quiz-linkedlist1-5_opt_b"><div class="para" id="p-2120">The function is implemented incorrectly because it changes start.</div></li>
+<li data-component="feedback" id="quiz-linkedlist1-5_opt_b"><div class="para" id="p-2121">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-linkedlist1-5_opt_c"><div class="para" id="p-2122">The function will print a random name when the list is empty.</div></li>
+<li data-component="feedback" id="quiz-linkedlist1-5_opt_c"><div class="para" id="p-2123">Not quite. Try again!</div></li>
 </ul></div></div></article><span class="incontext"><a href="linkedlists-create.html#quiz-linkedlist1-5" class="internal">in-context</a></span>
 </body>
 </html>

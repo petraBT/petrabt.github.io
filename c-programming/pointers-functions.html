@@ -1056,33 +1056,33 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="pointers-functions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">19.10</span> <span class="title">Passing Arrays to Functions</span>
 </h2>
-<div class="para" id="p-1466">In the following video you will learn how to pass arrays to functions so that within the function you can use as well as modify values stored in the array.</div>
+<div class="para" id="p-1543">In the following video you will learn how to pass arrays to functions so that within the function you can use as well as modify values stored in the array.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519159561626" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1519159561626" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-49"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1467"><ul class="disc">
-<li id="li-547"><div class="para" id="p-derived-li-547">When passing arrays to functions, an <code class="code-inline tex2jax_ignore">&amp;</code> is not needed, since the name of the array is already a pointer to its first element</div></li>
-<li id="li-548"><div class="para" id="p-derived-li-548">Arrays can then be modified and used in functions using their pointer name in the function, such as <code class="code-inline tex2jax_ignore">ptr[i]</code>
+<div class="para logical" id="p-1544"><ul class="disc">
+<li id="li-503"><div class="para" id="p-derived-li-503">When passing arrays to functions, an <code class="code-inline tex2jax_ignore">&amp;</code> is not needed, since the name of the array is already a pointer to its first element</div></li>
+<li id="li-504"><div class="para" id="p-derived-li-504">Arrays can then be modified and used in functions using their pointer name in the function, such as <code class="code-inline tex2jax_ignore">ptr[i]</code>
 </div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-49"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-arrayfunction-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-arrayfunction-1" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1468">Suppose an array of integers has been declared using the declaration</div>
+<div class="para" id="p-1545">Suppose an array of integers has been declared using the declaration</div>
 <pre class="code-block tex2jax_ignore">int num[50];
 </pre>
-<div class="para" id="p-1469">Next, <em class="emphasis">x</em> integers are stored in this array (where x is no larger than 50). The array is to be passed to a function sum which is to add up the x integers stored in the array. What should you be passing to the function sum?</div>
-<li data-component="answer" id="quiz-arrayfunction-1_opt_a" data-correct=""><div class="para" id="p-1470">The number x of integers stored in the array and a pointer to the first element of num.</div></li>
-<li data-component="feedback" id="quiz-arrayfunction-1_opt_a"><div class="para" id="p-1471">Correct</div></li>
-<li data-component="answer" id="quiz-arrayfunction-1_opt_b"><div class="para" id="p-1472">A pointer to the first element of num.</div></li>
-<li data-component="feedback" id="quiz-arrayfunction-1_opt_b"><div class="para" id="p-1473">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arrayfunction-1_opt_c"><div class="para" id="p-1474">num[0]</div></li>
-<li data-component="feedback" id="quiz-arrayfunction-1_opt_c"><div class="para" id="p-1475">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arrayfunction-1_opt_d"><div class="para" id="p-1476">The 50 elements of num, stored as individual integers.</div></li>
-<li data-component="feedback" id="quiz-arrayfunction-1_opt_d"><div class="para" id="p-1477">Not quite. Try again!</div></li>
+<div class="para" id="p-1546">Next, <em class="emphasis">x</em> integers are stored in this array (where x is no larger than 50). The array is to be passed to a function sum which is to add up the x integers stored in the array. What should you be passing to the function sum?</div>
+<li data-component="answer" id="quiz-arrayfunction-1_opt_a" data-correct=""><div class="para" id="p-1547">The number x of integers stored in the array and a pointer to the first element of num.</div></li>
+<li data-component="feedback" id="quiz-arrayfunction-1_opt_a"><div class="para" id="p-1548">Correct</div></li>
+<li data-component="answer" id="quiz-arrayfunction-1_opt_b"><div class="para" id="p-1549">A pointer to the first element of num.</div></li>
+<li data-component="feedback" id="quiz-arrayfunction-1_opt_b"><div class="para" id="p-1550">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arrayfunction-1_opt_c"><div class="para" id="p-1551">num[0]</div></li>
+<li data-component="feedback" id="quiz-arrayfunction-1_opt_c"><div class="para" id="p-1552">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arrayfunction-1_opt_d"><div class="para" id="p-1553">The 50 elements of num, stored as individual integers.</div></li>
+<li data-component="feedback" id="quiz-arrayfunction-1_opt_d"><div class="para" id="p-1554">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-arrayfunction-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-arrayfunction-2" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1478">Suppose a function sum has been defined as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int sum(int n, int array[])
+<div class="para" id="p-1555">Suppose a function sum has been defined as follows:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int sum(int n, int array[])
 {
            int i;
            int result = 0;
@@ -1090,23 +1090,23 @@ eBookConfig.enable_chatcodes =  false;
              result += array[i];
            return(result);
 }
-</code></pre></div> <div class="para" id="p-1479">Suppose furthermore that in your main function an array num has been declared and initialized with the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int num[]={4,2,7,5,8,9,4,2,4,6};
-</code></pre></div> <div class="para" id="p-1480">What is the correct function call of <code class="code-inline tex2jax_ignore">sum()</code>, using this array?</div> <div class="para" id="p-1481"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" frameborder="0" width="100%" height="600"></iframe><li data-component="answer" id="quiz-arrayfunction-2_opt_a" data-correct=""><div class="para" id="p-1482"><pre class="code-block tex2jax_ignore">sum(10, num);
+</code></pre></div> <div class="para" id="p-1556">Suppose furthermore that in your main function an array num has been declared and initialized with the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int num[]={4,2,7,5,8,9,4,2,4,6};
+</code></pre></div> <div class="para" id="p-1557">What is the correct function call of <code class="code-inline tex2jax_ignore">sum()</code>, using this array?</div> <div class="para" id="p-1558"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_functions4.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_functions4.c" frameborder="0" width="100%" height="600"></iframe><li data-component="answer" id="quiz-arrayfunction-2_opt_a" data-correct=""><div class="para" id="p-1559"><pre class="code-block tex2jax_ignore">sum(10, num);
 </pre></div></li>
-<li data-component="feedback" id="quiz-arrayfunction-2_opt_a"><div class="para" id="p-1483">Correct</div></li>
-<li data-component="answer" id="quiz-arrayfunction-2_opt_b"><div class="para" id="p-1484"><pre class="code-block tex2jax_ignore">sum(10, num[0]);
+<li data-component="feedback" id="quiz-arrayfunction-2_opt_a"><div class="para" id="p-1560">Correct</div></li>
+<li data-component="answer" id="quiz-arrayfunction-2_opt_b"><div class="para" id="p-1561"><pre class="code-block tex2jax_ignore">sum(10, num[0]);
 </pre></div></li>
-<li data-component="feedback" id="quiz-arrayfunction-2_opt_b"><div class="para" id="p-1485">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arrayfunction-2_opt_c"><div class="para" id="p-1486"><pre class="code-block tex2jax_ignore">sum(10, array[0]);
+<li data-component="feedback" id="quiz-arrayfunction-2_opt_b"><div class="para" id="p-1562">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arrayfunction-2_opt_c"><div class="para" id="p-1563"><pre class="code-block tex2jax_ignore">sum(10, array[0]);
 </pre></div></li>
-<li data-component="feedback" id="quiz-arrayfunction-2_opt_c"><div class="para" id="p-1487">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arrayfunction-2_opt_d"><div class="para" id="p-1488"><pre class="code-block tex2jax_ignore">sum(10, *num);
+<li data-component="feedback" id="quiz-arrayfunction-2_opt_c"><div class="para" id="p-1564">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arrayfunction-2_opt_d"><div class="para" id="p-1565"><pre class="code-block tex2jax_ignore">sum(10, *num);
 </pre></div></li>
-<li data-component="feedback" id="quiz-arrayfunction-2_opt_d"><div class="para" id="p-1489">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-arrayfunction-2_opt_e"><div class="para" id="p-1490"><pre class="code-block tex2jax_ignore">sum(10, array);
+<li data-component="feedback" id="quiz-arrayfunction-2_opt_d"><div class="para" id="p-1566">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-arrayfunction-2_opt_e"><div class="para" id="p-1567"><pre class="code-block tex2jax_ignore">sum(10, array);
 </pre></div></li>
-<li data-component="feedback" id="quiz-arrayfunction-2_opt_e"><div class="para" id="p-1491">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-arrayfunction-2_opt_e"><div class="para" id="p-1568">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="pointers-arrays.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="pointers-functions-practice.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -1056,27 +1056,27 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="memory-space"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">18.1</span> <span class="title">Space Needed to Store Variables</span>
 </h2>
-<div class="para" id="p-1269">We already have a pretty good idea that different data types take up different amounts of space in memory. For example, to store a character (<code class="code-inline tex2jax_ignore">char</code>) all we need to do is store its ASCII code which, when represented in binary, fits into one byte. On the other hand, most integers (for example the number 999) need more than one byte to store them in binary 2's complement. And recall that floats are stored in scientific notation as mantissa and exponent - lots of memory needed there. Let's see how we can make this more precise.</div>
+<div class="para" id="p-1346">We already have a pretty good idea that different data types take up different amounts of space in memory. For example, to store a character (<code class="code-inline tex2jax_ignore">char</code>) all we need to do is store its ASCII code which, when represented in binary, fits into one byte. On the other hand, most integers (for example the number 999) need more than one byte to store them in binary 2's complement. And recall that floats are stored in scientific notation as mantissa and exponent - lots of memory needed there. Let's see how we can make this more precise.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521655562031" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1521655562031" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-42"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1270">
+<div class="para logical" id="p-1347">
 <ul class="disc">
-<li id="li-506"><div class="para" id="p-derived-li-506">Use <code class="code-inline tex2jax_ignore">sizeof()</code> to see how much space different variable-types take up in memory</div></li>
-<li id="li-507"><div class="para" id="p-derived-li-507">Example:</div></li>
+<li id="li-462"><div class="para" id="p-derived-li-462">Use <code class="code-inline tex2jax_ignore">sizeof()</code> to see how much space different variable-types take up in memory</div></li>
+<li id="li-463"><div class="para" id="p-derived-li-463">Example:</div></li>
 </ul>
 <div class="para"><code class="code-inline tex2jax_ignore">printf("%zu", sizeof(float));</code></div>
 </div></aside><section class="reading-questions" id="reading-questions-44"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-memory-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-1271">Assuming that a variable of type double occupies 8 bytes in memory, how much space will be occupied by the variable doubleArray declared as follows:</div>
+<div class="para" id="p-1348">Assuming that a variable of type double occupies 8 bytes in memory, how much space will be occupied by the variable doubleArray declared as follows:</div>
 <pre class="code-block tex2jax_ignore">double doubleArray[3];
 </pre>
 <ol class="lower-alpha">
-<li id="li-508"><div class="para" id="p-derived-li-508">8 bytes</div></li>
-<li id="li-509"><div class="para" id="p-derived-li-509">24 bytes</div></li>
-<li id="li-510"><div class="para" id="p-derived-li-510">32 bytes</div></li>
-<li id="li-511"><div class="para" id="p-derived-li-511">3 bytes</div></li>
+<li id="li-464"><div class="para" id="p-derived-li-464">8 bytes</div></li>
+<li id="li-465"><div class="para" id="p-derived-li-465">24 bytes</div></li>
+<li id="li-466"><div class="para" id="p-derived-li-466">32 bytes</div></li>
+<li id="li-467"><div class="para" id="p-derived-li-467">3 bytes</div></li>
 </ol></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="memory.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="memory-stack.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

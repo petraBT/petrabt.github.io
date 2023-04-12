@@ -1056,21 +1056,21 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="adv-branching-for-if"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.2</span> <span class="title"><code class="code-inline tex2jax_ignore">for</code> and <code class="code-inline tex2jax_ignore">if</code> together</span>
 </h2>
-<div class="para" id="p-782">You can nest an <code class="code-inline tex2jax_ignore">if</code> statement inside a loop or a loop inside an <code class="code-inline tex2jax_ignore">if</code> statement.</div>
-<div class="para" id="p-783">Take a look at the following example which prints out those numbers between 0 and 29 that are divisible by 3. Make sure to try to understand how the code accomplishes this task.</div>
+<div class="para" id="p-801">You can nest an <code class="code-inline tex2jax_ignore">if</code> statement inside a loop or a loop inside an <code class="code-inline tex2jax_ignore">if</code> statement.</div>
+<div class="para" id="p-802">Take a look at the following example which prints out those numbers between 0 and 29 that are divisible by 3. Make sure to try to understand how the code accomplishes this task.</div>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_Nbranching11.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching11.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_Nbranching11.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe><article class="investigation project-like" id="investigation-14"><h3 class="heading">
 <span class="type">Investigate</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-784">Is there a difference between the two following scenarios, if the same statements are used within each element?</div> <ul class="disc">
-<li id="li-277"><div class="para" id="p-derived-li-277">Nesting an <code class="code-inline tex2jax_ignore">if</code> statement within a loop</div></li>
-<li id="li-278"><div class="para" id="p-derived-li-278">Nesting a loop within an <code class="code-inline tex2jax_ignore">if</code> statement</div></li>
+<div class="para" id="p-803">Is there a difference between the two following scenarios, if the same statements are used within each element?</div> <ul class="disc">
+<li id="li-266"><div class="para" id="p-derived-li-266">Nesting an <code class="code-inline tex2jax_ignore">if</code> statement within a loop</div></li>
+<li id="li-267"><div class="para" id="p-derived-li-267">Nesting a loop within an <code class="code-inline tex2jax_ignore">if</code> statement</div></li>
 </ul>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><div class="para" id="p-785">Yes! They can produce quite different results!</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><div class="para" id="p-804">Yes! They can produce quite different results!</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<div class="para" id="p-786">Here is just one example of how the same statements placed in different orders can produce vastly different results:</div> <ol class="decimal">
-<li id="li-279"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
+<div class="para" id="p-805">Here is just one example of how the same statements placed in different orders can produce vastly different results:</div> <ol class="decimal">
+<li id="li-268"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
 int a = 5;
 for (i=0; i&lt;11; i++){
   if (a&lt;i){
@@ -1078,7 +1078,7 @@ for (i=0; i&lt;11; i++){
   }
 }
 </code></pre></div></li>
-<li id="li-280"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
+<li id="li-269"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">int i = 0;
 int a = 5;
 if (a&lt;i){
   for (i=0; i&lt;11; i++){
@@ -1086,7 +1086,7 @@ if (a&lt;i){
   }
 }
 </code></pre></div></li>
-</ol> <div class="para" id="p-787">The first example program will output "6 7 8 9 10", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!</div>
+</ol> <div class="para" id="p-806">The first example program will output "6 7 8 9 10", whereas the second example program will have no output. Try it out yourself to see! So, of course, order does matter when coding, and it is important to be mindful of the potential errors you can encounter if reversing the order of certain statement, such as above!</div>
 </div></div>
 </div></article></section></div>
 <div class="ptx-content-footer">

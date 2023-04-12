@@ -1056,89 +1056,89 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sortsearch-linear"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">22.1</span> <span class="title">Linear Search</span>
 </h2>
-<div class="para" id="p-1638">There are many reasons for wanting to sort and/or search lists of data:</div>
+<div class="para" id="p-1715">There are many reasons for wanting to sort and/or search lists of data:</div>
 <ul class="disc">
-<li id="li-579"><div class="para" id="p-derived-li-579">Look for a student record in a list of records</div></li>
-<li id="li-580"><div class="para" id="p-derived-li-580">Print alphabetically sorted list of names</div></li>
-<li id="li-581"><div class="para" id="p-derived-li-581">Sort data values in ascending/descending order</div></li>
-<li id="li-582"><div class="para" id="p-derived-li-582">And many more!</div></li>
+<li id="li-535"><div class="para" id="p-derived-li-535">Look for a student record in a list of records</div></li>
+<li id="li-536"><div class="para" id="p-derived-li-536">Print alphabetically sorted list of names</div></li>
+<li id="li-537"><div class="para" id="p-derived-li-537">Sort data values in ascending/descending order</div></li>
+<li id="li-538"><div class="para" id="p-derived-li-538">And many more!</div></li>
 </ul>
-<div class="para" id="p-1639">We'll start by introducing a very simple algorithm, called <em class="alert">linear search</em>, to search for a specific item in a list of items.</div>
+<div class="para" id="p-1716">We'll start by introducing a very simple algorithm, called <em class="alert">linear search</em>, to search for a specific item in a list of items.</div>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="A codecast is displayed here" src="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518608621712" marginwidth="0" scrolling="yes" allowfullscreen="true" style="background: #E5E7E9; padding-center: 10px;" frameborder="0" height="800" width="900"></iframe><p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings">If you cannot see this codecast, please click <a href="https://codecast.france-ioi.org/v5/player?base=https%3A%2F%2Ffioi-recordings.s3.amazonaws.com%2Fdartmouth%2F1518608621712" target="_blank"><font color="blue">here</font></a>.</p>
 <aside class="aside aside-like" id="aside-53"><h3 class="heading"><span class="title">Video Description.</span></h3>
-<div class="para logical" id="p-1640"><ul class="disc">
-<li id="li-583"><div class="para" id="p-derived-li-583">Linear search goes through an array element by element and checks if the element matches the search argument</div></li>
-<li id="li-584"><div class="para" id="p-derived-li-584">If the element is found, break the <code class="code-inline tex2jax_ignore">while</code> loop by using a flag variable to indicate something has been "found"</div></li>
+<div class="para logical" id="p-1717"><ul class="disc">
+<li id="li-539"><div class="para" id="p-derived-li-539">Linear search goes through an array element by element and checks if the element matches the search argument</div></li>
+<li id="li-540"><div class="para" id="p-derived-li-540">If the element is found, break the <code class="code-inline tex2jax_ignore">while</code> loop by using a flag variable to indicate something has been "found"</div></li>
 </ul></div></aside><section class="reading-questions" id="reading-questions-53"><h3 class="heading hide-type">
 <span class="type">Check Your Understanding</span> <span class="codenumber"></span> <span class="title">Check Your Understanding</span>
 </h3>
 <article class="exercise exercise-like" id="quiz-sortsearch-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-sortsearch-1" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1641">Quick review question: Which of the following is the correct way to declare and initialize a string?</div>
-<li data-component="answer" id="quiz-sortsearch-1_opt_a" data-correct=""><div class="para" id="p-1642"><pre class="code-block tex2jax_ignore">char name[] = "cool_file_name";
+<div class="para" id="p-1718">Quick review question: Which of the following is the correct way to declare and initialize a string?</div>
+<li data-component="answer" id="quiz-sortsearch-1_opt_a" data-correct=""><div class="para" id="p-1719"><pre class="code-block tex2jax_ignore">char name[] = "cool_file_name";
 </pre></div></li>
-<li data-component="feedback" id="quiz-sortsearch-1_opt_a"><div class="para" id="p-1643">Correct</div></li>
-<li data-component="answer" id="quiz-sortsearch-1_opt_b"><div class="para" id="p-1644"><pre class="code-block tex2jax_ignore">char name[50]; name = "cool_file_name";
+<li data-component="feedback" id="quiz-sortsearch-1_opt_a"><div class="para" id="p-1720">Correct</div></li>
+<li data-component="answer" id="quiz-sortsearch-1_opt_b"><div class="para" id="p-1721"><pre class="code-block tex2jax_ignore">char name[50]; name = "cool_file_name";
 </pre></div></li>
-<li data-component="feedback" id="quiz-sortsearch-1_opt_b"><div class="para" id="p-1645">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-1_opt_c"><div class="para" id="p-1646"><pre class="code-block tex2jax_ignore">char name[] = "cool_file_name";
+<li data-component="feedback" id="quiz-sortsearch-1_opt_b"><div class="para" id="p-1722">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-1_opt_c"><div class="para" id="p-1723"><pre class="code-block tex2jax_ignore">char name[] = "cool_file_name";
 </pre></div></li>
-<li data-component="feedback" id="quiz-sortsearch-1_opt_c"><div class="para" id="p-1647">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-1_opt_d"><div class="para" id="p-1648"><pre class="code-block tex2jax_ignore">char = "cool_file_name"[50];
+<li data-component="feedback" id="quiz-sortsearch-1_opt_c"><div class="para" id="p-1724">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-1_opt_d"><div class="para" id="p-1725"><pre class="code-block tex2jax_ignore">char = "cool_file_name"[50];
 </pre></div></li>
-<li data-component="feedback" id="quiz-sortsearch-1_opt_d"><div class="para" id="p-1649">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-sortsearch-1_opt_d"><div class="para" id="p-1726">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-sortsearch-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-sortsearch-2" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1650">More review: Is there anything wrong with the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">char name[10];
+<div class="para" id="p-1727">More review: Is there anything wrong with the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-c">char name[10];
 . . . 
 strcpy(name, "TodayIsMonday");
 </code></pre></div>
-<li data-component="answer" id="quiz-sortsearch-2_opt_a" data-correct=""><div class="para" id="p-1651">This will overwrite memory cells that have not been reserved for name.</div></li>
-<li data-component="feedback" id="quiz-sortsearch-2_opt_a"><div class="para" id="p-1652">Correct</div></li>
-<li data-component="answer" id="quiz-sortsearch-2_opt_b"><div class="para" id="p-1653">It should be<pre class="code-block tex2jax_ignore">strcpy("name", TodayIsMonday);
+<li data-component="answer" id="quiz-sortsearch-2_opt_a" data-correct=""><div class="para" id="p-1728">This will overwrite memory cells that have not been reserved for name.</div></li>
+<li data-component="feedback" id="quiz-sortsearch-2_opt_a"><div class="para" id="p-1729">Correct</div></li>
+<li data-component="answer" id="quiz-sortsearch-2_opt_b"><div class="para" id="p-1730">It should be<pre class="code-block tex2jax_ignore">strcpy("name", TodayIsMonday);
 </pre>
 </div></li>
-<li data-component="feedback" id="quiz-sortsearch-2_opt_b"><div class="para" id="p-1654">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-2_opt_c"><div class="para" id="p-1655">It should be<pre class="code-block tex2jax_ignore">strcpy(“TodayIsMonday”, name);
+<li data-component="feedback" id="quiz-sortsearch-2_opt_b"><div class="para" id="p-1731">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-2_opt_c"><div class="para" id="p-1732">It should be<pre class="code-block tex2jax_ignore">strcpy(“TodayIsMonday”, name);
 </pre>
 </div></li>
-<li data-component="feedback" id="quiz-sortsearch-2_opt_c"><div class="para" id="p-1656">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-2_opt_d"><div class="para" id="p-1657">No, nothing wrong.</div></li>
-<li data-component="feedback" id="quiz-sortsearch-2_opt_d"><div class="para" id="p-1658">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-sortsearch-2_opt_c"><div class="para" id="p-1733">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-2_opt_d"><div class="para" id="p-1734">No, nothing wrong.</div></li>
+<li data-component="feedback" id="quiz-sortsearch-2_opt_d"><div class="para" id="p-1735">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-sortsearch-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-sortsearch-3" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1659">Even more review: What is the result of the following:</div>
+<div class="para" id="p-1736">Even more review: What is the result of the following:</div>
 <pre class="code-block tex2jax_ignore">strcmp("my_apple", "my_banana");
 </pre>
-<div class="para" id="p-1660"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-sortsearch-3_opt_a" data-correct=""><div class="para" id="p-1661">a negative number</div></li>
-<li data-component="feedback" id="quiz-sortsearch-3_opt_a"><div class="para" id="p-1662">Correct</div></li>
-<li data-component="answer" id="quiz-sortsearch-3_opt_b"><div class="para" id="p-1663">the letter 'b'</div></li>
-<li data-component="feedback" id="quiz-sortsearch-3_opt_b"><div class="para" id="p-1664">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-3_opt_c"><div class="para" id="p-1665">a positive number</div></li>
-<li data-component="feedback" id="quiz-sortsearch-3_opt_c"><div class="para" id="p-1666">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-3_opt_d"><div class="para" id="p-1667">zero</div></li>
-<li data-component="feedback" id="quiz-sortsearch-3_opt_d"><div class="para" id="p-1668">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-3_opt_e"><div class="para" id="p-1669">the letter 'a'</div></li>
-<li data-component="feedback" id="quiz-sortsearch-3_opt_e"><div class="para" id="p-1670">Not quite. Try again!</div></li>
+<div class="para" id="p-1737"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings1.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings1.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-sortsearch-3_opt_a" data-correct=""><div class="para" id="p-1738">a negative number</div></li>
+<li data-component="feedback" id="quiz-sortsearch-3_opt_a"><div class="para" id="p-1739">Correct</div></li>
+<li data-component="answer" id="quiz-sortsearch-3_opt_b"><div class="para" id="p-1740">the letter 'b'</div></li>
+<li data-component="feedback" id="quiz-sortsearch-3_opt_b"><div class="para" id="p-1741">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-3_opt_c"><div class="para" id="p-1742">a positive number</div></li>
+<li data-component="feedback" id="quiz-sortsearch-3_opt_c"><div class="para" id="p-1743">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-3_opt_d"><div class="para" id="p-1744">zero</div></li>
+<li data-component="feedback" id="quiz-sortsearch-3_opt_d"><div class="para" id="p-1745">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-3_opt_e"><div class="para" id="p-1746">the letter 'a'</div></li>
+<li data-component="feedback" id="quiz-sortsearch-3_opt_e"><div class="para" id="p-1747">Not quite. Try again!</div></li>
 </ul></div></div></article><article class="exercise exercise-like" id="quiz-sortsearch-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="quiz-sortsearch-4" data-multipleanswers="false" data-random="">
-<div class="para" id="p-1671">Final review question (I promise!): Suppose a string has been declared as follows:</div>
+<div class="para" id="p-1748">Final review question (I promise!): Suppose a string has been declared as follows:</div>
 <pre class="code-block tex2jax_ignore">char food[30];
 </pre>
-<div class="para" id="p-1672">You want the user to enter their favorite food and store the response in the string food. What is the correct command to do so?</div> <div class="para" id="p-1673"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
-<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-sortsearch-4_opt_a" data-correct=""><div class="para" id="p-1674"><pre class="code-block tex2jax_ignore">scanf("%s", &amp;food);
+<div class="para" id="p-1749">You want the user to enter their favorite food and store the response in the string food. What is the correct command to do so?</div> <div class="para" id="p-1750"><em class="emphasis">Feel free to use the window below to try out some code. Be sure to work the correct answer out "by hand" first before verifying your answer using the code window.</em></div> <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_strings2.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" target="_blank"><font color="#1B279F">open in new window</font></a></p>
+<iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_strings2.c" frameborder="0" width="100%" height="300"></iframe><li data-component="answer" id="quiz-sortsearch-4_opt_a" data-correct=""><div class="para" id="p-1751"><pre class="code-block tex2jax_ignore">scanf("%s", &amp;food);
 </pre></div></li>
-<li data-component="feedback" id="quiz-sortsearch-4_opt_a"><div class="para" id="p-1675">Correct</div></li>
-<li data-component="answer" id="quiz-sortsearch-4_opt_b"><div class="para" id="p-1676"><pre class="code-block tex2jax_ignore">scanf("%s", food[0]);
+<li data-component="feedback" id="quiz-sortsearch-4_opt_a"><div class="para" id="p-1752">Correct</div></li>
+<li data-component="answer" id="quiz-sortsearch-4_opt_b"><div class="para" id="p-1753"><pre class="code-block tex2jax_ignore">scanf("%s", food[0]);
 </pre></div></li>
-<li data-component="feedback" id="quiz-sortsearch-4_opt_b"><div class="para" id="p-1677">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-4_opt_c"><div class="para" id="p-1678"><pre class="code-block tex2jax_ignore">scanf("%s", food);
+<li data-component="feedback" id="quiz-sortsearch-4_opt_b"><div class="para" id="p-1754">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-4_opt_c"><div class="para" id="p-1755"><pre class="code-block tex2jax_ignore">scanf("%s", food);
 </pre></div></li>
-<li data-component="feedback" id="quiz-sortsearch-4_opt_c"><div class="para" id="p-1679">Not quite. Try again!</div></li>
-<li data-component="answer" id="quiz-sortsearch-4_opt_d"><div class="para" id="p-1680"><pre class="code-block tex2jax_ignore">scanf("%s", *food);
+<li data-component="feedback" id="quiz-sortsearch-4_opt_c"><div class="para" id="p-1756">Not quite. Try again!</div></li>
+<li data-component="answer" id="quiz-sortsearch-4_opt_d"><div class="para" id="p-1757"><pre class="code-block tex2jax_ignore">scanf("%s", *food);
 </pre></div></li>
-<li data-component="feedback" id="quiz-sortsearch-4_opt_d"><div class="para" id="p-1681">Not quite. Try again!</div></li>
+<li data-component="feedback" id="quiz-sortsearch-4_opt_d"><div class="para" id="p-1758">Not quite. Try again!</div></li>
 </ul></div></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sortsearch.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sortsearch-bisection.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -1056,17 +1056,17 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="files-write"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">15.7</span> <span class="title">Writing to a File</span>
 </h2>
-<div class="para" id="p-1086">So far we have read data from files. It is just as easy to write data to a file. The main differences to reading are:</div>
+<div class="para" id="p-1163">So far we have read data from files. It is just as easy to write data to a file. The main differences to reading are:</div>
 <ul class="disc">
-<li id="li-448"><div class="para" id="p-derived-li-448">Use "w" (as in writing) in the <code class="code-inline tex2jax_ignore">fopen()</code> statement instead of "r" (as in reading).</div></li>
-<li id="li-449"><div class="para" id="p-derived-li-449">Use <code class="code-inline tex2jax_ignore">fprintf()</code> to write to the file instead of <code class="code-inline tex2jax_ignore">fscanf()</code> to read from the file.</div></li>
+<li id="li-404"><div class="para" id="p-derived-li-404">Use "w" (as in writing) in the <code class="code-inline tex2jax_ignore">fopen()</code> statement instead of "r" (as in reading).</div></li>
+<li id="li-405"><div class="para" id="p-derived-li-405">Use <code class="code-inline tex2jax_ignore">fprintf()</code> to write to the file instead of <code class="code-inline tex2jax_ignore">fscanf()</code> to read from the file.</div></li>
 </ul>
-<div class="para" id="p-1087">When writing to a file, the first step is to open the file using:</div>
-<div class="para" id="p-1088"><code class="code-inline tex2jax_ignore">fopen(filename, "w");</code></div>
-<div class="para" id="p-1089">Note that if the file does not exist prior to this command then it will be <em class="alert">created</em>. If it does exist already, then the existing file will be <em class="alert">overwritten</em> without any warning (you might lose important data this way!!).</div>
-<div class="para" id="p-1090">Another way to write to a file is to open it for “appending”:</div>
-<div class="para" id="p-1091"><code class="code-inline tex2jax_ignore">fopen(filename, "a");</code></div>
-<div class="para" id="p-1092">This appends data to the file at its end (if the file exists) and otherwise creates a new file. Take a look at this example:</div>
+<div class="para" id="p-1164">When writing to a file, the first step is to open the file using:</div>
+<div class="para" id="p-1165"><code class="code-inline tex2jax_ignore">fopen(filename, "w");</code></div>
+<div class="para" id="p-1166">Note that if the file does not exist prior to this command then it will be <em class="alert">created</em>. If it does exist already, then the existing file will be <em class="alert">overwritten</em> without any warning (you might lose important data this way!!).</div>
+<div class="para" id="p-1167">Another way to write to a file is to open it for “appending”:</div>
+<div class="para" id="p-1168"><code class="code-inline tex2jax_ignore">fopen(filename, "a");</code></div>
+<div class="para" id="p-1169">This appends data to the file at its end (if the file exists) and otherwise creates a new file. Take a look at this example:</div>
 <p xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" style="text-align: right;\"><a href="https://code.thayer.dartmouth.edu/admin.php?starting_point=engs20p_NFileIO8.c" target="_blank"><font color="#AED6F1">admin</font></a><font color="#FFFFFF">.....</font><a href="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO8.c&amp;nocheck=true" target="_blank"><font color="#1B279F">open in new window</font></a></p>
 <iframe xmlns:exsl="http://exslt.org/common" xmlns:str="http://exslt.org/strings" title="Coding Assignment" style="position: absolute; top: -9999em; visibility: hidden;" onload="this.style.position='static'; this.style.visibility='visible';" src="https://code.thayer.dartmouth.edu/?starting_point=engs20p_NFileIO8.c&amp;nocheck=true" frameborder="0" width="100%" height="300"></iframe></section></div>
 <div class="ptx-content-footer">

@@ -1285,7 +1285,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.8",
   "title": "Evaluating Logic Statements",
-  "body": " Evaluating Logic Statements  logic evaluate Now that we can write more complicated logical expressions involving multiple operators, in what order do these get evaluated?    Take a look at the program below for example. What is its output? Try to figure this out first by only thinking about the program and not yet running it.   What do you think the output will be?   \"True\"  \"Huh??? False???\"  \"True Huh??? False???\"   Enter your choice (a\/b\/c):    "
+  "body": " Evaluating Logic Statements  logic evaluate Now that we can write more complicated logical expressions involving multiple operators, in what order do these get evaluated?    Take a look at the program below for example. What is its output? Try to figure this out first by only thinking about the program and not yet running it.   What do you think the output will be?    )  \"Huh??? False???\"    Correct      \"True\"    Not quite. Try again!      \"True Huh??? False???\"    Not quite. Try again!      "
 },
 {
   "id": "activity-29",
@@ -1294,7 +1294,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "9.7",
   "title": "",
-  "body": "  Take a look at the program below for example. What is its output? Try to figure this out first by only thinking about the program and not yet running it.   What do you think the output will be?   \"True\"  \"Huh??? False???\"  \"True Huh??? False???\"   Enter your choice (a\/b\/c):   "
+  "body": "  Take a look at the program below for example. What is its output? Try to figure this out first by only thinking about the program and not yet running it.   What do you think the output will be?    )  \"Huh??? False???\"    Correct      \"True\"    Not quite. Try again!      \"True Huh??? False???\"    Not quite. Try again!     "
 },
 {
   "id": "branching-operator",
@@ -1348,7 +1348,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.11",
   "title": "Logical Expressions in English",
-  "body": " Logical Expressions in English  logic expressions We use logical expressions in our language every day. But the way we do so may not translate readily into computer-speak without some extra attention. Remember: computers aren't humans. They cannot interpret what we might mean. They can only follow predefined rules.   Video Description    How to translate logical statements in English to logical expressions that the computer will interpret in the intended way  For example: in English, \"x and y are greater than z\" would translate to C as (x>z)&&(y>z)        Which of the following is the correct logical expression that corresponds to the statement that \"Neither A nor B is negative\" ?   A<0 || B<0  !(A||B)<0  !A||!B<0  !(A<0 || B<0)   Enter your choice (a\/b\/c\/d):    "
+  "body": " Logical Expressions in English  logic expressions We use logical expressions in our language every day. But the way we do so may not translate readily into computer-speak without some extra attention. Remember: computers aren't humans. They cannot interpret what we might mean. They can only follow predefined rules.   Video Description    How to translate logical statements in English to logical expressions that the computer will interpret in the intended way  For example: in English, \"x and y are greater than z\" would translate to C as (x>z)&&(y>z)        Which of the following is the correct logical expression that corresponds to the statement that \"Neither A nor B is negative\" ?   )  !(A<0 || B<0)    Correct      !(A||B)<0    Not quite. Try again!      !A||!B<0    Not quite. Try again!      A<0 || B<0    Not quite. Try again!      "
 },
 {
   "id": "quiz-logic-3",
@@ -1357,7 +1357,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "9.11.1",
   "title": "",
-  "body": " Which of the following is the correct logical expression that corresponds to the statement that \"Neither A nor B is negative\" ?   A<0 || B<0  !(A||B)<0  !A||!B<0  !(A<0 || B<0)   Enter your choice (a\/b\/c\/d):  "
+  "body": " Which of the following is the correct logical expression that corresponds to the statement that \"Neither A nor B is negative\" ?   )  !(A<0 || B<0)    Correct      !(A||B)<0    Not quite. Try again!      !A||!B<0    Not quite. Try again!      A<0 || B<0    Not quite. Try again!    "
 },
 {
   "id": "branching-negate",
@@ -1366,7 +1366,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.12",
   "title": "Negating Logical Expressions",
-  "body": " Negating Logical Expressions   logic negate  logic De Morgan's laws  logic truth tables Sometimes you might want to check whether a certain logical expression is NOT true, rather than finding out whether it is true. There are several ways to do so.   Video Description    Negating logical expressions  Truth tables  De Morgan's laws:  Law 1:  !(A && B) == !A || !B  Law 2:  !(A || B) == !A && !B      Which of the following is equivalent to !(A<0 || B<0) ?   A>=0 && B>=0  A>=0 || B>=0  !A<0 || !B<0  !A<0 && !B<0   Enter your choice (a\/b\/c\/d):    "
+  "body": " Negating Logical Expressions   logic negate  logic De Morgan's laws  logic truth tables Sometimes you might want to check whether a certain logical expression is NOT true, rather than finding out whether it is true. There are several ways to do so.   Video Description    Negating logical expressions  Truth tables  De Morgan's laws:  Law 1:  !(A && B) == !A || !B  Law 2:  !(A || B) == !A && !B      Which of the following is equivalent to !(A<0 || B<0) ?   )  A>=0 && B>=0    Correct      A>=0 || B>=0    Not quite. Try again!      !A<0 || !B<0    Not quite. Try again!      !A<0 && !B<0    Not quite. Try again!      "
 },
 {
   "id": "quiz-logic-4",
@@ -1375,7 +1375,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "9.12.1",
   "title": "",
-  "body": " Which of the following is equivalent to !(A<0 || B<0) ?   A>=0 && B>=0  A>=0 || B>=0  !A<0 || !B<0  !A<0 && !B<0   Enter your choice (a\/b\/c\/d):  "
+  "body": " Which of the following is equivalent to !(A<0 || B<0) ?   )  A>=0 && B>=0    Correct      A>=0 || B>=0    Not quite. Try again!      !A<0 || !B<0    Not quite. Try again!      !A<0 && !B<0    Not quite. Try again!    "
 },
 {
   "id": "branching-summary",
@@ -1546,7 +1546,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.1",
   "title": "Formatted Input and Output",
-  "body": " Formatted Input and Output  We have already seen and used the printf() and the scanf() statements. Both have additional options that come in handy when trying to produce nicely formatted output.   Video Description    Each data type comes with its own format specifier, for example %d for integers, %f for floating point numbers and %c for individual characters. We will get to know other format specifiers as we discover other data types.  Each format specifier in the format string must correspond to a variable of the same data type in a printf() statement.  escape sequences Escape sequences start with a backslash \\ and are used to send special formatting instructions to the computer within a format string. For example, when used within a printf() statement, \\n is used to start a new line in the output, \\b creates a backspace (moves the cursor one space to the left) and \\\" renders a double quotation mark.      format specifiers other      How do you print the sentence She said \"yes\" to my suggestion. using the printf() command? Feel free to use the window below to try out some commands.    printf(\"She said \"yes\" to my suggestion.\");  printf(\"She said \\\"yes\\\" to my suggestion.\");  printf(\"She said \"\"yes\"\" to my suggestion.\");  printf(\"She said 'yes' to my suggestion.\");   Enter your choice (a\/b\/c\/d):    What happens when you don’t have enough variables to match the number of format specifiers in your format string? For example, what happens when you type:  int age = 34; printf(\"I am %d years old and weight %f pounds.\", age);  Feel free to quickly write a program to try this out.    The compiler automatically substitutes the correct value for the missing variable.  The program will compile but crash at runtime.  The compiler will give a warning, but the program will run and print something.  The compiler will abort with an error message.   Enter your choice (a\/b\/c\/d):    Sometimes it is useful to use additional formatting options that are available for format specifiers in order to control the output more precisely.   Video Description    Output using format specifiers can be formatted, using the syntax:  %[flag][width][.precision][type_mod]type  Parameters in brackets [] are optional.  format flag The [flag] can take on values such as - , + , 0 etc. For example, - (as in %-d ) will cause the numerical output to be left-justified.  format precision The [.precision] option can be used to specify, for a floating point number, the number of digits after the decimal point to be displayed. For example, %.3f will print three digits after the decimal point.  format width The [width] option can be used to prescribe the number of spaces that the printed number will take up. The [flag] can determine how these numbers appear (i.e. left-justified).        What is the output of  printf(\"a = %05d\\n\", 35);  You should first think about this and try to figure out the answer by hand. Then feel free to use the window below to write a program to verify your answer. This time you have to write the entire program by yourself (hint: get started by copying and pasting from a previous program.)    00035  35  a = 00035  a = 0535   Enter your choice (a\/b\/c\/d):    What happens when you use the format specifier %f to print out an integer? (feel free to write a short C program to try this out).    The compiler will notice and abort the compilation with an error message.  No answer text provided.  The compiler will give a warning and output will most likely be incorrect.  The integer is automatically converted to a float and printed out correctly.   Enter your choice (a\/b\/c\/d):    "
+  "body": " Formatted Input and Output  We have already seen and used the printf() and the scanf() statements. Both have additional options that come in handy when trying to produce nicely formatted output.   Video Description    Each data type comes with its own format specifier, for example %d for integers, %f for floating point numbers and %c for individual characters. We will get to know other format specifiers as we discover other data types.  Each format specifier in the format string must correspond to a variable of the same data type in a printf() statement.  escape sequences Escape sequences start with a backslash \\ and are used to send special formatting instructions to the computer within a format string. For example, when used within a printf() statement, \\n is used to start a new line in the output, \\b creates a backspace (moves the cursor one space to the left) and \\\" renders a double quotation mark.      format specifiers other      How do you print the sentence She said \"yes\" to my suggestion. using the printf() command? Feel free to use the window below to try out some commands.    )  printf(\"She said \\\"yes\\\" to my suggestion.\");    Correct      printf(\"She said \"yes\" to my suggestion.\");    Not quite. Try again!      printf(\"She said \"\"yes\"\" to my suggestion.\");    Not quite. Try again!      printf(\"She said 'yes' to my suggestion.\");    Not quite. Try again!      What happens when you don’t have enough variables to match the number of format specifiers in your format string? For example, what happens when you type:  int age = 34; printf(\"I am %d years old and weight %f pounds.\", age);  Feel free to quickly write a program to try this out.    )  The compiler will give a warning, but the program will run and print something.    Correct      The program will compile but crash at runtime.    Not quite. Try again!      The compiler automatically substitutes the correct value for the missing variable.    Not quite. Try again!      The compiler will abort with an error message.    Not quite. Try again!      Sometimes it is useful to use additional formatting options that are available for format specifiers in order to control the output more precisely.   Video Description    Output using format specifiers can be formatted, using the syntax:  %[flag][width][.precision][type_mod]type  Parameters in brackets [] are optional.  format flag The [flag] can take on values such as - , + , 0 etc. For example, - (as in %-d ) will cause the numerical output to be left-justified.  format precision The [.precision] option can be used to specify, for a floating point number, the number of digits after the decimal point to be displayed. For example, %.3f will print three digits after the decimal point.  format width The [width] option can be used to prescribe the number of spaces that the printed number will take up. The [flag] can determine how these numbers appear (i.e. left-justified).        What is the output of  printf(\"a = %05d\\n\", 35);  You should first think about this and try to figure out the answer by hand. Then feel free to use the window below to write a program to verify your answer. This time you have to write the entire program by yourself (hint: get started by copying and pasting from a previous program.)    )  a = 00035    Correct      35    Not quite. Try again!      00035    Not quite. Try again!      a = 0535    Not quite. Try again!      What happens when you use the format specifier %f to print out an integer? (feel free to write a short C program to try this out).    )  The compiler will give a warning and output will most likely be incorrect.    Correct      No answer text provided.    Not quite. Try again!      The compiler will notice and abort the compilation with an error message.    Not quite. Try again!      The integer is automatically converted to a float and printed out correctly.    Not quite. Try again!      "
 },
 {
   "id": "figure-6",
@@ -1564,7 +1564,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "11.1.1",
   "title": "",
-  "body": " How do you print the sentence She said \"yes\" to my suggestion. using the printf() command? Feel free to use the window below to try out some commands.    printf(\"She said \"yes\" to my suggestion.\");  printf(\"She said \\\"yes\\\" to my suggestion.\");  printf(\"She said \"\"yes\"\" to my suggestion.\");  printf(\"She said 'yes' to my suggestion.\");   Enter your choice (a\/b\/c\/d):  "
+  "body": " How do you print the sentence She said \"yes\" to my suggestion. using the printf() command? Feel free to use the window below to try out some commands.    )  printf(\"She said \\\"yes\\\" to my suggestion.\");    Correct      printf(\"She said \"yes\" to my suggestion.\");    Not quite. Try again!      printf(\"She said \"\"yes\"\" to my suggestion.\");    Not quite. Try again!      printf(\"She said 'yes' to my suggestion.\");    Not quite. Try again!    "
 },
 {
   "id": "quiz-format-2",
@@ -1573,7 +1573,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "11.1.2",
   "title": "",
-  "body": " What happens when you don’t have enough variables to match the number of format specifiers in your format string? For example, what happens when you type:  int age = 34; printf(\"I am %d years old and weight %f pounds.\", age);  Feel free to quickly write a program to try this out.    The compiler automatically substitutes the correct value for the missing variable.  The program will compile but crash at runtime.  The compiler will give a warning, but the program will run and print something.  The compiler will abort with an error message.   Enter your choice (a\/b\/c\/d):  "
+  "body": " What happens when you don’t have enough variables to match the number of format specifiers in your format string? For example, what happens when you type:  int age = 34; printf(\"I am %d years old and weight %f pounds.\", age);  Feel free to quickly write a program to try this out.    )  The compiler will give a warning, but the program will run and print something.    Correct      The program will compile but crash at runtime.    Not quite. Try again!      The compiler automatically substitutes the correct value for the missing variable.    Not quite. Try again!      The compiler will abort with an error message.    Not quite. Try again!    "
 },
 {
   "id": "quiz-format-3",
@@ -1582,7 +1582,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "11.1.1",
   "title": "",
-  "body": " What is the output of  printf(\"a = %05d\\n\", 35);  You should first think about this and try to figure out the answer by hand. Then feel free to use the window below to write a program to verify your answer. This time you have to write the entire program by yourself (hint: get started by copying and pasting from a previous program.)    00035  35  a = 00035  a = 0535   Enter your choice (a\/b\/c\/d):  "
+  "body": " What is the output of  printf(\"a = %05d\\n\", 35);  You should first think about this and try to figure out the answer by hand. Then feel free to use the window below to write a program to verify your answer. This time you have to write the entire program by yourself (hint: get started by copying and pasting from a previous program.)    )  a = 00035    Correct      35    Not quite. Try again!      00035    Not quite. Try again!      a = 0535    Not quite. Try again!    "
 },
 {
   "id": "quiz-format-4",
@@ -1591,7 +1591,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "11.1.2",
   "title": "",
-  "body": " What happens when you use the format specifier %f to print out an integer? (feel free to write a short C program to try this out).    The compiler will notice and abort the compilation with an error message.  No answer text provided.  The compiler will give a warning and output will most likely be incorrect.  The integer is automatically converted to a float and printed out correctly.   Enter your choice (a\/b\/c\/d):  "
+  "body": " What happens when you use the format specifier %f to print out an integer? (feel free to write a short C program to try this out).    )  The compiler will give a warning and output will most likely be incorrect.    Correct      No answer text provided.    Not quite. Try again!      The compiler will notice and abort the compilation with an error message.    Not quite. Try again!      The integer is automatically converted to a float and printed out correctly.    Not quite. Try again!    "
 },
 {
   "id": "format-scanf",
@@ -1600,7 +1600,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.2",
   "title": "Understanding <code class=\"code-inline tex2jax_ignore\">scanf()<\/code>",
-  "body": " Understanding scanf()  Next, let's understand the scanf() function in more detail.   Video Description    The scanf() function is used to scan user input  NEW SYNTAX: the following will scan for a user-inputted integer and store it in the already-declared variable named \"input\"  scanf(\"%d\", &input);    scanf()      What is the correct way to have the user input an integer and store it in the variable age ?  Feel free to use the window below to try out some commands.    scanf(\"%age\", &d);  scanf(\"%d\", age);  scanf(\"%d\", &age);  scanf(\"&age\");   Enter your choice (a\/b\/c\/d):    "
+  "body": " Understanding scanf()  Next, let's understand the scanf() function in more detail.   Video Description    The scanf() function is used to scan user input  NEW SYNTAX: the following will scan for a user-inputted integer and store it in the already-declared variable named \"input\"  scanf(\"%d\", &input);    scanf()      What is the correct way to have the user input an integer and store it in the variable age ?  Feel free to use the window below to try out some commands.    )  scanf(\"%d\", &age);    Correct      scanf(\"%d\", age);    Not quite. Try again!      scanf(\"%age\", &d);    Not quite. Try again!      scanf(\"&age\");    Not quite. Try again!      "
 },
 {
   "id": "figure-7",
@@ -1618,7 +1618,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "11.2.1",
   "title": "",
-  "body": " What is the correct way to have the user input an integer and store it in the variable age ?  Feel free to use the window below to try out some commands.    scanf(\"%age\", &d);  scanf(\"%d\", age);  scanf(\"%d\", &age);  scanf(\"&age\");   Enter your choice (a\/b\/c\/d):  "
+  "body": " What is the correct way to have the user input an integer and store it in the variable age ?  Feel free to use the window below to try out some commands.    )  scanf(\"%d\", &age);    Correct      scanf(\"%d\", age);    Not quite. Try again!      scanf(\"%age\", &d);    Not quite. Try again!      scanf(\"&age\");    Not quite. Try again!    "
 },
 {
   "id": "format-style",
@@ -1681,7 +1681,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.2",
   "title": "Multiple Functions",
-  "body": " Multiple Functions  functions multiple It is possible (and quite normal) to have multiple functions in your C code! By splitting up your code into functions, debugging can become much easier, your code will be more readable, it will be easier for you to remember what you had in mind, ... but more on that later. For now, let's take a look at an example that involves multiple functions:    Video Description    You can write multiple functions for your code  List the function prototypes above the main function  Include the function bodies below the main function  Call each function using the same syntax as before       What are some of the advantages of using functions (choose all that apply)?   easy modification of code  abstraction  ability to reuse code without having to copy and paste  there are no advantages   Enter your choice(s) (a\/b\/c\/d). If selecting multiple, separate with commas (i.e. e, f, g):    Given the following function definition, which is the correct function call, given that a variable a of type int has been declared?  int myaddition(int x, int y) { return(x+y); }  Feel free to use the window below to try out some code. Be sure to work the correct answer out \"by hand\" first before verifying your answer using the code window.    a = myaddition(3,5);  a = myaddition(3,5)  int a = myaddition(3,5)  a = myaddition(3.0,5.0);   Enter your choice (a\/b\/c\/d):    "
+  "body": " Multiple Functions  functions multiple It is possible (and quite normal) to have multiple functions in your C code! By splitting up your code into functions, debugging can become much easier, your code will be more readable, it will be easier for you to remember what you had in mind, ... but more on that later. For now, let's take a look at an example that involves multiple functions:    Video Description    You can write multiple functions for your code  List the function prototypes above the main function  Include the function bodies below the main function  Call each function using the same syntax as before       What are some of the advantages of using functions (choose all that apply)?     easy modification of code    Correct      abstraction    Correct      ability to reuse code without having to copy and paste    Correct      there are no advantages    Not quite. Try again!      Given the following function definition, which is the correct function call, given that a variable a of type int has been declared?  int myaddition(int x, int y) { return(x+y); }  Feel free to use the window below to try out some code. Be sure to work the correct answer out \"by hand\" first before verifying your answer using the code window.    )  a = myaddition(3,5);    Correct      a = myaddition(3,5)    Not quite. Try again!      int a = myaddition(3,5)    Not quite. Try again!      a = myaddition(3.0,5.0);    Not quite. Try again!      "
 },
 {
   "id": "quiz-functions-3",
@@ -1690,7 +1690,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "12.2.1",
   "title": "",
-  "body": " What are some of the advantages of using functions (choose all that apply)?   easy modification of code  abstraction  ability to reuse code without having to copy and paste  there are no advantages   Enter your choice(s) (a\/b\/c\/d). If selecting multiple, separate with commas (i.e. e, f, g):  "
+  "body": " What are some of the advantages of using functions (choose all that apply)?     easy modification of code    Correct      abstraction    Correct      ability to reuse code without having to copy and paste    Correct      there are no advantages    Not quite. Try again!    "
 },
 {
   "id": "quiz-functions-4",
@@ -1699,7 +1699,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "12.2.2",
   "title": "",
-  "body": " Given the following function definition, which is the correct function call, given that a variable a of type int has been declared?  int myaddition(int x, int y) { return(x+y); }  Feel free to use the window below to try out some code. Be sure to work the correct answer out \"by hand\" first before verifying your answer using the code window.    a = myaddition(3,5);  a = myaddition(3,5)  int a = myaddition(3,5)  a = myaddition(3.0,5.0);   Enter your choice (a\/b\/c\/d):  "
+  "body": " Given the following function definition, which is the correct function call, given that a variable a of type int has been declared?  int myaddition(int x, int y) { return(x+y); }  Feel free to use the window below to try out some code. Be sure to work the correct answer out \"by hand\" first before verifying your answer using the code window.    )  a = myaddition(3,5);    Correct      a = myaddition(3,5)    Not quite. Try again!      int a = myaddition(3,5)    Not quite. Try again!      a = myaddition(3.0,5.0);    Not quite. Try again!    "
 },
 {
   "id": "functions-practice",
@@ -1736,6 +1736,15 @@ var ptx_lunr_docs = [
   "number": "12.4",
   "title": "Recursion",
   "body": " Recursion  functions recursion It is possible for a function to call itself! While this might sound like a strange idea, the concept of a function calling itself can make for some really cool features. We call this recursion . Let's take a look at an example. Please pretend to be the computer as you study the code in the below window.  What does the function factorial() do? Try to answer this question 'by hand' first, by going through the code in your head for multiple different user inputs. Once you think you have an idea, hit the Run button to see what the computer does. Is this what you thought would happen? Why or why not?   "
+},
+{
+  "id": "p-924",
+  "level": "2",
+  "url": "functions-recursion.html#p-924",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "recursion "
 },
 {
   "id": "function-recursion-practice",
@@ -1882,6 +1891,15 @@ var ptx_lunr_docs = [
   "body": " Compound Assignment Operators  loops operators compound assignment ( i=i+1 )  In programming we often update the values of variables using statements such as:  i = i + 1;  fac = fac * i;  num = num - 1;  These common coding tasks, where a certain operation (i.e. addition, subtraction, etc.) is being done to one variable itself (so the variable appears on both sides of the assignment operation), can be written in a shorthand using compound assignment operators .  In the first example above, we want to increment i by one, meaning we take the old value of i , add one to it, and store the new value back in i . However, we can achieve the same result using a compound assignment operator!  In the following video, we'll learn about this shorthand notation for such variable updates.    Video Description    Shorthand notation for increments and decrements  i.e. += , -= , *= , \/= , %=  NEW SYNTAX: i+=1 will increase i by 1 (shorthand for i = i + 1)       Please complete the following program by creating a loop that adds up the numbers from n to 2n (have the user enter the number n). Save the result of this addition in the variable sum (which has already been declared) and print it out. Be sure to declare any other additional variables you might need for your loop.   When your program performs correctly you'll be given a keyword to enter in Canvas.    "
 },
 {
+  "id": "p-977",
+  "level": "2",
+  "url": "loops-compound.html#p-977",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "compound assignment operators "
+},
+{
   "id": "quiz-loops-5",
   "level": "2",
   "url": "loops-compound.html#quiz-loops-5",
@@ -1897,7 +1915,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "13.5",
   "title": "Increment \/ Decrement Operators",
-  "body": " Increment \/ Decrement Operators  loops operators shorthand  Certain incremental and decrement statements, such as the following, are so commonly used in C, especially when working with loops, that there is even a shorthand for the shorthand!  i += 1;  i -= 1;  Because of their ubiquitousness, there is yet another shorthand notation just for these operations of adding one to or subtracting one from a variable!    Do you remember what the following is shorthand notation for:  i += 1;      i = i + 1;    Remember: i += 1; is a compound assignment operation that we just learned about in the previous section!    In the following video, we'll take a look at the shorthand notation that shortens the already short compound assignment operators += and += :    Video Description    Shorthand notation for incrementing and decrementing the same variable  i.e. i++; , ++i  i.e. i--; , --i  Pre- and post-fix notation: the location of ++ or -- either before or after the variable to be modified determines the timing of the update relative to other instructions that are part of the same statement.  NEW SYNTAX: i++ , for example, is equivalent to i = i + 1       What does the following code print to the screen?  int i = 5; i++; printf(\"%d \", i); printf(\"%d \", i++); printf(\"%d \", i--); printf(\"%d \", --i);   6 7 6 5  6 6 7 5  6 7 6 6  5 5 4 4  5 6 5 4   Enter your choice (a\/b\/c\/d\/e):    "
+  "body": " Increment \/ Decrement Operators  loops operators shorthand  Certain incremental and decrement statements, such as the following, are so commonly used in C, especially when working with loops, that there is even a shorthand for the shorthand!  i += 1;  i -= 1;  Because of their ubiquitousness, there is yet another shorthand notation just for these operations of adding one to or subtracting one from a variable!    Do you remember what the following is shorthand notation for:  i += 1;      i = i + 1;    Remember: i += 1; is a compound assignment operation that we just learned about in the previous section!    In the following video, we'll take a look at the shorthand notation that shortens the already short compound assignment operators += and += :    Video Description    Shorthand notation for incrementing and decrementing the same variable  i.e. i++; , ++i  i.e. i--; , --i  Pre- and post-fix notation: the location of ++ or -- either before or after the variable to be modified determines the timing of the update relative to other instructions that are part of the same statement.  NEW SYNTAX: i++ , for example, is equivalent to i = i + 1       What does the following code print to the screen?  int i = 5; i++; printf(\"%d \", i); printf(\"%d \", i++); printf(\"%d \", i--); printf(\"%d \", --i);   )  6 6 7 5    Correct      6 7 6 5    Not quite. Try again!      6 7 6 6    Not quite. Try again!      5 5 4 4    Not quite. Try again!      5 6 5 4    Not quite. Try again!      "
 },
 {
   "id": "investigation-18",
@@ -1915,7 +1933,7 @@ var ptx_lunr_docs = [
   "type": "Reading Question",
   "number": "13.5.1",
   "title": "",
-  "body": " What does the following code print to the screen?  int i = 5; i++; printf(\"%d \", i); printf(\"%d \", i++); printf(\"%d \", i--); printf(\"%d \", --i);   6 7 6 5  6 6 7 5  6 7 6 6  5 5 4 4  5 6 5 4   Enter your choice (a\/b\/c\/d\/e):  "
+  "body": " What does the following code print to the screen?  int i = 5; i++; printf(\"%d \", i); printf(\"%d \", i++); printf(\"%d \", i--); printf(\"%d \", --i);   )  6 6 7 5    Correct      6 7 6 5    Not quite. Try again!      6 7 6 6    Not quite. Try again!      5 5 4 4    Not quite. Try again!      5 6 5 4    Not quite. Try again!    "
 },
 {
   "id": "loops-operators-practice",
@@ -3880,18 +3898,18 @@ var ptx_lunr_docs = [
   "body": " Intro to Structures  Up to this point we have been using the standard data types provided by C:  int, float, double, char, void  C also provides the capability to define your own data types. In particular, we'll be learning about structures .  structures A structure is simply a collection of items of various data types into one single object.  Note that arrays on the other hand have to stick to one data type. Suppose we wanted to store some student data, for example, for each student:  char firstName[50]; char lastName[50]; int birthYear; double aveGrade;  We could simply create four separate arrays: one that holds the first names, one for last names, etc. Structures make this much easier, however. We can store, in one variable, all of the data for one specific student. We can then simply create one array of students to hold all of the data we are interested in.  In the code window below you can see how to define such a struct student data type and how to subsequently use it in your code to declare variables me and you of this data type. You can also see how to initialize such a structure at declaration time and how to access the so-called members of the structure (so firstName , lastName , birthYear , aveGrade ) in your code.   "
 },
 {
-  "id": "p-1805",
+  "id": "p-1882",
   "level": "2",
-  "url": "structures-intro.html#p-1805",
+  "url": "structures-intro.html#p-1882",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "structure "
 },
 {
-  "id": "p-1808",
+  "id": "p-1885",
   "level": "2",
-  "url": "structures-intro.html#p-1808",
+  "url": "structures-intro.html#p-1885",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -4051,18 +4069,18 @@ var ptx_lunr_docs = [
   "body": " Structures and Pointers  When dealing with a pointer to a structure it can get pretty cumbersome to access a member of the structure being pointed to.  Suppose again that we have declared a structure as before:  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; };  Suppose furthermore that we have a pointer:  struct student * studentptr;  which points to a particular student's record. In order to access a member (for example birthYear) of this student's record via the pointer we first need to dereference the pointer (*studentptr) and then access the member via the direct member selection operator  . :  (*studentptr).birthYear  The parentheses around (*studentptr) are important since without them the computer would attempt to execute the member selection operator first, which would make no sense, given that studentptr is not a structure but rather a pointer to a structure.  The indirect member selection operator  -> combines these steps into one:  studentptr->birthYear  and therefore accomplishes the same thing as the above. Watch the video to find out more:    Video Description    structures pointers Instead of using the syntax (*ptr).birthyear to access the member birthyear of the record pointed to by ptr , one could also use the shorthand notation ptr->birthyear  Instead of using the syntax &(*ptr).record to access the address of the member of a structure (in order to use sanf() , for example), one could also use the shorthand notation &ptr->record  Similarly for storing strings, the same notation works as long as the & is removed (remember that a string is an array of characters whose name already stores the address of the zeroth element)       Now, what is wrong with the following piece of code and how would you fix it?  struct student{ char firstName[30]; char lastName[30]; int birthYear; double aveGrade; }; int main(void) { struct student me = {\"Petra\", \"Bonfert-Taylor\", 2001, 3.8}; struct student * studentptr = &me; me->birthYear = 1998; return 0; }   )  The second-to-last line of code should be (&me)->birthYear = 1998;    Correct      The second-to-last line of code should be (*me)->birthYear = 1998;    Not quite. Try again!      The second-to-last line of code should be (me)->birthYear = 1998;    Not quite. Try again!      There is nothing wrong with this code.    Not quite. Try again!       Time for some review of multidimensional arrays (this is called interleaved learning - a method of learning that helps you retain better what you have learned!)  Suppose you have written a function that initializes a two-dimensional array as follows:  void initialize_array(int array[][NCOLS]) { int i,j; for (i=0; i<NROWS; i++) for (j=0; j<NCOLS; j++) array[i][j] = i; }  Assume that you also have  #define NROWS 20 #define NCOLS 30  as part of your code.  In your main program you have declared an array matrix as follows:  int matrix[NROWS][NCOLS];  What is the correct function call of the function initialize_array() from within your main function?   )  initialize_array(matrix);    Correct      initialize_array(matrix[NROWS][]);    Not quite. Try again!      initialize_array(matrix[][NCOLS]);    Not quite. Try again!      initialize_array(matrix[NROWS][NCOLS]);    Not quite. Try again!      initialize_array(&matrix);    Not quite. Try again!      Please complete the following program so that the function maxTemp() finds the maximum value stored in the array passed to it. Be sure to enter your prototype at the top of the program and don't forget to insert the correct function call into the main function. Store the value returned by the function maxTemp() in the variable \"maximum\" so that it gets printed out properly in the following line.   When your program performs correctly you'll be given a keyword to enter in Canvas.  If your code appears to perform correctly but you are not given a keyword, please check for any extra spaces or line breaks in your output and remove them.    Which of the following properly defines a structure:   )  struct point { int x; int y; }    Correct      struct point { int x; int y; };    Not quite. Try again!      struct point { int x; int y; }    Not quite. Try again!      struct point int x; int y;    Not quite. Try again!      Which of the following properly declares a variable z (i.e. an instance) of structure point?   )  struct point z;    Correct      struct z point;    Not quite. Try again!      struct point;    Not quite. Try again!      point z;    Not quite. Try again!      Which of the following properly declares a new type “point_t”?   )   typedef struct { int x; int y; } point_t;     Correct       typedef struct point { int x; int y; } point_t;     Not quite. Try again!       typedef struct point { int x; int y; };     Not quite. Try again!      Suppose you have declared a new type “student_t” as follows:  typedef struct { char name[30]; long id; int class; } student_t;  What is the correct way to declare and initialize a variable me of type student_t ?   )  student_t me = {“Petra”, 123456L, 1994};    Correct      me = student_t{“Petra”, 123456L, 1994};    Not quite. Try again!      student_t = {“Petra”, 123456L, 1994} me;    Not quite. Try again!      student_t me; me = {“Petra”, 123456L, 1994};    Not quite. Try again!      As in the previous problem, you have defined a structure to store some student information as follows:  typedef struct { char name[30]; long id; int class; } student_t;  In your main program, you have furthermore declared a variable \"me\" of type student_t and initialized it, for example as follows:  student_t me = {\"Petra\", 123456L, 1994};  You'd now like to print the student record to the screen (i.e. print what is stored in the variable me ). How would you do this?  Feel free to use the following window to try things out. I have already given you a bit of code to make things easier.     Let's continue developing the previous problem. This time we'll practice how to change entries in a structure. Complete the following C program so that the user can enter a new student name, id and class year to be stored in the variable me of type student_t . All you need to do is complete the scanf() and printf() lines.   When your program performs correctly you'll be given a keyword to enter in Canvas.  If your code appears to perform correctly but you are not given a keyword, please check for any extra spaces or line breaks in your output and remove them.    "
 },
 {
-  "id": "p-1870",
+  "id": "p-1947",
   "level": "2",
-  "url": "structures-pointers.html#p-1870",
+  "url": "structures-pointers.html#p-1947",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "direct member selection operator "
 },
 {
-  "id": "p-1872",
+  "id": "p-1949",
   "level": "2",
-  "url": "structures-pointers.html#p-1872",
+  "url": "structures-pointers.html#p-1949",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -4303,9 +4321,9 @@ var ptx_lunr_docs = [
   "body": " Intro to Linked Lists  So far we have used arrays to store multiple items of the same data type. For example, we could use an array of characters to store the characters 'E', 'N', 'G', 'S', '2', '0' as depicted in the illustration below.   Note that this is simply an illustration for the purpose of creating a conceptual understanding. Above the memory cells are the addresses of the memory locations - these are fictitious of course. In reality, memory addresses look a bit more complicated, for example something like 0x7ffcce3fe0a0 (which is just hexadecimal for a pretty large number).  When the elements of our array are stored right next to each other (as they are in the case of an array) then all the computer needs to find all of these elements is the address of the first element (and its datatype). With that information and the knowledge of how much room each element of this datatype takes up, the computer can calculate the address of subsequent elements and thereby access all of them (while it's the programmers job to keep track of the length of the array).  Suppose now that for some reason the elements of the array were not stored right next to each other in memory but rather scattered about as in the following illustration:   Without knowing all of the locations of the stored elements it would be impossible to know what (and where) the elements of the list are. This is where the idea of a linked list comes in. In a linked list it is the job of each element to keep track of the location of the next element in the list. Thus, if you know where the first element is located you can again traverse the entire list by asking the first element for the address of the second, the second element for the address of the third, and so forth. This idea is depicted in the next image:   It is our job to keep track of the start, that is, the address of the first element of the list (in the image it is stored in a variable named start ). Each element knows where the next element is stored, and the last element knows that it is last. This is all the information needed to access the entire list. We'll therefore group together whatever it is we'd like to store along with an additional address field which is there to store the location of the next element. We'll typically use a structure for this purpose as is depicted in the following image:   The following video presents a first example of a linked list. Just as we did previously in class with arrays, we'll be storing coordinates of points in this example, but unlike the arrays we used in class for this purpose, this time around each individual point will be stored at some place assigned to it during run-time, and each point will keep track of the location of the subsequent point in order to maintain the ordering.  linked lists In order to do so, we need to store the address of a point (the next point in the list) as part of (so as a member of) the structure that holds the coordinates of the point. We'll therefore work with the following structure in this example (note that we are switching coordinates to integers just to make the memory view nicer):  struct point{ int x; int y; struct point * next; };    Video Description    The structure that holds the data also includes a pointer to the next element  A list must have a first element (we call it \"start\" here) and you need to remember where this is stored  Once you can access the initial element of the list you can traverse the entire list by going from the first element to the second using the pointer stored in the first element, then from the second to the third using the pointer stored in the second element, all the way to the list's final element (indicated by a NULL pointer in place of the pointer to the next element).  i.e. struct point * start, * ptr; are pointers to the start of the list and the next address in the list       Let's start with a quick review question.  Suppose the following declarations have been made:  typedef struct { int x; int y; } point_t;  and  point_t octagon[8];  How would you assign the value 20 to the y-coordinate of the last point in the array octagon ?   )  octagon[7].y = 20;    Correct      octagon[20].y = 7;    Not quite. Try again!      octagon[20]->y = 7;    Not quite. Try again!      octagon[7]->y = 20;    Not quite. Try again!      Suppose that we have created a linked list of three student records using the structure definition below:  struct student { char name[50]; int birthYear; float gpa; struct student *next; };  Suppose also that the pointer start of type struct student * points to the first student in the list.  How would you print the name and GPA of the first student in the list?   )  printf(\"%s has a gpa of %f.\", start->name, start->gpa);    Correct      printf(\"%s has a gpa of %f.\", *start->name, *start->gpa);    Not quite. Try again!      printf(\"%s has a gpa of %f.\", *start.name, *start.gpa);    Not quite. Try again!      printf(\"%s has a gpa of %f.\", start.name, start.gpa);    Not quite. Try again!      "
 },
 {
-  "id": "p-1983",
+  "id": "p-2060",
   "level": "2",
-  "url": "linkedlists-intro.html#p-1983",
+  "url": "linkedlists-intro.html#p-2060",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -4564,9 +4582,9 @@ var ptx_lunr_docs = [
   "body": " Sort Linked Lists  linked lists sort In this final video on linked lists we'll explore how to create a sorted copy of a linked list, using the insertion sort algorithm.    Video Description    Sort a linked list by successively inserting digits into their new, sorted, locations using functions and while -loops  Check out either the Codecast or printed code for the full and lengthy example!       We'll learn about libraries next! You have already seen some libraries, amongst them the mathematics library math .  Please explore some of the functions in the standard C math library (you'll need to search the internet). In particular, what is the difference between the two functions atan() and atan2() ?   )  Both find the inverse tangent, but atan2() is able to place it into the correct quadrant.    Correct      Both find the inverse tangent, but atan2() squares the result.    Not quite. Try again!      Both find the inverse tangent, but one is in radians, the other in degrees.    Not quite. Try again!      Both find the inverse tangent, but atan2() first multiplies by 2.    Not quite. Try again!      "
 },
 {
-  "id": "p-2102",
+  "id": "p-2179",
   "level": "2",
-  "url": "linkedlists-sort.html#p-2102",
+  "url": "linkedlists-sort.html#p-2179",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
