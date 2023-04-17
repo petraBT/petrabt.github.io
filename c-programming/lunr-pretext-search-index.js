@@ -511,7 +511,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.8",
   "title": "User Input Using <code class=\"code-inline tex2jax_ignore\">scanf()<\/code>",
-  "body": " User Input Using scanf()  scanf() It is possible to have the user (the person sitting in front of the computer screen) modify the value of a variable while the program is running! To do so the user needs to enter a value (this is typically done by typing on the keyboard) and your program needs to be ready to accept such an input value and store it in a variable. The C-command to accomplish this is scanf() .  The following code asks the user for their age, has them enter it and then prints it out. You'll notice the strange ampersand (&) character in front of the variable in which we are storing the user input. We'll explain this a bit later - for now: don't worry.   Try it out by hitting the Run button! When prompted, enter your age.  You can read multiple entries with one scanf() statement if you wish (or you can simply use multiple scanf() statements in a row):   Let's get back to our multiplication table. Rather than printing the x7 table, in this next example, we'll have the user enter which multiplication table to print:    Adding User Input   Please write a program that adds integers, entered by the user.  First, ask the user to enter the number of integers they wish to add. Next, use a for -loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.  When the loop terminates, print the result to the screen.  Here is a sample session, with simulated user input in bold:   How many numbers do you wish to add?  5  Please enter number 1:  7  Please enter number 2:  13  Please enter number 3:  4  Please enter number 4:  -3  Please enter number 5:  9  The numbers you entered add up to 30.    When you are done, please copy the code you  added  into the box below:     "
+  "body": " User Input Using scanf()  scanf() It is possible to have the user (the person sitting in front of the computer screen) modify the value of a variable while the program is running! To do so the user needs to enter a value (this is typically done by typing on the keyboard) and your program needs to be ready to accept such an input value and store it in a variable. The C-command to accomplish this is scanf() .  The following code asks the user for their age, has them enter it and then prints it out. You'll notice the strange ampersand (&) character in front of the variable in which we are storing the user input. We'll explain this a bit later - for now: don't worry.   Try it out by hitting the Run button! When prompted, enter your age.  You can read multiple entries with one scanf() statement if you wish (or you can simply use multiple scanf() statements in a row):   Let's get back to our multiplication table. Rather than printing the x7 table, in this next example, we'll have the user enter which multiplication table to print:    Adding User Input   Please write a program that adds integers, entered by the user.  First, ask the user to enter the number of integers they wish to add. Next, use a for -loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.  When the loop terminates, print the result to the screen.  Here is a sample session, with simulated user input in bold:   How many numbers do you wish to add?  5  Please enter number 1:  7  Please enter number 2:  13  Please enter number 3:  4  Please enter number 4:  -3  Please enter number 5:  9  The numbers you entered add up to 30.    When you are done, please copy the code you added into the box below:     "
 },
 {
   "id": "activity-4-8-1-Adding_User_Input",
@@ -520,7 +520,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "4.7",
   "title": "Adding User Input.",
-  "body": " Adding User Input   Please write a program that adds integers, entered by the user.  First, ask the user to enter the number of integers they wish to add. Next, use a for -loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.  When the loop terminates, print the result to the screen.  Here is a sample session, with simulated user input in bold:   How many numbers do you wish to add?  5  Please enter number 1:  7  Please enter number 2:  13  Please enter number 3:  4  Please enter number 4:  -3  Please enter number 5:  9  The numbers you entered add up to 30.    When you are done, please copy the code you  added  into the box below:    "
+  "body": " Adding User Input   Please write a program that adds integers, entered by the user.  First, ask the user to enter the number of integers they wish to add. Next, use a for -loop that runs the desired number of times, and in which you continually ask the user to enter another number that then gets added to the sum.  When the loop terminates, print the result to the screen.  Here is a sample session, with simulated user input in bold:   How many numbers do you wish to add?  5  Please enter number 1:  7  Please enter number 2:  13  Please enter number 3:  4  Please enter number 4:  -3  Please enter number 5:  9  The numbers you entered add up to 30.    When you are done, please copy the code you added into the box below:    "
 },
 {
   "id": "variables-char-datatype",
@@ -910,6 +910,15 @@ var ptx_lunr_docs = [
   "body": " Converting Integers to Floats  casting int-to-float Casting an integer to a float effectively changes the data type of the stored value from an int to a foat . Whereas the integer 5 is represented in the computer's memory using binary 2's complement for example, when you write (float)5 this resulting number is stored as mantissa and exponent in the way we just learned.   What do you think happens the the value of the number when you cast an int to a float ? Are digits beyond the decimal point added on?   Please paste your text submission into the box below, then select Run to submit it:      Does the datatype of a variable change when you cast or is it just the number itself that is stored differently inside the computer? For example, if and are variables of type int , where a has the value 12, b has the value 4, what is the data type of the variable a after the operation ((float)a+b)\/3 is performed?     int    Correct!      float    Not quite - try again!      long    Not quite - try again!      floating int    Not quite - try again!     Does the data type of a change in this process?    "
 },
 {
+  "id": "p-608",
+  "level": "2",
+  "url": "floats-int-to-float.html#p-608",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Casting "
+},
+{
   "id": "activity-21",
   "level": "2",
   "url": "floats-int-to-float.html#activity-21",
@@ -935,6 +944,15 @@ var ptx_lunr_docs = [
   "number": "6.3",
   "title": "Converting Floats to Integers",
   "body": " Converting Floats to Integers  casting float-to-int Casting a float to an integer sets the data type for that stored float as an int now, which means that instead of using mantissa and exponent to store the number, the binary 2's complement is used. What happens if the original float had decimal places after the decimal point? Will they get lost? Will rounding occur? Try it out:     When you cast a float to an int , which of the following happens?      Decimals are simply cut off.    Correct!      The float is rounded down.    Not quite - try again!      The float is rounded up.    Not quite - try again!      I can't tell.    Not quite - try again!      Just use the code window above to play around. Don't be afraid! You can't break anything!    "
+},
+{
+  "id": "p-621",
+  "level": "2",
+  "url": "floats-float-to-int.html#p-621",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Casting "
 },
 {
   "id": "activity-6-3-1-Float-to-Int",
@@ -971,6 +989,15 @@ var ptx_lunr_docs = [
   "number": "6.5",
   "title": "Remainders",
   "body": " Remainders  remainder A remainder is the amount that remains after division takes place. The mathematical operation that produces this remainder is called the modulo operation . Note that this is the fractional remainder, not a decimal value, so the result of the modulo operation should always be an integer. For example, the remainder when dividing 29 by 3 is 2 since 3 goes into 29 just 9 times and 29 - 9*3 = 2.  Suppose we want to know the remainder of the division of one integer by another. Can we do this with our current programming knowledge?     What is the remainder of 15\/6?    3    Try it out in the code window above! We can check that the answer is 3, since we can see how many times 6 goes into 15.  15-6=9 9-6=3 6 doesn't go into 3, so 3 is the remainder.    "
+},
+{
+  "id": "p-637",
+  "level": "2",
+  "url": "floats-remainder.html#p-637",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "modulo operation "
 },
 {
   "id": "investigation-8",
