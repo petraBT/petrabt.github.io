@@ -20,23 +20,17 @@
 float num = 3.7;
 </code></pre></div> <div class="para" id="p-1181">You wish to add the new grade (stored in num) to the end of the file. Please select the appropriate commands from the list below and put them into the correct order:</div>
 </div>
-<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="natural" data-noindent="true">myfile = fopen("my_grades.txt", "a");
-
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="natural" data-noindent="true"><code class="code-inline tex2jax_ignore">myfile = fopen("my_grades.txt", "a");</code>
 ---
-fprintf(myfile, "%f", num);
-
+<code class="code-inline tex2jax_ignore">fprintf(myfile, "%f", num);</code>
 ---
-fclose(myfile);
-
+<code class="code-inline tex2jax_ignore">fclose(myfile);</code>
 ---
-fscanf(myfile, "%f", &amp;num);
- #distractor
+<code class="code-inline tex2jax_ignore">fscanf(myfile, "%f", &amp;num);</code> #distractor
 ---
-myfile = fprintf("%f", num);
- #distractor
+<code class="code-inline tex2jax_ignore">myfile = fprintf("%f", num);</code> #distractor
 ---
-myfile = fopen("my_grades.txt", "w");
- #distractor</pre>
+<code class="code-inline tex2jax_ignore">myfile = fopen("my_grades.txt", "w");</code> #distractor</pre>
 </div></div></div></article><span class="incontext"><a href="debug-software.html#quiz-debug-2" class="internal">in-context</a></span>
 </body>
 </html>
