@@ -63,7 +63,7 @@ window.MathJax = {
 <link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/style_oscarlevin.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/colors_blue_green.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_green_blue.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
@@ -1045,9 +1045,6 @@ eBookConfig.enable_chatcodes =  false;
 <li>
 <div class="toc-item"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="solutions-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
-<li><div class="toc-item"><a href="solutions-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
 <li><div class="toc-item"><a href="index-page.html" class="internal"><span class="title">Index</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -1068,18 +1065,7 @@ eBookConfig.enable_chatcodes =  false;
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="investigation project-like" id="investigation-5"><h3 class="heading">
 <span class="type">Investigate</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-422">What is the decimal value of <code class="code-inline tex2jax_ignore">01000001</code>?</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><div class="para" id="p-423">65</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><div class="para logical" id="p-424">
-<div class="para">Remember from the video above that binary is base-2, with the least significant bit as the right-most digit, which has a place value of <span class="process-math">\(2^0\text{.}\)</span> Moving left, the the place values are <span class="process-math">\(2^1\text{,}\)</span> <span class="process-math">\(2^2\text{,}\)</span> <span class="process-math">\(2^3\text{,}\)</span> etc. Only those digits that are “1” contribute their place value to the number, so for this binary number, we interpret it as</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(0 × 2^7) + (1 × 2^6) + (0 × 2^5) + (0 × 2^4) + (0 × 2^3) + (0 × 2^2) + (0 × 2^1) + (1 × 2^0) = 64 + 1 = 65
-\end{equation*}
-</div>
-</div></div></div>
-</div></article><div class="para" id="p-425">Computers "speak" in binary (base-2) only, which includes only 1s and 0s.</div>
+<div class="para" id="p-422">What is the decimal value of <code class="code-inline tex2jax_ignore">01000001</code>?</div></article><div class="para" id="p-425">Computers "speak" in binary (base-2) only, which includes only 1s and 0s.</div>
 <ul class="disc">
 <li id="li-114"><div class="para" id="p-derived-li-114">
 <dfn class="terminology">Bit</dfn>: one <em class="emphasis">b</em>inary dig<em class="emphasis">it</em> (0 or 1)</div></li>
@@ -1147,11 +1133,7 @@ eBookConfig.enable_chatcodes =  false;
 <article class="investigation project-like" id="investigation-6"><h3 class="heading">
 <span class="type">Investigate</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-444">What is the remainder when dividing 50 by 3?</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><div class="para" id="p-445">2</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><div class="para" id="p-446">3x16 = 48, meaning that 3 can go into 50 sixteen times. The remainder, or leftover amount, is then 50-48=2.</div></div></div>
-</div></article><div class="para" id="p-447">How do we convert from one base to another?</div>
+<div class="para" id="p-444">What is the remainder when dividing 50 by 3?</div></article><div class="para" id="p-447">How do we convert from one base to another?</div>
 <div class="para" id="p-448">In particular, how do we find the binary representation (base-2) of a decimal number (base-10)?</div>
 <div class="para" id="p-449">Example: What is <em class="emphasis">135 decimal</em> in binary or <em class="emphasis">base-2</em>?</div>
 <div class="para" id="p-450"><em class="emphasis">Hint: The easiest way to do this is to divide the number by 2 repeatedly and keep track of the remainder.</em></div>

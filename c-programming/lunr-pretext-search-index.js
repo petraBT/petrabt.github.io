@@ -4834,33 +4834,6 @@ var ptx_lunr_docs = [
   "body": " Summary  In this chapter, we learned about the following topics:   Libraries and their components  Library source code  Header and object files  Practice creating our own library for complex numbers   "
 },
 {
-  "id": "solutions-1",
-  "level": "1",
-  "url": "solutions-1.html",
-  "type": "Appendix",
-  "number": "A",
-  "title": "Selected Hints",
-  "body": " Selected Hints  "
-},
-{
-  "id": "solutions-2",
-  "level": "1",
-  "url": "solutions-2.html",
-  "type": "Appendix",
-  "number": "B",
-  "title": "Selected Solutions",
-  "body": " Selected Solutions  "
-},
-{
-  "id": "appendix-1",
-  "level": "1",
-  "url": "appendix-1.html",
-  "type": "Appendix",
-  "number": "C",
-  "title": "List of Symbols",
-  "body": " List of Symbols   "
-},
-{
   "id": "index-page",
   "level": "1",
   "url": "index-page.html",
