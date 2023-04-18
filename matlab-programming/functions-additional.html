@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-04T09:38:01+02:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -19,226 +16,514 @@
 <meta property="book:author" content="Petra Bonfert-Taylor">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
   },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_oscarlevin.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_blue_green.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_green_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '6.6.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runtime.66b619f51b746382.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.6.2/runestone.ecc6dff5cad8b815.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/637.0fa6cababf056764.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.6.2/runestone.3eb60bc006ae9a54.css">
 </head>
-<body id="bonfert-taylor-ICP" class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<body id="bonfert-taylor-ICP" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/MatlabProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="engs20-book-matlab.html"><span class="title">Introduction to MATLAB:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
+<p class="byline">Petra Bonfert-Taylor</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-page.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="functions-example.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="functions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="functions-practice1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="https://pretextbook.org" target="_blank"><img src="external/MatlabProgrammingLogo.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="engs20-book-matlab.html"><span class="title">Introduction to MATLAB:</span> <span class="subtitle">As seen in ENGS 20</span></a></h1>
-<p class="byline">Petra Bonfert-Taylor</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-page.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="functions-example.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="functions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="functions-practice1.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="functions-example.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="functions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="functions-practice1.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
-<li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Introduction</a></li>
-<li><a href="meta_frontmatter-toc.html" data-scroll="meta_frontmatter-toc" class="internal">Table of Contents</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="meta_frontmatter-preface.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li><div class="toc-item"><a href="meta_frontmatter-toc.html" class="internal"><span class="title">Table of Contents</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="part-firststeps.html" data-scroll="part-firststeps" class="internal"><span class="codenumber">I</span> <span class="title">First Steps in MATLAB®</span></a></li>
-<li class="link">
-<a href="gettingstarted.html" data-scroll="gettingstarted" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a><ul>
-<li><a href="gettingstarted-complanguages.html" data-scroll="gettingstarted-complanguages" class="internal">Computer Languages</a></li>
-<li><a href="gettingstarted-what.html" data-scroll="gettingstarted-what" class="internal">What is MATLAB</a></li>
-<li><a href="gettingstarted-windows.html" data-scroll="gettingstarted-windows" class="internal">The MATLAB Windows</a></li>
-<li><a href="gettingstarted-arithmetic.html" data-scroll="gettingstarted-arithmetic" class="internal">Arithmetic Operators with Scalars</a></li>
-<li><a href="gettingstarted-displayformats.html" data-scroll="gettingstarted-displayformats" class="internal">Display Formats</a></li>
-<li><a href="gettingstarted-functions.html" data-scroll="gettingstarted-functions" class="internal">Elementary Built-In Math Functions</a></li>
-<li><a href="gettingstarted-scalarvars.html" data-scroll="gettingstarted-scalarvars" class="internal">Scalar Variables</a></li>
-<li><a href="gettingstarted-practice.html" data-scroll="gettingstarted-practice" class="internal">Practice Your Arithmetic</a></li>
-<li><a href="gettingstarted-practice-solution.html" data-scroll="gettingstarted-practice-solution" class="internal">Worked Problem</a></li>
+<li>
+<div class="toc-item"><a href="part-firststeps.html" class="internal"><span class="codenumber">I</span> <span class="title">First Steps in MATLAB®</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="gettingstarted.html" class="internal"><span class="codenumber">1</span> <span class="title">Getting Started</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="gettingstarted-complanguages.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Computer Languages</span></a></div></li>
+<li><div class="toc-item"><a href="gettingstarted-what.html" class="internal"><span class="codenumber">1.2</span> <span class="title">What is MATLAB</span></a></div></li>
+<li>
+<div class="toc-item"><a href="gettingstarted-windows.html" class="internal"><span class="codenumber">1.3</span> <span class="title">The MATLAB Windows</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="gettingstarted-windows.html#subsection-1" class="internal"><span class="codenumber">1.3.1</span> <span class="title">MATLAB Command Window</span></a></div></li>
+<li><div class="toc-item"><a href="gettingstarted-windows.html#subsection-2" class="internal"><span class="codenumber">1.3.2</span> <span class="title">More Windows</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="part-fundamentals.html" data-scroll="part-fundamentals" class="internal"><span class="codenumber">II</span> <span class="title">Fundamentals</span></a></li>
-<li class="link">
-<a href="array.html" data-scroll="array" class="internal"><span class="codenumber">2</span> <span class="title">Arrays</span></a><ul>
-<li><a href="array-vector.html" data-scroll="array-vector" class="internal">Introduction to Vectors</a></li>
-<li><a href="array-matrix.html" data-scroll="array-matrix" class="internal">Introduction to Matrices</a></li>
-<li><a href="array-transpose.html" data-scroll="array-transpose" class="internal">Transposing Arrays</a></li>
-<li><a href="array-practice.html" data-scroll="array-practice" class="internal">Practice Your Arrays</a></li>
-<li><a href="array-address.html" data-scroll="array-address" class="internal">Addressing Arrays</a></li>
-<li><a href="array-resize.html" data-scroll="array-resize" class="internal">Adding Elements to Arrays</a></li>
-<li><a href="array-delete.html" data-scroll="array-delete" class="internal">Deleting Elements from Arrays</a></li>
-<li><a href="array-function.html" data-scroll="array-function" class="internal">Array Functions</a></li>
-<li><a href="array-practice-more.html" data-scroll="array-practice-more" class="internal">Practice Your Matrices</a></li>
+<li>
+<div class="toc-item"><a href="gettingstarted-arithmetic.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Arithmetic Operators with Scalars</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="gettingstarted-arithmetic.html#subsection-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Scalar Operators</span></a></div></li>
+<li><div class="toc-item"><a href="gettingstarted-arithmetic.html#subsection-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Examples</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="string.html" data-scroll="string" class="internal"><span class="codenumber">3</span> <span class="title">Strings</span></a><ul>
-<li><a href="string-intro.html" data-scroll="string-intro" class="internal">Strings as Arrays of Characters</a></li>
-<li><a href="string-array.html" data-scroll="string-array" class="internal">Arrays of Strings</a></li>
-<li><a href="string-array-of-strings.html" data-scroll="string-array-of-strings" class="internal">Strings as String Arrays</a></li>
+<li><div class="toc-item"><a href="gettingstarted-displayformats.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Display Formats</span></a></div></li>
+<li><div class="toc-item"><a href="gettingstarted-functions.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Elementary Built-In Math Functions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="gettingstarted-scalarvars.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Scalar Variables</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="gettingstarted-scalarvars.html#subsection-5" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Naming Variables</span></a></div></li>
+<li><div class="toc-item"><a href="gettingstarted-scalarvars.html#subsection-6" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Managing Variables</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="math.html" data-scroll="math" class="internal"><span class="codenumber">4</span> <span class="title">Mathematical Operations with Arrays</span></a><ul>
-<li><a href="math-add-sub.html" data-scroll="math-add-sub" class="internal">Addition and Subtraction</a></li>
-<li><a href="math-multiply.html" data-scroll="math-multiply" class="internal">Multiplication</a></li>
-<li><a href="math-scalar.html" data-scroll="math-scalar" class="internal">Scalar Multiplication</a></li>
-<li><a href="math-solve.html" data-scroll="math-solve" class="internal">Matrix Inversion - First Steps</a></li>
-<li><a href="math-identity.html" data-scroll="math-identity" class="internal">Inverse of a Matrix, Identity Matrix</a></li>
-<li><a href="math-det.html" data-scroll="math-det" class="internal">Determinant of a Matrix</a></li>
-<li><a href="math-system.html" data-scroll="math-system" class="internal">Solving System of Equations</a></li>
-<li><a href="math-element.html" data-scroll="math-element" class="internal">Element-by-Element Operators</a></li>
-<li><a href="math-function.html" data-scroll="math-function" class="internal">Built-In Functions</a></li>
-<li><a href="math-practice.html" data-scroll="math-practice" class="internal">Practice Your Functions</a></li>
-<li><a href="math-worked-problem.html" data-scroll="math-worked-problem" class="internal">Practice Solving System of Equations</a></li>
+<li><div class="toc-item"><a href="gettingstarted-practice.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Practice Your Arithmetic</span></a></div></li>
+<li>
+<div class="toc-item"><a href="gettingstarted-practice-solution.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Worked Problem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="gettingstarted-practice-solution.html#subsection-7" class="internal"><span class="codenumber">1.9.1</span> <span class="title">Improving Our Solution</span></a></div></li></ul>
+</li>
+</ul>
+</li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-fundamentals.html" class="internal"><span class="codenumber">II</span> <span class="title">Fundamentals</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="array.html" class="internal"><span class="codenumber">2</span> <span class="title">Arrays</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="array-vector.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Vectors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="array-vector.html#subsection-8" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Creating a Vector</span></a></div></li>
+<li><div class="toc-item"><a href="array-vector.html#subsection-9" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Regularly Spaced Values in Vectors</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="script.html" data-scroll="script" class="internal"><span class="codenumber">5</span> <span class="title">Script Files</span></a><ul>
-<li><a href="script-create.html" data-scroll="script-create" class="internal">Creating Script Files</a></li>
-<li><a href="script-fscanf.html" data-scroll="script-fscanf" class="internal">The <code class="code-inline tex2jax_ignore">fscanf()</code> Command</a></li>
-<li><a href="script-import.html" data-scroll="script-import" class="internal">Import Data</a></li>
-<li><a href="script-input.html" data-scroll="script-input" class="internal">Input to Script File</a></li>
-<li><a href="script-output.html" data-scroll="script-output" class="internal">Output Commands</a></li>
-<li><a href="script-format.html" data-scroll="script-format" class="internal">Formatted Output</a></li>
-<li><a href="script-directory.html" data-scroll="script-directory" class="internal">Current Directory</a></li>
-<li><a href="script-search.html" data-scroll="script-search" class="internal">Search Path</a></li>
+<li>
+<div class="toc-item"><a href="array-matrix.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Introduction to Matrices</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="array-matrix.html#subsection-10" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Creating Matrices</span></a></div></li>
+<li><div class="toc-item"><a href="array-matrix.html#subsection-11" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Fancy Ways of Creating Arrays</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="plots.html" data-scroll="plots" class="internal"><span class="codenumber">6</span> <span class="title">Two-Dimensional Plots</span></a><ul>
-<li><a href="plots-intro.html" data-scroll="plots-intro" class="internal">Introduction to 2D Plots</a></li>
-<li><a href="plots-create.html" data-scroll="plots-create" class="internal">Creating Plots</a></li>
-<li><a href="plots-specifiers.html" data-scroll="plots-specifiers" class="internal">Line Specifiers</a></li>
-<li><a href="plots-properties.html" data-scroll="plots-properties" class="internal">Plot Properties</a></li>
-<li><a href="plots-functions.html" data-scroll="plots-functions" class="internal">Plotting Functions</a></li>
-<li><a href="plots-multiple.html" data-scroll="plots-multiple" class="internal">Plotting Multiple Curves</a></li>
-<li><a href="plots-style.html" data-scroll="plots-style" class="internal">Plot Formatting and Style</a></li>
-<li><a href="plots-practice.html" data-scroll="plots-practice" class="internal">Practice Your Plots</a></li>
-<li><a href="plots-subplot.html" data-scroll="plots-subplot" class="internal">Creating Subplots</a></li>
+<li><div class="toc-item"><a href="array-transpose.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Transposing Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="array-practice.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Practice Your Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="array-address.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Addressing Arrays</span></a></div></li>
+<li>
+<div class="toc-item"><a href="array-resize.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Adding Elements to Arrays</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="array-resize.html#subsection-12" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Adding to Vectors</span></a></div></li>
+<li><div class="toc-item"><a href="array-resize.html#subsection-13" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Adding to Matrices</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="part-programming.html" data-scroll="part-programming" class="internal"><span class="codenumber">III</span> <span class="title">Programming in MATLAB®</span></a></li>
-<li class="link">
-<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">7</span> <span class="title">Logic</span></a><ul>
-<li><a href="logic-operators.html" data-scroll="logic-operators" class="internal">Relational and Equality Operators</a></li>
-<li><a href="logic-functions.html" data-scroll="logic-functions" class="internal">Built-In Logical Operator Functions</a></li>
-<li><a href="logic-if.html" data-scroll="logic-if" class="internal">The <code class="code-inline tex2jax_ignore">if-end</code> command</a></li>
-<li><a href="logic-if-else.html" data-scroll="logic-if-else" class="internal">The <code class="code-inline tex2jax_ignore">if-else-end</code> command</a></li>
-<li><a href="logic-if-elseif.html" data-scroll="logic-if-elseif" class="internal">The <code class="code-inline tex2jax_ignore">if-elseif-else-end</code> command</a></li>
-<li><a href="logic-switch.html" data-scroll="logic-switch" class="internal">The <code class="code-inline tex2jax_ignore">switch-case</code> command</a></li>
-<li><a href="logic-for.html" data-scroll="logic-for" class="internal">The <code class="code-inline tex2jax_ignore">for</code> loop</a></li>
-<li><a href="logic-while.html" data-scroll="logic-while" class="internal">The <code class="code-inline tex2jax_ignore">while</code> loop</a></li>
-<li><a href="logic-break.html" data-scroll="logic-break" class="internal">The <code class="code-inline tex2jax_ignore">break</code> statement</a></li>
+<li><div class="toc-item"><a href="array-delete.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Deleting Elements from Arrays</span></a></div></li>
+<li><div class="toc-item"><a href="array-function.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Array Functions</span></a></div></li>
+<li><div class="toc-item"><a href="array-practice-more.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Practice Your Matrices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="functions.html" data-scroll="functions" class="internal"><span class="codenumber">8</span> <span class="title">Functions and Function Files</span></a><ul>
-<li><a href="functions-intro.html" data-scroll="functions-intro" class="internal">Introduction to Functions</a></li>
-<li><a href="functions-files.html" data-scroll="functions-files" class="internal">Introduction to Function Files</a></li>
-<li><a href="functions-calling.html" data-scroll="functions-calling" class="internal">Calling a Function</a></li>
-<li><a href="functions-globals.html" data-scroll="functions-globals" class="internal">Global Variables</a></li>
-<li><a href="functions-script.html" data-scroll="functions-script" class="internal">Script Files Versus Function Files</a></li>
-<li><a href="functions-anonymous.html" data-scroll="functions-anonymous" class="internal">Anonymous Functions with Single Variable</a></li>
-<li><a href="functions-anonymous-multiple.html" data-scroll="functions-anonymous-multiple" class="internal">Anonymous Functions with Multiple Arguments</a></li>
-<li><a href="functions-example.html" data-scroll="functions-example" class="internal">Function Example: Projectile Motion</a></li>
-<li><a href="functions-additional.html" data-scroll="functions-additional" class="active">External Language Interface</a></li>
-<li><a href="functions-practice1.html" data-scroll="functions-practice1" class="internal">Practice Your Functions</a></li>
-<li><a href="functions-practice2.html" data-scroll="functions-practice2" class="internal">Practice Your Programming</a></li>
+<li>
+<div class="toc-item"><a href="string.html" class="internal"><span class="codenumber">3</span> <span class="title">Strings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="string-intro.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Strings as Arrays of Characters</span></a></div></li>
+<li><div class="toc-item"><a href="string-array.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Arrays of Strings</span></a></div></li>
+<li><div class="toc-item"><a href="string-array-of-strings.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Strings as String Arrays</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="part-data.html" data-scroll="part-data" class="internal"><span class="codenumber">IV</span> <span class="title">Polynomials, Curve Fitting, and Interpolation</span></a></li>
-<li class="link">
-<a href="polynomials.html" data-scroll="polynomials" class="internal"><span class="codenumber">9</span> <span class="title">Polynomials</span></a><ul>
-<li><a href="polynomials-intro.html" data-scroll="polynomials-intro" class="internal">Introduction to Polynomials</a></li>
-<li><a href="polynomials-evaluate.html" data-scroll="polynomials-evaluate" class="internal">Evaluating Polynomials</a></li>
-<li><a href="polynomials-plot.html" data-scroll="polynomials-plot" class="internal">Plotting Polynomials</a></li>
-<li><a href="polynomials-roots.html" data-scroll="polynomials-roots" class="internal">Root Finding</a></li>
-<li><a href="polynomials-add.html" data-scroll="polynomials-add" class="internal">Adding Polynomials</a></li>
-<li><a href="polynomials-multiply.html" data-scroll="polynomials-multiply" class="internal">Multiplying Polynomials</a></li>
-<li><a href="polynomials-divide.html" data-scroll="polynomials-divide" class="internal">Dividing Polynomials</a></li>
-<li><a href="polynomials-derivatives.html" data-scroll="polynomials-derivatives" class="internal">Derivatives</a></li>
+<li>
+<div class="toc-item"><a href="math.html" class="internal"><span class="codenumber">4</span> <span class="title">Mathematical Operations with Arrays</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="math-add-sub.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Addition and Subtraction</span></a></div></li>
+<li><div class="toc-item"><a href="math-multiply.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="math-scalar.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Scalar Multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="math-solve.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Matrix Inversion - First Steps</span></a></div></li>
+<li><div class="toc-item"><a href="math-identity.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Inverse of a Matrix, Identity Matrix</span></a></div></li>
+<li><div class="toc-item"><a href="math-det.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Determinant of a Matrix</span></a></div></li>
+<li><div class="toc-item"><a href="math-system.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Solving System of Equations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="math-element.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Element-by-Element Operators</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="math-element.html#subsection-14" class="internal"><span class="codenumber">4.8.1</span> <span class="title">Element-by-Element Operators</span></a></div></li>
+<li><div class="toc-item"><a href="math-element.html#subsection-15" class="internal"><span class="codenumber">4.8.2</span> <span class="title">Dot Operator Example</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="interpolation.html" data-scroll="interpolation" class="internal"><span class="codenumber">10</span> <span class="title">Interpolation</span></a><ul>
-<li><a href="interpolation-intro.html" data-scroll="interpolation-intro" class="internal">Introduction to Interpolation</a></li>
-<li><a href="interpolation-fit.html" data-scroll="interpolation-fit" class="internal">Curve Fitting</a></li>
-<li><a href="interpolation-examples.html" data-scroll="interpolation-examples" class="internal">Curve Fitting Examples</a></li>
-<li><a href="interpolation-practice.html" data-scroll="interpolation-practice" class="internal">Practice Your Curve Fitting</a></li>
+<li>
+<div class="toc-item"><a href="math-function.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Built-In Functions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="math-function.html#subsection-16" class="internal"><span class="codenumber">4.9.1</span> <span class="title">Vector Functions</span></a></div></li>
+<li><div class="toc-item"><a href="math-function.html#subsection-17" class="internal"><span class="codenumber">4.9.2</span> <span class="title">Matrix Functions</span></a></div></li>
+<li><div class="toc-item"><a href="math-function.html#subsection-18" class="internal"><span class="codenumber">4.9.3</span> <span class="title">Random Number Functions</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="part-threeD.html" data-scroll="part-threeD" class="internal"><span class="codenumber">V</span> <span class="title">Three Dimensional Plotting</span></a></li>
-<li class="link">
-<a href="plots3d.html" data-scroll="plots3d" class="internal"><span class="codenumber">11</span> <span class="title">Three-Dimensional Plots</span></a><ul>
-<li><a href="plots3d-introduction.html" data-scroll="plots3d-introduction" class="internal">Introduction to 3D Plots</a></li>
-<li><a href="plots3d-line.html" data-scroll="plots3d-line" class="internal">Simple Line Plots</a></li>
-<li><a href="plots3d-view.html" data-scroll="plots3d-view" class="internal">Viewing Plots</a></li>
-<li><a href="plots3d-surface.html" data-scroll="plots3d-surface" class="internal">Plotting Surfaces</a></li>
+<li><div class="toc-item"><a href="math-practice.html" class="internal"><span class="codenumber">4.10</span> <span class="title">Practice Your Functions</span></a></div></li>
+<li><div class="toc-item"><a href="math-worked-problem.html" class="internal"><span class="codenumber">4.11</span> <span class="title">Practice Solving System of Equations</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
-<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
-<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
-<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
-<li class="link"><a href="index-page.html" data-scroll="index-page" class="internal"><span class="title">Index</span></a></li>
-<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf-iN7M5DVZHmne8wnKOm_3QAKKDVopIFLtJbnKX5Sq1-gF0w/viewform?usp=sf_link" target="_blank">Report Errors</a><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="functions-additional"><h2 class="heading hide-type">
+<li>
+<div class="toc-item"><a href="script.html" class="internal"><span class="codenumber">5</span> <span class="title">Script Files</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="script-create.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Creating Script Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="script-create.html#subsection-19" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Editing Script Files</span></a></div></li>
+<li><div class="toc-item"><a href="script-create.html#subsection-20" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Running / Debugging Script Files</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="script-fscanf.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The <code class="code-inline tex2jax_ignore">fscanf()</code> Command</span></a></div></li>
+<li><div class="toc-item"><a href="script-import.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Import Data</span></a></div></li>
+<li>
+<div class="toc-item"><a href="script-input.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Input to Script File</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="script-input.html#subsection-21" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Inputting Strings</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="script-output.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Output Commands</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="script-output.html#subsection-22" class="internal"><span class="codenumber">5.5.1</span> <span class="title"><code class="code-inline tex2jax_ignore">disp()</code> Command</span></a></div></li>
+<li><div class="toc-item"><a href="script-output.html#subsection-23" class="internal"><span class="codenumber">5.5.2</span> <span class="title"><code class="code-inline tex2jax_ignore">fprintf()</code> Command</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="script-format.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Formatted Output</span></a></div></li>
+<li><div class="toc-item"><a href="script-directory.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Current Directory</span></a></div></li>
+<li><div class="toc-item"><a href="script-search.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Search Path</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="plots.html" class="internal"><span class="codenumber">6</span> <span class="title">Two-Dimensional Plots</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="plots-intro.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Introduction to 2D Plots</span></a></div></li>
+<li><div class="toc-item"><a href="plots-create.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Creating Plots</span></a></div></li>
+<li><div class="toc-item"><a href="plots-specifiers.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Line Specifiers</span></a></div></li>
+<li><div class="toc-item"><a href="plots-properties.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Plot Properties</span></a></div></li>
+<li>
+<div class="toc-item"><a href="plots-functions.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Plotting Functions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="plots-functions.html#subsection-24" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Using <code class="code-inline tex2jax_ignore">fplot()</code></span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="plots-multiple.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Plotting Multiple Curves</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="plots-multiple.html#subsection-25" class="internal"><span class="codenumber">6.6.1</span> <span class="title">Method 1: Plotting Pairs of Vectors</span></a></div></li>
+<li><div class="toc-item"><a href="plots-multiple.html#subsection-26" class="internal"><span class="codenumber">6.6.2</span> <span class="title">Method 2: Using the <code class="code-inline tex2jax_ignore">hold on</code> Command</span></a></div></li>
+<li><div class="toc-item"><a href="plots-multiple.html#subsection-27" class="internal"><span class="codenumber">6.6.3</span> <span class="title">Method 3: Using the <code class="code-inline tex2jax_ignore">line()</code> Command</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="plots-style.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Plot Formatting and Style</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="plots-style.html#subsection-28" class="internal"><span class="codenumber">6.7.1</span> <span class="title">Interactive Method</span></a></div></li>
+<li><div class="toc-item"><a href="plots-style.html#subsection-29" class="internal"><span class="codenumber">6.7.2</span> <span class="title">Plot Formatting Commands</span></a></div></li>
+<li><div class="toc-item"><a href="plots-style.html#subsection-30" class="internal"><span class="codenumber">6.7.3</span> <span class="title"><span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> Commands</span></a></div></li>
+<li><div class="toc-item"><a href="plots-style.html#subsection-31" class="internal"><span class="codenumber">6.7.4</span> <span class="title">Legend</span></a></div></li>
+<li><div class="toc-item"><a href="plots-style.html#subsection-32" class="internal"><span class="codenumber">6.7.5</span> <span class="title">Additional Text Properties</span></a></div></li>
+<li><div class="toc-item"><a href="plots-style.html#subsection-33" class="internal"><span class="codenumber">6.7.6</span> <span class="title">Axes and Grid</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="plots-practice.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Practice Your Plots</span></a></div></li>
+<li>
+<div class="toc-item"><a href="plots-subplot.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Creating Subplots</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="plots-subplot.html#subsection-34" class="internal"><span class="codenumber">6.9.1</span> <span class="title">Histograms</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-programming.html" class="internal"><span class="codenumber">III</span> <span class="title">Programming in MATLAB®</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="logic.html" class="internal"><span class="codenumber">7</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="logic-operators.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Relational and Equality Operators</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="logic-operators.html#subsection-35" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Logical Vector</span></a></div></li>
+<li><div class="toc-item"><a href="logic-operators.html#subsection-36" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Logical Operators</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="logic-functions.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Built-In Logical Operator Functions</span></a></div></li>
+<li><div class="toc-item"><a href="logic-if.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The <code class="code-inline tex2jax_ignore">if-end</code> command</span></a></div></li>
+<li><div class="toc-item"><a href="logic-if-else.html" class="internal"><span class="codenumber">7.4</span> <span class="title">The <code class="code-inline tex2jax_ignore">if-else-end</code> command</span></a></div></li>
+<li><div class="toc-item"><a href="logic-if-elseif.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The <code class="code-inline tex2jax_ignore">if-elseif-else-end</code> command</span></a></div></li>
+<li><div class="toc-item"><a href="logic-switch.html" class="internal"><span class="codenumber">7.6</span> <span class="title">The <code class="code-inline tex2jax_ignore">switch-case</code> command</span></a></div></li>
+<li><div class="toc-item"><a href="logic-for.html" class="internal"><span class="codenumber">7.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">for</code> loop</span></a></div></li>
+<li><div class="toc-item"><a href="logic-while.html" class="internal"><span class="codenumber">7.8</span> <span class="title">The <code class="code-inline tex2jax_ignore">while</code> loop</span></a></div></li>
+<li><div class="toc-item"><a href="logic-break.html" class="internal"><span class="codenumber">7.9</span> <span class="title">The <code class="code-inline tex2jax_ignore">break</code> statement</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="functions.html" class="internal"><span class="codenumber">8</span> <span class="title">Functions and Function Files</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="functions-intro.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Functions</span></a></div></li>
+<li><div class="toc-item"><a href="functions-files.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Introduction to Function Files</span></a></div></li>
+<li><div class="toc-item"><a href="functions-calling.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Calling a Function</span></a></div></li>
+<li><div class="toc-item"><a href="functions-globals.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Global Variables</span></a></div></li>
+<li><div class="toc-item"><a href="functions-script.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Script Files Versus Function Files</span></a></div></li>
+<li>
+<div class="toc-item"><a href="functions-anonymous.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Anonymous Functions with Single Variable</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="functions-anonymous.html#subsection-37" class="internal"><span class="codenumber">8.6.1</span> <span class="title">When and How to use Anonymous Functions</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="functions-anonymous-multiple.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Anonymous Functions with Multiple Arguments</span></a></div></li>
+<li><div class="toc-item"><a href="functions-example.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Function Example: Projectile Motion</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="functions-additional.html" class="internal"><span class="codenumber">8.9</span> <span class="title">External Language Interface</span></a></div></li>
+<li><div class="toc-item"><a href="functions-practice1.html" class="internal"><span class="codenumber">8.10</span> <span class="title">Practice Your Functions</span></a></div></li>
+<li><div class="toc-item"><a href="functions-practice2.html" class="internal"><span class="codenumber">8.11</span> <span class="title">Practice Your Programming</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-data.html" class="internal"><span class="codenumber">IV</span> <span class="title">Polynomials, Curve Fitting, and Interpolation</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="polynomials.html" class="internal"><span class="codenumber">9</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="polynomials-intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction to Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="polynomials-evaluate.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Evaluating Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="polynomials-plot.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Plotting Polynomials</span></a></div></li>
+<li>
+<div class="toc-item"><a href="polynomials-roots.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Root Finding</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="polynomials-roots.html#subsection-38" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Degenerate Roots</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="polynomials-add.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Adding Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="polynomials-multiply.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Multiplying Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="polynomials-divide.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Dividing Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="polynomials-derivatives.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Derivatives</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="interpolation.html" class="internal"><span class="codenumber">10</span> <span class="title">Interpolation</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="interpolation-intro.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Introduction to Interpolation</span></a></div></li>
+<li><div class="toc-item"><a href="interpolation-fit.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Curve Fitting</span></a></div></li>
+<li><div class="toc-item"><a href="interpolation-examples.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Curve Fitting Examples</span></a></div></li>
+<li><div class="toc-item"><a href="interpolation-practice.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Practice Your Curve Fitting</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-threeD.html" class="internal"><span class="codenumber">V</span> <span class="title">Three Dimensional Plotting</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="plots3d.html" class="internal"><span class="codenumber">11</span> <span class="title">Three-Dimensional Plots</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="plots3d-introduction.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Introduction to 3D Plots</span></a></div></li>
+<li><div class="toc-item"><a href="plots3d-line.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Simple Line Plots</span></a></div></li>
+<li><div class="toc-item"><a href="plots3d-view.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Viewing Plots</span></a></div></li>
+<li>
+<div class="toc-item"><a href="plots3d-surface.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Plotting Surfaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="plots3d-surface.html#subsection-39" class="internal"><span class="codenumber">11.4.1</span> <span class="title">Step 1</span></a></div></li>
+<li><div class="toc-item"><a href="plots3d-surface.html#subsection-40" class="internal"><span class="codenumber">11.4.2</span> <span class="title">Step 2</span></a></div></li>
+<li><div class="toc-item"><a href="plots3d-surface.html#subsection-41" class="internal"><span class="codenumber">11.4.3</span> <span class="title">Step 3</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="index-page.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="functions-additional"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.9</span> <span class="title">External Language Interface</span>
 </h2>
-<p id="p-720">MATLAB provides several ways to integrate with other programming languages. For example, it is possible to integrate C (or C++) code into your MATLAB application. For details on how to accomplish this consult the MATLAB documentation:</p>
+<div class="para" id="p-720">MATLAB provides several ways to integrate with other programming languages. For example, it is possible to integrate C (or C++) code into your MATLAB application. For details on how to accomplish this consult the MATLAB documentation:</div>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/MatlabCallC.png" class="contained"></div>
-<p id="p-721">One way to provide such integration is a <em class="alert">M</em>atlab <em class="alert">E</em>xecutable <em class="alert">F</em>ile (<em class="alert">MEX</em>-File). This is a function, created in MATLAB, that calls a C/C++ program and behaves just like a MATLAB script or function.</p>
-<p id="p-722">MEX files are native C or C++ files that are dynamically linked directly into the MATLAB application at runtime. They must be compiled for each hardware architecture on which they are to be run. MEX files have the potential to crash the MATLAB application, but rather large speed gains are possible, depending on the algorithm.</p></section></div></main>
+<div class="para" id="p-721">One way to provide such integration is a <em class="emphasis">M</em>atlab <em class="emphasis">E</em>xecutable <em class="emphasis">F</em>ile (<em class="emphasis">MEX</em>-File). This is a function, created in MATLAB, that calls a C/C++ program and behaves just like a MATLAB script or function.</div>
+<div class="para" id="p-722">MEX files are native C or C++ files that are dynamically linked directly into the MATLAB application at runtime. They must be compiled for each hardware architecture on which they are to be run. MEX files have the potential to crash the MATLAB application, but rather large speed gains are possible, depending on the algorithm.</div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="functions-example.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="functions-practice1.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<div id="ptx-page-footer">
+<a class="feedback-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf-iN7M5DVZHmne8wnKOm_3QAKKDVopIFLtJbnKX5Sq1-gF0w/viewform?usp=sf_link" target="_blank">Report Errors</a><a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
 </body>
 </html>
