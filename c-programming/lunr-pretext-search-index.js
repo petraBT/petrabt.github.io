@@ -3592,6 +3592,15 @@ var ptx_lunr_docs = [
   "body": " Linear Search  There are many reasons for wanting to sort and\/or search lists of data:   Look for a student record in a list of records  Print alphabetically sorted list of names  Sort data values in ascending\/descending order  And many more!   We'll start by introducing a very simple algorithm, called linear search , to search for a specific item in a list of items.    Video Description    search linear Linear search goes through an array element by element and checks if the element matches the search argument  If the element is found, break the while loop by using a flag variable to indicate something has been \"found\"       Quick review question: Which of the following is the correct way to declare and initialize a string?   )  char name[] = \"cool_file_name\";    Correct      char name[50]; name = \"cool_file_name\";    Not quite. Try again!      char name[] = \"cool_file_name\";    Not quite. Try again!      char = \"cool_file_name\"[50];    Not quite. Try again!      More review: Is there anything wrong with the following:  char name[10]; . . . strcpy(name, \"TodayIsMonday\");   )  This will overwrite memory cells that have not been reserved for name.    Correct      It should be strcpy(\"name\", TodayIsMonday);    Not quite. Try again!      It should be strcpy(“TodayIsMonday”, name);    Not quite. Try again!      No, nothing wrong.    Not quite. Try again!      Even more review: What is the result of the following:  strcmp(\"my_apple\", \"my_banana\");  Feel free to use the window below to try out some code. Be sure to work the correct answer out \"by hand\" first before verifying your answer using the code window.    )  a negative number    Correct      the letter 'b'    Not quite. Try again!      a positive number    Not quite. Try again!      zero    Not quite. Try again!      the letter 'a'    Not quite. Try again!      Final review question (I promise!): Suppose a string has been declared as follows:  char food[30];  You want the user to enter their favorite food and store the response in the string food. What is the correct command to do so?  Feel free to use the window below to try out some code. Be sure to work the correct answer out \"by hand\" first before verifying your answer using the code window.    )  scanf(\"%s\", &food);    Correct      scanf(\"%s\", food[0]);    Not quite. Try again!      scanf(\"%s\", food);    Not quite. Try again!      scanf(\"%s\", *food);    Not quite. Try again!      "
 },
 {
+  "id": "p-1716",
+  "level": "2",
+  "url": "sortsearch-linear.html#p-1716",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "linear search "
+},
+{
   "id": "quiz-sortsearch-1",
   "level": "2",
   "url": "sortsearch-linear.html#quiz-sortsearch-1",
@@ -3635,6 +3644,24 @@ var ptx_lunr_docs = [
   "number": "22.2",
   "title": "Bisection Search",
   "body": " Bisection Search  As you have seen, Linear Search (also called sequential search) is a very simple algorithm, for which the data to be searched can be in any order. But the algorithm is not very efficient. Imagine looking for a name in a phone book that hasn't been sorted alphabetically   search bisection If your data is sorted, then there is a much more efficient algorithm called Bisection Search that you can use to look for an item in your list.    Video Description    Requires that the list is in sorted order  Splits list in half, compares which half the element will be in  Continues to halve the list until the item is found       Which of the following is the correct sequence of instructions to swap the values of two variables a and b (you may use an additional variable c if you wish)?  Feel free to use the window below to try out some code. Be sure to work the correct answer out \"by hand\" first before verifying your answer using the code window.    )  c=a; a=b; b=c;    Correct      c=b; a=c; b=a;    Not quite. Try again!      a=b; b=c; c=a;    Not quite. Try again!      a=b; b=a;    Not quite. Try again!      "
+},
+{
+  "id": "p-1759",
+  "level": "2",
+  "url": "sortsearch-bisection.html#p-1759",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Linear Search "
+},
+{
+  "id": "p-1760",
+  "level": "2",
+  "url": "sortsearch-bisection.html#p-1760",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Bisection Search "
 },
 {
   "id": "quiz-sortsearch-5",
@@ -3725,6 +3752,24 @@ var ptx_lunr_docs = [
   "number": "22.6",
   "title": "Insertion Sort",
   "body": " Insertion Sort  sort insertion Insertion Sort is another simple sorting technique that works similarly to how you might sort a set of playing cards in your hand. By going through the list element by element, the list is modified slowly so as to consist of a sorted portion and a remaining unsorted portion. When a new element from the unsorted portion is considered it is inserted (hence the name of the algorithm!) into the correct location amongst the sorted part of the list.  Since room needs to be made in the sorted portion for the element to be inserted, one way to do so is to successively swap the new element with elements from the sorted list, until the correct location has been found.  This is demonstrated in the following code window - feel free to play around!   The following visualization of insertion sort might also help more clearly describe this process:  ADAMSAPPLET style=\"width:50%; height:150px; margin-left:auto; margin-right:auto;\" data-program=\"sorters\" data-types=\"ins-exh\" data-size=\"20\" data-duplicates=\"2\" data-order=\"319,locked\" ENDADAMSAPPLET  We will later look at an implementation of insertion sort that creates a sorted copy of the original list, leaving the original list in place unsorted. In this scenario, insertion sort works by taking elements from the unsorted list one by one and inserting them in their correct position into the new sorted list.  Inserting elements into an array at a particular location is not a very fun process: it may require shifting large numbers of array elements over to make room for the new element. We'll therefore wait on the implementation of this algorithm until we get to linked lists , which make this step much easier.  "
+},
+{
+  "id": "p-1801",
+  "level": "2",
+  "url": "sortsearch-insertiion.html#p-1801",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Insertion Sort "
+},
+{
+  "id": "p-1807",
+  "level": "2",
+  "url": "sortsearch-insertiion.html#p-1807",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "linked lists "
 },
 {
   "id": "sortsearch-sort-practice",
