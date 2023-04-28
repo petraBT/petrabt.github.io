@@ -1,0 +1,280 @@
+/*
+ To include these colors, use the following string parameter: 
+-stringparam html.css.extra path/to/c_programming/src/colors_dartmouth.css
+
+
+There are five main choices that define a color scheme in the
+ HTML output of PreTeXt:
+ 1) A dark color for the title on each page
+ 2) A dark color for highlighted words in the body
+ 3) A dark color for other highlighted words in the body
+ In the CSS those are called 'documenttitle', 'bodytitle',
+ and 'bodysubtitle'.
+ The other two choices appear in the ToC.
+ Either:
+ 4) A dark color for each chapter background
+ 5) A dark color for the current section background
+ (Often the ToC section background equals documenttitle.
+ Or:
+ 4') A light color for each chapter background
+ 5') A light color for the current section background
+ In the CSS those are called 'chaptertoc' and 'sectiontoc',
+ respectively.
+ With 4) and 5) you need white letters to go on the dark
+ background, and with 4') and 5') you need dark letters
+ on the light background.  Set the color of those letters
+ with 'chaptertoctext'.
+ In addition to the above choices, you need to 
+ choose a contrasting shade of each color, to be used
+ for highlighting, borders, etc.
+ In the future you will be able to choose colors for assemblages
+ and for knowl output
+*/
+
+/*NEW METHOD TO SUPRESS MATLAB OUTPUT */
+div[id$="-no-output"] .ac_output, .error{
+  display: none !important;
+}
+
+
+/* 
+OLD METHOD T0 SUPRESS MATLAB WINDOW OUTPUT:
+#ac-hide .ac_output, #ac-hide .error{
+    display: none !important
+}
+END OLD METHOD
+*/
+
+/*If id="ac-hide" is added to the division for the active code in PreTeXt HTML, 
+the above CSS rule should block all output and error messages from those windows with the ID*/
+
+
+/* To rename Run button:       
+.run-button {
+  visibility: hidden !important;
+  position: relative !important;
+}
+
+.run-button:after {
+  visibility: visible !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  content: "Save" !important;
+}
+*/
+
+/*To block all output:   
+.ac_output {
+  display: none !important;
+}
+
+.alert-danger {
+  display: none !important; 
+}
+
+*/
+
+
+.alert-warning {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+
+/*
+.alert-warning {
+  background-color: white !important;
+  border: solid 3px var(--projectborder) !important;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1em;
+}  
+*/
+  
+.rsdraggable {
+   background-color: transparent !important;
+   border: transparent !important;
+}
+
+.ac_question {
+  background-color: transparent !important;
+} /*removes the random green background from activities*/
+
+.runestone_caption {
+    display: none !important;
+} /*hides the captions under Runestone questions/windows*/
+
+.ac_opt {
+  display: none !important;
+} /*hides the Show CodeLens button for ActiveCode windows*/
+
+.CodeMirror {
+  height: fit-content !important; 
+  /*override their styles to make active code windows auto-size depending on content*/
+}
+
+.lines {
+  display: table-cell !important;
+} /*this fixes the table shapes so content fits correctly*/
+
+
+/* Everything below is from Oscar Levin's custom css */
+
+.pretext-content section article.project-like > .heading {
+  margin-top: -1.5em;
+  background-color: white;
+  display: table !important;
+  padding: 5px 1em;
+  margin-left: 10px;
+  font-style: italic;
+  font-size: 120% !important;
+}
+
+
+/*
+.pretext-content .assemblage-like {
+  border-radius: 3px;
+  margin-bottom: 1em;
+}
+
+.pretext-content .assemblage-like .heading{
+    margin-top: -1.25em;
+    background-color: #bfd5ec;
+    display: table;
+    padding: 5px 10px;
+}
+
+.pretext-content .assemblage-like .MJXc-display {
+    background-image: none;
+    background-image: linear-gradient(to right, #e9eff5, #e9eff5), linear-gradient(to right, #e9eff5, #e9eff5), linear-gradient(to right, rgba(0,0,0,.25), rgba(242,242,254,0)), linear-gradient(to left, rgba(0,0,0,.25), rgba(242,242,254,0));
+}
+*/
+
+/* Remove Greg-L on assemblage and everything else */
+
+
+/*
+.pretext-content article.theorem-like::after, .pretext-content article.definition-like::after, .pretext-content article.example-like::after, .pretext-content article.project-like::after, .pretext-content article.objectives::after, .pretext-content article.outcomes::after, .pretext-content article.remark-like::after {
+  border-bottom: none !important;
+}
+*/
+
+
+article[id*='investigation'], .project-like {
+  background-color: white;
+  border: solid 3px var(--projectborder);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+article[id*='investigation'], .exercise-like {
+  background-color: white;
+  border: solid 3px var(--projectborder);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+.pretext-content section article.exercise-like > .heading {
+  margin-top: -1.5em;
+  background-color: white;
+  display: table !important;
+  padding: 5px 1em;
+  margin-left: 10px;
+  font-style: italic;
+  font-size: 120% !important;
+}
+
+.pretext-content section article.exercise-like > .heading::after,
+.pretext-content section article.exercise-like.activity > .heading::after,
+.pretext-content section article.exercise-like.exploration > .heading::after {
+    content: "";
+}
+
+/*
+article[id*='investigation'] .heading, .project-like .heading {
+  margin-top: -1.25em !important;
+  background-color: white;
+  display: table !important;
+  padding: 5px 1em;
+  margin-left: 5px;
+  font-style: italic;
+  font-size: 120% !important;
+}
+*/
+
+article[id*='investigation'] .codenumber, .project-like .codenumber {
+  display:none !important;
+}
+
+article[id*='investigation'] .codenumber, .exercise-like .codenumber {
+  display:none !important;
+}
+
+/*
+article[id*='investigation'] .heading::after, .project-like .heading::after {
+  display:none !important;
+}
+
+
+
+article[id*='example'] {
+  border-left: solid 1pt #395E66 !important;
+  border-bottom: solid 1pt #d1d1d1;
+  padding-left: 1ex !important;
+  padding-bottom: 0.5ex !important;
+}
+
+.posterior {
+  margin-left: 1ex;
+  padding-left: 1ex;
+  margin-top: -1.25em !important;
+  padding-top: 1ex;
+  border-left: solid 1pt gray;
+}
+*/ 
+
+/*
+article.proof {
+  padding-top: 1ex !important;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  border-right: none !important;
+}
+
+.pretext-content .proof:after{
+  content: "qed";
+  font-variant: small-caps;
+  font-size: 1.1em;
+  margin-right: 0em !important;
+  border-bottom: none !important;
+  margin-top: -1em !important;
+}
+
+pretext-content .summary-links a, .pretext-content .summary-links a:link, .pretext-content .summary-links a:visited {
+    color: #395E66;
+    background: #f0f0f0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.pretext-content .summary-links a:hover, .pretext-content .summary-links a:focus {
+    color: white;
+    background: #223843;
+    text-decoration: none;
+}
+
+
+#masthead #logo-link img, #masthead .logo-link img {
+    width: auto;
+    height: auto;
+    max-height: 1.2em;
+}
+
+*/
+
+
