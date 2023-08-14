@@ -8,4 +8,4 @@
 
 * [Introduction to Matlab-Programming](https://petrabt.github.io/matlab-programming)
 
-* [ENGS 28 C Programming Guide](https://petrabt.github.io/)
+* [ENGS 28 C Programming Guide](https://petrabt.github.io/ENGS28Guide)
