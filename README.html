@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Textbooks | Petra Bonfert-Taylor</title>
+<meta name="description" content="Interactive textbooks for ENGS 20 and ENGS 28, Thayer School of Engineering, Dartmouth College">
+<style>
+  :root {
+    --green: #00693e;
+    --green-dark: #00512e;
+    --ink: #1c1c1c;
+    --muted: #5a5a5a;
+    --border: #e2e2e2;
+    --bg: #fafaf8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+  header {
+    background: var(--green);
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 0.4rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #d9ecdf;
+  }
+  main {
+    max-width: 760px;
+    margin: -1.5rem auto 0;
+    padding: 0 1.5rem 3rem;
+  }
+  .courses {
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.5rem;
+    margin-bottom: 2.2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    font-size: 0.98rem;
+    color: var(--muted);
+  }
+  .courses strong { color: var(--ink); }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .card h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.25rem;
+  }
+  .card h2 a {
+    color: var(--green-dark);
+    text-decoration: none;
+  }
+  .card h2 a:hover { text-decoration: underline; }
+  .card p.desc {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.45rem 0.95rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--green);
+    color: var(--green-dark);
+    background: #fff;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .btn:hover {
+    background: var(--green);
+    color: #fff;
+  }
+  .btn.primary {
+    background: var(--green);
+    color: #fff;
+  }
+  .btn.primary:hover {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 1.5rem;
+  }
+  footer a { color: var(--green-dark); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Interactive Textbooks</h1>
+  <p>Petra Bonfert-Taylor &middot; Thayer School of Engineering, Dartmouth College</p>
+</header>
+
+<main>
+  <div class="courses">
+    Used in <strong>ENGS 20</strong>, &ldquo;Introduction to Scientific Computing&rdquo; and
+    <strong>ENGS 28</strong>, &ldquo;Embedded Systems Programming&rdquo;
+  </div>
+
+  <div class="card">
+    <h2><a href="https://petrabt.github.io/C-Programming">Introduction to C Programming</a></h2>
+    <p class="desc">An interactive introduction to C, with live, editable code windows running on the Thayer network.</p>
+    <div class="links">
+      <a class="btn primary" href="https://petrabt.github.io/C-Programming">Live version</a>
+      <a class="btn" href="https://petrabt.github.io/C-Programming/static/">Static version (no network access needed)</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><a href="https://petrabt.github.io/Matlab/">Introduction to Matlab Programming</a></h2>
+    <p class="desc">An interactive introduction to programming in Matlab.</p>
+    <div class="links">
+      <a class="btn primary" href="https://petrabt.github.io/Matlab/">View book</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><a href="https://petrabt.github.io/ENGS28Guide">ENGS 28 C Programming Guide</a></h2>
+    <p class="desc">A companion C programming guide for embedded systems work.</p>
+    <div class="links">
+      <a class="btn primary" href="https://petrabt.github.io/ENGS28Guide">View guide</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; Petra Bonfert-Taylor &middot; <a href="https://engineering.dartmouth.edu/">Thayer School of Engineering, Dartmouth College</a>
+</footer>
+
+</body>
+</html>
